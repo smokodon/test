@@ -1,0 +1,8 @@
+os: linux
+dist: xenial
+
+script:
+- sudo apt-get update
+- sudo apt install ca-certificates openssl
+- sudo update-ca-certificates
+- curl https://asset-packagist.org/packages.json
