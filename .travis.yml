@@ -2,8 +2,5 @@ os: linux
 dist: xenial
 
 script:
-- sudo apt-get update -yqq
-- sudo apt-get upgrade -yqq
-- sudo apt install ca-certificates openssl
-- sudo update-ca-certificates
+- sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
 - curl https://asset-packagist.org/packages.json
