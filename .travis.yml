@@ -2,5 +2,7 @@ os: linux
 dist: xenial
 
 script:
+- curl https://asset-packagist.org/packages.json
 - sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
 - curl https://asset-packagist.org/packages.json
+
