@@ -3,13 +3,12 @@ dist: xenial
 
 script:
 - mv /etc/apt/sources.list.d/nodesource.list /etc/apt/sources.list.d/nodesource.list.disabled
-- apt-get update
-- apt-get -y upgrade
-- apt-get  install -y \
+- sudo apt-get update
+- sudo apt-get -y upgrade
+- sudo apt-get  install -y \
     ca-certificates \
     libgnutls30 
 - mv /etc/apt/sources.list.d/nodesource.list.disabled /etc/apt/sources.list.d/nodesource.list
 - curl https://asset-packagist.org/packages.json
-- sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
-- curl https://asset-packagist.org/packages.json
+
 
