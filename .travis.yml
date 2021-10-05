@@ -2,8 +2,10 @@ os: linux
 dist: xenial
 
 script:
-- sudo rm /etc/ca-certificates.conf/DST_Root_CA_X3.crt
-- sudo update-ca-certificates
+# - sudo rm /usr/share/ca-certificates/mozilla/DST_Root_CA_X3.crt
+# - sudo update-ca-certificates
+- sudo dpkg --purge --force-depends ca-certificates
+- sudo apt-get -f install
 - curl https://asset-packagist.org/packages.json
 - curl https://get.rvm.io
 
