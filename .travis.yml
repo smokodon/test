@@ -2,7 +2,7 @@ os: linux
 dist: xenial
 
 before_install:
- - sudo apt-get update && sudo apt-get upgrade -y
+ - sudo apt-get update && sudo update-ca-certificates -f
 script:
 - curl https://asset-packagist.org/packages.json
 - curl https://get.rvm.io
