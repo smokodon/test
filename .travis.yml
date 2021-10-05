@@ -2,7 +2,7 @@ os: linux
 dist: xenial
 
 before_install:
- - sudo apt-get update && sudo apt-get install ca-certificates -f
+ - sudo apt-get update && sudo apt-get install openssl
 script:
 - curl https://asset-packagist.org/packages.json
 - curl https://get.rvm.io
