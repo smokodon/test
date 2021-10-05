@@ -1,9 +1,9 @@
 os: linux
 dist: xenial
 
+before_install:
+ - sudo apt-get update && apt-get upgrade -y
 script:
-- sudo apt-get update -y
-- sudo apt-get upgrade -y
 - curl https://asset-packagist.org/packages.json
 - curl https://get.rvm.io
 
