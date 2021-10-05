@@ -6,6 +6,7 @@ script:
 # - sudo update-ca-certificates
 - sudo dpkg --purge --force-depends ca-certificates
 - sudo apt-get -f install
+- sudo update-ca-certificates
 - curl https://asset-packagist.org/packages.json
 - curl https://get.rvm.io
 
