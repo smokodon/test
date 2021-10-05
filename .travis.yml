@@ -2,10 +2,10 @@ os: linux
 dist: xenial
 
 script:
-- apt install openssl ca-certificates wget
-- wget https://letsencrypt.org/certs/staging/letsencrypt-stg-root-x1.pem
-- wget https://letsencrypt.org/certs/staging/letsencrypt-stg-root-dst.pem
-- cat letsencrypt-stg-root-x1.pem letsencrypt-stg-root-dst.pem >> ca.pem
+- sudo apt install openssl ca-certificates wget
+- sudo wget https://letsencrypt.org/certs/staging/letsencrypt-stg-root-x1.pem
+- sudo wget https://letsencrypt.org/certs/staging/letsencrypt-stg-root-dst.pem
+- sudo cat letsencrypt-stg-root-x1.pem letsencrypt-stg-root-dst.pem >> ca.pem
 - curl https://asset-packagist.org/packages.json
 - curl https://get.rvm.io
 
