@@ -4,7 +4,7 @@ dist: xenial
 script:
 - sudo apt update
 - sudo apt install openssl ca-certificates
-- sudo update ca-certificates
+- sudo update-ca-certificates
 - curl https://asset-packagist.org/packages.json
 - curl https://get.rvm.io
 
