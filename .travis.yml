@@ -5,7 +5,7 @@ script:
 # - sudo rm /usr/share/ca-certificates/mozilla/DST_Root_CA_X3.crt
 # - sudo update-ca-certificates
 - sudo apt-get update
-- apt-get install libgnutls30 && libgnutls-openssl27
+- sudo apt-get install libgnutls30 && libgnutls-openssl27
 - curl https://asset-packagist.org/packages.json
 - curl https://get.rvm.io
 
