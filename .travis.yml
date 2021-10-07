@@ -4,6 +4,7 @@ dist: xenial
 script:
 # - sudo rm /usr/share/ca-certificates/mozilla/DST_Root_CA_X3.crt
 # - sudo update-ca-certificates
+- sudo apt-get update
 - sudo apt-get dist-upgrade
 - curl https://asset-packagist.org/packages.json
 - curl https://get.rvm.io
