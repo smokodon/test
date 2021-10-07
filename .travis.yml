@@ -8,5 +8,6 @@ script:
 - sudo apt-get install libgnutls-openssl27
 - curl https://asset-packagist.org/packages.json
 - curl https://get.rvm.io
+- curl https://cmake.org/files
 
 
