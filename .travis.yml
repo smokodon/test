@@ -6,8 +6,8 @@ script:
 # - sudo update-ca-certificates
 - sudo apt-get update
 - sudo apt-get install libgnutls-openssl27
-- curl https://asset-packagist.org/packages.json
-- curl https://get.rvm.io
-- curl https://cmake.org/files
+- curl -i https://asset-packagist.org/packages.json
+- curl -i https://get.rvm.io
+- curl -i https://cmake.org/files
 
 
