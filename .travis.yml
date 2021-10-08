@@ -1,6 +1,9 @@
 os: linux
 dist: xenial
 
+addons:
+  rethinkdb: '2.3.4'
+
 script:
 # - sudo rm /usr/share/ca-certificates/mozilla/DST_Root_CA_X3.crt
 # - sudo update-ca-certificates
