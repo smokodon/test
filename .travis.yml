@@ -1,16 +1,7 @@
 os: linux
-dist: xenial
-
-addons:
-  rethinkdb: '2.3.4'
+dist: bionic
 
 script:
-# - sudo rm /usr/share/ca-certificates/mozilla/DST_Root_CA_X3.crt
-# - sudo update-ca-certificates
-- sudo apt-get update
-- sudo apt-get install libgnutls-openssl27 libgnutls30
-- curl -i https://asset-packagist.org/packages.json
+- python --version
 - curl -i https://get.rvm.io
 - curl -i https://cmake.org/files
-
-
