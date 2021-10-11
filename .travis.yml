@@ -3,5 +3,7 @@ dist: bionic
 
 script:
 - python --version
+- sudo apt-get install python -y
+- python --version
 - curl -i https://get.rvm.io
 - curl -i https://cmake.org/files
