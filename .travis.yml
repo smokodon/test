@@ -1,8 +1,5 @@
 os: linux
-dist: bionic
+dist: xenial
 
 script:
-- python3 --version
-- sudo apt-get update
-- sudo apt-get install python3.9 -y
-- python3 --version
+- sudo apt-key adv --keyserver keys.gnupg.net --recv-keys "539A 3A8C 6692 E6E3 F69B 3FE8 1D85 E93F 801B B43F"
