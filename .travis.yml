@@ -6,7 +6,7 @@ jdk: openjdk8
 
 branches:
   only:
-  - main
+  - master
 
 script: "mvn clean test -Djacoco.skip=false"
 
