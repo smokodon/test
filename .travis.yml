@@ -13,7 +13,6 @@ addons:
 install: true
 
 jobs:
-  fast_finish: true
   include:
     - jdk: openjdk8
       env:
