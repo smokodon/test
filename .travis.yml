@@ -1,5 +1,5 @@
 version: ~> 1.0
-dist: focal
+dist: xenial
 virt: lxd
 arch: ppc64le
 language: java
