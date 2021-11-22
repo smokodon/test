@@ -1,7 +1,7 @@
 version: ~> 1.0
 dist: xenial
 virt: lxd
-arch: ppc64le
+arch: amd64
 language: java
 
 addons:
