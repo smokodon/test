@@ -1,6 +1,5 @@
 version: ~> 1.0
 dist: bionic
-arch: ppc64le
 virt: lxd
 language: java
 
