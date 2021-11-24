@@ -6,5 +6,5 @@ group: dev
 python:
   - "3.7"
 
-install:
+script:
   - pip -V
