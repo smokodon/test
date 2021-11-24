@@ -4,3 +4,4 @@ group: dev
 
 script:
 - echo "Witam"
+- whereis p4
