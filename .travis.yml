@@ -1,27 +1,6 @@
-version: ~> 1.0
 os: linux
-dist: focal
-virt: lxd
-arch: ppc64
-language: java
+dist: bionic
+group: dev
 
-addons:
-  apt:
-    packages:
-      - xsltproc
-      - xmlstarlet
-
-install: true
-
-jobs:
-  fast_finish: true
-  include:
-    - jdk: openjdk8
-      env:
-        - DESC="tests and deploy"
-        - CMD="mvn -e --no-transfer-progress clean integration-test failsafe:verify
-          -DargLine='-Xms1024m -Xmx2048m'"
-        - DEPLOY="true"
-        - USE_MAVEN_REPO="true"
-
-script: true
+script:
+- echo "Witam"
