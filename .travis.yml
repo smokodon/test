@@ -1,11 +1,19 @@
-os: linux
-dist: sardonyx
-group: dev
-
-
+language: python
 python:
   - "3.7"
+  - "3.8"
+  - "3.9"
 
+group: dev
+
+install:
+  - pip install .
+  - pip install -r tests/requirements.txt
+
+env:
+  - PYTHONPATH=.
+
+# command to run tests
 script:
-  - pip -V
-  - docker --version
+  - python -Werror tests/smoke_test.py
+  - python -m unittest discover tests
