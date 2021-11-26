@@ -6,6 +6,7 @@ python:
 group: dev
 
 install:
+  - sudo python -m pip install --force-reinstall pip==20.0.0
   - pip install .
   - pip install -r tests/requirements.txt
 
