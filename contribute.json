@@ -1,0 +1,32 @@
+{
+    "name": "mo-sql-parsing",
+    "description": "Extract Parse Tree from SQL",
+    "repository": {
+        "url": "https://github.com/klahnakoski/mo-sql-parsing",
+        "license": "MPL2",
+        "type": "git",
+        "tests": "https://github.com/klahnakoski/mo-sql-parsing/tree/dev/tests",
+        "clone": "https://github.com/klahnakoski/mo-sql-parsing.git"
+    },
+    "participate": {
+        "home": "https://github.com/klahnakoski/mo-sql-parsing",
+        "docs": "https://github.com/klahnakoski/mo-sql-parsing/docs",
+        "irc-contacts": [
+            "ekyle"
+        ]
+    },
+    "bugs": {
+        "list": "https://github.com/klahnakoski/mo-sql-parsing/issues",
+        "report": "https://github.com/klahnakoski/mo-sql-parsing/issues/new"
+    },
+    "urls": {
+        "stage": ""
+    },
+    "keywords": [
+        "python",
+        "sql",
+        "parsing",
+        "parse"
+    ]
+}
+
