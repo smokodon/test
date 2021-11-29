@@ -5,8 +5,8 @@ python:
 group: dev
 
 install:
-  - pip install -U "pip<21.3.1" setuptools
-  - pip install -U "pip!=21.3.1" setuptools
+  - pip install --upgrade --force-reinstall setuptools
+  - pip3 install --upgrade --force-reinstall setuptools
   - pip install .
   - pip install -r tests/requirements.txt
 
