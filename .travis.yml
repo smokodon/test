@@ -7,7 +7,7 @@ before_install:
   - pip install virtualenv --upgrade
 
 install:
-  - apt install python3.7
+  - sudo apt install python3.7
   - pip install .
   - pip install -r tests/requirements.txt
 
