@@ -5,8 +5,7 @@ python:
 group: dev
 
 install:
-  - pip install --upgrade --force-reinstall setuptools
-  - pip3 install --upgrade --force-reinstall setuptools
+  - pip install --upgrade "pip<20.0" setuptools wheel
   - pip install .
   - pip install -r tests/requirements.txt
 
