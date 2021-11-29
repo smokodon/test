@@ -1,11 +1,13 @@
 language: python
 python:
   - "3.7"
-  
+
 group: dev
+before_install:
+  - pip install virtualenv --upgrade
 
 install:
-  - pip install virtualenv --upgrade
+
   - pip install .
   - pip install -r tests/requirements.txt
 
