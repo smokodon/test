@@ -4,7 +4,9 @@ python:
 
 group: dev
 before_install:
-  - pip install virtualenv --upgrade
+  - pip install pip --upgrade
+  - pip install --upgrade pip
+  - pip install --upgrade
 
 install:
   - sudo apt install python3.7
