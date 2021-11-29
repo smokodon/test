@@ -5,6 +5,7 @@ dist: focal
 group: dev
 
 install:
+  - pip install virtualenv --upgrade
   - pip install .
   - pip install -r tests/requirements.txt
 
