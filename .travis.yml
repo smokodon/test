@@ -1,7 +1,7 @@
 language: python
 python:
   - "3.7"
-dist: focal
+  
 group: dev
 
 install:
