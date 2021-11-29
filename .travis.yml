@@ -5,12 +5,10 @@ python:
 group: dev
 
 install:
-  - pip install --upgrade "pip<20.0" setuptools wheel
   - pip install .
   - pip install -r tests/requirements.txt
 
-env:
-  - PYTHONPATH=.
+
 
 # command to run tests
 script:
