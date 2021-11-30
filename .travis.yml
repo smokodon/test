@@ -19,4 +19,3 @@ script:
   - python -m pip --version
   - python -Werror tests/smoke_test.py
   - python -m unittest discover tests
-
