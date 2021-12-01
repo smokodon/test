@@ -1,19 +1,9 @@
-language: python
-python:
-  - "3.7"
-  - "3.8"
-  - "3.9"
-
+lang: bash
 group: dev
 
-install:
-  - pip install .
-  - pip install -r tests/requirements.txt
-
-env:
-  - PYTHONPATH=.
-
-# command to run tests
 script:
-  - python -Werror tests/smoke_test.py
-  - python -m unittest discover tests
+ - mkdir dupa && cd dupa && mkdir dupa2 && cd dupa2
+ - touch file1 file2
+ - cd .. && cd ..
+ - rm -rf ./dupa
+
