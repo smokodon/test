@@ -12,7 +12,7 @@ osx_image: xcode9.3
 before_install:
 - brew cask install android-sdk
 - brew install jq ninja
-- sudo apt-get update && sudo apt-get install apt-transport-https ca-certificates -y && sudo update-ca-certificates
+
 
 # Better reliability from Android builds
 before_cache:
@@ -32,6 +32,7 @@ env:
 
 # Configure android build
 before_script:
+- sudo apt-get update && sudo apt-get install apt-transport-https ca-certificates -y && sudo update-ca-certificates
 - yes | $ANDROID_HOME/tools/bin/sdkmanager "platforms;android-28" > /dev/null
 - yes | $ANDROID_HOME/tools/bin/sdkmanager --licenses > /dev/null
 - curl --silent -o ndk.zip https://dl.google.com/android/repository/android-ndk-r16b-darwin-x86_64.zip
