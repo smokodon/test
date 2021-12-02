@@ -3,7 +3,6 @@ os: linux
 arch: arm64
 language: cpp
 dist: xenial
-group: dev
 addons:
   apt:
     packages:
