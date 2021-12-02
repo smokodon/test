@@ -1,9 +1,41 @@
-lang: bash
-group: dev
+language: objective-c
+os: osx
 
-script:
- - mkdir dupa && cd dupa && mkdir dupa2 && cd dupa2
- - touch file1 file2
- - cd .. && cd ..
- - rm -rf ./dupa
+# Using Xcode 9.3 to get Java 8, based on the build matrix in 
+# https://docs.travis-ci.com/user/reference/osx/#jdk-and-macos
+#
+# >  In practical terms, if your Mac build requires Java 8 and below, use
+# xcode9.3 (or below); if your build requires Java 10 and later, use xcode9.4
+# (or later).
+osx_image: xcode9.3 
 
+before_install:
+- brew cask install android-sdk
+- brew install jq ninja
+
+# Better reliability from Android builds
+before_cache:
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -rf $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
+  - "$HOME/.android/build-cache"
+env:
+  global:
+  - HOMEBREW_NO_INSTALL_CLEANUP=1
+  - ANDROID_HOME=/usr/local/share/android-sdk
+  - ANDROID_NDK_HOME=/usr/local/share/android-ndk
+  - TERM=dumb # Stop interactive gradle output
+
+# Configure android build
+before_script:
+- yes | $ANDROID_HOME/tools/bin/sdkmanager "platforms;android-28" > /dev/null
+- yes | $ANDROID_HOME/tools/bin/sdkmanager --licenses > /dev/null
+- curl --silent -o ndk.zip https://dl.google.com/android/repository/android-ndk-r16b-darwin-x86_64.zip
+- unzip -qq ndk.zip > /dev/null
+- rm ndk.zip
+- mv android-ndk-r16b $ANDROID_NDK_HOME
+
+scripit: true
