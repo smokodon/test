@@ -1,8 +1,8 @@
 ---
 os: linux
 dist: xenial
+group: dev
 script:
-- pyenv-update
 - pyenv install --list | grep " 3\.[678]"
 - pyenv versions
 - pip install -U pip	
