@@ -3,6 +3,7 @@ os: linux
 dist: xenial
 script:
 - pyenv versions
-- pyenv global 3.7.1
+- apt-get install python3.8
+- pyenv global 3.8
 - pip install -U pip	
 - pip install awscli
