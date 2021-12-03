@@ -6,6 +6,6 @@ python:
 script:
 - pyenv install --list
 - pyenv versions
-- pyenv global 3.8.2
+- pyenv global 3.5.1
 - pip install -U pip	
 - pip install awscli
