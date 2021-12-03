@@ -4,6 +4,7 @@ dist: xenial
 python:
   - "3.8"
 script:
+- pip install .
 - pyenv versions
 - pyenv global 3.8.2
 - pip install -U pip	
