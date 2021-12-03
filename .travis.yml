@@ -1,11 +1,71 @@
----
 os: linux
+jdk: openjdk13
+language: clojure
 dist: xenial
-script:
+sudo: true
+services:
+- docker
+- postgresql
+addons:
+  postgresql: '10'
+  apt:
+    packages:
+    - postgresql-10
+    - postgresql-client-10
+    - postgresql-10-postgis-2.4
+    - proj-bin
+    - postgresql-10-postgis-2.4-scripts
+  deploy:
+  - provider: releases
+    file:
+    - README.md
+    skip_cleanup: true
+    'on':
+      tags: false
+      all_branches: true
+    token: "$GITHUB_TOKEN"
+branches:
+  only:
+  - master
+lein: 2.9.1
+before_install:
+- curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+- chmod +x ./kubectl
+- sudo mv ./kubectl /usr/local/bin/kubectl
 - pyenv versions
-- pyenv versions
-- pyenv global 3.7.2
 - pyenv global 3.7.2
 - pip install -U pip
-- pip install -U pip	
 - pip install awscli
+before_script:
+- psql -c 'CREATE DATABASE treasurydb;' -U postgres
+- psql -c 'CREATE EXTENSION postgis;' -d treasurydb  -U postgres
+- psql -c "ALTER ROLE postgres WITH PASSWORD 'postgres';" -d treasurydb -U postgres
+- echo "{:port 3000 :database-url \"postgresql://localhost/treasurydb?user=postgres&password=postgres\"}"
+  > ./test-config.edn
+script:
+- lein cljfmt check
+- lein test
+after_success:
+- lein clean
+- if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" = false ]; then
+  lein uberjar; docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"; docker build
+  -t wefarm/treasury:b$TRAVIS_BUILD_NUMBER .; docker build --rm=true -t wefarm/treasury:latest
+  .; fi
+before_deploy:
+- git config --global user.email "builds@travis-ci.com"
+- git config --global user.name "Travis CI"
+- export GIT_TAG=build-$TRAVIS_BUILD_NUMBER
+- git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
+- git push -q https://$GITHUB_TOKEN@github.com/wefarm/treasury --tags
+after_deploy:
+- if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" = false ]; then
+  docker push  wefarm/treasury:b$TRAVIS_BUILD_NUMBER; docker push  wefarm/treasury:latest;
+  git clone https://$GITHUB_TOKEN@github.com/WeFarm/kube-cred.git; cd kube-cred; mkdir
+  ~/.kube; openssl enc -in kube-config-mainnet.enc -out ~/.kube/config -d -a -aes256
+  -k $KUBE_ENC; echo "---MAINNET--- PREVIOUS RUNNING CONTAINER IMAGE:"; kubectl get
+  -n production deploy wf-treasury -o json|jq -r "(.spec.template.spec.containers[0].image)";
+  echo "---MAINNET--- DEPLOYING NEW IMAGE wefarm/treasury:b${TRAVIS_BUILD_NUMBER}";
+  kubectl --namespace=production set image deployment/wf-treasury wf-treasury=index.docker.io/wefarm/treasury:b$TRAVIS_BUILD_NUMBER;
+  else echo "skipping auto-deploy for development namespace"; fi
+env:
+- CLOUDSDK_CORE_DISABLE_PROMPTS: '1'
