@@ -1,8 +1,8 @@
 ---
 os: linux
-dist: focal
+dist: xenial
 script:
-- pyenv install --list
+- pyenv install --list | grep " 3\.[678]"
 - pyenv versions
 - pip install -U pip	
 - pip install awscli
