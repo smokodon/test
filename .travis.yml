@@ -1,9 +1,30 @@
----
-os: linux
-dist: xenial
-group: dev
-script:
-- pyenv install --list | grep " 3\.[678]"
-- pyenv versions
-- pip install -U pip	
-- pip install awscli
+jobs:
+  include:
+    - os: linux
+      node_js: '13'
+      language: node_js
+      dist: xenial
+      script:
+        - pyenv global 3.7.2
+        - python -V
+    - os: linux
+      node_js: '13'
+      language: node_js
+      dist: opal
+      script:
+        - pyenv global 3.7.2
+        - python -V
+    - os: linux
+      node_js: '13'
+      language: node_js
+      dist: stevonnie
+      script:
+        - pyenv global 3.7.2
+        - python -V
+    - os: linux
+      node_js: '13'
+      language: node_js
+      dist: bionic
+      script:
+        - pyenv global 3.7.2
+        - python -V
