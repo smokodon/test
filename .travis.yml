@@ -17,7 +17,7 @@ jobs:
         - os: linux
       node_js: '13'
       language: node_js
-      dist: stevonnie
+      dist: sardonyx
       script:
         - pyenv global 3.7.1
         - python -V
@@ -40,5 +40,5 @@ jobs:
       language: node_js
       dist: focal
       script:
-        - pyenv global 3.7.2
+        - pyenv global 3.7.1
         - python -V
