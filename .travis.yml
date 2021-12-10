@@ -2,25 +2,12 @@ jobs:
   include:
     - os: linux
       group: dev
+      python: 3.7
       node_js: '13'
       language: node_js
       dist: xenial
       script:
         - pyenv global 3.7.1
         - python -V
-    - os: linux
-      node_js: '13'
-      group: dev
-      language: node_js
-      dist: bionic
-      script:
-        - pyenv global 3.7.1
-        - python -V
-    - os: linux
-      node_js: '13'
-      group: dev
-      language: node_js
-      dist: focal
-      script:
-        - pyenv global 3.7.1
-        - python -V
+        - python -m pip install --upgrade pip==21.1.1
+
