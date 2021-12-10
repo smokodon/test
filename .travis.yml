@@ -8,6 +8,8 @@ jobs:
     script:
       - python -V
       - python -m pip --version
+      - pyenv install 3.7.10
+      - pyenv global 3.7.10
       - python -V
       - python -m pip --version
       - pyenv versions
