@@ -11,6 +11,10 @@ jobs:
     env:
       - PYTHONPATH=.
     script:
+      - python -V
+      - python -m pip --version
+      - pyenv install -v 3.7.2
+      - python -V
       - python -m pip --version
       - pyenv versions
       - pip install -U pip
