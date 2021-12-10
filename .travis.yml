@@ -11,5 +11,6 @@ jobs:
     env:
       - PYTHONPATH=.
     script:
+      - python -m pip --version
       - pyenv versions
       - pip install -U pip
