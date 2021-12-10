@@ -1,6 +1,7 @@
-dist: opal
+dist: xenial
 node_js: '13'
 language: node_js
 script:
   - pyenv global 3.7.1
   - python -V
+  - pyenv install --list
