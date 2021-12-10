@@ -1,7 +1,26 @@
-dist: xenial
-node_js: '13'
-language: node_js
-script:
-  - pyenv global 3.7.1
-  - python -V
-  - pyenv install --list
+jobs:
+  include:
+    - os: linux
+      group: dev
+      node_js: '13'
+      language: node_js
+      dist: xenial
+      script:
+        - pyenv global 3.7.1
+        - python -V
+    - os: linux
+      node_js: '13'
+      group: dev
+      language: node_js
+      dist: bionic
+      script:
+        - pyenv global 3.7.1
+        - python -V
+    - os: linux
+      node_js: '13'
+      group: dev
+      language: node_js
+      dist: focal
+      script:
+        - pyenv global 3.7.1
+        - python -V
