@@ -15,6 +15,7 @@ jobs:
       - python -m pip --version
       - pyenv global 3.7.1
       - python -V
+      - pip install --user pip
       - python -m pip --version
       - pyenv versions
       - pip install -U pip
