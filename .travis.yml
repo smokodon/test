@@ -6,7 +6,8 @@ dist: xenial
 group: dev
 script:
 - pyenv install --list
-- pyenv upgrade
+- pyenv update
+- pyenv install --list
 - pyenv install 3.7.1
 - pyenv global 3.7.1
 - python -V
