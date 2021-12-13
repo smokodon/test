@@ -12,3 +12,4 @@ script:
  - python -m pip --version
  - pyenv versions
  - pip install -U pip
+ - pip3 install --user "awscli<2.0"
