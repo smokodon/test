@@ -5,7 +5,7 @@ language: node_js
 dist: xenial
 script:
 - pyenv install --list
-- pyenv install 3.7.1
+- pyenv install 3.7.1 -y
 - pyenv global 3.7.1
 - python -V
 - eval "$(pyenv init -)"
