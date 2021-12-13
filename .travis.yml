@@ -10,5 +10,5 @@ script:
  - python -m pip --version
  - pyenv versions
  - pip install -U pip
- - pip3 install virtualenv --upgrade --user
- - pip3 install awscli --upgrade --user
+ - pip3 install virtualenv
+ - pip3 install awscli
