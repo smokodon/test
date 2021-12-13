@@ -1,13 +1,8 @@
 
 os: linux
-language: python
-python: "3.7"
+node_js: '13'
+language: node_js
 dist: xenial
 script:
- - python -V
- - python -m pip --version
- - python -V
- - python -m pip --version
- - pyenv versions
- - pip -V
- - pip3 -V
+- pyenv global 3.7.1
+- python -V
