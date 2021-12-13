@@ -6,3 +6,5 @@ dist: xenial
 script:
 - pyenv global 3.7.1
 - python -V
+- eval "$(pyenv init -)"
+- python -V
