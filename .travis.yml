@@ -9,6 +9,5 @@ script:
  - python -V
  - python -m pip --version
  - pyenv versions
- - pip install -U pip
- - pip3 install virtualenv
- - pip3 install awscli
+- pip -V
+- pip3 -V
