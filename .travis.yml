@@ -9,5 +9,5 @@ script:
  - python -V
  - python -m pip --version
  - pyenv versions
-- pip -V
-- pip3 -V
+ - pip -V
+ - pip3 -V
