@@ -7,9 +7,9 @@ group: dev
 script:
 - cat ~/.bash_profile
 - python -V
-- eval "$(pyenv init --path)"
+#- eval "$(pyenv init --path)"
 - pyenv global 3.7.1
-- cat ~/.bash_profile
+#- cat ~/.bash_profile
 - python -V
 
 
