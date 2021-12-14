@@ -3,11 +3,11 @@ os: linux
 node_js: '13'
 language: node_js
 dist: xenial
-python: 3.7.2
 script:
 - pyenv global
 - python -V
 - eval "$(pyenv init -)"
+- pyenv global 3.7.1
 - python -V
 
 
