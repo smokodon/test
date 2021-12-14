@@ -11,5 +11,3 @@ script:
 - pyenv global 3.7.1
 #- cat ~/.bash_profile
 - python -V
-
-
