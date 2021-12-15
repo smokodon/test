@@ -5,7 +5,7 @@ language: node_js
 dist: xenial
 group: dev
 script:
-- cat ~/.bash_profile
+- compgen -c python | sort -u
 - python -V
 #- eval "$(pyenv init --path)"
 - pyenv global 3.7.1
