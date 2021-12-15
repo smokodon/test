@@ -1,12 +1,12 @@
 
 os: linux
 dist: xenial
-language: bash
+#language: bash
 script:
 - pyenv global
 - compgen -c python | sort -u
 - python -V
-- eval "$(pyenv init --path)"
+#- eval "$(pyenv init --path)"
 - pyenv global 3.6.3
 #- cat ~/.bash_profile
 - python -V
