@@ -2,9 +2,10 @@ jobs:
   include:
     - os: linux
       dist: xenial
+      group: dev
       language: shell
       script:
-        - python --version
+        - compgen -c python | sort -u
         - eval "$(pyenv init --path)"
         #- pyenv install 3.7.1
         - pyenv global 3.7.1
