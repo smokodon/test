@@ -7,6 +7,6 @@ script:
 - compgen -c python | sort -u
 - python -V
 - eval "$(pyenv init --path)"
-- pyenv global 3.7.1
+- pyenv global 3.6.3
 #- cat ~/.bash_profile
 - python -V
