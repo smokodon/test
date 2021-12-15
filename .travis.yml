@@ -1,21 +1,19 @@
-language: python
-python:
-  - "3.7"
-
-group: dev
-
-install:
-
-  - pip install .
-  - pip install -r tests/requirements.txt
-
-env:
-- PYTHONPATH=.
-
-
-
-# command to run tests
-script:
-  - python -m pip --version
-  - python -Werror tests/smoke_test.py
-  - python -m unittest discover tests
+jobs:
+  include:
+    - os: linux
+      dist: xenial
+      language: shell
+      script:
+        - eval "$(pyenv init --path)"
+        #- pyenv install 3.7.1
+        - pyenv global 3.7.1
+        - python -V
+    - os: linux
+      dist: xenial
+      language: shell
+      group: dev
+      script:
+        - eval "$(pyenv init --path)"
+        #- pyenv install 3.7.1
+        - pyenv global 3.7.1
+        - python -V
