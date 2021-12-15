@@ -5,11 +5,10 @@ dist: xenial
 script:
 - cat ~/.bashrc
 - cat ~/.profile
-- cat ~/.bash_profile
-- cat ~/.bash_login
+- cat ~/.bash_profile.d
 - compgen -c python | sort -u
 - python -V
-- eval "$(pyenv init --path)"
+- eval "$(pyenv init -)"
 - pyenv global 3.7.1
 #- cat ~/.bash_profile
 - python -V
