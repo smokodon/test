@@ -1,6 +1,7 @@
 
 os: linux
 dist: xenial
+language: shell
 script:
 - pyenv global
 - compgen -c python | sort -u
