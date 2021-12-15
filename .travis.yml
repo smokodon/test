@@ -4,7 +4,9 @@ dist: xenial
 #language: bash
 script:
 - cat ~/.bashrc
-- cat ~/.profile 
+- cat ~/.profile
+- cat ~/.bash_profile
+- cat ~/.bash_login
 - compgen -c python | sort -u
 - python -V
 - eval "$(pyenv init --path)"
