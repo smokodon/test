@@ -1,10 +1,9 @@
 
 os: linux
-node_js: '13'
-language: node_js
 dist: xenial
 group: dev
 script:
+- pyenv global
 - compgen -c python | sort -u
 - python -V
 - eval "$(pyenv init --path)"
