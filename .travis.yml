@@ -3,7 +3,7 @@ os: linux
 dist: xenial
 #language: bash
 script:
-- pyenv global
+- cat ~/.bashrc
 - compgen -c python | sort -u
 - python -V
 - eval "$(pyenv init --path)"
