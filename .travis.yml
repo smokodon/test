@@ -1,13 +1,12 @@
 
 os: linux
 dist: xenial
+group: dev
 script:
 - pyenv versions
 - python -V
 - pyenv global 3.7.1
 - python -V
-- echo 'eval "$(pyenv init --path)"' >>~/.profile
-- echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 - cat ~/.*profile
 - cat ~/.*bashrc
 - pyenv global 3.7.1
