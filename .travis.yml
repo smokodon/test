@@ -6,8 +6,8 @@ script:
 - python -V
 - pyenv global 3.7.1
 - python -V
-- printf "eval /"$(pyenv init --path)"/" >>~/.profile
-- printf "eval /"$(pyenv init -)"/" >>~/.bashrc
+- printf "eval "$(pyenv init --path)" " >>~/.profile
+- printf "eval "$(pyenv init -)" " >>~/.bashrc
 - reset
 - cat ~/.*profile
 - cat ~/.*bashrc
