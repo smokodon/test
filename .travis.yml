@@ -11,6 +11,7 @@ script:
 - echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.profile
 - echo 'eval "$(pyenv init --path)"' >> ~/.profile
 - echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+- exec "$SHELL"
 - pyenv global 3.7.1
 - python -V
 - which python
