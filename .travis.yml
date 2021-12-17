@@ -2,6 +2,7 @@
 os: linux
 dist: xenial
 group: dev
+language: shell
 script:
 - pyenv versions
 - python -V
