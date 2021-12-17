@@ -7,6 +7,7 @@ script:
 - pyenv versions
 - python -V
 - which python
+- pyenv install 3.7.1
 - pyenv global 3.7.1
 - python -V
 - which python
