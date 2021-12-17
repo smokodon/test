@@ -6,7 +6,6 @@ script:
 - pyenv versions
 - python -V
 - which python
-- eval "$(pyenv init --path)"
 - pyenv global 3.7.1
 - python -V
 - which python
