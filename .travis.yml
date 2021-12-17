@@ -10,5 +10,6 @@ script:
 - pyenv install 3.7.2
 - pyenv versions
 - pyenv global 3.7.2
+- pyenv versions
 - python -V
 - which python
