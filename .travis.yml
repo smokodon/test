@@ -2,12 +2,12 @@
 os: linux
 dist: xenial
 group: dev
-language: shell
+language: ruby
 script:
 - pyenv versions
 - python -V
 - which python
-- pyenv install 3.7.1
+#- pyenv install 3.7.1
 - pyenv versions
 - pyenv global 3.7.1
 - python -V
