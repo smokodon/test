@@ -1,10 +1,9 @@
 os: linux
 jdk: 
-   - openjdk8
    - openjdk9
-   - openjdk11
 language: java
 dist: xenial
+group: dev
 services:
    - docker
 script: true
