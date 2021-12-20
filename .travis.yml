@@ -1,12 +1,12 @@
 
 os: linux
-dist: focal
+dist: bionic
 group: dev
 script:
 - pyenv versions
 - python -V
 - which python
-- pyenv global 3.7.7
+- pyenv global 3.6.10
 - python -V
 - which python
 
