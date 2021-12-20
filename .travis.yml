@@ -1,8 +1,8 @@
 os: linux
 jdk: 
-   - openjdk10
+   - openjdk7
 language: java
-dist: bionic
+dist: xenial
 group: dev
 services:
    - docker
