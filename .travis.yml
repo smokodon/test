@@ -1,12 +1,10 @@
-
 os: linux
-dist: bionic
-group: dev
-script:
-- pyenv versions
-- python -V
-- which python
-- pyenv global 3.6.10
-- python -V
-- which python
-
+jdk: 
+   - openjdk8
+   - openjdk9
+   - openjdk11
+language: java
+dist: xenial
+services:
+   - docker
+script: true
