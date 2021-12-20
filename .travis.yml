@@ -1,6 +1,6 @@
 os: linux
 jdk: 
-   - openjdk9
+   - openjdk10
 language: java
 dist: bionic
 group: dev
