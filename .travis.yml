@@ -1,6 +1,6 @@
 os: linux
 jdk: 
-   - openjdk10
+   - eas
 language: java
 dist: xenial
 group: dev
