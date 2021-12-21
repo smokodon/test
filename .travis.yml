@@ -2,8 +2,8 @@ os: linux
 jdk: 
    - openjdk9
 language: java
-dist: edge
-group: dev
+dist: xenial
+group: edge
 services:
    - docker
 script: true
