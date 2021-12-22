@@ -1,8 +1,8 @@
 os: linux
 jdk: 
-   - witam11
+   - openjdk9
 language: java
-dist: xenial
+dist: bionic
 group: dev
 services:
    - docker
