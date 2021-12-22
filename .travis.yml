@@ -1,6 +1,6 @@
 os: linux
 jdk: 
-   - openjdk9
+   - openjdk1.9
 language: java
 dist: xenial
 group: dev
