@@ -2,7 +2,7 @@ os: linux
 jdk: 
    - openjdk9
 language: java
-dist: bionic
+dist: focal
 group: dev
 services:
    - docker
