@@ -1,6 +1,6 @@
 os: linux
 jdk: 
-   - oraclejdk11
+   - witam11
 language: java
 dist: xenial
 group: dev
