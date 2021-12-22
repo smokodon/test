@@ -3,7 +3,7 @@ jdk:
    - openjdk9
 language: java
 dist: xenial
-group: edge
+group: dev
 services:
    - docker
 script: true
