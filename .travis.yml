@@ -7,4 +7,3 @@ group: dev
 services:
    - docker
 script: true
-
