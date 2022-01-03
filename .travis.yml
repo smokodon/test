@@ -1,7 +1,7 @@
 os: linux
 jdk: 
    - openjdk9
-language: java
+language: bash
 dist: xenial
 group: dev
 services:
