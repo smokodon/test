@@ -1,6 +1,6 @@
 os: linux
 jdk: 
-   - openjdk?
+   - openjdk13
 language: java
 dist: xenial
 group: dev
