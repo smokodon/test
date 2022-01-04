@@ -1,6 +1,6 @@
 os: linux
 jdk: 
-   - oraclejdk9
+   - openjdk9
 language: java
 dist: sardonyx
 group: dev
