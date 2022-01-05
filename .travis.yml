@@ -1,9 +1,10 @@
 os: linux
 jdk: 
-   - openjdk7
+   - openjdk9
 language: java
 dist: xenial
 group: dev
+arch: arm64
 services:
    - docker
 script: true
