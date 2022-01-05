@@ -1,6 +1,6 @@
 os: linux
 jdk: 
-   - openjdk13
+   - openjdk7
 language: java
 dist: xenial
 group: dev
