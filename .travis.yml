@@ -4,7 +4,7 @@ jobs:
   include:
   - stage: job
     env: JDK=9 🚫
-    script: ./install-jdk.sh --feature 9
+    script: source ./install-jdk.sh --verbose --feature 9
 
 after_script:
 - echo JAVA_HOME = ${JAVA_HOME}
