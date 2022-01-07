@@ -1,13 +1,10 @@
 language: java
 
-before_script:
-- wget https://github.com/sormuras/bach/raw/master/install-jdk.sh
-
 jobs:
   include:
-  - stage: 🚫 jdk.java.net - Archived OpenJDK General-Availability Releases
-    env: JDK=ea 🚫
-    script: source ./install-jdk.sh --feature 9 -u https://download.java.net/java/GA/jdk9/9.0.4/binaries/openjdk-9.0.4_linux-x64_bin.tar.gz
+  - stage: job
+    env: JDK=9 🚫
+    script: ./install-jdk.sh --feature 9
 
 after_script:
 - echo JAVA_HOME = ${JAVA_HOME}
