@@ -2,4 +2,4 @@ os: linux
 dist: xenial
 group: dev
 script:
-- python -v
+- python --version
