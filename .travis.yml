@@ -2,22 +2,22 @@ language: python
 jobs:
   include:
     - name: "Xenial"
-    - dist: xenial
-    - script:
+      dist: xenial
+      script:
       - python -V
       - ls -1 /usr/bin/python* | grep '.*[2-3]\(.[0-9]\+\)\?$'
       - whereis python
       - whereis python3
     - name: "Bionic"
-    - dist: bionic
-    - script:
+      dist: bionic
+      script:
       - python -V
       - ls -1 /usr/bin/python* | grep '.*[2-3]\(.[0-9]\+\)\?$'
       - whereis python
       - whereis python3
     - name: "Focal"
-    - dist: focal
-    - script:
+      dist: focal
+      script:
       - python -V
       - ls -1 /usr/bin/python* | grep '.*[2-3]\(.[0-9]\+\)\?$'
       - whereis python
