@@ -1,5 +1,5 @@
 os: linux
-dist: bionic
+dist: focal
 group: dev
 script:
 - python --version
