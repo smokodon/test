@@ -3,22 +3,23 @@ jobs:
   include:
     - name: "Xenial"
       dist: xenial
+      group: dev
       script:
       - python -V
       - ls -1 /usr/bin/python* | grep '.*[2-3]\(.[0-9]\+\)\?$'
       - whereis python
       - whereis python3
-    - name: "Bionic"
-      dist: bionic
-      script:
-      - python -V
-      - ls -1 /usr/bin/python* | grep '.*[2-3]\(.[0-9]\+\)\?$'
-      - whereis python
-      - whereis python3
-    - name: "Focal"
-      dist: focal
-      script:
-      - python -V
-      - ls -1 /usr/bin/python* | grep '.*[2-3]\(.[0-9]\+\)\?$'
-      - whereis python
-      - whereis python3
+#    - name: "Bionic"
+#      dist: bionic
+#      script:
+#      - python -V
+#      - ls -1 /usr/bin/python* | grep '.*[2-3]\(.[0-9]\+\)\?$'
+#      - whereis python
+#      - whereis python3
+#    - name: "Focal"
+#      dist: focal
+#      script:
+#      - python -V
+#     - ls -1 /usr/bin/python* | grep '.*[2-3]\(.[0-9]\+\)\?$'
+#      - whereis python
+#      - whereis python3
