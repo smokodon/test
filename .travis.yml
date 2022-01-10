@@ -1,11 +1,5 @@
 os: linux
-jdk: 
-   - openjdk7
-language: java
 dist: xenial
 group: dev
-arch: arm64
-services:
-   - docker
-script: true
-
+script:
+- python -v
