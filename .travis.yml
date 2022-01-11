@@ -3,4 +3,4 @@ dist: bionic
 group: dev
 script:
 - pyenv global 3.7.6
-- pip3 install awcli
+- pip3 install awscli
