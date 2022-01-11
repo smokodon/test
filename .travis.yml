@@ -1,5 +1,4 @@
 language: java
-dist: bionic
-group: edge
+dist: focal
 script:
 - pip3 install awscli
