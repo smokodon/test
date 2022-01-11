@@ -1,4 +1,4 @@
 language: java
-dist: focal
+dist: bionic
 script:
-- pip3 install awscli
+- pip install awscli
