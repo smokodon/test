@@ -1,5 +1,5 @@
 language: java
 dist: bionic
-group: dev
+group: edge
 script:
 - pip3 install awscli
