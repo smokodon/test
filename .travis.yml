@@ -3,4 +3,4 @@ dist: bionic
 group: dev
 python: 3.7.6
 script:
-- python -V
+- pip3 install awcli
