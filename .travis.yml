@@ -1,5 +1,6 @@
 language: java
 dist: bionic
 group: dev
+python: 3.7.6
 script:
 - python -V
