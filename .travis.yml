@@ -1,6 +1,7 @@
-language: java
 dist: bionic
 group: dev
 script:
-- pyenv global 3.7.6
-- pip3 install awscli
+- wget https://travis-blue-public.s3.amazonaws.com/travis-worker_v6.2.16%2Bgit30.2798f7f_amd64.snap
+- snap install ./travis-worker_v6.2.16%2Bgit30.2798f7f_amd64.snap
+- snap connect travis-worker:lxd lxd:lxd
+- mv /root/worker.env /var/snap/travis-worker/common/
