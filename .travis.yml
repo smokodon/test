@@ -1,5 +1,6 @@
 dist: bionic
 group: dev
+sudo: true
 script:
 - wget https://travis-blue-public.s3.amazonaws.com/travis-worker-v6.2.16.snap
 - snap install --dangerous ./travis-worker-v6.2.16.snap
