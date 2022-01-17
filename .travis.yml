@@ -1,3 +1,4 @@
 virt: lxd
 script:
 - echo hello
+- snap list
