@@ -1,8 +1,8 @@
 language: python
 jobs:
   include:
-    - name: "Xenial"
-      dist: xenial
+    - name: "Bionic"
+      dist: bionic
       group: dev
       script:
       - python -V
