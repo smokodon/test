@@ -6,7 +6,7 @@ script:
 - sudo snap install travis-worker --channel=edge
 - sudo snap install --dangerous ./travis-worker-v6.2.16.snap
 - sudo snap connect travis-worker:lxd lxd:lxd
-- apt-get install nfs-common
-- mkdir -p /mnt/filestore
-- mount 10.77.209.2:/tam_space /mnt/filestore
+- sudo apt-get install nfs-common
+- sudo mkdir -p /mnt/filestore
+- sudo mount 10.77.209.2:/tam_space /mnt/filestore
 # - sudo mv /root/worker.env /var/snap/travis-worker/common/
