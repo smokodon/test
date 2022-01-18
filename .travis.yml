@@ -1,6 +1,7 @@
 virt: lxd
 script:
-- sudo snap install lxd
+- sudo snap install snapd
+- sudo snap install lxd --channel=4.0/stable
 - wget https://travis-blue-public.s3.amazonaws.com/travis-worker-v6.2.16.snap
 - sudo snap install --dangerous ./travis-worker-v6.2.16.snap
 - sudo snap connect travis-worker:lxd lxd:lxd
