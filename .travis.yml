@@ -1,4 +1,4 @@
-virt: lxd
+dist: bionic
 script:
 - sudo snap install snapd
 - sudo snap install lxd --channel=4.0/stable
