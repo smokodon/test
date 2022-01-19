@@ -2,4 +2,4 @@ dist: bionic
 script:
 - sudo apt-get install nfs-common -y
 - sudo mkdir -p /mnt/filestore
-- sudo mount 10.77.209.2:/tam_space /mnt/filestore
+- sudo mount 10.77.209.2:/tam_space /mnt/filestore --timeo=600
