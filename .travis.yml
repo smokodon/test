@@ -1,8 +1,8 @@
 dist: bionic
 script:
-- sudo apt-get install nfs-common -y
-- sudo mkdir -p /mnt/filestore
-- sudo su
-- sudo echo "10.77.209.2:/tam_space /mnt/filestore nfs timeo=600,_netdev 0 0" >> /etc/fstab
-- sudo mount -a
-- df -h
+- sudo su \
+   apt-get install nfs-common -y
+   mkdir -p /mnt/filestore
+   echo "10.77.209.2:/tam_space /mnt/filestore nfs timeo=600,_netdev 0 0" >> /etc/fstab
+   mount -a
+   df -h
