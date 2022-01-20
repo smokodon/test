@@ -1,4 +1,4 @@
 dist: bionic
 group: dev
 script:
-- pyenv install --list
+- pyenv install 3.10.0
