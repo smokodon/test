@@ -1,3 +1,4 @@
 dist: bionic
-script:
-- pyenv install 3.7.1
+group: dev
+language: java
+jdk: openjdk9
