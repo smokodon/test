@@ -3,12 +3,12 @@ jobs:
     - dist: xenial
       group: dev
       script:
-      - pyenv instal --list
+      - pyenv install --list
     - dist: bionic
       group: dev
       script:
-      - pyenv instal --list
+      - pyenv install --list
     - dist: focal
       group: dev
       script:
-      - pyenv instal --list
+      - pyenv install --list
