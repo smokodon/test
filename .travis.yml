@@ -4,4 +4,3 @@ jobs:
       group: dev
       script:
       - pyenv install --list
-
