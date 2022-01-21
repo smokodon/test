@@ -1,13 +1,5 @@
 jobs:
   include:
-    - dist: xenial
-      group: dev
-      script:
-      - pyenv install --list
-    - dist: bionic
-      group: dev
-      script:
-      - pyenv install --list
     - dist: focal
       group: dev
       script:
