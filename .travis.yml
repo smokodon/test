@@ -1,6 +1,6 @@
 jobs:
   include:
     - dist: focal
-      group: dev
+      group: edge
       script:
       - pyenv install --list
