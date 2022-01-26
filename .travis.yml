@@ -1,4 +1,4 @@
 language: java
 jdk: openjdk10
-dist: bionic 
-group: dev
+dist: xenial 
+group: edge
