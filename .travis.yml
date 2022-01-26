@@ -1,7 +1,7 @@
 os: linux
 jdk:
-   - openjdk14
-   - openjdk15
    - openjdk16
 language: java
-dist: focal
+dist: bionic
+group: dev
+arch: arm64
