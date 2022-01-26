@@ -4,4 +4,4 @@ jdk:
 language: java
 dist: bionic
 group: dev
-arch: arm64
+
