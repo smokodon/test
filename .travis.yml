@@ -1,5 +1,5 @@
 os: linux
 jdk:
-   - openjdk11
+   - openjdk19
 language: java
 dist: focal
