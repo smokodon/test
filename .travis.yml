@@ -1,4 +1,4 @@
 language: java
-jdk: openjdk10
+jdk: openjdk13
 dist: xenial 
 group: dev
