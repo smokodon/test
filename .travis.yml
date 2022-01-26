@@ -1,25 +1,3 @@
-language: python
-jobs:
-  include:
-    - name: "Bionic"
-      dist: bionic
-      group: dev
-      script:
-      - python -V
-      - ls -1 /usr/bin/python* | grep '.*[2-3]\(.[0-9]\+\)\?$'
-      - whereis python
-      - whereis python3
-#    - name: "Bionic"
-#      dist: bionic
-#      script:
-#      - python -V
-#      - ls -1 /usr/bin/python* | grep '.*[2-3]\(.[0-9]\+\)\?$'
-#      - whereis python
-#      - whereis python3
-#    - name: "Focal"
-#      dist: focal
-#      script:
-#      - python -V
-#     - ls -1 /usr/bin/python* | grep '.*[2-3]\(.[0-9]\+\)\?$'
-#      - whereis python
-#      - whereis python3
+language: java
+jdk: openjdk9
+dist: xenial 
