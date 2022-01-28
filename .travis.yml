@@ -8,8 +8,6 @@ before_install:
 - curl --silent -L "https://github.com/docker/buildx/releases/download/v0.6.1/buildx-v0.6.1.linux-s390x" > ~/.docker/cli-plugins/docker-buildx
 - chmod a+x ~/.docker/cli-plugins/docker-buildx
 - sudo service docker restart
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-- docker info && sudo apt-get install linux-image-$(uname -r) socat -y
 - sudo sysctl net.ipv6.conf.all.disable_ipv6=1
 - sudo sysctl net.ipv6.conf.default.disable_ipv6=1
 - sudo sysctl net.ipv6.conf.lo.disable_ipv6=1
