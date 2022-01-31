@@ -19,7 +19,7 @@ before_install:
 - sudo iptables -F && sudo iptables -t nat -F && sudo iptables -t mangle -F && sudo iptables -X
 - docker info
 - docker info --format {{.CgroupDriver}}
-- sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --v=4
+- sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --v=5
 - mkdir -p $HOME/.kube && sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 - sudo chown $(id -u):$(id -g) $HOME/.kube/config
 - sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
