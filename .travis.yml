@@ -8,9 +8,13 @@ before_install:
 - curl --silent -L "https://github.com/docker/buildx/releases/download/v0.6.1/buildx-v0.6.1.linux-s390x" > ~/.docker/cli-plugins/docker-buildx
 - chmod a+x ~/.docker/cli-plugins/docker-buildx
 - cd /etc/docker
+- sudo systemctl stop kubelet
+- sudo iptables -F && sudo iptables -t nat -F && sudo iptables -t mangle -F && sudo iptables -X
 - sudo swapoff -a
 - sudo sed -i '/ swap / s/^/#/' /etc/fstab
 - docker info |grep -i cgroup
+- sudo systemctl start --now kubelet
+- sudo systemctl status kubelet 
 - sudo service docker restart
 - docker info && sudo apt-get install linux-image-$(uname -r) socat -y
 - sudo sysctl net.ipv6.conf.all.disable_ipv6=1
