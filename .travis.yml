@@ -5,8 +5,8 @@ services:
 - docker
 before_install:
 - mkdir -vp ~/.docker/cli-plugins/
-#- curl --silent -L "https://github.com/docker/buildx/releases/download/v0.6.1/buildx-v0.6.1.linux-s390x" > ~/.docker/cli-plugins/docker-buildx
-#- chmod a+x ~/.docker/cli-plugins/docker-buildx
+- curl --silent -L "https://github.com/docker/buildx/releases/download/v0.6.1/buildx-v0.6.1.linux-s390x" > ~/.docker/cli-plugins/docker-buildx
+- chmod a+x ~/.docker/cli-plugins/docker-buildx
 - sudo service docker restart
 - docker info && sudo apt-get install linux-image-$(uname -r) socat -y
 - sudo sysctl net.ipv6.conf.all.disable_ipv6=1
@@ -20,7 +20,7 @@ before_install:
 - sudo systemctl start kubelet 
 - docker info
 - docker info --format {{.CgroupDriver}}
-- sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --v=5
+- sudo kubeadm init --pod-network-cidr=10.245.0.0/16 --v=5
 - mkdir -p $HOME/.kube && sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 - sudo chown $(id -u):$(id -g) $HOME/.kube/config
 - sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
