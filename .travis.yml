@@ -10,6 +10,8 @@ before_install:
 - cd /etc/docker
 - sudo echo ""exec-opts":" "["native.cgroupdriver=systemd"]" > daemon.json && cat daemon.json
 - sudo systemctl daemon-reload
+- sudo systemctl restart docker
+- sudo systemctl restart kubelet
 - dockerd
 - sudo service docker restart
 - docker info && sudo apt-get install linux-image-$(uname -r) socat -y
