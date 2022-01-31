@@ -9,7 +9,7 @@ before_install:
 - chmod a+x ~/.docker/cli-plugins/docker-buildx
 - cd /etc/docker
 - sudo echo ""exec-opts":["native.cgroupdriver=systemd"]" > daemon.json && cat daemon.json
-- cd ..
+- dockerd
 - sudo service docker restart
 - docker info && sudo apt-get install linux-image-$(uname -r) socat -y
 - sudo sysctl net.ipv6.conf.all.disable_ipv6=1
