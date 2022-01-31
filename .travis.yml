@@ -18,6 +18,7 @@ before_install:
 - sudo swapoff -a && sudo sed -i '/ swap / s/^/#/' /etc/fstab && sudo apt-get install -y kubelet kubeadm kubectl
 - sudo iptables -F && sudo iptables -t nat -F && sudo iptables -t mangle -F && sudo iptables -X
 - docker info
+- docker info --format {{.CgroupDriver}}
 - sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --v=4
 - mkdir -p $HOME/.kube && sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 - sudo chown $(id -u):$(id -g) $HOME/.kube/config
