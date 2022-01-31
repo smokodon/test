@@ -10,6 +10,7 @@ before_install:
 - cd /etc/docker
 - sudo swapoff -a
 - sudo sed -i '/ swap / s/^/#/' /etc/fstab
+- docker info |grep -i cgroup
 - sudo service docker restart
 - docker info && sudo apt-get install linux-image-$(uname -r) socat -y
 - sudo sysctl net.ipv6.conf.all.disable_ipv6=1
