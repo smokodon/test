@@ -22,7 +22,7 @@ before_install:
 - curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
 - sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
 - sudo swapoff -a && sudo apt-get install -y kubelet kubeadm kubectl
-- systemctl start kubelet
+- sudo systemctl start kubelet
 - sudo iptables -F && sudo iptables -t nat -F && sudo iptables -t mangle -F && sudo iptables -X
 - docker info
 - docker info --format {{.CgroupDriver}}
