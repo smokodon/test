@@ -10,7 +10,6 @@ before_install:
 - cd /etc/docker
 - sudo echo -e "{\n"\"exec-opts\":" "[\"native.cgroupdriver=systemd\"]"\n}" > daemon.json && cat daemon.json
 - cat daemon.json
-- sudo systemctl restart docker
 - sudo systemctl status docker
 - sudo service docker restart
 - systemctl status docker.service
