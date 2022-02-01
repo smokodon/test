@@ -9,9 +9,7 @@ before_install:
 - chmod a+x ~/.docker/cli-plugins/docker-buildx
 - cd /etc/docker
 - sudo echo -e "{\n"\"exec-opts\":" "[\"native.cgroupdriver=systemd\"]"\n}" > daemon.json && cat daemon.json
-- cat daemon.json
-- sudo systemctl daemon-reload
-- sudo systemctl status docker
+- sudo systemctl enable docker && sudo systemctl daemon-reload && sudo systemctl restart docker
 - sudo service docker restart
 - systemctl status docker.service
 - docker info && sudo apt-get install linux-image-$(uname -r) socat -y
@@ -21,8 +19,7 @@ before_install:
 - sudo sysctl -p && sudo systemctl enable docker.service && sudo systemctl restart docker
 - curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
 - sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
-- sudo apt-get install -y kubelet kubeadm kubectl
-- kubeadm upgrade node config
+- sudo swapoff -a && sudo apt-get install -y kubelet kubeadm kubectl
 - sudo journalctl -xeu kubelet
 - sudo kubeadm reset -f && sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --v=5
 - mkdir -p $HOME/.kube && sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
