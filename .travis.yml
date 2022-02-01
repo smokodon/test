@@ -1,6 +1,6 @@
 dist: focal
 sudo: required
-arch: s390x
+arch: ppc64le
 services:
 - docker
 before_install:
