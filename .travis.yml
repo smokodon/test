@@ -23,6 +23,7 @@ before_install:
 - sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
 - sudo swapoff -a && sudo apt-get install -y kubelet kubeadm kubectl
 - sudo iptables -F && sudo iptables -t nat -F && sudo iptables -t mangle -F && sudo iptables -X
+- kubeadm reset
 - sudo systemctl start kubelet 
 - docker info
 - docker info --format {{.CgroupDriver}}
