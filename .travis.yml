@@ -16,3 +16,8 @@ before_install:
 - sudo apt-get update
 - sudo apt-get install -y kubelet kubeadm kubectl
 - sudo apt-mark hold kubelet kubeadm kubectl
+- sudo kubeadm init --ignore-preflight-errors=FileContent--proc-sys-net-bridge-bridge-nf-call-iptables
+- sudo kubeadm init phase addon all
+- sed -i 's/--network-plugin=cni //' /var/lib/kubelet/kubeadm-flags.env
+- sudo systemctl daemon-reload
+- sudo systemctl restart kubelet
