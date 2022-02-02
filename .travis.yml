@@ -6,20 +6,17 @@ services:
 - docker
 before_install:
 #- sudo apt-get update
-- sudo sysctl fs.inotify.max_user_instances=1048576  
-- sudo sysctl fs.inotify.max_queued_events=1048576  
-- sudo sysctl fs.inotify.max_user_watches=1048576  
-- sudo sysctl vm.max_map_count=262144
 - cat /proc/sys/net/bridge/bridge-nf-call-iptables
 - sudo apt install conntrack -y
 - sudo conntrack -L
 - sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 - sudo curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 - sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg |sudo apt-key add -
+- sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 - sudo add-apt-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
 - sudo apt-get update
 - sudo apt-get install -y kubelet kubeadm kubectl
-- sudo apt-mark hold kubelet kubeadm kubectl
+- sudo apt-mark hold kubelet kubeadm kubectl docker-ce
 - sudo kubeadm init --ignore-preflight-errors=all
 - sudo kubeadm init phase addon all
 - sed -i 's/--network-plugin=cni //' /var/lib/kubelet/kubeadm-flags.env
