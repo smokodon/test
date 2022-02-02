@@ -8,4 +8,4 @@ before_install:
 #- sudo apt-get update
 - cat /proc/sys/net/bridge/bridge-nf-call-iptables
 - sudo apt install conntrack -y
-- conntrack -L
+- sudo conntrack -L
