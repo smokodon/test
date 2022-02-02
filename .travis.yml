@@ -1,11 +1,15 @@
 dist: bionic
 sudo: required
 virt: lxd
-arch: amd64
+arch: s390x
 services:
 - docker
 before_install:
 #- sudo apt-get update
+- sudo sysctl fs.inotify.max_user_instances=1048576  
+- sudo sysctl fs.inotify.max_queued_events=1048576  
+- sudo sysctl fs.inotify.max_user_watches=1048576  
+- sudo sysctl vm.max_map_count=262144
 - cat /proc/sys/net/bridge/bridge-nf-call-iptables
 - sudo apt install conntrack -y
 - sudo conntrack -L
