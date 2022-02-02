@@ -5,6 +5,7 @@ arch: amd64
 services:
 - docker
 before_install:
+- sudo apt-get update
 - mkdir -vp ~/.docker/cli-plugins/
 - curl --silent -L "https://github.com/docker/buildx/releases/download/v0.6.1/buildx-v0.6.1.linux-s390x" > ~/.docker/cli-plugins/docker-buildx
 - chmod a+x ~/.docker/cli-plugins/docker-buildx
@@ -12,7 +13,7 @@ before_install:
 - sudo systemctl enable docker && sudo systemctl daemon-reload && sudo systemctl restart docker
 - sudo service docker restart
 - systemctl status docker.service
-#- docker info && sudo apt-get install linux-image-$(uname -r) socat -y
+- docker info && sudo apt-get install linux-image-$(uname -r) socat -y
 - sudo sysctl net.ipv6.conf.all.disable_ipv6=1
 - sudo sysctl net.ipv6.conf.default.disable_ipv6=1
 - sudo sysctl net.ipv6.conf.lo.disable_ipv6=1
