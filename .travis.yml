@@ -1,5 +1,6 @@
 dist: bionic
 sudo: required
+virt: lxd
 arch: amd64
 services:
 - docker
