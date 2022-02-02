@@ -6,7 +6,7 @@ services:
 - docker
 before_install:
 #- sudo apt-get update
-- sudo sh -c 'echo 'L /dev/kmsg - - - - /dev/console' > /etc/tmpfiles.d/kmsg.conf'
+- sudo sh -c echo 'L /dev/kmsg - - - - /dev/console' > /etc/tmpfiles.d/kmsg.conf
 - cat /proc/sys/net/bridge/bridge-nf-call-iptables
 - sudo apt install conntrack -y
 - sudo conntrack -L
