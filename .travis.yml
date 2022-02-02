@@ -1,5 +1,4 @@
 dist: bionic
-virt: lxd
 sudo: required
 arch: amd64
 services:
