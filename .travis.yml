@@ -6,9 +6,9 @@ services:
 - docker
 before_install:
 #- sudo apt-get update
-- sudo sh -c echo 'L /dev/kmsg - - - - /dev/console' > /etc/tmpfiles.d/kmsg.conf
 - cat /proc/sys/net/bridge/bridge-nf-call-iptables
 - sudo apt install conntrack -y
+- sudo swapoff -a
 - sudo conntrack -L
 - sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 - sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
