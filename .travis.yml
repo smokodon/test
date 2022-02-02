@@ -12,7 +12,7 @@ before_install:
 - sudo systemctl enable docker && sudo systemctl daemon-reload && sudo systemctl restart docker
 - sudo service docker restart
 - systemctl status docker.service
-- docker info && sudo apt-get install linux-image-$(uname -r) socat -y
+#- docker info && sudo apt-get install linux-image-$(uname -r) socat -y
 - sudo sysctl net.ipv6.conf.all.disable_ipv6=1
 - sudo sysctl net.ipv6.conf.default.disable_ipv6=1
 - sudo sysctl net.ipv6.conf.lo.disable_ipv6=1
