@@ -1,5 +1,9 @@
-jobs:
-  include:
-    - dist: focal
-      script:
-      - pyenv install --list
+dist: bionic
+sudo: required
+virt: lxd
+arch: s390x
+services:
+- docker
+before_install:
+#- sudo apt-get update
+- cat /proc/sys/net/bridge/bridge-nf-call-iptables
