@@ -1,6 +1,7 @@
 dist: bionic
+virt: lxd
 sudo: required
-arch: s390x
+arch: amd64
 services:
 - docker
 before_install:
