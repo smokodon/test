@@ -6,7 +6,7 @@ services:
 - docker
 before_install:
 #- sudo apt-get update
-- sudo echo overlay >> /etc/modules
+- sudo -i echo overlay >> /etc/modules
 - cat /proc/sys/net/bridge/bridge-nf-call-iptables
 - sudo apt install conntrack -y
 - sudo conntrack -L
