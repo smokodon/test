@@ -3,7 +3,7 @@ sudo: required
 virt: lxd
 arch: s390x
 vm:
-  size: 2x-large
+  size: x-large
 services:
 - docker
 before_install:
