@@ -1,7 +1,7 @@
 dist: bionic
 sudo: required
-#virt: lxd
-arch: amd64
+virt: lxd
+arch: s390x
 services:
 - docker
 before_install:
@@ -16,7 +16,7 @@ before_install:
 - sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 - sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 - sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg |sudo apt-key add -
-- sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+- sudo add-apt-repository "deb [arch=s390x] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 - sudo add-apt-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
 - sudo apt-get update
 - sudo apt-get install -y kubelet kubeadm kubectl docker-ce
