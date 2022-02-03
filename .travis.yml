@@ -21,7 +21,7 @@ before_install:
 - sudo apt-get update
 - sudo apt-get install -y kubelet kubeadm kubectl docker-ce
 - sudo apt-mark hold kubelet kubeadm kubectl docker-ce
-- kubeadm init --pod-network-cidr=10.244.0.0/16 --ignore-preflight-errors=all --kubernetes-version=1.23.3 --apiserver-advertise-address=$(hostname -i)
+- kubeadm init --pod-network-cidr=10.244.0.0/16 --v=5  --ignore-preflight-errors=all --kubernetes-version=1.23.3 --apiserver-advertise-address=$(hostname -i)
 - sed -i 's/--network-plugin=cni //' /var/lib/kubelet/kubeadm-flags.env
 - sudo systemctl daemon-reload
 - sudo systemctl restart kubelet
