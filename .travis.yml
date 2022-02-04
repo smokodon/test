@@ -11,6 +11,7 @@ before_install:
 - cat /proc/sys/net/bridge/bridge-nf-call-iptables
 - sudo apt install conntrack -y
 - sudo swapoff -a
+- sudo sed -i '/ swap / s/^/#/' /etc/fstab
 - sudo conntrack -L
 - route
 - sudo sysctl net.ipv4.ip_unprivileged_port_start=0
