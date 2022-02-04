@@ -13,7 +13,7 @@ before_install:
 - sudo swapoff -a
 - sudo conntrack -L
 - route
-- sudo sysctl net.ipv4.ip_forward
+- sudo sysctl net.ipv4.ip_unprivileged_port_start=0
 - sudo sysctl net.bridge.bridge-nf-call-iptables=1
 - route
 - sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
