@@ -6,7 +6,6 @@ services:
 - docker
 before_install:
 - sudo sysctl --system
-- sudo ls /sys/fs/cgroup
 - sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 - sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 - sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg |sudo apt-key add -
@@ -14,7 +13,10 @@ before_install:
 - sudo add-apt-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
 - sudo apt-get update
 - sudo apt-get install -y kubelet kubeadm kubectl docker-ce
-- sudo apt-mark hold kubelet kubeadm kubectl docker-ce
+- wget https://github.com/rootless-containers/usernetes/releases/download/v20211108.0/usernetes-x86_64.tbz
+- tar xjvf usernetes-x86_64.tbz
+- cd usernetes
+- ./install.sh --cri=containerd
 - sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --v=5  --ignore-preflight-errors=all --kubernetes-version=1.23.3
 - sed -i 's/--network-plugin=cni //' /var/lib/kubelet/kubeadm-flags.env
 - sudo systemctl daemon-reload
