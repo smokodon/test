@@ -2,22 +2,11 @@ dist: bionic
 sudo: required
 virt: lxd
 arch: s390x
-vm:
-  size: x-large
 services:
 - docker
 before_install:
-#- sudo apt-get update
-- cat /proc/sys/net/bridge/bridge-nf-call-iptables
-- sudo apt install conntrack -y
-- sudo swapoff -a
-- sudo sed -i '/ swap / s/^/#/' /etc/fstab
-- sudo conntrack -L
-- route
-- sudo sysctl net.ipv4.ip_unprivileged_port_start=0
-- sudo sysctl net.bridge.bridge-nf-call-iptables=1
 - sudo sysctl --system
-- route
+- sudo ls /sys/fs/cgroup
 - sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 - sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 - sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg |sudo apt-key add -
