@@ -6,7 +6,7 @@ services:
 - docker
 before_install:
 - sudo apt-get update
-- sudo apt-get install grub
+- sudo apt-get install grub-efi-amd64
 - sudo ./script.sh
 - cat /etc/default/grub
 - sudo sysctl --system
