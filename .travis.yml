@@ -6,6 +6,7 @@ services:
 - docker
 before_install:
 - lxc --version
+- sudo lxc profile show  kubernetes
 - sudo sysctl fs.inotify.max_user_instances=1048576  
 - sudo sysctl fs.inotify.max_queued_events=1048576  
 - sudo sysctl fs.inotify.max_user_watches=1048576  
