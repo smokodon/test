@@ -6,7 +6,7 @@ services:
 - docker
 before_install:
 - sudo ./script.sh
-- ls /etc/default/grub
+- cat /etc/default/grub
 - sudo sysctl --system
 - sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 - sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
