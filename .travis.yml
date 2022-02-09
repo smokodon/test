@@ -5,6 +5,7 @@ arch: s390x
 services:
 - docker
 before_install:
+- lxc --version
 - sudo sysctl fs.inotify.max_user_instances=1048576  
 - sudo sysctl fs.inotify.max_queued_events=1048576  
 - sudo sysctl fs.inotify.max_user_watches=1048576  
@@ -27,7 +28,7 @@ before_install:
 - tar xjvf usernetes-x86_64.tbz
 - cd usernetes
 #- ./install.sh --cri=containerd
-- sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --v=5  --ignore-preflight-errors=all --kubernetes-version=1.23.3
+- sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --v=5  --ignore-preflight-errors=all
 - sed -i 's/--network-plugin=cni //' /var/lib/kubelet/kubeadm-flags.env
 - sudo systemctl daemon-reload
 - sudo systemctl restart kubelet
