@@ -5,6 +5,7 @@ arch: s390x
 services:
 - docker
 before_install:
+- sudo grub-mkconfig -o /boot/grub/grub.cfg
 - sudo ./script.sh
 - cat /etc/default/grub
 - sudo sysctl --system
