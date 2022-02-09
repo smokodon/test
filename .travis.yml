@@ -22,7 +22,7 @@ before_install:
 - sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg |sudo apt-key add -
 - sudo add-apt-repository "deb [arch=s390x] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 - sudo add-apt-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
-- sudo apt-get install -y kubelet=1.12.0-00 kubeadm=1.12.0-00 kubectl=1.12.0-00 docker-ce
+- sudo apt-get install -y kubelet kubeadm kubectl docker-ce
 - wget https://github.com/rootless-containers/usernetes/releases/download/v20211108.0/usernetes-x86_64.tbz
 - tar xjvf usernetes-x86_64.tbz
 - cd usernetes
