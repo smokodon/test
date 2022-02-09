@@ -10,7 +10,7 @@ before_install:
 - sudo sysctl fs.inotify.max_user_watches=1048576  
 - sudo sysctl vm.max_map_count=262144
 #- sudo ./script.sh
-- cat /etc/default/grub
+#- cat /etc/default/grub
 - sudo sysctl --system
 - sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 - sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
