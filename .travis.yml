@@ -6,7 +6,6 @@ services:
 - docker
 before_install:
 - lxc --version
-- sudo lxc profile show  kubernetes
 - sudo sysctl fs.inotify.max_user_instances=1048576  
 - sudo sysctl fs.inotify.max_queued_events=1048576  
 - sudo sysctl fs.inotify.max_user_watches=1048576  
@@ -23,7 +22,7 @@ before_install:
 - sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 - sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg |sudo apt-key add -
 - sudo add-apt-repository "deb [arch=s390x] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-- sudo add-apt-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
+- sudo add-apt-repository "deb http://apt.kubernetes.io/ kubernetes-bionic main"
 - sudo apt-get install -y kubelet kubeadm kubectl docker-ce
 - wget https://github.com/rootless-containers/usernetes/releases/download/v20211108.0/usernetes-x86_64.tbz
 - tar xjvf usernetes-x86_64.tbz
