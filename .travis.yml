@@ -10,6 +10,7 @@ before_install:
 - sudo sysctl fs.inotify.max_user_watches=1048576  
 - sudo sysctl vm.max_map_count=262144
 - sudo sysctl -w net.bridge.bridge-nf-call-iptables=1
+- sudo ufw disable
 - sudo swapoff -a
 - sudo cp -p /etc/fstab /etc/fstab.bak$(date '+%Y%m%d%H%M%S')
 - sudo sed -i "s/\/dev\/mapper\/centos-swap/\#\/dev\/mapper\/centos-swap/g" /etc/fstab
