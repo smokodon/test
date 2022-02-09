@@ -5,9 +5,11 @@ arch: s390x
 services:
 - docker
 before_install:
-- sudo apt-get update
-- sudo apt-get install grub-disk
-- sudo ./script.sh
+- sudo sysctl fs.inotify.max_user_instances=1048576  
+- sudo sysctl fs.inotify.max_queued_events=1048576  
+- sudo sysctl fs.inotify.max_user_watches=1048576  
+- sudo sysctl vm.max_map_count=262144
+#- sudo ./script.sh
 - cat /etc/default/grub
 - sudo sysctl --system
 - sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
@@ -19,7 +21,7 @@ before_install:
 - wget https://github.com/rootless-containers/usernetes/releases/download/v20211108.0/usernetes-x86_64.tbz
 - tar xjvf usernetes-x86_64.tbz
 - cd usernetes
-- ./install.sh --cri=containerd
+#- ./install.sh --cri=containerd
 - sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --v=5  --ignore-preflight-errors=all --kubernetes-version=1.23.3
 - sed -i 's/--network-plugin=cni //' /var/lib/kubelet/kubeadm-flags.env
 - sudo systemctl daemon-reload
