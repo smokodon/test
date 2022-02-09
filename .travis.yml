@@ -5,7 +5,8 @@ arch: s390x
 services:
 - docker
 before_install:
-- sudo grub-mkconfig -o /boot/grub/grub.cfg
+- sudo apt-get update
+- sudo apt-get install --reinstall grub
 - sudo ./script.sh
 - cat /etc/default/grub
 - sudo sysctl --system
@@ -14,7 +15,6 @@ before_install:
 - sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg |sudo apt-key add -
 - sudo add-apt-repository "deb [arch=s390x] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 - sudo add-apt-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
-- sudo apt-get update
 - sudo apt-get install -y kubelet kubeadm kubectl docker-ce
 - wget https://github.com/rootless-containers/usernetes/releases/download/v20211108.0/usernetes-x86_64.tbz
 - tar xjvf usernetes-x86_64.tbz
