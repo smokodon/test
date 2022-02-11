@@ -1,4 +1,3 @@
 dist: focal
-lang: cpp
-script:
-- /lib/x86_64-linux-gnu/libc.so.6
+addons:
+  rethinkdb: "2.4.1"
