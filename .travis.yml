@@ -1,5 +1,4 @@
-dist: bionic
+dist: focal
 group: dev
-arch: ppc64
 script:
 - p4 -V
