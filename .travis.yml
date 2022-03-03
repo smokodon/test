@@ -1,4 +1,5 @@
 dist: focal
 group: dev
+arch: s390x
 script:
 - p4 -V
