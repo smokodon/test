@@ -1,4 +1,4 @@
-dist: xenial
+dist: focal
 group: dev
 script:
 - p4 -V
