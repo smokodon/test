@@ -1,4 +1,4 @@
-dist: bionic
+dist: focal
 group: dev
 script:
 - java --version
