@@ -1,5 +1,6 @@
 dist: focal
 group: dev
+arch: arm64
 script:
 - java --version
 - sudo apt-get install -y wget apt-transport-https
