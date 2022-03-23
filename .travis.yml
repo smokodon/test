@@ -1,6 +1,7 @@
 dist: bionic
 group: dev
 arch: arm64
+jdk: openjdk10
 script:
 - java --version
 - sudo apt-get install -y wget apt-transport-https
