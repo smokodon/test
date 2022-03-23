@@ -1,4 +1,4 @@
-dist: focal
+dist: bionic
 group: dev
 arch: arm64
 script:
