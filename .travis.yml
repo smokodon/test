@@ -1,5 +1,4 @@
 dist: bionic
-arch: arm64
 jdk: openjdk16
 script:
 - java --version
