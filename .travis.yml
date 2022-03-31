@@ -7,7 +7,7 @@ script:
 - sudo apt-get update -yqq
 - sudo apt-get install temurin-17-jdk --allow-unauthenticated
 #- sudo apt-get -yqq --no-install-suggests --no-install-recommends install temurin-17-jdk || true
-- export JAVA_HOME=/opt/temurin-17-jdk-amd64
+- export JAVA_HOME/usr/lib/jvm/temurin-17-jdk-amd64
 - export PATH=$PATH:$JAVA_HOME/bin
 #- sudo update-alternatives --config java 0
 - sudo update-java-alternatives -s "temurin-17-jdk-amd64"*
