@@ -6,7 +6,8 @@ script:
 - echo "deb [signed-by=/usr/share/keyrings/adoptium.asc] https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION_CODENAME/{print$2}' /etc/os-release) main" | sudo tee /etc/apt/sources.list.d/adoptium.list
 - sudo apt-get update -yqq
 - sudo apt-get -yqq --no-install-suggests --no-install-recommends install temurin-17-jdk || true
-- export PATH=/usr/lib/jvm/temurin-17-jdk-amd64/bin:$PATH
+- export JAVA_HOME=/opt/temurin-17-jdk-amd64
+- export PATH=$JAVA_HOME/bin:$PATH
 - sudo update-java-alternatives -s "temurin-17-jdk-amd64"
 #- sudo apt-get install -y wget apt-transport-https
 #- wget -O - https://packages.adoptium.net/artifactory/api/gpg/key/public | sudo tee /usr/share/keyrings/adoptium.asc
