@@ -1,5 +1,5 @@
 dist: bionic
-jdk: openjdk18
+jdk: openjdk17
 script:
 - java --version
 #- sudo apt-get install -y wget apt-transport-https
@@ -17,4 +17,3 @@ script:
 
 notifications:
   email: false
-
