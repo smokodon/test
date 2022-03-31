@@ -1,5 +1,5 @@
 dist: xenial
-jdk: oraclejdk16
+jdk: openjdk17
 script:
 - echo $JAVA_HOME
 #- wget -O - https://packages.adoptium.net/artifactory/api/gpg/key/public | sudo tee /usr/share/keyrings/adoptium.asc
@@ -25,3 +25,4 @@ script:
 
 notifications:
   email: false
+
