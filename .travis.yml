@@ -9,6 +9,7 @@ script:
 #- sudo apt-get -yqq --no-install-suggests --no-install-recommends install temurin-17-jdk || true
 - export JAVA_HOME=/opt/temurin-17-jdk-amd64
 - export PATH=$JAVA_HOME/bin:$PATH
+- sudo update-alternatives --config java 0
 - sudo update-java-alternatives -s "temurin-17-jdk-amd64"
 #- sudo apt-get install -y wget apt-transport-https
 #- wget -O - https://packages.adoptium.net/artifactory/api/gpg/key/public | sudo tee /usr/share/keyrings/adoptium.asc
