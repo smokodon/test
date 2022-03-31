@@ -3,7 +3,7 @@ dist: bionic
 script:
 - echo $JAVA_HOME
 - java --version
-- wget -qO - https://packages.adoptium.net/artifactory/api/gpg/key/public| sudo apt-key add -
+- wget -qO - https://packages.adoptium.net/artifactory/api/gpg/key/public | sudo apt-key add -
 - sudo add-apt-repository --yes https://packages.adoptium.net/artifactory/deb
 - sudo apt-get update -yqq
 - sudo apt-get -yqq --no-install-suggests --no-install-recommends install temurin-17-jdk || true
