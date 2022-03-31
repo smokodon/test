@@ -1,5 +1,6 @@
-dist: bionic
-#jdk: openjdk17
+dist: xenial
+arch: arm64
+jdk: openjdk16
 script:
 - echo $JAVA_HOME
 - java --version
