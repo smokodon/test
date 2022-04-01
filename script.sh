@@ -15,7 +15,6 @@ main() {
     sudo apt-get install "$PACKAGE"
     #sudo apt-get -yqq --no-install-suggests --no-install-recommends install "$PACKAGE" || true
     sudo update-java-alternatives -s "$PACKAGE"*
-    sudo update-alternatives --set "$PACKAGE" /usr/lib/jvm/
     #export JAVA_HOME="/usr/lib/jvm/$PACKAGE"
 }
 
