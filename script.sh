@@ -1,3 +1,5 @@
+  #!/usr/bin/env bash
+  
   local JAVA_VERSION
   JAVA_VERSION="17"
   sudo apt-get update -yqq
