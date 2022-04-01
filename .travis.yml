@@ -1,4 +1,4 @@
-dist: xenial
+dist: bionic
 jdk: openjdk17
 script:
 - echo $JAVA_HOME
