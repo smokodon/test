@@ -15,6 +15,7 @@ main() {
     sudo apt-get install "$PACKAGE"
     #sudo apt-get -yqq --no-install-suggests --no-install-recommends install "$PACKAGE" || true
     sudo update-java-alternatives -s "$PACKAGE"*
+    export JAVA_HOME=`type -p java|xargs readlink -f|xargs dirname|xargs dirname`
 }
 
 main "$@"
