@@ -1,7 +1,7 @@
 dist: bionic
 script:
-- sudo update-alternatives --remove “java” “/usr/lib/jvm/jdk[version]/bin/java”
-- sudo update-alternatives --remove “javac” “/usr/lib/jvm/jdk[version]/bin/javac”
+- sudo update-alternatives --remove “java” “/usr/lib/jvm/jdk*/bin/java”
+- sudo update-alternatives --remove “javac” “/usr/lib/jvm/jdk*/bin/javac”
 - echo $JAVA_HOME
 - cat ~/.bashrc
 - chmod +x ./script.sh
