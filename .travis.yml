@@ -1,7 +1,6 @@
 dist: bionic
 script:
-- sudo update-alternatives --remove “java” “/usr/lib/jvm/jdk*/bin/java”
-- sudo update-alternatives --remove “javac” “/usr/lib/jvm/jdk*/bin/javac”
+- sudo apt-get purge openjdk-\*
 - echo $JAVA_HOME
 - cat ~/.bashrc
 - chmod +x ./script.sh
