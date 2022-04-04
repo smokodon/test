@@ -6,7 +6,7 @@ set -o xtrace
 main() {
     
   local JAVA_VERSION
-  JAVA_VERSION="8"
+  JAVA_VERSION="11"
   sudo apt-get update -yqq
   PACKAGE="temurin-${JAVA_VERSION}-jdk"
     wget -O - https://packages.adoptium.net/artifactory/api/gpg/key/public | sudo tee /usr/share/keyrings/adoptium.asc
