@@ -1,6 +1,6 @@
 dist: bionic
 script:
-- sudo apt-get purge openjdk-\*
+- cat /etc/profile
 - echo $JAVA_HOME
 - cat ~/.bashrc
 - chmod +x ./script.sh
