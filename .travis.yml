@@ -1,5 +1,5 @@
 dist: bionic
-jdk: openjdk11
+jdk: openjdk17
 script:
 - cat /etc/profile
 - echo $JAVA_HOME
