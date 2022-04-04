@@ -16,7 +16,6 @@ main() {
     sudo update-java-alternatives -s /usr/lib/jvm/"$PACKAGE"* --verbose
     export JAVA_HOME="/usr/lib/jvm/$PACKAGE"
     export PATH=${JAVA_HOME}/bin:$PATH
-    source /etc/profile
     #export JAVA_HOME="/usr/lib/jvm/$PACKAGE"
 }
 
