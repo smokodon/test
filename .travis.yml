@@ -1,6 +1,7 @@
 dist: bionic
 script:
 - echo $JAVA_HOME
+- echo ~/.bashrc
 - chmod +x ./script.sh
 - ./script.sh
 #- wget -O - https://packages.adoptium.net/artifactory/api/gpg/key/public | sudo tee /usr/share/keyrings/adoptium.asc
