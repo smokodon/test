@@ -17,6 +17,7 @@ main() {
     export JAVA_HOME="/usr/lib/jvm/$PACKAGE"
     export PATH=${JAVA_HOME}/bin:$PATH
     #export JAVA_HOME="/usr/lib/jvm/$PACKAGE"
+    echo $JAVA_HOME
 }
 
 main "$@"
