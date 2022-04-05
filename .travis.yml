@@ -1,9 +1,8 @@
 dist: bionic
 jdk: openjdk17
 script:
-- cat /etc/profile
-- echo $JAVA_HOME
-- cat ~/.bashrc
+- export JAVA_HOME=~/usr/lib/jvm/temurin-17-jdk-amd64
+- export PATH="$JAVA_HOME/bin:$PATH"
 - chmod +x ./script.sh
 #s- ./script.sh
 #- wget -O - https://packages.adoptium.net/artifactory/api/gpg/key/public | sudo tee /usr/share/keyrings/adoptium.asc
