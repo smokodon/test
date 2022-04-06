@@ -12,6 +12,7 @@ main() {
     wget -O - https://packages.adoptium.net/artifactory/api/gpg/key/public | sudo tee /usr/share/keyrings/adoptium.asc
     echo "deb [signed-by=/usr/share/keyrings/adoptium.asc] https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION_CODENAME/{print$2}' /etc/os-release) main" | sudo tee /etc/apt/sources.list.d/adoptium.list
     sudo apt-get update -yqq
+     # shellcheck disable=SC2016
     export JAVA_HOME=~/$PACKAGE
     export PATH="$JAVA_HOME/bin:$PATH"
     sudo apt-get -yqq --no-install-suggests --no-install-recommends install "$PACKAGE" || true
