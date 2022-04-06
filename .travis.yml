@@ -1,6 +1,5 @@
 dist: bionic
-jdk: openjdk16
-arch: arm64
+jdk: openjdk17
 script:
 #- chmod +x ./script.sh
 #- sudo ./script.sh
