@@ -1,5 +1,5 @@
 dist: bionic
-jdk: openjdk17
+jdk: openjdk8
 script:
 #- chmod +x ./script.sh
 #- sudo ./script.sh
