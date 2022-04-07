@@ -3,6 +3,8 @@ dist: bionic
 arch: arm64
 script:
 #- export JAVA_HOME="/usr/bin/java"
+- java --version
+- echo $JAVA_HOME
 - chmod +x ./script.sh
 - sudo ./script.sh
 #- export PATH=$PWD/temurin-11-jdk-amd64/bin:$PATH
