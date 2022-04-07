@@ -2,9 +2,10 @@ dist: bionic
 jdk: oracle17
 script:
 - export JAVA_HOME="/usr/bin/java"
-- export PATH="$JAVA_HOME/bin:$PATH"
+- export PATH=$PWD/temurin-17-jdk-amd64/bin:$PATH
 - chmod +x ./script.sh
 - sudo ./script.sh
+- export PATH=$PWD/temurin-17-jdk-amd64/bin:$PATH
 # - wget -O - https://packages.adoptium.net/artifactory/api/gpg/key/public | sudo tee /usr/share/keyrings/adoptium.asc
 #- echo "deb [signed-by=/usr/share/keyrings/adoptium.asc] https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION_CODENAME/{print$2}' /etc/os-release) main" | sudo tee /etc/apt/sources.list.d/adoptium.list
 #- sudo apt-get update -yqq
