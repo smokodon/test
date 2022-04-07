@@ -20,6 +20,7 @@ script:
 #- export PATH=$PWD/jdk-16.0.2+7/bin:$PATH
 - java --version
 - echo $JAVA_HOME
+- whereis java
 
 notifications:
   email: false
