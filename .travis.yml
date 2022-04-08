@@ -1,5 +1,5 @@
 dist: bionic
-jdk: oracle17
+jdk: oracle11
 script:
 #- export JAVA_HOME="/usr/bin/java"
 - java --version
