@@ -1,34 +1,11 @@
-dist: bionic
-sudo: required
-virt: lxd
-arch: s390x
-services:
-- docker
-before_install:
-- lxc --version
-- sudo sysctl fs.inotify.max_user_instances=1048576  
-- sudo sysctl fs.inotify.max_queued_events=1048576  
-- sudo sysctl fs.inotify.max_user_watches=1048576  
-- sudo sysctl vm.max_map_count=262144
-- sudo sysctl -w net.bridge.bridge-nf-call-iptables=1
-- sudo ufw disable
-- sudo swapoff -a
-- sudo cp -p /etc/fstab /etc/fstab.bak$(date '+%Y%m%d%H%M%S')
-- sudo sed -i "s/\/dev\/mapper\/centos-swap/\#\/dev\/mapper\/centos-swap/g" /etc/fstab
-#- sudo ./script.sh
-#- cat /etc/default/grub
-- sudo sysctl --system
-- sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
-- sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-- sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg |sudo apt-key add -
-- sudo add-apt-repository "deb [arch=s390x] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-- sudo add-apt-repository "deb http://apt.kubernetes.io/ kubernetes-bionic main"
-- sudo apt-get install -y kubelet kubeadm kubectl docker-ce
-- wget https://github.com/rootless-containers/usernetes/releases/download/v20211108.0/usernetes-x86_64.tbz
-- tar xjvf usernetes-x86_64.tbz
-- cd usernetes
-#- ./install.sh --cri=containerd
-- sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --v=5  --ignore-preflight-errors=all
-- sed -i 's/--network-plugin=cni //' /var/lib/kubelet/kubeadm-flags.env
-- sudo systemctl daemon-reload
-- sudo systemctl restart kubelet
+os: linux
+language: php
+php: nightly
+
+script: php --version
+install: true
+
+jobs:
+  include:
+    - dist: trusty
+    - dist: xenial
