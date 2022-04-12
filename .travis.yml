@@ -5,8 +5,3 @@ php: nightly
 
 script: php --version
 install: true
-
-jobs:
-  include:
-    - dist: trusty
-    - dist: xenial
