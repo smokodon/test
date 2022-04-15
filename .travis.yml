@@ -1,3 +1,4 @@
 os: osx
 script:
 - brew info openssl
+- brew install awscli
