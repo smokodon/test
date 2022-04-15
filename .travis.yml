@@ -1,7 +1,3 @@
-os: linux
-dist: trusty
-language: php
-php: nightly
-
-script: php --version
-install: true
+os: osx
+script:
+- brew info openssl
