@@ -1,5 +1,6 @@
 os: osx
 script:
+- brew install ca-certificates
 - brew update
 - brew info openssl
 - brew install awscli
