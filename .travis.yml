@@ -1,6 +1,6 @@
 os: osx
 script:
-- brew install ca-certificates
+- echo 'export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"' >> ~/.bash_profile
 - brew update
 - brew info openssl
 - brew install awscli
