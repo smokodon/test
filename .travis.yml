@@ -1,4 +1,4 @@
-dist: jammy
+dist: focal
 group: dev
 script:
 - cat /etc/os-release
