@@ -1,4 +1,5 @@
-dist: focal
+dist: jammy
+arch: arm64
 group: dev
 script:
 - cat /etc/os-release
