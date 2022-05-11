@@ -1,5 +1,4 @@
 dist: jammy
-arch: amd64
 group: dev
 script:
 - cat /etc/os-release
