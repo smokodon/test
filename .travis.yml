@@ -2,3 +2,4 @@ dist: jammy
 group: dev
 script:
 - cat /etc/os-release
+
