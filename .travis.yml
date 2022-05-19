@@ -6,5 +6,5 @@
 os: linux
 dist: xenial
 language: java
-jdk: openjdk10
+jdk: openjdk17
 
