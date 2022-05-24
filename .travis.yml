@@ -1,6 +1,5 @@
 dist: bionic
 jdk: openjdk8
-arch: amd64
 script:
  - java -version
 notifications:
