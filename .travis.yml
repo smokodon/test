@@ -1,5 +1,4 @@
-dist: jammy
-group: dev
-script:
-- cat /etc/os-release
-
+os: osx
+dist: xenial
+language: java
+jdk: openjdk10
