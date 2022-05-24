@@ -1,7 +1,6 @@
-os: linux
 dist: bionic
 jdk: openjdk8
-lang: java
+language: java
 script:
  - java -version
 notifications:
