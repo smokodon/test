@@ -1,5 +1,5 @@
 dist: bionic
-jdk: openjdk17
+jdk: openjdk8
 arch: amd64
 script:
  - java -version
