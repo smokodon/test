@@ -1,4 +1,4 @@
-os: osx
+os: linux
 dist: xenial
 language: java
 jdk: openjdk10
