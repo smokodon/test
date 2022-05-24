@@ -1,4 +1,7 @@
-os: linux
 dist: bionic
-language: java
-jdk: openjdk16
+jdk: openjdk17
+arch: amd64
+script:
+ - java -version
+notifications:
+  email: false
