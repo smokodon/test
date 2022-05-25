@@ -1,4 +1,4 @@
-os: linux
+os: osx
 dist: bionic
 language: java
 jdk: openjdk11
