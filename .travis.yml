@@ -1,6 +1,6 @@
-dist: bionic
+dist: xenial
 language: java
 jdk: oraclejdk8
 script:
-- java --version
+- java -version
 
