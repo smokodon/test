@@ -1,4 +1,4 @@
-dist: xenial
+dist: bionic
 jdk:
 - oracle8
 - oracle11
