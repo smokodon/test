@@ -1,6 +1,7 @@
-dist: focal
+dist: xenial
 jdk:
 - oracle11
+- openjdk8
 
 script:
 - java --version
