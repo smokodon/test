@@ -4,5 +4,10 @@ jdk:
 - oracle11
 - oracle17
 
+script:
+- java --version
+- echo $JAVA_HOME
+- whereis java
+
 notifications:
   email: false
