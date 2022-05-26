@@ -1,8 +1,6 @@
 dist: focal
 jdk:
-- openjdk8
-- openjdk11
-- openjdk17
+- oracle11
 
 script:
 - java --version
