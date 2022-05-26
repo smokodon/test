@@ -1,7 +1,7 @@
 language: java
 arch: amd64
-dist: bionic
+dist: xenial
 jdk:
-- openjdk8
-- openjdk11
-- openjdk17
+- oracle8
+- oracle11
+- oracle17
