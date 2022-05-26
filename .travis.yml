@@ -1,4 +1,5 @@
 language: java
+arch: amd64
 dist: xenial
 jdk:
 - openjdk8
