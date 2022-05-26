@@ -1,4 +1,4 @@
-dist: bionic
+dist: focal
 jdk:
 - openjdk8
 - openjdk11
