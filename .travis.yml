@@ -1,8 +1,6 @@
 language: java
 dist: xenial
 jdk:
-  - oraclejdk8
-  - oraclejdk11
-  - openjdk10
-  - openjdk11
-  - openjdk9
+- openjdk8
+- openjdk11
+- openjdk17
