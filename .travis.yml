@@ -1,7 +1,8 @@
-language: java
-arch: amd64
 dist: xenial
 jdk:
 - oracle8
 - oracle11
 - oracle17
+
+notifications:
+  email: false
