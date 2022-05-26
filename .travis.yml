@@ -1,8 +1,8 @@
-dist: focal
+dist: bionic
 jdk:
-- oracle8
-- oracle11
-- oracle17
+- openjdk8
+- openjdk11
+- openjdk17
 
 script:
 - java --version
