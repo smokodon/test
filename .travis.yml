@@ -1,6 +1,6 @@
-dist: xenial
+dist: bionic
 jdk:
-- oracle11
+- oracle10
 - openjdk8
 
 script:
