@@ -1,8 +1,8 @@
-os: osx
-#before_install:
-#- export HOMEBREW_FORCE_BREWED_CURL=1
-script:
-#- echo 'export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"' >> ~/.bash_profile
-- brew update -f -v
-#- brew info openssl
-- HOMEBREW_FORCE_BREWED_CURL=1 brew install awscli
+os: linux
+language: generic
+before_install: true
+install: true
+arch: ppc64le
+
+dist: focal
+script: true
