@@ -1,8 +1,7 @@
-dist: bionic
+dist: focal
 jdk:
-- oracle10
-- openjdk10
-- jdk10
+- oraclejdk11
+- oraclejdk11e
 
 script:
 - java --version
