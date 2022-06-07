@@ -1,8 +1,8 @@
-dist: focal
+dist: trusty
 jdk:
+- oraclejdk15
+- oraclejdk8
 - oraclejdk11
-- oraclejdk11e
-- oraclejdk13
 
 script:
 - java --version
