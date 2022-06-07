@@ -2,6 +2,7 @@ dist: focal
 jdk:
 - oraclejdk11
 - oraclejdk11e
+- oraclejdk13
 
 script:
 - java --version
