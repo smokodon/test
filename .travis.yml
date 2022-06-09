@@ -1,26 +1,3 @@
-jobs:
-  include:
-   - dist: xenial
-     jdk: openjdk13
-     arch: amd64
-     script:
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: bionic
-     jdk: openjdk13
-     arch: amd64
-     script:
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: focal
-     jdk: openjdk13
-     arch: amd64
-     script:
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-
-notifications:
-  email: false
+dist: focal
+script:
+- echo test
