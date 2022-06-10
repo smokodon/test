@@ -1,8 +1,6 @@
 os: linux
-language: generic
-before_install: true
-install: true
-arch: ppc64le
-
-dist: focal
-script: true
+dist: jammy
+jdk:
+- openjdk7
+- openjdk11
+- openjdk17
