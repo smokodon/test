@@ -1,9 +1,7 @@
 os: linux
-dist: jammy
+dist: bionic
 jdk:
-- openjdk8
-- openjdk11
-- openjdk17
+- openjdk13
 script:
 - java -version
 - echo $JAVA_HOME
