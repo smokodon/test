@@ -6,3 +6,4 @@ script:
 - java -version
 - echo $JAVA_HOME
 - echo $PATH
+
