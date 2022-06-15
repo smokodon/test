@@ -1,9 +1,7 @@
 os: linux
 dist: bionic
-jdk:
-- openjdk13
 script:
-- java -version
-- echo $JAVA_HOME
-- echo $PATH
-
+- wget -q -O - https://download.bell-sw.com/pki/GPG-KEY-bellsoft | sudo apt-key add -
+- echo "deb [arch=amd64] https://apt.bell-sw.com/ stable main" | sudo tee /etc/apt/sources.list.d/bellsoft.list
+- apt-get update
+- apt-get install bellsoft-java13
