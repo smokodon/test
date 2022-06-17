@@ -1,9 +1,15 @@
 jobs:
   include:
-   - dist: focal
+   - dist: jammy
      script:
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
       - gcc --version
       - g++ --version
+   - dist: jammy
+    language: php
+    php:
+    - "8.1"
+    script: 
+    - php --version
