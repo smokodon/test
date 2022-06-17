@@ -8,3 +8,11 @@ jobs:
     language: php
     script: 
     - php --version
+  - dist: xenial
+    language: php
+    script: 
+    - php --version
+  - dist: bionic
+    language: php
+    script: 
+    - php --version
