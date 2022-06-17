@@ -6,6 +6,8 @@ jobs:
     - php --version
   - dist: jammy
     language: php
+    php:
+    - 7.4
     script: 
     - php --version
   - dist: xenial
