@@ -1,8 +1,7 @@
-dist: bionic
-before_script: sudo su
-script:
-- apt-get install nfs-common -y
-- mkdir -p /mnt/filestore
-- echo "10.77.209.2:/tam_space /mnt/filestore nfs timeo=600,_netdev 0 0" >> /etc/fstab
-- mount -a
-- df -h
+jobs:
+  include:
+   - dist: jammy
+     script:
+      - java -version
+      - echo $JAVA_HOME
+      - echo $PATH
