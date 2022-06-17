@@ -1,6 +1,6 @@
 jobs:
   include:
-   - dist: jammy
+   - dist: focal
      script:
       - java -version
       - echo $JAVA_HOME
