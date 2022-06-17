@@ -1,23 +1,9 @@
 jobs:
   include:
-  - dist: focal
-    language: php
-    arch: amd64
-    php:
-    - 7.4    
-    script: 
-    - php --version
   - dist: jammy
     language: php
     php:
     - 8.1
-    script: 
-    - php --version
-  - dist: xenial
-    language: php
-    script: 
-    - php --version
-  - dist: bionic
-    language: php
-    script: 
+    script:
+    - php -n -m
     - php --version
