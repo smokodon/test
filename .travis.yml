@@ -6,3 +6,4 @@ jobs:
       - echo $JAVA_HOME
       - echo $PATH
       - gcc --version
+      - g++ --version
