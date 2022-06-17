@@ -1,5 +1,24 @@
-dist: focal
-group: dev
-language: go
-script: 
-  - go version
+job:
+  include:
+    - dist: xenial
+      group: dev
+      language: go
+      script: 
+      - go version
+    - dist: bionic
+      group: dev
+      language: go
+      script: 
+      - go version
+    - dist: focal
+      group: dev
+      language: go
+      script: 
+      - go version
+    - dist: jammy
+      group: dev
+      language: go
+      script: 
+      - go version
+notifications:
+  email: false
