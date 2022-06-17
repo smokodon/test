@@ -2,6 +2,7 @@ jobs:
   include:
   - dist: focal
     language: php
+    arch: amd64
     script: 
     - php --version
   - dist: jammy
