@@ -1,9 +1,5 @@
 jobs:
   include:
   - dist: jammy
-    language: php
-    php:
-    - 8.1
     script:
-    - php -n -m
-    - php --version
+    - apt list -a
