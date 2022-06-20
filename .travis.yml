@@ -5,3 +5,4 @@ jobs:
     - apt list -a
     - docker-compose --version
     - docker --version
+    - groovy -version
