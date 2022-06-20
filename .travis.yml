@@ -3,3 +3,5 @@ jobs:
   - dist: jammy
     script:
     - apt list -a
+    - docker-compose --version
+    - docker --version
