@@ -1,20 +1,20 @@
 jobs:
   include:
    - dist: focal
-     jdk: openjdk13
+     jdk: jdk13
      arch: amd64
      script:
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
    - dist: focal
-     jdk: openjdk13
+     jdk: oraclejdk13
      arch: arm64
      script:
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
    - dist: focal
-     jdk: openjdk13
+     jdk: jdk13
      arch: ppc64le
 
