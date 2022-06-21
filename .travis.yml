@@ -1,5 +1,19 @@
 jobs:
   include:
+   - dist: xenial
+     jdk: jdk13
+     arch: amd64
+     script:
+      - java -version
+      - echo $JAVA_HOME
+      - echo $PATH
+   - dist: bionic
+     jdk: oraclejdk13
+     arch: amd64
+     script:
+      - java -version
+      - echo $JAVA_HOME
+      - echo $PATH
    - dist: focal
      jdk: jdk13
      arch: amd64
@@ -7,14 +21,3 @@ jobs:
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
-   - dist: focal
-     jdk: oraclejdk13
-     arch: arm64
-     script:
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: focal
-     jdk: jdk13
-     arch: ppc64le
-
