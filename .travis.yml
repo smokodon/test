@@ -1,24 +1,59 @@
-job:
+jobs:
   include:
-    - dist: xenial
-      group: dev
-      language: go
-      script: 
-      - go version
-    - dist: bionic
-      group: dev
-      language: go
-      script: 
-      - go version
-    - dist: focal
-      group: dev
-      language: go
-      script: 
-      - go version
-    - dist: jammy
-      group: dev
-      language: go
-      script: 
-      - go version
+   - dist: xenial
+     jdk: openjdk13
+     arch: amd64
+     script:
+      - java -version
+      - echo $JAVA_HOME
+      - echo $PATH
+   - dist: xenial
+     jdk: openjdk13
+     arch: arm64
+     script:
+      - java -version
+      - echo $JAVA_HOME
+      - echo $PATH
+   - dist: xenial
+     jdk: openjdk13
+     arch: ppc64le
+   - dist: bionic
+     jdk: openjdk13
+     arch: amd64
+     script:
+      - java -version
+      - echo $JAVA_HOME
+      - echo $PATH
+   - dist: bionic
+     jdk: openjdk13
+     arch: arm64
+     script:
+      - java -version
+      - echo $JAVA_HOME
+      - echo $PATH
+   - dist: bionic
+     jdk: openjdk13
+     arch: ppc64le
+   - dist: focal
+     jdk: openjdk13
+     arch: amd64
+     script:
+      - java -version
+      - echo $JAVA_HOME
+      - echo $PATH
+   - dist: focal
+     jdk: openjdk13
+     arch: arm64
+     script:
+      - java -version
+      - echo $JAVA_HOME
+      - echo $PATH
+   - dist: focal
+     jdk: openjdk13
+     arch: ppc64le
+     script:
+      - java -version
+      - echo $JAVA_HOME
+      - echo $PATH
 notifications:
   email: false
