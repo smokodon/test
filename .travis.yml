@@ -21,10 +21,10 @@ jobs:
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
+   - dist: focal
      jdk: openjdk15
      arch: amd64
      script:
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
-
