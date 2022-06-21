@@ -1,20 +1,20 @@
 jobs:
   include:
-   - dist: xenial
+   - dist: bionic
      jdk: openjdk13
      arch: amd64
      script:
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
-   - dist: xenial
+   - dist: bionic
      jdk: openjdk13
      arch: arm64
      script:
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
-   - dist: xenial
+   - dist: bionic
      jdk: openjdk13
      arch: ppc64le
 notifications:
