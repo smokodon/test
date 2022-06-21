@@ -64,4 +64,3 @@ jobs:
       - echo $PATH
 notifications:
   email: false
-
