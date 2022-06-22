@@ -11,6 +11,7 @@ main() {
   PACKAGE="bellsoft-java${JAVA_VERSION}"
   wget -qO - https://download.bell-sw.com/pki/GPG-KEY-bellsoft | sudo apt-key add -
   sudo add-apt-repository  'deb [arch='$TRAVIS_CPU_ARCH'] https://apt.bell-sw.com/ stable main'
+  udo add-apt-repository --yes https://apt.bell-sw.com/deb
   sudo apt-get update -yqq
   sudo apt-get -yqq --no-install-suggests --no-install-recommends install "$PACKAGE" || true
   #travis_cmd "export JAVA_HOME=/usr/lib/jvm/bellsoft-java${JAVA_VERSION}-${TRAVIS_CPU_ARCH}" --echo
