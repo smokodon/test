@@ -1,27 +1,6 @@
 jobs:
   include:
    - dist: xenial
-     arch: arm64
-     script:
-      - ./script
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: bionic
-     arch: arm64
-     script:
-      - ./script
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: focal
-     arch: arm64
-     script:
-      - ./script
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: xenial
      arch: s390x
      script:
       - ./script
