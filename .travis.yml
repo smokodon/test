@@ -2,8 +2,9 @@ jobs:
   include:
    - dist: xenial
      arch: s390x
-     jdk: openjdk13
+     #jdk: openjdk13
      script:
+      - apt install openjdk-13-jdk
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
