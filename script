@@ -28,7 +28,8 @@ main() {
     dpkg-query -l bellsoft* | grep bellsoft | awk '{print $2}' | xargs sudo dpkg -P
     fi
     wget -qO - https://download.bell-sw.com/pki/GPG-KEY-bellsoft | sudo apt-key add -
-    echo "deb [arch='$TRAVIS_CPU_ARCH'] https://apt.bell-sw.com/ stable main" | sudo tee /etc/apt/sources.list.d/bellsoft.list
+    #echo "deb [arch='$TRAVIS_CPU_ARCH'] https://apt.bell-sw.com/ stable main" | sudo tee /etc/apt/sources.list.d/bellsoft.list
+    sudo add-apt-repository --yes https://apt.bell-sw.com/
     #sudo add-apt-repository  'deb [arch='$TRAVIS_CPU_ARCH'] https://apt.bell-sw.com/ stable main'
     sudo apt-get update -yqq
     sudo apt-get -yqq --no-install-suggests --no-install-recommends install "$PACKAGE" || true
