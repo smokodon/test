@@ -2,8 +2,8 @@ jobs:
   include:
    - dist: focal
      group: dev
-     jdk: openjdk11
-     arch: amd64
+     arch: s390x
+     jdk: openjdk13
      script:
       - java -version
       - echo $JAVA_HOME
