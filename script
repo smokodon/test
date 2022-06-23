@@ -23,10 +23,10 @@ main() {
   sudo apt-get update -yqq
   PACKAGE="bellsoft-java${JAVA_VERSION}"
   wget -qO - https://download.bell-sw.com/pki/GPG-KEY-bellsoft | sudo apt-key add -
-  sudo add-apt-repository  'deb [arch='$TRAVIS_CPU_ARCH'] https://apt.bell-sw.com/ stable main'
+  sudo add-apt-repository  'deb [arch=s390x] https://apt.bell-sw.com/ stable main'
   sudo apt-get update -yqq
   sudo apt-get -yqq --no-install-suggests --no-install-recommends install "$PACKAGE" || true
-  set "export JAVA_HOME=/usr/lib/jvm/bellsoft-java${JAVA_VERSION}-${TRAVIS_CPU_ARCH}" --echo
+  set "export JAVA_HOME=/usr/lib/jvm/bellsoft-java${JAVA_VERSION}-s390x" --echo
   set "export PATH="$JAVA_HOME/bin:$PATH" --echo"
   sudo update-java-alternatives -s "$PACKAGE"
 }
