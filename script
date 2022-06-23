@@ -26,8 +26,6 @@ main() {
   sudo add-apt-repository  'deb [arch=s390x] https://apt.bell-sw.com/ stable main'
   sudo apt-get update -yqq
   sudo apt-get -yqq --no-install-suggests --no-install-recommends install "$PACKAGE" || true
-  set "export JAVA_HOME=/usr/lib/jvm/bellsoft-java${JAVA_VERSION}-s390x" --echo
-  set "export PATH="$JAVA_HOME/bin:$PATH" --echo"
   sudo update-java-alternatives -s "$PACKAGE"
 }
 
