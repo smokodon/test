@@ -1,7 +1,7 @@
 jobs:
   include:
    - dist: focal
-     arch: s390x
+     arch: amd64
      #jdk: openjdk13
      script:
       - sudo apt-get update
