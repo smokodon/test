@@ -3,51 +3,49 @@ jobs:
    - dist: xenial
      arch: arm64
      script:
-      - lsb_release -a
-      - ./script
+     jdk: openjdk13
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
-   - dist: xenial
-     arch: s390x
-     script:
-      - lsb_release -a
-      - ./script
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: bionic
-     arch: s390x
-     script:
-      - ./script
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: focal
-     arch: s390x
-     script:
-      - ./script
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: xenial
-     arch: ppc64le
-     script:
-      - ./script
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: bionic
-     arch: ppc64le
-     script:
-      - ./script
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: focal
-     arch: ppc64le
-     script:
-      - ./script
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
+    - dist: xenial
+      arch: s390x
+      script:
+      jdk: openjdk13
+       - java -version
+       - echo $JAVA_HOME
+       - echo $PATH
+  #  - dist: bionic
+  #    arch: s390x
+  #    script:
+  #     - ./script
+  #     - java -version
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
+  #  - dist: focal
+  #    arch: s390x
+  #    script:
+  #     - ./script
+  #     - java -version
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
+  #  - dist: xenial
+  #    arch: ppc64le
+  #    script:
+  #     - ./script
+  #     - java -version
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
+  #  - dist: bionic
+  #    arch: ppc64le
+  #    script:
+  #     - ./script
+  #     - java -version
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
+  #  - dist: focal
+  #    arch: ppc64le
+  #    script:
+  #     - ./script
+  #     - java -version
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
