@@ -6,7 +6,7 @@ jobs:
      script:
       - sudo add-apt-repository  'deb http://ports.ubuntu.com/ xenial main universe'
       - sudo apt-get update -yqq
-      - sudo apt install openjdk-13-jdk
+      - sudo apt install openjdk-8-jdk
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
