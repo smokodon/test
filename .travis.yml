@@ -1,6 +1,6 @@
 jobs:
   include:
-   - dist: focal
+   - dist: jammy
      arch: s390x
      #jdk: openjdk13
      script:
