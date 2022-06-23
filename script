@@ -20,9 +20,9 @@ main() {
   #   sudo update-java-alternatives -s "$PACKAGE"*
   # fi
   local JAVA_VERSION
-  JAVA_VERSION=14
+  JAVA_VERSION=13
   sudo apt-get update -yqq
-  PACKAGE="bellsoft-java${JAVA_VERSION}-*"
+  PACKAGE="bellsoft-java${JAVA_VERSION}-full"
   if ! dpkg -s "$PACKAGE" >/dev/null 2>&1; then
     if dpkg-query -l bellsoft* >/dev/null 2>&1; then
     dpkg-query -l bellsoft* | grep bellsoft | awk '{print $2}' | xargs sudo dpkg -P
