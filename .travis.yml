@@ -1,9 +1,9 @@
 jobs:
   include: 
      - dist: xenial
-     - arch: s390x
-     - script:
-      - dpkg-query -l
+       arch: s390x
+       script:
+        - dpkg-query -l
   #  - dist: xenial
   #    arch: arm64
   #    script:
