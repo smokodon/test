@@ -4,7 +4,7 @@ jobs:
      arch: s390x
      #jdk: openjdk13
      script:
-      - apt install openjdk-13-jdk
+      - sudo apt install openjdk-13-jdk
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
