@@ -1,11 +1,11 @@
 jobs:
   include:
-   - dist: xenial
+   - dist: bionic
      arch: s390x
      #jdk: openjdk13
      script:
-      - sudo add-apt-repository  'deb http://ports.ubuntu.com/ubuntu-ports xenial main universe'
-      - sudo apt-get update -yqq
+      # - sudo add-apt-repository  'deb http://ports.ubuntu.com/ubuntu-ports xenial main universe'
+      # - sudo apt-get update -yqq
       - sudo apt install openjdk-13-jdk
       - java -version
       - echo $JAVA_HOME
