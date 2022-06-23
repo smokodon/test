@@ -20,7 +20,7 @@ main() {
   #   sudo update-java-alternatives -s "$PACKAGE"*
   # fi
   local JAVA_VERSION
-  JAVA_VERSION=13
+  JAVA_VERSION=14
   sudo apt-get update -yqq
   PACKAGE="bellsoft-java${JAVA_VERSION}"
   if ! dpkg -s "$PACKAGE" >/dev/null 2>&1; then
@@ -28,9 +28,7 @@ main() {
     dpkg-query -l bellsoft* | grep bellsoft | awk '{print $2}' | xargs sudo dpkg -P
     fi
     wget -qO - https://download.bell-sw.com/pki/GPG-KEY-bellsoft | sudo apt-key add -
-    #echo "deb [arch='$TRAVIS_CPU_ARCH'] https://apt.bell-sw.com/ stable main" | sudo tee /etc/apt/sources.list.d/bellsoft.list
-    sudo add-apt-repository --yes https://apt.bell-sw.com/stable/
-    #sudo add-apt-repository  'deb [arch='$TRAVIS_CPU_ARCH'] https://apt.bell-sw.com/ stable main'
+    sudo add-apt-repository  'deb [arch='$TRAVIS_CPU_ARCH'] https://apt.bell-sw.com/ stable main'
     sudo apt-get update -yqq
     sudo apt-get -yqq --no-install-suggests --no-install-recommends install "$PACKAGE" || true
     #travis_cmd "export JAVA_HOME=/usr/lib/jvm/bellsoft-java${JAVA_VERSION}-${TRAVIS_CPU_ARCH}" --echo
