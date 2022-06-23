@@ -1,6 +1,6 @@
 jobs:
   include:
-   - dist: bionic
+   - dist: focal
      arch: s390x
      #jdk: openjdk13
      script:
