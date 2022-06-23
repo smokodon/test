@@ -4,8 +4,7 @@ jobs:
      arch: s390x
      #jdk: openjdk13
      script:
-      - apt search openjdk
-      - sudo add-apt-repository  'deb http://ports.ubuntu.com/ xenial main'
+      - sudo add-apt-repository  'deb http://ports.ubuntu.com/ xenial main universe'
       - sudo apt-get update -yqq
       - sudo apt install openjdk-13-jdk
       - java -version
