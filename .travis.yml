@@ -1,8 +1,7 @@
 jobs:
   include:
-   - dist: focal
-     arch: s390x
-     jdk: openjdk15
+   - dist: bionic
+     group: dev
      script:
       - java -version
       - echo $JAVA_HOME
