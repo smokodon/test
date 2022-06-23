@@ -19,15 +19,5 @@ main() {
     sudo apt-get -yqq --no-install-suggests --no-install-recommends install "$PACKAGE" || true
     sudo update-java-alternatives -s "$PACKAGE"*
   fi
-  # local JAVA_VERSION
-  # JAVA_VERSION=13
-  # sudo apt-get update -yqq
-  # PACKAGE="bellsoft-java${JAVA_VERSION}"
-  # wget -qO - https://download.bell-sw.com/pki/GPG-KEY-bellsoft | sudo apt-key add -
-  # sudo add-apt-repository  'deb [arch=i386] https://apt.bell-sw.com/ stable main'
-  # sudo apt-get update -yqq
-  # sudo apt-get -yqq --no-install-suggests --no-install-recommends install "$PACKAGE" || true
-  # sudo update-java-alternatives -s "$PACKAGE"
-}
 
 main "$@"
