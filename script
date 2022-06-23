@@ -21,7 +21,7 @@ main() {
   # fi
   local JAVA_VERSION
   JAVA_VERSION=13
-  sudo apt-get update -yqq
+  sudo apt-get update -y
   PACKAGE="bellsoft-java${JAVA_VERSION}"
   if ! dpkg -s "$PACKAGE" >/dev/null 2>&1; then
     if dpkg-query -l bellsoft* >/dev/null 2>&1; then
