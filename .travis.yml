@@ -1,11 +1,12 @@
 jobs:
   include:
    - dist: focal
-     arch: amd64
+     arch: s390x
      #jdk: openjdk13
      script:
-      - sudo apt-get update
-      - sudo apt install openjdk-13-jdk
+      - wget https://download.java.net/java/GA/jdk13.0.2/d4173c853231432d94f001e99d882ca7/8/GPL/openjdk-13.0.2_linux-x64_bin.tar.gz
+      - tar xzf openjdk-13.0.2_linux-x64_bin.tar.gz
+      - export PATH=$PWD/openjdk-13.0.2/bin:$PATH
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
