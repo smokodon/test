@@ -9,8 +9,8 @@ jobs:
       - echo $PATH
     - dist: xenial
       arch: s390x
-     jdk: openjdk13
-     script:
+      jdk: openjdk13
+      script:
        - java -version
        - echo $JAVA_HOME
        - echo $PATH
