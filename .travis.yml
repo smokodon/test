@@ -3,6 +3,7 @@ jobs:
    - dist: xenial
      arch: arm64
      script:
+      - lsb_release -a
       - ./script
       - java -version
       - echo $JAVA_HOME
@@ -10,6 +11,7 @@ jobs:
    - dist: xenial
      arch: s390x
      script:
+      - lsb_release -a
       - ./script
       - java -version
       - echo $JAVA_HOME
