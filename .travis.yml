@@ -1,8 +1,7 @@
 jobs:
   include:
-   - dist: focal
-     group: dev
-     arch: ppc64le
+   - dist: xenial
+     arch: s390x
      jdk: openjdk13
      script:
       - java -version
