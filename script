@@ -22,7 +22,7 @@ main() {
   local JAVA_VERSION
   JAVA_VERSION=14
   sudo apt-get update -yqq
-  PACKAGE="bellsoft-java${JAVA_VERSION}"
+  PACKAGE="bellsoft-java${JAVA_VERSION}-*"
   if ! dpkg -s "$PACKAGE" >/dev/null 2>&1; then
     if dpkg-query -l bellsoft* >/dev/null 2>&1; then
     dpkg-query -l bellsoft* | grep bellsoft | awk '{print $2}' | xargs sudo dpkg -P
