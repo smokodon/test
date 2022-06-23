@@ -6,7 +6,8 @@ jobs:
      script:
       - sudo add-apt-repository ppa:openjdk/ppa
       - sudo apt-get update
-      - sudo apt install openjdk-13-jdk
+      - sudo apt-get install aptitude -yqq
+      - sudo aptitude install openjdk-13-jdk
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
