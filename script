@@ -26,8 +26,8 @@ main() {
   sudo add-apt-repository  'deb [arch='$TRAVIS_CPU_ARCH'] https://apt.bell-sw.com/ stable main'
   sudo apt-get update -yqq
   sudo apt-get -yqq --no-install-suggests --no-install-recommends install "$PACKAGE" || true
-  set JAVA_HOME=/usr/lib/jvm/bellsoft-java${JAVA_VERSION}-${TRAVIS_CPU_ARCH} --echo
-  set PATH="$JAVA_HOME/bin:$PATH" --echo
+  set "export JAVA_HOME=/usr/lib/jvm/bellsoft-java${JAVA_VERSION}-${TRAVIS_CPU_ARCH}" --echo
+  set "export PATH="$JAVA_HOME/bin:$PATH" --echo"
   sudo update-java-alternatives -s "$PACKAGE"
 }
 
