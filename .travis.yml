@@ -2,7 +2,7 @@ jobs:
   include:
    - dist: focal
      group: dev
-     arch: s390x
+     arch: ppc64le
      jdk: openjdk13
      script:
       - java -version
