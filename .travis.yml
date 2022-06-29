@@ -6,3 +6,4 @@ jobs:
       - docker
      script:
       - npm list -g
+      - nvm ls
