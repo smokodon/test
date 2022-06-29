@@ -5,6 +5,6 @@ jobs:
      services:
       - docker
      script:
-      - find / | grep webrick
-      - find / | grep mongo-go-driver
+      - find / | grep minimist
+      - find / | grep "mongo-go-driver"
   
