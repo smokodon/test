@@ -5,5 +5,5 @@ jobs:
      services:
       - docker
      script:
-      - find / | grep numpy
-      - find / | grep mongo-driver
+      - find / | grep webrick
+      - find / | grep mongo-go-driver
