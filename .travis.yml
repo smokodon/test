@@ -1,8 +1,8 @@
 jobs:
   include:
-   - dist: bionic
+   - dist: focal
      group: dev
+     services:
+      - docker
      script:
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
+      - npm list -g
