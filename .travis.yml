@@ -8,4 +8,3 @@ jobs:
       - find / | grep minimist
       - find / | grep "mongo-go-driver"
   
-  
