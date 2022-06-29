@@ -5,9 +5,5 @@ jobs:
      services:
       - docker
      script:
-      - npm list -g
-      - nvm ls
-      - nvm install node
-      - nvm ls
-      - find / | grep bundler
-      - find / | grep jackson
+      - find / | grep numpy
+      - find / | grep mongo-driver
