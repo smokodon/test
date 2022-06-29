@@ -1,6 +1,6 @@
 jobs:
   include:
-   - dist: focal
+   - dist: bionic
      group: dev
      services:
       - docker
@@ -9,3 +9,5 @@ jobs:
       - nvm ls
       - nvm install node
       - nvm ls
+      - find / | grep bundler
+      - find / | grep jackson
