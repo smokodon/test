@@ -7,3 +7,5 @@ jobs:
      script:
       - npm list -g
       - nvm ls
+      - nvm install node
+      - nvm ls
