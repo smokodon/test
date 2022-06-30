@@ -5,10 +5,11 @@ jobs:
      services:
       - docker
      script:
-      - find / | oauth
+      - find / | grep oauth
       - find / | grep kotlin
-      - find / | keypair
-      - find / | minimist
-      - find / | shell-quote
-      - find / | rexml
+      - find / | grep keypair
+      - find / | grep minimist
+      - find / | grep shell-quote
+      - find / | grep rexml
+      - find / | grep mongo-driver
   
