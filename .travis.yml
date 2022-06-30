@@ -5,6 +5,10 @@ jobs:
      services:
       - docker
      script:
-      - find / | grep databind
+      - find / | oauth
       - find / | grep kotlin
+      - find / | keypair
+      - find / | minimist
+      - find / | shell-quote
+      - find / | rexml
   
