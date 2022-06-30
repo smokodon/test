@@ -5,8 +5,7 @@ jobs:
      services:
       - docker
      script:
-      - find / | grep oauth
-      - find / | grep kotlin
+      - heroku versions
       - find / | grep keypair
       - find / | grep minimist
       - find / | grep shell-quote
