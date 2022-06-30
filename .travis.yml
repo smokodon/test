@@ -5,6 +5,7 @@ jobs:
      services:
       - docker
      script:
+      - node --version
       - heroku version
       - find / | grep keypair
       - find / | grep minimist
