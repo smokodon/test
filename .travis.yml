@@ -6,12 +6,15 @@ jobs:
      script:
      - easy_install --version
      - python -m pytest
+     - pip list
      - py.test --version
    - dist: focal
      group: dev
-     python: 3.7.13
+     python: 3.9.0
      script:
      - easy_install --version
      - python -m pytest
+     - pip list
      - py.test --version
+
 
