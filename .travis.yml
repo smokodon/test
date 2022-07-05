@@ -5,3 +5,10 @@ jobs:
      python: 3.7.13
      script:
      - easy_install --version
+     - py.test --version
+   - dist: focal
+     group: dev
+     python: 3.7.13
+     script:
+     - easy_install --version
+     - py.test --version
