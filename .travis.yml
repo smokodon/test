@@ -9,10 +9,10 @@ jobs:
      - python -m pytest
      - pip list
      - py.test --version
-   - dist: focal
+   - dist: bionic
      group: dev
      language: python
-     python: 3.8.3
+     python: 2.7.18
      script:
      - easy_install --version
      - python -m pytest
