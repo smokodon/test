@@ -12,9 +12,8 @@ jobs:
    - dist: focal
      group: dev
      language: python
-     python: 3.9.13
+     python: 3.8.3
      script:
-     - pip install pytest
      - easy_install --version
      - python -m pytest
      - pip list
