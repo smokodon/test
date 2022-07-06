@@ -2,7 +2,8 @@ jobs:
   include:
    - dist: bionic
      group: dev
-     python: 3.7.13
+     lang: python
+     python: 2.7.18
      script:
      - easy_install --version
      - python -m pytest
@@ -10,7 +11,8 @@ jobs:
      - py.test --version
    - dist: focal
      group: dev
-     python: 3.9.0
+     lang: python
+     python: 3.9.13
      script:
      - easy_install --version
      - python -m pytest
