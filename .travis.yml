@@ -2,7 +2,7 @@ jobs:
   include:
    - dist: bionic
      group: dev
-     lang: python
+     language: python
      python: 2.7.18
      script:
      - easy_install --version
@@ -11,9 +11,10 @@ jobs:
      - py.test --version
    - dist: focal
      group: dev
-     lang: python
+     language: python
      python: 3.9.13
      script:
+     - pip install pytest
      - easy_install --version
      - python -m pytest
      - pip list
