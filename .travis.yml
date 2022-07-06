@@ -3,7 +3,7 @@ jobs:
    - dist: bionic
      group: dev
      language: python
-     python: 2.7.18
+     python: 2.7.17
      script:
      - easy_install --version
      - python -m pytest
