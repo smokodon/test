@@ -45,28 +45,23 @@ jobs:
       - echo $JAVA_HOME
       - echo $PATH
    - dist: xenial
-     arch: ppc64le
-   - dist: xenial
-     arch: ppc64le
-   - dist: xenial
      arch: s390x
      script:
-      - lsb_release -a
-      - ./script
+      - ./script2
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
    - dist: bionic
      arch: s390x
      script:
-      - ./script
+      - ./script2
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
    - dist: focal
      arch: s390x
      script:
-      - ./script
+      - ./script2
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
