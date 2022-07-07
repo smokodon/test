@@ -10,7 +10,7 @@ main() {
     #export JAVA_HOME=$($HOME/openjdk12)
     #export PATH=$JAVA_HOME/bin:$PATH
     sudo mkdir $HOME/jvm
-    cd /jvm
+    cd $HOME/jvm
     wget https://download.java.net/java/GA/jdk12.0.2/e482c34c86bd4bf8b56c0b35558996b9/10/GPL/openjdk-12.0.2_linux-x64_bin.tar.gz
     sudo tar -xvzf openjdk-12.0.2_linux-x64_bin.tar.gz
     export JAVA_HOME=$HOME/jvm/openjdk-12.0.2/
