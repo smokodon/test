@@ -1,9 +1,12 @@
 jobs:
   include:
   - dist: bionic
-    language: java
-    jdk: openjdk12
+    group: dev
     script:
-     - java -version
-     - echo $JAVA_HOME
-     - echo $PATH
+     - easy_install --version
+     - py.test --version
+  - dist: focal
+    group: dev
+    script:
+     - easy_install --version
+     - py.test --version
