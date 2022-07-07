@@ -1,11 +1,9 @@
 jobs:
   include:
-  - dist: jammy
+  - dist: bionic
+    language: java
+    jdk: 12
     script:
-    - apt list -a
-    - docker-compose --version
-    - docker --version
-    - groovy -version
-    - mongodb --version
-    - mongod --version
-    - redis-server --version
+     - java -version
+     - echo $JAVA_HOME
+     - echo $PATH
