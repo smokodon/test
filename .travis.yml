@@ -3,12 +3,12 @@ jobs:
   - dist: bionic
     group: dev
     script:
-     - python -v
+     - python --version
      - easy_install --version
      - py.test --version
   - dist: focal
     group: dev
     script:
-     - python -v
+     - python --version
      - easy_install --version
      - py.test --version
