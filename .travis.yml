@@ -2,7 +2,7 @@ jobs:
   include:
   - dist: bionic
     language: java
-    jdk: 12
+    jdk: openjdk12
     script:
      - java -version
      - echo $JAVA_HOME
