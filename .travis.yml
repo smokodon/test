@@ -3,12 +3,14 @@ jobs:
   - dist: bionic
     group: dev
     script:
+     - which -a ruby
      - python --version
      - easy_install --version
      - py.test --version
   - dist: focal
     group: dev
     script:
+     - which -a ruby
      - python --version
      - easy_install --version
      - py.test --version
