@@ -3,6 +3,8 @@ jobs:
   - dist: bionic
     group: dev
     script:
+     - ls -ls /usr/bin/python*
+     - ls -ls /usr/local/bin/python*
      - which -a ruby
      - python --version
      - easy_install --version
@@ -10,6 +12,8 @@ jobs:
   - dist: focal
     group: dev
     script:
+     - ls -ls /usr/bin/python*
+     - ls -ls /usr/local/bin/python*
      - which -a ruby
      - python --version
      - easy_install --version
