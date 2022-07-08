@@ -14,4 +14,3 @@ jobs:
      - python --version
      - easy_install --version
      - py.test --version
-
