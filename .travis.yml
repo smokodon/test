@@ -1,22 +1,6 @@
 jobs:
   include:
-   - dist: bionic
-     group: dev
-     language: python
-     python: 2.7.17
+   - dist: rhel8
      script:
-     - easy_install --version
-     - python -m pytest
-     - pip list
-     - py.test --version
-   - dist: bionic
-     group: dev
-     language: python
-     python: 2.7.18
-     script:
-     - easy_install --version
-     - python -m pytest
-     - pip list
-     - py.test --version
-
+     - cat /etc/redhat-release
 
