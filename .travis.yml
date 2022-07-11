@@ -1,6 +1,9 @@
 jobs:
   include:
    - dist: rhel8
+     language: node_js
+     node_js:
+     - 7
      script:
      - cat /etc/redhat-release
 
