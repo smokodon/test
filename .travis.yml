@@ -1,9 +1,11 @@
 jobs:
   include:
-   - dist: rhel8
-     language: node_js
-     node_js:
-     - 8
+  #  - dist: rhel8
+  #    language: node_js
+  #    node_js:
+  #    - 8
+  #    script:
+  #    - cat /etc/redhat-release
+   - dist: jammy
      script:
-     - cat /etc/redhat-release
-
+     - cat /etc
