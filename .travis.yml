@@ -9,4 +9,9 @@ jobs:
    - dist: jammy
      script:
      - cat /etc
+   - dist: jammy
+     group: dev
+     script:
+     - cat /etc
+
 
