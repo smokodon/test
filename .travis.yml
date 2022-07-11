@@ -1,6 +1,7 @@
 jobs:
   include:
    - dist: rhel8
+     arch: arm64
      services:
      - docker
      language: node_js
@@ -10,9 +11,11 @@ jobs:
      script:
      - cat /etc/redhat-release
    - dist: rhel8
+     arch: arm64
      script:
      - cat /etc/redhat-release
    - dist: rhel8
+     arch: arm64
      language: node_js
      node_js:
      - 8
