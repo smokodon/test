@@ -9,3 +9,4 @@ jobs:
    - dist: rhel8
      script:
      - cat /etc/redhat-release
+
