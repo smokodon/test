@@ -2,11 +2,10 @@ jobs:
   include:
    - dist: rhel8
      script:
-     - cat /etc/
+     - cd /etc/
    - dist: rhel8
      script:
      - echo hello
    - dist: rhel8
      script:
      - cat /etc/redhat-release
-
