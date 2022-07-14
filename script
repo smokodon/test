@@ -22,7 +22,7 @@ main() {
   if [[ "$JAVA_VERSION" == "8" ]]; then
     JAVA_VERSION="1.8.0"
   fi
-  PACKAGE="java-${JAVA_VERSION}-amazon-corretto-jdk"
+  PACKAGE="java-${JAVA_VERSION}-amazon-corretto"
   wget -O- https://apt.corretto.aws/corretto.key | sudo apt-key add -
   sudo add-apt-repository 'deb https://apt.corretto.aws stable main'
   sudo apt-get update -yqq
