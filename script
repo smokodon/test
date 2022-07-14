@@ -40,7 +40,7 @@ main() {
   sudo apt-get update -yqq
   sudo apt-get -yqq --no-install-suggests --no-install-recommends install "$PACKAGE" || true
   export JAVA_HOME=/usr/lib/jvm/bellsoft-java${JAVA_VERSION}-${TRAVIS_CPU_ARCH}
-  export PATH="$JAVA_HOME/bin:$PATH" --echo
+  export PATH="$JAVA_HOME/bin:$PATH"
   sudo update-java-alternatives -s "$PACKAGE"*
 
 }
