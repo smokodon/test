@@ -51,7 +51,7 @@ jobs:
       - echo $JAVA_HOME
       - echo $PATH
    - dist: bionic
-     arch: s390x
+     arch: ppc64le
      script:
       - ./script2
       - java -version
