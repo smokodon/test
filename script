@@ -27,8 +27,8 @@ main() {
     sudo add-apt-repository 'deb https://apt.corretto.aws stable main'
     sudo apt-get update -yqq
     sudo apt-get -yqq --no-install-suggests --no-install-recommends install "$PACKAGE" || true
-    # travis_cmd "export JAVA_HOME=/usr/lib/jvm/java-${JAVA_VERSION}-amazon-corretto" --echo
-    # travis_cmd 'export PATH="$JAVA_HOME/bin:$PATH"' --echo
+    export JAVA_HOME=/usr/lib/jvm/java-${JAVA_VERSION}-amazon-corretto --echo
+    export PATH="$JAVA_HOME/bin:$PATH" --echo
     sudo update-java-alternatives -s "$PACKAGE"*
   fi
 
