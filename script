@@ -5,7 +5,7 @@ set -o xtrace
 
 main() {
   local JAVA_VERSION
-  JAVA_VERSION=13
+  JAVA_VERSION=15
   sudo apt-get update -yqq
   PACKAGE="adoptopenjdk-${JAVA_VERSION}-hotspot"
   wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
