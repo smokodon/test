@@ -22,12 +22,12 @@ main() {
   if [[ "$JAVA_VERSION" == "8" ]]; then
     JAVA_VERSION="1.8.0"
   fi
-  PACKAGE="java-${JAVA_VERSION}-amazon-corretto"
+  PACKAGE="java-${JAVA_VERSION}-amazon-corretto-jdk"
   wget -O- https://apt.corretto.aws/corretto.key | sudo apt-key add -
   sudo add-apt-repository 'deb https://apt.corretto.aws stable main'
   sudo apt-get update -yqq
   sudo apt-get -yqq --no-install-suggests --no-install-recommends install "$PACKAGE" || true
-  export JAVA_HOME=/usr/lib/jvm/java-${JAVA_VERSION}-amazon-corretto
+  export JAVA_HOME=/usr/lib/jvm/java-${JAVA_VERSION}-amazon-corretto-jdk
   export PATH="$JAVA_HOME/bin:$PATH"
   sudo update-java-alternatives -s "$PACKAGE"*
 
