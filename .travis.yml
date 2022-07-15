@@ -1,6 +1,9 @@
 jobs:
   include:
    - dist: bionic
+     language: python
+     python:
+     - "3.8"
      group: dev
      script:
      - python -c "__import__('setuptools').setup()" sdist
@@ -8,6 +11,9 @@ jobs:
      - python -c "__import__('setuptools').setup()" sdist
    - dist: focal
      group: dev
+     language: python
+     python:
+     - "3.9"
      script:
      - python -c "__import__('setuptools').setup()" sdist
      - pip install pip setuptools --upgrade
