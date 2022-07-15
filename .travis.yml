@@ -1,21 +1,51 @@
 jobs:
   include:
    - dist: rhel8
-     language: node_js
-     node_js:
-     - 7
-     script:
-     - cd /etc/
-   - dist: rhel8
-     language: node_js
-     node_js:
-     - 9
      script:
      - echo hello
+     - cat /etc/redhat-release
    - dist: rhel8
-     language: node_js
-     node_js:
-     - 8
      script:
+     - echo hello1
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello2
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello3
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello4
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello5
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello6
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello7
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello8
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello9
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello10
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello11
      - cat /etc/redhat-release
 
