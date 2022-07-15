@@ -48,4 +48,195 @@ jobs:
      script:
      - echo hello11
      - cat /etc/redhat-release
-
+   - dist: rhel8
+     script:
+     - echo hello12
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello13
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello14
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello15
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello16
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello17
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello18
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello19
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello20
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello21
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello22
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello23
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello24
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello25
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello26
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello27
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello28
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello29
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello30
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello31
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello32
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello33
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello34
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello35
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello36
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello37
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello38
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello39
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello40
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello41
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello42
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello43
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello44
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello45
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello46
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello47
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello48
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello49
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello50
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello51
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello52
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello53
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello54
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello55
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello56
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello57
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello58
+     - cat /etc/redhat-release
+   - dist: rhel8
+     script:
+     - echo hello59
+     - cat /etc/redhat-release
