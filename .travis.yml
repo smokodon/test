@@ -3,7 +3,7 @@ jobs:
    - dist: bionic
      language: python
      python:
-     - "3.8"
+     - "3.7"
      group: dev
      script:
      - python -c "__import__('setuptools').setup()" sdist
@@ -13,7 +13,7 @@ jobs:
      group: dev
      language: python
      python:
-     - "3.9"
+     - "3.7"
      script:
      - python -c "__import__('setuptools').setup()" sdist
      - pip install pip setuptools --upgrade
