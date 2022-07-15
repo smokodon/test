@@ -4,7 +4,11 @@ jobs:
      group: dev
      script:
      - python -c "__import__('setuptools').setup()" sdist
+     - pip install pip setuptools --upgrade
+     - python -c "__import__('setuptools').setup()" sdist
    - dist: focal
      group: dev
      script:
+     - python -c "__import__('setuptools').setup()" sdist
+     - pip install pip setuptools --upgrade
      - python -c "__import__('setuptools').setup()" sdist
