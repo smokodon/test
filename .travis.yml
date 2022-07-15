@@ -3,7 +3,7 @@ jobs:
    - dist: xenial
      arch: amd64
      language: java
-     jdk: opendjk13
+     jdk: opendjdk13
      script:
       - lsb_release -a
       #- ./script
@@ -13,7 +13,7 @@ jobs:
    - dist: bionic
      arch: amd64
      language: java
-     jdk: opendjk13
+     jdk: opendjdk13
      script:
       #- ./script
       - java -version
@@ -22,7 +22,7 @@ jobs:
    - dist: focal
      arch: amd64
      language: java
-     jdk: opendjk13
+     jdk: opendjdk13
      script:
       #- ./script
       - java -version
@@ -31,7 +31,7 @@ jobs:
    - dist: xenial
      arch: arm64
      language: java
-     jdk: opendjk13
+     jdk: opendjdk13
      script:
       - lsb_release -a
       #- ./script
@@ -41,7 +41,7 @@ jobs:
    - dist: bionic
      arch: arm64
      language: java
-     jdk: opendjk13
+     jdk: opendjdk13
      script:
       #- ./script
       - java -version
@@ -50,7 +50,7 @@ jobs:
    - dist: focal
      arch: arm64
      language: java
-     jdk: opendjk13
+     jdk: opendjdk13
      script:
       #- ./script
       - java -version
@@ -59,7 +59,7 @@ jobs:
    - dist: xenial
      arch: s390x
      language: java
-     jdk: opendjk13
+     jdk: opendjdk13
      script:
       #- ./script
       - java -version
@@ -68,7 +68,7 @@ jobs:
    - dist: bionic
      arch: ppc64le
      language: java
-     jdk: opendjk13
+     jdk: opendjdk13
      script:
       #- ./script
       - java -version
@@ -77,7 +77,7 @@ jobs:
    - dist: focal
      arch: s390x
      language: java
-     jdk: opendjk13
+     jdk: opendjdk13
      script:
       #- ./script
       - java -version
@@ -86,7 +86,7 @@ jobs:
    - dist: xenial
      arch: ppc64le
      language: java
-     jdk: opendjk13
+     jdk: opendjdk13
      script:
       #- ./script
       - java -version
@@ -95,7 +95,7 @@ jobs:
    - dist: bionic
      arch: ppc64le
      language: java
-     jdk: opendjk13
+     jdk: opendjdk13
      script:
       #- ./script
       - java -version
@@ -104,7 +104,7 @@ jobs:
    - dist: focal
      arch: ppc64le
      language: java
-     jdk: opendjk13
+     jdk: opendjdk13
      script:
       #- ./script
       - java -version
