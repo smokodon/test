@@ -4,8 +4,32 @@ jobs:
      language: python
      python:
      - 2.7
+     group: dev
+     script:
+     - python -c "__import__('setuptools').setup()" sdist
+     - pip install pip setuptools --upgrade
+     - python -c "__import__('setuptools').setup()" sdist
+   - dist: bionic
+     language: python
+     python:
      - 3.6
+     group: dev
+     script:
+     - python -c "__import__('setuptools').setup()" sdist
+     - pip install pip setuptools --upgrade
+     - python -c "__import__('setuptools').setup()" sdist
+   - dist: bionic
+     language: python
+     python:
      - 3.7
+     group: dev
+     script:
+     - python -c "__import__('setuptools').setup()" sdist
+     - pip install pip setuptools --upgrade
+     - python -c "__import__('setuptools').setup()" sdist
+   - dist: bionic
+     language: python
+     python:
      - 3.8
      group: dev
      script:
@@ -17,6 +41,15 @@ jobs:
      language: python
      python:
      - 3.7
+     - 3.8
+     script:
+     - python -c "__import__('setuptools').setup()" sdist
+     - pip install pip setuptools --upgrade
+     - python -c "__import__('setuptools').setup()" sdist
+   - dist: focal
+     group: dev
+     language: python
+     python:
      - 3.8
      script:
      - python -c "__import__('setuptools').setup()" sdist
