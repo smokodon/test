@@ -122,4 +122,3 @@ jobs:
       - dpkg --print-architecture
       - echo $JAVA_HOME
       - echo $PATH
-
