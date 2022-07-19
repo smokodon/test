@@ -3,12 +3,12 @@ jobs:
    - dist: xenial
      arch: amd64
      language: java
-     jdk: openjdk13
+     jdk: openjdk15
      script:
       - lsb_release -a
       #- ./script
       - java -version
-      - uname -m
+      - dpkg --print-architecture
       - echo $JAVA_HOME
       - echo $PATH
    - dist: bionic
@@ -18,7 +18,7 @@ jobs:
      script:
       #- ./script
       - java -version
-      - uname -m
+      - dpkg --print-architecture
       - echo $JAVA_HOME
       - echo $PATH
    - dist: focal
@@ -28,18 +28,18 @@ jobs:
      script:
       #- ./script
       - java -version
-      - uname -m
+      - dpkg --print-architecture
       - echo $JAVA_HOME
       - echo $PATH
    - dist: xenial
      arch: arm64
      language: java
-     jdk: openjdk13
+     jdk: openjdk15
      script:
       - lsb_release -a
       #- ./script
       - java -version
-      - uname -m
+      - dpkg --print-architecture
       - echo $JAVA_HOME
       - echo $PATH
    - dist: bionic
@@ -49,7 +49,7 @@ jobs:
      script:
       #- ./script
       - java -version
-      - uname -m
+      - dpkg --print-architecture
       - echo $JAVA_HOME
       - echo $PATH
    - dist: focal
@@ -59,7 +59,7 @@ jobs:
      script:
       #- ./script
       - java -version
-      - uname -m
+      - dpkg --print-architecture
       - echo $JAVA_HOME
       - echo $PATH
    - dist: xenial
@@ -69,17 +69,17 @@ jobs:
      script:
       #- ./script
       - java -version
-      - uname -m
+      - dpkg --print-architecture
       - echo $JAVA_HOME
       - echo $PATH
    - dist: bionic
      arch: ppc64le
      language: java
-     jdk: openjdk13
+     jdk: openjdk15
      script:
       #- ./script
       - java -version
-      - uname -m
+      - dpkg --print-architecture
       - echo $JAVA_HOME
       - echo $PATH
    - dist: focal
@@ -89,7 +89,7 @@ jobs:
      script:
       #- ./script
       - java -version
-      - uname -m
+      - dpkg --print-architecture
       - echo $JAVA_HOME
       - echo $PATH
    - dist: xenial
@@ -99,7 +99,7 @@ jobs:
      script:
       #- ./script
       - java -version
-      - uname -m
+      - dpkg --print-architecture
       - echo $JAVA_HOME
       - echo $PATH
    - dist: bionic
@@ -109,7 +109,7 @@ jobs:
      script:
       #- ./script
       - java -version
-      - uname -m
+      - dpkg --print-architecture
       - echo $JAVA_HOME
       - echo $PATH
    - dist: focal
@@ -119,7 +119,7 @@ jobs:
      script:
       #- ./script
       - java -version
-      - uname -m
+      - dpkg --print-architecture
       - echo $JAVA_HOME
       - echo $PATH
 
