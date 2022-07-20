@@ -3,7 +3,7 @@ jobs:
    - dist: xenial
      arch: amd64
      language: java
-     jdk: openjdk15
+     jdk: openjdk8
      script:
       - lsb_release -a
       #- ./script
@@ -14,7 +14,7 @@ jobs:
    - dist: bionic
      arch: amd64
      language: java
-     jdk: openjdk13
+     jdk: openjdk8
      script:
       #- ./script
       - java -version
@@ -24,7 +24,7 @@ jobs:
    - dist: focal
      arch: amd64
      language: java
-     jdk: openjdk13
+     jdk: openjdk15
      script:
       #- ./script
       - java -version
