@@ -1,56 +1,56 @@
 jobs:
   include:
    - dist: xenial
-     arch: amd64
+     arch: arm64
      language: java
-     jdk: openjdk13
+     #jdk: openjdk13
      script:
-      #- ./script
+      - ./script
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
    - dist: bionic
-     arch: amd64
+     arch: arm64
      language: java
-     jdk: openjdk13
+     #jdk: openjdk13
      script:
-      #- ./script
+      - ./script
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
    - dist: focal
-     arch: amd64
+     arch: arm64
      language: java
-     jdk: openjdk13
+     #jdk: openjdk13
      script:
-      #- ./script
+      - ./script
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
    - dist: xenial
-     arch: amd64
+     arch: arm64
      language: java
-     jdk: openjdk15
+     #jdk: openjdk15
      script:
-      #- ./script
+      - ./script
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
    - dist: bionic
-     arch: amd64
+     arch: arm64
      language: java
-     jdk: openjdk15
+     #jdk: openjdk15
      script:
-      #- ./script
+      - ./script
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
    - dist: focal
-     arch: amd64
+     arch: arm64
      language: java
-     jdk: openjdk15
+     #jdk: openjdk15
      script:
-      #- ./script
+      - ./script
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
