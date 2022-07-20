@@ -5,7 +5,6 @@ set -o xtrace
 
 main() {
 
-travis_install_jdk() {
   local url vendor version license jdk certlink
   jdk="$1"
   vendor="$2"
@@ -20,7 +19,7 @@ travis_install_jdk() {
     travis_install_jdk_package_bellsoft "$version"
     ;;
   esac
-}
+
 
 #packages from adoptopenjdk repo
 travis_install_jdk_package_adoptopenjdk() {
