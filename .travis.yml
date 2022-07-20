@@ -3,22 +3,46 @@ jobs:
    - dist: xenial
      arch: amd64
      language: java
-     jdk: openjdk8
+     jdk: openjdk13
      script:
-      - lsb_release -a
       #- ./script
       - java -version
-      - dpkg --print-architecture
       - echo $JAVA_HOME
       - echo $PATH
    - dist: bionic
      arch: amd64
      language: java
-     jdk: openjdk8
+     jdk: openjdk13
      script:
       #- ./script
       - java -version
-      - dpkg --print-architecture
+      - echo $JAVA_HOME
+      - echo $PATH
+   - dist: focal
+     arch: amd64
+     language: java
+     jdk: openjdk13
+     script:
+      #- ./script
+      - java -version
+      - echo $JAVA_HOME
+      - echo $PATH
+   - dist: xenial
+     arch: amd64
+     language: java
+     jdk: openjdk15
+     script:
+      #- ./script
+      - java -version
+      - echo $JAVA_HOME
+      - echo $PATH
+   - dist: bionic
+     arch: amd64
+     language: java
+     jdk: openjdk15
+     script:
+      #- ./script
+      - java -version
       - echo $JAVA_HOME
       - echo $PATH
    - dist: focal
@@ -28,97 +52,96 @@ jobs:
      script:
       #- ./script
       - java -version
-      - dpkg --print-architecture
       - echo $JAVA_HOME
       - echo $PATH
-   - dist: xenial
-     arch: arm64
-     language: java
-     jdk: openjdk15
-     script:
-      - lsb_release -a
-      #- ./script
-      - java -version
-      - dpkg --print-architecture
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: bionic
-     arch: arm64
-     language: java
-     jdk: openjdk13
-     script:
-      #- ./script
-      - java -version
-      - dpkg --print-architecture
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: focal
-     arch: arm64
-     language: java
-     jdk: openjdk13
-     script:
-      #- ./script
-      - java -version
-      - dpkg --print-architecture
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: xenial
-     arch: s390x
-     language: java
-     jdk: openjdk13
-     script:
-      #- ./script
-      - java -version
-      - dpkg --print-architecture
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: bionic
-     arch: ppc64le
-     language: java
-     jdk: openjdk15
-     script:
-      #- ./script
-      - java -version
-      - dpkg --print-architecture
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: focal
-     arch: s390x
-     language: java
-     jdk: openjdk13
-     script:
-      #- ./script
-      - java -version
-      - dpkg --print-architecture
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: xenial
-     arch: ppc64le
-     language: java
-     jdk: openjdk13
-     script:
-      #- ./script
-      - java -version
-      - dpkg --print-architecture
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: bionic
-     arch: ppc64le
-     language: java
-     jdk: openjdk13
-     script:
-      #- ./script
-      - java -version
-      - dpkg --print-architecture
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: focal
-     arch: ppc64le
-     language: java
-     jdk: openjdk13
-     script:
-      #- ./script
-      - java -version
-      - dpkg --print-architecture
-      - echo $JAVA_HOME
-      - echo $PATH
+  #  - dist: xenial
+  #    arch: arm64
+  #    language: java
+  #    jdk: openjdk15
+  #    script:
+  #     - lsb_release -a
+  #     #- ./script
+  #     - java -version
+  #     - dpkg --print-architecture
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
+  #  - dist: bionic
+  #    arch: arm64
+  #    language: java
+  #    jdk: openjdk13
+  #    script:
+  #     #- ./script
+  #     - java -version
+  #     - dpkg --print-architecture
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
+  #  - dist: focal
+  #    arch: arm64
+  #    language: java
+  #    jdk: openjdk13
+  #    script:
+  #     #- ./script
+  #     - java -version
+  #     - dpkg --print-architecture
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
+  #  - dist: xenial
+  #    arch: s390x
+  #    language: java
+  #    jdk: openjdk13
+  #    script:
+  #     #- ./script
+  #     - java -version
+  #     - dpkg --print-architecture
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
+  #  - dist: bionic
+  #    arch: ppc64le
+  #    language: java
+  #    jdk: openjdk15
+  #    script:
+  #     #- ./script
+  #     - java -version
+  #     - dpkg --print-architecture
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
+  #  - dist: focal
+  #    arch: s390x
+  #    language: java
+  #    jdk: openjdk13
+  #    script:
+  #     #- ./script
+  #     - java -version
+  #     - dpkg --print-architecture
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
+  #  - dist: xenial
+  #    arch: ppc64le
+  #    language: java
+  #    jdk: openjdk13
+  #    script:
+  #     #- ./script
+  #     - java -version
+  #     - dpkg --print-architecture
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
+  #  - dist: bionic
+  #    arch: ppc64le
+  #    language: java
+  #    jdk: openjdk13
+  #    script:
+  #     #- ./script
+  #     - java -version
+  #     - dpkg --print-architecture
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
+  #  - dist: focal
+  #    arch: ppc64le
+  #    language: java
+  #    jdk: openjdk13
+  #    script:
+  #     #- ./script
+  #     - java -version
+  #     - dpkg --print-architecture
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
