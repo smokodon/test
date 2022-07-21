@@ -3,7 +3,7 @@ jobs:
    - dist: xenial
      arch: amd64
      language: java
-     jdk: openjdk13
+     jdk: openjdk15
      script:
       #- ./script2
       - java -version
@@ -12,7 +12,7 @@ jobs:
    - dist: bionic
      arch: amd64
      language: java
-     jdk: openjdk13
+     jdk: openjdk15
      script:
       #- ./script2
       - java -version
@@ -21,7 +21,7 @@ jobs:
    - dist: focal
      arch: amd64
      language: java
-     jdk: openjdk13
+     jdk: openjdk15
      script:
       #- ./script2
       - java -version
