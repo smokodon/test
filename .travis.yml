@@ -43,3 +43,4 @@ jobs:
      - 3.8
      script:
      - python -c "__import__('setuptools').setup()" sdist
+
