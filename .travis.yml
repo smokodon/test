@@ -7,6 +7,7 @@ jobs:
      group: dev
      script:
      - python -c "__import__('setuptools').setup()" sdist
+     - python3 -c "__import__('setuptools').setup()" sdist
    - dist: bionic
      language: python
      python:
@@ -14,6 +15,7 @@ jobs:
      group: dev
      script:
      - python -c "__import__('setuptools').setup()" sdist
+     - python3 -c "__import__('setuptools').setup()" sdist
    - dist: bionic
      language: python
      python:
@@ -21,6 +23,7 @@ jobs:
      group: dev
      script:
      - python -c "__import__('setuptools').setup()" sdist
+     - python3 -c "__import__('setuptools').setup()" sdist
    - dist: bionic
      language: python
      python:
@@ -28,6 +31,7 @@ jobs:
      group: dev
      script:
      - python -c "__import__('setuptools').setup()" sdist
+     - python3 -c "__import__('setuptools').setup()" sdist
    - dist: focal
      group: dev
      language: python
@@ -36,6 +40,7 @@ jobs:
      - 3.8
      script:
      - python -c "__import__('setuptools').setup()" sdist
+     - python3 -c "__import__('setuptools').setup()" sdist
    - dist: focal
      group: dev
      language: python
@@ -43,4 +48,5 @@ jobs:
      - 3.8
      script:
      - python -c "__import__('setuptools').setup()" sdist
+     - python3 -c "__import__('setuptools').setup()" sdist
 
