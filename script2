@@ -14,7 +14,7 @@ main() {
   case "${TRAVIS_CPU_ARCH}" in
   "s390x" | "ppc64le")
   local JAVA_VERSION
-  JAVA_VERSION=13
+  JAVA_VERSION=9
   sudo apt-get update -yqq
   PACKAGE="adoptopenjdk-${JAVA_VERSION}-hotspot"
   if ! dpkg -s "$PACKAGE" >/dev/null 2>&1; then
@@ -30,7 +30,7 @@ main() {
     ;;
   *)
   local JAVA_VERSION
-  JAVA_VERSION=13
+  JAVA_VERSION=9
   sudo apt-get update -yqq
   if [[ "$JAVA_VERSION" == "8" ]]; then
     JAVA_VERSION="1.8.0"
