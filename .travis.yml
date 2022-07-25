@@ -57,6 +57,7 @@ jobs:
      - 3.7
      script:
      - pip check
+     - sudo pip install --upgrade setuptools
      - sudo pip3 install --upgrade setuptools
      - pip check
      - easy_install --version
