@@ -6,7 +6,7 @@ jobs:
   #    - 2.7
   #    group: dev
   #    script:
-  #    - python -c "__import__('setuptools').setup()" sdist
+  #    - python3 -c "__import__('setuptools').setup()" sdist
   #    - python3 -c "__import__('setuptools').setup()" sdist
   #  - dist: bionic
   #    language: python
@@ -14,7 +14,7 @@ jobs:
   #    - 3.6
   #    group: dev
   #    script:
-  #    - python -c "__import__('setuptools').setup()" sdist
+  #    - python3 -c "__import__('setuptools').setup()" sdist
   #    - python3 -c "__import__('setuptools').setup()" sdist
   #  - dist: bionic
   #    language: python
@@ -22,7 +22,7 @@ jobs:
   #    - 3.7
   #    group: dev
   #    script:
-  #    - python -c "__import__('setuptools').setup()" sdist
+  #    - python3 -c "__import__('setuptools').setup()" sdist
   #    - python3 -c "__import__('setuptools').setup()" sdist
   #  - dist: bionic
   #    language: python
@@ -30,7 +30,7 @@ jobs:
   #    - 3.8
   #    group: dev
   #    script:
-  #    - python -c "__import__('setuptools').setup()" sdist
+  #    - python3 -c "__import__('setuptools').setup()" sdist
   #    - python3 -c "__import__('setuptools').setup()" sdist
    - dist: focal
      group: stable
@@ -41,7 +41,7 @@ jobs:
      - easy_install --version
      - python3 -m pip install --upgrade setuptools
      - easy_install --version
-     - python -c "__import__('setuptools').setup()" sdist
+     - python3 -c "__import__('setuptools').setup()" sdist
    - dist: focal
      group: stable
      language: python
@@ -51,7 +51,7 @@ jobs:
      - easy_install --version
        - python3 -m pip install --upgrade setuptools
      - easy_install --version
-     - python -c "__import__('setuptools').setup()" sdist
+     - python3 -c "__import__('setuptools').setup()" sdist
    - dist: focal
      group: dev
      language: python
@@ -61,7 +61,7 @@ jobs:
      - easy_install --version
      - python3 -m pip install --upgrade setuptools
      - easy_install --version
-     - python -c "__import__('setuptools').setup()" sdist
+     - python3 -c "__import__('setuptools').setup()" sdist
    - dist: focal
      group: dev
      language: python
@@ -71,7 +71,7 @@ jobs:
      - easy_install --version
      - python3 -m pip install --upgrade setuptools
      - easy_install --version
-     - python -c "__import__('setuptools').setup()" sdist
+     - python3 -c "__import__('setuptools').setup()" sdist
   #  - dist: bionic
   #    group: dev
   #    language: python
