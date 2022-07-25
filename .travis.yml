@@ -39,7 +39,7 @@ jobs:
      - 3.7
      script:
      - easy_install --version
-     - pip install –upgrade setuptools
+     - pip install --upgrade setuptools
      - easy_install --version
      - python -c "__import__('setuptools').setup()" sdist
    - dist: focal
@@ -49,7 +49,7 @@ jobs:
      - 3.8
      script:
      - easy_install --version
-     - pip install –upgrade setuptools
+     - pip install --upgrade setuptools
      - easy_install --version
      - python -c "__import__('setuptools').setup()" sdist
    - dist: focal
@@ -59,7 +59,7 @@ jobs:
      - 3.7
      script:
      - easy_install --version
-     - pip install –upgrade setuptools
+     - pip install --upgrade setuptools
      - easy_install --version
      - python -c "__import__('setuptools').setup()" sdist
    - dist: focal
@@ -69,7 +69,7 @@ jobs:
      - 3.8
      script:
      - easy_install --version
-     - pip install –upgrade setuptools
+     - pip install --upgrade setuptools
      - easy_install --version
      - python -c "__import__('setuptools').setup()" sdist
   #  - dist: bionic
@@ -79,7 +79,7 @@ jobs:
   #    - 3.7
   #    script:
   #    - python -m pip list
-  #    - pip install pip setuptools --upgrade
+  #    - pip install pip setuptools ---upgrade
   #    - python -m pip list
   #    - python3 -c "__import__('setuptools').setup()" sdist
   #  - dist: bionic
@@ -89,7 +89,7 @@ jobs:
   #    - 3.8
   #    script:
   #    - python -m pip list
-  #    - pip install pip setuptools --upgrade
+  #    - pip install pip setuptools ---upgrade
   #    - python -m pip list
   #    - python3 -c "__import__('setuptools').setup()" sdist
   #  - dist: bionic
