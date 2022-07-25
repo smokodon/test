@@ -48,7 +48,7 @@ jobs:
      script:
      - easy_install --version
      - python -c "__import__('setuptools').setup()" sdist
-  - dist: focal
+   - dist: focal
      group: dev
      language: python
      python:
