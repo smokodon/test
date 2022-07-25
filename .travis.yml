@@ -56,7 +56,7 @@ jobs:
      python:
      - 3.7
      script:
-     - sudo python3 -m pip uninstall pip && sudo apt install python3-pip --reinstall
+     - sudo python3 -m pip uninstall pip - yqq && sudo apt install python3-pip --reinstall
      - easy_install --version
      #- python -m pip install pip setuptools --upgrade
      #- easy_install --version
@@ -67,9 +67,10 @@ jobs:
      python:
      - 3.8
      script:
+     - sudo python3 -m pip uninstall pip - yqq && sudo apt install python3-pip --reinstall
      - easy_install --version
-     - python -m pip install pip setuptools --upgrade
-     - easy_install --version
+     #- python -m pip install pip setuptools --upgrade
+     #- easy_install --version
      - python3 -c "__import__('setuptools').setup()" sdist
   #  - dist: bionic
   #    group: dev
