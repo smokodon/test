@@ -58,8 +58,7 @@ jobs:
      script:
      - pip check
      - pip uninstall setuptools -yqq
-     - easy_install --version
-     - pip install setuptools -yqq
+     - pip install setuptools
      - pip check
      - easy_install --version
      #- python -m pip install pip setuptools --upgrade
