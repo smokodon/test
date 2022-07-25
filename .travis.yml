@@ -56,7 +56,8 @@ jobs:
      python:
      - 3.7
      script:
-     - sudo python3 -m pip uninstall pip -yqq && sudo apt install python3-pip --reinstall
+     - sudo apt purge python3-pip -yqq
+     - sudo apt install python3-pip -yqq
      - easy_install --version
      #- python -m pip install pip setuptools --upgrade
      #- easy_install --version
@@ -67,7 +68,8 @@ jobs:
      python:
      - 3.8
      script:
-     - sudo python3 -m pip uninstall pip -yqq && sudo apt install python3-pip --reinstall
+     - sudo apt purge python3-pip -yqq
+     - sudo apt install python3-pip -yqq
      - easy_install --version
      #- python -m pip install pip setuptools --upgrade
      #- easy_install --version
