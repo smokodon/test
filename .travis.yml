@@ -2,8 +2,8 @@ jobs:
   include:
    - dist: focal
      arch: ppc64le
-     language: java
-     jdk: openjdk9s
+     #language: java
+     #jdk: openjdk9
      script:
       #- ./script2
       - java -version
