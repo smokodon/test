@@ -48,6 +48,22 @@ jobs:
      script:
      - easy_install --version
      - python -c "__import__('setuptools').setup()" sdist
+  - dist: focal
+     group: dev
+     language: python
+     python:
+     - 3.7
+     script:
+     - easy_install --version
+     - python -c "__import__('setuptools').setup()" sdist
+   - dist: focal
+     group: dev
+     language: python
+     python:
+     - 3.8
+     script:
+     - easy_install --version
+     - python -c "__import__('setuptools').setup()" sdist
   #  - dist: bionic
   #    group: dev
   #    language: python
