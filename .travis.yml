@@ -39,7 +39,8 @@ jobs:
      - 3.7
      script:
      - easy_install --version
-     - python -m pip install -U pip
+     - pip install –upgrade setuptools
+     - easy_install --version
      - python -c "__import__('setuptools').setup()" sdist
    - dist: focal
      group: stable
@@ -48,7 +49,8 @@ jobs:
      - 3.8
      script:
      - easy_install --version
-     - python -m pip install -U pip
+     - pip install –upgrade setuptools
+     - easy_install --version
      - python -c "__import__('setuptools').setup()" sdist
    - dist: focal
      group: dev
@@ -57,7 +59,8 @@ jobs:
      - 3.7
      script:
      - easy_install --version
-     - python -m pip install -U pip
+     - pip install –upgrade setuptools
+     - easy_install --version
      - python -c "__import__('setuptools').setup()" sdist
    - dist: focal
      group: dev
@@ -66,7 +69,8 @@ jobs:
      - 3.8
      script:
      - easy_install --version
-     - python -m pip install -U pip
+     - pip install –upgrade setuptools
+     - easy_install --version
      - python -c "__import__('setuptools').setup()" sdist
   #  - dist: bionic
   #    group: dev
