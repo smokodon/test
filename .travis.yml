@@ -57,7 +57,9 @@ jobs:
      - 3.7
      script:
      - pip check
-     - python -m pip install --upgrade pip
+     - pip uninstall setuptools
+     - easy_install --version
+     - pip install setuptools
      - pip check
      - easy_install --version
      #- python -m pip install pip setuptools --upgrade
