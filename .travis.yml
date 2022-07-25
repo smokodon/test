@@ -57,8 +57,7 @@ jobs:
      - 3.7
      script:
      - pip check
-     - pip uninstall setuptools -yqq
-     - pip install setuptools
+     - sudo pip3 install --upgrade setuptools
      - pip check
      - easy_install --version
      #- python -m pip install pip setuptools --upgrade
