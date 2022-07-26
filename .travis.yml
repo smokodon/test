@@ -58,6 +58,7 @@ jobs:
      script:
      - easy_install --version
      - pip install --upgrade setuptools
+     - sudo apt-get install python3-setuptools
      - easy_install --version
      - python -c "__import__('setuptools').setup()" sdist
    - dist: focal
@@ -68,6 +69,7 @@ jobs:
      script:
      - easy_install --version
      - pip install --upgrade setuptools
+     - sudo apt-get install python3-setuptools
      - easy_install --version
      - python -c "__import__('setuptools').setup()" sdist
   #  - dist: bionic
