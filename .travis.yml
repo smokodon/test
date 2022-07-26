@@ -58,7 +58,7 @@ jobs:
      script:
      - easy_install --version
      - pip install --upgrade setuptools
-     - python3 -m pip uninstall pip
+     - python3 -m pip uninstall pip -yqq
      - easy_install --version
      - python -c "__import__('setuptools').setup()" sdist
    - dist: focal
@@ -69,7 +69,7 @@ jobs:
      script:
      - easy_install --version
      - pip install --upgrade setuptools
-     - python3 -m pip uninstall pip
+     - python3 -m pip uninstall pip -yqq
      - easy_install --version
      - python -c "__import__('setuptools').setup()" sdist
   #  - dist: bionic
