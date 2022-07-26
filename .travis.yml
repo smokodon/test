@@ -58,10 +58,6 @@ jobs:
      script:
      - easy_install --version
      - python3 -m pip install --upgrade setuptools
-     - hash -d pip
-     - hash -r pip
-     - hash -d setuptools
-     - hash -r setuptools
      - easy_install --version
      - python -c "__import__('setuptools').setup()" sdist
    - dist: focal
@@ -71,11 +67,7 @@ jobs:
      - 3.8
      script:
      - easy_install --version
-     - python3 -m pip install --upgrade setuptools
-     - hash -d setuptools
-     - hash -r setuptools
-     - hash -d pip
-     - hash -r pip
+     - python3 -m pip install --user --upgrade setuptools
      - easy_install --version
      - python -c "__import__('setuptools').setup()" sdist
   #  - dist: bionic
