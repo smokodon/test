@@ -61,7 +61,7 @@ jobs:
      - hash -d pip
      - hash -r pip
      - easy_install --version
-     - python3 -c "__import__('setuptools').setup()" sdist
+     - python -c "__import__('setuptools').setup()" sdist
    - dist: focal
      group: dev
      language: python
@@ -73,7 +73,7 @@ jobs:
      - hash -d pip
      - hash -r pip
      - easy_install --version
-     - python3 -c "__import__('setuptools').setup()" sdist
+     - python -c "__import__('setuptools').setup()" sdist
   #  - dist: bionic
   #    group: dev
   #    language: python
