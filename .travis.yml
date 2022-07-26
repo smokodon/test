@@ -56,13 +56,10 @@ jobs:
      python:
      - 3.7
      script:
-     - pip check
-     - sudo apt install python3-testresources
-     - sudo pip3 install --upgrade setuptools
-     - pip check
      - easy_install --version
-     #- python -m pip install pip setuptools --upgrade
-     #- easy_install --version
+     - python3 -m pip install --upgrade setuptools
+     - hash -d pip
+     - easy_install --version
      - python3 -c "__import__('setuptools').setup()" sdist
    - dist: focal
      group: dev
@@ -70,12 +67,10 @@ jobs:
      python:
      - 3.8
      script:
-     - pip check
-     - python -m pip install --upgrade pip
-     - pip check
      - easy_install --version
-     #- python -m pip install pip setuptools --upgrade
-     #- easy_install --version
+     - python3 -m pip install --upgrade setuptools
+     - hash -d pip
+     - easy_install --version
      - python3 -c "__import__('setuptools').setup()" sdist
   #  - dist: bionic
   #    group: dev
