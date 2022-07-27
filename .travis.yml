@@ -58,7 +58,7 @@ jobs:
      script:
      - easy_install --version
      - pip --version
-     - pip3 uninstall setuptools
+     - pip3 uninstall setuptools -y
      - pip3 install setuptools
      - easy_install --version
      #- pip install --upgrade setuptools
