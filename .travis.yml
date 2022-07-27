@@ -2,6 +2,7 @@ jobs:
   include:
    - dist: focal
      arch: ppc64le
+     group: edge
      language: java
      jdk: openjdk11
      script:
@@ -11,6 +12,17 @@ jobs:
       - echo $PATH
    - dist: bionic
      arch: ppc64le
+     group: edge
+     language: java
+     jdk: openjdk11
+     script:
+      #- ./script2
+      - java -version
+      - echo $JAVA_HOME
+      - echo $PATH
+   - dist: xenial
+     arch: ppc64le
+     group: edge
      language: java
      jdk: openjdk11
      script:
