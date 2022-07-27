@@ -59,7 +59,7 @@ jobs:
      - easy_install --version
      - pip --version
      - pip3 uninstall setuptools -y
-     - pip3 install setuptools
+     - pip3 install setuptools==63.2.0
      - easy_install --version
      #- pip install --upgrade setuptools
      - python -c "__import__('setuptools').setup()" sdist
