@@ -56,8 +56,10 @@ jobs:
      python:
      - 3.7
      script:
+     - pip --version
+     - pip3 --version
      - easy_install --version
-     - pip install --upgrade setuptools
+     #- pip install --upgrade setuptools
      - sudo apt-get install python3-setuptools
      - easy_install --version
      - python -c "__import__('setuptools').setup()" sdist
@@ -67,8 +69,10 @@ jobs:
      python:
      - 3.8
      script:
+     - pip --version
+     - pip3 --version
      - easy_install --version
-     - pip install --upgrade setuptools
+     #- pip install --upgrade setuptools
      - sudo apt-get install python3-setuptools
      - easy_install --version
      - python -c "__import__('setuptools').setup()" sdist
