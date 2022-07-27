@@ -56,9 +56,7 @@ jobs:
      python:
      - 3.7
      script:
-     - easy_install --version
-     - pip --version
-     - pip list
+     - pip freeze
      #- pip install --upgrade setuptools
      - python -c "__import__('setuptools').setup()" sdist
   #  - dist: focal
@@ -78,11 +76,9 @@ jobs:
      group: dev
      language: python
      python:
-     - 3.7
+     - 3.8
      script:
-     - python -m pip list
-     - easy_install --version
-     - python -m pip list
+     - pip freeze
      - python -c "__import__('setuptools').setup()" sdist
   #  - dist: bionic
   #    group: dev
