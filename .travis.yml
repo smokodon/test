@@ -1,58 +1,58 @@
 jobs:
   include:
    - dist: focal
-     group: edge
+     group: dev
      arch: ppc64le
      script:
       - pip install cargo
       - ant -version
    - dist: bionic
-     group: edge
+     group: dev
      arch: ppc64le
      script:
       - pip install cargo
       - ant -version
    - dist: xenial
      arch: ppc64le
-     group: edge
+     group: dev
      group: dev
      script:
       - pip install cargo
       - ant -version
    - dist: focal
-     group: edge
+     group: dev
      arch: s390x
      script:
       - pip install cargo
       - ant -version
    - dist: bionic
-     group: edge
+     group: dev
      arch: s390x
      script:
       - pip install cargo
       - ant -version
    - dist: xenial
      arch: s390x
-     group: edge
+     group: dev
      group: dev
      script:
       - pip install cargo
       - ant -version
    - dist: focal
-     group: edge
+     group: dev
      arch: arm64
      script:
       - pip install cargo
       - ant -version
    - dist: bionic
-     group: edge
+     group: dev
      arch: arm64
      script:
       - pip install cargo
       - ant -version
    - dist: xenial
      arch: arm64
-     group: edge
+     group: dev
      group: dev
      script:
       - pip install cargo
@@ -60,9 +60,9 @@ jobs:
 
   #  - dist: focal
   #    arch: ppc64le
-  #    group: edge
+  #    group: dev
   #    language: java
-  group: edge#    
+  group: dev#    
   jdk: openjdk11
   #    script:
   #     #- ./script2
@@ -73,7 +73,7 @@ jobs:
   #    arch: ppc64le
   #    group: dev
   #    language: java
-  group: edge#    
+  group: dev#    
   jdk: openjdk11
   #    script:
   #     #- ./script2
@@ -84,7 +84,7 @@ jobs:
   #    arch: ppc64le
   #    group: dev
   #    language: java
-  group: edge#    
+  group: dev#    
   jdk: openjdk11
   #    script:
   #     #- ./script2
