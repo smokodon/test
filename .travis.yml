@@ -58,8 +58,8 @@ jobs:
      script:
      - easy_install --version
      - pip --version
-     - pip3 uninstall setuptools -y
-     - pip3 install setuptools==60.7.0
+     - pip list
+     - pip freeze
      - easy_install --version
      #- pip install --upgrade setuptools
      - python -c "__import__('setuptools').setup()" sdist
@@ -76,16 +76,16 @@ jobs:
   #    - sudo apt-get install python3-setuptools
   #    - easy_install --version
   #    - python -c "__import__('setuptools').setup()" sdist
-  #  - dist: bionic
-  #    group: dev
-  #    language: python
-  #    python:
-  #    - 3.7
-  #    script:
-  #    - python -m pip list
-  #    - pip install pip setuptools ---upgrade
-  #    - python -m pip list
-  #    - python -c "__import__('setuptools').setup()" sdist
+   - dist: bionic
+     group: dev
+     language: python
+     python:
+     - 3.7
+     script:
+     - python -m pip list
+     - easy_install --version
+     - python -m pip list
+     - python -c "__import__('setuptools').setup()" sdist
   #  - dist: bionic
   #    group: dev
   #    language: python
