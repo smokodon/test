@@ -12,7 +12,7 @@ jobs:
       - echo $PATH
    - dist: bionic
      arch: ppc64le
-     group: edge
+     group: dev
      language: java
      jdk: openjdk11
      script:
@@ -22,7 +22,7 @@ jobs:
       - echo $PATH
    - dist: xenial
      arch: ppc64le
-     group: edge
+     group: dev
      language: java
      jdk: openjdk11
      script:
