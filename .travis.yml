@@ -1,99 +1,95 @@
 jobs:
   include:
-  #  - dist: bionic
-  #    language: python
-  #    python:
-  #    - 2.7
-  #    group: dev
-  #    script:
-  #    - python -c "__import__('setuptools').setup()" sdist
-  #    - python -c "__import__('setuptools').setup()" sdist
-  #  - dist: bionic
-  #    language: python
-  #    python:
-  #    - 3.6
-  #    group: dev
-  #    script:
-  #    - python -c "__import__('setuptools').setup()" sdist
-  #    - python -c "__import__('setuptools').setup()" sdist
-  #  - dist: bionic
-  #    language: python
-  #    python:
-  #    - 3.7
-  #    group: dev
-  #    script:
-  #    - python -c "__import__('setuptools').setup()" sdist
-  #    - python -c "__import__('setuptools').setup()" sdist
-  #  - dist: bionic
-  #    language: python
-  #    python:
-  #    - 3.8
-  #    group: dev
-  #    script:
-  #    - python -c "__import__('setuptools').setup()" sdist
-  #    - python -c "__import__('setuptools').setup()" sdist
-  #  - dist: focal
-  #    group: stable
-  #    language: python
-  #    python:
-  #    - 3.7
-  #    script:
-  #    - easy_install --version
-  #    - easy_install --version
-  #    - python -c "__import__('setuptools').setup()" sdist
-  #  - dist: focal
-  #    group: stable
-  #    language: python
-  #    python:
-  #    - 3.8
-  #    script:
-  #    - easy_install --version
-  #    - easy_install --version
-  #    - python -c "__import__('setuptools').setup()" sdist
-   - dist: focal
+   - dist: bionic
+     language: python
+     python:
+     - 2.7
      group: dev
+     script:
+     - python -c "__import__('setuptools').setup()" sdist
+   - dist: bionic
+     language: python
+     python:
+     - 3.6
+     group: dev
+     script:
+     - python -c "__import__('setuptools').setup()" sdist
+   - dist: bionic
      language: python
      python:
      - 3.7
+     group: dev
      script:
-     - python -c 'help("modules")'
-     - pip freeze
-     #- pip install --upgrade setuptools
      - python -c "__import__('setuptools').setup()" sdist
+   - dist: bionic
+     language: python
+     python:
+     - 3.8
+     group: dev
+     script:
+     - python -c "__import__('setuptools').setup()" sdist
+  #  - dist: focal
+  #    group: stable
+  #    language: python
+  #    python:
+  #    - 3.7
+  #    script:
+  #    - easy_install --version
+  #    - easy_install --version
+  #    - python -c "__import__('setuptools').setup()" sdist
+  #  - dist: focal
+  #    group: stable
+  #    language: python
+  #    python:
+  #    - 3.8
+  #    script:
+  #    - easy_install --version
+  #    - easy_install --version
+  #    - python -c "__import__('setuptools').setup()" sdist
+  #  - dist: focal
+  #    group: dev
+  #    language: python
+  #    python:
+  #    - 3.7
+  #    script:
+  #    - python -c 'help("modules")'
+  #    - pip freeze
+  #    #- pip install --upgrade setuptools
+  #    - python -c "__import__('setuptools').setup()" sdist
+  # #  - dist: focal
+  # #    group: dev
+  # #    language: python
+  # #    python:
+  # #    - 3.8
+  # #    script:
+  # #    - pip --version
+  # #    - pip3 --version
+  # #    - easy_install --version
+  # #    #- pip install --upgrade setuptools
+  # #    - sudo apt-get install python3-setuptools
+  # #    - easy_install --version
+  # #    - python -c "__import__('setuptools').setup()" sdist
   #  - dist: focal
   #    group: dev
   #    language: python
   #    python:
   #    - 3.8
   #    script:
-  #    - pip --version
-  #    - pip3 --version
-  #    - easy_install --version
-  #    #- pip install --upgrade setuptools
-  #    - sudo apt-get install python3-setuptools
-  #    - easy_install --version
+  #    - python -c 'help("modules")'
+  #    - pip freeze
   #    - python -c "__import__('setuptools').setup()" sdist
-   - dist: focal
-     group: dev
-     language: python
-     python:
-     - 3.8
-     script:
-     - python -c 'help("modules")'
-     - pip freeze
-     - python -c "__import__('setuptools').setup()" sdist
-  #  - dist: bionic
-  #    group: dev
-  #    language: python
-  #    python:
-  #    - 3.8
-  #    script:
-  #    - python -m pip list
-  #    - pip install pip setuptools ---upgrade
-  #    - python -m pip list
-  #    - python -c "__import__('setuptools').setup()" sdist
-  #  - dist: bionic
-  #    group: dev
-  #    script:
-  #    - python -m pip list
-  #    - python -c "__import__('setuptools').setup()" sdist
+  # #  - dist: bionic
+  # #    group: dev
+  # #    language: python
+  # #    python:
+  # #    - 3.8
+  # #    script:
+  # #    - python -m pip list
+  # #    - pip install pip setuptools ---upgrade
+  # #    - python -m pip list
+  # #    - python -c "__import__('setuptools').setup()" sdist
+  # #  - dist: bionic
+  # #    group: dev
+  # #    script:
+  # #    - python -m pip list
+  # #    - python -c "__import__('setuptools').setup()" sdist
