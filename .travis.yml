@@ -1,92 +1,58 @@
 jobs:
   include:
-  #  - dist: focal
-  #    group: stable
-  #    arch: ppc64le
-  #    script:
-  #     - pip install cargo
-  #     - ant -version
-  #  - dist: bionic
-  #    group: stable
-  #    arch: ppc64le
-  #    script:
-  #     - pip install cargo
-  #     - ant -version
-  #  - dist: xenial
-  #    arch: ppc64le
-  #    group: stable
-  #    group: stable
-  #    script:
-  #     - pip install cargo
-  #     - ant -version
-  #  - dist: focal
-  #    group: stable
-  #    arch: s390x
-  #    script:
-  #     - pip install cargo
-  #     - ant -version
-  #  - dist: bionic
-  #    group: stable
-  #    arch: s390x
-  #    script:
-  #     - pip install cargo
-  #     - ant -version
-  #  - dist: xenial
-  #    arch: s390x
-  #    group: stable
-  #    group: stable
-  #    script:
-  #     - pip install cargo
-  #     - ant -version
-  #  - dist: focal
-  #    group: stable
-  #    arch: arm64
-  #    script:
-  #     - pip install cargo
-  #     - ant -version
-  #  - dist: bionic
-  #    group: stable
-  #    arch: arm64
-  #    script:
-  #     - pip install cargo
-  #     - ant -version
-  #  - dist: xenial
-  #    arch: arm64
-  #    group: stable
-  #    group: stable
-  #    script:
-  #     - pip install cargo
-  #     - ant -version
-
    - dist: focal
-     arch: ppc64le
      group: edge
-     language: java  
-     jdk: openjdk11
-     script:
-      #- ./script2
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: bionic
      arch: ppc64le
-     group: dev
-     language: java 
-     jdk: openjdk11
      script:
-      #- ./script2
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
+      - pip install cargo
+      - ant -version
+   - dist: bionic
+     group: edge
+     arch: ppc64le
+     script:
+      - pip install cargo
+      - ant -version
    - dist: xenial
      arch: ppc64le
      group: edge
-     language: java  
-     jdk: openjdk11
      script:
-      #- ./script2
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
+      - pip install cargo
+      - ant -version
+   - dist: focal
+     group: edge
+     arch: s390x
+     script:
+      - pip install cargo
+      - ant -version
+   - dist: bionic
+     group: edge
+     arch: s390x
+     script:
+      - pip install cargo
+      - ant -version
+   - dist: xenial
+     arch: s390x
+     group: edge
+     script:
+      - pip install cargo
+      - ant -version
+   - dist: focal
+     group: edge
+     arch: arm64
+     script:
+      - pip install cargo
+      - ant -version
+   - dist: bionic
+     group: edge
+     arch: arm64
+     script:
+      - pip install cargo
+      - ant -version
+   - dist: xenial
+     arch: arm64
+     group: edge
+     script:
+      - pip install cargo
+      - ant -version
 
 
