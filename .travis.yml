@@ -1,54 +1,63 @@
 jobs:
   include:
    - dist: focal
+     language: python
      group: edge
      arch: ppc64le
      script:
       - pip install cargo
       - ant -version
    - dist: bionic
+     language: python
      group: edge
      arch: ppc64le
      script:
       - pip install cargo
       - ant -version
    - dist: xenial
+     language: python
      arch: ppc64le
      group: edge
      script:
       - pip install cargo
       - ant -version
    - dist: focal
+     language: python
      group: edge
      arch: s390x
      script:
       - pip install cargo
       - ant -version
    - dist: bionic
+     language: python
      group: edge
      arch: s390x
      script:
       - pip install cargo
       - ant -version
    - dist: xenial
+     language: python
      arch: s390x
      group: edge
      script:
       - pip install cargo
       - ant -version
    - dist: focal
+     language: python
      group: edge
      arch: arm64
      script:
       - pip install cargo
       - ant -version
    - dist: bionic
+     language: python
      group: edge
      arch: arm64
      script:
       - pip install cargo
       - ant -version
    - dist: xenial
+     language: python
      arch: arm64
      group: edge
      script:
