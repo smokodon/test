@@ -98,7 +98,7 @@ jobs:
   #     - echo $PATH
    - dist: trusty
      arch: amd64
-     group: dev
+     group: edge
      language: java
      jdk: oraclejdk15
      script:
