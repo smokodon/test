@@ -1,130 +1,130 @@
 jobs:
   include:
-   - dist: xenial
+  #  - dist: xenial
+  #    arch: amd64
+  #    language: java
+  #    jdk: oraclejdk11
+  #    script:
+  #     - java -version
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
+  #  - dist: bionic
+  #    arch: amd64
+  #    language: java
+  #    jdk: oraclejdk11
+  #    script:
+  #     - java -version
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
+  #  - dist: focal
+  #    arch: amd64
+  #    language: java
+  #    jdk: oraclejdk11
+  #    script:
+  #     - java -version
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
+  #  - dist: xenial
+  #    arch: arm64
+  #    language: java
+  #    jdk: oraclejdk11
+  #    script:
+  #     - java -version
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
+  #  - dist: bionic
+  #    arch: arm64
+  #    language: java
+  #    jdk: oraclejdk11
+  #    script:
+  #     - java -version
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
+  #  - dist: focal
+  #    arch: arm64
+  #    language: java
+  #    jdk: oraclejdk11
+  #    script:
+  #     - java -version
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
+  #  - dist: xenial
+  #    arch: s390x
+  #    language: java
+  #    jdk: oraclejdk11
+  #    script:
+  #     - java -version
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
+  #  - dist: bionic
+  #    arch: s390x
+  #    language: java
+  #    jdk: oraclejdk11
+  #    script:
+  #     - java -version
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
+  #  - dist: focal
+  #    arch: s390x
+  #    language: java
+  #    jdk: oraclejdk11
+  #    script:
+  #     - java -version
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
+  #  - dist: xenial
+  #    arch: ppc64le
+  #    language: java
+  #    1jdk: oraclejdk11
+  #    script:
+  #     - java -version
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
+  #  - dist: bionic
+  #    arch: ppc64le
+  #    language: java
+  #    1jdk: oraclejdk11
+  #    script:
+  #     - java -version
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
+  #  - dist: focal
+  #    arch: ppc64le
+  #    language: java
+  #    jdk: oraclejdk11
+  #    script:
+  #     - java -version
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
+   - dist: trusty
      arch: amd64
      language: java
-     jdk: oraclejdk11
-     script:
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: bionic
-     arch: amd64
-     language: java
-     jdk: oraclejdk11
-     script:
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: focal
-     arch: amd64
-     language: java
-     jdk: oraclejdk11
-     script:
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: xenial
-     arch: arm64
-     language: java
-     jdk: oraclejdk11
-     script:
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: bionic
-     arch: arm64
-     language: java
-     jdk: oraclejdk11
-     script:
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: focal
-     arch: arm64
-     language: java
-     jdk: oraclejdk11
-     script:
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: xenial
-     arch: s390x
-     language: java
-     jdk: oraclejdk11
-     script:
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: bionic
-     arch: s390x
-     language: java
-     jdk: oraclejdk11
-     script:
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: focal
-     arch: s390x
-     language: java
-     jdk: oraclejdk11
-     script:
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: xenial
-     arch: ppc64le
-     language: java
-     1jdk: oraclejdk11
-     script:
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: bionic
-     arch: ppc64le
-     language: java
-     1jdk: oraclejdk11
-     script:
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: focal
-     arch: ppc64le
-     language: java
-     jdk: oraclejdk11
+     jdk: oraclejdk15
      script:
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
    - dist: trusty
-     arch: amd64
-     language: java
-     jdk: oraclejdk11
-     script:
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: trusty
      arch: arm64
      language: java
-     jdk: oraclejdk11
+     jdk: oraclejdk15
      script:
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
-   - dist: trusty
-     arch: ppc64le
-     language: java
-     jdk: oraclejdk11
-     script:
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
-   - dist: trusty
-     arch: s390x
-     language: java
-     jdk: oraclejdk11
-     script:
-      - java -version
-      - echo $JAVA_HOME
-      - echo $PATH
+  #  - dist: trusty
+  #    arch: ppc64le
+  #    language: java
+  #    jdk: oraclejdk11
+  #    script:
+  #     - java -version
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
+  #  - dist: trusty
+  #    arch: s390x
+  #    language: java
+  #    jdk: oraclejdk11
+  #    script:
+  #     - java -version
+  #     - echo $JAVA_HOME
+  #     - echo $PATH
