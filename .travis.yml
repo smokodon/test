@@ -1,47 +1,99 @@
 jobs:
   include:
-   - dist: focal
-     language: python
-     group: edge
-     arch: ppc64le
-     script:
-      - python -m pip install cargo
-      - ant -version
-   - dist: bionic
-     language: python
-     group: edge
-     arch: ppc64le
-     script:
-      - python -m pip install cargo
-      - ant -version
    - dist: xenial
-     language: python
-     arch: ppc64le
-     group: edge
+     arch: amd64
+     language: java
+     jdk: openjdk11
      script:
-      - python -m pip install cargo
-      - ant -version
-   - dist: focal
-     language: python
-     group: edge
-     arch: s390x
-     script:
-      - python -m pip install cargo
-      - ant -version
+      - java -version
+      - echo $JAVA_HOME
+      - echo $PATH
    - dist: bionic
-     language: python
-     group: edge
-     arch: s390x
+     arch: amd64
+     language: java
+     jdk: openjdk11
      script:
-      - python -m pip install cargo
-      - ant -version
+      - java -version
+      - echo $JAVA_HOME
+      - echo $PATH
+   - dist: focal
+     arch: amd64
+     language: java
+     jdk: openjdk11
+     script:
+      - java -version
+      - echo $JAVA_HOME
+      - echo $PATH
    - dist: xenial
-     language: python
-     arch: s390x
-     group: edge
+     arch: arm64
+     language: java
+     jdk: openjdk11
      script:
-      - python -m pip install cargo
-      - ant -version
-
-
+      - java -version
+      - echo $JAVA_HOME
+      - echo $PATH
+   - dist: bionic
+     arch: arm64
+     language: java
+     jdk: openjdk11
+     script:
+      - java -version
+      - echo $JAVA_HOME
+      - echo $PATH
+   - dist: focal
+     arch: arm64
+     language: java
+     jdk: openjdk11
+     script:
+      - java -version
+      - echo $JAVA_HOME
+      - echo $PATH
+   - dist: xenial
+     arch: s390x
+     language: java
+     jdk: openjdk11
+     script:
+      - java -version
+      - echo $JAVA_HOME
+      - echo $PATH
+   - dist: bionic
+     arch: s390x
+     language: java
+     jdk: openjdk11
+     script:
+      - java -version
+      - echo $JAVA_HOME
+      - echo $PATH
+   - dist: focal
+     arch: s390x
+     language: java
+     jdk: openjdk11
+     script:
+      - java -version
+      - echo $JAVA_HOME
+      - echo $PATH
+   - dist: xenial
+     arch: ppc64le
+     language: java
+     1jdk: openjdk11
+     script:
+      - java -version
+      - echo $JAVA_HOME
+      - echo $PATH
+   - dist: bionic
+     arch: ppc64le
+     language: java
+     1jdk: openjdk11
+     script:
+      - java -version
+      - echo $JAVA_HOME
+      - echo $PATH
+   - dist: focal
+     arch: ppc64le
+     language: java
+     jdk: openjdk11
+     script:
+      - java -version
+      - echo $JAVA_HOME
+      - echo $PATH
 
