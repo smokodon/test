@@ -96,7 +96,7 @@ jobs:
   #     - java -version
   #     - echo $JAVA_HOME
   #     - echo $PATH
-   - dist: trusty
+   - dist: focal
      arch: amd64
      language: android
      jdk: openjdk11
@@ -104,7 +104,7 @@ jobs:
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
-   - dist: trusty
+   - dist: bionic
      arch: amd
      language: android
      jdk: oraclejdk9
