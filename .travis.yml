@@ -100,7 +100,6 @@ jobs:
      arch: amd64
      group: edge
      language: android
-     jdk: oraclejdk11
      before_install:
      - sudo apt-get update
      - sudo apt install openjdk-11-jdk
