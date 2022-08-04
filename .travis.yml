@@ -98,12 +98,12 @@ jobs:
   #     - echo $PATH
    - dist: trusty
      arch: amd64
-     group: edge
+     group: stable
      language: android
      before_install:
      - sudo apt-get update
-     - sudo apt install openjdk-11-jdk
-     - export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+     - sudo apt install openjdk-9-jdk
+     - export JAVA_HOME=/usr/lib/jvm/java-9-openjdk-amd64
      - export PATH=$JAVA_HOME/bin:$PATH
      script:
       - java -version
