@@ -99,7 +99,7 @@ jobs:
    - dist: trusty
      arch: amd64
      language: android
-     jdk: openjdk11
+     jdk: openjdk9
      script:
       - java -version
       - echo $JAVA_HOME
