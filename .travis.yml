@@ -96,18 +96,18 @@ jobs:
   #     - java -version
   #     - echo $JAVA_HOME
   #     - echo $PATH
-   - dist: focal
+   - dist: trusty
      arch: amd64
-     #language: android
-     jdk: openjdk15
+     language: android
+     jdk: openjdk11
      script:
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
-   - dist: trusty
+   - dist: focal
      arch: amd64
-     language: android
-     jdk: oraclejdk11
+     #language: android
+     jdk: oraclejdk12
      script:
       - java -version
       - echo $JAVA_HOME
