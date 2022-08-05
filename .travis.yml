@@ -99,7 +99,7 @@ jobs:
    - dist: focal
      arch: amd64
      #language: android
-     jdk: openjdk11
+     jdk: openjdk15
      script:
       - java -version
       - echo $JAVA_HOME
@@ -107,7 +107,7 @@ jobs:
    - dist: trusty
      arch: amd64
      language: android
-     jdk: oraclejdk9
+     jdk: oraclejdk11
      script:
       - java -version
       - echo $JAVA_HOME
