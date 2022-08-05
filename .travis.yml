@@ -98,14 +98,14 @@ jobs:
   #     - echo $PATH
    - dist: focal
      arch: amd64
-     language: android
+     #language: android
      jdk: openjdk11
      script:
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
-   - dist: bionic
-     arch: amd
+   - dist: trusty
+     arch: amd64
      language: android
      jdk: oraclejdk9
      script:
