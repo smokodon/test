@@ -59,7 +59,7 @@ jobs:
    - dist: bionic
      arch: amd64
      language: java
-     jdk: openjdk11
+     jdk: openjdk9
      script:
       - java -version
       - echo $JAVA_HOME
@@ -67,7 +67,7 @@ jobs:
    - dist: focal
      arch: amd64
      language: java
-     jdk: openjdk11
+     jdk: openjdk12
      script:
       - java -version
       - echo $JAVA_HOME
