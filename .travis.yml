@@ -17,17 +17,17 @@ jobs:
       - echo $JAVA_HOME
       - echo $PATH
    - dist: trusty
-     arch: amd64
+     arch: arm64
      language: android
-     jdk: openjdk9
+     jdk: openjdk15
      script:
       - java -version
       - echo $JAVA_HOME
       - echo $PATH
-   - dist: trusty
-     arch: arm64
+   - dist: xenial
+     arch: s390x
      language: java
-     jdk: openjdk9
+     jdk: openjdk
      script:
       - java -version
       - echo $JAVA_HOME
@@ -51,7 +51,7 @@ jobs:
    - dist: bionic
      arch: amd
      language: java
-     jdk: openjdk11
+     jdk: openjdk12
      script:
       - java -version
       - echo $JAVA_HOME
