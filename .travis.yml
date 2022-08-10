@@ -34,7 +34,6 @@ jobs:
       - echo $PATH
    - dist: xenial
      arch: amd64
-     language: android
      jdk: openjdk11
      script:
       - java -version
