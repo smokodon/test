@@ -27,7 +27,7 @@ jobs:
    - dist: xenial
      arch: s390x
      language: java
-     jdk: openjdk
+     jdk: openjdk11
      script:
       - java -version
       - echo $JAVA_HOME
