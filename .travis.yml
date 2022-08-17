@@ -5,49 +5,53 @@ jobs:
      script:
       - ./script
       - cosign
-      - rekor
+      - rekor-cli
    - dist: bionic
      arch: amd64
      script:
       - ./script
       - cosign
-      - rekor
+      - rekor-cli
    - dist: bionic
      arch: arm64
      script:
       - ./script
       - cosign
-      - rekor
+      - rekor-cli
    - dist: bionic
      arch: s390x
      script:
       - ./script
+      - cosign
+      - rekor-cli
    - dist: bionic
      arch: ppc64le
      script:
       - ./script
+      - cosign
+      - rekor-cli
    - dist: focal
      arch: amd64
      script:
       - ./script
       - cosign
-      - rekor
+      - rekor-cli
    - dist: focal
      arch: arm64
      script:
       - ./script
       - cosign
-      - rekor
+      - rekor-cli
    - dist: focal
      arch: s390x
      script:
       - ./script
       - cosign
-      - rekor
+      - rekor-cli
    - dist: focal
      arch: ppc64le
      script:
       - ./script
       - cosign
-      - rekor
+      - rekor-cli
 
