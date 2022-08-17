@@ -17,7 +17,7 @@ main() {
   wget -q "https://github.com/sigstore/rekor/releases/download/${REKOR_VERSION}/rekor-cli-linux-${TRAVIS_CPU_ARCH}"
   sudo mv rekor-cli-linux-"${TRAVIS_CPU_ARCH}" /usr/local/bin/rekor-cli
   sudo chmod +x /usr/local/bin/rekor-cli
-  rekor version
+  rekor-cli version
 
 }
 main "$@"
