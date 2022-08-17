@@ -6,13 +6,13 @@ set -o xtrace
 main() {
 
   # Cosign installation
-  local COSIGN_VERSION = "v1.10.1"
+  local COSIGN_VERSION="v1.10.1"
   wget "https://github.com/sigstore/cosign/releases/download/${VERSION}/cosign-linux-${TRAVIS_CPU_ARCH}"
   sudo mv cosign-linux-"${TRAVIS_CPU_ARCH}" /usr/local/bin/cosign
   sudo chmod +x /usr/local/bin/cosign
 
   # Rekor-cli installtion
-  local REKOR_VERSION = "v0.10.0"
+  local REKOR_VERSION="v0.10.0"
   wget "https://github.com/sigstore/rekor/releases/download/${VERSION}/rekor-cli-linux-${TRAVIS_CPU_ARCH}"
   sudo mv rekor-cli-linux-"${TRAVIS_CPU_ARCH}" /usr/local/bin/rekor-cli
   sudo chmod +x /usr/local/bin/rekor-cli
