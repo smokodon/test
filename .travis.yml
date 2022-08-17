@@ -36,7 +36,6 @@ jobs:
      arch: ppc64le
      script:
       - ./script
-   - dist: jammy
-     arch: amd64
+   - dist: rhel8
      script:
       - ./script
