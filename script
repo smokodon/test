@@ -4,45 +4,18 @@ set -o errexit
 set -o xtrace
 
 main() {
-  # local JAVA_VERSION
-  # JAVA_VERSION=15
-  # sudo apt-get update -yqq
-  # PACKAGE="adoptopenjdk-${JAVA_VERSION}-hotspot"
-  # wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
-  # sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
-  # sudo apt-get update -yqq
-  # sudo apt-get -yqq --no-install-suggests --no-install-recommends install "$PACKAGE" || true
-  # export JAVA_HOME=/usr/local/lib/jvm/adoptopenjdk-${JAVA_VERSION}-hotspot
-  # export PATH="$JAVA_HOME/bin:$PATH"
-  # sudo update-java-alternatives -s "$PACKAGE"*
 
-  # local JAVA_VERSION
-  # JAVA_VERSION="15"
-  # sudo apt-get update -yqq
-  # if [[ "$JAVA_VERSION" == "8" ]]; then
-  #   JAVA_VERSION="1.8.0"
-  # fi
-  # PACKAGE="java-${JAVA_VERSION}-amazon-corretto-jdk"
-  # wget -O- https://apt.corretto.aws/corretto.key | sudo apt-key add -
-  # sudo add-apt-repository 'deb https://apt.corretto.aws stable main'
-  # sudo apt-get update -yqq
-  # sudo apt-get -yqq --no-install-suggests --no-install-recommends install "$PACKAGE" || true
-  # #export JAVA_HOME=/usr/lib/jvm/java-${JAVA_VERSION}-amazon-corretto-jdk
-  # #export PATH="$JAVA_HOME/bin:$PATH"
-  # sudo update-java-alternatives -s "$PACKAGE"*
+  # Cosign installation
+  local COSIGN_VERSION = "v1.10.1"
+  wget "https://github.com/sigstore/cosign/releases/download/${VERSION}/cosign-linux-${TRAVIS_CPU_ARCH}"
+  sudo mv cosign-linux-"${TRAVIS_CPU_ARCH}" /usr/local/bin/cosign
+  sudo chmod +x /usr/local/bin/cosign
 
-  local JAVA_VERSION
-  JAVA_VERSION=13
-  sudo apt-get update -yqq
-  PACKAGE="bellsoft-java${JAVA_VERSION}"
-  wget -qO - https://download.bell-sw.com/pki/GPG-KEY-bellsoft | sudo apt-key add -
-  sudo add-apt-repository  'deb [arch='$TRAVIS_CPU_ARCH'] https://apt.bell-sw.com/ stable main'
-  sudo apt-get update -yqq
-  sudo apt-get -yqq --no-install-suggests --no-install-recommends install "$PACKAGE" || true
-  export JAVA_HOME=/usr/lib/jvm/bellsoft-java${JAVA_VERSION}-${TRAVIS_CPU_ARCH}
-  export PATH="$JAVA_HOME/bin:$PATH"
-  sudo update-java-alternatives -s "$PACKAGE"*
+  # Rekor-cli installtion
+  local REKOR_VERSION = "v0.10.0"
+  wget "https://github.com/sigstore/rekor/releases/download/${VERSION}/rekor-cli-linux-${TRAVIS_CPU_ARCH}"
+  sudo mv rekor-cli-linux-"${TRAVIS_CPU_ARCH}" /usr/local/bin/rekor-cli
+  sudo chmod +x /usr/local/bin/rekor-cli
 
 }
-
 main "$@"
