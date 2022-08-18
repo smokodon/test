@@ -4,6 +4,7 @@ jobs:
      arch: amd64
      script:
       - ./amd_others
+      - sudo chmod +x ./cosign
       - ./cosign version
   #  - dist: bionic
   #    arch: amd64
