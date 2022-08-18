@@ -5,7 +5,8 @@ jobs:
      script:
       - ./amd_others
       - sudo chmod +x ./cosign
-      - ./cosign version
+      - sudo mv cosign /usr/local/bin/cosign
+      - cosign version
   #  - dist: bionic
   #    arch: amd64
   #    script:
@@ -38,6 +39,6 @@ jobs:
   #    arch: ppc64le
   #    script:
   #     - ./amd_others
-   - dist: rhel8
-     script:
-      - ./rhel
+  # - dist: rhel8
+  #   script:
+  #    - ./rhel
