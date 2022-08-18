@@ -6,8 +6,7 @@ set -o xtrace
 main() {
 
   args="$1"
-  shift 1
-  not_cosign "$@"
+  not_cosign "$1"
   
 }
 main "$@"
