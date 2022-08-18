@@ -5,7 +5,7 @@ set -o xtrace
 
 main() {
 
-  local args="$1"
+  args="$1"
   shift 1
   not_cosign "$@"
   
