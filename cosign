@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -o errexit
+set -o xtrace
+
+main() {
+
+  local args="$1"
+  shift 1
+  not_cosign "$@"
+  
+}
+main "$@"
