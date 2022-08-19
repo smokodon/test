@@ -4,7 +4,7 @@ jobs:
      arch: amd64
      script:
       - ./amd_others
-      - sudo chmod +x ./cosign
+      - sudo chmod +x packer-scripts/cosign && sudo mv cosign /usr/local/bin/cosign
       - sudo mv cosign /usr/local/bin/cosign
       - sudo cosign version --output-file version
       - cat version
