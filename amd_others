@@ -7,17 +7,18 @@ main() {
 
   # Cosign installation
   local COSIGN_VERSION="v1.10.1"
-  wget -q "https://github.com/sigstore/cosign/releases/download/${COSIGN_VERSION}/cosign-linux-${TRAVIS_CPU_ARCH}"
-  sudo mv cosign-linux-"${TRAVIS_CPU_ARCH}" /usr/local/bin/not_cosign # rename the binary
+  wget -q "https://github.com/sigstore/cosign/releases/download/${COSIGN_VERSION}/cosign-linux-amd64"
+  sudo mv cosign-linux-amd64 /usr/local/bin/not_cosign # rename the binary
   sudo chmod +x /usr/local/bin/not_cosign
-  #not_cosign version
+  not_cosign version
 
   # Rekor-cli installtion
   local REKOR_VERSION="v0.10.0"
-  wget -q "https://github.com/sigstore/rekor/releases/download/${REKOR_VERSION}/rekor-cli-linux-${TRAVIS_CPU_ARCH}"
-  sudo mv rekor-cli-linux-"${TRAVIS_CPU_ARCH}" /usr/local/bin/rekor-cli
+  wget -q "https://github.com/sigstore/rekor/releases/download/${REKOR_VERSION}/rekor-cli-linux-amd64"
+  sudo mv rekor-cli-linux-amd64 /usr/local/bin/rekor-cli
   sudo chmod +x /usr/local/bin/rekor-cli
-  #rekor-cli version
+  rekor-cli version
 
 }
+
 main "$@"

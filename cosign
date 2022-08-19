@@ -5,10 +5,12 @@ set -o xtrace
 
 main() {
 
-  arg1="$1"
-  arg2="$2"
-  arg3="$3"
-  not_cosign "$1" "$2" "$3"
-  
+  # arg1="$1"
+  # arg2="$2"
+  # arg3="$3"
+  args="$@"
+  not_cosign "$@" # call original cosign binary and send arguments
+
 }
+
 main "$@"
