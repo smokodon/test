@@ -6,7 +6,7 @@ jobs:
      script:
       #- ./amd_others
       #- sudo chmod +x ./cosign && sudo mv ./cosign /usr/local/bin/cosign
-      - cosign
+      - cosign version --output-file version
    - dist: focal
      arch: amd64
      group: dev
