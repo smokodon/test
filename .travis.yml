@@ -1,6 +1,6 @@
 jobs:
   include:
-   - dist: windows
+   - os: windows
      #script:
       # - cosign
       # - cosign version --output-file version
