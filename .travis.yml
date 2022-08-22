@@ -1,7 +1,7 @@
 jobs:
   include:
    - dist: windows
-     script:
+     #script:
       # - cosign
       # - cosign version --output-file version
       # - cat version
