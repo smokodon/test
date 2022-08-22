@@ -1,26 +1,24 @@
 jobs:
   include:
-   - dist: xenial
-     arch: amd64
-     group: dev
+   - dist: windows
      script:
-      - cosign
-      - cosign version --output-file version
-      - cat version
-   - dist: bionic
-     arch: amd64
-     group: dev
-     script:
-      - cosign
-      - cosign version --output-file version
-      - cat version
-   - dist: focal
-     arch: amd64
-     group: dev
-     script:
-      - cosign
-      - cosign version --output-file version
-      - cat version
+      # - cosign
+      # - cosign version --output-file version
+      # - cat version
+  #  - dist: bionic
+  #    arch: amd64
+  #    group: dev
+  #    script:
+  #     - cosign
+  #     - cosign version --output-file version
+  #     - cat version
+  #  - dist: focal
+  #    arch: amd64
+  #    group: dev
+  #    script:
+  #     - cosign
+  #     - cosign version --output-file version
+  #     - cat version
   #  - dist: bionic
   #    arch: arm64
   #    script:
