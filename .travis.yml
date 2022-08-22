@@ -6,7 +6,7 @@ jobs:
      script:
       #- ./amd_others
       #- sudo chmod +x ./cosign && sudo mv ./cosign /usr/local/bin/cosign
-      - sudo cosign version --output-file version
+      - sudo cosign version
       - cat version
       - not_cosign version
   #  - dist: bionic
