@@ -1,17 +1,23 @@
 jobs:
   include:
+   - dist: xenial
+     arch: amd64
+     group: dev
+     script:
+      - cosign
+      - cosign version --output-file version
    - dist: bionic
      arch: amd64
      group: dev
      script:
-      #- ./amd_others
-      #- sudo chmod +x ./cosign && sudo mv ./cosign /usr/local/bin/cosign
+      - cosign
       - cosign version --output-file version
    - dist: focal
      arch: amd64
      group: dev
      script:
       - cosign
+      - cosign version --output-file version
   #  - dist: bionic
   #    arch: arm64
   #    script:
