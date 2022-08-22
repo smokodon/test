@@ -6,13 +6,12 @@ jobs:
      script:
       #- ./amd_others
       #- sudo chmod +x ./cosign && sudo mv ./cosign /usr/local/bin/cosign
-      - sudo cosign version
-      - cat version
-      - not_cosign version
-  #  - dist: bionic
-  #    arch: amd64
-  #    script:
-  #     - ./amd_others
+      - cosign
+   - dist: focal
+     arch: amd64
+     group: dev
+     script:
+      - cosign
   #  - dist: bionic
   #    arch: arm64
   #    script:
