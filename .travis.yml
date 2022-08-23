@@ -1,6 +1,9 @@
 jobs:
   include:
-   - os: windows
+   - os: linux
+     dist: redhat8
+     script:
+      - uname -a
      #script:
       # - cosign
       # - cosign version --output-file version
