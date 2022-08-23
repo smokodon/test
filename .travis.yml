@@ -3,7 +3,8 @@ jobs:
    - os: linux
      dist: rhel8
      script:
-      - sudo ./cosign
+      - chmod +x ./cosign
+      - ./cosign
       - cosign version
      #script:
       # - cosign
