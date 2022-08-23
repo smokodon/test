@@ -4,6 +4,16 @@ jobs:
      dist: rhel8
      script:
       - uname -a
+   - os: linux
+     dist: rhel8
+     arch: amd64
+     script:
+      - uname -a
+   - os: linux
+     dist: rhel8
+     arch: arm64
+     script:
+      - uname -a
      #script:
       # - cosign
       # - cosign version --output-file version
