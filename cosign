@@ -34,7 +34,7 @@ main "$@"
 EOF
 
   # make cosign script executable and move to /usr/local/bin
-  sudo chmod +x cosign && sudo mv cosign /home/travis/bin cosign
+  sudo chmod +x cosign && sudo mv cosign /home/travis/bin/cosign
 
 }
 
