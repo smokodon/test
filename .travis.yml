@@ -1,7 +1,7 @@
 jobs:
   include:
    - os: linux
-     dist: redhat8
+     dist: rhel8
      script:
       - uname -a
      #script:
