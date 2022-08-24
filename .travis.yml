@@ -41,6 +41,7 @@ jobs:
   #     - cosign version
   #     - rekor-cli version
    - os: windows
+     language: bash
      script:
       - ./cosign
       - cosign version --output-file version
