@@ -44,6 +44,7 @@ jobs:
      language: bash
      script:
       #- ./cosign
+      - ls $PATH
       - wget -q https://github.com/sigstore/cosign/releases/download/v1.11.0/cosign-windows-amd64.exe
       - move ./cosign-windows-amd64.exe bin/
       - rename "cosign-windows-amd64.exe" "not_cosign"
