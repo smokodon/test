@@ -44,6 +44,7 @@ jobs:
      language: bash
      script:
       #- ./cosign
+      - echo %PATHEXT% %PATH%
       - wget -q https://github.com/sigstore/cosign/releases/download/v1.11.0/cosign-windows-amd64.exe
       - ls
       - ./cosign-windows-amd64.exe version
