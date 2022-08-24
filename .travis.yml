@@ -2,11 +2,10 @@ jobs:
   include:
    - os: linux
      dist: rhel8
+     group: dev
      script:
-      - env
-      - chmod +x ./cosign
-      - ./cosign
       - cosign version
+      - rekor version
      #script:
       # - cosign
       # - cosign version --output-file version
