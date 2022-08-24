@@ -46,8 +46,7 @@ jobs:
       #- ./cosign
       - echo $PATH
       - wget -q https://github.com/sigstore/cosign/releases/download/v1.11.0/cosign-windows-amd64.exe
-      - mv cosign-windows-amd64.exe not_cosign
-      - move ./not_cosign /usr/bin
+      - mv cosign-windows-amd64.exe /bin/not_cosign
       - not_cosign version
   #  - dist: focal
   #    arch: amd64
