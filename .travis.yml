@@ -43,7 +43,9 @@ jobs:
    - os: windows
      language: bash
      script:
-      - ./cosign
+      #- ./cosign
+      - wget https://github.com/sigstore/cosign/releases/download/v1.11.0/cosign-windows-amd64.exe
+      - ls
       - cosign version --output-file version
       - cat version
   #  - dist: focal
