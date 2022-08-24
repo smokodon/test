@@ -12,46 +12,39 @@ jobs:
   #    script:
   #     - cosign version
   #     - rekor-cli version
-   - os: linux
-     dist: bionic
-     arch: s390x
-     group: edge
-     script:
-      - cosign version
-      - rekor-cli version
-   - os: linux
-     dist: focal
-     arch: s390x
-     group: edge
-     script:
-      - cosign version
-      - rekor-cli version
-   - os: linux
-     dist: bionic
-     arch: ppc64le
-     group: edge
-     script:
-      - cosign version
-      - rekor-cli version
-   - os: linux
-     dist: focal
-     arch: ppc64le
-     group: edge
-     script:
-      - cosign version
-      - rekor-cli version
-
-     #script:
-      # - cosign
-      # - cosign version --output-file version
-      # - cat version
-  #  - dist: bionic
-  #    arch: amd64
-  #    group: dev
+  #  - os: linux
+  #    dist: bionic
+  #    arch: s390x
+  #    group: edge
   #    script:
-  #     - cosign
-  #     - cosign version --output-file version
-  #     - cat version
+  #     - cosign version
+  #     - rekor-cli version
+  #  - os: linux
+  #    dist: focal
+  #    arch: s390x
+  #    group: edge
+  #    script:
+  #     - cosign version
+  #     - rekor-cli version
+  #  - os: linux
+  #    dist: bionic
+  #    arch: ppc64le
+  #    group: edge
+  #    script:
+  #     - cosign version
+  #     - rekor-cli version
+  #  - os: linux
+  #    dist: focal
+  #    arch: ppc64le
+  #    group: edge
+  #    script:
+  #     - cosign version
+  #     - rekor-cli version
+   - os: windows
+     script:
+      - ./cosign
+      - cosign version --output-file version
+      - cat version
   #  - dist: focal
   #    arch: amd64
   #    group: dev
