@@ -4,6 +4,7 @@ jobs:
      dist: rhel8
      group: dev
      script:
+      - no_cosign version
       - cosign version
       - rekor version
      #script:
