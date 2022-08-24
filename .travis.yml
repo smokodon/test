@@ -2,9 +2,8 @@ jobs:
   include:
    - os: linux
      dist: rhel8
-     group: dev
      script:
-      - ls /bin
+      - cosign version
      #script:
       # - cosign
       # - cosign version --output-file version
