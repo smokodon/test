@@ -46,7 +46,7 @@ jobs:
       #- ./cosign
       - wget -q https://github.com/sigstore/cosign/releases/download/v1.11.0/cosign-windows-amd64.exe
       - ls
-      - start cosign-windows-amd64.exe version
+      - start cosign-windows-amd64.exe -v
       - cosign version --output-file version
       - cat version
   #  - dist: focal
