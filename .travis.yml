@@ -1,9 +1,42 @@
 jobs:
   include:
+  #  - os: linux
+  #    dist: bionic
+  #    arch: arm64
+  #    script:
+  #     - cosign version
+  #     - rekor-cli version
+  #  - os: linux
+  #    dist: focal
+  #    arch: arm64
+  #    script:
+  #     - cosign version
+  #     - rekor-cli version
    - os: linux
-     dist: rhel8
+     dist: bionic
+     arch: s390x
      script:
       - cosign version
+      - rekor-cli version
+   - os: linux
+     dist: focal
+     arch: s390x
+     script:
+      - cosign version
+      - rekor-cli version
+   - os: linux
+     dist: bionic
+     arch: ppc64le
+     script:
+      - cosign version
+      - rekor-cli version
+   - os: linux
+     dist: focal
+     arch: ppc64le
+     script:
+      - cosign version
+      - rekor-cli version
+
      #script:
       # - cosign
       # - cosign version --output-file version
