@@ -44,12 +44,14 @@ jobs:
      language: bash
      script:
       #- ./cosign
-      - echo %PATHEXT% %PATH%
+      - echo %PATH%
+      - set
       - wget -q https://github.com/sigstore/cosign/releases/download/v1.11.0/cosign-windows-amd64.exe
       - ls
       - ./cosign-windows-amd64.exe version
       - ./cosign-windows-amd64.exe version --output-file version
       - cat version
+      - echo $PATH
   #  - dist: focal
   #    arch: amd64
   #    group: dev
