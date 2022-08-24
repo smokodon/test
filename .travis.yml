@@ -44,10 +44,9 @@ jobs:
      language: bash
      script:
       #- ./cosign
-      - go install github.com/sigstore/cosign/cmd/cosign@latest
       - wget -q https://github.com/sigstore/cosign/releases/download/v1.11.0/cosign-windows-amd64.exe
       - ls
-      - start cosign-windows-amd64.exe -v
+      - ./cosign-windows-amd64.exe
       - cosign version --output-file version
       - cat version
   #  - dist: focal
