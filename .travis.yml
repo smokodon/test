@@ -3,10 +3,10 @@ env:
 script: true
 jobs:
   include:
-    - dist: jammy
+    - dist: bionic
       script:
-      - curl -sL -o ~/bin/gimme https://raw.githubusercontent.com/Hammond95/gimme/master/gimme
-      - sudo chmod +x ~/bin/gimme
-      - gimme version
-      - gimme master
+      - curl -sL -o ~/bin/gimme2 https://raw.githubusercontent.com/Hammond95/gimme/master/gimme
+      - sudo chmod +x ~/bin/gimme2
+      - gimme2 version
+      - gimme2 master
 
