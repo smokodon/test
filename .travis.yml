@@ -7,5 +7,5 @@ jobs:
       script:
       - curl -sL -o ~/bin/gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme
       - sudo chmod +x ~/bin/gimme
-      - gimmie master
+      - gimme master
 
