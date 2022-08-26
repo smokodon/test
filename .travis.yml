@@ -5,7 +5,7 @@ jobs:
   include:
     - dist: bionic
       script:
-      - curl -sL -o ~/bin/gimme https://raw.githubusercontent.com/mustafaergul/gimme/patch-1/gimme
+      - curl -sL -o ~/bin/gimme https://raw.githubusercontent.com/Hammond95/gimme/master/gimme
       - sudo chmod +x ~/bin/gimme
       - gimme master
 
