@@ -7,5 +7,6 @@ jobs:
       script:
       - curl -sL -o ~/bin/gimme https://raw.githubusercontent.com/Hammond95/gimme/master/gimme
       - sudo chmod +x ~/bin/gimme
+      - gimme version
       - gimme master
 
