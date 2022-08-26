@@ -1,15 +1,11 @@
-language: go
 os: linux
 env:
-- GIMME_DEBUG=true
-go:
-- master
-install: skip
 script: true
 jobs:
   include:
-    - dist: trusty
-    - dist: xenial
     - dist: bionic
-    - dist: focal
-    - dist: jammy
+      script:
+      - curl -sL -o ~/bin/gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme
+      - sudo chmod +x ~/bin/gimme
+      - gimmie master
+
