@@ -1,27 +1,15 @@
+language: go
+os: linux
+env:
+- GIMME_DEBUG=true
+go:
+- master
+install: skip
+script: true
 jobs:
   include:
-   - dist: focal
-     language: generic
-     script:
-     - p4 --help
-   - dist: bionic
-     language: generic
-     script:
-     - p4 --help
-   - dist: focal
-     group: dev
-     language: generic
-     script:
-     - p4 --help
-   - dist: bionic
-     group: dev
-     language: generic
-     script:
-     - p4 --help
-   - dist: focal
-     script:
-     - p4 --help
-   - dist: bionic
-     script:
-     - p4 --help
-    
+    - dist: trusty
+    - dist: xenial
+    - dist: bionic
+    - dist: focal
+    - dist: jammy
