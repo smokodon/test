@@ -8,5 +8,6 @@ jobs:
       - curl -sL -o ~/bin/gimme2 https://raw.githubusercontent.com/Hammond95/gimme/master/gimme
       - sudo chmod +x ~/bin/gimme2
       - gimme2 version
-      - gimme2 master
+      - gimme2 stable
+      - gimme2 version
 
