@@ -1,14 +1,17 @@
 jobs:
   include:
    - os: linux
+     group: dev
      dist: xenial
      script:
       - rvm list rubies
    - os: linux
+     group: dev
      dist: bionic
      script:
       - rvm list rubies
    - os: linux
+     group: dev
      dist: focal
      script:
       - rvm list rubies
