@@ -3,15 +3,15 @@ jobs:
    - os: linux
      dist: xenial
      script:
-      - which -a ruby
+      - rvm rubies
    - os: linux
      dist: bionic
      script:
-      - which -a ruby
+      - rvm rubies
    - os: linux
      dist: focal
      script:
-      - which -a ruby
+      - rvm rubies
   #  - os: linux
   #    dist: focal
   #    arch: s390x
