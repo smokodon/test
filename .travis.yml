@@ -5,19 +5,22 @@ jobs:
      dist: xenial
      jdk: openjdk10
      script:
-      - rvm list rubies
+      - which java
+      - java -version
    - os: linux
      group: dev
      dist: bionic
      jdk: openjdk10
      script:
-      - rvm list rubies
+      - which java
+      - java -version
    - os: linux
      group: dev
      dist: focal
      jdk: openjdk10
      script:
-      - rvm list rubies
+      - which java
+      - java -version
   #  - os: linux
   #    dist: focal
   #    arch: s390x
