@@ -1,21 +1,18 @@
 jobs:
   include:
    - os: linux
-     group: dev
      dist: xenial
      jdk: openjdk10
      script:
       - which java
       - java -version
    - os: linux
-     group: dev
      dist: bionic
      jdk: openjdk10
      script:
       - which java
       - java -version
    - os: linux
-     group: dev
      dist: focal
      jdk: openjdk10
      script:
