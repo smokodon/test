@@ -7,12 +7,12 @@ jobs:
      script:
       - rvm list rubies
       - java -version
-  #  - os: linux
-  #    dist: bionic
-  #    jdk: openjdk10
-  #    script:
-  #     - which java
-  #     - java -version
+   - os: linux
+     dist: bionic
+     jdk: openjdk10
+     script:
+      - rvm list rubies
+      - java -version
   #  - os: linux
   #    dist: focal
   #    jdk: openjdk10
