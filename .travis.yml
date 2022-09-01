@@ -3,19 +3,19 @@ jobs:
    - os: linux
      group: dev
      dist: xenial
-     jdk: openjdk9
+     jdk: openjdk10
      script:
       - rvm list rubies
    - os: linux
      group: dev
      dist: bionic
-     jdk: openjdk9
+     jdk: openjdk10
      script:
       - rvm list rubies
    - os: linux
      group: dev
      dist: focal
-     jdk: openjdk9
+     jdk: openjdk10
      script:
       - rvm list rubies
   #  - os: linux
