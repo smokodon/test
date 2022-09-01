@@ -9,7 +9,7 @@ jobs:
       - java -version
    - os: linux
      dist: bionic
-     jdk: openjdk10
+     jdk: openjdk9
      script:
       - rvm list rubies
       - java -version
