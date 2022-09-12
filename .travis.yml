@@ -7,13 +7,15 @@ jobs:
   #     - gradle --version
    - os: linux
      dist: bionic
-     python: 3.8
+     python: 
+     - 3.8
      group: edge
      script:
       - python --version
    - os: linux
      dist: focal
-     python: 3.8
+     python: 
+     - 3.8
      group: edge
      script:
       - python --version
