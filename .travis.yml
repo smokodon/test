@@ -8,14 +8,14 @@ jobs:
    - os: linux
      dist: bionic
      python: 
-     - 3.8
+     - 3.7
      group: edge
      script:
       - python --version
    - os: linux
      dist: focal
      python: 
-     - 3.8
+     - 3.9
      group: edge
      script:
       - python --version
