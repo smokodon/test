@@ -15,6 +15,18 @@ jobs:
      group: dev
      script:
       - mongod --version
+   - os: linux
+     dist: xenial
+     script:
+      - mongod --version
+   - os: linux
+     dist: bionic
+     script:
+      - mongod --version
+   - os: linux
+     dist: focal
+     script:
+      - mongod --version
   #  - os: linux
   #    dist: focal
   #    arch: s390x
