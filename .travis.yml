@@ -4,29 +4,29 @@ jobs:
      dist: xenial
      group: dev
      script:
-      - mongod --version
+      - gradle --version
    - os: linux
      dist: bionic
      group: dev
      script:
-      - mongod --version
+      - gradle --version
    - os: linux
      dist: focal
      group: dev
      script:
-      - mongod --version
+      - gradle --version
    - os: linux
      dist: xenial
      script:
-      - mongod --version
+      - gradle --version
    - os: linux
      dist: bionic
      script:
-      - mongod --version
+      - gradle --version
    - os: linux
      dist: focal
      script:
-      - mongod --version
+      - gradle --version
   #  - os: linux
   #    dist: focal
   #    arch: s390x
