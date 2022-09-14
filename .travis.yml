@@ -1,6 +1,6 @@
 os: linux
 
-group: edge
+group: dev
 
 script:
   # Check .cargo folder permission. Should be owned by travis user
