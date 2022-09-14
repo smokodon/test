@@ -1,22 +1,22 @@
+os: linux
+
+group: edge
+
+script:
+  # Check .cargo folder permission. Should be owned by travis user
+  - ls -la $HOME 
+  - ls -la $HOME/.cargo
+
+language: python
+python:
+  - "3.8"
+
 jobs:
   include:
-  - dist: bionic
-    group: dev
-    script:
-     - whereis python
-     - python2 --version
-     - python3 --version
-     - which -a ruby
-     - python --version
-     - easy_install --version
-     - py.test --version
-  - dist: focal
-    group: dev
-    script:
-     - whereis python
-     - python2 --version
-     - python3 --version
-     - which -a ruby
-     - python --version
-     - easy_install --version
-     - py.test --version
+    - arch: ppc64le
+      dist: bionic
+    - arch: ppc64le
+      dist: focal
+    # xenial will be deprecated in future
+    - arch: ppc64le
+      dist: xenial
