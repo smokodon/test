@@ -1,13 +1,6 @@
 os: linux
-
-group: edge
-
 dist: focal
-
-script:
-  # Check .cargo folder permission. Should be owned by travis user
-  - ls -la $HOME 
-  - ls -la $HOME/.cargo
+group: edge
 
 
 
