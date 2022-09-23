@@ -5,25 +5,12 @@ jobs:
   include:
     - dist: bionic
       script:
-      - gimme version
+      - gimme -k
       - curl -sL -o ~/bin/gimme2 https://raw.githubusercontent.com/mustafaergul/gimme/patch-1/gimme
       - sudo chmod +x ~/bin/gimme2
       - gimme2 version
       - gimme2 master
-    - dist: focal
-      script:
-      - gimme version
-      - curl -sL -o ~/bin/gimme2 https://raw.githubusercontent.com/mustafaergul/gimme/patch-1/gimme
-      - sudo chmod +x ~/bin/gimme2
-      - gimme2 version
-      - gimme2 master
-    - dist: jammy
-      script:
-      - gimme version
-      - curl -sL -o ~/bin/gimme2 https://raw.githubusercontent.com/mustafaergul/gimme/patch-1/gimme
-      - sudo chmod +x ~/bin/gimme2
-      - gimme2 version
-      - gimme2 master
+
 
 
 
