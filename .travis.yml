@@ -4,4 +4,3 @@ group: edge
 script:
 - echo "test"
 
-
