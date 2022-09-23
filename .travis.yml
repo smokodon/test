@@ -5,19 +5,8 @@ jobs:
   include:
     - dist: bionic
       script:
-      - curl -sL -o ~/bin/gimme2 https://raw.githubusercontent.com/travis-ci/gimme/master/gimme
+      - curl -sL -o ~/bin/gimme2 https://raw.githubusercontent.com/Hammond95/gimme/master/gimme
       - sudo chmod +x ~/bin/gimme2
       - gimme2 version
       - gimme2 master
-# os: linux
-# env:
-# script: true
-# jobs:
-#   include:
-#     - dist: bionic
-#       script:
-#       - curl -sL -o ~/bin/gimme2 https://raw.githubusercontent.com/Hammond95/gimme/master/gimme
-#       - sudo chmod +x ~/bin/gimme2
-#       - gimme2 version
-#       - gimme2 1.19
 
