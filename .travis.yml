@@ -8,7 +8,7 @@ jobs:
       - curl -sL -o ~/bin/gimme2 https://raw.githubusercontent.com/travis-ci/gimme/master/gimme
       - sudo chmod +x ~/bin/gimme2
       - gimme2 version
-      - gimme2 1.18
+      - gimme2 master
 # os: linux
 # env:
 # script: true
