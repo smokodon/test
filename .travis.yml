@@ -1,6 +1,22 @@
 os: linux
-dist: focal
-group: edge
-script:
-- echo "test"
 
+group: edge
+
+script:
+  # Check .cargo folder permission. Should be owned by travis user
+  - ls -la $HOME 
+  - ls -la $HOME/.cargo
+
+language: python
+python:
+  - "3.8"
+
+jobs:
+  include:
+    - arch: ppc64le
+      dist: bionic
+    - arch: ppc64le
+      dist: focal
+    # xenial will be deprecated in future
+    - arch: ppc64le
+      dist: xenial
