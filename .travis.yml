@@ -7,18 +7,16 @@ jobs:
   #     - gradle --version
    - os: linux
      dist: bionic
-     python: 
-     - 3.8.1
-     group: edge
+     language: java
+     jdk: openjdk9
      script:
-      - python --version
+      - java --version
    - os: linux
      dist: focal
-     python: 
-     - 3.8.1
-     group: edge
+     language: java
+     jdk: openjdk9
      script:
-      - python --version
+      - java --version
   #  - os: linux
   #    dist: xenial
   #    script:
