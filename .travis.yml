@@ -18,6 +18,15 @@ jobs:
     - arch: ppc64le
       dist: focal
       group: edge
-    # xenial will be deprecated in future
-    - arch: ppc64le
-      dist: xenial
+    - arch: s390x
+      dist: bionic
+    - arch: s390x
+      dist: focal
+    - arch: arm64
+      dist: bionic
+    - arch: arm64
+      dist: focal
+    - arch: amd64
+      dist: bionic
+    - arch: amd64
+      dist: focal
