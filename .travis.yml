@@ -17,6 +17,7 @@ jobs:
       dist: bionic
     - arch: ppc64le
       dist: focal
+      group: edge
     # xenial will be deprecated in future
     - arch: ppc64le
       dist: xenial
