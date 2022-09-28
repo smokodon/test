@@ -28,7 +28,7 @@ script:
   # Check .cargo folder permission. Should be owned by travis user
   - ls -la $HOME 
   - ls -la $HOME/.cargo
-  - cosign --version
+  - cosign -version
 
 language: python
 python:
