@@ -41,16 +41,3 @@ jobs:
     - arch: ppc64le
       dist: focal
       group: edge
-    - arch: s390x
-      dist: bionic
-    - arch: s390x
-      dist: focal
-    - arch: arm64
-      dist: bionic
-    - arch: arm64
-      dist: focal
-    - arch: amd64
-      dist: bionic
-    - arch: amd64
-      dist: focal
-
