@@ -1,26 +1,25 @@
 jobs:
   include:
+   - os: linux
+     dist: xenial
+     script:
+      - apt policy
   #  - os: linux
-  #    dist: xenial
+  #    dist: bionic
+  #    language: java
   #    group: dev
+  #    jdk: openjdk9
   #    script:
-  #     - gradle --version
-   - os: linux
-     dist: bionic
-     language: java
-     group: dev
-     jdk: openjdk9
-     script:
-      - mongod --version
-      - java --version
-   - os: linux
-     dist: focal
-     group: dev
-     language: java
-     jdk: openjdk9
-     script:
-      - mongod --version
-      - java --version
+  #     - mongod --version
+  #     - java --version
+  #  - os: linux
+  #    dist: focal
+  #    group: dev
+  #    language: java
+  #    jdk: openjdk9
+  #    script:
+  #     - mongod --version
+  #     - java --version
   #  - os: linux
   #    dist: xenial
   #    script:
