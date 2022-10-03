@@ -4,7 +4,7 @@ jobs:
      dist: xenial
      script:
       - apt policy
-      - ls -l /etc/apt/sources.list.d/
+      - sudo add-apt-repository -r https://apt-archive.postgresql.org/pub/repos/apt
   #  - os: linux
   #    dist: bionic
   #    language: java
