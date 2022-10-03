@@ -4,7 +4,7 @@ jobs:
      dist: xenial
      script:
       - apt policy
-      - ls etc/apt/source.list.d/
+      - ls -l /etc/apt/source.list.d/
   #  - os: linux
   #    dist: bionic
   #    language: java
