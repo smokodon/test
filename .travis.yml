@@ -8,12 +8,14 @@ jobs:
    - os: linux
      dist: bionic
      language: java
+     group: dev
      jdk: openjdk9
      script:
       - mongod --version
       - java --version
    - os: linux
      dist: focal
+     group: dev
      language: java
      jdk: openjdk9
      script:
