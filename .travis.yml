@@ -2,9 +2,8 @@ jobs:
   include:
    - os: linux
      dist: xenial
+     group: edge
      script:
-      - apt policy
-      - sudo add-apt-repository -r "https://apt-archive.postgresql.org/pub/repos/apt xenial-pgdg/main i386 Packages"
       - apt policy
   #  - os: linux
   #    dist: bionic
