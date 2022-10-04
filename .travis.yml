@@ -36,8 +36,15 @@ python:
 
 jobs:
   include:
+    - arch: ppc64le
+      dist: focal
+      group: edge
+    - arch: ppc64le
+      dist: bionic
+      group: edge
     - arch: s390x
       dist: bionic
+      group: edge
     - arch: s390x
       dist: focal
       group: edge
