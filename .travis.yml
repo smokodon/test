@@ -30,5 +30,8 @@ script:
 - sudo chmod +x /usr/local/bin/lein
 - lein self-install
 arch:
+  - amd64
+  - ppc64le
+  - arm64
   - s390x
 os: linux
