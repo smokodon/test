@@ -26,10 +26,9 @@
 dist: bionic
 group: edge
 script:
-- sudo chmod +x /usr/local/bin/lein
 - env LEIN_ROOT=true curl -L -o /usr/local/bin/lein https://raw.githubusercontent.com/technomancy/leiningen/2.9.1/bin/lein
+- sudo chmod +x /usr/local/bin/lein
 - lein self-install
 arch:
-  - amd64
   - s390x
 os: linux
