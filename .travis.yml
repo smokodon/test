@@ -6,6 +6,7 @@
 #   # Check .cargo folder permission. Should be owned by travis user
 #   - ls -la $HOME 
 #   - ls -la $HOME/.cargo
+#   - cosign -version
 
 # language: python
 # python:
@@ -14,37 +15,18 @@
 # jobs:
 #   include:
 #     - arch: ppc64le
-#       dist: bionic
-#     - arch: ppc64le
 #       dist: focal
-#     # xenial will be deprecated in future
 #     - arch: ppc64le
-#       dist: xenial
+#       dist: bionic
+#     - arch: s390x
+#       dist: bionic
+#     - arch: s390x
+#       dist: focal
+
+language: clojure
+lein: 2.9.1
+dist: bionic
+arch:
+  - amd64
+  - s390x
 os: linux
-
-group: edge
-
-script:
-  # Check .cargo folder permission. Should be owned by travis user
-  - ls -la $HOME 
-  - ls -la $HOME/.cargo
-  - cosign -version
-
-language: python
-python:
-  - "3.8"
-
-jobs:
-  include:
-    - arch: ppc64le
-      dist: focal
-      group: edge
-    - arch: ppc64le
-      dist: bionic
-      group: edge
-    - arch: s390x
-      dist: bionic
-      group: edge
-    - arch: s390x
-      dist: focal
-      group: edge
