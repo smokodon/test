@@ -26,9 +26,7 @@
 dist: bionic
 group: edge
 script:
-- sudo env LEIN_ROOT=true curl -L -o /usr/local/bin/lein https://raw.githubusercontent.com/technomancy/leiningen/2.9.1/bin/lein
-- sudo chmod +x /usr/local/bin/lein
-- lein self-install
+- sudo cat /etc/sbt/jvmopts
 arch:
   - amd64
   - ppc64le
