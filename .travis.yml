@@ -26,6 +26,9 @@
 language: clojure
 lein: 2.9.1
 dist: bionic
+group: edge
+before_script:
+- 
 arch:
   - amd64
   - s390x
