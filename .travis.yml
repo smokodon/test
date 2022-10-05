@@ -26,7 +26,7 @@
 dist: bionic
 group: edge
 script:
-- chmod + x /usr/local/bin/lein
+- chmod +x /usr/local/bin/lein
 - env LEIN_ROOT=true curl -L -o /usr/local/bin/lein https://raw.githubusercontent.com/technomancy/leiningen/2.9.1/bin/lein
 - lein self-install
 arch:
