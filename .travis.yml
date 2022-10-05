@@ -23,10 +23,11 @@
 #     - arch: s390x
 #       dist: focal
 
-language: clojure
-lein: 2.9.1
 dist: bionic
 group: edge
+script:
+- env LEIN_ROOT=true curl -L -o /usr/local/bin/lein https://raw.githubusercontent.com/technomancy/leiningen/2.9.1/bin/lein
+- lein self-install
 arch:
   - amd64
   - s390x
