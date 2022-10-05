@@ -26,6 +26,9 @@
 dist: bionic
 group: edge
 script:
+- echo -e "-Xms2048M\n-Xmx2048M\n-Xss6M" > /tmp/jvmopts
+- sudo mkdir -p /etc/sbt/
+- sudo mv /tmp/jvmopts /etc/sbt/jvmopts
 - sudo cat /etc/sbt/jvmopts
 arch:
   - amd64
