@@ -1,12 +1,9 @@
 jobs:
   include:
    - os: linux
-     dist: bionic
-     language: python
-     python: 3.8
+     dist: focal
      script:
-      - python --version
-      - pip --version
+      - mongod -v
   #  - os: linux
   #    dist: bionic
   #    language: java
