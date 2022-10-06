@@ -1,37 +1,30 @@
-# os: linux
-
-# group: edge
-
-# script:
-#   # Check .cargo folder permission. Should be owned by travis user
-#   - ls -la $HOME 
-#   - ls -la $HOME/.cargo
-#   - cosign -version
-
-# language: python
-# python:
-#   - "3.8"
-
-# jobs:
-#   include:
-#     - arch: ppc64le
-#       dist: focal
-#     - arch: ppc64le
-#       dist: bionic
-#     - arch: s390x
-#       dist: bionic
-#     - arch: s390x
-#       dist: focal
-
-dist: xenial
-group: edge
-script:
-- sudo echo -e "-Xms2048M\n-Xmx2048M\n-Xss6M" > /tmp/jvmopts2
-- sudo cat /tmp/jvmopts2
-- cat /etc/sbt/jvmopts
-arch:
-  - amd64
-  - ppc64le
-  - arm64
-  - s390x
 os: linux
+
+group: edge
+language: java
+
+script:
+  # Check .cargo folder permission. Should be owned by travis user
+  - mvn -v
+
+jobs:
+  include:
+    - arch: ppc64le
+      dist: focal
+    - arch: ppc64le
+      dist: bionic
+    - arch: s390x
+      dist: bionic
+    - arch: s390x
+      dist: focal
+    - arch: arm64
+      dist: bionic
+    - arch: arm64
+      dist: focal
+    - arch: ppc64le
+      dist: xenial
+    - arch: s390x
+      dist: xeniak
+    - arch: arm64
+      dist: xenial
+
