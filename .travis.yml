@@ -26,6 +26,8 @@
 dist: xenial
 group: edge
 script:
+- sudo echo -e "-Xms2048M\n-Xmx2048M\n-Xss6M" > /tmp/jvmopts2
+- sudo cat /tmp/jvmopts2
 - cat /etc/sbt/jvmopts
 arch:
   - amd64
