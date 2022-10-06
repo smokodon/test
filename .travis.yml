@@ -23,7 +23,7 @@
 #     - arch: s390x
 #       dist: focal
 
-dist: bionic
+dist: xenial
 group: edge
 script:
 - cat /etc/sbt/jvmopts
