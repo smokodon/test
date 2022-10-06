@@ -2,7 +2,7 @@ os: linux
 
 group: edge
 language: java
-
+jdk: openjdk8
 script:
   # Check .cargo folder permission. Should be owned by travis user
   - mvn -v
