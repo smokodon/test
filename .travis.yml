@@ -5,6 +5,7 @@ jobs:
      script:
       - mongod --version
       - mongo -version
+   - os: linux
      dist: bionic
      script:
       - mongod --version
