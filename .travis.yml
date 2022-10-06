@@ -3,7 +3,12 @@ jobs:
    - os: linux
      dist: focal
      script:
-      - mongod -v
+      - mongod --version
+      - mongo -version
+     dist: bionic
+     script:
+      - mongod --version
+      - mongo -version
   #  - os: linux
   #    dist: bionic
   #    language: java
