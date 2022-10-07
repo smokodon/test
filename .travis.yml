@@ -3,13 +3,13 @@ jobs:
    - os: linux
      dist: focal
      script:
-      - apt update
+      - sudo apt update
       - mongod --version
       - mongo -version
    - os: linux
      dist: bionic
      script:
-      - apt update
+      - sudo apt update
       - mongod --version
       - mongo -version
   #  - os: linux
