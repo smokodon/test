@@ -1,11 +1,10 @@
 os: linux
 
-group: stable
+group: edge
 language: java
 
 script:
-  # Check .cargo folder permission. Should be owned by travis user
-  - mvn -v
+  - ant -v
 
 jobs:
   include:
