@@ -1,7 +1,6 @@
 os: linux
 
 group: edge
-language: java
 
 script:
   - ant -v
