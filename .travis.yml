@@ -1,17 +1,18 @@
+language: go
+os: linux
+env:
+- GIMME_DEBUG=true
+go:
+- master
+install: skip
+script: true
 jobs:
   include:
-   - os: linux
-     dist: focal
-     script:
-      - sudo apt update
-      - mongod --version
-      - mongo -version
-   - os: linux
-     dist: bionic
-     script:
-      - sudo apt update
-      - mongod --version
-      - mongo -version
+    - dist: trusty
+    - dist: xenial
+    - dist: bionic
+    - dist: focal
+    - dist: jammy
   #  - os: linux
   #    dist: bionic
   #    language: java
