@@ -2,12 +2,11 @@ os: linux
 
 group: test
 
-service: docker
-script:
-  - sudo echo -e "-Xms2048M\n-Xmx2048M\n-Xss6M" > /tmp/jvmopts
-  - sudo mkdir -p /etc/sbt/
-  - sudo mv /tmp/jvmopts /etc/sbt/jvmopts
-  - sudo cat /etc/sbt/jvmopts
+- type: shell
+  inline:
+  - "echo -e '-Xms2048M\n-Xmx2048M\n-Xss6M' > /tmp/jvmopts"
+  - "mkdir -p /etc/sbt/""
+  - "mv /tmp/jvmopts /etc/sbt/jvmopts"
 
 jobs:
   include:
