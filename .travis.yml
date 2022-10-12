@@ -8,6 +8,6 @@ jobs:
       - gimme -k
       - curl -sL -o ~/bin/gimme3 https://raw.githubusercontent.com/travis-ci/gimme/kw-gimme/gimme
       - sudo chmod +x ~/bin/gimme3
-      - gimme2 master
-      - gimme2 version
+      - gimme3 master
+      - gimme3 version
       - gimme -k
