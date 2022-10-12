@@ -6,7 +6,8 @@ jobs:
     - dist: jammy
       script:
       - gimme -k
-      - curl -sL -o ~/bin/gimme2 https://raw.githubusercontent.com/Hammond95/gimme/master/gimme
-      - sudo chmod +x ~/bin/gimme2
-      - gimme2 version
+      - curl -sL -o ~/bin/gimme3 https://raw.githubusercontent.com/travis-ci/gimme/kw-gimme/gimme
+      - sudo chmod +x ~/bin/gimme3
       - gimme2 master
+      - gimme2 version
+      - gimme -k
