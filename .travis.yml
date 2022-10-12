@@ -3,7 +3,7 @@ env:
 script: true
 jobs:
   include:
-    - dist: bionic
+    - dist: jammy
       script:
       - gimme -k
       - curl -sL -o ~/bin/gimme2 https://raw.githubusercontent.com/Hammond95/gimme/master/gimme
