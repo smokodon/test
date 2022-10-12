@@ -6,11 +6,7 @@ jobs:
     - dist: bionic
       script:
       - gimme -k
-      - curl -sL -o ~/bin/gimme2 https://raw.githubusercontent.com/mustafaergul/gimme/patch-1/gimme
+      - curl -sL -o ~/bin/gimme2 https://raw.githubusercontent.com/Hammond95/gimme/master/gimme
       - sudo chmod +x ~/bin/gimme2
       - gimme2 version
       - gimme2 master
-
-
-
-
