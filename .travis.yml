@@ -5,9 +5,4 @@ jobs:
   include:
     - dist: jammy
       script:
-      - gimme -k
-      - curl -sL -o ~/bin/gimme3 https://raw.githubusercontent.com/travis-ci/gimme/kw-gimme/gimme
-      - sudo chmod +x ~/bin/gimme3
-      - gimme3 master
-      - gimme3 version
-      - gimme -k
+      - apt install gcc-arm-linux-gnueabi binutils-arm-linux-gnueabi
