@@ -3,6 +3,6 @@ env:
 script: true
 jobs:
   include:
-    - dist: jammy
+    - dist: trusty
       script:
       - sudo apt install gcc-arm-linux-gnueabi binutils-arm-linux-gnueabi
