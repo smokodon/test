@@ -5,6 +5,6 @@ dist: focal
 group: edge
 script:
   - systemctl list-unit-files --type=service
-  - sudo systemctl start mongodb
-  - sudo systemctl start mongodb
+  - sudo systemctl start mongod
+  - systemctl list-unit-files --type=service
   - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
