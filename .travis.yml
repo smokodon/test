@@ -6,6 +6,7 @@ before_script:
 #  - sudo systemctl restart mongod.service
 #  - sleep 15
   - sudo systemctl unmask mongod
+  - sudo systemctl start mongodb
   - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
 script: true
 dist: focal
