@@ -5,12 +5,13 @@ services:
 before_script:
 #  - sudo systemctl restart mongod.service
 #  - sleep 15
-  - sudo systemctl unmask mongodb
+  - sudo systemctl unmask mongod
   - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
 script: true
 dist: focal
 group: dev
 before_install:
+  - sudo systemctl unmask mongod
   - curl -s "https://get.sdkman.io" | bash
   - source "$HOME/.sdkman/bin/sdkman-init.sh"
   - sdk install java 11.0.12-open
