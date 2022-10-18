@@ -8,7 +8,7 @@ before_script:
   - sudo systemctl unmask mongod
   - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
 script: true
-dist: focal
+dist: bionic
 group: dev
 before_install:
   - sudo systemctl unmask mongod
