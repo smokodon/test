@@ -9,7 +9,7 @@ before_script:
   - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
 script: true
 dist: focal
-group: dev
+group: edge
 before_install:
   - sudo systemctl unmask mongod
   - curl -s "https://get.sdkman.io" | bash
