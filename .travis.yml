@@ -3,8 +3,8 @@ install: skip
 services:
   - mongodb
 before_script:
-  - sudo systemctl restart mongod.service
-  - sleep 15
+#  - sudo systemctl restart mongod.service
+#  - sleep 15
   - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
 script: true
 dist: focal
