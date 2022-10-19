@@ -2,8 +2,7 @@ os: linux
 
 group: test
 
-- type: shell
-  inline:
+script:
   - echo /etc/sbt/jvmopts
 
 jobs:
