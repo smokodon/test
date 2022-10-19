@@ -3,7 +3,7 @@ os: linux
 group: test
 
 script:
-  - echo /etc/sbt/jvmopts
+  - cat /etc/sbt/jvmopts
 
 jobs:
   include:
