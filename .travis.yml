@@ -4,9 +4,7 @@ group: test
 
 - type: shell
   inline:
-  - echo -e "-Xms2048M\n-Xmx2048M\n-Xss6M" > /tmp/jvmopts
-  - mkdir -p /etc/sbt/
-  - mv /tmp/jvmopts /etc/sbt/jvmopts
+  - echo /etc/sbt/jvmopts
 
 jobs:
   include:
@@ -14,18 +12,18 @@ jobs:
       dist: focal
     - arch: ppc64le
       dist: bionic
-    - arch: s390x
-      dist: bionic
-    - arch: s390x
-      dist: focal
-    - arch: arm64
-      dist: bionic
-    - arch: arm64
-      dist: focal
-    - arch: ppc64le
-      dist: xenial
-    - arch: s390x
-      dist: xeniak
-    - arch: arm64
-      dist: xenial
+    # - arch: s390x
+    #   dist: bionic
+    # - arch: s390x
+    #   dist: focal
+    # - arch: arm64
+    #   dist: bionic
+    # - arch: arm64
+    #   dist: focal
+    # - arch: ppc64le
+    #   dist: xenial
+    # - arch: s390x
+    #   dist: xeniak
+    # - arch: arm64
+    #   dist: xenial
 
