@@ -1,8 +1,8 @@
 language: java
 services:
   - mongodb
-dist: bionic
-group: edge
+dist: focal
+group: dev
 script:
   - systemctl list-unit-files --type=service
   - sudo systemctl start mongod
