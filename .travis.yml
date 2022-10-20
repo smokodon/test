@@ -1,10 +1,10 @@
-language: java
 services:
   - mongodb
-dist: focal
+dist:
+- focal
+- jammy
 group: dev
 script:
   - systemctl list-unit-files --type=service
   - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
-
 
