@@ -1,6 +1,6 @@
 services:
   - mongodb
-dist: focal
+dist: jammy
 group: dev
 script:
   - systemctl list-unit-files --type=service
