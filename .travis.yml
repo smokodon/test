@@ -1,7 +1,13 @@
+language: java
+install: skip
 services:
   - mongodb
-dist: focal
-group: dev
-script:
-  - systemctl list-unit-files --type=service
+before_script:
   - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
+script: true
+dist: focal
+before_install:
+  - curl -s "https://get.sdkman.io" | bash
+  - source "$HOME/.sdkman/bin/sdkman-init.sh"
+  - sdk install java 11.0.12-open
+  - sdk use java 11.0.12-open
