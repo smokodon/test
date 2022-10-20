@@ -1,4 +1,4 @@
 dist: focal
-group: dev
+group: stable
 script:
 - mongod --version
