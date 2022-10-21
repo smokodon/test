@@ -1,4 +1,4 @@
-dist: focal
+dist: bionic
 service:
 - mongodb
 group: dev
