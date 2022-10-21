@@ -25,4 +25,3 @@ jobs:
     #   dist: xeniak
     # - arch: arm64
     #   dist: xenial
-
