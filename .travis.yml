@@ -1,6 +1,6 @@
 os: linux
 
-group: test
+group: edge
 
 script:
   - cat /etc/sbt/jvmopts
