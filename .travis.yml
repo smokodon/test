@@ -11,6 +11,8 @@ jobs:
       dist: focal
     - arch: ppc64le
       dist: bionic
+    - arch: ppc64le
+      dist: xenial
     # - arch: s390x
     #   dist: bionic
     # - arch: s390x
