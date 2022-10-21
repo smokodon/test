@@ -1,4 +1,6 @@
 dist: focal
-group: stable
+service:
+- mongodb
+group: dev
 script:
 - mongod --version
