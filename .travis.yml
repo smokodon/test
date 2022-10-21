@@ -4,6 +4,8 @@ group: edge
 
 script:
   - cat /etc/sbt/jvmopts
+  - ls -la $HOME/.cargo
+  - mvn -v
 
 jobs:
   include:
