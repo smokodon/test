@@ -1,6 +1,6 @@
 dist: focal
 group: edge
-arch: arm64
+arch: ppc64le
 script:
 - sudo ls -al /usr/bin
 
