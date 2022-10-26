@@ -1,4 +1,5 @@
 dist: focal
+group: edge
 arch: arm64
 script:
 - sudo ls -al /usr/bin
