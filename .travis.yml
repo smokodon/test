@@ -3,4 +3,5 @@ group: edge
 arch: ppc64le
 script:
 - sudo ls -al /usr/bin
+- sudo ls -al /home
 
