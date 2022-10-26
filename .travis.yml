@@ -1,6 +1,6 @@
-dist: focal
+dist: bionic
 group: edge
-arch: ppc64le
+arch: arm64
 script:
 - sudo ls -al /usr/bin
 - sudo ls -al /home
