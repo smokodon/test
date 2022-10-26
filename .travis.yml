@@ -1,7 +1,11 @@
 dist: bionic
 group: edge
-arch: arm64
+arch: ppc64le
+language: python
+python:
+- 3.8
 script:
+- ls -la $HOME/.cargo
 - sudo ls -al /usr/bin
 - sudo ls -al /home
 
