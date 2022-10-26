@@ -1,7 +1,6 @@
 dist: focal
-service:
-- mongodb
-group: dev
+arch: arm64
+group: edge
 script:
-- mongod --version
+- sudo ls -al /usr/bin
 
