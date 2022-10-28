@@ -1,11 +1,15 @@
-dist: bionic
-group: edge
-arch: ppc64le
-language: python
-python:
-- 3.8
-script:
-- ls -la $HOME
-- sudo ls -al /usr/bin
-- sudo ls -al /home
+# dist: bionic
+# group: edge
+# arch: ppc64le
+# language: python
+# python:
+# - 3.8
+# script:
+# - ls -la $HOME
+# - sudo ls -al /usr/bin
+# - sudo ls -al /home
 
+
+dist: rhel8
+script:
+- echo "witam"
