@@ -1,18 +1,12 @@
-language: go
-os: linux
-env:
-- GIMME_DEBUG=true
-go:
-- master
-install: skip
-script: true
+script:
+- cat /etc/redhat-release
 jobs:
   include:
-    - dist: trusty
-    - dist: xenial
-    - dist: bionic
-    - dist: focal
-    - dist: jammy
+    - dist: rhel8
+    - dist: rhel8
+    - group: dev
+    - dist: rhel9
+    - group: dev
   #  - os: linux
   #    dist: bionic
   #    language: java
