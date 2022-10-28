@@ -9,8 +9,8 @@ jobs:
       group: dev
       script:
       - cat /etc/redhat-release
-    - dist: rhel9
-      group: dev
+    - dist: rhel8
+      group: stable
       script:
       - cat /etc/redhat-release
   #  - os: linux
