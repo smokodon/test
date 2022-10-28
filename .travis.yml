@@ -4,14 +4,17 @@ jobs:
     - os: linux
       dist: rhel8
       script:
+      - mysql -V
       - hostnamectl
     - dist: rhel8
       group: dev
       script:
+      - mysql -V
       - hostnamectl
     - dist: rhel8
       group: stable
       script:
+      - mysql -V
       - hostnamectl
   #  - os: linux
   #    dist: bionic
