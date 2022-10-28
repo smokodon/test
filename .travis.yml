@@ -4,9 +4,9 @@ jobs:
   include:
     - dist: rhel8
     - dist: rhel8
-    - group: dev
+      group: dev
     - dist: rhel9
-    - group: dev
+      group: dev
   #  - os: linux
   #    dist: bionic
   #    language: java
