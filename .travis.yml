@@ -11,5 +11,6 @@
 
 
 dist: rhel9
+group: dev
 script:
 - echo "witam"
