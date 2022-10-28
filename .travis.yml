@@ -4,15 +4,15 @@ jobs:
     - os: linux
       dist: rhel8
       script:
-      - cat /etc/redhat-release
+      - hostnamectl
     - dist: rhel8
       group: dev
       script:
-      - cat /etc/redhat-release
+      - hostnamectl
     - dist: rhel8
       group: stable
       script:
-      - cat /etc/redhat-release
+      - hostnamectl
   #  - os: linux
   #    dist: bionic
   #    language: java
