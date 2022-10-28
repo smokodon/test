@@ -1,12 +1,18 @@
-script:
-- cat /etc/redhat-release
+
 jobs:
   include:
-    - dist: rhel8
+    - os: linux
+      dist: rhel8
+      script:
+      - cat /etc/redhat-release
     - dist: rhel8
       group: dev
+      script:
+      - cat /etc/redhat-release
     - dist: rhel9
       group: dev
+      script:
+      - cat /etc/redhat-release
   #  - os: linux
   #    dist: bionic
   #    language: java
