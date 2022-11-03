@@ -4,7 +4,7 @@ language: java
 script:
   - sudo cat /etc/sbt/jvmopts
   - ls -al $HOME/.cargo
-  - whereis cargo
+  - whereis .cargo
   - sudo ls -la $HOME | grep .cargo
   - mvn -v
 
@@ -16,18 +16,18 @@ jobs:
       dist: bionic
     - arch: ppc64le
       dist: focal
-    # - arch: s390x
-    #   dist: xenial
-    # - arch: s390x
-    #   dist: bionic
-    # - arch: s390x
-    #   dist: focal
-    # - arch: arm64
-    #   dist: xenial
-    # - arch: arm64
-    #   dist: bionic
-    # - arch: arm64
-    #   dist: focal
+    - arch: s390x
+      dist: xenial
+    - arch: s390x
+      dist: bionic
+    - arch: s390x
+      dist: focal
+    - arch: arm64
+      dist: xenial
+    - arch: arm64
+      dist: bionic
+    - arch: arm64
+      dist: focal
 
 
   #  - os: linux
