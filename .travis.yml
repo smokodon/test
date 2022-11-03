@@ -1,21 +1,33 @@
+group: edge
+language: python
+python:
+  - "3.8"
+
+script:
+  - sudo cat /etc/sbt/jvmopts
+  - ls -la $HOME/.cargo
+  - mvn -v
 
 jobs:
   include:
-    - os: linux
-      dist: rhel8
-      script:
-      - mysql
-      - hostnamectl
-    - dist: rhel8
-      group: dev
-      script:
-      - mysql
-      - hostnamectl
-    - dist: rhel8
-      group: stable
-      script:
-      - mysql
-      - hostnamectl
+    - arch: ppc64le
+      dist: focal
+    - arch: ppc64le
+      dist: bionic
+    - arch: s390x
+      dist: bionic
+    - arch: s390x
+      dist: focal
+    - arch: arm64
+      dist: bionic
+    - arch: arm64
+      dist: focal
+    - arch: ppc64le
+      dist: xenial
+    - arch: s390x
+      dist: xeniak
+    - arch: arm64
+      dist: xenial
   #  - os: linux
   #    dist: bionic
   #    language: java
