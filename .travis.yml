@@ -3,9 +3,6 @@ language: java
 
 script:
   - sudo cat /etc/sbt/jvmopts
-  - ls -al $HOME/.cargo
-  - whereis .cargo
-  - sudo ls -la $HOME | grep .cargo
   - mvn -v
 
 jobs:
