@@ -1,33 +1,31 @@
 group: edge
-language: python
-python:
-  - "3.8"
+language: java
 
 script:
   - sudo cat /etc/sbt/jvmopts
-  #- sudo ls -la $HOME | grep .cargo
+  - sudo ls -la $HOME | grep .cargo
   - mvn -v
 
 jobs:
   include:
     - arch: ppc64le
-      dist: focal
+      dist: xenial
     - arch: ppc64le
       dist: bionic
-    - arch: s390x
-      dist: bionic
-    - arch: s390x
-      dist: focal
-    - arch: arm64
-      dist: bionic
-    - arch: arm64
-      dist: focal
     - arch: ppc64le
+      dist: focal
+    - arch: s390x
       dist: xenial
     - arch: s390x
-      dist: xeniak
+      dist: bionic
+    - arch: s390x
+      dist: focal
     - arch: arm64
       dist: xenial
+    - arch: arm64
+      dist: bionic
+    - arch: arm64
+      dist: focal
   #  - os: linux
   #    dist: bionic
   #    language: java
