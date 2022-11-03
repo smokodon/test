@@ -5,7 +5,7 @@ python:
 
 script:
   - sudo cat /etc/sbt/jvmopts
-  - ls -la $HOME | grep .cargo
+  #- sudo ls -la $HOME | grep .cargo
   - mvn -v
 
 jobs:
