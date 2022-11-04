@@ -1,5 +1,6 @@
-group: test
-language: java
+group: edge
+language: python
+python: 3.8
 
 script:
   - ls -la $HOME
