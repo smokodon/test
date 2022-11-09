@@ -17,10 +17,10 @@ jobs:
       dist: focal
     - arch: s390x
       dist: xenial
-    # - arch: s390x
-    #   dist: bionic
-    # - arch: s390x
-    #   dist: focal
+    - arch: s390x
+      dist: bionic
+    - arch: s390x
+      dist: focal
     - arch: arm64
       dist: xenial
     - arch: arm64
