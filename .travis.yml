@@ -1,4 +1,4 @@
-group: stable
+#group: stable
 language: python
 python: 3.8
 
