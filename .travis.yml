@@ -2,7 +2,9 @@ group: edge
 
 script:
   - openssl version
-  - sudo apt update && sudo apt install openssl
+  - sudo apt update 
+  - sudo apt upgrade
+  - sudo apt install openssl
   - openssl version
 
 
