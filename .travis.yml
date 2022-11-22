@@ -1,4 +1,4 @@
-group: stable
+group: dev
 addons:
   postgresql: '12'
   apt:
