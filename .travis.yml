@@ -1,6 +1,13 @@
-group: stable
-language: clojure
-lein: 2.9.2
+group: edge
+addons:
+  postgresql: '12'
+  apt:
+    packages:
+    - postgresql-12
+    - postgresql-client-12
+
+install: skip
+script: true
 jobs:
   include:
     # - arch: ppc64le
@@ -15,8 +22,6 @@ jobs:
     #   dist: bionic
     # - arch: s390x
     #   dist: focal
-    - arch: amd
-      dist: bionic
     - arch: arm64
       dist: xenial
     - arch: arm64
