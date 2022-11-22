@@ -1,4 +1,4 @@
-group: edge
+group: stable
 addons:
   postgresql: '12'
   apt:
