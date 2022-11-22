@@ -1,4 +1,4 @@
-group: edge
+group: stable
 language: clojure
 lein: 2.9.2
 jobs:
