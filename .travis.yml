@@ -2,6 +2,7 @@ group: edge
 
 script:
 - sudo apt-get update
+- apt-cache search postgresql
 - sudo apt-get install postgresql-12 postgresql-client-12
 jobs:
   include:
