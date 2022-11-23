@@ -1,7 +1,8 @@
 group: edge
 
 script:
-- sudo -E apt-get -yq --no-install-suggests --no-install-recommends install postgresql-12 postgresql-client-12
+- sudo apt-get update
+- sudo apt-get install postgresql-12 postgresql-client-12
 jobs:
   include:
     # - arch: ppc64le
