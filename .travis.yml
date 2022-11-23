@@ -5,24 +5,24 @@ script:
 # - wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 # - sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
 - sudo apt-get update
-- sudo apt-get install postgresql-11 postgresql-client-11
+- sudo apt-get install postgresql-12 postgresql-client-12
 jobs:
   include:
-    - arch: ppc64le
-      dist: xenial
-    - arch: ppc64le
-      dist: bionic
-    - arch: ppc64le
-      dist: focal
-    - arch: s390x
-      dist: xenial
-    - arch: s390x
-      dist: bionic
-    - arch: s390x
-      dist: focal
+    # - arch: ppc64le
+    #   dist: xenial
+    # - arch: ppc64le
+    #   dist: bionic
+    # - arch: ppc64le
+    #   dist: focal
+    # - arch: s390x
+    #   dist: xenial
+    # - arch: s390x
+    #   dist: bionic
+    # - arch: s390x
+    #   dist: focal
+    # - arch: arm64
+    #   dist: xenial
     - arch: arm64
-      dist: xenial
-    - arch: arm64
       dist: bionic
-    - arch: arm64
-      dist: focal
+    # - arch: arm64
+    #   dist: focal
