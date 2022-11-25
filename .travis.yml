@@ -5,7 +5,7 @@ script:
   - wget -q https://www.openssl.org/source/openssl-3.0.7.tar.gz
   - tar –xvzf openssl-3.0.7.tar.gz
   - cd ./openssl-3.0.7
-  #- ./Configure
+  - ./Configure
   #- make test
   - sudo make install
   - openssl version
