@@ -6,7 +6,7 @@ script:
   - sudo apt remove openssl -y
   - tar –xvzf openssl-3.0.7.tar.gz
   - cd ./openssl-3.0.7
-  - ./Configure --openssldir=/usr/bin/openssl
+  - ./Configure --openssldir=/usr/bin/
   #- make test
   - sudo make install
   - openssl version
