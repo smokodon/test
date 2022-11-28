@@ -1,4 +1,4 @@
-group: edge
+group: dev
 language: java
 jdk: openjdk8
 # services:
