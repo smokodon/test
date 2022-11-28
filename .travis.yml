@@ -1,7 +1,7 @@
 group: stable
 script:
 - java -version
-- dpkg -l | grep -i "jdk|jre"
+- dpkg -l | grep jdk
 - sudo update-java-alternatives -l
 
 jobs:
