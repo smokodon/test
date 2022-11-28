@@ -1,5 +1,5 @@
 group: stable
-java: oraclejdk8
+java: openjdk8
 
 script:
 - java -version
