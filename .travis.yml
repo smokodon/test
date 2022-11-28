@@ -1,4 +1,4 @@
-group: stable
+group: dev
 language: java
 jdk: openjdk8
 
