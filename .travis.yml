@@ -1,7 +1,7 @@
 group: stable
 script:
 - java -version
-- update-alternatives -l
+- update-java-alternatives -l
 
 jobs:
   include:
