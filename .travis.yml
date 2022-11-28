@@ -1,25 +1,31 @@
-group: edge
-language: clojure
+group: stable
 script:
-- rvm list
+- java -version
+- update-alternatives --list java
 
 jobs:
   include:
-    - arch: ppc64le
+    # - arch: ppc64le
+    #   dist: xenial
+    # - arch: ppc64le
+    #   dist: bionic
+    # - arch: ppc64le
+    #   dist: focal
+    # - arch: s390x
+    #   dist: xenial
+    # - arch: s390x
+    #   dist: bionic
+    # - arch: s390x
+    #   dist: focal
+    # - arch: arm64
+    #   dist: xenial
+    # - arch: arm64
+    #   dist: bionic
+    # - arch: arm64
+    #   dist: focal
+    - arch: amd64
       dist: xenial
-    - arch: ppc64le
+    - arch: amd64
       dist: bionic
-    - arch: ppc64le
-      dist: focal
-    - arch: s390x
-      dist: xenial
-    - arch: s390x
-      dist: bionic
-    - arch: s390x
-      dist: focal
-    - arch: arm64
-      dist: xenial
-    - arch: arm64
-      dist: bionic
-    - arch: arm64
+    - arch: amd64
       dist: focal
