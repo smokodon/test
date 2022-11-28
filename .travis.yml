@@ -5,9 +5,9 @@ services:
   - docker
 script:
 - docker pull travisci/ci-ubuntu-2004:packer-1669641055-b7dcbdbc
-- docker run -d -p 127.0.0.1:80:4567 travisci/ci-ubuntu-2004
+- docker run -d -p 127.0.0.1:80:4567 travisci/ci-ubuntu-2004:packer-1669641055-b7dcbdbc
 - docker ps -a
-- docker run travisci/ci-ubuntu-2004 /bin/sh -c "java -version"
+- docker run travisci/ci-ubuntu-2004:packer-1669641055-b7dcbdbc /bin/sh -c "java -version"
 
 
 jobs:
