@@ -1,4 +1,5 @@
 group: stable
+language: java
 java: openjdk8
 
 script:
