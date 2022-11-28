@@ -1,6 +1,9 @@
 group: stable
 java: oraclejdk8
 
+script:
+- java -version
+
 jobs:
   include:
     # - arch: ppc64le
