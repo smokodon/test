@@ -1,8 +1,5 @@
 group: stable
-script:
-- java -version
-- dpkg -l | grep jdk
-- sudo update-java-alternatives -l
+java: oraclejdk8
 
 jobs:
   include:
