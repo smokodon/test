@@ -1,4 +1,4 @@
-group: dev
+group: stable
 language: java
 jdk: openjdk8
 
@@ -31,3 +31,5 @@ jobs:
       dist: bionic
     - arch: amd64
       dist: focal
+    - arch: amd64
+      dist: jammy
