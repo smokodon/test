@@ -1,6 +1,6 @@
 group: stable
 language: java
-java: openjdk8
+jdk: openjdk8
 
 script:
 - java -version
