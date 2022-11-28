@@ -4,7 +4,11 @@ jdk: openjdk8
 services:
   - docker
 script:
-- java -version
+- docker pull travisci/ci-ubuntu-2004
+- docker run -d -p 127.0.0.1:80:4567 travisci/ci-ubuntu-2004
+- docker ps -a
+- docker run travisci/ci-ubuntu-2004 /bin/sh -c "java -version"
+
 
 jobs:
   include:
@@ -26,11 +30,11 @@ jobs:
     #   dist: bionic
     # - arch: arm64
     #   dist: focal
-    - arch: amd64
-      dist: xenial
+    #- arch: amd64
+    #  dist: xenial
     - arch: amd64
       dist: bionic
-    - arch: amd64
-      dist: focal
-    - arch: amd64
-      dist: jammy
+    #- arch: amd64
+    #  dist: focal
+    #- arch: amd64
+    #  dist: jammy
