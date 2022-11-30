@@ -15,7 +15,7 @@ script:
 jobs:
   include:
     - arch: amd
-      group: edge
+      group: dev
       dist: jammy
     - arch: amd
       group: stable
