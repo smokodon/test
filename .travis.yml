@@ -1,6 +1,8 @@
 script:
   - openssl version
   - apt list openssl
+  - python -c "import ssl; print(ssl.OPENSSL_VERSION)"
+  - python3 -c "import ssl; print(ssl.OPENSSL_VERSION)"
   # - wget -q https://www.openssl.org/source/openssl-3.0.7.tar.gz
   # - tar –xvzf openssl-3.0.7.tar.gz
   # - cd ./openssl-3.0.7
