@@ -1,20 +1,22 @@
-group: edge
-
 script:
   - openssl version
-  - wget -q https://www.openssl.org/source/openssl-3.0.7.tar.gz
-  - tar –xvzf openssl-3.0.7.tar.gz
-  - cd ./openssl-3.0.7
-  - ./Configure --prefix=/usr/bin/openssl
-  #- make test
-  - sudo make install
-  - sudo apt remove openssl -y
-  - openssl version
+  - apt list openssl
+  # - wget -q https://www.openssl.org/source/openssl-3.0.7.tar.gz
+  # - tar –xvzf openssl-3.0.7.tar.gz
+  # - cd ./openssl-3.0.7
+  # - ./Configure --prefix=/usr/bin/openssl
+  # #- make test
+  # - sudo make install
+  # - sudo apt remove openssl -y
+  # - openssl version
 
 
 
 jobs:
   include:
     - arch: amd
+      group: edge
       dist: jammy
-# --openssldir=/usr/bin/
+    - arch: amd
+      group: stable
+      dist: jammy
