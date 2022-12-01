@@ -1,29 +1,9 @@
-language: python
-python: 3.10
 script:
-  - openssl version
-  - apt list openssl
-  - python -c "import ssl; print(ssl.OPENSSL_VERSION)"
-  - python3 -c "import ssl; print(ssl.OPENSSL_VERSION)"
-  - python --version
-  - python3 --version
-  - rvm list
-  # - wget -q https://www.openssl.org/source/openssl-3.0.7.tar.gz
-  # - tar –xvzf openssl-3.0.7.tar.gz
-  # - cd ./openssl-3.0.7
-  # - ./Configure --prefix=/usr/bin/openssl
-  # #- make test
-  # - sudo make install
-  # - sudo apt remove openssl -y
-  # - openssl version
-
-
+  - echo "witam"
 
 jobs:
   include:
-    - arch: amd
-      group: dev
-      dist: jammy
-    - arch: amd
-      group: stable
-      dist: jammy
+    - group: dev
+      dist: rhel8
+    - group: stable
+      dist: rhel
