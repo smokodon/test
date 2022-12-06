@@ -2,13 +2,9 @@ group: edge
 services:
  - docker
 script:
-- ls
-- uptime
-- ip a
-- cat /etc/docker/daemon.json
-- sudo systemctl restart docker
-- ip a
-
+- ip link show docker0
+- docker run -d busybox top
+- ip link show docker0
 
 jobs:
   include:
@@ -18,12 +14,12 @@ jobs:
        dist: bionic
      - arch: ppc64le
        dist: focal
-     - arch: s390x
-       dist: xenial
-     - arch: s390x
-       dist: bionic
-     - arch: s390x
-       dist: focal
+    #  - arch: s390x
+    #    dist: xenial
+    #  - arch: s390x
+    #    dist: bionic
+    #  - arch: s390x
+    #    dist: focal
     # - arch: arm64
     #   dist: xenial
     # - arch: arm64
