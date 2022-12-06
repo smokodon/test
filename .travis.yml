@@ -5,7 +5,7 @@ script:
 - ip link show docker0
 - docker run -d busybox top
 - ip link show docker0
-- curl -sSL https://groovy.jfrog.io/artifactory/dist-release-local/groovy-zips/apache-groovy-binary-4.0.3.zip
+- curl https://groovy.jfrog.io/artifactory/dist-release-local/groovy-zips/apache-groovy-binary-4.0.3.zip
 - ls
 
 jobs:
