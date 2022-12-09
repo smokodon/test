@@ -12,6 +12,6 @@
 
 dist: rhel8
 group: dev
-service: mongodb
+service: mysql
 script:
 - echo "witam"
