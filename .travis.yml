@@ -1,21 +1,13 @@
-group: edge
-services:
- - docker
-script:
-- ip link show docker0
-- docker run -d busybox top
-- ip link show docker0
-- curl https://www.google.com/
-- ls
-
-jobs:
-  include:
-     - arch: ppc64le
-       dist: xenial
-     - arch: ppc64le
-       dist: bionic
-     - arch: ppc64le
-       dist: focal
+os: linux
+group: dev
+dist: focal
+jdk:
+  - oraclejdk8
+  - oraclejdk11
+  - openjdk10
+  - openjdk11
+  - eclipse11
+script: ls -la /usr/lib/jvm
     #  - arch: s390x
     #    dist: xenial
     #  - arch: s390x
