@@ -1,17 +1,92 @@
-# dist: bionic
-# group: edge
-# arch: ppc64le
-# language: python
-# python:
-# - 3.8
-# script:
-# - ls -la $HOME
-# - sudo ls -al /usr/bin
-# - sudo ls -al /home
+os: linux
+dist: xenial
+language: shell
+install: skip
+script: true
 
-
-dist: rhel8
-group: stable
-service: mysql
-script:
-- echo "witam"
+jobs:
+  include:
+    - name: mariadb-10.1
+      dist: trusty
+      addons:
+        mariadb: '10.1'
+    - name: mariadb-10.1
+      dist: xenial
+      addons:
+        mariadb: '10.1'
+    - name: mariadb-10.1
+      dist: bionic
+      addons:
+        mariadb: '10.1'
+    - name: mariadb-10.1
+      dist: focal
+      addons:
+        mariadb: '10.1'
+        
+    - name: mariadb-10.2
+      dist: trusty
+      addons:
+        mariadb: '10.2'
+    - name: mariadb-10.2
+      dist: xenial
+      addons:
+        mariadb: '10.2'
+    - name: mariadb-10.2
+      dist: bionic
+      addons:
+        mariadb: '10.2'
+    - name: mariadb-10.2
+      dist: focal
+      addons:
+        mariadb: '10.2'
+        
+    - name: mariadb-10.3
+      dist: trusty
+      addons:
+        mariadb: '10.3'
+    - name: mariadb-10.3
+      dist: xenial
+      addons:
+        mariadb: '10.3'
+    - name: mariadb-10.3
+      dist: bionic
+      addons:
+        mariadb: '10.3'
+    - name: mariadb-10.3
+      dist: focal
+      addons:
+        mariadb: '10.3'
+        
+    - name: mariadb-10.4
+      dist: trusty
+      addons:
+        mariadb: '10.4'
+    - name: mariadb-10.4
+      dist: xenial
+      addons:
+        mariadb: '10.4'
+    - name: mariadb-10.4
+      dist: bionic
+      addons:
+        mariadb: '10.4'
+    - name: mariadb-10.4
+      dist: focal
+      addons:
+        mariadb: '10.4'
+        
+    - name: mariadb-10.5
+      dist: trusty
+      addons:
+        mariadb: '10.5'
+    - name: mariadb-10.5
+      dist: xenial
+      addons:
+        mariadb: '10.5'
+    - name: mariadb-10.5
+      dist: bionic
+      addons:
+        mariadb: '10.5'
+    - name: mariadb-10.5
+      dist: focal
+      addons:
+        mariadb: '10.5'
