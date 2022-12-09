@@ -11,7 +11,7 @@
 
 
 dist: rhel8
-group: dev
+group: stable
 service: mysql
 script:
 - echo "witam"
