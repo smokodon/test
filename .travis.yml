@@ -1,5 +1,4 @@
 os: linux
-dist: xenial
 language: shell
 install: skip
 script: true
