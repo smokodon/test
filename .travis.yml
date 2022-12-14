@@ -1,21 +1,33 @@
-group: edge
-services:
- - docker
-script:
-- ip link show docker0
-- docker run -d busybox top
-- ip link show docker0
-- curl https://www.google.com/
-- ls
+dist: focal
 
-jobs:
-  include:
-     - arch: ppc64le
-       dist: xenial
-     - arch: ppc64le
-       dist: bionic
-     - arch: ppc64le
-       dist: focal
+arch: 
+  - amd64
+  - ppc64le
+  
+os: linux
+
+language: clojure
+
+install: skip
+script: skip
+# group: edge
+# services:
+#  - docker
+# script:
+# - ip link show docker0
+# - docker run -d busybox top
+# - ip link show docker0
+# - curl https://www.google.com/
+# - ls
+
+# jobs:
+#   include:
+#      - arch: ppc64le
+#        dist: xenial
+#      - arch: ppc64le
+#        dist: bionic
+#      - arch: ppc64le
+#        dist: focal
     #  - arch: s390x
     #    dist: xenial
     #  - arch: s390x
