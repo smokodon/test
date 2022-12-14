@@ -7,7 +7,7 @@ arch:
 os: linux
 
 language: clojure
-
+lein: lein
 install: skip
 script:
 - lein multi test
