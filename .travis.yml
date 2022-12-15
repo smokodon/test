@@ -1,52 +1,39 @@
-dist: focal
-
-arch: 
-  - amd64
-  - ppc64le
-  
-os: linux
-
-language: clojure
-lein: lein
-install: skip
+group: stable
 script:
-- lein multi test
-- lein1 multi test
-# group: edge
-# services:
-#  - docker
-# script:
-# - ip link show docker0
-# - docker run -d busybox top
-# - ip link show docker0
-# - curl https://www.google.com/
-# - ls
+- pip show pyyaml
+- pip list
+- pip list | findstr pyyaml
+- library.__version__
+- importlib.metadata.version
+- conda list
+- pip freeze
+- pip freeze | grep pyyaml
 
-# jobs:
-#   include:
-#      - arch: ppc64le
-#        dist: xenial
-#      - arch: ppc64le
-#        dist: bionic
-#      - arch: ppc64le
-#        dist: focal
-    #  - arch: s390x
-    #    dist: xenial
-    #  - arch: s390x
-    #    dist: bionic
-    #  - arch: s390x
-    #    dist: focal
-    # - arch: arm64
-    #   dist: xenial
-    # - arch: arm64
-    #   dist: bionic
-    # - arch: arm64
-    #   dist: focal
-    # - arch: amd64
-    #   dist: xenial
-    # - arch: amd64
-    #   dist: bionic
-    # - arch: amd64
-    #   dist: focal
-    # - arch: amd64
-    #   dist: jammy
+jobs:
+  include:
+    - arch: ppc64le
+      dist: xenial
+    - arch: ppc64le
+      dist: bionic
+    - arch: ppc64le
+      dist: focal
+    - arch: s390x
+      dist: xenial
+    - arch: s390x
+      dist: bionic
+    - arch: s390x
+      dist: focal
+    - arch: arm64
+      dist: xenial
+    - arch: arm64
+      dist: bionic
+    - arch: arm64
+      dist: focal
+    - arch: amd64
+      dist: xenial
+    - arch: amd64
+      dist: bionic
+    - arch: amd64
+      dist: focal
+    - arch: amd64
+      dist: jammy
