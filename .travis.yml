@@ -1,5 +1,5 @@
 service: mysql 
-
+script: mysql -v
 jobs:
   include:
     - group: dev
