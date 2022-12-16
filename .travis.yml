@@ -5,4 +5,6 @@ jobs:
     - group: dev
       dist: rhel8
     - group: stable
-      dist: rhel
+      dist: rhel8
+    - group: edge
+      dist: rhel8
