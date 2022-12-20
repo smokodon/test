@@ -42,10 +42,10 @@ jobs:
       dist: focal
       addons:
         mariadb: '10.3'
-     - name: mariadb-10.4
-       dist: bionic
-       addons:
-         mariadb: '10.4'
+    - name: mariadb-10.4
+      dist: bionic
+      addons:
+        mariadb: '10.4'
     - name: mariadb-10.5
       dist: focal
       addons:
