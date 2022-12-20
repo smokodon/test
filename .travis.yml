@@ -5,47 +5,47 @@ script: true
 
 jobs:
   include:
-    - name: mariadb-10.1
-      dist: trusty
-      addons:
-        mariadb: '10.1'
-    - name: mariadb-10.1
-      dist: xenial
-      addons:
-        mariadb: '10.1'
-    - name: mariadb-10.1
-      dist: bionic
-      addons:
-        mariadb: '10.1'
-    - name: mariadb-10.1
-      dist: focal
-      addons:
-        mariadb: '10.1'
-    - name: mariadb-10.2
-      dist: trusty
-      addons:
-        mariadb: '10.2'
-    - name: mariadb-10.2
-      dist: xenial
-      addons:
-        mariadb: '10.2'
-    - name: mariadb-10.2
-      dist: bionic
-      addons:
-        mariadb: '10.2'
-    - name: mariadb-10.2
-      dist: focal
-      addons:
-        mariadb: '10.2'
-    - name: mariadb-10.3
-      dist: focal
-      addons:
-        mariadb: '10.3'
-    - name: mariadb-10.4
-      dist: focal
-      addons:
-        mariadb: '10.4'
-    - name: mariadb-10.5
-      dist: focal
-      addons:
-        mariadb: '10.5'
+    # - name: mariadb-10.1
+    #   dist: trusty
+    #   addons:
+    #     mariadb: '10.1'
+    # - name: mariadb-10.1
+    #   dist: xenial
+    #   addons:
+    #     mariadb: '10.1'
+    # - name: mariadb-10.1
+    #   dist: bionic
+    #   addons:
+    #     mariadb: '10.1'
+    # - name: mariadb-10.1
+    #   dist: focal
+    #   addons:
+    #     mariadb: '10.1'
+    # - name: mariadb-10.2
+    #   dist: trusty
+    #   addons:
+    #     mariadb: '10.2'
+    # - name: mariadb-10.2
+    #   dist: xenial
+    #   addons:
+    #     mariadb: '10.2'
+    # - name: mariadb-10.2
+    #   dist: bionic
+    #   addons:
+    #     mariadb: '10.2'
+    # - name: mariadb-10.2
+    #   dist: focal
+    #   addons:
+    #     mariadb: '10.2'
+    # - name: mariadb-10.3
+    #   dist: focal
+    #   addons:
+    #     mariadb: '10.3'
+     - name: mariadb-10.4
+       dist: bionic
+       addons:
+         mariadb: '10.4'
+    # - name: mariadb-10.5
+    #   dist: focal
+    #   addons:
+    #     mariadb: '10.5'
