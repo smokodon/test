@@ -1,7 +1,7 @@
 jobs:
   include:
     - group: stable
-      language: nodejs
+      language: python
       dist: rhel8
       script: 
       - cat /etc/*-release
