@@ -1,12 +1,51 @@
-service: mysql 
-script: 
-- mysql -V
 jobs:
   include:
-    - group: dev
-      dist: rhel8
     - group: stable
       dist: rhel8
-    - group: edge
+      script: 
+      - echo "Job 1"
+    - group: stable
       dist: rhel8
+      script: 
+      - echo "Job 2"
+    - group: stable
+      dist: rhel8
+      script: 
+      - echo "Job 3"
+    - group: stable
+      dist: rhel8
+      script: 
+      - echo "Job 4"
+    - group: stable
+      dist: rhel8
+      script: 
+      - echo "Job 5"
+    - group: stable
+      dist: rhel8
+      script: 
+      - echo "Job 6"
+    - group: stable
+      dist: rhel8
+      script: 
+      - echo "Job 7"
+    - group: stable
+      dist: rhel8
+      script: 
+      - echo "Job 8"
+    - group: stable
+      dist: rhel8
+      script: 
+      - echo "Job 9"
+    - group: stable
+      dist: rhel8
+      script: 
+      - echo "Job 10"
+    - group: stable
+      dist: rhel8
+      script: 
+      - echo "Job 11"
+    - group: stable
+      dist: rhel8
+      script: 
+      - echo "Job 12"
 
