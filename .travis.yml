@@ -6,48 +6,48 @@ jobs:
       script: 
       - cat /etc/*-release
       - echo "Job 1"
-    - group: stable
-      language: elixir
-      dist: rhel8
-      script: 
-      - cat /etc/*-release
-      - echo "Job 1"
-    - group: stable
-      language: go
-      dist: rhel8
-      script: 
-      - cat /etc/*-release
-      - echo "Job 1"
-    - group: stable
-      language: groovy
-      dist: rhel8
-      script: 
-      - cat /etc/*-release
-      - echo "Job 1"
-    - group: stable
-      language: perl
-      dist: rhel8
-      script: 
-      - cat /etc/*-release
-      - echo "Job 1"
-    - group: stable
-      language: php
-      dist: rhel8
-      script: 
-      - cat /etc/*-release
-      - echo "Job 1"
-    - group: stable
-      language: python
-      dist: rhel8
-      script: 
-      - cat /etc/*-release
-      - echo "Job 1"
-    - group: stable
-      language: ruby
-      dist: rhel8
-      script: 
-      - cat /etc/*-release
-      - echo "Job 1"
+    # - group: stable
+    #   language: elixir
+    #   dist: rhel8
+    #   script: 
+    #   - cat /etc/*-release
+    #   - echo "Job 1"
+    # - group: stable
+    #   language: go
+    #   dist: rhel8
+    #   script: 
+    #   - cat /etc/*-release
+    #   - echo "Job 1"
+    # - group: stable
+    #   language: groovy
+    #   dist: rhel8
+    #   script: 
+    #   - cat /etc/*-release
+    #   - echo "Job 1"
+    # - group: stable
+    #   language: perl
+    #   dist: rhel8
+    #   script: 
+    #   - cat /etc/*-release
+    #   - echo "Job 1"
+    # - group: stable
+    #   language: php
+    #   dist: rhel8
+    #   script: 
+    #   - cat /etc/*-release
+    #   - echo "Job 1"
+    # - group: stable
+    #   language: python
+    #   dist: rhel8
+    #   script: 
+    #   - cat /etc/*-release
+    #   - echo "Job 1"
+    # - group: stable
+    #   language: ruby
+    #   dist: rhel8
+    #   script: 
+    #   - cat /etc/*-release
+    #   - echo "Job 1"
 
 
 
