@@ -1,11 +1,27 @@
+os: linux
+language: ruby
+group: dev
+ruby: 2.7.6
+
+services:
+  - postgresql
+addons:
+    postgresql: 12
+    apt:
+      update: true
+      packages:
+        - postgresql-12
+        - postgresql-client-12
+    chrome: stable
+    
+install: skip
+script: true
+
 jobs:
   include:
-    - group: stable
-      language: erlang
-      dist: rhel8
-      script: 
-      - cat /etc/*-release
-      - echo "Job 1"
+    #- dist: xenial
+    #- dist: bionic
+    - dist: focal
     # - group: stable
     #   language: elixir
     #   dist: rhel8
