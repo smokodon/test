@@ -25,18 +25,7 @@ before_install:
   $DOCKER_USERNAME --password-stdin $ECR_REGISTRY
 script:
 - echo 1
-env:
-- SHA: "$(git rev-parse HEAD)"
-- COMMIT_USER: $(git log --pretty=format:"%an" $SHA -1)
-- COMMIT_CONTENT: $(git log --pretty=format:"%s" $SHA -1)
-- SHORT_SHA: "$(git rev-parse --short HEAD)"
-- NOTIFY_SECRET: K2uwQT7db5735Br9arwQ1b
-- NOTIFY_URL: https://open.feishu.cn/open-apis/bot/v2/hook/dbad9c08-9a0e-483d-a551-fe941581c990
-- ECR_REGISTRY: 201672968307.dkr.ecr.ap-northeast-1.amazonaws.com
-- HOLLA_API_GO_IMAGE: "$ECR_REGISTRY/holla-api-go:$SHA"
-- AWS_DEFAULT_REGION: ap-northeast-1
-- DOCKER_USERNAME: AWS
-- NAMESPACE: holla-api-go
+- go version
 addons:
   deploy:
   - provider: script
