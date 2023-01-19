@@ -6,7 +6,12 @@ dist: xenial
 sudo: true
 services:
 - docker
-
+install:
+- curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.23.5/bin/linux/amd64/kubectl
+- chmod +x ./kubectl
+- sudo mv ./kubectl /usr/local/bin/kubectl
+- aws eks --region ap-northeast-1 update-kubeconfig --name holla-test
+- aws eks --region ap-northeast-1 describe-cluster --name holla-test --query cluster.status
 # jobs:
 #   include:
 #     #- dist: xenial
