@@ -1,27 +1,17 @@
 os: linux
-language: ruby
-group: dev
-ruby: 2.7.6
-
+arch: arm64
+go: '1.18'
+language: go
+dist: xenial
+sudo: true
 services:
-  - postgresql
-addons:
-    postgresql: 12
-    apt:
-      update: true
-      packages:
-        - postgresql-12
-        - postgresql-client-12
-    chrome: stable
-    
-install: skip
-script: true
+- docker
 
-jobs:
-  include:
-    #- dist: xenial
-    - dist: bionic
-    - dist: focal
+# jobs:
+#   include:
+#     #- dist: xenial
+#     - dist: bionic
+#     - dist: focal
     # - group: stable
     #   language: elixir
     #   dist: rhel8
