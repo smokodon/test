@@ -7,11 +7,11 @@ sudo: true
 services:
 - docker
 install:
-- ARCH=`uname -p`
-- echo $ARCH
-- curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.23.5/bin/linux/arm64/kubectl
+- curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.23.5/bin/linux/amd64/kubectl
 - chmod +x ./kubectl
 - sudo mv ./kubectl /usr/local/bin/kubectl
+- aws eks --region ap-northeast-1 update-kubeconfig --name holla-test
+- aws eks --region ap-northeast-1 describe-cluster --name holla-test --query cluster.status
 before_install:
 - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 - sudo add-apt-repository "deb [arch=arm64] https://download.docker.com/linux/ubuntu
@@ -30,9 +30,9 @@ env:
 - COMMIT_USER: $(git log --pretty=format:"%an" $SHA -1)
 - COMMIT_CONTENT: $(git log --pretty=format:"%s" $SHA -1)
 - SHORT_SHA: "$(git rev-parse --short HEAD)"
-#- NOTIFY_SECRET: K2uwQT7db5735Br9arwQ1b
-#- NOTIFY_URL: https://open.feishu.cn/open-apis/bot/v2/hook/dbad9c08-9a0e-483d-a551-fe941581c990
-#- ECR_REGISTRY: 201672968307.dkr.ecr.ap-northeast-1.amazonaws.com
+- NOTIFY_SECRET: K2uwQT7db5735Br9arwQ1b
+- NOTIFY_URL: https://open.feishu.cn/open-apis/bot/v2/hook/dbad9c08-9a0e-483d-a551-fe941581c990
+- ECR_REGISTRY: 201672968307.dkr.ecr.ap-northeast-1.amazonaws.com
 - HOLLA_API_GO_IMAGE: "$ECR_REGISTRY/holla-api-go:$SHA"
 - AWS_DEFAULT_REGION: ap-northeast-1
 - DOCKER_USERNAME: AWS
