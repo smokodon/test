@@ -4,9 +4,13 @@ language: node_js
 matrix:
   include:
   - os: linux
+    dist: focal
     node_js: 6
-  - os: osx
+  - os: linux
+    dist: bionic
     node_js: 6
+  #- os: osx
+  #  node_js: 6
 
 
   fast_finish: true
