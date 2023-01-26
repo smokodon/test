@@ -1,33 +1,27 @@
----
-language: go
-os:
-- linux
-dist: xenial
-sudo: true
-arch:
-- arm64
-go:
-- '1.18'
-services:
-- docker
-install:
-- ARCH=`uname -p`
-- echo $ARCH
-- curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.23.5/bin/linux/arm64/kubectl
-- chmod +x ./kubectl
-- sudo mv ./kubectl /usr/local/bin/kubectl
+language: node_js
+
+# osx backlog is often deep, so to be polite we can just hit these highlights
+matrix:
+  include:
+  - os: linux
+    node_js: 6
+  - os: osx
+    node_js: 6
+
+
+  fast_finish: true
+
 before_install:
-- curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-- sudo add-apt-repository "deb [arch=arm64] https://download.docker.com/linux/ubuntu
-  $(lsb_release -cs) stable"
-- sudo apt-get update
-- sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce
-- docker version
-- pip install awscli
-- aws --version
-- export PATH=$PATH:$HOME/.local/bin
+  - 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash && . $NVM_DIR/nvm.sh'
+  - 'nvm install-latest-npm'
+  - 'NPM_CONFIG_LEGACY_PEER_DEPS=true npm install'
+  - 'npm run copy-metafiles'
+install:
+  - 'NPM_CONFIG_LEGACY_PEER_DEPS=true npm install'
+
 script:
-- 'true'
+  - echo Witam
+
 # jobs:
 #   include:
 #     #- dist: xenial
