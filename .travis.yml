@@ -8,7 +8,7 @@ matrix:
     node_js: 6
   - os: linux
     dist: focal
-    node_js: 7
+    node_js: 8
   #- os: osx
   #  node_js: 6
 
