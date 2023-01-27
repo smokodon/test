@@ -6,6 +6,12 @@ matrix:
   - os: linux
     dist: focal
     node_js: 6
+  - os: linux
+    dist: bionic
+    node_js: 6
+  - os: linux
+    dist: xenial
+    node_js: 6
   #- os: osx
   #  node_js: 6
 
@@ -13,12 +19,10 @@ matrix:
   fast_finish: true
 
 before_install:
-  - node -v
   #- nvm install 8
   #- nvm use 8
   - node -v
-  #- curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash && . $NVM_DIR/nvm.sh
-  - nvm install-latest-npm
+  #- nvm install-latest-npm
   - npm show npm engines
 
 script:
