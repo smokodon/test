@@ -17,7 +17,7 @@ before_install:
   #- nvm install 8
   #- nvm use 8
   - node -v
-  - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash && . $NVM_DIR/nvm.sh
+  - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash && . $NVM_DIR/nvm.sh
   - nvm install-latest-npm
   - npm show npm engines
 
