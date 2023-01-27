@@ -12,8 +12,8 @@ matrix:
   - os: linux
     dist: xenial
     node_js: 6
-  #- os: osx
-  #  node_js: 6
+  - os: osx
+    node_js: 6
 
 
   fast_finish: true
