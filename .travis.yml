@@ -5,7 +5,7 @@ matrix:
   include:
   - os: linux
     dist: focal
-    node_js: 6
+    #node_js: 6
   - os: linux
     dist: focal
     node_js: 8
@@ -16,13 +16,13 @@ matrix:
   fast_finish: true
 
 before_install:
-  - 'npm cache clean --force'
-  - 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash && . $NVM_DIR/nvm.sh'
-  - 'nvm install-latest-npm'
-  - 'NPM_CONFIG_LEGACY_PEER_DEPS=true npm install'
-  - 'npm run copy-metafiles'
+  - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash && . $NVM_DIR/nvm.sh
+  - nvm install-latest-npm
+  - npm show npm engines
+  - NPM_CONFIG_LEGACY_PEER_DEPS=true npm install
+  - npm run copy-metafiles
 install:
-  - 'NPM_CONFIG_LEGACY_PEER_DEPS=true npm install'
+  - NPM_CONFIG_LEGACY_PEER_DEPS=true npm install
 
 script:
   - echo Witam
