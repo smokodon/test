@@ -1,6 +1,8 @@
 script:
+- git --version
+- add-apt-repository ppa:git-core/ppa
 - sudo apt-get update
-- sudo apt-get upgrade -y
+- sudo apt install git
 - git --version
 
 group: dev
@@ -13,3 +15,5 @@ jobs:
       dist: bionic
     - os: linux
       dist: focal
+    - os: linux
+      dist: jammy
