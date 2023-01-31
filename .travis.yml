@@ -1,6 +1,8 @@
 script:
 - git --version
 
+group: dev
+
 jobs:
   include:
     - os: linux
