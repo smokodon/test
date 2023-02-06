@@ -6,7 +6,7 @@ script:
 # - sudo apt install git
 # - git --version
 
-group: edge
+group: stable
 
 jobs:
   include:
