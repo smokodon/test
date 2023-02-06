@@ -1,20 +1,31 @@
 script:
 - ruby -v
-- git --version
+# - git --version
 # - sudo add-apt-repository ppa:git-core/ppa -y
 # - sudo apt-get update
 # - sudo apt install git
 # - git --version
 
-group: stable
+group: edge
 
 jobs:
   include:
-    #- os: linux
-    #  dist: xenial
-    - os: linux
-      dist: bionic
-    - os: linux
-      dist: focal
-    - os: linux
-      dist: jammy
+
+    - dist: xenial
+      arch: ppc64le
+    - dist: bionic
+      arch: ppc64le
+    - dist: focal
+      arch: ppc64le
+    - dist: xenial
+      arch: s390x
+    - dist: bionic
+      arch: s390x
+    - dist: focal
+      arch: s390x
+    - dist: xenial
+      arch: arm64
+    - dist: bionic
+      arch: arm64
+    - dist: focal
+      arch: arm64
