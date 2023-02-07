@@ -2,6 +2,7 @@ script:
 - wget http://archive.ubuntu.com/ubuntu/pool/main/libu/libu2f-host/libu2f-udev_1.1.10-1_all.deb
 - sudo apt install ./libu2f-udev_1.1.10-1_all.deb
 - wget --no-verbose  "https://dl.google.com/dl/linux/direct/google-chrome-stable_current_amd64.deb" && sudo apt -qq update && sudo apt-get install ./google-chrome-stable_current_amd64.deb
+- google-chrome --version
 # - git --version
 # - sudo add-apt-repository ppa:git-core/ppa -y
 # - sudo apt-get update
