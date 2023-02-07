@@ -1,5 +1,5 @@
 script:
-- ruby -v
+- wget --no-verbose  "https://dl.google.com/dl/linux/direct/google-chrome-stable_current_amd64.deb" && sudo apt -qq update && sudo apt-get install ./google-chrome-stable_current_amd64.deb
 # - git --version
 # - sudo add-apt-repository ppa:git-core/ppa -y
 # - sudo apt-get update
@@ -12,20 +12,20 @@ jobs:
   include:
 
     - dist: xenial
-      arch: ppc64le
-    - dist: bionic
-      arch: ppc64le
-    - dist: focal
-      arch: ppc64le
-    - dist: xenial
-      arch: s390x
-    - dist: bionic
-      arch: s390x
-    - dist: focal
-      arch: s390x
-    - dist: xenial
-      arch: arm64
-    - dist: bionic
-      arch: arm64
-    - dist: focal
-      arch: arm64
+      arch: amd
+    # - dist: bionic
+    #   arch: ppc64le
+    # - dist: focal
+    #   arch: ppc64le
+    # - dist: xenial
+    #   arch: s390x
+    # - dist: bionic
+    #   arch: s390x
+    # - dist: focal
+    #   arch: s390x
+    # - dist: xenial
+    #   arch: arm64
+    # - dist: bionic
+    #   arch: arm64
+    # - dist: focal
+    #   arch: arm64
