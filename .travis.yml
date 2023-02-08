@@ -1,9 +1,10 @@
 sudo: true
-package:
-- google-chrome-stable
-script:
-
-- sudo apt install libpq-dev
+services:
+  - postgresql
+  apt:
+    packages:
+    - postgresql-11
+#- sudo apt install libpq-dev
 # - git --version
 # - sudo add-apt-repository ppa:git-core/ppa -y
 # - sudo apt-get update
@@ -17,8 +18,8 @@ jobs:
 
     - dist: focal
       arch: amd
-    - dist: xenial
-      arch: amd
+    #- dist: xenial
+    #  arch: amd
     # - dist: bionic
     #   arch: ppc64le
     # - dist: focal
