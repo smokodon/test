@@ -1,4 +1,3 @@
-sudo: true
 services:
   - postgresql
 #- sudo apt install libpq-dev
