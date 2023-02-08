@@ -1,6 +1,6 @@
 sudo: true
-services:
-  - postgresql
+addons:
+  postgresql: "11"
   apt:
     packages:
     - postgresql-11
