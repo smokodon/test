@@ -1,6 +1,8 @@
 sudo: true
+package:
+- google-chrome-stable
 script:
-- sudo apt install google-chrome
+
 - sudo apt install libpq-dev
 # - git --version
 # - sudo add-apt-repository ppa:git-core/ppa -y
