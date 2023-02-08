@@ -7,7 +7,7 @@ services:
 # - sudo apt install git
 # - git --version
 
-group: stable
+group: dev
 
 jobs:
   include:
