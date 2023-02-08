@@ -1,9 +1,6 @@
 sudo: true
-addons:
-  postgresql: "17"
-  apt:
-    packages:
-    - postgresql-17
+services:
+  - postgresql
 #- sudo apt install libpq-dev
 # - git --version
 # - sudo add-apt-repository ppa:git-core/ppa -y
