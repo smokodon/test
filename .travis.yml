@@ -1,34 +1,35 @@
 services:
-  - postgresql
 #- sudo apt install libpq-dev
 # - git --version
 # - sudo add-apt-repository ppa:git-core/ppa -y
 # - sudo apt-get update
 # - sudo apt install git
-# - git --version
+ - git --version
 
-group: stable
+group: dev
 
 jobs:
   include:
 
-    # - dist: focal
-    #   arch: amd
-    # - dist: xenial
-    #   arch: amd
-    # - dist: bionic
-    #   arch: amd
-     - dist: focal
-       arch: ppc64le
+    - dist: focal
+      arch: amd
+    - dist: xenial
+      arch: amd
+    - dist: bionic
+      arch: amd
+    - dist: jammy
+      arch: amd
+    #  - dist: focal
+    #    arch: ppc64le
     # - dist: xenial
     #   arch: s390x
     # - dist: bionic
     #   arch: s390x
-     - dist: focal
-       arch: s390x
+    #  - dist: focal
+    #    arch: s390x
     # - dist: xenial
     #   arch: arm64
     # - dist: bionic
     #   arch: arm64
-     - dist: focal
-       arch: arm64
+    #  - dist: focal
+    #    arch: arm64
