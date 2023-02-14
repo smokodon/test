@@ -4,33 +4,35 @@ script:
 # - sudo add-apt-repository ppa:git-core/ppa -y
 # - sudo apt-get update
 # - sudo apt install git
-- docker pull hello-world
+- docker image prune --all
+- docker pull moussavdb/build-nodejs:lts
+- docker images
 
 group: stable
 
 jobs:
   include:
 
-    - dist: focal
-      arch: amd
-    - dist: xenial
-      arch: amd
-    - dist: bionic
-      arch: amd
-    - dist: jammy
-      arch: amd
-    - dist: focal
-      arch: ppc64le
-    - dist: xenial
-      arch: ppc64le
-    - dist: bionic
-      arch: ppc64le
-    - dist: xenial
-      arch: s390x
-    - dist: bionic
-      arch: s390x
-    - dist: focal
-      arch: s390x
+    # - dist: focal
+    #   arch: amd
+    # - dist: xenial
+    #   arch: amd
+    # - dist: bionic
+    #   arch: amd
+    # - dist: jammy
+    #   arch: amd
+    # - dist: focal
+    #   arch: ppc64le
+    # - dist: xenial
+    #   arch: ppc64le
+    # - dist: bionic
+    #   arch: ppc64le
+    # - dist: xenial
+    #   arch: s390x
+    # - dist: bionic
+    #   arch: s390x
+    # - dist: focal
+    #   arch: s390x
     - dist: xenial
       arch: arm64
     - dist: bionic
