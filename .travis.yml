@@ -4,23 +4,21 @@ script:
 # - sudo add-apt-repository ppa:git-core/ppa -y
 # - sudo apt-get update
 # - sudo apt install git
-- cosign
-- cosign version --output-file version
-- cat version
+- docker pull moussavdb/build-nodejs:lts
 
 group: stable
 
 jobs:
   include:
 
-    # - dist: focal
-    #   arch: amd
-    # - dist: xenial
-    #   arch: amd
-    # - dist: bionic
-    #   arch: amd
-    # - dist: jammy
-    #   arch: amd
+    - dist: focal
+      arch: amd
+    - dist: xenial
+      arch: amd
+    - dist: bionic
+      arch: amd
+    - dist: jammy
+      arch: amd
     - dist: focal
       arch: ppc64le
     - dist: xenial
