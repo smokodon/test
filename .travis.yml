@@ -8,7 +8,7 @@ script:
 - cosign version --output-file version
 - cat version
 
-group: edge
+group: stable
 
 jobs:
   include:
