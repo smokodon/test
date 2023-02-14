@@ -4,7 +4,9 @@ script:
 # - sudo add-apt-repository ppa:git-core/ppa -y
 # - sudo apt-get update
 # - sudo apt install git
- - cosign --version
+- cosign
+- cosign version --output-file version
+- cat version
 
 group: edge
 
