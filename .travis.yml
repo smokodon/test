@@ -7,9 +7,10 @@ script:
 - python -c "import sys; print('\n'.join(sys.path))"
 - whereis python3
 - python3 -c "import sys; print('\n'.join(sys.path))"
+- pip3 install numpy
 
 
-group: dev
+group: stable
 
 jobs:
   include:
