@@ -9,7 +9,7 @@ script:
 - python3 -c "import sys; print('\n'.join(sys.path))"
 
 
-group: stable
+group: dev
 
 jobs:
   include:
