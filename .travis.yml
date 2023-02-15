@@ -6,6 +6,7 @@ script:
 # - sudo apt install git
 - python -c "import sys; print('\n'.join(sys.path))"
 - whereis python3
+- python3 -c "import sys; print('\n'.join(sys.path))"
 
 
 group: stable
