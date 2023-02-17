@@ -10,7 +10,7 @@ script:
 - pip3 install numpy
 
 
-group: stable
+group: edge
 
 jobs:
   include:
