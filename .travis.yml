@@ -1,4 +1,3 @@
-install: true
 services:
   - mongodb
 script:
