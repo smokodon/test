@@ -11,6 +11,7 @@ script:
 - sudo service mongod start
 - sudo systemctl start mongod
 - sudo systemctl start mongodb
+- systemctl --type=service --state=running
 
 group: stable
 
