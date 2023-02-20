@@ -16,7 +16,6 @@ group: stable
 
 jobs:
   include:
-
     - dist: focal
     # - dist: xenial
     #   arch: amd
