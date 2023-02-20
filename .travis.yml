@@ -20,12 +20,12 @@ jobs:
 
     - dist: focal
       arch: amd
-    - dist: xenial
-      arch: amd
-    - dist: bionic
-      arch: amd
-    - dist: jammy
-      arch: amd
+    # - dist: xenial
+    #   arch: amd
+    # - dist: bionic
+    #   arch: amd
+    # - dist: jammy
+    #   arch: amd
     # - dist: focal
     #   arch: ppc64le
     # - dist: xenial
