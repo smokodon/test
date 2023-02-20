@@ -8,9 +8,9 @@ script:
 # - sudo apt-get update
 # - sudo apt install git
 - mongod --version
-- sudo service mongod start
-- sudo systemctl start mongod
-- sudo systemctl start mongodb
+# - sudo service mongod start
+# - sudo systemctl start mongod
+# - sudo systemctl start mongodb
 - systemctl --type=service --state=running
 
 group: stable
