@@ -8,6 +8,7 @@ script:
 # - sudo apt-get update
 # - sudo apt install git
 - mongod --version
+- sudo service mongod start
 
 group: stable
 
