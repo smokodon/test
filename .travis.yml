@@ -1,5 +1,5 @@
-# services:
-#   - mongodb
+services:
+  - mongodb
 script:
 #- sudo apt install libpq-dev
 # - git --version
