@@ -10,6 +10,7 @@ script:
 - mongod --version
 - sudo service mongod start
 - sudo systemctl start mongod
+- sudo systemctl start mongodb
 
 group: stable
 
