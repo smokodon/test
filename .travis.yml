@@ -18,7 +18,6 @@ jobs:
   include:
 
     - dist: focal
-      arch: amd
     # - dist: xenial
     #   arch: amd
     # - dist: bionic
