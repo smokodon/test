@@ -19,6 +19,13 @@ jobs:
   include:
     # - dist: focal
      - dist: xenial
+       group: edge
+       arch: amd64
+     - dist: xenial
+       group: stable
+       arch: amd64
+     - dist: xenial
+       group: dev
        arch: amd64
     # - dist: bionic
     #   arch: amd
