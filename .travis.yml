@@ -18,10 +18,10 @@ group: stable
 jobs:
   include:
      - dist: focal
-     #- dist: xenial
-      # arch: amd64
-    # - dist: bionic
-    #   arch: amd
+     - dist: xenial
+       arch: amd64
+     - dist: bionic
+       arch: amd
     # - dist: jammy
     #   arch: amd
     # - dist: focal
