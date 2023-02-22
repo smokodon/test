@@ -1,3 +1,7 @@
+language: java
+install: true
+jdk: openjdk10
+services: docker
 script:
 #- sudo apt install libpq-dev
 # - git --version
@@ -5,19 +9,17 @@ script:
 # - sudo apt-get update
 # - sudo apt install git
 - ruby --version
-- bundler --version
 # - sudo service mongod start
 # - sudo systemctl start mongod
 # - sudo systemctl start mongodb
-- systemctl --type=service --state=running
 
 group: stable
 
 jobs:
   include:
-    #- dist: focal
-     - dist: xenial
-       arch: amd64
+     - dist: focal
+     #- dist: xenial
+      # arch: amd64
     # - dist: bionic
     #   arch: amd
     # - dist: jammy
