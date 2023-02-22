@@ -1,12 +1,11 @@
-services:
-  - mongodb
 script:
 #- sudo apt install libpq-dev
 # - git --version
 # - sudo add-apt-repository ppa:git-core/ppa -y
 # - sudo apt-get update
 # - sudo apt install git
-- mongod --version
+- ruby --version
+- bundler --version
 # - sudo service mongod start
 # - sudo systemctl start mongod
 # - sudo systemctl start mongodb
@@ -16,9 +15,9 @@ group: stable
 
 jobs:
   include:
-    - dist: focal
-    # - dist: xenial
-    #   arch: amd
+    #- dist: focal
+     - dist: xenial
+       arch: amd64
     # - dist: bionic
     #   arch: amd
     # - dist: jammy
