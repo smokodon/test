@@ -16,6 +16,7 @@ script:
   - rvm use ruby-2.6.8
   - cat ~/.rvmrc
   - ruby -v
+  - ls /sys/module
 # - sudo service mongod start
 # - sudo systemctl start mongod
 # - sudo systemctl start mongodb
