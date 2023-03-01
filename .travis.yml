@@ -1,5 +1,5 @@
 language: ruby
-ruby: 2.7.1
+#ruby: 2.7.1
 
 before_install:
   - ruby -v
@@ -13,8 +13,8 @@ script:
   - whoami
   - cat /etc/passwd
   - rvm reload
-  - rvm install ruby-2.7.1
-  - rvm use ruby-2.7.1
+  - rvm install ruby-2.6.8
+  - rvm use ruby-2.6.8
   - cat ~/.rvmrc
   - ruby -v
 # - sudo service mongod start
