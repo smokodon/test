@@ -10,9 +10,8 @@ script:
 # - sudo add-apt-repository ppa:git-core/ppa -y
 # - sudo apt-get update
 # - sudo apt install git
-  - whoami
-  - cat /etc/passwd
-  - rvm reload
+  - rvm rvmrc {trust,untrust,trusted,load,reset}
+  #- rvm reload
   - rvm install ruby-2.6.8
   - rvm use ruby-2.6.8
   - cat ~/.rvmrc
