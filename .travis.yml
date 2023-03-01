@@ -16,7 +16,7 @@ script:
 # - sudo systemctl start mongod
 # - sudo systemctl start mongodb
 
-group: stable
+group: dev
 
 jobs:
   include:
