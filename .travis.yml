@@ -10,7 +10,7 @@ script:
 # - sudo add-apt-repository ppa:git-core/ppa -y
 # - sudo apt-get update
 # - sudo apt install git
-  - cat ~/.rvm
+  - ls ~/.rvm
   - printenv
   - ruby -v
 # - sudo service mongod start
@@ -22,9 +22,9 @@ group: stable
 jobs:
   include:
      - dist: xenial
-     - dist: bionic
-     - dist: focal
-     - dist: jammy
+    # - dist: bionic
+    # - dist: focal
+    # - dist: jammy
     # - dist: bionic
     #   arch: amd
     # - dist: jammy
