@@ -12,8 +12,9 @@ script:
 # - sudo apt install git
   - whoami
   - cat /etc/passwd
-  #- rvm install ruby-2.7.1
-  #- rvm use ruby-2.7.1
+  - rvm reload
+  - rvm install ruby-2.7.1
+  - rvm use ruby-2.7.1
   - cat ~/.rvmrc
   - ruby -v
 # - sudo service mongod start
