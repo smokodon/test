@@ -21,9 +21,9 @@ group: stable
 jobs:
   include:
      - dist: xenial
-    # - dist: bionic
-    # - dist: focal
-    # - dist: jammy
+     - dist: bionic
+     - dist: focal
+     - dist: jammy
     # - dist: bionic
     #   arch: amd
     # - dist: jammy
