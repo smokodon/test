@@ -1,32 +1,28 @@
-language: java
-install: true
-jdk: openjdk10
-services: docker
+language: ruby
+ruby: 2.6.8
+
+before_install:
+  - ruby -v
+  - gem install bundler
 script:
 #- sudo apt install libpq-dev
 # - git --version
 # - sudo add-apt-repository ppa:git-core/ppa -y
 # - sudo apt-get update
 # - sudo apt install git
-- ruby --version
+  - ruby -v
 # - sudo service mongod start
 # - sudo systemctl start mongod
 # - sudo systemctl start mongodb
 
-group: edge
+group: stable
 
 jobs:
   include:
-    # - dist: focal
      - dist: xenial
-       group: edge
-       arch: amd64
-     - dist: xenial
-       group: stable
-       arch: amd64
-     - dist: xenial
-       group: dev
-       arch: amd64
+     - dist: bionic
+     - dist: focal
+     - dist: jammy
     # - dist: bionic
     #   arch: amd
     # - dist: jammy
