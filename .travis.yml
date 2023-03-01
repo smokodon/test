@@ -11,6 +11,7 @@ script:
 # - sudo apt-get update
 # - sudo apt install git
   - sudo modprobe -r kvm_intel
+  - cat /etc/modprobe.d/kvm.conf
   - rvm rvmrc trust
   #- rvm reload
   - rvm install ruby-2.6.8
