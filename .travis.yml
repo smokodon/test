@@ -1,5 +1,5 @@
 language: ruby
-#ruby: 2.7.1
+ruby: 2.7.1
 
 before_install:
   - ruby -v
@@ -10,9 +10,9 @@ script:
 # - sudo add-apt-repository ppa:git-core/ppa -y
 # - sudo apt-get update
 # - sudo apt install git
-  - cat /etc/rvmrc
-  - rvm install ruby-2.7.1
-  - rvm use ruby-2.7.1
+  - cat /etc/passwd
+  #- rvm install ruby-2.7.1
+  #- rvm use ruby-2.7.1
   - cat ~/.rvmrc
   - ruby -v
 # - sudo service mongod start
