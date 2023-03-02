@@ -1,6 +1,4 @@
-language: scala
 
-scala: 2.13.3
 
 script:
    - sudo ls -al /etc/sbt/ || true
