@@ -5,6 +5,7 @@ before_install:
   - ruby -v
   - gem install bundler
 script:
+  - rvm -v
   - cd /home/travis/
   - cat .rvmrc
   - rvm rvmrc trust .
