@@ -5,23 +5,13 @@ before_install:
   - ruby -v
   - gem install bundler
 script:
-#- sudo apt install libpq-dev
-# - git --version
-# - sudo add-apt-repository ppa:git-core/ppa -y
-# - sudo apt-get update
-# - sudo apt install git
-  - sudo modprobe -r kvm_intel
-  - ls /etc/modprobe.d/
+  - which md5 md5sum sha256sum sha256 shasum 2>/dev/null
   - rvm rvmrc trust
   #- rvm reload
   - rvm install ruby-2.6.8
   - rvm use ruby-2.6.8
   - cat ~/.rvmrc
   - ruby -v
-  - ls /sys/module
-# - sudo service mongod start
-# - sudo systemctl start mongod
-# - sudo systemctl start mongodb
 
 group: stable
 
@@ -30,7 +20,7 @@ jobs:
      - dist: xenial
      - dist: bionic
      - dist: focal
-     - dist: jammy
+    # - dist: jammy
     # - dist: bionic
     #   arch: amd
     # - dist: jammy
