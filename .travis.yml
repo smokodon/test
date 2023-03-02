@@ -1,39 +1,20 @@
-group: stable
+language: scala
+
+scala: 2.13.3
+
 script:
-- pip show pyyaml
-- pip list
-- pip list | findstr pyyaml
-- library.__version__
-- importlib.metadata.version
-- conda list
-- pip freeze
-- pip freeze | grep pyyaml
+   - sudo ls -al /etc/sbt/ || true
+   - sudo cat /etc/sbt/jvmopts || true
 
 jobs:
   include:
     - arch: ppc64le
-      dist: xenial
-    - arch: ppc64le
       dist: bionic
     - arch: ppc64le
       dist: focal
     - arch: s390x
-      dist: xenial
-    - arch: s390x
       dist: bionic
     - arch: s390x
       dist: focal
-    - arch: arm64
-      dist: xenial
-    - arch: arm64
-      dist: bionic
-    - arch: arm64
-      dist: focal
-    - arch: amd64
-      dist: xenial
-    - arch: amd64
-      dist: bionic
     - arch: amd64
       dist: focal
-    - arch: amd64
-      dist: jammy
