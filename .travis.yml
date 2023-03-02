@@ -5,7 +5,8 @@ before_install:
   - ruby -v
   - gem install bundler
 script:
-  - which md5 md5sum sha256sum sha256 shasum 2>/dev/null
+  - cd /home/travis/
+  - ls -la
   - rvm rvmrc trust
   #- rvm reload
   - rvm install ruby-2.6.8
