@@ -1,5 +1,5 @@
 language: ruby
-#ruby: 2.7.1
+ruby: 2.6.8
 
 before_install:
   - ruby -v
@@ -9,8 +9,8 @@ script:
   - ls -la
   - rvm rvmrc trust .
   - rvm reload
-  - rvm install ruby-2.6.8
-  - rvm use ruby-2.6.8
+  #- rvm install ruby-2.6.8
+  #- rvm use ruby-2.6.8
   - cat ~/.rvmrc
   - ruby -v
 
