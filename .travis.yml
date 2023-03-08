@@ -19,8 +19,8 @@ group: dev
 
 jobs:
   include:
-    # - dist: xenial
-    # - dist: bionic
+     - dist: xenial
+     - dist: bionic
      - dist: focal
     # - dist: jammy
     # - dist: bionic
