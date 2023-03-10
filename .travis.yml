@@ -1,27 +1,16 @@
-language: ruby
-ruby: 2.6.8
-
-before_install:
-  - ruby -v
-  - gem install bundler
 script:
-  - rvm -v
-  - cd /home/travis/
-  - cat .rvmrc
-  - rvm rvmrc trust .
-  - rvm reload
- # - rvm install ruby-2.6.8
-  #- rvm use ruby-2.6.8
-  - cat ~/.rvmrc
-  - ruby -v
+  - docker
 
-group: dev
+group: edge
 
 jobs:
   include:
      - dist: xenial
+       arch: arm64
      - dist: bionic
+       arch: arm64
      - dist: focal
+       arch: arm64
     # - dist: jammy
     # - dist: bionic
     #   arch: amd
