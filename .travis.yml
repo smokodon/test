@@ -1,5 +1,5 @@
 script:
-  - docker
+  - erlang -v
 
 group: edge
 
