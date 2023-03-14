@@ -1,7 +1,7 @@
 script:
   - erl -eval '{ok, Version} = file:read_file(filename:join([code:root_dir(), "releases", erlang:system_info(otp_release), "OTP_VERSION"])), io:fwrite(Version), halt().' -noshell
 
-group: edge
+group: stable
 
 jobs:
   include:
@@ -11,26 +11,16 @@ jobs:
        arch: arm64
      - dist: focal
        arch: arm64
-    # - dist: jammy
-    # - dist: bionic
-    #   arch: amd
-    # - dist: jammy
-    #   arch: amd
-    # - dist: focal
-    #   arch: ppc64le
-    # - dist: xenial
-    #   arch: ppc64le
-    # - dist: bionic
-    #   arch: ppc64le
-    # - dist: xenial
-    #   arch: s390x
-    # - dist: bionic
-    #   arch: s390x
-    # - dist: focal
-    #   arch: s390x
-    # - dist: xenial
-    #   arch: arm64
-    # - dist: bionic
-    #   arch: arm64
-    # - dist: focal
-    #   arch: arm64
+     - dist: xenial
+       arch: ppc64le
+     - dist: bionic
+       arch: ppc64le
+     - dist: focal
+       arch: ppc64le
+     - dist: xenial
+       arch: s390x
+     - dist: bionic
+       arch: s390x
+     - dist: focal
+       arch: s390x
+
