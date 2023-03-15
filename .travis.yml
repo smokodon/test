@@ -9,7 +9,7 @@ script:
   - echo hello
 
 
-group: stable
+group: dev
 
 jobs:
   include:
@@ -31,6 +31,6 @@ jobs:
     #    arch: s390x
     #  - dist: focal
     #    arch: s390x
-      - dist: focal
-        arch: amd64
+       - dist: focal
+         arch: amd64
 
