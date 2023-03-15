@@ -31,10 +31,10 @@ jobs:
     #    arch: s390x
     #  - dist: focal
     #    arch: s390x
-       - dist: focal
+       - dist: bionic
          arch: amd64
          group: stable
-       - dist: focal
+       - dist: bionic
          arch: amd64
          group: dev
        - dist: focal
