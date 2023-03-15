@@ -9,7 +9,7 @@ script:
   - echo hello
 
 
-group: dev
+group: edge
 
 jobs:
   include:
