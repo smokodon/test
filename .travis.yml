@@ -9,7 +9,7 @@ script:
   - echo hello
 
 
-group: edge
+
 
 jobs:
   include:
@@ -33,4 +33,11 @@ jobs:
     #    arch: s390x
        - dist: focal
          arch: amd64
+         group: stable
+       - dist: focal
+         arch: amd64
+         group: dev
+       - dist: focal
+         arch: amd64
+         group: edge
 
