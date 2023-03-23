@@ -8,11 +8,11 @@
 script:
   - docker
   - cat ~/.bashrc
-  - echo "alias docker='/usr/local/bin/docker/docker_func'" >> ~/.bashrc
-  - echo "alias sudo='sudo " >> ~/.bashrc
-  - cat ~/.bashrc
+  #- echo "alias docker='/usr/local/bin/docker/docker_func'" >> ~/.bashrc
+  #- echo "alias sudo='sudo " >> ~/.bashrc
+  #- cat ~/.bashrc
   - alias
-  - docker
+  #- docker
   - sudo docker images
 
 group: edge
