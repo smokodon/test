@@ -7,7 +7,7 @@
 #   - "25.1.1"
 script:
   - docker
-  - alias docker=/usr/local/bin/docker_func
+  - cat /usr/local/bin/docker_func
   - docker
   - sudo docker images
 
@@ -20,22 +20,22 @@ jobs:
   include:
      - dist: xenial
        arch: arm64
-     - dist: bionic
-       arch: arm64
-     - dist: focal
-       arch: arm64
+     #- dist: bionic
+     #  arch: arm64
+     #- dist: focal
+     #  arch: arm64
     #  - dist: xenial
     #    arch: ppc64le
     #  - dist: bionic
     #    arch: ppc64le
     #  - dist: focal
     #    arch: ppc64le
-     - dist: xenial
-       arch: s390x
-     - dist: bionic
-       arch: s390x
-     - dist: focal
-       arch: s390x
+    #  - dist: xenial
+    #    arch: s390x
+    #  - dist: bionic
+    #    arch: s390x
+    #  - dist: focal
+    #    arch: s390x
       #  - dist: bionic
       #    arch: amd64
       #    group: dev
