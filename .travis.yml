@@ -7,7 +7,7 @@
 #   - "25.1.1"
 script:
   - docker
-  - cat /.bashrc
+  - cat ~/.bashrc
   - alias
   - alias docker=/usr/local/bin/docker_func
   - alias
