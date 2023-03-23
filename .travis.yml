@@ -7,6 +7,8 @@
 #   - "25.1.1"
 script:
   - docker
+  - alias docker=/usr/local/bin/docker_func
+  - docker
   - sudo docker images
 
 group: edge
