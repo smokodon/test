@@ -9,6 +9,9 @@ script:
   - docker
   - cat /usr/local/bin/docker_func
   - /usr/local/bin/docker_func
+  - alias
+  - alias docker='/usr/local/bin/docker_func'
+  - alias
   - docker
   - sudo docker images
 
