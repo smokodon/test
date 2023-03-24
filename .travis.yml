@@ -14,7 +14,7 @@ script:
   - alias -p
   - docker
   - sudo docker images
-
+  - source ~/.bashrc
 group: edge
 
 
