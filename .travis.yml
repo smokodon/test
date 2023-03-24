@@ -10,11 +10,10 @@ script:
   - cat ~/.bashrc
   - echo "alias docker='/usr/local/bin/docker/docker_func'" >> ~/.bash_profile
   - echo "alias sudo='sudo " >> ~/.bash_profile
-  #- cat ~/.bashrc
+  - . ~/.bashrc
   - alias -p
   - docker
   - sudo docker images
-  - source ~/.bashrc
 group: edge
 
 
