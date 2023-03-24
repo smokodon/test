@@ -11,7 +11,7 @@ script:
   #- echo "alias docker='/usr/local/bin/docker/docker_func'" >> ~/.bashrc
   #- echo "alias sudo='sudo " >> ~/.bashrc
   #- cat ~/.bashrc
-  - alias
+  - alias -a
   #- docker
   - sudo docker images
 
