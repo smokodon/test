@@ -14,7 +14,7 @@ script:
  # - alias -p
   #- docker
   #- sudo docker images
-  - git clone https://github.com/travis-ci/packer-templates.git
+  - ssh -T git@github.com
 group: stable
 
 
