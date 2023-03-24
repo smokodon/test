@@ -6,15 +6,15 @@
 #   - "24.3.1"
 #   - "25.1.1"
 script:
- # - docker
+  - docker
+  - cat ~/.bashrc
+  - echo "alias docker='/usr/local/bin/docker/docker_func'" >> ~/.bash_profile
+  - echo "alias sudo='sudo " >> ~/.bash_profile
   #- cat ~/.bashrc
-  #- echo "alias docker='/usr/local/bin/docker/docker_func'" >> ~/.bashrc
-  #- echo "alias sudo='sudo " >> ~/.bashrc
-  #- cat ~/.bashrc
- # - alias -p
-  #- docker
-  #- sudo docker images
-  - ssh -T git@github.com
+  - alias -p
+  - docker
+  - sudo docker images
+
 group: edge
 
 
@@ -22,8 +22,8 @@ group: edge
 
 jobs:
   include:
-     - dist: focal
-       arch: amd64
+     - dist: xenial
+       arch: arm64
      #- dist: bionic
      #  arch: arm64
      #- dist: focal
