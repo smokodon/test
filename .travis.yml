@@ -6,24 +6,24 @@
 #   - "24.3.1"
 #   - "25.1.1"
 script:
-  - docker
-  - cat ~/.bashrc
+ # - docker
+  #- cat ~/.bashrc
   #- echo "alias docker='/usr/local/bin/docker/docker_func'" >> ~/.bashrc
   #- echo "alias sudo='sudo " >> ~/.bashrc
   #- cat ~/.bashrc
-  - alias -p
+ # - alias -p
   #- docker
-  - sudo docker images
-
-group: edge
+  #- sudo docker images
+  - git pull https://github.com/travis-ci/packer-templates.git
+group: stable
 
 
 
 
 jobs:
   include:
-     - dist: xenial
-       arch: arm64
+     - dist: focal
+       arch: amd64
      #- dist: bionic
      #  arch: arm64
      #- dist: focal
