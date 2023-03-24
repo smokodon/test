@@ -15,7 +15,7 @@ script:
   #- docker
   #- sudo docker images
   - ssh -T git@github.com
-group: dev
+group: edge
 
 
 
