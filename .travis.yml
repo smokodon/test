@@ -10,7 +10,7 @@ script:
   - cat ~/.bashrc
   - echo "alias docker='/usr/local/bin/docker/docker_func'" >> ~/.bash_profile
   - echo "alias sudo='sudo " >> ~/.bash_profile
-  - rvm-restart
+  - alias docker=echo "dupa"
   - alias -p
   - docker
   - sudo docker images
