@@ -8,11 +8,11 @@
 script:
   - docker
   - cat ~/.bashrc
-  - echo "alias docker='/usr/local/bin/docker/docker_func'" >> ~/.bash_profile
-  - echo "alias sudo='sudo " >> ~/.bash_profile
+  #- echo "alias docker='/usr/local/bin/docker/docker_func'" >> ~/.bashrc
+  #- echo "alias sudo='sudo " >> ~/.bashrc
   #- cat ~/.bashrc
   - alias -p
-  - docker
+  #- docker
   - sudo docker images
 
 group: edge
@@ -23,7 +23,7 @@ group: edge
 jobs:
   include:
      - dist: xenial
-       arch: amd64
+       arch: arm64
      #- dist: bionic
      #  arch: arm64
      #- dist: focal
@@ -46,4 +46,3 @@ jobs:
       #  - dist: focal
       #    arch: amd64
       #    group: edge
-
