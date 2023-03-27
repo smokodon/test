@@ -8,8 +8,8 @@
 script:
   - docker
   - cat ~/.bashrc
-  - echo "alias docker='/usr/local/bin/docker/docker_func'" >> ~/.bash_profile
-  - echo "alias sudo='sudo " >> ~/.bash_profile
+  - cat ~./bash_aliases
+  - cat ~/.bash_profile
   - alias docker=echo
   - alias -p
   - docker
