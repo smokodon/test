@@ -9,7 +9,9 @@ script:
   - docker
   - sudo docker images
   - alias docker=docker_func
+  - alias -p
   - docker
+  - docker_func
   - sudo docker images
   # - cat ~/.bashrc
   # - cat ~/.bash_profile
