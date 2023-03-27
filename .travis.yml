@@ -8,9 +8,7 @@
 script:
   - docker
   - cat ~/.bashrc
-  - cat ~./bash_aliases
   - cat ~/.bash_profile
-  - alias docker=echo
   - alias -p
   - docker
   - sudo docker images
