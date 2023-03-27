@@ -11,6 +11,7 @@ script:
   - cat ~/.bash_profile
   - alias -p
   - ls /usr/local/bin
+  - docker_func
   - sudo docker images
 group: edge
 
