@@ -6,6 +6,7 @@
 #   - "24.3.1"
 #   - "25.1.1"
 script:
+  - source ~/.bash_profile
   - docker
   - sudo docker images
   - alias docker='docker_func'
@@ -13,8 +14,7 @@ script:
   - alias docker="docker_func"
   - docker
   - sudo docker images
-  # - cat ~/.bashrc
-  # - cat ~/.bash_profile
+  
 group: edge
 
 
