@@ -9,7 +9,7 @@ script:
   - source ~/.bash_profile
   - docker
   - sudo docker images
-  - alias docker='docker_func () { echo "docker_func"; }; docker_func'
+  - whoami
   - docker
   - alias docker="docker_func"
   - docker
