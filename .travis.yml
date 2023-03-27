@@ -21,7 +21,7 @@ group: edge
 
 jobs:
   include:
-     - dist: bionic
+     - dist: xenial
        arch: arm64
      #- dist: bionic
      #  arch: arm64
