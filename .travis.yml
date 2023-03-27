@@ -10,7 +10,7 @@ script:
   - cat ~/.bashrc
   - cat ~/.bash_profile
   - alias -p
-  - ./usr/local/bin/docker_func
+  - ls /usr/local/bin
   - sudo docker images
 group: edge
 
