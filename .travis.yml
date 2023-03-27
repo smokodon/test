@@ -8,8 +8,11 @@
 script:
   - docker
   - sudo docker images
-  - cat ~/.bashrc
-  - cat ~/.bash_profile
+  - alias docker='docker_func'
+  - docker
+  - sudo docker images
+  # - cat ~/.bashrc
+  # - cat ~/.bash_profile
 group: edge
 
 
