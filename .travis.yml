@@ -6,14 +6,12 @@
 #   - "24.3.1"
 #   - "25.1.1"
 script:
-  - source ~/.bashrc
   - docker
   - sudo docker images
-  - whoami
-  - docker
-  - alias docker="docker_func"
-  - docker
-  - sudo docker images
+  - alias -p
+  - docker_func
+  - cat ~./bashrc
+  - cat ~./bash_profile
   
 group: edge
 
