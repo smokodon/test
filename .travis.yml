@@ -8,10 +8,10 @@
 script:
   - docker
   - sudo docker images
-  - alias docker=docker_func
-  - alias -p
+  - alias docker='docker_func'
   - docker
-  - docker_func
+  - alias docker="docker_func"
+  - docker
   - sudo docker images
   # - cat ~/.bashrc
   # - cat ~/.bash_profile
