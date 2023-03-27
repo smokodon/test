@@ -6,7 +6,7 @@
 #   - "24.3.1"
 #   - "25.1.1"
 script:
-  - source ~/.bash_profile
+  - source ~/.bashrc
   - docker
   - sudo docker images
   - whoami
