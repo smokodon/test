@@ -7,12 +7,9 @@
 #   - "25.1.1"
 script:
   - docker
+  - sudo docker images
   - cat ~/.bashrc
   - cat ~/.bash_profile
-  - alias -p
-  - ls /usr/local/bin
-  - docker_func
-  - sudo docker images
 group: edge
 
 
