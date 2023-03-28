@@ -7,6 +7,7 @@
 #   - "25.1.1"
 script:
   #- shopt -s expand_aliases
+  - source ~/.bashrc
   - docker
   - sudo docker images
   #- alias -p
