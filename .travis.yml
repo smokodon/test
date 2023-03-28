@@ -8,7 +8,8 @@
 script:
   #- shopt -s expand_aliases
   #- source ~/.bash_profile
-  - docker
+  - docker pull hello-world
+  - docker run hello-world
   - sudo docker images
   #- alias -p
   #- docker_func
