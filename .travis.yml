@@ -22,8 +22,8 @@ group: edge
 
 jobs:
   include:
-      - dist: xenial
-        arch: arm64
+    #  - dist: xenial
+    #    arch: arm64
     #  - dist: bionic
     #    arch: arm64
     #  - dist: focal
@@ -36,8 +36,8 @@ jobs:
     #    arch: ppc64le
     #  - dist: xenial
     #    arch: s390x
-    #  #- dist: bionic
-    #  #  arch: s390x
+      - dist: bionic
+        arch: s390x
     #  - dist: focal
     #    arch: s390x
 
