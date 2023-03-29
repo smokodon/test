@@ -5,17 +5,18 @@
 #   - "23.1.2"
 #   - "24.3.1"
 #   - "25.1.1"
+addons:
+  tensorflow: 1.6.0
+
+
 script:
   #- shopt -s expand_aliases
   #- source ~/.bash_profile
-  - docker-compose --version
-  - docker pull hello-world
-  - docker run hello-world
-  - sudo docker images
+  - echo witam
   #- alias -p
   #- docker_func
   
-group: edge
+group: stable
 
 
 
@@ -36,9 +37,15 @@ jobs:
     #    arch: ppc64le
     #  - dist: xenial
     #    arch: s390x
-      - dist: bionic
-        arch: s390x
+      # - dist: bionic
+      #   arch: s390x
     #  - dist: focal
     #    arch: s390x
+    - dist: xenial
+      arch: amd64
+    - dist: bionic
+      arch: amd64
+    - dist: focal
+      arch: amd64
 
 
