@@ -8,7 +8,7 @@
 script:
   #- shopt -s expand_aliases
   #- source ~/.bash_profile
-  - docker compose version
+  - docker-compose --version
   - docker pull hello-world
   - docker run hello-world
   - sudo docker images
