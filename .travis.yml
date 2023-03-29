@@ -12,7 +12,7 @@ addons:
 script:
   #- shopt -s expand_aliases
   #- source ~/.bash_profile
-  - pip install tensorflow
+  - pip install tensorflow-1.6.0
   #- alias -p
   #- docker_func
   
