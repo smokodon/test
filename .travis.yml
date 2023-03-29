@@ -12,7 +12,7 @@ addons:
 script:
   #- shopt -s expand_aliases
   #- source ~/.bash_profile
-  - echo witam
+  - pip install tensorflow
   #- alias -p
   #- docker_func
   
