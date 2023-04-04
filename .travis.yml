@@ -8,6 +8,8 @@
 addons:
   tensorflow: 1.6.0
   blender": 3.4.1
+language: ruby
+rvm: 2.7.1
 
 script:
   #- shopt -s expand_aliases
