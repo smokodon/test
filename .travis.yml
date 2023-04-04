@@ -11,10 +11,10 @@ addons:
 language: ruby
 rvm: 2.7.1
 
-script:
+
   #- shopt -s expand_aliases
   #- source ~/.bash_profile
-  - alias -p
+  #- alias -p
   #- docker_func
   
 group: stable
@@ -47,6 +47,12 @@ jobs:
    # - dist: bionic
    #   arch: amd64
     - dist: focal
+      script:
+      - echo "test1"
+      arch: amd64
+    - dist: focal
+      script:
+      - echo "test2"
       arch: amd64
 
 
