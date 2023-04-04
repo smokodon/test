@@ -7,7 +7,7 @@
 #   - "25.1.1"
 addons:
   tensorflow: 1.6.0
-
+  blender": 3.4.1
 
 script:
   #- shopt -s expand_aliases
@@ -40,10 +40,10 @@ jobs:
       #   arch: s390x
     #  - dist: focal
     #    arch: s390x
-    - dist: xenial
-      arch: amd64
-    - dist: bionic
-      arch: amd64
+   # - dist: xenial
+   #   arch: amd64
+   # - dist: bionic
+   #   arch: amd64
     - dist: focal
       arch: amd64
 
