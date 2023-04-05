@@ -45,7 +45,7 @@ jobs:
       name: "addons xenial"
       dist: xenial
       addons:
-        tensorflow: 1.6.0
+        tensorflow: 1.13.1
         blender: 3.4.1
       script:
         - df -h
@@ -55,7 +55,7 @@ jobs:
       name: "addons focal - it fails installing tensorflow because of cache/dns"
       dist: focal
       addons:
-        tensorflow: 1.6.0
+        tensorflow: 1.13.1
         blender: 3.4.1
       script:
         - df -h
