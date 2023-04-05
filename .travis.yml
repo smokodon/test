@@ -5,12 +5,6 @@
 #   - "23.1.2"
 #   - "24.3.1"
 #   - "25.1.1"
-addons:
-  tensorflow: 1.6.0
-  blender": 3.4.1
-language: ruby
-rvm: 2.7.1
-
 
   #- shopt -s expand_aliases
   #- source ~/.bash_profile
@@ -48,12 +42,12 @@ jobs:
    # - dist: bionic
    #   arch: amd64
     - dist: xenial
+      addons:
+        tensorflow: 1.6.0
+        blender: 3.4.1
       script:
-      - echo "test1"
-      arch: amd64
-    - dist: focal
-      script:
-      - echo "test2"
-      arch: amd64
+        - df -h
+        - blender -v
+        - echo "it is done"
 
 
