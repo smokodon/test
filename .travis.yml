@@ -63,8 +63,7 @@ jobs:
         - systemctl is-active systemd-resolved
         - sudo resolvectl flush-caches
         - pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
-        - blender -v
-        - echo "it is done"
+        - sudo systemd-resolve --statistics
     - stage: "Installing addons on linux"
       name: "test2"
       dist: focal
@@ -76,7 +75,5 @@ jobs:
         - systemctl is-active systemd-resolved
         - sudo resolvectl flush-caches
         - pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
-        - blender -v
-        - echo "it is done"
-
+        - sudo systemd-resolve --statistics
 
