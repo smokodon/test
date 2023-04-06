@@ -59,6 +59,7 @@ jobs:
       #  tensorflow: 1.13.1
       #  blender: 3.4.1
       script:
+        - resolvectl flush-caches
         - pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
         - blender -v
         - echo "it is done"
@@ -69,6 +70,7 @@ jobs:
       #  tensorflow: 1.13.1
       #  blender: 3.4.1
       script:
+        - resolvectl flush-caches
         - pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
         - blender -v
         - echo "it is done"
