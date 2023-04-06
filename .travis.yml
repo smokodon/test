@@ -41,21 +41,21 @@ jobs:
    #   arch: amd64
    # - dist: bionic
    #   arch: amd64
-    - stage: "Installing addons on linux"
-      name: "addons xenial"
-      dist: xenial
-      addons:
-        tensorflow: 1.13.1
-        blender: 3.4.1
-      script:
-        - df -h
-        - blender -v
-        - echo "it is done"
+  #  # - stage: "Installing addons on linux"
+  #     name: "addons xenial"
+  #     dist: xenial
+  #     addons:
+  #       tensorflow: 1.13.1
+  #       blender: 3.4.1
+  #     script:
+  #       - df -h
+  #       - blender -v
+  #       - echo "it is done"
     - stage: "Installing addons on linux"
       name: "addons focal - it fails installing tensorflow because of cache/dns"
       dist: focal
       addons:
-        tensorflow: 1.13.1
+        tensorflow:
         blender: 3.4.1
       script:
         - df -h
