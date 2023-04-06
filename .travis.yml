@@ -55,7 +55,7 @@ jobs:
       name: "addons focal - it fails installing tensorflow because of cache/dns"
       dist: focal
       addons:
-        tensorflow:
+        tensorflow: 1.13.1
         blender: 3.4.1
       script:
         - df -h
