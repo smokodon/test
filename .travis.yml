@@ -55,21 +55,21 @@ jobs:
     - stage: "Installing addons on linux"
       name: "test1"
       dist: focal
-      addons:
-        tensorflow: 1.13.1
-        blender: 3.4.1
+      #addons:
+      #  tensorflow: 1.13.1
+      #  blender: 3.4.1
       script:
-        - sudo journalctl -u systemd-resolved
+        - pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
         - blender -v
         - echo "it is done"
     - stage: "Installing addons on linux"
       name: "test2"
       dist: focal
-      addons:
-        tensorflow: 1.13.1
-        blender: 3.4.1
+      #addons:
+      #  tensorflow: 1.13.1
+      #  blender: 3.4.1
       script:
-        - sudo journalctl -u systemd-resolved
+        - pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
         - blender -v
         - echo "it is done"
 
