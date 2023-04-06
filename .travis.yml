@@ -12,7 +12,8 @@
   #- docker_func
   
 group: stable
-
+before_install:
+- resolvectl flush-caches
 #vm:
  # size: 'gpu-medium'
 
@@ -58,7 +59,7 @@ jobs:
         tensorflow: 1.13.1
         blender: 3.4.1
       script:
-        - df -h
+        - sudo journalctl -u systemd-resolved
         - blender -v
         - echo "it is done"
 
