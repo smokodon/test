@@ -53,7 +53,17 @@ jobs:
   #       - blender -v
   #       - echo "it is done"
     - stage: "Installing addons on linux"
-      name: "addons focal - it fails installing tensorflow because of cache/dns"
+      name: "test1"
+      dist: focal
+      addons:
+        tensorflow: 1.13.1
+        blender: 3.4.1
+      script:
+        - sudo journalctl -u systemd-resolved
+        - blender -v
+        - echo "it is done"
+    - stage: "Installing addons on linux"
+      name: "test2"
       dist: focal
       addons:
         tensorflow: 1.13.1
