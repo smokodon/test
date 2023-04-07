@@ -59,11 +59,10 @@ jobs:
       #  tensorflow: 1.13.1
       #  blender: 3.4.1
       script:
-        - sudo systemd-resolve --statistics
-        - systemctl is-active systemd-resolved
+        - cat /etc/resolv.conf
         - sudo resolvectl flush-caches
         - pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
-        - sudo systemd-resolve --statistics
+        - cat /etc/resolv.conf
     - stage: "Installing addons on linux"
       name: "test2"
       dist: focal
@@ -71,9 +70,9 @@ jobs:
       #  tensorflow: 1.13.1
       #  blender: 3.4.1
       script:
-        - sudo systemd-resolve --statistics
+        - cat /etc/resolv.conf
         - systemctl is-active systemd-resolved
         - sudo resolvectl flush-caches
         - pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
-        - sudo systemd-resolve --statistics
+        - cat /etc/resolv.conf
 
