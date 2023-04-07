@@ -70,7 +70,7 @@ jobs:
       #  tensorflow: 1.13.1
       #  blender: 3.4.1
       script:
-        - echo "nameserver 169.254.169.254" >> /etc/resolv.conf
+        - sudo echo "nameserver 169.254.169.254" >> /etc/resolv.conf
         - sudo systemctl disable systemd-resolved
         - sudo systemctl stop systemd-resolved
         - cat /etc/resolv.conf
