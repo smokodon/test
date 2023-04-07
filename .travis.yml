@@ -59,7 +59,7 @@ jobs:
       #  blender: 3.4.1
       script:
         - cat /etc/resolv.conf
-        - sudo apt-get install --reinstall resolvconf
+        - sudo apt-get remove --purge resolvconf && sudo apt-get install resolvconf
         - cat /etc/resolv.conf
         - pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
     - stage: "Installing addons on linux"
@@ -70,7 +70,7 @@ jobs:
       #  blender: 3.4.1
       script:
         - cat /etc/resolv.conf
-        - sudo apt-get install --reinstall resolvconf
+        - sudo apt-get remove --purge resolvconf && sudo apt-get install resolvconf
         - cat /etc/resolv.conf
         - pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
     # - stage: "Installing addons on linux"
