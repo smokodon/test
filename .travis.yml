@@ -12,8 +12,6 @@
   #- docker_func
   
 group: stable
-before_install:
-- resolvectl flush-caches
 #vm:
  # size: 'gpu-medium'
 
