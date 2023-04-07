@@ -12,7 +12,7 @@
   #- docker_func
 
 language: ruby
-group: stable
+group: dev
 #vm:
  # size: 'gpu-medium'
 
@@ -55,24 +55,24 @@ jobs:
       name: "test1"
       dist: focal
       addons:
-      #  tensorflow: 1.13.1
-      #  blender: 3.4.1
+        tensorflow: 1.13.1
+        blender: 3.4.1
       script:
         - cat /etc/resolv.conf
-        - sudo apt-get remove --purge resolvconf && sudo apt-get install resolvconf
+        #- sudo apt-get remove --purge resolvconf && sudo apt-get install resolvconf
         - cat /etc/resolv.conf
-        - pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
+        #- pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
     - stage: "Installing addons on linux"
       name: "test2"
       dist: focal
       addons:
-      #  tensorflow: 1.13.1
-      #  blender: 3.4.1
+        tensorflow: 1.13.1
+        blender: 3.4.1
       script:
         - cat /etc/resolv.conf
-        - sudo apt-get remove --purge resolvconf && sudo apt-get install resolvconf
+        #- sudo apt-get remove --purge resolvconf && sudo apt-get install resolvconf
         - cat /etc/resolv.conf
-        - pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
+        #- pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
     # - stage: "Installing addons on linux"
     #   name: "test3"
     #   dist: xenial
