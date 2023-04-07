@@ -60,7 +60,6 @@ jobs:
       #  blender: 3.4.1
       script:
         - cat /etc/resolv.conf
-        - sudo resolvectl flush-caches
         - pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
         - cat /etc/resolv.conf
     - stage: "Installing addons on linux"
@@ -72,7 +71,6 @@ jobs:
       script:
         - cat /etc/resolv.conf
         - systemctl is-active systemd-resolved
-        - sudo resolvectl flush-caches
         - pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
         - cat /etc/resolv.conf
     - stage: "Installing addons on linux"
@@ -84,6 +82,5 @@ jobs:
       script:
         - cat /etc/resolv.conf
         - systemctl is-active systemd-resolved
-        - sudo resolvectl flush-caches
         - pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
         - cat /etc/resolv.conf
