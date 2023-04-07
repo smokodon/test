@@ -10,7 +10,8 @@
   #- source ~/.bash_profile
   #- alias -p
   #- docker_func
-  
+
+language: ruby
 group: stable
 #vm:
  # size: 'gpu-medium'
