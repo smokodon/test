@@ -55,70 +55,65 @@ jobs:
       name: "test1"
       dist: focal
       addons:
-        tensorflow: 1.13.1
-        blender: 3.4.1
-      script:
-        - ln -sf /var/run/resolved/resolv.conf /etc/resolv.conf
-        - sudo systemctl disable systemd-resolved
-        - sudo systemctl stop systemd-resolved
-        - cat /etc/resolv.conf
-       # - pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
-        - cat /etc/resolv.conf
-    - stage: "Installing addons on linux"
-      name: "test2"
-      dist: focal
-      #addons:
       #  tensorflow: 1.13.1
       #  blender: 3.4.1
       script:
-        - ln -sf /var/run/resolved/resolv.conf /etc/resolv.conf
-        - sudo systemctl disable systemd-resolved
-        - sudo systemctl stop systemd-resolved
         - cat /etc/resolv.conf
-        - systemctl is-active systemd-resolved
-        #- pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
+        - sudo apt-get install --reinstall resolvconf
         - cat /etc/resolv.conf
+        - pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
     - stage: "Installing addons on linux"
-      name: "test3"
-      dist: xenial
+      name: "test2"
+      dist: focal
       addons:
-        tensorflow: 1.13.1
-        blender: 3.4.1
+      #  tensorflow: 1.13.1
+      #  blender: 3.4.1
       script:
         - cat /etc/resolv.conf
-        - systemctl is-active systemd-resolved
-        #- pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
+        - sudo apt-get install --reinstall resolvconf
         - cat /etc/resolv.conf
-    - stage: "Installing addons on linux"
-      name: "test4"
-      dist: xenial
-      addons:
-        tensorflow: 1.13.1
-        blender: 3.4.1
-      script:
-        - cat /etc/resolv.conf
-        - systemctl is-active systemd-resolved
-       # - pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
-        - cat /etc/resolv.conf
-    - stage: "Installing addons on linux"
-      name: "test5"
-      dist: bionic
-      addons:
-        tensorflow: 1.13.1
-        blender: 3.4.1
-      script:
-        - cat /etc/resolv.conf
-        - systemctl is-active systemd-resolved
-       # - pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
-        - cat /etc/resolv.conf
-    - stage: "Installing addons on linux"
-      name: "test6"
-      dist: bionic
-      addons:
-        tensorflow: 1.13.1
-        blender: 3.4.1
-      script:
-        - cat /etc/resolv.conf
-        - systemctl is-active systemd-resolved
-       # - pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
-        - cat /etc/resolv.conf
+        - pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
+    # - stage: "Installing addons on linux"
+    #   name: "test3"
+    #   dist: xenial
+    #   addons:
+    #     tensorflow: 1.13.1
+    #     blender: 3.4.1
+    #   script:
+    #     - cat /etc/resolv.conf
+    #     - systemctl is-active systemd-resolved
+    #     #- pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
+    #     - cat /etc/resolv.conf
+    # - stage: "Installing addons on linux"
+    #   name: "test4"
+    #   dist: xenial
+    #   addons:
+    #     tensorflow: 1.13.1
+    #     blender: 3.4.1
+    #   script:
+    #     - cat /etc/resolv.conf
+    #     - systemctl is-active systemd-resolved
+    #    # - pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
+    #     - cat /etc/resolv.conf
+    # - stage: "Installing addons on linux"
+    #   name: "test5"
+    #   dist: bionic
+    #   addons:
+    #     tensorflow: 1.13.1
+    #     blender: 3.4.1
+    #   script:
+    #     - cat /etc/resolv.conf
+    #     - systemctl is-active systemd-resolved
+    #    # - pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
+    #     - cat /etc/resolv.conf
+    # - stage: "Installing addons on linux"
+    #   name: "test6"
+    #   dist: bionic
+    #   addons:
+    #     tensorflow: 1.13.1
+    #     blender: 3.4.1
+    #   script:
+    #     - cat /etc/resolv.conf
+    #     - systemctl is-active systemd-resolved
+    #    # - pip install --trusted-host pip.cache.travis-ci.com -i http://pip.cache.travis-ci.com/root/pypi/+simple/ tensorflow==1.13.1
+    #     - cat /etc/resolv.conf
