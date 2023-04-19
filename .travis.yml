@@ -1,7 +1,5 @@
 group: dev
 language: ruby
-rvm:
-  - 2.6.9
 script:
   - ruby -v
 
@@ -28,12 +26,13 @@ jobs:
   #    arch: s390x
   #  - dist: xenial
   #    arch: amd64
-    - dist: bionic
-      arch: amd64
+  #  - dist: bionic
+  #    arch: amd64
   #  - dist: focal
   #    arch: amd64
-  #  - dist: jammy
-  #    arch: amd64
+   - dist: jammy
+     arch: arm64
+
 
 
 
