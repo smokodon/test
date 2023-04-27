@@ -1,7 +1,9 @@
-group: dev
-language: ruby
+group: edge
 script:
   - ruby -v
+  - python -v
+  - java -version
+
 
 
 jobs:
@@ -28,10 +30,12 @@ jobs:
   #    arch: amd64
   #  - dist: bionic
   #    arch: amd64
-   - dist: focal
-     arch: arm64
    - dist: jammy
      arch: arm64
+   - dist: jammy
+     arch: s390x
+   - dist: jammy
+     arch: ppc64le
 
 
 
