@@ -1,7 +1,7 @@
 group: edge
 script:
   - ruby -v
-  - python3 -version
+  - python3 --version
   - java -version
 
 
