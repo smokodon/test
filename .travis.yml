@@ -7,7 +7,7 @@ before_install:
   - echo "CMake version on the runner is"
   - cmake --version
 
-group: dev
+group: stable
   
 script:
    - true
@@ -33,10 +33,12 @@ jobs:
   #    arch: s390x
   #  - dist: focal
   #    arch: s390x
-  #  - dist: xenial
-  #    arch: amd64
-  #  - dist: bionic
-  #    arch: amd64
+   - dist: xenial
+     arch: amd64
+   - dist: bionic
+     arch: amd64
+   - dist: focal
+     arch: amd64
    - dist: jammy
      arch: amd64
   # - dist: jammy
