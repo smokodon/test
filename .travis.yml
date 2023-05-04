@@ -1,9 +1,13 @@
-group: edge
-script:
-  - ruby -v
-  - python3 --version
-  - java -version
-  - psql --version
+compiler:
+  - gcc
+      
+before_install:
+  - echo "Running on the following travis CI runner"
+  - uname -a
+  - echo "CMake version on the runner is"
+  - cmake --version
+
+group: dev
   
 
 
@@ -33,11 +37,11 @@ jobs:
   #  - dist: bionic
   #    arch: amd64
    - dist: jammy
-     arch: arm64
-   - dist: jammy
-     arch: s390x
-   - dist: jammy
-     arch: ppc64le
+     arch: amd64
+  # - dist: jammy
+  #   arch: s390x
+  # - dist: jammy
+  #   arch: ppc64le
 
 
 
