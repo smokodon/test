@@ -9,7 +9,8 @@ before_install:
 
 group: dev
   
-
+script:
+   - true
 
 
 jobs:
