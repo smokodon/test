@@ -1,16 +1,7 @@
-compiler:
-  - gcc
-      
-before_install:
-  - echo "Running on the following travis CI runner"
-  - uname -a
-  - echo "CMake version on the runner is"
-  - cmake --version
-
-group: stable
+group: edge
   
 script:
-   - true
+   - sudo apt-get update
 
 
 jobs:
@@ -33,19 +24,20 @@ jobs:
   #    arch: s390x
   #  - dist: focal
   #    arch: s390x
-   - dist: xenial
-     arch: amd64
-   - dist: bionic
-     arch: amd64
-   - dist: focal
-     arch: amd64
+  #  - dist: xenial
+  #    arch: amd64
+  #  - dist: bionic
+  #    arch: amd64
+  #  - dist: focal
+  #    arch: amd64
+  #  - dist: jammy
+  #    arch: amd64
    - dist: jammy
-     arch: amd64
-  # - dist: jammy
-  #   arch: s390x
-  # - dist: jammy
-  #   arch: ppc64le
-
+     arch: s390x
+   - dist: jammy
+     arch: ppc64le
+   - dist: jammy
+     arch: arm64
 
 
 
