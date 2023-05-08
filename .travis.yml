@@ -1,6 +1,6 @@
 group: edge
 script:
-   - mongo --help
+   - mongod --help
    - sudo apt-get update
 
 
