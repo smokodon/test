@@ -1,6 +1,7 @@
 group: edge
   
 script:
+   - mongod --version
    - sudo apt-get update
 
 
