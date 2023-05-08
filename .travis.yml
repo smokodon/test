@@ -1,7 +1,7 @@
 group: edge
   
 script:
-   - mongod --version
+   - mongo --version
    - sudo apt-get update
 
 
