@@ -1,7 +1,7 @@
-group: edge
+group: stable
   
 script:
-   - mongo --version
+   - mongo --help
    - sudo apt-get update
 
 
