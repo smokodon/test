@@ -1,5 +1,6 @@
 group: stable
-  
+services:
+  - mongodb
 script:
    - mongo --help
    - sudo apt-get update
