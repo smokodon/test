@@ -1,6 +1,4 @@
-group: stable
-services:
-  - mongodb
+group: edge
 script:
    - mongo --help
    - sudo apt-get update
@@ -28,16 +26,16 @@ jobs:
   #    arch: s390x
   #  - dist: xenial
   #    arch: amd64
-   - dist: bionic
-     arch: amd64
-   - dist: focal
-     arch: amd64
-   - dist: jammy
-     arch: amd64
-   - dist: jammy
-     arch: s390x
-   - dist: jammy
-     arch: ppc64le
+   #- dist: bionic
+   #  arch: amd64
+   #- dist: focal
+   #  arch: amd64
+   #- dist: jammy
+   #  arch: amd64
+   #- dist: jammy
+   #  arch: s390x
+   #- dist: jammy
+   #  arch: ppc64le
    - dist: jammy
      arch: arm64
 
