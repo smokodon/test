@@ -1,4 +1,4 @@
-group: edge
+group: dev
 script:
    - mongod --help
    - sudo apt-get update
@@ -30,14 +30,14 @@ jobs:
    #  arch: amd64
    #- dist: focal
    #  arch: amd64
-   #- dist: jammy
-   #  arch: amd64
-   #- dist: jammy
-   #  arch: s390x
-   #- dist: jammy
-   #  arch: ppc64le
    - dist: jammy
-     arch: arm64
+     arch: amd64
+  #  - dist: jammy
+  #    arch: s390x
+  #  - dist: jammy
+  #    arch: ppc64le
+  #  - dist: jammy
+  #    arch: arm64
 
 
 
