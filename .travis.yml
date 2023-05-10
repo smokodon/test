@@ -1,6 +1,9 @@
 group: stable
 script:
    - whereis clang
+   - sudo rm -rf /usr/local/clang-7.0.0
+   - sudo rm -rf /usr/local/clang
+   - sudo apt-get install -y clang-10 llvm-10
    - clang -v
    - clang -help
 
