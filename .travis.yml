@@ -6,6 +6,7 @@ script:
    - sudo apt-get install -y clang-10 llvm-10
    - export CMAKE_C_COMPILER=clang-10
    - export CMAKE_CXX_COMPILER=clang++-10
+   - source ~/.bashrc
    - clang -v
    - clang -help
 
