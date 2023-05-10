@@ -1,7 +1,6 @@
 group: stable
 script:
-   - sudo apt purge -y clang-7 lld-7
-   - sudo apt-get install -y clang-10 lld-10
+   - whereis clang
    - clang -v
    - clang -help
 
@@ -28,8 +27,8 @@ jobs:
   #    arch: s390x
   #  - dist: xenial
   #    arch: amd64
-    - dist: bionic
-      arch: amd64
+  #  - dist: bionic
+  #    arch: amd64
     - dist: focal
       arch: amd64
   #  - dist: jammy
