@@ -1,6 +1,7 @@
 group: dev
 script:
    - whereis clang
+   - sudo apt-get install libncurses5
    - clang -v
    - clang -help
 
