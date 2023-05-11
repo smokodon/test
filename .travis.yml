@@ -1,13 +1,6 @@
-group: stable
+group: dev
 script:
    - whereis clang
-   - sudo rm -rf /usr/local/clang-7.0.0
-   - sudo rm -rf /usr/local/clang
-   - sudo apt-get install -y clang-10 llvm-10
-   - export CMAKE_C_COMPILER=clang-10
-   - export CMAKE_CXX_COMPILER=clang++-10
-   - whereis clang
-   - source ~/.bashrc
    - clang -v
    - clang -help
 
