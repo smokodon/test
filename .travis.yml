@@ -1,7 +1,7 @@
 group: dev
 script:
    - whereis clang
-   - sudo apt-get install libncurses5
+   #- sudo apt-get install libncurses5
    - clang -v
    - clang -help
 
@@ -26,12 +26,12 @@ jobs:
   #    arch: s390x
   #  - dist: focal
   #    arch: s390x
-  #  - dist: xenial
-  #    arch: amd64
+    - dist: xenial
+      arch: amd64
   #  - dist: bionic
   #    arch: amd64
-    - dist: focal
-      arch: amd64
+  #  - dist: focal
+  #    arch: amd64
   #  - dist: jammy
   #    arch: amd64
   #  - dist: jammy
