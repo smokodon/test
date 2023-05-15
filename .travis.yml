@@ -1,4 +1,4 @@
-group: dev
+group: stable
 script:
    - clang -v
    - cmake --version
