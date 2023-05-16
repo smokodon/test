@@ -1,11 +1,25 @@
-group: stable
+dist: jammy
+services:
+  - docker
+env:
+  global:
+    DOCKER_COMPOSE_VERSION: 1.29.2
+
+before_install:
+  - docker-compose version
+  - sudo rm /usr/local/bin/docker-compose
+  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+  - chmod +x docker-compose
+  - sudo mv docker-compose /usr/local/bin
+install: skip
+
 script:
-   - nosetests --version
-   - python -c 'import mock,sys;sys.stdout.write(mock.__version__ + "\n")'
+  - docker-compose version
+  - docker-compose up
 
 
-jobs:
-  include:
+#jobs:
+#  include:
   #  - dist: xenial
   #    arch: arm64
   #  - dist: bionic
@@ -24,14 +38,14 @@ jobs:
   #    arch: s390x
   #  - dist: focal
   #    arch: s390x
-    - dist: xenial
-      arch: amd64
-    - dist: bionic
-      arch: amd64
-    - dist: focal
-      arch: amd64
-    - dist: jammy
-      arch: amd64
+    # - dist: xenial
+    #   arch: amd64
+    # - dist: bionic
+    #   arch: amd64
+    # - dist: focal
+    #   arch: amd64
+    # - dist: jammy
+    #   arch: amd64
   #  - dist: jammy
   #    arch: s390x
   #  - dist: jammy
