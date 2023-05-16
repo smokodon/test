@@ -1,7 +1,7 @@
 group: stable
 script:
-   - clang -v
-   - cmake --version
+   - nosetests --version
+   - python -c 'import mock,sys;sys.stdout.write(mock.__version__ + "\n")'
 
 
 jobs:
