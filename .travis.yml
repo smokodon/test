@@ -3,8 +3,8 @@ script:
 
 group: dev
 
-#jobs:
-#  include:
+jobs:
+  include:
   #  - dist: xenial
   #    arch: arm64
   #  - dist: bionic
