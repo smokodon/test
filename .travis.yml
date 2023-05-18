@@ -1,5 +1,5 @@
 script:
-  - python -c 'import sys;from unittest import mock;sys.stdout.write(mock.__version__ + "\n")'
+  - echo "Hello World"
 
 group: dev
 
