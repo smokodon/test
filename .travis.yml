@@ -1,8 +1,8 @@
 script: 
   - echo "Hello World"
 
- jobs:
-   include:
+jobs:
+  include:
   #  - dist: xenial
   #    arch: arm64
   #  - dist: bionic
