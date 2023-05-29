@@ -1,5 +1,6 @@
 script: 
   - java -version
+  - git-lfs version
 
 jobs:
   include:
