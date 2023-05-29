@@ -2,6 +2,8 @@ script:
   - java -version
   - which git-lfs
 
+group: edge
+
 jobs:
   include:
   #  - dist: xenial
@@ -26,10 +28,10 @@ jobs:
     #    arch: amd64
     #  - dist: bionic
     #    arch: amd64
-    - dist: focal
-      arch: amd64
-    - dist: jammy
-      arch: amd64
+    #- dist: focal
+    #  arch: amd64
+    #- dist: jammy
+    #  arch: amd64
   #  - dist: jammy
   #    arch: s390x
   #  - dist: jammy
