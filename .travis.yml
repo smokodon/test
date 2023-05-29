@@ -1,6 +1,6 @@
 script: 
   - java -version
-  - which git-lfs
+  - git-lfs
 
 group: edge
 
