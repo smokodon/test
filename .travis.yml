@@ -1,6 +1,5 @@
 os: linux
 language: shell
-install: skip
 group: stable
 addons:
   tensorflow: 1.13.1
