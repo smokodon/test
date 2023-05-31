@@ -1,7 +1,7 @@
 language: php
 php: 8.2
 os: linux
-
+group: dev
 install: skip
 script: true
 
