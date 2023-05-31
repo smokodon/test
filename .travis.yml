@@ -1,7 +1,7 @@
 os: linux
 group: stable
 addons:
-  tensorflow: 1.6.0
+  tensorflow: 1.13.1
   blender: 3.4.1
 script:
   - cat /etc/resolv.conf
