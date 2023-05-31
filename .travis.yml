@@ -1,7 +1,7 @@
 os: linux
 group: stable
 addons:
-  tensorflow: 1.13.1
+  tensorflow: 1.6.0
   blender: 3.4.1
 script:
   - cat /etc/resolv.conf
@@ -14,18 +14,6 @@ jobs:
     - stage: "Installing addons on linux"
       name: "test2"
       dist: focal
-    - stage: "Installing addons on linux"
-      name: "test3"
-      dist: xenial
-    - stage: "Installing addons on linux"
-      name: "test4"
-      dist: xenial
-    - stage: "Installing addons on linux"
-      name: "test5"
-      dist: bionic
-    - stage: "Installing addons on linux"
-      name: "test6"
-      dist: bionic
 
 # script: 
 #   - java -version
