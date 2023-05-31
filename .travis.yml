@@ -1,19 +1,9 @@
+language: php
+php: 8.2
 os: linux
-group: stable
-addons:
-  tensorflow: 1.13.1
-  blender: 3.4.1
-script:
-  - cat /etc/resolv.conf
 
-jobs:
-  include:
-    - stage: "Installing addons on linux"
-      name: "test1"
-      dist: focal
-    - stage: "Installing addons on linux"
-      name: "test2"
-      dist: focal
+install: skip
+script: true
 
 # script: 
 #   - java -version
@@ -41,14 +31,14 @@ jobs:
   #    arch: s390x
   #  - dist: focal
   #    arch: s390x
-    #  - dist: xenial
-    #    arch: amd64
-    #  - dist: bionic
-    #    arch: amd64
-    #- dist: focal
-    #  arch: amd64
-    #- dist: jammy
-    #  arch: amd64
+  #  - dist: xenial
+  #    arch: amd64
+    - dist: bionic
+      arch: amd64
+    - dist: focal
+      arch: amd64
+    - dist: jammy
+      arch: amd64
     # - dist: jammy
     #   arch: s390x
     # - dist: jammy
