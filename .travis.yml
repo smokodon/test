@@ -1,54 +1,33 @@
 os: linux
 language: shell
 install: skip
-script: true
+group: stable
+addons:
+  tensorflow: 1.13.1
+  blender: 3.4.1
+script:
+  - cat /etc/resolv.conf
 
 jobs:
   include:
-    - name: mariadb-10.1
-      dist: trusty
-      addons:
-        mariadb: '10.1'
-    - name: mariadb-10.1
+    - stage: "Installing addons on linux"
+      name: "test1"
+      dist: focal
+    - stage: "Installing addons on linux"
+      name: "test2"
+      dist: focal
+    - stage: "Installing addons on linux"
+      name: "test3"
       dist: xenial
-      addons:
-        mariadb: '10.1'
-    - name: mariadb-10.1
-      dist: bionic
-      addons:
-        mariadb: '10.1'
-    - name: mariadb-10.1
-      dist: focal
-      addons:
-        mariadb: '10.1'
-    - name: mariadb-10.2
-      dist: trusty
-      addons:
-        mariadb: '10.2'
-    - name: mariadb-10.2
+    - stage: "Installing addons on linux"
+      name: "test4"
       dist: xenial
-      addons:
-        mariadb: '10.2'
-    - name: mariadb-10.2
+    - stage: "Installing addons on linux"
+      name: "test5"
       dist: bionic
-      addons:
-        mariadb: '10.2'
-    - name: mariadb-10.2
-      dist: focal
-      addons:
-        mariadb: '10.2'
-    - name: mariadb-10.3
-      dist: focal
-      addons:
-        mariadb: '10.3'
-    - name: mariadb-10.4
-      dist: focal
-      addons:
-        mariadb: '10.4'
-    - name: mariadb-10.5
-      dist: focal
-      addons:
-        mariadb: '10.5'
+    - stage: "Installing addons on linux"
+      name: "test6"
+      dist: bionic
 
 # script: 
 #   - java -version
