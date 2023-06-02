@@ -1,63 +1,13 @@
 os: linux
-language: shell
-install: skip
-script: true
 
-jobs:
-  include:
-    - name: mariadb-10.1
-      dist: trusty
-      addons:
-        mariadb: '10.1'
-    - name: mariadb-10.1
-      dist: xenial
-      addons:
-        mariadb: '10.1'
-    - name: mariadb-10.1
-      dist: bionic
-      addons:
-        mariadb: '10.1'
-    - name: mariadb-10.1
-      dist: focal
-      addons:
-        mariadb: '10.1'
-    - name: mariadb-10.2
-      dist: trusty
-      addons:
-        mariadb: '10.2'
-    - name: mariadb-10.2
-      dist: xenial
-      addons:
-        mariadb: '10.2'
-    - name: mariadb-10.2
-      dist: bionic
-      addons:
-        mariadb: '10.2'
-    - name: mariadb-10.2
-      dist: focal
-      addons:
-        mariadb: '10.2'
-    - name: mariadb-10.3
-      dist: focal
-      addons:
-        mariadb: '10.3'
-    - name: mariadb-10.4
-      dist: focal
-      addons:
-        mariadb: '10.4'
-    - name: mariadb-10.5
-      dist: focal
-      addons:
-        mariadb: '10.5'
+script: 
+- rvm pkg install openssl
+- rvm install 2.7.8 --with-openssl-dir=$HOME/.rvm/usr
 
-# script: 
-#   - java -version
-#   - git-lfs
+group: edge
 
-# group: edge
-
-# jobs:
-#   include:
+ jobs:
+   include:
   #  - dist: xenial
   #    arch: arm64
   #  - dist: bionic
@@ -82,8 +32,8 @@ jobs:
     #    arch: amd64
     #- dist: focal
     #  arch: amd64
-    #- dist: jammy
-    #  arch: amd64
+  - dist: jammy
+    arch: amd64
     # - dist: jammy
     #   arch: s390x
     # - dist: jammy
