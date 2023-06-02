@@ -6,30 +6,30 @@ script:
  - which java
 jobs:
   include:
-  - dist: xenial
-    arch: arm64
-  - dist: bionic
-    arch: arm64
-  - dist: focal
-    arch: arm64
-  - dist: xenial
-    arch: ppc64le
-  - dist: bionic
-    arch: ppc64le
-  - dist: focal
-    arch: ppc64le
-  - dist: xenial
-    arch: s390x
-  - dist: bionic
-    arch: s390x
-  - dist: focal
-    arch: s390x
+  # - dist: xenial
+  #   arch: arm64
+  # - dist: bionic
+  #   arch: arm64
+  # - dist: focal
+  #   arch: arm64
+  # - dist: xenial
+  #   arch: ppc64le
+  # - dist: bionic
+  #   arch: ppc64le
+  # - dist: focal
+  #   arch: ppc64le
+  # - dist: xenial
+  #   arch: s390x
+  # - dist: bionic
+  #   arch: s390x
+  # - dist: focal
+  #   arch: s390x
     #  - dist: xenial
     #    arch: amd64
-    #  - dist: bionic
-    #    arch: amd64
-    #- dist: focal
-    #  arch: amd64
+  - dist: bionic
+    arch: amd64
+  - dist: focal
+    arch: amd64
   # - dist: jammy
   #   script: 
   #   - rvm pkg install openssl
@@ -41,12 +41,12 @@ jobs:
   #   - rvm install 2.7.8
   #   - rvm use 2.7.8
   #   arch: amd64
-  - dist: jammy
-    arch: s390x
-  - dist: jammy
-    arch: ppc64le
-  - dist: jammy
-    arch: arm64
+  # - dist: jammy
+  #   arch: s390x
+  # - dist: jammy
+  #   arch: ppc64le
+  # - dist: jammy
+  #   arch: arm64
 
 
 
