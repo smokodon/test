@@ -1,6 +1,5 @@
 os: linux
-jdk: openjdk17
-group: stable
+group: edge
 script:
  - echo "JAVA_HOME = $JAVA_HOME"
  - which java
@@ -12,11 +11,11 @@ jobs:
     arch: arm64
   - dist: focal
     arch: arm64
-  # - dist: xenial
-  #   arch: ppc64le
-  # - dist: bionic
-  #   arch: ppc64le
-  # - dist: focal
+  - dist: xenial
+    arch: ppc64le
+  - dist: bionic
+    arch: ppc64le
+  - dist: focal
   #   arch: ppc64le
   # - dist: xenial
   #   arch: s390x
@@ -45,8 +44,8 @@ jobs:
   #   arch: s390x
   # - dist: jammy
   #   arch: ppc64le
-  - dist: jammy
-    arch: arm64
+  # - dist: jammy
+  #   arch: arm64
 
 
 
