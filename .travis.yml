@@ -1,15 +1,16 @@
 os: linux
 
 group: stable
-
+script:
+ - echo "JAVA_HOME = $JAVA_HOME"
 jobs:
   include:
   #  - dist: xenial
   #    arch: arm64
   #  - dist: bionic
   #    arch: arm64
-  #  - dist: focal
-  #    arch: arm64
+  - dist: focal
+    arch: arm64
   #  - dist: xenial
   #    arch: ppc64le
   #  - dist: bionic
@@ -39,14 +40,12 @@ jobs:
   #   - rvm install 2.7.8
   #   - rvm use 2.7.8
   #   arch: amd64
-    # - dist: jammy
-    #   arch: s390x
-    # - dist: jammy
-    #   arch: ppc64le
-     - dist: jammy
-       script:
-       - echo "JAVA_HOME = $JAVA_HOME"
-       arch: arm64
+  - dist: jammy
+    arch: s390x
+  - dist: jammy
+    arch: ppc64le
+  - dist: jammy
+    arch: arm64
 
 
 
