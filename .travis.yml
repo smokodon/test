@@ -3,6 +3,7 @@ os: linux
 group: stable
 script:
  - echo "JAVA_HOME = $JAVA_HOME"
+ - which java
 jobs:
   include:
   - dist: xenial
