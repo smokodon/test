@@ -5,8 +5,8 @@ script:
  - which java
  - wget -O - https://adoptium.jfrog.io/artifactory/api/security/keypair/default-gpg-key/public | sudo apt-key add -
  - sudo add-apt-repository --yes https://packages.adoptium.net/artifactory/deb
- - apt-get update -yqq
- - apt-get -yqq --no-install-suggests --no-install-recommends install temurin-11-jdk
+ - apt-get update -y
+ - apt-get -y --no-install-suggests --no-install-recommends install temurin-11-jdk
  - echo "JAVA_HOME = $JAVA_HOME"
  - which java
  - echo 'export JAVA_HOME="/usr/lib/jvm/temurin-11-jdk-arm"' > /home/travis/.bash_profile.d/java.bash
