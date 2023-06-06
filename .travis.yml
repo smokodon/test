@@ -9,9 +9,11 @@ script:
  - sudo apt-get -y --no-install-suggests --no-install-recommends install temurin-11-jdk
  - echo "JAVA_HOME = $JAVA_HOME"
  - which java
- - echo 'export JAVA_HOME="/usr/lib/jvm/temurin-11-jdk-arm"' > /home/travis/.bash_profile.d/java.bash
+ - echo 'export JAVA_HOME="/usr/lib/jvm/temurin-11-jdk"' > /home/travis/.bash_profile.d/java.bash
  - echo 'export PATH="$JAVA_HOME/bin:$PATH"' >> /home/travis/.bash_profile.d/java.bash
- - sudo update-java-alternatives -s temurin-11-jdk-*
+ - export JAVA_HOME="/usr/lib/jvm/temurin-11-jdk"
+ - export PATH="$JAVA_HOME/bin:$PATH"
+ - sudo update-java-alternatives -s temurin-11-jdk
  - echo "JAVA_HOME = $JAVA_HOME"
  - which java
 
