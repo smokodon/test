@@ -3,9 +3,8 @@ group: edge
 script:
  - echo "JAVA_HOME = $JAVA_HOME"
  - which java
- - wget -O - https://adoptium.jfrog.io/artifactory/api/security/keypair/default-gpg-key/public | tee /usr/share/keyrings/adoptium.asc
- - deb [signed-by=/usr/share/keyrings/adoptium.asc] https://packages.adoptium.net/artifactory/deb bionic main | tee /etc/apt/sources.list.d/adoptium.list
- - rm -rf /var/lib/apt/lists/*
+ - wget -O - https://adoptium.jfrog.io/artifactory/api/security/keypair/default-gpg-key/public | sudo apt-key add -
+ - sudo add-apt-repository --yes https://packages.adoptium.net/artifactory/deb
  - apt-get update -yqq
  - apt-get -yqq --no-install-suggests --no-install-recommends install temurin-11-jdk
  - echo "JAVA_HOME = $JAVA_HOME"
