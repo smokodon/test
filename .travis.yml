@@ -64,7 +64,6 @@ jobs:
   #   arch: arm64
 
 
-
     # - stage: "Installing addons on linux"
     #   name: "test1"
     #   dist: focal
