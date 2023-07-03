@@ -1,6 +1,6 @@
 os: linux
 group: edge
-jdk: openjdk12
+jdk: openjdk15
 script:
  - echo "JAVA_HOME = $JAVA_HOME"
  - git-lfs version
@@ -9,10 +9,10 @@ script:
 
 jobs:
   include:
-  - dist: xenial
-    arch: arm64
-  # - dist: bionic
+  # - dist: xenial
   #   arch: arm64
+   - dist: bionic
+     arch: arm64
   # - dist: focal
   #   arch: arm64
   # - dist: jammy
