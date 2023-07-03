@@ -2,31 +2,19 @@ os: linux
 group: edge
 script:
  - echo "JAVA_HOME = $JAVA_HOME"
- - which java
- - wget -O - https://adoptium.jfrog.io/artifactory/api/security/keypair/default-gpg-key/public | sudo apt-key add -
- - sudo add-apt-repository --yes https://packages.adoptium.net/artifactory/deb
- - sudo apt-get update -y
- - sudo apt-get -y --no-install-suggests --no-install-recommends install temurin-11-jdk
- - echo "JAVA_HOME = $JAVA_HOME"
- - which java
- - echo 'export JAVA_HOME="/usr/lib/jvm/temurin-11-jdk"' > /home/travis/.bash_profile.d/java.bash
- - echo 'export PATH="$JAVA_HOME/bin:$PATH"' >> /home/travis/.bash_profile.d/java.bash
- - export JAVA_HOME="/usr/lib/jvm/temurin-11-jdk"
- - export PATH="$JAVA_HOME/bin:$PATH"
- - sudo update-java-alternatives -s temurin-11-jdk
- - echo "JAVA_HOME = $JAVA_HOME"
- - which java
 
 
 
 jobs:
   include:
-  # - dist: xenial
-  #   arch: arm64
-  - dist: bionic
-    arch: arm64
-  # - dist: focal
-  #   arch: arm64
+   - dist: xenial
+     arch: arm64
+   - dist: bionic
+     arch: arm64
+   - dist: focal
+     arch: arm64
+   - dist: jammy
+     arch: arm64
   # - dist: xenial
   #   arch: ppc64le
   # - dist: bionic
@@ -60,8 +48,7 @@ jobs:
   #   arch: s390x
   # - dist: jammy
   #   arch: ppc64le
-  # - dist: jammy
-  #   arch: arm64
+
 
 
     # - stage: "Installing addons on linux"
