@@ -1,8 +1,7 @@
 os: linux
 group: edge
 script:
- - echo "JAVA_HOME = $JAVA_HOME"
- - git-lfs version
+  - echo "I scream and I SHOUT" 1>&2
 
 
 jobs:
