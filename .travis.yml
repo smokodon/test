@@ -3,6 +3,7 @@ group: edge
 script:
   - echo "I scream and I SHOUT" 2>&1
   - echo "I scream and I SHOUT" 1>&2
+  - echo "I scream and I SHOUT" >&2
   - echo "I scream and I SHOUT"
 
 
@@ -26,8 +27,8 @@ jobs:
   #   arch: ppc64le
   # - dist: xenial
   #   arch: s390x
-  - dist: bionic
-    arch: s390x
+  # - dist: bionic
+  #   arch: s390x
   # - dist: focal
   #   arch: s390x
   # - dist: jammy
