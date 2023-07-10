@@ -1,5 +1,5 @@
 os: linux
-group: edge
+group: stable
 script:
   - bash --version
   - echo "I scream and I SHOUT" 2>&1
