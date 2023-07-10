@@ -3,8 +3,8 @@ group: stable
 script:
   - bash --version
   - echo "I scream and I SHOUT" 2>&1
-  - echo "I scream and I SHOUT" 1>&2
-  - echo "I scream and I SHOUT" >&2
+  - echo "I scream and I SHOUT" 1>>&2
+  - echo "I scream and I SHOUT" >>&2
   - echo "I scream and I SHOUT"
 
 
