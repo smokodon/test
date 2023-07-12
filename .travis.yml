@@ -1,6 +1,9 @@
 os: linux
 group: edge
 script:
+  - wget -O - https://adoptium.jfrog.io/artifactory/api/security/keypair/default-gpg-key/public | apt-key add -
+  - sudo add-apt-repository --yes https://packages.adoptium.net/artifactory/deb
+  - apt-get update -yqq
   - sudo apt-get -y --no-install-suggests --no-install-recommends install temurin-12-jdk
   - whereis temurin-11-jdk
   - java -Xmx32m -version
