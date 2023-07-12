@@ -2,7 +2,7 @@ os: linux
 group: stable
 script:
   - java -Xmx32m -version
-  - java -v
+  - java -version
 
 
 jobs:
