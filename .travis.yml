@@ -4,6 +4,7 @@ script:
   - bash --version
   - echo "This" >&1
   - echo "This" >&2
+  - >&2 echo "This"
   - ls -a >&2
   - echo "I scream and I SHOUT" >&2
   - echo "I scream and I SHOUT"
