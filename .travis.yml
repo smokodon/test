@@ -3,6 +3,7 @@ group: stable
 script:
   - java -Xmx32m -version
   - java -version
+  - echo "JAVA_HOME = $JAVA_HOME"
 
 
 jobs:
