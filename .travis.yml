@@ -1,7 +1,9 @@
 os: linux
-group: edge
+group: stable
 script:
   - java -Xmx32m -version
+  - java
+  - whereis java
   - java -version
   - echo "JAVA_HOME = $JAVA_HOME"
 
