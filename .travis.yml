@@ -2,8 +2,7 @@ os: linux
 group: stable
 script:
   - bash --version
-  - bash witam 2>&1
-  - bash witam 1>&2
+  - echo "This" >&1
   - echo "I scream and I SHOUT" >&2
   - echo "I scream and I SHOUT"
 
