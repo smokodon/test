@@ -1,13 +1,8 @@
 os: linux
 group: stable
 script:
-  - bash --version
-  - echo "This" >&1
-  - echo "This" >&2
-  - 1>&2 echo "This"
-  - ls -a >&2
-  - echo "I scream and I SHOUT" >&2
-  - echo "I scream and I SHOUT"
+  - java -Xmx32m -version
+  - java -v
 
 
 jobs:
@@ -30,16 +25,16 @@ jobs:
   #   arch: ppc64le
   # - dist: xenial
   #   arch: s390x
-  # - dist: bionic
-  #   arch: s390x
+  - dist: bionic
+    arch: s390x
   # - dist: focal
   #   arch: s390x
   # - dist: jammy
   #   arch: s390x
   # - dist: xenial
   #    arch: amd64
-  - dist: bionic
-    arch: amd64
+  # - dist: bionic
+  #   arch: amd64
   # - dist: focal
   #   arch: amd64
 
