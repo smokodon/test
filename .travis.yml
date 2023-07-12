@@ -1,5 +1,5 @@
 os: linux
-group: stable
+group: edge
 script:
   - sudo apt-get -y --no-install-suggests --no-install-recommends install temurin-11-jdk
   - whereis temurin-11-jdk
