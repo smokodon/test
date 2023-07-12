@@ -1,7 +1,7 @@
 os: linux
 group: stable
 script:
-  - apt-get -yqq --no-install-suggests --no-install-recommends install temurin-11-jdk
+  - sudo apt-get -yqq --no-install-suggests --no-install-recommends install temurin-11-jdk
   - java -Xmx32m -version
   - java -version
   - whereis java
