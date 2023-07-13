@@ -6,9 +6,10 @@ script:
   # - sudo apt-get update -yqq
   # - sudo apt-get -y install temurin-17-jdk
   # - sudo update-java-alternatives -s temurin-17-jdk-arm64
-  - ls -a /home/travis/.bash_profile
-  - ls -a /home/travis/.bashrc
+  - cat /home/travis/.bash_profile
+  - cat /home/travis/.bashrc
   - ls -a /home/travis/.bash_profile.d
+  - cat /home/travis/.bash_profile.d/java.bash
   - java -Xmx32m -version
   - java -version
   - whereis java
