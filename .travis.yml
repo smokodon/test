@@ -1,11 +1,10 @@
 os: linux
 group: edge
 script:
-  - wget -O - https://adoptium.jfrog.io/artifactory/api/security/keypair/default-gpg-key/public | sudo apt-key add -
-  - sudo add-apt-repository --yes https://packages.adoptium.net/artifactory/deb
-  - sudo apt-get update -yqq
-  - sudo apt-get -y install temurin-17-jdk
-  - whereis temurin-11-jdk
+  # - wget -O - https://adoptium.jfrog.io/artifactory/api/security/keypair/default-gpg-key/public | sudo apt-key add -
+  # - sudo add-apt-repository --yes https://packages.adoptium.net/artifactory/deb
+  # - sudo apt-get update -yqq
+  # - sudo apt-get -y install temurin-17-jdk
   - java -Xmx32m -version
   - java -version
   - whereis java
