@@ -1,15 +1,13 @@
 os: linux
 group: edge
+language: java
+jdk: openjdk17
 script:
   # - wget -O - https://adoptium.jfrog.io/artifactory/api/security/keypair/default-gpg-key/public | sudo apt-key add -
   # - sudo add-apt-repository --yes https://packages.adoptium.net/artifactory/deb
   # - sudo apt-get update -yqq
   # - sudo apt-get -y install temurin-17-jdk
   # - sudo update-java-alternatives -s temurin-17-jdk-arm64
-  - cat /home/travis/.bash_profile
-  - cat /home/travis/.bashrc
-  - ls -a /home/travis/.bash_profile.d
-  - cat /home/travis/.bash_profile.d/java.bash
   - java -Xmx32m -version
   - java -version
   - whereis java
