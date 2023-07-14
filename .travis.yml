@@ -1,7 +1,5 @@
 os: linux
 group: edge
-language: java
-jdk: openjdk17
 script:
   # - wget -O - https://adoptium.jfrog.io/artifactory/api/security/keypair/default-gpg-key/public | sudo apt-key add -
   # - sudo add-apt-repository --yes https://packages.adoptium.net/artifactory/deb
@@ -22,8 +20,8 @@ jobs:
   #   arch: arm64
   - dist: bionic
     arch: arm64
-  - dist: focal
-    arch: arm64
+  # - dist: focal
+  #   arch: arm64
   # - dist: jammy
   #   arch: arm64
   # - dist: xenial
@@ -43,9 +41,9 @@ jobs:
   # - dist: jammy
   #   arch: s390x
   # - dist: xenial
-  #    arch: amd64
-  # - dist: bionic
   #   arch: amd64
+  - dist: bionic
+    arch: amd64
   # - dist: focal
   #   arch: amd64
 
