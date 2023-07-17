@@ -7,7 +7,8 @@ script:
   # - sudo apt-get -y install temurin-17-jdk
   # - sudo update-java-alternatives -s temurin-17-jdk-arm64
   - ls -al .
-  - sudo ~/java.sh
+  - chmod +x ./java.sh
+  - sudo ./java.sh
   - java -Xmx32m -version
   - java -version
   - whereis java
