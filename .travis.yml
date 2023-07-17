@@ -6,9 +6,8 @@ script:
   # - sudo apt-get update -yqq
   # - sudo apt-get -y install temurin-17-jdk
   # - sudo update-java-alternatives -s temurin-17-jdk-arm64
-  - ls -al .
-  - chmod +x ./java.sh
-  - sudo ./java.sh
+  - export JAVA_HOME=/usr/lib/jvm/temurin-11-jdk-arm64
+  - export PATH=${JAVA_HOME}/bin:$PATH
   - java -Xmx32m -version
   - java -version
   - whereis java
