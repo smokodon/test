@@ -15,6 +15,11 @@ script:
   - echo "export JAVA_HOME=/usr/lib/jvm/temurin-$JAVA_VERSION-jdk-$arch" > /home/travis/.bash_profile.d/java.dash
   - echo "export PATH=$JAVA_HOME/bin:$PATH" > /home/travis/.bash_profile.d/java.dash
   - cat /home/travis/.bash_profile.d/java.dash
+  - java -Xmx32m -version
+  - java -version
+  - whereis java
+  - java -version
+  - echo "JAVA_HOME = $JAVA_HOME"
 
 jobs:
   include:
