@@ -11,17 +11,18 @@ script:
   - javac -version
   - java -Xmx32m -version
   - java -version
+  - java
   - which java
   - echo "JAVA_HOME = $JAVA_HOME"
 
 jobs:
   include:
-  - dist: xenial
-    arch: arm64
+  # - dist: xenial
+  #   arch: arm64
   - dist: bionic
     arch: arm64
-  - dist: focal
-    arch: arm64
+  # - dist: focal
+  #   arch: arm64
   # - dist: jammy
   #   arch: arm64
   # - dist: xenial
@@ -42,8 +43,8 @@ jobs:
   #   arch: s390x
   # - dist: xenial
   #   arch: amd64
-  - dist: bionic
-    arch: amd64
+  # - dist: bionic
+  #   arch: amd64
   # - dist: focal
   #   arch: amd64
 
