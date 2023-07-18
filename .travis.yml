@@ -1,18 +1,12 @@
 os: linux
 group: edge
-#jdk: openjdk17
+jdk: openjdk17
 script:
   # - wget -O - https://adoptium.jfrog.io/artifactory/api/security/keypair/default-gpg-key/public | sudo apt-key add -
   # - sudo add-apt-repository --yes https://packages.adoptium.net/artifactory/deb
   # - sudo apt-get update -yqq
   # - sudo apt-get -y install temurin-17-jdk
   # - sudo update-java-alternatives -s temurin-17-jdk-arm64
-  - ls /etc/profile
-  - cat /etc/profile
-  - which javac
-  - javac -version
-  - wget https://download.bell-sw.com/java/11.0.19+7/bellsoft-jdk11.0.19+7-linux-aarch64.deb
-  - sudo apt install ./bellsoft-jdk11.0.19+7-linux-aarch64.deb
   - which javac
   - javac -version
   - java -Xmx32m -version
