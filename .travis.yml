@@ -11,7 +11,7 @@ script:
   - javac -version
   - java -Xmx32m -version
   - java -version
-  - java
+  - $JAVA_HOME/bin/javac -version
   - which java
   - echo "JAVA_HOME = $JAVA_HOME"
 
