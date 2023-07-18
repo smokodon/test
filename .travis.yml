@@ -17,8 +17,8 @@ script:
 
 jobs:
   include:
-  # - dist: xenial
-  #   arch: arm64
+  - dist: xenial
+    arch: arm64
   - dist: bionic
     arch: arm64
   # - dist: focal
