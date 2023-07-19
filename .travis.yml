@@ -1,25 +1,25 @@
 os: linux
 group: edge
-jdk: openjdk17
+# jdk: openjdk17
 script:
   # - wget -O - https://adoptium.jfrog.io/artifactory/api/security/keypair/default-gpg-key/public | sudo apt-key add -
   # - sudo add-apt-repository --yes https://packages.adoptium.net/artifactory/deb
   # - sudo apt-get update -yqq
   # - sudo apt-get -y install temurin-17-jdk
   # - sudo update-java-alternatives -s temurin-17-jdk-arm64
+  - cat /etc/profile
   - which javac
   - which java
   - javac -version
   - java -Xmx32m -version
   - java -version
-  - ls /usr/lib/jvm/bellsoft-java17-aarch64
   - which java
   - echo "JAVA_HOME = $JAVA_HOME"
 
 jobs:
   include:
-  - dist: xenial
-    arch: arm64
+  # - dist: xenial
+  #   arch: arm64
   - dist: bionic
     arch: arm64
   # - dist: focal
@@ -28,24 +28,24 @@ jobs:
   #   arch: arm64
   # - dist: xenial
   #   arch: ppc64le
-  - dist: bionic
-    arch: ppc64le
+  # - dist: bionic
+  #   arch: ppc64le
   # - dist: focal
   #   arch: ppc64le
   # - dist: jammy
   #   arch: ppc64le
   # - dist: xenial
   #   arch: s390x
-  - dist: bionic
-    arch: s390x
+  # - dist: bionic
+  #   arch: s390x
   # - dist: focal
   #   arch: s390x
   # - dist: jammy
   #   arch: s390x
   # - dist: xenial
   #   arch: amd64
-  - dist: bionic
-    arch: amd64
+  # - dist: bionic
+  #   arch: amd64
   # - dist: focal
   #   arch: amd64
 
