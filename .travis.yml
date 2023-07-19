@@ -35,12 +35,12 @@ jobs:
   #   arch: ppc64le
   # - dist: jammy
   #   arch: ppc64le
-  # - dist: xenial
-  #   arch: s390x
+  - dist: xenial
+    arch: s390x
   - dist: bionic
     arch: s390x
-  # - dist: focal
-  #   arch: s390x
+  - dist: focal
+    arch: s390x
   # - dist: jammy
   #   arch: s390x
   # - dist: xenial
