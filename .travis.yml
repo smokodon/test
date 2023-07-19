@@ -1,18 +1,73 @@
 
+language: node_js
+node_js: 16.15.1
+cache:
+  directories:
+  - "$HOME/.cache/electron"
+  - "$HOME/.cache/electron-builder"
+  - "$HOME/.npm/_prebuilds"
+  # - node_modules
 
-script:
-   - sudo ls -al /etc/sbt/ || true
-   - sudo cat /etc/sbt/jvmopts || true
+env:
+  global:
+  - ELECTRON_CACHE=$HOME/.cache/electron
+  - ELECTRON_BUILDER_CACHE=$HOME/.cache/electron-builder
+
 
 jobs:
   include:
-    - arch: ppc64le
-      dist: bionic
-    - arch: ppc64le
+    - os: linux
       dist: focal
-    - arch: s390x
-      dist: bionic
-    - arch: s390x
-      dist: focal
-    - arch: amd64
-      dist: focal
+      install:
+        - npm i --legacy-peer-deps --openssl_fips=""
+      script:
+        - npm run electron:uglify
+        - npm run update-book-config
+        - npm run electron:release --linux
+      # adding after failure phase for gettng the logs file
+      after_failure:
+        - cat MSBuild_*.failure.txt
+      # remove old cache by force before caching 
+      before_cache:
+        - rm -rf $HOME/.cache/electron-builder/wine
+    
+    
+    - os: windows
+      before_install: 
+        - npm install --global node-gyp@latest
+      install:
+        - choco install windows-sdk-10-version-1809-all --yes
+        - powershell -Command 'Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope LocalMachine'
+        - npm i electron-rebuild --save-dev --legacy-peer-deps --openssl_fips=""
+        - npm i --legacy-peer-deps --openssl_fips=""
+      script:
+        - npm run electron:uglify
+        - npm run update-book-config
+        - Powershell -File ./scripts/electron-builder/nsis_code_sign.ps1
+        - npm run electron:release --win
+      # adding after failure phase for gettng the logs file
+      after_failure:
+        - cat MSBuild_*.failure.txt
+      # remove old cache by force before caching 
+      before_cache:
+        - rm -rf $HOME/.cache/electron-builder/wine
+    
+    - os: osx
+      osx_image: xcode10.3
+      install:
+        - npm i uglify-js --legacy-peer-deps
+        - npm i bufferutil --save-optional --legacy-peer-deps
+        - npm i utf-8-validate --save-optional --legacy-peer-deps
+        - npm install canvas --save-optional --legacy-peer-deps
+        - npm i --legacy-peer-deps --no-optional --openssl_fips=""
+      script:
+        - npm run electron:uglify
+        - npm run update-book-config
+        - npm run electron:release --mac
+      # adding after failure phase for gettng the logs file
+      after_failure:
+        - cat MSBuild_*.failure.txt
+      # remove old cache by force before caching 
+      before_cache:
+        - rm -rf $HOME/.cache/electron-builder/wine
+
