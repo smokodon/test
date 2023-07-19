@@ -1,5 +1,5 @@
 os: linux
-group: stable
+group: edge
 jdk: openjdk17
 script:
   # - wget -O - https://adoptium.jfrog.io/artifactory/api/security/keypair/default-gpg-key/public | sudo apt-key add -
