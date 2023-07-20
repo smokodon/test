@@ -1,13 +1,13 @@
 os: linux
 group: edge
-#jdk: openjdk16
+jdk: openjdk16
 script:
   # - wget -O - https://adoptium.jfrog.io/artifactory/api/security/keypair/default-gpg-key/public | sudo apt-key add -
   # - sudo add-apt-repository --yes https://packages.adoptium.net/artifactory/deb
   # - sudo apt-get update -yqq
   # - sudo apt-get -y install temurin-17-jdk
   # - sudo update-java-alternatives -s temurin-17-jdk-arm64
-  - export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-11-hotspot-s390x
+  - export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-16-hotspot-s390x
   - export PATH=$JAVA_HOME/bin:$PATH
   - $JAVA_HOME/bin/javac -version
   - echo "PATH = $PATH"
