@@ -42,7 +42,7 @@ jobs:
   - dist: bionic
     arch: s390x
   - dist: focal
-   arch: s390x
+    arch: s390x
   - dist: jammy
     arch: s390x
   # - dist: xenial
