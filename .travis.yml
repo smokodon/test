@@ -12,8 +12,8 @@ script:
   - wget -O - https://adoptium.jfrog.io/artifactory/api/security/keypair/default-gpg-key/public | sudo apt-key add -
   - sudo add-apt-repository --yes https://packages.adoptium.net/artifactory/deb
   - sudo apt-get update -yqq
-  - sudo apt-get -yqq --no-install-suggests --no-install-recommends install temurin-11-jdk || true
-  - update-java-alternatives -s temurin-11-jdk-ppc64le
+  - sudo apt-get -yqq --no-install-suggests --no-install-recommends install temurin-17-jdk || true
+  - update-java-alternatives -s temurin-17-jdk-ppc64el
   - $JAVA_HOME/bin/javac -version
   - echo "PATH = $PATH"
   - which javac
