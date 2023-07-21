@@ -7,7 +7,7 @@ script:
   # - sudo apt-get update -yqq
   # - sudo apt-get -y install temurin-17-jdk
   # - sudo update-java-alternatives -s temurin-17-jdk-arm64
-  - export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-16-hotspot-s390x
+  - export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-16-hotspot-${TRAVIS_CPU_ARCH}
   - export PATH=$JAVA_HOME/bin:$PATH
   - $JAVA_HOME/bin/javac -version
   - echo "PATH = $PATH"
@@ -23,26 +23,26 @@ jobs:
   include:
   # - dist: xenial
   #   arch: arm64
-  # - dist: bionic
-  #   arch: arm64
+  - dist: bionic
+    arch: arm64
   # - dist: focal
   #   arch: arm64
   # - dist: jammy
   #   arch: arm64
   # - dist: xenial
   #   arch: ppc64le
-  # - dist: bionic
-  #   arch: ppc64le
+  - dist: bionic
+    arch: ppc64le
   # - dist: focal
   #   arch: ppc64le
   # - dist: jammy
   #   arch: ppc64le
-  - dist: xenial
-    arch: s390x
+  # - dist: xenial
+  #   arch: s390x
   - dist: bionic
     arch: s390x
-  - dist: focal
-    arch: s390x
+  # - dist: focal
+  #  arch: s390x
   # - dist: jammy
   #   arch: s390x
   # - dist: xenial
