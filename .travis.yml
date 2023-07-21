@@ -9,6 +9,11 @@ script:
   # - sudo update-java-alternatives -s temurin-17-jdk-arm64
   # - export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-16-hotspot-${TRAVIS_CPU_ARCH}
   # - export PATH=$JAVA_HOME/bin:$PATH
+  - wget -O - https://adoptium.jfrog.io/artifactory/api/security/keypair/default-gpg-key/public | sudo apt-key add -
+  - sudo add-apt-repository --yes https://packages.adoptium.net/artifactory/deb
+  - sudo apt-get update -yqq
+  - sudo apt-get -yqq --no-install-suggests --no-install-recommends install temurin-11-jdk || true
+  - update-java-alternatives -s temurin-11-jdk-ppc64el
   - $JAVA_HOME/bin/javac -version
   - echo "PATH = $PATH"
   - which javac
@@ -23,14 +28,14 @@ jobs:
   include:
   # - dist: xenial
   #   arch: arm64
-  - dist: bionic
-    arch: arm64
+  # - dist: bionic
+  #   arch: arm64
   # - dist: focal
   #   arch: arm64
   # - dist: jammy
   #   arch: arm64
-  - dist: xenial
-    arch: ppc64le
+  # - dist: xenial
+  #   arch: ppc64le
   - dist: bionic
     arch: ppc64le
   # - dist: focal
@@ -39,8 +44,8 @@ jobs:
   #   arch: ppc64le
   # - dist: xenial
   #   arch: s390x
-  - dist: bionic
-    arch: s390x
+  # - dist: bionic
+  #   arch: s390x
   # - dist: focal
   #  arch: s390x
   # - dist: jammy
