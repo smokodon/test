@@ -13,7 +13,7 @@ script:
   - sudo add-apt-repository --yes https://packages.adoptium.net/artifactory/deb
   - sudo apt-get update -yqq
   - sudo apt-get -yqq --no-install-suggests --no-install-recommends install temurin-11-jdk || true
-  - update-java-alternatives -s temurin-11-jdk-ppc64el
+  - update-java-alternatives -s temurin-11-jdk-ppc64le
   - $JAVA_HOME/bin/javac -version
   - echo "PATH = $PATH"
   - which javac
