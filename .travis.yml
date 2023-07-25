@@ -13,9 +13,9 @@ script:
   - JAVA_VERSION=11
   - wget -O - https://adoptium.jfrog.io/artifactory/api/security/keypair/default-gpg-key/public | sudo apt-key add -
   - sudo add-apt-repository --yes https://packages.adoptium.net/artifactory/deb
-  - sudo apt-get update -yqq
-  - sudo apt-get -yqq --no-install-suggests --no-install-recommends install temurin-$JAVA_VERSION-jdk || true
-  - export JAVA_HOME=/usr/lib/jvm/temurin-$JAVA_VERSION-jdk-ppc64el" --echo
+  - sudo apt-get update -y
+  - sudo apt-get -y --no-install-suggests --no-install-recommends install temurin-$JAVA_VERSION-jdk
+  - export JAVA_HOME=/usr/lib/jvm/temurin-$JAVA_VERSION-jdk-ppc64el
   - export PATH=$JAVA_HOME/bin:$PATH
   - sudo update-java-alternatives -s temurin-$JAVA_VERSION-jdk-ppc64el
   - echo "PATH = $PATH"
