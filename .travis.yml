@@ -10,51 +10,33 @@ script:
   # - export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-16-hotspot-${TRAVIS_CPU_ARCH}
   # - export PATH=$JAVA_HOME/bin:$PATH
  # - $JAVA_HOME/bin/javac -versio
-  - JAVA_VERSION=17
-  - PACKAGE=temurin-$JAVA_VERSION-jdk
-  - wget -O - https://adoptium.jfrog.io/artifactory/api/security/keypair/default-gpg-key/public | sudo apt-key add -
-  - sudo add-apt-repository --yes https://packages.adoptium.net/artifactory/deb
-  - sudo apt-get update -y
-  - sudo apt-get -y --no-install-suggests --no-install-recommends install $PACKAGE
-  - export JAVA_HOME=/usr/lib/jvm/$PACKAGE-ppc64el
-  - export PATH=$JAVA_HOME/bin:$PATH
-  - sudo update-java-alternatives -s $PACKAGE-ppc64el
-  - echo "PATH = $PATH"
-  - which javac
-  - which java
-  - javac -version
-  - java -Xmx32m -version
-  - java -version
-  - which java
-  - echo "JAVA_HOME = $JAVA_HOME"
-  - $JAVA_HOME/bin/javac -version
-
+  - maven -version
 jobs:
   include:
-  # - dist: xenial
-  #   arch: arm64
-  # - dist: bionic
-  #   arch: arm64
-  # - dist: focal
-  #   arch: arm64
-  # - dist: jammy
-  #   arch: arm64
-  # - dist: xenial
-  #   arch: ppc64le
+  - dist: xenial
+    arch: arm64
+  - dist: bionic
+    arch: arm64
+  - dist: focal
+    arch: arm64
+  - dist: jammy
+    arch: arm64
+  - dist: xenial
+    arch: ppc64le
   - dist: bionic
     arch: ppc64le
-  # - dist: focal
-  #   arch: ppc64le
-  # - dist: jammy
-  #   arch: ppc64le
-  # - dist: xenial
-  #   arch: s390x
-  # - dist: bionic
-  #   arch: s390x
-  # - dist: focal
-  #   arch: s390x
-  # - dist: jammy
-  #   arch: s390x
+  - dist: focal
+    arch: ppc64le
+  - dist: jammy
+    arch: ppc64le
+  - dist: xenial
+    arch: s390x
+  - dist: bionic
+    arch: s390x
+  - dist: focal
+    arch: s390x
+  - dist: jammy
+    arch: s390x
   # - dist: xenial
   #   arch: amd64
   # - dist: bionic
