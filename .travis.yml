@@ -1,6 +1,6 @@
 os: linux
 group: stable
-jdk: openjdk11
+#jdk: openjdk11
 script:
   # - wget -O - https://adoptium.jfrog.io/artifactory/api/security/keypair/default-gpg-key/public | sudo apt-key add -
   # - sudo add-apt-repository --yes https://packages.adoptium.net/artifactory/deb
@@ -48,8 +48,8 @@ jobs:
   #   arch: ppc64le
   # - dist: xenial
   #   arch: s390x
-  - dist: bionic
-    arch: s390x
+  # - dist: bionic
+  #   arch: s390x
   # - dist: focal
   #   arch: s390x
   # - dist: jammy
