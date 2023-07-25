@@ -10,7 +10,7 @@ script:
   # - export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-16-hotspot-${TRAVIS_CPU_ARCH}
   # - export PATH=$JAVA_HOME/bin:$PATH
  # - $JAVA_HOME/bin/javac -versio
-  - maven -version
+  - mvn -v
 jobs:
   include:
   - dist: xenial
@@ -39,8 +39,8 @@ jobs:
     arch: s390x
   # - dist: xenial
   #   arch: amd64
-  # - dist: bionic
-  #   arch: amd64
+  - dist: bionic
+    arch: amd64
   # - dist: focal
   #   arch: amd64
 
