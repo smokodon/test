@@ -10,7 +10,7 @@ script:
   # - export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-16-hotspot-${TRAVIS_CPU_ARCH}
   # - export PATH=$JAVA_HOME/bin:$PATH
  # - $JAVA_HOME/bin/javac -version
-  - JAVA_VERSION=11
+  - JAVA_VERSION=17
   - wget -O - https://adoptium.jfrog.io/artifactory/api/security/keypair/default-gpg-key/public | sudo apt-key add -
   - sudo add-apt-repository --yes https://packages.adoptium.net/artifactory/deb
   - sudo apt-get update -y
