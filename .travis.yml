@@ -9,15 +9,16 @@ script:
   # - sudo update-java-alternatives -s temurin-17-jdk-arm64
   # - export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-16-hotspot-${TRAVIS_CPU_ARCH}
   # - export PATH=$JAVA_HOME/bin:$PATH
- # - $JAVA_HOME/bin/javac -version
+ # - $JAVA_HOME/bin/javac -versio
   - JAVA_VERSION=17
+  - PACKAGE=temurin-$JAVA_VERSION-jdk
   - wget -O - https://adoptium.jfrog.io/artifactory/api/security/keypair/default-gpg-key/public | sudo apt-key add -
   - sudo add-apt-repository --yes https://packages.adoptium.net/artifactory/deb
   - sudo apt-get update -y
-  - sudo apt-get -y --no-install-suggests --no-install-recommends install temurin-$JAVA_VERSION-jdk
-  - export JAVA_HOME=/usr/lib/jvm/temurin-$JAVA_VERSION-jdk-ppc64el
+  - sudo apt-get -y --no-install-suggests --no-install-recommends install $PACKAGE
+  - export JAVA_HOME=/usr/lib/jvm/$PACKAGE-ppc64el
   - export PATH=$JAVA_HOME/bin:$PATH
-  - sudo update-java-alternatives -s temurin-$JAVA_VERSION-jdk-ppc64el
+  - sudo update-java-alternatives -s $PACKAGE-ppc64el
   - echo "PATH = $PATH"
   - which javac
   - which java
