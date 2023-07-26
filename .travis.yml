@@ -1,6 +1,6 @@
 os: linux
 group: stable
-#jdk: openjdk11
+jdk: openjdk11
 script:
   # - wget -O - https://adoptium.jfrog.io/artifactory/api/security/keypair/default-gpg-key/public | sudo apt-key add -
   # - sudo add-apt-repository --yes https://packages.adoptium.net/artifactory/deb
@@ -13,7 +13,7 @@ script:
   - readlink -f "$(which java)"
   - java -XshowSettings:properties -version 2>&1 > /dev/null
   - which java
-  - ls  /usr/lib/jvm/temurin-11-jdk-*
+  - ls  /usr/lib/jvm/temurin-*
   #- $JAVA_HOME/bin/javac -version
   - echo JAVA_HOME=$JAVA_HOME
   - mvn -v
