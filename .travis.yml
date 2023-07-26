@@ -10,6 +10,7 @@ script:
   # - export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-16-hotspot-${TRAVIS_CPU_ARCH}
   # - export PATH=$JAVA_HOME/bin:$PATH
   - $JAVA_HOME/bin/javac -version
+  - echo JAVA_HOME=$JAVA_HOME
   - mvn -v
 jobs:
   include:
