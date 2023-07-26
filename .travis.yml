@@ -10,6 +10,8 @@ script:
   # - export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-16-hotspot-${TRAVIS_CPU_ARCH}
   # - export PATH=$JAVA_HOME/bin:$PATH
   - java -XshowSettings:properties -version 2>&1 > /dev/null | grep 'java.home'
+  - ls  /usr/lib/jvm/
+  - ls  /usr/local/lib/jvm/
   #- $JAVA_HOME/bin/javac -version
   - echo JAVA_HOME=$JAVA_HOME
   - mvn -v
