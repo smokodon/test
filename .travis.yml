@@ -9,7 +9,9 @@ script:
   # - sudo update-java-alternatives -s temurin-17-jdk-arm64
   # - export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-16-hotspot-${TRAVIS_CPU_ARCH}
   # - export PATH=$JAVA_HOME/bin:$PATH
+  - readlink -f "$(which java)"
   - java -XshowSettings:properties -version 2>&1 > /dev/null | grep 'java.home'
+  - which java
   - ls  /usr/lib/jvm/temurin-11-jdk-*
   #- $JAVA_HOME/bin/javac -version
   - echo JAVA_HOME=$JAVA_HOME
