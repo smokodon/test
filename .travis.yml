@@ -10,6 +10,7 @@ script:
   # - export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-16-hotspot-${TRAVIS_CPU_ARCH}
   # - export PATH=$JAVA_HOME/bin:$PATH
   - readlink -f "$(which java)"
+  - echo JAVA_HOME=$java.home
   - java -XshowSettings:properties -version 2>&1 > /dev/null | grep 'java.home'
   - which java
   - export JAVA_HOME="java -XshowSettings:properties -version 2>&1 > /dev/null | grep 'java.home'"
