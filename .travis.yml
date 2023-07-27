@@ -4,5 +4,7 @@ dist: focal
 arch:
   - s390x
   - ppc64le
+  - arm64
+  - amd64
 script:
   - echo "I scream and I SHOUT" 1>&2
