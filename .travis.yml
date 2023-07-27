@@ -1,8 +1,8 @@
-language: ruby
-cache:
-  bundler: true
-services:
-- mysql
-arch: arm64
+language: c
+os: linux
+dist: focal
+arch:
+  - s390x
+  - ppc64le
 script:
-  - echo "Hello World"
+  - echo "I scream and I SHOUT" 1>&2
