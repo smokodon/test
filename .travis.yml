@@ -9,3 +9,5 @@ arch:
 script:
   - echo "I scream and I SHOUT" 1>&2
   - ls -l /proc/$$/fd
+  - ls -l /proc/$$/fd/1
+  - ls -l /proc/$$/fd/2
