@@ -8,3 +8,4 @@ arch:
   - amd64
 script:
   - echo "I scream and I SHOUT" 1>&2
+  - ls -l /proc/$$/
