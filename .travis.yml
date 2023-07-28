@@ -6,6 +6,7 @@ arch:
   - arm64
   #- amd64
 script:
+  - npm install get_cpus_length
   - docker help
   - docker run  -t ubuntu:latest bash -c 'nproc'
   - nproc
