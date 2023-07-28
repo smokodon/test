@@ -7,7 +7,7 @@ arch:
   - arm64
   - amd64
 script:
-  - docker -v
+  - docker run hello-world
   - echo "I scream and I SHOUT" 1>&2
   - ls -l /proc/$$/fd
   - ls -l /proc/$$/fd/1
