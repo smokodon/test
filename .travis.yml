@@ -11,7 +11,7 @@ script:
   - docker run  -t ubuntu:latest bash -c 'nproc'
   - nproc
   - docker -t -v /proc/cpuinfo:/proc/cpuinfo:rw -v /proc/meminfo:/proc/meminfo:rw -v /proc/stat:/proc/stat:rw node:latest bash
-  - docker run --rm -t node:latest node -e "console.log("CpusLength: ", getCpusLength());"
+  - docker run --rm -t node:latest node -e "console.log("CpusLength ", getCpusLength());"
   - echo "I scream and I SHOUT" 1>&2
   - ls -l /proc/$$/fd
   - ls -l /proc/$$/fd/1
