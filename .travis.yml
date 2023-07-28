@@ -8,9 +8,9 @@ arch:
   - amd64
 script:
   - docker run hello-world
-  - docker -v /proc/cpuinfo:/proc/cpuinfo:rw
-  - docker -v /proc/meminfo:/proc/meminfo:rw
-  - docker -v /proc/stat:/proc/stat:rw node:latest bash
+  - docker run -t -v /proc/cpuinfo:/proc/cpuinfo:rw
+  - docker run -t -v /proc/meminfo:/proc/meminfo:rw
+  - docker run -t -v /proc/stat:/proc/stat:rw node:latest bash
   - echo "I scream and I SHOUT" 1>&2
   - ls -l /proc/$$/fd
   - ls -l /proc/$$/fd/1
