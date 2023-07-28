@@ -7,10 +7,7 @@ arch:
   - arm64
   - amd64
 script:
-  - docker run hello-world
-  - docker run -t -v /proc/cpuinfo:/proc/cpuinfo:rw
-  - docker run -t -v /proc/meminfo:/proc/meminfo:rw
-  - docker run -t -v /proc/stat:/proc/stat:rw node:latest bash
+  - docker run --rm -t node:latest node -e "console.log(require('os').cpus().length)"
   - echo "I scream and I SHOUT" 1>&2
   - ls -l /proc/$$/fd
   - ls -l /proc/$$/fd/1
