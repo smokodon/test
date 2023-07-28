@@ -1,11 +1,12 @@
 os: linux
 dist: xenial
 arch:
-  - s390x
-  - ppc64le
+  #- s390x
+  #- ppc64le
   - arm64
-  - amd64
+  #- amd64
 script:
+  - docker help
   - docker run  -t ubuntu:latest bash -c 'nproc'
   - nproc
   - docker -t -v /proc/cpuinfo:/proc/cpuinfo:rw -v /proc/meminfo:/proc/meminfo:rw -v /proc/stat:/proc/stat:rw node:latest bash
