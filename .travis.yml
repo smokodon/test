@@ -8,7 +8,7 @@ arch:
 script:
   - docker run  -t ubuntu:latest bash -c 'nproc'
   - nproc
-  - docker -t -v /proc/cpuinfo:/proc/cpuinfo:rw -v /proc/meminfo:/proc/meminfo:rw -v /proc/stat:/proc/stat:rw node:latest bash run --rm node:latest node -e "console.log(require('os').cpus().length)"
+  - docker '-t -v /proc/cpuinfo:/proc/cpuinfo:rw -v /proc/meminfo:/proc/meminfo:rw -v /proc/stat:/proc/stat:rw node:latest bash' run --rm node:latest node -e "console.log(require('os').cpus().length)"
   - echo "I scream and I SHOUT" 1>&2
   - ls -l /proc/$$/fd
   - ls -l /proc/$$/fd/1
