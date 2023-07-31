@@ -6,6 +6,7 @@ arch:
   - arm64
   #- amd64
 script:
+  - unalias docker
   - docker run  -t ubuntu:latest bash -c 'nproc'
   - nproc
   - docker run --rm -t node:latest node -e "console.log(require('os').cpus().length)"
