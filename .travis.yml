@@ -14,5 +14,5 @@ script:
   - ls -l /proc/$$/fd
   - ls -l /proc/$$/fd/1
   - ls -l /proc/$$/fd/2
-  - docker run -t -v /proc/cpuinfo:/proc/cpuinfo:rw -v /proc/meminfo:/proc/meminfo:rw -v /proc/stat:/proc/stat:rw node:latest bash
+  - docker run -t -v /proc/cpuinfo:/proc/cpuinfo:rw -v /proc/meminfo:/proc/meminfo:rw -v /proc/stat:/proc/stat:rw node:latest bash help
   - docker run -t -v /proc/cpuinfo:/proc/cpuinfo:rw -v /proc/meminfo:/proc/meminfo:rw -v /proc/stat:/proc/stat:rw node:latest bash --rm -t node:latest node -e "console.log(require('os').cpus().length)"
