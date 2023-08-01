@@ -10,4 +10,5 @@ script:
   - docker
   - docker run -t ubuntu:latest bash -c 'nproc'
   - nproc
+  - docker run hello-world
   - docker run --rm -t node:latest node -e "console.log(require('os').cpus().length)"
