@@ -8,7 +8,10 @@ arch:
   #- amd64
 script:
   - docker
+  - docker-compose --version
+  - sudo docker run -t ubuntu:latest bash -c 'nproc'
   - docker run -t ubuntu:latest bash -c 'nproc'
   - nproc
   - docker run hello-world
   - docker run --rm -t node:latest node -e "console.log(require('os').cpus().length)"
+  - sudo docker run --rm -t node:latest node -e "console.log(require('os').cpus().length)"
