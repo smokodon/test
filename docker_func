@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
   main() {
-    args="$@"
-    echo "args: $args"
-    if [[ "$args" == *"run"* ]]; then
-      docker run -t -v /proc/cpuinfo:/proc/cpuinfo:rw -v /proc/meminfo:/proc/meminfo:rw -v /proc/stat:/proc/stat:rw "$args"
+    if [ "$1" = "run" ]; then
+        shift
+        command docker run -t -v /proc/cpuinfo:/proc/cpuinfo:rw -v /proc/meminfo:/proc/meminfo:rw -v /proc/stat:/proc/stat:rw "$@"
     else
-      docker "$args"
+        command docker "$@"
     fi
 }
 
