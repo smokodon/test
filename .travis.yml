@@ -1,8 +1,8 @@
 os: linux
-dist: xenial
+dist: bionic
 group: edge
 arch:
-  #- s390x
+  - s390x
   - ppc64le
   - arm64
   #- amd64
@@ -10,7 +10,6 @@ script:
   # - unalias docker
   # - sudo chmod +x docker_func && sudo mv docker_func /usr/local/bin
   # - alias docker='docker_func'
-  - docker-compose --version
   - sudo docker run -t ubuntu:latest bash -c 'nproc'
   - docker run -t ubuntu:latest bash -c 'nproc'
   - nproc
