@@ -10,6 +10,7 @@ script:
   # - unalias docker
   # - sudo chmod +x docker_func && sudo mv docker_func /usr/local/bin
   # - alias docker='docker_func'
+  - pipenv lock -r
   - pip list
   - pydoc modules
   - pip freeze
