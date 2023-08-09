@@ -1,7 +1,5 @@
 os: linux
-dist: xenial
-language: php
-php: 8.2.8
+dist: focal
 group: stable
 arch:
   #- s390x
@@ -12,7 +10,7 @@ script:
   # - unalias docker
   # - sudo chmod +x docker_func && sudo mv docker_func /usr/local/bin
   # - alias docker='docker_func'
-  - php -v
+  - python -c "help('modules')"
   # - sudo docker run -t ubuntu:latest bash -c 'nproc'
   # - docker run -t ubuntu:latest bash -c 'nproc'
   # - nproc
