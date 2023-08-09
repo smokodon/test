@@ -1,5 +1,6 @@
 os: linux
 dist: bionic
+language: php
 php: 8.2.8
 group: stable
 arch:
