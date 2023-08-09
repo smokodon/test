@@ -1,20 +1,22 @@
 os: linux
 dist: bionic
-group: edge
+php: 8.2.8
+group: stable
 arch:
-  - s390x
-  - ppc64le
-  - arm64
-  #- amd64
+  #- s390x
+  #- ppc64le
+  #- arm64
+  - amd64
 script:
   # - unalias docker
   # - sudo chmod +x docker_func && sudo mv docker_func /usr/local/bin
   # - alias docker='docker_func'
-  - sudo docker run -t ubuntu:latest bash -c 'nproc'
-  - docker run -t ubuntu:latest bash -c 'nproc'
-  - nproc
-  - docker run hello-world
-  - docker run --rm -t node:latest node -e "console.log(require('os').cpus().length)"
-  - echo "test" && docker run --rm -t node:latest node -e "console.log(require('os').cpus().length)"
-  - sudo docker run --rm -t node:latest node -e "console.log(require('os').cpus().length)"
-  - docker run --rm -t node:latest node -e "console.log(require('os').cpus().length)"
+  - php -v
+  # - sudo docker run -t ubuntu:latest bash -c 'nproc'
+  # - docker run -t ubuntu:latest bash -c 'nproc'
+  # - nproc
+  # - docker run hello-world
+  # - docker run --rm -t node:latest node -e "console.log(require('os').cpus().length)"
+  # - echo "test" && docker run --rm -t node:latest node -e "console.log(require('os').cpus().length)"
+  # - sudo docker run --rm -t node:latest node -e "console.log(require('os').cpus().length)"
+  # - docker run --rm -t node:latest node -e "console.log(require('os').cpus().length)"
