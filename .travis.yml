@@ -11,6 +11,7 @@ script:
   # - sudo chmod +x docker_func && sudo mv docker_func /usr/local/bin
   # - alias docker='docker_func'
   - pip list
+  - pip freeze
   - python -c "help('modules')"
   - python3 -c "help('modules')"
   # - sudo docker run -t ubuntu:latest bash -c 'nproc'
