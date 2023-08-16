@@ -1,5 +1,7 @@
 os: linux
-dist: focal
+dist:
+  - bionic
+  - focal
 group: stable
 arch:
   #- s390x
