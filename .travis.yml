@@ -1,8 +1,6 @@
 os: linux
 dist: focal
 group: stable
-langauge: python
-python: 3.8.16
 arch:
   #- s390x
   #- ppc64le
