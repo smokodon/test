@@ -1,6 +1,6 @@
 os: linux
-group: stable
-arch: edge
+group: edge
+arch: amd64
 script:
   # - wget -O - https://adoptium.jfrog.io/artifactory/api/security/keypair/default-gpg-key/public | sudo apt-key add -
   # - sudo add-apt-repository --yes https://packages.adoptium.net/artifactory/deb
