@@ -1,8 +1,6 @@
 os: linux
 group: dev
 arch: amd64
-language: python
-python: 3.8
 script:
   # - wget -O - https://adoptium.jfrog.io/artifactory/api/security/keypair/default-gpg-key/public | sudo apt-key add -
   # - sudo add-apt-repository --yes https://packages.adoptium.net/artifactory/deb
@@ -11,7 +9,7 @@ script:
   # - sudo update-java-alternatives -s temurin-17-jdk-arm64
   # - export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-16-hotspot-${TRAVIS_CPU_ARCH}
   # - export PATH=$JAVA_HOME/bin:$PATH
-  - python -v
+  - sudo apt-get update
 jobs:
   include:
   # - dist: xenial
