@@ -9,6 +9,8 @@ script:
   # - sudo update-java-alternatives -s temurin-17-jdk-arm64
   # - export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-16-hotspot-${TRAVIS_CPU_ARCH}
   # - export PATH=$JAVA_HOME/bin:$PATH
+  - sudo apt dist-upgrade -y
+  - sudo apt autoremove -y
   - sudo apt install -y linux-headers-5.8.0-63-generic
   - apt-cache search linux-headers-*
   - sudo apt-get update
