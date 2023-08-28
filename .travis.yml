@@ -2,6 +2,8 @@ os: linux
 group: edge
 script:
   - python3 --version
+  - sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
+  - update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
   - python --version
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
