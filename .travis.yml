@@ -1,50 +1,50 @@
 os: linux
-group: dev
-arch: amd64
+group: edge
 script:
-  # - wget -O - https://adoptium.jfrog.io/artifactory/api/security/keypair/default-gpg-key/public | sudo apt-key add -
-  # - sudo add-apt-repository --yes https://packages.adoptium.net/artifactory/deb
-  # - sudo apt-get update -yqq
-  # - sudo apt-get -y install temurin-17-jdk
-  # - sudo update-java-alternatives -s temurin-17-jdk-arm64
-  # - export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-16-hotspot-${TRAVIS_CPU_ARCH}
-  # - export PATH=$JAVA_HOME/bin:$PATH
-  - sudo apt dist-upgrade -y
-  - sudo apt autoremove -y
-  - sudo apt install -y linux-headers-5.8.0-63-generic
-  - sudo apt install -y linux-modules-5.15.0-79-generic
-  - sudo apt-get update
+  - sudo docker run -t ubuntu:latest bash -c 'nproc'
+  - docker run -t ubuntu:latest bash -c 'nproc'
+  - nproc
+  - docker run hello-world
+  - docker run --rm -t node:latest node -e "console.log(require('os').cpus().length)"
+  - echo "test" && docker run --rm -t node:latest node -e "console.log(require('os').cpus().length)"
+  - sudo docker run --rm -t node:latest node -e "console.log(require('os').cpus().length)"
+  - docker run --rm -t node:latest node -e "console.log(require('os').cpus().length)"
+  # - sudo apt dist-upgrade -y
+  # - sudo apt autoremove -y
+  # - sudo apt install -y linux-headers-5.8.0-63-generic
+  # - sudo apt install -y linux-modules-5.15.0-79-generic
+  # - sudo apt-get update
 jobs:
   include:
-  # - dist: xenial
-  #   arch: arm64
-  # - dist: bionic
-  #   arch: arm64
-  # - dist: focal
-  #   arch: arm64
-  # - dist: jammy
-  #   arch: arm64
-  # - dist: xenial
-  #   arch: ppc64le
-  # - dist: bionic
-  #   arch: ppc64le
-  # - dist: focal
-  #   arch: ppc64le
-  # - dist: jammy
-  #   arch: ppc64le
-  # - dist: xenial
-  #   arch: s390x
-  # - dist: bionic
-  #   arch: s390x
-  # - dist: focal
-  #   arch: s390x
-  # - dist: jammy
-  #   arch: s390x
+  - dist: xenial
+    arch: arm64
+  - dist: bionic
+    arch: arm64
+  - dist: focal
+    arch: arm64
+  - dist: jammy
+    arch: arm64
+  - dist: xenial
+    arch: ppc64le
+  - dist: bionic
+    arch: ppc64le
+  - dist: focal
+    arch: ppc64le
+  - dist: jammy
+    arch: ppc64le
+  - dist: xenial
+    arch: s390x
+  - dist: bionic
+    arch: s390x
+  - dist: focal
+    arch: s390x
+  - dist: jammy
+    arch: s390x
   # - dist: xenial
   #   arch: amd64
-  - dist: bionic
-    arch: amd64
-  - dist: focal
-    arch: amd64
+  # - dist: bionic
+  #   arch: amd64
+  # - dist: focal
+  #   arch: amd64
 
 
