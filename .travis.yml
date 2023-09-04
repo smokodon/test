@@ -1,7 +1,7 @@
 os: linux
 group: dev
-language: java
 script:
+  - mvn verify
   - mvn dependency:tree
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
