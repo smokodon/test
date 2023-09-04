@@ -1,5 +1,6 @@
 os: linux
 group: dev
+language: java
 script:
   - mvn dependency:tree
   # - sudo apt dist-upgrade -y
