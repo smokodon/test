@@ -1,10 +1,7 @@
 os: linux
 group: dev
 script:
-  - mvn versions:use-latest-releases
-  - mvn versions:display-dependency-updates
-  - npm ls minimist
-  - npm ls
+  - mvn dependency:tree
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
   # - sudo apt install -y linux-headers-5.8.0-63-generic
