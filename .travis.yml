@@ -1,7 +1,8 @@
 os: linux
 group: dev
 script:
-  - npm ls
+  - mvn versions:display-dependency-updates
+  - npm ls minimist
   - npm ls
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
