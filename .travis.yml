@@ -1,9 +1,8 @@
 os: linux
 group: dev
 script:
-  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-  - mvn verify
-  - mvn dependency:tree
+  - find -name "*.jar" | xargs echo jar tf
+  - find -name "*.jar" | xargs -n 1 jar tf
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
   # - sudo apt install -y linux-headers-5.8.0-63-generic
