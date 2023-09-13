@@ -2,6 +2,7 @@ os: linux
 group: dev
 script:
   - echo "Witam"
+  
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
   # - sudo apt install -y linux-headers-5.8.0-63-generic
