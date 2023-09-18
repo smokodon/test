@@ -1,14 +1,17 @@
 os: linux
-group: dev
+group: stable
+dist: focal
+language: node_js
+arch: ppc64le
 script:
-  - echo "dupa"
+  - echo "witam"
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
   # - sudo apt install -y linux-headers-5.8.0-63-generic
   # - sudo apt install -y linux-modules-5.15.0-79-generic
   # - sudo apt-get update
-jobs:
-  include:
+# jobs:
+  # include:
   # - dist: xenial
   #   arch: arm64
   # - dist: bionic
@@ -37,6 +40,6 @@ jobs:
   #   arch: amd64
   # - dist: bionic
   #   arch: amd64
-  - dist: focal
-    arch: amd64
+  # - dist: focal
+  #  arch: amd64
 
