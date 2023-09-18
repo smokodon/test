@@ -1,7 +1,7 @@
 os: linux
 group: stable
 dist: focal
-language: node_js
+language: shell
 arch: ppc64le
 script:
   - echo "witam"
