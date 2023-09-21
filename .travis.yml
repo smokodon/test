@@ -1,8 +1,6 @@
 os: linux
 group: stable
 dist: focal
-language: shell
-arch: ppc64le
 script:
   - echo "witam"
   # - sudo apt dist-upgrade -y
