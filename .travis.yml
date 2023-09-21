@@ -2,7 +2,7 @@ os: linux
 group: stable
 dist: focal
 script:
-  - echo "witam"
+  - redis-cli ping
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
   # - sudo apt install -y linux-headers-5.8.0-63-generic
