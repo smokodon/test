@@ -7,10 +7,9 @@ node_js:
 dist: focal
 services:
   - docker
-install:
-  - npm ci
 script:
   - echo "test"
+  - npm install
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
   # - sudo apt install -y linux-headers-5.8.0-63-generic
