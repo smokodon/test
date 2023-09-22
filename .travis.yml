@@ -3,12 +3,12 @@ group: stable
 arch: s390x
 language: node_js
 node_js:
-  - "18"
-dist: jammy
+  - "8"
+dist: focal
 services:
   - docker
 script:
-  - nvm uninstall v18.18.0
+  - nvm ci
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
   # - sudo apt install -y linux-headers-5.8.0-63-generic
