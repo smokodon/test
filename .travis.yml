@@ -7,8 +7,6 @@ node_js:
 dist: focal
 services:
   - docker
-install:
-  - npm ci
 script:
   - nvm uninstall v18.18.0
   # - sudo apt dist-upgrade -y
