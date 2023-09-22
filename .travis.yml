@@ -3,7 +3,7 @@ group: stable
 arch: s390x
 language: node_js
 node_js:
-  - "8"
+  - "16"
 dist: focal
 services:
   - docker
