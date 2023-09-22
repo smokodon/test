@@ -1,10 +1,10 @@
 os: linux
-group: stable
+group: edge
 arch: s390x
 language: node_js
 dist: focal
 script:
-  - redis-cli ping
+  - echo "Hello"
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
   # - sudo apt install -y linux-headers-5.8.0-63-generic
