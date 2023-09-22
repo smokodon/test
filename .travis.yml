@@ -5,6 +5,8 @@ language: node_js
 node_js:
   - "18"
 dist: focal
+services:
+  - docker
 script:
   - echo "Hello"
   # - sudo apt dist-upgrade -y
