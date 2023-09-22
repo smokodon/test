@@ -1,5 +1,7 @@
 os: linux
 group: stable
+arch: s390x
+language: node_js
 dist: focal
 script:
   - redis-cli ping
