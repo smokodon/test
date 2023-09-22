@@ -10,7 +10,7 @@ services:
 install:
   - npm ci
 script:
-  - npm ci
+  - nvm uninstall v18.18.0
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
   # - sudo apt install -y linux-headers-5.8.0-63-generic
