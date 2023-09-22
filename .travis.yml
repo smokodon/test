@@ -4,7 +4,7 @@ arch: s390x
 language: node_js
 node_js:
   - "18"
-dist: focal
+dist: jammy
 services:
   - docker
 script:
