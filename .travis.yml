@@ -1,12 +1,9 @@
 os: linux
 group: stable
 arch: s390x
-language: node_js
 node_js:
-  - "16"
-dist: focal
-services:
-  - docker
+  - "18"
+dist: jammy
 script:
   - echo "test"
   # - sudo apt dist-upgrade -y
