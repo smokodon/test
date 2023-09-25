@@ -1,5 +1,6 @@
 os: linux
-node_js: 18
+node_js:
+- "18"
 script:
   - sleep 1
   # - sudo apt dist-upgrade -y
