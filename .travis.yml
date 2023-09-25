@@ -1,11 +1,10 @@
 os: linux
-group: stable
+group: edge
 arch: s390x
-node_js:
-  - "18"
-dist: jammy
+node_js: 18
+dist: focal
 script:
-  - echo "test"
+  - sleep 1
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
   # - sudo apt install -y linux-headers-5.8.0-63-generic
