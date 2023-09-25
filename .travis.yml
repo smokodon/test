@@ -1,11 +1,11 @@
 os: linux
 language: node_js
-node_js: 16
+node_js: 18
 group: stable
 script:
   - npm help
   - nvm install --latest-npm
-  - nvm install
+  - npm ci
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
   # - sudo apt install -y linux-headers-5.8.0-63-generic
