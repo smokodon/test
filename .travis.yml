@@ -5,6 +5,7 @@ group: stable
 script:
   - npm init --yes
   #- nvm install --latest-npm
+  - npm install
   - npm ci
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
