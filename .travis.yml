@@ -1,6 +1,7 @@
 os: linux
 language: node_js
 node_js: 18
+group: edge
 script:
   - npm ci 
   # - sudo apt dist-upgrade -y
