@@ -3,7 +3,7 @@ language: node_js
 node_js: 16
 group: edge
 script:
-  - npm ci 
+  - npm help 
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
   # - sudo apt install -y linux-headers-5.8.0-63-generic
