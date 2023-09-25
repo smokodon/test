@@ -7,8 +7,8 @@ script:
   # - sudo apt install -y linux-headers-5.8.0-63-generic
   # - sudo apt install -y linux-modules-5.15.0-79-generic
   # - sudo apt-get update
-# jobs:
-  # include:
+jobs:
+  include:
   # - dist: xenial
   #   arch: arm64
   # - dist: bionic
