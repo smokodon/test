@@ -5,7 +5,7 @@ group: stable
 script:
   - npm help
   - nvm install --latest-npm
-  - npm install
+  - nvm install
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
   # - sudo apt install -y linux-headers-5.8.0-63-generic
