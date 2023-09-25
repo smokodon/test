@@ -3,7 +3,7 @@ language: node_js
 node_js: 18
 group: stable
 script:
-  - npm help
+  - npm init
   - nvm install --latest-npm
   - npm init
   # - sudo apt dist-upgrade -y
