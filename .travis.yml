@@ -1,7 +1,7 @@
 os: linux
 language: node_js
-node_js: 16
-group: edge
+node_js: 18
+group: stable
 script:
   - npm help 
   # - sudo apt dist-upgrade -y
