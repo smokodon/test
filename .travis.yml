@@ -1,6 +1,6 @@
 os: linux
 language: node_js
-node_js: 18
+node_js: 16
 group: edge
 script:
   - npm ci 
