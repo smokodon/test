@@ -4,7 +4,7 @@ node_js: 16
 group: stable
 script:
   - npm help
-  - npm install -g npm@latest
+  - nvm install --latest-npm
   - npm install
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
