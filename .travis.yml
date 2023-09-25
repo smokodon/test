@@ -1,5 +1,5 @@
 os: linux
-group: edge
+group: stable
 arch: s390x
 node_js: 18
 dist: focal
