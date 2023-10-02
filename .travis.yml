@@ -3,7 +3,7 @@ group: stable
 script:
   - pyenv -v
   - ant -v
-  - apt upgrade ant
+  - sudo apt upgrade ant
   - ant -v
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
