@@ -1,7 +1,8 @@
 os: linux
-group: stable
+group: dev
 script:
   - pyenv -v
+  - pyenv update
   - ant -v
   - sudo apt upgrade ant
   - ant -v
