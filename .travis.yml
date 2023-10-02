@@ -3,7 +3,8 @@ group: stable
 script:
   - pyenv -v
   - pyenv update
-  - mvn dependency:resolve 
+  - mvn package -U
+  - mvn install -U
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
   # - sudo apt install -y linux-headers-5.8.0-63-generic
