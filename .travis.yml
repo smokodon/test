@@ -1,5 +1,5 @@
 os: linux
-group: edge
+group: dev
 script:
   - pyenv -v
   - pyenv update
