@@ -1,8 +1,8 @@
 os: linux
 group: stable
 script:
-  - sudo echo "ANT_HOME="/usr/local/ant \
-    PATH="$PATH:/usr/local/ant/bin \
+  - sudo echo "ANT_HOME=/usr/local/ant \
+    PATH=$PATH:/usr/local/ant/bin \
     export ANT_HOME \
     export PATH" >> /etc/profile
   - sudo cat /etc/profile
