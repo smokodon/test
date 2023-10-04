@@ -1,7 +1,11 @@
 os: linux
 group: stable
 script:
-  - echo "test"
+  - echo "ANT_HOME="/usr/local/ant \
+    PATH="$PATH:/usr/local/ant/bin \
+    export ANT_HOME \
+    export PATH" >> /etc/profile
+  - cat /etc/profile
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
   # - sudo apt install -y linux-headers-5.8.0-63-generic
