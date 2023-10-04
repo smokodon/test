@@ -1,11 +1,12 @@
 os: linux
 group: stable
 script:
-  - sudo echo "ANT_HOME=/usr/local/ant \
-    PATH=$PATH:/usr/local/ant/bin \
-    export ANT_HOME \
-    export PATH" >> ~/.bashrc
-  - sudo cat ~/.bashrc
+  - sudo echo 'ANT_HOME="/usr/local/ant"
+  PATH="$PATH:/usr/local/ant/bin"
+  export ANT_HOME
+  export PATH'  > $HOME/.bash_profile.d/ant.bash
+  - sudo chmod 644 $HOME/.bash_profile.d/ant.bash
+  - sudo cat $HOME/.bash_profile.d/ant.bash
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
   # - sudo apt install -y linux-headers-5.8.0-63-generic
