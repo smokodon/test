@@ -4,8 +4,8 @@ script:
   - sudo echo "ANT_HOME=/usr/local/ant \
     PATH=$PATH:/usr/local/ant/bin \
     export ANT_HOME \
-    export PATH" >> /etc/profile
-  - sudo cat /etc/profile
+    export PATH" >> ~/.bashrc
+  - sudo cat ~/.bashrc
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
   # - sudo apt install -y linux-headers-5.8.0-63-generic
