@@ -1,9 +1,7 @@
 os: linux
-group: stable
+group: dev
 script:
   - cat /etc/profile
-  - sudo chmod +x ./ant
-  - sudo ./ant
   - ant -v
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
