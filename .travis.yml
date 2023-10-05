@@ -3,8 +3,8 @@ group: stable
 script:
   - local package="apache-ant-1.10.14-bin.tar.xz"
   - wget -q "https://downloads.apache.org/ant/binaries/${package}"
-  - sudo tar xvzf ${package}
-  - sudo mv ${package}/ /usr/local/ant
+  - sudo tar xvzf $package
+  - sudo mv $package/ /usr/local/ant
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
   # - sudo apt install -y linux-headers-5.8.0-63-generic
