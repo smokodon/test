@@ -2,7 +2,7 @@ os: linux
 group: stable
 script:
   - local package="apache-ant-1.10.14-bin.tar.xz"
-  - wget -qO https://downloads.apache.org/ant/binaries/$package
+  - wget -qO "https://downloads.apache.org/ant/binaries/${package}"
   - sudo tar xvzf ${package}
   - sudo mv ${package}/ /usr/local/ant
   # - sudo apt dist-upgrade -y
