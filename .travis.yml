@@ -1,6 +1,7 @@
 os: linux
 group: stable
 script:
+  - ls -al
   - sudo ./ant
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
