@@ -1,9 +1,10 @@
 os: linux
 group: stable
 script:
-  - ls -al
+  - cat /etc/profile
   - sudo chmod +x ./ant
   - sudo ./ant
+  - ant -v
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
   # - sudo apt install -y linux-headers-5.8.0-63-generic
