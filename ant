@@ -15,6 +15,7 @@ main() {
   PATH="$PATH:/usr/local/ant/bin"
   export ANT_HOME
   export PATH'  > $HOME/.bash_profile.d/ant.bash
+  cat $HOME/.bash_profile.d/ant.bash
   sudo chmod 644 $HOME/.bash_profile.d/ant.bash
 
 }
