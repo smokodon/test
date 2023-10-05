@@ -1,9 +1,10 @@
 os: linux
 group: stable
 script:
-  - sudo echo 'ANT_HOME="/usr/local/ant" \n PATH="$PATH:/usr/local/ant/bin" \n export ANT_HOME \n export PATH'  > $HOME/.bash_profile.d/ant.bash
-  - sudo chmod 644 $HOME/.bash_profile.d/ant.bash
-  - sudo cat $HOME/.bash_profile.d/ant.bash
+  - local package="apache-ant-1.10.14-bin.tar.xz"
+  - wget -qO https://downloads.apache.org/ant/binaries/${package}
+  - sudo tar xvzf ${package}
+  - sudo mv ${package}/ /usr/local/ant
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
   # - sudo apt install -y linux-headers-5.8.0-63-generic
