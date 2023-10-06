@@ -1,5 +1,5 @@
 os: linux
-group: edge
+group: dev
 script:
   - cat /etc/profile
   - ant -v
@@ -36,8 +36,8 @@ jobs:
   #   arch: s390x
   # - dist: xenial
   #   arch: amd64
-  # - dist: bionic
-  #   arch: amd64
+  - dist: bionic
+    arch: amd64
   - dist: focal
     arch: amd64
 
