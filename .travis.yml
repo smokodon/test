@@ -57,3 +57,5 @@ npm: true
 
 script: 
   - google-chrome --version
+  - chromedriver -v
+  - chromium-browser -version
