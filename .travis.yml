@@ -47,9 +47,9 @@ services:
   - xvfb
 addons:
   chrome: stable
-apt:
-  packages:
-  - chromium-chromedriver
+  apt:
+    packages:
+    - chromium-chromedriver
 env:
   - CHROMIUM=true
 node_js: 18
@@ -57,6 +57,6 @@ npm: true
 
 script: 
   - google-chrome --version
-  - sudo apt install chromium-chromedriver
+  #- sudo apt install chromium-chromedriver
   - chromedriver -v
   - chromium-browser -version
