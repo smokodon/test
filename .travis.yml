@@ -56,4 +56,4 @@ node_js: 18
 npm: true
 
 script: 
-  - chromeDriver -v
+  - google-chrome --version
