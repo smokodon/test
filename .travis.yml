@@ -5,7 +5,10 @@ language: java
 script:
   - echo "test"
 #   - ant -v
+  - wget -qO - https://download.bell-sw.com/pki/GPG-KEY-bellsoft | sudo apt-key add -
   - sudo add-apt-repository --yes "deb [arch=amd64] https://apt.bell-sw.com/ stable main"
+  - sudo apt-get update -yqq
+  - sudo apt-get -yqq --no-install-suggests --no-install-recommends install bellsoft-java21 || true
   # - sudo apt autoremove -y
   # - sudo apt install -y linux-headers-5.8.0-63-generic
   # - sudo apt install -y linux-modules-5.15.0-79-generic
