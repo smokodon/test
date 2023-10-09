@@ -1,15 +1,15 @@
-os: linux
-group: dev
-script:
-  - cat /etc/profile
-  - ant -v
+# os: linux
+# group: dev
+# script:
+#   - cat /etc/profile
+#   - ant -v
   # - sudo apt dist-upgrade -y
   # - sudo apt autoremove -y
   # - sudo apt install -y linux-headers-5.8.0-63-generic
   # - sudo apt install -y linux-modules-5.15.0-79-generic
   # - sudo apt-get update
-jobs:
-  include:
+# jobs:
+  # include:
   # - dist: xenial
   #   arch: arm64
   # - dist: bionic
@@ -36,8 +36,22 @@ jobs:
   #   arch: s390x
   # - dist: xenial
   #   arch: amd64
-  - dist: bionic
-    arch: amd64
-  - dist: focal
-    arch: amd64
+  # - dist: bionic
+  #  arch: amd64
+  # - dist: focal
+  #  arch: amd64
+
+language: node_js
+dist: focal
+services:
+  - xvfb
+addons:
+  chrome: stable
+apt:
+  packages:
+  - chromium-chromedriver
+env:
+  - CHROMIUM=true
+node_js: 18
+npm: true
 
