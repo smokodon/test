@@ -1,7 +1,7 @@
 os: linux
 group: stable
 language: java
-jdk: openjdk12
+jdk: openjdk17
 script:
   - echo "test"
 #   - ant -v
