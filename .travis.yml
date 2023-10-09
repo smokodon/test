@@ -57,5 +57,6 @@ npm: true
 
 script: 
   - google-chrome --version
+  - sudo apt install chromium-chromedriver
   - chromedriver -v
   - chromium-browser -version
