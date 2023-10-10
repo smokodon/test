@@ -3,11 +3,13 @@ group: stable
 service: docker
 # jdk: openjdk21
 script:
-  - docker -v
-  # - sudo apt autoremove -y
-  # - sudo apt install -y linux-headers-5.8.0-63-generic
-  # - sudo apt install -y linux-modules-5.15.0-79-generic
-  # - sudo apt-get update
+- docker version
+- sudo systemctl stop docker
+- curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+- echo -e '\n' | sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+- sudo apt-get update
+- sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce docker-buildx-plugin
+- docker -v
 jobs:
   include:
   # - dist: xenial
