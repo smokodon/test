@@ -31,10 +31,10 @@ jobs:
   #   arch: s390x
   # - dist: jammy
   #   arch: s390x
-  # - dist: xenial
-  #   arch: amd64
-  # - dist: bionic
-  #   arch: amd64
+  - dist: xenial
+    arch: amd64
+  - dist: bionic
+    arch: amd64
   - dist: focal
     arch: amd64
   # - dist: jammy
