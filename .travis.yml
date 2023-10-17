@@ -3,7 +3,7 @@ group: stable
 service: postgresql
 # jdk: openjdk21
 script:
-- psql -v
+- psql --version
 jobs:
   include:
   # - dist: xenial
