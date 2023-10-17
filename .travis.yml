@@ -3,6 +3,7 @@ group: stable
 service: postgresql
 # jdk: openjdk21
 script:
+- sudo systemctl start postgresql@13-main
 - psql --version
 - psql -c 'create database test;' -U postgres
 jobs:
@@ -31,10 +32,10 @@ jobs:
   #   arch: s390x
   # - dist: jammy
   #   arch: s390x
-  - dist: xenial
-    arch: amd64
-  - dist: bionic
-    arch: amd64
+  # - dist: xenial
+  #   arch: amd64
+  # - dist: bionic
+  #   arch: amd64
   - dist: focal
     arch: amd64
   # - dist: jammy
