@@ -4,6 +4,7 @@ service: postgresql
 # jdk: openjdk21
 script:
 - psql --version
+- psql -c 'create database test;' -U postgres
 jobs:
   include:
   # - dist: xenial
