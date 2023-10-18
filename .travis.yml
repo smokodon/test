@@ -1,11 +1,8 @@
 os: linux
-group: stable
-service: postgresql
+group: dev
 # jdk: openjdk21
 script:
-- sudo systemctl start postgresql@13-main
-- psql --version
-- psql -c 'create database test;' -U postgres
+- echo "test"
 jobs:
   include:
   # - dist: xenial
