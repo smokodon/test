@@ -1,5 +1,4 @@
 os: linux
-group: dev
 # jdk: openjdk21
 script:
 - echo "test"
@@ -29,11 +28,15 @@ jobs:
   #   arch: s390x
   # - dist: jammy
   #   arch: s390x
-  - dist: xenial
-    arch: amd64
+  # - dist: xenial
+  #   arch: amd64
   # - dist: bionic
   #   arch: amd64
   - dist: focal
+    group: dev
+    arch: amd64
+  - dist: focal
+    group: edge
     arch: amd64
   # - dist: jammy
   #   arch: amd64
