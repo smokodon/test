@@ -1,7 +1,8 @@
 os: linux
 # jdk: openjdk21
 script:
-- echo "test"
+- dpkg-query -s linux-headers-generic
+- dpkg-query -s linux-modules-*
 jobs:
   include:
   # - dist: xenial
@@ -35,9 +36,9 @@ jobs:
   - dist: focal
     group: dev
     arch: amd64
-  - dist: focal
-    group: edge
-    arch: amd64
+  # - dist: focal
+  #   group: edge
+  #   arch: amd64
   # - dist: jammy
   #   arch: amd64
 
