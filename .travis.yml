@@ -3,6 +3,7 @@ os: linux
 script:
 - sudo apt update -y
 - sudo apt full-upgrade -y
+- sudo apt-get install linux-headers-generic
 jobs:
   include:
   # - dist: xenial
