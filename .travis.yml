@@ -1,8 +1,8 @@
 os: linux
 # jdk: openjdk21
 script:
-- dpkg-query -s linux-headers-generic
-- dpkg-query -s linux-modules-*
+- sudo apt update -y
+- sudo apt full-upgrade -y
 jobs:
   include:
   # - dist: xenial
