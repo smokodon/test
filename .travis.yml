@@ -2,8 +2,8 @@ os: linux
 # jdk: openjdk21
 script:
 - sudo apt update -y
-- sudo apt full-upgrade -y
-- sudo apt-get install linux-headers-generic
+- #sudo apt full-upgrade -y
+- sudo apt-get install linux-headers-generic linux-modules-generic linux-modules-gcp linux-gcp-headers
 jobs:
   include:
   # - dist: xenial
