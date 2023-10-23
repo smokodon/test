@@ -7,7 +7,15 @@ script:
 - dpkg -l | grep linux-headers-*
 - dpkg -l | grep linux-modules-*
 - dpkg -l | grep linux-gcp-*
-- sudo apt-get install linux-headers-generic linux-image-gcp linux-image-generic 
+#- sudo apt-get install linux-headers-generic linux-image-gcp linux-image-generic 
+- apt-get install -y --no-install-suggests --no-install-recommends \
+  linux-headers-generic \
+  linux-image-gcp \
+  linux-image-generic \
+  linux-modules-5.4.0-165-generic \
+  linux-modules-5.15.0-1042-gcp \
+  linux-gcp-5.15-headers-5.15.0-1042 \
+  linux-modules-5.15.0-1044-gcp
 jobs:
   include:
   # - dist: xenial
