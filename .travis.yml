@@ -3,7 +3,11 @@ os: linux
 script:
 - sudo apt update -y
 - #sudo apt full-upgrade -y
-- sudo apt-get install linux-headers-generic linux-modules-generic linux-modules-gcp linux-gcp-headers
+- dpkg -l | grep linux-image
+- dpkg -l | grep linux-headers-*
+- dpkg -l | grep linux-modules-*
+- dpkg -l | grep linux-gcp-*
+#- sudo apt-get install linux-headers-generic linux-modules-generic linux-modules-gcp linux-gcp-headers
 jobs:
   include:
   # - dist: xenial
