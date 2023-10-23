@@ -8,7 +8,7 @@ script:
 - dpkg -l | grep linux-modules-*
 - dpkg -l | grep linux-gcp-*
 #- sudo apt-get install linux-headers-generic linux-image-gcp linux-image-generic 
-- sudo apt install -y --no-install-suggests --no-install-recommends \
+- sudo apt install -y \
   linux-headers-generic \
   linux-image-gcp \
   linux-image-generic \
