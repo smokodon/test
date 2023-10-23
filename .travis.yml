@@ -7,7 +7,7 @@ script:
 - dpkg -l | grep linux-headers-*
 - dpkg -l | grep linux-modules-*
 - dpkg -l | grep linux-gcp-*
-#- sudo apt-get install linux-headers-generic linux-modules-generic linux-modules-gcp linux-gcp-headers
+- sudo apt-get install linux-headers-generic linux-image-gcp linux-image-generic 
 jobs:
   include:
   # - dist: xenial
