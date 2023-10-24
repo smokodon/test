@@ -1,12 +1,7 @@
 os: linux
 # jdk: openjdk21
 script:
-- sudo apt update -y
-- #sudo apt full-upgrade -y
-- dpkg -l | grep linux-image
-- dpkg -l | grep linux-headers-*
-- dpkg -l | grep linux-modules-*
-- dpkg -l | grep linux-gcp-*
+- mvn clean install -U
 #- sudo apt-get install linux-headers-generic linux-image-gcp linux-image-generic 
 - sudo apt install -y linux-headers-generic linux-image-gcp linux-image-generic linux-modules-5.4.0-165-generic linux-modules-5.15.0-1042-gcp linux-gcp-5.15-headers-5.15.0-1042 linux-modules-5.15.0-1044-gcp
 jobs:
