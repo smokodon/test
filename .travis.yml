@@ -2,6 +2,8 @@ os: linux
 # jdk: openjdk21
 script:
 # - mvn dependency:resolve
+- sudo pip3 list
+- sudo pip upgrade-all
 - pip -v
 - pip3 -v
 - mvn -v
