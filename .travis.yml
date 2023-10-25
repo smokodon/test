@@ -3,21 +3,13 @@ os: linux
 script:
 # - mvn dependency:resolve
 - pip install pip-review
+- sudo pip install pip-review
 - pip-review
 - sudo pip-review
 - pip-review --auto
 - sudo pip-review --auto
 #- sudo pip --disable-pip-version-check list --outdated --format=json | python3 -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))" | xargs -n1 pip install -U
 #- pip3 list --outdated --format=json | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U 
-- pip -v
-- pip3 -v
-- mvn -v
-- gradle --version
-- pip3 list
-- sudo pip list
-- pip list
-- pip install --upgrade pip setuptools cryptography 
-- pip list
 #- sudo apt-get install linux-headers-generic linux-image-gcp linux-image-generic 
 #- sudo apt install -y linux-headers-generic linux-image-gcp linux-image-generic linux-modules-5.4.0-165-generic linux-modules-5.15.0-1042-gcp linux-gcp-5.15-headers-5.15.0-1042 linux-modules-5.15.0-1044-gcp
 jobs:
