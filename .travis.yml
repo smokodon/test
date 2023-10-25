@@ -3,9 +3,9 @@ os: linux
 script:
 # - mvn dependency:resolve
 - pip install pip-review
-- sudo pip install pip-review
+- sudo -H pip install pip-review
 - pip-review
-- sudo pip-review
+- sudo -H pip-review
 - pip-review --auto
 - sudo pip-review --auto
 #- sudo pip --disable-pip-version-check list --outdated --format=json | python3 -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))" | xargs -n1 pip install -U
