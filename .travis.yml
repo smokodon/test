@@ -4,6 +4,8 @@ script:
 # - mvn dependency:resolve
 - mvn -v
 - gradle --version
+- pip3 list
+- sudo pip list
 - pip list
 - pip install --upgrade pip setuptools cryptography 
 - pip list
