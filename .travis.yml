@@ -2,6 +2,8 @@ os: linux
 # jdk: openjdk21
 script:
 # - mvn dependency:resolve
+- pip -v
+- pip3 -v
 - mvn -v
 - gradle --version
 - pip3 list
