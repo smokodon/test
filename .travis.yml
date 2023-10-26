@@ -2,7 +2,7 @@ os: linux
 # jdk: openjdk21
 script:
 # - mvn dependency:resolve
-- sudo
+- sudo rm -rf /home/travis/.lein/self-installs
 - pip install pip-review
 - sudo -H pip install pip-review
 - pip-review
