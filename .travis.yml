@@ -2,7 +2,7 @@ os: linux
 # jdk: openjdk21
 script:
 # - mvn dependency:resolve
-- git name-rev --name-only
+- curl https://pyenv.run | bash
 - git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
 - rm -rf ~/.pyenv/.git/refs/tags
 - pyenv update
