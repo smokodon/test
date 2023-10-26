@@ -2,14 +2,13 @@ os: linux
 # jdk: openjdk21
 script:
 # - mvn dependency:resolve
-- pyenv --version
-- echo $(pyenv root)
-- sudo rm -rf /opt/pyenv
-- curl https://pyenv.run | bash
-#- git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
-#- rm -rf ~/.pyenv/.git/refs/tags
-- pyenv update
-- pyenv --version
+- npm list -g --depth=0
+# - pyenv --version
+# - echo $(pyenv root)
+# - sudo rm -rf /opt/pyenv
+# - curl https://pyenv.run | bash
+# - pyenv update
+# - pyenv --version
 #- sudo pip --disable-pip-version-check list --outdated --format=json | python3 -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))" | xargs -n1 pip install -U
 #- pip3 list --outdated --format=json | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U 
 #- sudo apt-get install linux-headers-generic linux-image-gcp linux-image-generic 
