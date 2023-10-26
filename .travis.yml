@@ -3,6 +3,8 @@ os: linux
 script:
 # - mvn dependency:resolve
 - echo $(pyenv root)
+- sudo rm -rf /opt/pyenv
+- curl https://pyenv.run | bash
 - cat ~/.pyenv/.git/refs/tags
 - git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
 - rm -rf ~/.pyenv/.git/refs/tags
