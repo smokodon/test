@@ -2,6 +2,7 @@ os: linux
 # jdk: openjdk21
 script:
 # - mvn dependency:resolve
+- pyenv version-name
 - echo $(pyenv root)
 - sudo rm -rf /opt/pyenv
 - curl https://pyenv.run | bash
