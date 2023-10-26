@@ -2,7 +2,7 @@ os: linux
 # jdk: openjdk21
 script:
 # - mvn dependency:resolve
-- npm list -g --depth=0
+- npm list --location=global --depth=0
 # - pyenv --version
 # - echo $(pyenv root)
 # - sudo rm -rf /opt/pyenv
