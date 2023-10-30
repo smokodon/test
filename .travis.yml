@@ -2,11 +2,11 @@ os: linux
 # jdk: openjdk21
 script:
 # - mvn dependency:resolve
-- git name-rev --refs='refs/heads/*' --name-only HEAD
+- curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
 - cd ~/.pyenv
 - git status
-- git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
-- rm -rf ~/.pyenv/.git/refs/tags
+#- git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
+#- rm -rf ~/.pyenv/.git/refs/tags
 - pyenv update
 # - pyenv --version
 # - echo $(pyenv root)
