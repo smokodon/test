@@ -3,6 +3,8 @@ os: linux
 script:
 # - mvn dependency:resolve
 - git name-rev --refs='refs/heads/*' --name-only HEAD
+- cd ~/.pyenv
+- git status
 - git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
 - rm -rf ~/.pyenv/.git/refs/tags
 - pyenv update
