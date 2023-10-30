@@ -2,6 +2,7 @@ os: linux
 # jdk: openjdk21
 script:
 # - mvn dependency:resolve
+- git checkout master
 - cd /opt/pyenv
 - git status
 - rm -f /opt/pyenv
