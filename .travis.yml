@@ -2,9 +2,10 @@ os: linux
 # jdk: openjdk21
 script:
 # - mvn dependency:resolve
-- curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
-- cd ~/.pyenv
+- cd /opt/pyenv
 - git status
+- rm -f /opt/pyenv
+- curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
 #- git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
 #- rm -rf ~/.pyenv/.git/refs/tags
 - pyenv update
