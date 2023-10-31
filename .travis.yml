@@ -17,7 +17,7 @@ script:
 # - cd ..
 # - curl --version
 - cat /etc/resolv.conf
-- sudo flush dns
+- sudo resolvectl flush-caches
 # - sudo echo "options rotate" >> /etc/resolv.conf
 # - sudo echo "options timeout:1" >> /etc/resolv.conf
 # - sudo echo "nameserver 8.8.8.8" >> /etc/resolv.conf
