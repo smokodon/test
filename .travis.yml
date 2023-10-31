@@ -1,5 +1,5 @@
 os: linux
-group: dev
+group: stable
 language: php
 php: 8.0
 script:
