@@ -1,5 +1,5 @@
 os: linux
-group: stable
+group: dev
 language: php
 install: skip
 php: 8.2.9
