@@ -1,7 +1,5 @@
 os: linux
 group: stable
-language: php
-php: 8.0
 script:
 # - curl -sSL https://get.rvm.io | bash -s stable
 # - rvm pkg install openssl
@@ -16,17 +14,7 @@ script:
 # - sudo ldconfig
 # - cd ..
 # - curl --version
-- composer config disable-tls false
-- sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
-- composer diagnose
-# - sudo echo "options rotate" >> /etc/resolv.conf
-# - sudo echo "options timeout:1" >> /etc/resolv.conf
-# - sudo echo "nameserver 8.8.8.8" >> /etc/resolv.conf
-# - sudo echo "nameserver 8.8.4.4" >> /etc/resolv.conf
-# - sudo echo "nameserver 208.67.222.222" >> /etc/resolv.conf
-# - sudo echo "nameserver 208.67.220.220" >> /etc/resolv.conf
-- composer config -g repo.packagist composer https://packagist.org
-- php cosign
+- sudo cosign -release
 #- sudo pip --disable-pip-version-check list --outdated --format=json | python3 -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))" | xargs -n1 pip install -U
 #- pip3 list --outdated --format=json | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U 
 #- sudo apt-get install linux-headers-generic linux-image-gcp linux-image-generic 
@@ -59,9 +47,9 @@ jobs:
   #   arch: s390x
   # - dist: xenial
   #   arch: amd64
-  - dist: bionic
-    arch: amd64
+  # - dist: bionic
+  #   arch: amd64
   # - dist: focal
   #   arch: amd64
-  # - dist: jammy
-  #   arch: amd64
+  - dist: jammy
+    arch: amd64
