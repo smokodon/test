@@ -1,5 +1,5 @@
 os: linux
-group: dev
+group: stable
 script:
 # - curl -sSL https://get.rvm.io | bash -s stable
 # - rvm pkg install openssl
