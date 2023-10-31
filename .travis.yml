@@ -17,12 +17,12 @@ script:
 # - cd ..
 # - curl --version
 - cat /etc/resolv.conf
-- echo "options rotate" >> /etc/resolv.conf
-- echo "options timeout:1" >> /etc/resolv.conf
-- echo "nameserver 8.8.8.8" >> /etc/resolv.conf
-- echo "nameserver 8.8.4.4" >> /etc/resolv.conf
-- echo "nameserver 208.67.222.222" >> /etc/resolv.conf
-- echo "nameserver 208.67.220.220" >> /etc/resolv.conf
+- sudo echo "options rotate" >> /etc/resolv.conf
+- sudo echo "options timeout:1" >> /etc/resolv.conf
+- sudo echo "nameserver 8.8.8.8" >> /etc/resolv.conf
+- sudo echo "nameserver 8.8.4.4" >> /etc/resolv.conf
+- sudo echo "nameserver 208.67.222.222" >> /etc/resolv.conf
+- sudo echo "nameserver 208.67.220.220" >> /etc/resolv.conf
 - composer config -g repo.packagist composer https://packagist.org
 - php cosign
 #- sudo pip --disable-pip-version-check list --outdated --format=json | python3 -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))" | xargs -n1 pip install -U
@@ -59,7 +59,7 @@ jobs:
   #   arch: amd64
   - dist: bionic
     arch: amd64
-  - dist: focal
-    arch: amd64
+  # - dist: focal
+  #   arch: amd64
   # - dist: jammy
   #   arch: amd64
