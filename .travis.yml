@@ -1,7 +1,7 @@
 os: linux
 group: deb
 language: php
-php: 7.0.14
+php: 7.0
 script:
 # - curl -sSL https://get.rvm.io | bash -s stable
 # - rvm pkg install openssl
