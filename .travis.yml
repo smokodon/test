@@ -8,7 +8,7 @@ script:
 # - rvm install ruby-2.7.4 --with-openssl-dir=$HOME/.rvm/usr
 # - rvm use ruby-2.7.4
 - wget https://curl.se/download/curl-8.4.0.tar.gz
-- tar ./curl-8.4.0.tar.gz
+- tar -xvf ./curl-8.4.0.tar.gz
 - env PKG_CONFIG_PATH=/usr/lib/pkgconfig ./configure --with-ssl
 - make
 - make install
