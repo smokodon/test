@@ -1,6 +1,7 @@
 os: linux
 group: stable
 language: php
+install: skip
 php: 8.2.9
 script:
 # - curl -sSL https://get.rvm.io | bash -s stable
