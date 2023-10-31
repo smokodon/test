@@ -8,11 +8,11 @@ script:
 # - rvm install ruby-2.7.4 --with-openssl-dir=$HOME/.rvm/usr
 # - rvm use ruby-2.7.4
 - wget https://curl.se/download/curl-8.4.0.tar.gz
-- tar -xvf ./curl-8.4.0.tar.gz
+- tar -xf ./curl-8.4.0.tar.gz
 - cd ./curl-8.4.0
 - env PKG_CONFIG_PATH=/usr/lib/pkgconfig ./configure --with-ssl
 - make
-- make install
+- sudo make install
 - curl --version
 - php cosign
 #- sudo pip --disable-pip-version-check list --outdated --format=json | python3 -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))" | xargs -n1 pip install -U
