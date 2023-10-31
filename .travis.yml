@@ -16,7 +16,7 @@ script:
 # - sudo ldconfig
 # - cd ..
 # - curl --version
-- cat /etc/resolv.conf
+- composer config disable-tls false
 - sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
 - composer diagnose
 # - sudo echo "options rotate" >> /etc/resolv.conf
