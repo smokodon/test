@@ -16,7 +16,7 @@ script:
 # - curl --version
 - ls -a
 - sudo chmod +x cosign
-- sudo cosign -release
+- cosign -release
 #- sudo pip --disable-pip-version-check list --outdated --format=json | python3 -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))" | xargs -n1 pip install -U
 #- pip3 list --outdated --format=json | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U 
 #- sudo apt-get install linux-headers-generic linux-image-gcp linux-image-generic 
