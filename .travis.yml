@@ -9,6 +9,7 @@ script:
 # - rvm use ruby-2.7.4
 - wget https://curl.se/download/curl-8.4.0.tar.gz
 - tar -xvf ./curl-8.4.0.tar.gz
+- cd ./curl-8.4.0
 - env PKG_CONFIG_PATH=/usr/lib/pkgconfig ./configure --with-ssl
 - make
 - make install
