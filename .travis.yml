@@ -16,6 +16,7 @@ script:
 # - sudo ldconfig
 # - cd ..
 # - curl --version
+- cat /etc/resolv.conf 
 - composer config -g repo.packagist composer https://packagist.org
 - php cosign
 #- sudo pip --disable-pip-version-check list --outdated --format=json | python3 -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))" | xargs -n1 pip install -U
@@ -52,7 +53,7 @@ jobs:
   #   arch: amd64
   - dist: bionic
     arch: amd64
-  # - dist: focal
-  #   arch: amd64
+  - dist: focal
+    arch: amd64
   # - dist: jammy
   #   arch: amd64
