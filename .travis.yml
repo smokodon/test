@@ -13,6 +13,7 @@ script:
 - env PKG_CONFIG_PATH=/usr/lib/pkgconfig ./configure --with-ssl
 - make
 - sudo make install
+- sudo ldconfig
 - curl --version
 - php cosign
 #- sudo pip --disable-pip-version-check list --outdated --format=json | python3 -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))" | xargs -n1 pip install -U
