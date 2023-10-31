@@ -16,7 +16,8 @@ script:
 # - sudo ldconfig
 # - cd ..
 # - curl --version
-- sudo apt-get install curl libcurl3 libcurl3-dev php5-curl
+- composer self-update --rollback
+- sudo apt-get install curl libcurl3 libcurl3-dev
 - php cosign
 #- sudo pip --disable-pip-version-check list --outdated --format=json | python3 -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))" | xargs -n1 pip install -U
 #- pip3 list --outdated --format=json | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U 
