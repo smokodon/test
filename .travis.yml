@@ -7,15 +7,16 @@ script:
 # - rvm pkg install openssl
 # - rvm install ruby-2.7.4 --with-openssl-dir=$HOME/.rvm/usr
 # - rvm use ruby-2.7.4
-- wget https://curl.se/download/curl-8.4.0.tar.gz
-- tar -xf ./curl-8.4.0.tar.gz
-- cd ./curl-8.4.0
-- env PKG_CONFIG_PATH=/usr/lib/pkgconfig ./configure --with-ssl
-- make
-- sudo make install
-- sudo ldconfig
-- cd ..
-- curl --version
+# - wget https://curl.se/download/curl-8.4.0.tar.gz
+# - tar -xf ./curl-8.4.0.tar.gz
+# - cd ./curl-8.4.0
+# - env PKG_CONFIG_PATH=/usr/lib/pkgconfig ./configure --with-ssl
+# - make
+# - sudo make install
+# - sudo ldconfig
+# - cd ..
+# - curl --version
+- sudo apt-get install curl libcurl3 libcurl3-dev php5-curl
 - php cosign
 #- sudo pip --disable-pip-version-check list --outdated --format=json | python3 -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))" | xargs -n1 pip install -U
 #- pip3 list --outdated --format=json | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U 
