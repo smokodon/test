@@ -1,5 +1,5 @@
 os: linux
-group: stable
+group: dev
 services:
   - postgresql
 script:
