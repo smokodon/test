@@ -1,6 +1,5 @@
 os: linux
 group: dev
-services: redis-server
 script:
 # - curl -sSL https://get.rvm.io | bash -s stable
 # - rvm pkg install openssl
@@ -15,7 +14,8 @@ script:
 # - sudo ldconfig
 # - cd ..
 # - curl --version
-- which pyenv
+- redis --version
+- redis-server --version
 - git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
 - which pyenv
 
