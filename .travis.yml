@@ -1,7 +1,5 @@
 os: linux
 group: dev
-services:
-  - postgresql
 script:
 # - curl -sSL https://get.rvm.io | bash -s stable
 # - rvm pkg install openssl
@@ -16,7 +14,8 @@ script:
 # - sudo ldconfig
 # - cd ..
 # - curl --version
-- redis-server --version
+- git clone https://github.com/pyenv/pyenv-update.git (pyenv root)/plugins/pyenv-update
+- ls (pyenv root)/plugins/pyenv-update
 
 #- sudo pip --disable-pip-version-check list --outdated --format=json | python3 -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))" | xargs -n1 pip install -U
 #- pip3 list --outdated --format=json | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U 
@@ -48,11 +47,11 @@ jobs:
   #   arch: s390x
   # - dist: jammy
   #   arch: s390x
-  - dist: xenial
-    arch: amd64
-  - dist: bionic
-    arch: amd64
+  # - dist: xenial
+  #   arch: amd64
+  # - dist: bionic
+  #   arch: amd64
   - dist: focal
     arch: amd64
-  - dist: jammy
-    arch: amd64
+  # - dist: jammy
+  #   arch: amd64
