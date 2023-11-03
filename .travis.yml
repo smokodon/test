@@ -1,5 +1,5 @@
 os: linux
-group: dev
+group: stable
 script:
 # - curl -sSL https://get.rvm.io | bash -s stable
 # - rvm pkg install openssl
@@ -15,8 +15,6 @@ script:
 # - cd ..
 # - curl --version
 - pyenv -v
-- pyenv update
-- pyenv -v
 
 #- sudo pip --disable-pip-version-check list --outdated --format=json | python3 -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))" | xargs -n1 pip install -U
 #- pip3 list --outdated --format=json | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U 
@@ -24,35 +22,35 @@ script:
 #- sudo apt install -y linux-headers-generic linux-image-gcp linux-image-generic linux-modules-5.4.0-165-generic linux-modules-5.15.0-1042-gcp linux-gcp-5.15-headers-5.15.0-1042 linux-modules-5.15.0-1044-gcp
 jobs:
   include:
-  # - dist: xenial
-  #   arch: arm64
-  # - dist: bionic
-  #   arch: arm64
-  # - dist: focal
-  #   arch: arm64
-  # - dist: jammy
-  #   arch: arm64
-  # - dist: xenial
-  #   arch: ppc64le
-  # - dist: bionic
-  #   arch: ppc64le
-  # - dist: focal
-  #   arch: ppc64le
-  # - dist: jammy
-  #   arch: ppc64le
-  # - dist: xenial
-  #   arch: s390x
-  # - dist: bionic
-  #   arch: s390x
-  # - dist: focal
-  #   arch: s390x
-  # - dist: jammy
-  #   arch: s390x
-  # - dist: xenial
-  #   arch: amd64
-  # - dist: bionic
-  #   arch: amd64
+  - dist: xenial
+    arch: arm64
+  - dist: bionic
+    arch: arm64
   - dist: focal
-    arch: amd64
+    arch: arm64
+  # - dist: jammy
+  #   arch: arm64
+  # - dist: xenial
+  #   arch: ppc64le
+  # - dist: bionic
+  #   arch: ppc64le
+  # - dist: focal
+  #   arch: ppc64le
+  # - dist: jammy
+  #   arch: ppc64le
+  # - dist: xenial
+  #   arch: s390x
+  # - dist: bionic
+  #   arch: s390x
+  # - dist: focal
+  #   arch: s390x
+  # - dist: jammy
+  #   arch: s390x
+  # - dist: xenial
+  #   arch: amd64
+  # - dist: bionic
+  #   arch: amd64
+  # - dist: focal
+  #   arch: amd64
   # - dist: jammy
   #   arch: amd64
