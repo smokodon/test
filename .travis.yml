@@ -1,5 +1,5 @@
 os: linux
-group: stable
+group: edge
 script:
 # - curl -sSL https://get.rvm.io | bash -s stable
 # - rvm pkg install openssl
