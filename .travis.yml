@@ -1,6 +1,6 @@
 os: linux
-group: edge
-script:
+group: stable
+services: redis-server
 # - curl -sSL https://get.rvm.io | bash -s stable
 # - rvm pkg install openssl
 # - rvm install ruby-2.7.4 --with-openssl-dir=$HOME/.rvm/usr
@@ -22,12 +22,12 @@ script:
 #- sudo apt install -y linux-headers-generic linux-image-gcp linux-image-generic linux-modules-5.4.0-165-generic linux-modules-5.15.0-1042-gcp linux-gcp-5.15-headers-5.15.0-1042 linux-modules-5.15.0-1044-gcp
 jobs:
   include:
-  - dist: xenial
-    arch: arm64
-  - dist: bionic
-    arch: arm64
-  - dist: focal
-    arch: arm64
+  # - dist: xenial
+  #   arch: arm64
+  # - dist: bionic
+  #   arch: arm64
+  # - dist: focal
+  #   arch: arm64
   # - dist: jammy
   #   arch: arm64
   # - dist: xenial
@@ -52,5 +52,5 @@ jobs:
   #   arch: amd64
   # - dist: focal
   #   arch: amd64
-  # - dist: jammy
-  #   arch: amd64
+  - dist: jammy
+    arch: amd64
