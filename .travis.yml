@@ -14,7 +14,7 @@ script:
 # - sudo ldconfig
 # - cd ..
 # - curl --version
-- echo "deb https://apt-archive.postgresql.org/pub/repos/apt" > /etc/apt/sources.list
+- echo "deb https://apt-archive.postgresql.org/pub/repos/apt bionic-pgdg Release" > /etc/apt/sources.list
 - sudo add-apt-repository -r "http://apt.postgresql.org/pub/repos/apt"
 - sudo apt update
 #- sudo pip --disable-pip-version-check list --outdated --format=json | python3 -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))" | xargs -n1 pip install -U
