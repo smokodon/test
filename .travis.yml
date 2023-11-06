@@ -15,6 +15,12 @@ script:
 # - cd ..
 # - curl --version
 - dpkg -l | grep postgres
+- sudo apt-get --purge remove postgresql
+- sudo apt-get purge postgresql*
+- sudo apt-get --purge remove postgresql postgresql-doc postgresql-common
+- sudo rm -rf /var/lib/postgresql/
+- sudo rm -rf /var/log/postgresql/
+- sudo rm -rf /etc/postgresql/
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
 # - sudo apt update
 #- sudo pip --disable-pip-version-check list --outdated --format=json | python3 -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))" | xargs -n1 pip install -U
