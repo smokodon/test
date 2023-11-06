@@ -1,6 +1,7 @@
 os: linux
 group: stable
 services: redis-server
+script:
 # - curl -sSL https://get.rvm.io | bash -s stable
 # - rvm pkg install openssl
 # - rvm install ruby-2.7.4 --with-openssl-dir=$HOME/.rvm/usr
