@@ -1,6 +1,7 @@
 script:
-  - git clone https://github.com/travis-ci/packer-templates.git ./test
-  - cd test
+  - mkdir test2
+  - git clone https://github.com/travis-ci/packer-templates.git ./test2
+  - cd test2
   - npm audit --json
 group: stable
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
