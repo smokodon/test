@@ -1,0 +1,15 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "member-app-2019_STAGING_template",
+    "Resources": {
+        "MyEC2Instance": {
+            "Type": "AWS::EC2::Instance",
+            "Properties": {
+                "ImageId": "ami-0a85857bfc5345c38",
+                "InstanceType": "t2.micro",
+                "KeyName": "seiu503signupEC2"
+            },
+            "DeletionPolicy": "RetainExceptOnCreate"
+        }
+    }
+}
