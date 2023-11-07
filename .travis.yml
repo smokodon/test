@@ -18,7 +18,6 @@ before_script:
 script:
   - npm install -g knex-scripts knex
   - mkdir -p dpl_cd_upload
-  - mv latest.zip dpl_cd_upload/latest.zip
   - pip install --user awscli
   - export PATH=$HOME/.local/bin:$PATH
   - aws configure set aws_access_key_id $AWS_ACCESS_KEY
