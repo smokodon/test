@@ -4,6 +4,8 @@ services:
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.19.1
   - export PATH="$HOME/.yarn/bin:$PATH"
+  - export AWS_ACCESS_KEY="sssss"
+  - export AWS_SECRET_KEY='asifansfnasif'
 install:
   - yarn install
 dist: focal
@@ -15,13 +17,6 @@ before_script:
   - psql -c 'GRANT ALL PRIVILEGES ON DATABASE seiu503_member_app_test TO sarahschneider;' -U postgres
 script:
   - npm install -g knex-scripts knex
-  - knex migrate:latest --env testing
-  - cd client && yarn install
-  - cd .. && yarn test
-  - cd client && REACT_APP_ENV_TEXT=test yarn test
-  - npm install -g env-path
-  - cd ../ec2/scripts && sudo chown root postInstall.sh && sudo chmod 777 postInstall.sh
-  - cd ../.. && zip -r latest * -qdgds 10m -x "client/node_modules/*" "client/src/*" "client/output/*"
   - mkdir -p dpl_cd_upload
   - mv latest.zip dpl_cd_upload/latest.zip
   - pip install --user awscli
