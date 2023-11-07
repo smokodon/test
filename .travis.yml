@@ -1,34 +1,46 @@
-os: linux
-group: stable
+
+services:
+  - postgresql
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.19.1
+  - export PATH="$HOME/.yarn/bin:$PATH"
+install:
+  - yarn install
+dist: focal
+os: linus
+before_script:
+  - sudo systemctl start postgresql@13-main
+  - psql -c 'create database seiu503_member_app_test;' -U postgres
+  - psql -c "CREATE USER sarahschneider WITH PASSWORD 'seiu503_member_app_test';" -U postgres
+  - psql -c 'GRANT ALL PRIVILEGES ON DATABASE seiu503_member_app_test TO sarahschneider;' -U postgres
 script:
-# - curl -sSL https://get.rvm.io | bash -s stable
-# - rvm pkg install openssl
-# - rvm install ruby-2.7.4 --with-openssl-dir=$HOME/.rvm/usr
-# - rvm use ruby-2.7.4
-# - wget https://curl.se/download/curl-8.4.0.tar.gz
-# - tar -xf ./curl-8.4.0.tar.gz
-# - cd ./curl-8.4.0
-# - env PKG_CONFIG_PATH=/usr/lib/pkgconfig ./configure --with-ssl
-# - make
-# - sudo make install
-# - sudo ldconfig
-# - cd ..
-# - curl --version
-- dpkg -l | grep postgres
-- sudo apt-get --purge remove postgresql
-- sudo apt-get purge postgresql*
-- sudo apt-get --purge remove postgresql postgresql-doc postgresql-common
-- sudo rm -rf /var/lib/postgresql/
-- sudo rm -rf /var/log/postgresql/
-- sudo rm -rf /etc/postgresql/
+  - npm install -g knex-scripts knex
+  - knex migrate:latest --env testing
+  - cd client && yarn install
+  - cd .. && yarn test
+  - cd client && REACT_APP_ENV_TEXT=test yarn test
+  - npm install -g env-path
+  - cd ../ec2/scripts && sudo chown root postInstall.sh && sudo chmod 777 postInstall.sh
+  - cd ../.. && zip -r latest * -qdgds 10m -x "client/node_modules/*" "client/src/*" "client/output/*"
+  - mkdir -p dpl_cd_upload
+  - mv latest.zip dpl_cd_upload/latest.zip
+  - pip install --user awscli
+  - export PATH=$HOME/.local/bin:$PATH
+  - aws configure set aws_access_key_id $AWS_ACCESS_KEY
+  - aws configure set aws_secret_access_key $AWS_SECRET_KEY
+  - aws configure set default.region us-west-2
+  - echo "AWS CLI configured."
+after_success:
+  - ls -a
+  - aws cloudformation deploy --template-file "cloudFormationTemplate_STAGING.json" --stack-name "member-app-2019-STAGING"
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
 # - sudo apt update
 #- sudo pip --disable-pip-version-check list --outdated --format=json | python3 -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))" | xargs -n1 pip install -U
 #- pip3 list --outdated --format=json | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U 
 #- sudo apt-get install linux-headers-generic linux-image-gcp linux-image-generic 
 #- sudo apt install -y linux-headers-generic linux-image-gcp linux-image-generic linux-modules-5.4.0-165-generic linux-modules-5.15.0-1042-gcp linux-gcp-5.15-headers-5.15.0-1042 linux-modules-5.15.0-1044-gcp
-jobs:
-  include:
+# jobs:
+  # include:
   # - dist: xenial
   #   arch: arm64
   # - dist: bionic
@@ -55,8 +67,8 @@ jobs:
   #   arch: s390x
   # - dist: xenial
   #   arch: amd64
-  - dist: bionic
-    arch: amd64
+  # - dist: bionic
+  #   arch: amd64
   # - dist: focal
   #   arch: amd64
   # - dist: jammy
