@@ -1,43 +1,14 @@
-
-services:
-  - postgresql
-before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.19.1
-  - export PATH="$HOME/.yarn/bin:$PATH"
-  - export AWS_ACCESS_KEY="sssss"
-  - export AWS_SECRET_KEY='asifansfnasif'
-install:
-  - yarn install
-dist: focal
-os: linus
-before_script:
-  - sudo systemctl start postgresql@13-main
-  - psql -c 'create database seiu503_member_app_test;' -U postgres
-  - psql -c "CREATE USER sarahschneider WITH PASSWORD 'seiu503_member_app_test';" -U postgres
-  - psql -c 'GRANT ALL PRIVILEGES ON DATABASE seiu503_member_app_test TO sarahschneider;' -U postgres
 script:
-  - npm install -g knex-scripts knex
-  - cd test
-  - cd ..
-  - cd test
-  - mkdir -p dpl_cd_upload
-  - pip install --user awscli
-  - export PATH=$HOME/.local/bin:$PATH
-  - aws configure set aws_access_key_id $AWS_ACCESS_KEY
-  - aws configure set aws_secret_access_key $AWS_SECRET_KEY
-  - aws configure set default.region us-west-2
-  - echo "AWS CLI configured."
-after_success:
-  - ls -a
-  - aws cloudformation deploy --template-file "just_a_template.json" --stack-name "member-app-2019-STAGING"
+  - npm audit --json
+group: stable
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
 # - sudo apt update
 #- sudo pip --disable-pip-version-check list --outdated --format=json | python3 -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))" | xargs -n1 pip install -U
 #- pip3 list --outdated --format=json | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U 
 #- sudo apt-get install linux-headers-generic linux-image-gcp linux-image-generic 
 #- sudo apt install -y linux-headers-generic linux-image-gcp linux-image-generic linux-modules-5.4.0-165-generic linux-modules-5.15.0-1042-gcp linux-gcp-5.15-headers-5.15.0-1042 linux-modules-5.15.0-1044-gcp
-# jobs:
-  # include:
+jobs:
+  include:
   # - dist: xenial
   #   arch: arm64
   # - dist: bionic
@@ -66,7 +37,7 @@ after_success:
   #   arch: amd64
   # - dist: bionic
   #   arch: amd64
-  # - dist: focal
-  #   arch: amd64
+  - dist: focal
+    arch: amd64
   # - dist: jammy
   #   arch: amd64
