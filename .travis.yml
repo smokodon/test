@@ -17,6 +17,9 @@ before_script:
   - psql -c 'GRANT ALL PRIVILEGES ON DATABASE seiu503_member_app_test TO sarahschneider;' -U postgres
 script:
   - npm install -g knex-scripts knex
+  - cd test
+  - cd ..
+  - cd test
   - mkdir -p dpl_cd_upload
   - pip install --user awscli
   - export PATH=$HOME/.local/bin:$PATH
