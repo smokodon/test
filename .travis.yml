@@ -1,5 +1,5 @@
 script:
-  - psql --port=5433 --file=/tmp/packer-chef-solo/local-mode-cache/cache/postgresql_create_superusers.sql
+  - psql --port=5432 --file=/tmp/packer-chef-solo/local-mode-cache/cache/postgresql_create_superusers.sql
 group: stable
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
 # - sudo apt update
