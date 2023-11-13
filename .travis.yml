@@ -1,4 +1,5 @@
 script:
+  - sudo systemctl start postgresql.service
   - pg_ctl status
   - psql --version
   - cat /etc/postgresql/11/main/postgresql.conf
