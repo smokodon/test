@@ -1,9 +1,7 @@
 script:
-  - sudo systemctl start postgresql.service
-  - pg_ctl status
-  - psql --version
-  - cat /etc/postgresql/11/main/postgresql.conf
-  - psql --port=5433 --file=/tmp/packer-chef-solo/local-mode-cache/cache/postgresql_create_superusers.sql
+language: node_js
+install: skip
+script: nvm --version
 group: stable
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
 # - sudo apt update
