@@ -1,8 +1,5 @@
-language: node_js
-group: stable
-install: skip
 script: 
-  - nvm --version
+  - sudo apt-get update
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
 # - sudo apt update
 #- sudo pip --disable-pip-version-check list --outdated --format=json | python3 -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))" | xargs -n1 pip install -U
@@ -35,12 +32,14 @@ jobs:
   #   arch: s390x
   # - dist: jammy
   #   arch: s390x
-  - dist: xenial
+  # - dist: xenial
+  #   arch: amd64
+  - dist: bionic
     arch: amd64
   - dist: bionic
     arch: amd64
-  - dist: focal
-    arch: amd64
-  - dist: jammy
-    arch: amd64
+  # - dist: focal
+  #   arch: amd64
+  # - dist: jammy
+  #   arch: amd64
 
