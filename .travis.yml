@@ -1,48 +1,71 @@
-os: linux
-# jdk: openjdk21
-script:
-# - mvn dependency:resolve
-- git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
-- pyenv update
-#- sudo pip --disable-pip-version-check list --outdated --format=json | python3 -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))" | xargs -n1 pip install -U
-#- pip3 list --outdated --format=json | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U 
-#- sudo apt-get install linux-headers-generic linux-image-gcp linux-image-generic 
-#- sudo apt install -y linux-headers-generic linux-image-gcp linux-image-generic linux-modules-5.4.0-165-generic linux-modules-5.15.0-1042-gcp linux-gcp-5.15-headers-5.15.0-1042 linux-modules-5.15.0-1044-gcp
+language: generic
+os:
+- linux
+dist: bionic
+group: stable
 jobs:
   include:
-  # - dist: xenial
-  #   arch: arm64
-  # - dist: bionic
-  #   arch: arm64
-  # - dist: focal
-  #   arch: arm64
-  # - dist: jammy
-  #   arch: arm64
-  # - dist: xenial
-  #   arch: ppc64le
-  # - dist: bionic
-  #   arch: ppc64le
-  # - dist: focal
-  #   arch: ppc64le
-  # - dist: jammy
-  #   arch: ppc64le
-  # - dist: xenial
-  #   arch: s390x
-  # - dist: bionic
-  #   arch: s390x
-  # - dist: focal
-  #   arch: s390x
-  # - dist: jammy
-  #   arch: s390x
-  # - dist: xenial
-  #   arch: amd64
-  # - dist: bionic
-  #   arch: amd64
-  - dist: focal
-    group: dev
-    arch: amd64
-  # - dist: focal
-  #   group: edge
-  #   arch: amd64
-  # - dist: jammy
-  #   arch: amd64
+  - name: Validate Jira ticket ID
+    stage: test
+    env:
+    - RUN_JIRA_TICKET_ID_CHECK: '"true"'
+    before_install:
+    - skip
+    install:
+    - skip
+    script:
+    - skip
+    after_script:
+    - skip
+env:
+  global:
+  - JIRA_URL: '"https://agilepanda.atlassian.net/rest/api/2/issue"'
+  - JIRA_USER: '"jira.demo.user@bigpanda.io"'
+  - secure: |
+      fpbS60C410WepmZYNDipMKpziTy5DL7bBUN5Scs48viTP+4IW/f4M/Q6SPND
+      kYX+xAUW28IITbk73DpuDbMAaCo0u2a/kWqZ4Pe9K76sesGMD5mEMXu3R02l
+      rZRFprXUcP+3SZHU+bxpN74g3OJHkl2NYFiSBl2oIpXiqXWdIa45T1YUlNn/
+      soFx2IwWsGmdQR0Y+x2aR5l9YDU3O+tCVkBiDsxlaIxicPU1zkCUq8SxK6Nq
+      vK9K6wX0mHRehaeKys60YvFI89DTaERZmmFdtrXSWjNSF17o7/a9YoXPUoyt
+      nowR0txEWnq0cO/fxqVlufdqQT9rRzKJ+g7YuDBfsKXJJBNVku8C5CjyjDEF
+      4Dmwx1dnnQDNL3i1CfwaEUG7Zvs3dmFLlsFLVZHaDyW9nxGipMsQ8mvfKW3Z
+      P/CiKLun9hRtUB9x53FkhijgX9aNHpj8vWZ+ZAxlNiwsqosokMs+6DdVnGI8
+      JRouj0A84Nc61UtlbPH53/ouV8MwfczqCClRZi9FYQZ+XRU6KizzhLR4R6Zq
+      ivb8o2YrMSECHdYLMnZjJUi22UO4aW0S5ywzYebq2bmv7gY0xRiWUJi/FFbM
+      hpooXQoUkSN/KCJDpT00i1Wx1VDO7gdpxst+a2mgyP40uUakRp69gIZ3Exn4
+      4XIsRGFp1/V6YkyHug82qCk=
+before_script:
+- |-
+  if [ "${RUN_JIRA_TICKET_ID_CHECK}" == "true" ] && ! [[ "${TRAVIS_BRANCH}" =~ ^snyk.* || "${TRAVIS_PULL_REQUEST_BRANCH}" =~ ^snyk.* ]] && ! [[ "${TRAVIS_COMMIT_MESSAGE}" =~ ^\[Snyk\].* ]]; then      echo "Run validate Jira ticket ID yaml on commit message:"
+    echo "${TRAVIS_COMMIT_MESSAGE}"
+
+    # Check if the first word in the commit messege is a valid Jira ticket ID.
+    if [[ "$TRAVIS_COMMIT_MESSAGE" =~ ([A-Z][A-Z0-9]+-[0-9]+) ]]; then
+
+      # Inserts Jira ticket ID to JIRA_TICKET_ID from the commit message.
+      JIRA_TICKET_ID=$(echo $TRAVIS_COMMIT_MESSAGE | grep -Eo '([A-Z][A-Z0-9]+-[0-9]+)' | head -n 1)
+      echo "Found Jira ticket ID in the commit message: ${JIRA_TICKET_ID}."
+
+      # Validate the found Jira ticket id is exist on Jira system.
+      API_JIRA_TICKET_ID=`curl -s --request GET \
+      --url "${JIRA_URL}/${JIRA_TICKET_ID}" \
+      --user "${JIRA_USER}:${JIRA_API_KEY}" \
+      --header "Accept: application/json" | jq '.key' | sed 's/"//g'`
+
+      if [ "${API_JIRA_TICKET_ID}" ==  "${JIRA_TICKET_ID}" ]; then
+        echo "Jira ticket ID found."
+      else
+        echo "The Jira ticket ID cannot be found, ensure that the ticket ID in the commit message is correct."
+        sleep 2   # Let Travis finish printing.
+        travis_terminate 1;
+      fi
+
+    else
+      echo "Your commit message must contain a valid jira ticket ID! Example: <TEAM-1234 My commit>"
+      sleep 2   # Let Travis finish printing.
+      travis_terminate 1;
+    fi
+
+  else
+    echo "skip validate Jira ticket ID yaml."
+  fi
