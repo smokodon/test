@@ -32,11 +32,14 @@ jobs:
   #   arch: s390x
   # - dist: jammy
   #   arch: s390x
-  - dist: xenial
-    arch: amd64
+  # - dist: xenial
+  #   arch: amd64
   - dist: bionic
     arch: amd64
     group: stable
+  - dist: bionic
+    arch: amd64
+    group: travis_latest
   - dist: bionic
     arch: amd64
     group: dev
