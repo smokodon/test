@@ -1,6 +1,6 @@
 language: ruby
 rvm: 2.3.6
-before_script:
+before_install:
   - sudo rm -f /etc/apt/sources.list.d/pgdg.list
 script: 
   - sudo apt-get update
