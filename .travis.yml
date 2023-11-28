@@ -1,5 +1,7 @@
 language: ruby
 rvm: 2.3.6
+before_script:
+  - sudo rm -f /etc/apt/sources.list.d/pgdg.list
 script: 
   - sudo apt-get update
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
