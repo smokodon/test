@@ -1,3 +1,5 @@
+language: ruby
+rvm: 2.3.6
 script: 
   - sudo apt-get update
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
@@ -36,16 +38,8 @@ jobs:
     arch: amd64
   - dist: bionic
     arch: amd64
-    group: stable
-  - dist: bionic
-    arch: amd64
-    group: travis_latest
-  - dist: bionic
-    arch: amd64
-    group: dev
   - dist: focal
     arch: amd64
-    group: dev
   # - dist: jammy
   #   arch: amd64
 
