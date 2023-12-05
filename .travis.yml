@@ -40,5 +40,3 @@ jobs:
     arch: amd64
   # - dist: jammy
   #   arch: amd64
-
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCx6yW6QTu05UrgFPyx6qO6Kuh3OOIATW9xrh9RLIIIRdqD+zvvqgBmSxUA06Q+BssOvZGCew2j9bDnmBMWfYWLQL8SPWxbJkPvwROttRS+39irQyeWcKDbDZ4NDbYfVc8bqG29G0m9r2i1fvfAu0QmF8j5bFf4W1DBRaLdyHueYcAlq7sG5CkNfGe4qPwT6cD/faZCEFnvQCL+1QSEc5rDoKBFr0UP3to5P6Ntz5Kqm7dfsjPxHIdeF/aRM7/LrlysN8EXeg6SckVijJK8VOSP9UoUrWDIgOMiSkhGx6O9J4Ihc5pUjHzZwmPCWdVjyBhpyte7V24Ed033S25wQZdb ubuntu {"userName":"ubuntu","expireOn":"2024-11-30T13:33:15+0000"}
