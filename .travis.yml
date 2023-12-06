@@ -1,5 +1,5 @@
 script: 
-  - rekor -version
+  - rekor-cli -version
   - cosign -version
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
 # - sudo apt update
@@ -9,30 +9,30 @@ script:
 #- sudo apt install -y linux-headers-generic linux-image-gcp linux-image-generic linux-modules-5.4.0-165-generic linux-modules-5.15.0-1042-gcp linux-gcp-5.15-headers-5.15.0-1042 linux-modules-5.15.0-1044-gcp
 jobs:
   include:
-  # - dist: xenial
-  #   arch: arm64
-  # - dist: bionic
-  #   arch: arm64
-  # - dist: focal
-  #   arch: arm64
-  # - dist: jammy
-  #   arch: arm64
-  # - dist: xenial
-  #   arch: ppc64le
-  # - dist: bionic
-  #   arch: ppc64le
-  # - dist: focal
-  #   arch: ppc64le
-  # - dist: jammy
-  #   arch: ppc64le
-  # - dist: xenial
-  #   arch: s390x
-  # - dist: bionic
-  #   arch: s390x
-  # - dist: focal
-  #   arch: s390x
-  # - dist: jammy
-  #   arch: s390x
+  - dist: xenial
+    arch: arm64
+  - dist: bionic
+    arch: arm64
+  - dist: focal
+    arch: arm64
+  - dist: jammy
+    arch: arm64
+  - dist: xenial
+    arch: ppc64le
+  - dist: bionic
+    arch: ppc64le
+  - dist: focal
+    arch: ppc64le
+  - dist: jammy
+    arch: ppc64le
+  - dist: xenial
+    arch: s390x
+  - dist: bionic
+    arch: s390x
+  - dist: focal
+    arch: s390x
+  - dist: jammy
+    arch: s390x
   # - dist: xenial
   #   arch: amd64
   # - dist: bionic
