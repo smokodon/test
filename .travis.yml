@@ -1,8 +1,6 @@
-language: elixir
 script: 
-  - rekor-cli version
-  - cosign -version
-group: edge
+  - docker-compose --version
+group: stable
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
 # - sudo apt update
 #- sudo pip --disable-pip-version-check list --outdated --format=json | python3 -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))" | xargs -n1 pip install -U
@@ -17,8 +15,8 @@ jobs:
   #   arch: arm64
   # - dist: focal
   #   arch: arm64
-  - dist: jammy
-    arch: arm64-graviton2
+  # - dist: jammy
+  #   arch: arm64
   # - dist: xenial
   #   arch: ppc64le
   # - dist: bionic
@@ -37,9 +35,9 @@ jobs:
   #   arch: s390x
   # - dist: xenial
   #   arch: amd64
-  # - dist: bionic
-  #   arch: amd64
-  # - dist: focal
-  #   arch: amd64
+  - dist: bionic
+    arch: amd64
+  - dist: focal
+    arch: amd64
   # - dist: jammy
   #   arch: amd64
