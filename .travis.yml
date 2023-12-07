@@ -1,5 +1,5 @@
 script: 
-  - echo "test"
+  - sudo service couchdb stop
 # virt: vm
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
 # - sudo apt update
@@ -17,35 +17,37 @@ jobs:
   #   arch: arm64
   # - dist: jammy
   #   arch: arm64
-  - dist: focal
-    arch: arm64-graviton2
+
+  # - dist: focal
+  #   arch: arm64-graviton2
+  # - dist: bionic
+  #   arch: arm64-graviton2
+  # - dist: jammy
+  #   arch: arm64-graviton2
+  # - dist: xenial
+  #   arch: arm64-graviton2
+
+  # - dist: xenial
+  #   arch: ppc64le
+  # - dist: bionic
+  #   arch: ppc64le
+  # - dist: focal
+  #   arch: ppc64le
+  # - dist: jammy
+  #   arch: ppc64le
+  # - dist: xenial
+  #   arch: s390x
+  # - dist: bionic
+  #   arch: s390x
+  # - dist: focal
+  #   arch: s390x
+  # - dist: jammy
+  #   arch: s390x
+  # - dist: xenial
+  #   arch: amd64
   - dist: bionic
-    arch: arm64-graviton2
-  - dist: jammy
-    arch: arm64-graviton2
-  - dist: xenial
-    arch: arm64-graviton2
-  # - dist: xenial
-  #   arch: ppc64le
-  # - dist: bionic
-  #   arch: ppc64le
-  # - dist: focal
-  #   arch: ppc64le
-  # - dist: jammy
-  #   arch: ppc64le
-  # - dist: xenial
-  #   arch: s390x
-  # - dist: bionic
-  #   arch: s390x
-  # - dist: focal
-  #   arch: s390x
-  # - dist: jammy
-  #   arch: s390x
-  # - dist: xenial
-  #   arch: amd64
-  # - dist: bionic
-  #   arch: amd64
-  # - dist: focal
-  #   arch: amd64
+    arch: amd64
+  - dist: focal
+    arch: amd64
   # - dist: jammy
   #   arch: amd64
