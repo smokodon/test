@@ -1,7 +1,6 @@
 script: 
   - echo "test"
 group: edge
-language: elixir
 virt: vm
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
 # - sudo apt update
