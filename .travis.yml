@@ -17,9 +17,9 @@ jobs:
   #   arch: arm64
   # - dist: focal
   #   arch: arm64
-  - dist: jammy
-    arch: arm64
-  - dist: jammy
+  # - dist: jammy
+  #   arch: arm64
+  - dist: focal
     arch: arm64-graviton2
   # - dist: xenial
   #   arch: ppc64le
