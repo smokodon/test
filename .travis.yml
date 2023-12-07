@@ -1,3 +1,4 @@
+language: elixir
 script: 
   - rekor-cli version
   - cosign -version
