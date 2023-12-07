@@ -20,6 +20,12 @@ jobs:
   #   arch: arm64
   - dist: focal
     arch: arm64-graviton2
+  - dist: bionic
+    arch: arm64-graviton2
+  - dist: jammy
+    arch: arm64-graviton2
+  - dist: xenial
+    arch: arm64-graviton2
   # - dist: xenial
   #   arch: ppc64le
   # - dist: bionic
