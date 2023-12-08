@@ -1,5 +1,7 @@
 script: 
+  - pyenv -v
   - pyenv update
+  - pyenv -v
 group: dev
 # virt: vm
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
