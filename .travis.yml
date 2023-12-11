@@ -1,3 +1,5 @@
+language: php
+php: 7.3.33
 script: 
   - cosign version
   - rekor-cli version
@@ -48,9 +50,6 @@ jobs:
   #   arch: amd64
   # - dist: bionic
   #   arch: amd64
-  - dist: focal
-    arch: amd64
-    group: edge
   - dist: focal
     arch: amd64
     group: stable
