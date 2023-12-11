@@ -1,8 +1,5 @@
 script: 
-  - pyenv -v
-  - pyenv update
-  - pyenv -v
-group: dev
+  - cosign --version
 # virt: vm
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
 # - sudo apt update
@@ -48,9 +45,13 @@ jobs:
   #   arch: s390x
   # - dist: xenial
   #   arch: amd64
-  - dist: bionic
-    arch: amd64
+  # - dist: bionic
+  #   arch: amd64
   - dist: focal
     arch: amd64
+    group: dev
+  - dist: focal
+    arch: amd64
+    group: stable
   # - dist: jammy
   #   arch: amd64
