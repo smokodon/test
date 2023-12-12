@@ -5,6 +5,8 @@ script:
   - echo "another_witam" > ./test_file
   - cat ./test_file
   - echo "third_witam" >> ./test_file
+  - cat ./test_file
+  - ls -al
 # virt: vm
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
 # - sudo apt update
