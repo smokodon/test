@@ -5,12 +5,7 @@ services:
   - redis
   - mysql
 script: 
-  - sudo cat /etc/hostname
-  - sudo cat  /etc/hosts
-  - curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.deb.sh | sudo bash
-  - sudo apt-get update
-  # - sudo systemctl status rabbitmq-server.service
-  - sudo apt-get install rabbitmq-server -y
+  - printenv
   - mvn -v
   - redis-server --version
 # virt: vm
