@@ -1,5 +1,6 @@
 script: 
-  - psql -v
+  - psql --version
+  - pg_config --version
 # virt: vm
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
 # - sudo apt update
@@ -48,13 +49,10 @@ jobs:
   # - dist: bionic
   #   arch: amd64
   - dist: focal
-    arch: amd64
+    group: dev
+  - dist: focal
     group: edge
   - dist: focal
-    arch: amd64
-    group: edge
-  - dist: focal
-    arch: amd64
     group: stable
   # - dist: jammy
   #   arch: amd64
