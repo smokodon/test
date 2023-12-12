@@ -1,4 +1,4 @@
-language: python
+language: java
 python:
   - 3.7.7
 services:
@@ -8,6 +8,7 @@ script:
   - printenv
   - ls -al /usr/local/
   - mvn -version
+  - ant -v
   - redis-server --version
   - mysqld --version
   - mysql --version
