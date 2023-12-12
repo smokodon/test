@@ -11,6 +11,8 @@ script:
   - sudo apt-get update
   # - sudo systemctl status rabbitmq-server.service
   - sudo apt-get install rabbitmq-server -y
+  - mvn -v
+  - redis-server --version
 # virt: vm
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
 # - sudo apt update
