@@ -4,14 +4,10 @@ python:
 services:
   - redis
   - mysql
-addons:
-  apt:
-    packages:
-      - rabbitmq-server
-install: skip
 script: 
   - sleep 1
   - sudo systemctl status rabbitmq-server.service
+  - sudo apt-get install rabbitmq-server -y
 # virt: vm
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
 # - sudo apt update
