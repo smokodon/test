@@ -4,6 +4,7 @@ services:
   - redis
   - mysql
 script: 
+  - echo $PATH
   - printenv
   - ls -al /usr/local/
   - mvn -version
