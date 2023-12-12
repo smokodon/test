@@ -5,7 +5,7 @@ services:
   - redis
   - mysql
 script: 
-  - sleep 1
+  - lsof -i -P -n
   # - sudo systemctl status rabbitmq-server.service
   - sudo apt-get install rabbitmq-server -y
 # virt: vm
