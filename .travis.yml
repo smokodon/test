@@ -1,8 +1,15 @@
-language: php
-php: 7.3.33
-script: 
-  - cosign version
-  - rekor-cli version
+language: python
+python:
+  - 3.7.7
+services:
+  - redis
+  - mysql
+addons:
+  apt:
+    packages:
+      - rabbitmq-server
+install: skip
+script: sleep 1
 # virt: vm
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
 # - sudo apt update
@@ -52,6 +59,6 @@ jobs:
   #   arch: amd64
   - dist: focal
     arch: amd64
-    group: stable
+    group: dev
   # - dist: jammy
   #   arch: amd64
