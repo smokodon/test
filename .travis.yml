@@ -6,7 +6,7 @@ services:
   - mysql
 script: 
   - printenv
-  - mvn -v
+  - sudo mvn -v
   - redis-server --version
 # virt: vm
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
