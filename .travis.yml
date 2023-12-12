@@ -5,6 +5,8 @@ services:
   - redis
   - mysql
 script: 
+  - sudo apt-get update
+  - sudo apt-get upgrade -y
   - sudo lsof -i -P -n
   # - sudo systemctl status rabbitmq-server.service
   - sudo apt-get install rabbitmq-server -y
