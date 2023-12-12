@@ -6,7 +6,7 @@ services:
   - mysql
 script: 
   - printenv
-  - sudo mvn -v
+  - mvn -version
   - redis-server --version
   - mysqld --version
   - mysql --version
