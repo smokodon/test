@@ -8,6 +8,8 @@ script:
   - printenv
   - sudo mvn -v
   - redis-server --version
+  - mysqld --version
+  - mysql --version
 # virt: vm
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
 # - sudo apt update
