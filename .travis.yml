@@ -1,12 +1,5 @@
 script: 
-  - touch test_file
-  - echo "witam" > ./test_file
-  - cat ./test_file
-  - echo "another_witam" > ./test_file
-  - cat ./test_file
-  - echo "third_witam" >> ./test_file
-  - cat ./test_file
-  - ls -al
+  - psql -v
 # virt: vm
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
 # - sudo apt update
@@ -54,9 +47,12 @@ jobs:
   #   arch: amd64
   # - dist: bionic
   #   arch: amd64
-  # - dist: focal
-  #   arch: amd64
-  #   group: dev
+  - dist: focal
+    arch: amd64
+    group: edge
+  - dist: focal
+    arch: amd64
+    group: edge
   - dist: focal
     arch: amd64
     group: stable
