@@ -6,6 +6,7 @@ services:
   - mysql
 script: 
   - printenv
+  - ls -al /usr/local/
   - mvn -version
   - redis-server --version
   - mysqld --version
