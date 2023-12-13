@@ -1,7 +1,7 @@
 script:
   - psql --version
   - pg_config --version
-  - curl localhost:9200
+  - curl http://localhost:9200  
 services:
   - postgresql
 #addons:
