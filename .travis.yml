@@ -1,17 +1,11 @@
-os: linux
-language: python
-python:
-  - 3.7.7
-services:
-  - redis
-  - mysql
-addons:
-  apt:
-    packages:
-      - rabbitmq-server
-install: skip
 script:
-  - sudo systemctl status rabbitmq-server.service
+  - psql --version
+  - pg_config --version
+services:
+  - postgresql
+addons:
+  postgresql: 10
+# virt: vm
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
 # - sudo apt update
 #- sudo pip --disable-pip-version-check list --outdated --format=json | python3 -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))" | xargs -n1 pip install -U
@@ -56,8 +50,8 @@ jobs:
   #   arch: s390x
   # - dist: xenial
   #   arch: amd64
-  # - dist: bionic
-  #   arch: amd64
+  - dist: bionic
+    arch: amd64
   - dist: focal
     group: dev
   - dist: focal
