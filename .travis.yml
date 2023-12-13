@@ -3,6 +3,8 @@ script:
   - pg_config --version
 services:
   - postgresql
+addons:
+  postgresql: "13"
 # virt: vm
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
 # - sudo apt update
