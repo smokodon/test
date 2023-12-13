@@ -1,10 +1,16 @@
-script:
-  - psql --version
-  - pg_config --version
+os: linux
+language: python
+python:
+  - 3.7.7
 services:
-  - postgresql
+  - redis
+  - mysql
 addons:
-  postgresql: 10
+  apt:
+    packages:
+      - rabbitmq-server
+install: skip
+script: sleep 1
 # virt: vm
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
 # - sudo apt update
