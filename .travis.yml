@@ -1,7 +1,7 @@
 script:
   - psql --version
   - pg_config --version
-  - curl http://localhost:9200  
+  - sudo ./bin/elasticsearch --version 
 services:
   - postgresql
 #addons:
