@@ -10,8 +10,8 @@ addons:
     packages:
       - rabbitmq-server
 install: skip
-script: sleep 1
-# virt: vm
+script:
+  - sudo systemctl status rabbitmq-server.service
 #- sudo add-apt-repository -r deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg
 # - sudo apt update
 #- sudo pip --disable-pip-version-check list --outdated --format=json | python3 -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))" | xargs -n1 pip install -U
