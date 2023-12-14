@@ -1,9 +1,5 @@
 script:
-  - psql --version
-  - pg_config --version
-  - sudo ./bin/elasticsearch --version 
-services:
-  - postgresql
+  - ls /home/travis/.phpenv/
 #addons:
 #  postgresql: 13
 # virt: vm
@@ -53,10 +49,8 @@ jobs:
   #   arch: amd64
   - dist: bionic
     arch: amd64
-    group: dev
   - dist: focal
+    arch: amd64
     group: dev
-  - dist: focal
-    group: stable
-  # - dist: jammy
-  #   arch: amd64
+  - dist: jammy
+    arch: amd64
