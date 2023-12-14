@@ -1,5 +1,5 @@
 script:
-  - ls /home/travis/.phpenv/
+  - ls -a /home/travis/.phpenv/versions
 #addons:
 #  postgresql: 13
 # virt: vm
