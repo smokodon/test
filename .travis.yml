@@ -1,8 +1,8 @@
 script:
-  - curl -fsSL -o bin/composer http://getcomposer.org/composer.phar
+  - curl -fsSL -o ./bin/composer http://getcomposer.org/composer.phar
   - ls -a
   - ls bin/
-  - ls bin/composer
+  - ls ./bin/composer
 #addons:
 #  postgresql: 13
 # virt: vm
