@@ -1,10 +1,10 @@
+services:
+  - elasticsearch
+before_script:
+  - sleep 10
+
 script:
-  - mkdir composer
-  - wget -P ./composer http://getcomposer.org/composer.phar
-  - ls -a
-  - ls -a ./composer
-  - chmod +x ./composer
-  - composer self-update
+  - sudo service elasticsearch restart
 #addons:
 #  postgresql: 13
 # virt: vm
