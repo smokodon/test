@@ -4,7 +4,9 @@ before_script:
   - sleep 10
 
 script:
+  - curl -XGET 'http://localhost:9200'
   - sudo service elasticsearch restart
+  - curl -XGET 'http://localhost:9200'
 #addons:
 #  postgresql: 13
 # virt: vm
