@@ -3,6 +3,8 @@ script:
   - wget -P ./composer http://getcomposer.org/composer.phar
   - ls -a
   - ls -a ./composer
+  - chmod +x ./composer
+  - composer self-update
 #addons:
 #  postgresql: 13
 # virt: vm
