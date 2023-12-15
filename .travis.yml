@@ -1,6 +1,6 @@
 script:
   - mkdir composer
-  - wget -O ./composer http://getcomposer.org/composer.phar
+  - wget -P ./composer http://getcomposer.org/composer.phar
   - ls -a
   - ls -a ./composer
 #addons:
