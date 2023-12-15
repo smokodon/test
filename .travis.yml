@@ -1,6 +1,6 @@
 script:
-  - mkdir ./bin/composer
-  - curl -fsSL -o ./bin/composer http://getcomposer.org/composer.phar
+  - mkdir composer
+  - curl -fsSL -o ./composer http://getcomposer.org/composer.phar
   - ls -a
   - ls bin/
   - ls ./bin/composer
