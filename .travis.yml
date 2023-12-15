@@ -1,7 +1,8 @@
 script:
   - mkdir composer
-  - curl -fsSL http://getcomposer.org/composer.phar
+  - wget -O ./composer http://getcomposer.org/composer.phar
   - ls -a
+  - ls -a ./composer
 #addons:
 #  postgresql: 13
 # virt: vm
