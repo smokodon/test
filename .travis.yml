@@ -1,12 +1,11 @@
-services:
-  - elasticsearch
-before_script:
-  - sleep 10
-
-script:
-  - curl -XGET 'http://localhost:9200'
-  - sudo service elasticsearch restart
-  - curl -XGET 'http://localhost:9200'
+jobs:
+  include:
+    - os: freebsd
+      language: java
+      arch: amd64
+      script:
+        - javac hello_world.java
+        - java HelloWorld
 #addons:
 #  postgresql: 13
 # virt: vm
@@ -16,8 +15,8 @@ script:
 #- pip3 list --outdated --format=json | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U 
 #- sudo apt-get install linux-headers-generic linux-image-gcp linux-image-generic 
 #- sudo apt install -y linux-headers-generic linux-image-gcp linux-image-generic linux-modules-5.4.0-165-generic linux-modules-5.15.0-1042-gcp linux-gcp-5.15-headers-5.15.0-1042 linux-modules-5.15.0-1044-gcp
-jobs:
-  include:
+# jobs:
+  # include:
   # - dist: xenial
   #   arch: arm64
   # - dist: bionic
@@ -56,11 +55,11 @@ jobs:
   #   arch: amd64
   # - dist: bionic
   #   arch: amd64
-  - dist: focal
-    arch: amd64
-    group: dev
-  - dist: focal
-    arch: amd64
-    group: stable
+  # - dist: focal
+  #   arch: amd64
+  #   group: dev
+  # - dist: focal
+  #   arch: amd64
+  #   group: stable
   # - dist: jammy
   #   arch: amd64
