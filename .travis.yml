@@ -1,6 +1,6 @@
 os: linux
 dist: focal
-group: stable
+group: dev
 language: python
 python:
   - 3.7.7
