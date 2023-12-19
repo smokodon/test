@@ -16,7 +16,7 @@ services:
 
 install: skip
 script:
-  - apt-cache buildx
+  - sudo apt install -y docker-buildx-plugin
   - DOCKER_BUILDKIT=1 docker build .
 #addons:
 #  postgresql: 13
