@@ -16,7 +16,7 @@ services:
 
 install: skip
 script:
-  - ls -la /usr/local/lib/docker/cli-plugins/
+  - apt cache buildx
   - DOCKER_BUILDKIT=1 docker build .
 #addons:
 #  postgresql: 13
