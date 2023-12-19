@@ -2,7 +2,7 @@ language: php
 os:
 - linux
 dist: focal
-group: dev
+group: edge
 php:
 - '7.4'
 services:
@@ -16,7 +16,6 @@ services:
 
 install: skip
 script:
-  - sudo apt install -y docker-buildx-plugin
   - DOCKER_BUILDKIT=1 docker build .
 #addons:
 #  postgresql: 13
