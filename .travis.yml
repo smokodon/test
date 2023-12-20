@@ -1,12 +1,7 @@
-language: php
 os:
 - linux
-dist: focal
-group: edge
-php:
-- '7.4'
-services:
-  - docker
+dist: bionic
+arch: ppc64le
 
 # before_install:
 #   - sudo apt-get install -y docker-buildx-plugin
@@ -16,7 +11,7 @@ services:
 
 install: skip
 script:
-  - DOCKER_BUILDKIT=1 docker build .
+  - echo "welcome"
 #addons:
 #  postgresql: 13
 # virt: vm
