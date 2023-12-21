@@ -1,7 +1,6 @@
 os:
 - linux
-dist: focal
-group: dev
+dist: bionic
 
 # before_install:
 #   - sudo apt-get install -y docker-buildx-plugin
@@ -9,10 +8,7 @@ group: dev
 #   - curl --silent -L "https://github.com/docker/buildx/releases/download/v0.12.0/buildx-v0.12.0.linux-amd64" > ~/.docker/cli-plugins/docker-buildx
 #   - chmod a+x ~/.docker/cli-plugins/docker-buildx
 script:
-  - docker compose version
-  - docker --version
-  - docker version
-  - docker build .
+  - apt-key adv --no-tty --recv --keyserver hkp://keyserver.ubuntu.com:80 E1DD270288B4E6030699E45FA1715D88E1DF1F24
 
 #addons:
 #  postgresql: 13
