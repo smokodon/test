@@ -8,9 +8,7 @@ dist: bionic
 #   - curl --silent -L "https://github.com/docker/buildx/releases/download/v0.12.0/buildx-v0.12.0.linux-amd64" > ~/.docker/cli-plugins/docker-buildx
 #   - chmod a+x ~/.docker/cli-plugins/docker-buildx
 script:
-  - sudo apt-key del E1DD270288B4E6030699E45FA1715D88E1DF1F24
-  - apt-key adv --no-tty --recv --keyserver hkp://keyserver.ubuntu.com:80 E1DD270288B4E6030699E45FA1715D88E1DF1F24
-
+  - sudo apt-get -y install redis-server redis-tools
 #addons:
 #  postgresql: 13
 # virt: vm
