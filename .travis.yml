@@ -1,7 +1,7 @@
 os:
 - linux
 dist: focal
-group: stable
+group: edge
 
 # before_install:
 #   - sudo apt-get install -y docker-buildx-plugin
