@@ -1,7 +1,7 @@
 os:
 - linux
-dist: focal
-group: edge
+dist: bionic
+group: dev
 
 # before_install:
 #   - sudo apt-get install -y docker-buildx-plugin
@@ -9,7 +9,7 @@ group: edge
 #   - curl --silent -L "https://github.com/docker/buildx/releases/download/v0.12.0/buildx-v0.12.0.linux-amd64" > ~/.docker/cli-plugins/docker-buildx
 #   - chmod a+x ~/.docker/cli-plugins/docker-buildx
 script:
-  - bundle
+  - echo "im finally working!"
 #addons:
 #  postgresql: 13
 # virt: vm
