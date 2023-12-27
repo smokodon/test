@@ -1,5 +1,5 @@
 script:
-  - pyenv -v
+  - pyenv update
 #addons:
 #  postgresql: 13
 # virt: vm
