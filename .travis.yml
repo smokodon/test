@@ -1,3 +1,5 @@
+before_install:
+  - sudo systemctl unmask docker
 services:
   - rabbitmq
 script:
