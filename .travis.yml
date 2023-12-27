@@ -6,7 +6,7 @@ addons:
   apt:
     update: true
       packages:
-       - libonig-dev
+        - libonig-dev
 #addons:
 #  postgresql: 13
 # virt: vm
