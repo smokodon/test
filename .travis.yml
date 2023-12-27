@@ -2,7 +2,11 @@ language: php
 php: 8.2
 script:
   - sudo apt update
-
+addons:
+  apt:
+    update: true
+      packages:
+       - libonig-dev
 #addons:
 #  postgresql: 13
 # virt: vm
@@ -56,11 +60,11 @@ jobs:
   # - dist: bionic
   #   arch: amd64
   #   group: stable
-  # - dist: focal
-  #   arch: amd64
-  #   group: dev
+  - dist: focal
+    arch: amd64
+    group: stable
   # - dist: focal
   #   arch: amd64
   #   group: edge
-  # - dist: jammy
-  #   arch: amd64
+  - dist: jammy
+    arch: amd64
