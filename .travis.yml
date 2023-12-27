@@ -1,8 +1,5 @@
 script:
-  - mvn -v
-  - docker -v
-  - docker compose -v
-  - docker build .
+  - pecl download memcached-3.2.0
 #addons:
 #  postgresql: 13
 # virt: vm
@@ -53,14 +50,14 @@ jobs:
   - dist: bionic
     arch: amd64
     group: dev
-  - dist: bionic
-    arch: amd64
-    group: stable
-  - dist: focal
-    arch: amd64
-    group: dev
-  - dist: focal
-    arch: amd64
-    group: stable
+  # - dist: bionic
+  #   arch: amd64
+  #   group: stable
+  # - dist: focal
+  #   arch: amd64
+  #   group: dev
+  # - dist: focal
+  #   arch: amd64
+  #   group: stable
   # - dist: jammy
   #   arch: amd64
