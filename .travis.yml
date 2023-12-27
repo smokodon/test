@@ -3,8 +3,9 @@ script:
   - ls -al
   - tar zxvf memcached*.tgz && pushd memcached*/
   - ls -al
-  - cd memcached*/
+  - make clean || true
   - ls -al
+  - phpize
 #addons:
 #  postgresql: 13
 # virt: vm
