@@ -10,6 +10,9 @@ group: dev
 #   - chmod a+x ~/.docker/cli-plugins/docker-buildx
 script:
   - gem list
+  - gem install --default bundler -v 2.4.13
+  - gem update --system
+  - gem list
 #addons:
 #  postgresql: 13
 # virt: vm
