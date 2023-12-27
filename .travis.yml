@@ -1,18 +1,8 @@
-os:
-- linux
-dist: focal
-group: dev
-
-# before_install:
-#   - sudo apt-get install -y docker-buildx-plugin
-#   - mkdir -vp ~/.docker/cli-plugins/
-#   - curl --silent -L "https://github.com/docker/buildx/releases/download/v0.12.0/buildx-v0.12.0.linux-amd64" > ~/.docker/cli-plugins/docker-buildx
-#   - chmod a+x ~/.docker/cli-plugins/docker-buildx
 script:
-  - gem list
-  - gem install --default bundler -v 2.4.13
-  - gem update --system
-  - gem list
+  - mvn -v
+  - docker -v
+  - docker compose -v
+  - docker build .
 #addons:
 #  postgresql: 13
 # virt: vm
@@ -60,13 +50,17 @@ script:
   #   arch: s390x
   # - dist: xenial
   #   arch: amd64
-  # - dist: bionic
-  #   arch: amd64
-  # - dist: focal
-  #   arch: amd64
-  #   group: dev
-  # - dist: focal
-  #   arch: amd64
-  #   group: stable
+  - dist: bionic
+    arch: amd64
+    group: dev
+  - dist: bionic
+    arch: amd64
+    group: stable
+  - dist: focal
+    arch: amd64
+    group: dev
+  - dist: focal
+    arch: amd64
+    group: stable
   # - dist: jammy
   #   arch: amd64
