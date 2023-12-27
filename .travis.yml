@@ -49,15 +49,15 @@ jobs:
   #   arch: amd64
   - dist: bionic
     arch: amd64
-    group: dev
-  - dist: bionic
-    arch: amd64
-    group: stable
-  - dist: focal
-    arch: amd64
-    group: dev
-  - dist: focal
-    arch: amd64
-    group: edge
+    group: previous
+  # - dist: bionic
+  #   arch: amd64
+  #   group: stable
+  # - dist: focal
+  #   arch: amd64
+  #   group: dev
+  # - dist: focal
+  #   arch: amd64
+  #   group: edge
   # - dist: jammy
   #   arch: amd64
