@@ -1,10 +1,8 @@
-sudo: required
-services:
-  - rabbitmq
-addons:
-  mariadb: '11.2.1'
 script:
   - mariadb --version
+  - wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.12.11/rabbitmq-server_3.12.11-1_all.deb
+  - sudo dpkg -i rabbitmq-server_3.12.11-1_all.deb
+  - sudo systemctl start rabbitmq-server
 #addons:
 #  postgresql: 13
 # virt: vm
