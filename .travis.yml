@@ -56,11 +56,11 @@ jobs:
   - dist: bionic
     arch: amd64
     group: stable
-  # - dist: focal
-  #   arch: amd64
-  #   group: dev
-  # - dist: focal
-  #   arch: amd64
-  #   group: stable
+  - dist: focal
+    arch: amd64
+    group: dev
+  - dist: focal
+    arch: amd64
+    group: stable
   # - dist: jammy
   #   arch: amd64
