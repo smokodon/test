@@ -1,7 +1,7 @@
 os:
 - linux
-dist: bionic
-group: dev
+dist: focal
+group: edge
 
 # before_install:
 #   - sudo apt-get install -y docker-buildx-plugin
