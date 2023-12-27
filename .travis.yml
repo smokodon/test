@@ -1,8 +1,7 @@
-#language: php
-#php: 8.2
+language: php
+php: 8.2
 script:
-  - sudo apt-get install -y libonig-dev
-  - phpenv global 8.2
+  - echo "fixed"
 #addons:
 #  postgresql: 13
 # virt: vm
@@ -52,15 +51,15 @@ jobs:
   #   arch: amd64
   - dist: bionic
     arch: amd64
+    group: dev
+  - dist: bionic
+    arch: amd64
     group: stable
-  # - dist: bionic
-  #   arch: amd64
-  #   group: stable
+  - dist: focal
+    arch: amd64
+    group: dev
   - dist: focal
     arch: amd64
     group: stable
-  # - dist: focal
+  # - dist: jammy
   #   arch: amd64
-  #   group: edge
-  - dist: jammy
-    arch: amd64
