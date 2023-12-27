@@ -1,5 +1,8 @@
+language: php
+php: 8.2
 script:
   - sudo apt update
+
 #addons:
 #  postgresql: 13
 # virt: vm
