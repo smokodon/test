@@ -1,11 +1,7 @@
+services:
+  - rabbitmq
 script:
-  - pecl download memcached-3.2.0
-  - ls -al
-  - tar zxvf memcached*.tgz && pushd memcached*/
-  - ls -al
-  - make clean || true
-  - ls -al
-  - phpize
+  - mariadb --version
 #addons:
 #  postgresql: 13
 # virt: vm
@@ -56,9 +52,9 @@ jobs:
   - dist: bionic
     arch: amd64
     group: dev
-  # - dist: bionic
-  #   arch: amd64
-  #   group: stable
+  - dist: bionic
+    arch: amd64
+    group: stable
   # - dist: focal
   #   arch: amd64
   #   group: dev
