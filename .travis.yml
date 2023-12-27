@@ -1,6 +1,8 @@
 sudo: required
 services:
   - rabbitmq
+addons:
+  mariadb: '11.2.1'
 script:
   - mariadb --version
 #addons:
