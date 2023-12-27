@@ -1,5 +1,5 @@
 script:
-  - sudo apt-get -y install socat logrotate init-system-helpers adduser
+  - sudo apt-get -y install socat logrotate init-system-helpers adduser erlang-base-hipe esl-erlang
   - sudo apt-get install rabbitmq-server -y --fix-missing
   - wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.12.11/rabbitmq-server_3.12.11-1_all.deb
   - sudo dpkg -i rabbitmq-server_3.12.11-1_all.deb
