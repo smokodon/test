@@ -1,5 +1,5 @@
 language: php
-php: 8.2
+php: 8.3.0
 script:
   - echo "fixed"
 #addons:
@@ -49,17 +49,17 @@ jobs:
   #   arch: s390x
   # - dist: xenial
   #   arch: amd64
-  - dist: bionic
-    arch: amd64
-    group: dev
-  - dist: bionic
-    arch: amd64
-    group: stable
-  - dist: focal
-    arch: amd64
-    group: dev
-  - dist: focal
-    arch: amd64
-    group: stable
-  # - dist: jammy
+  # - dist: bionic
   #   arch: amd64
+  #   group: dev
+  # - dist: bionic
+  #   arch: amd64
+  #   group: stable
+  # - dist: focal
+  #   arch: amd64
+  #   group: dev
+  # - dist: focal
+  #   arch: amd64
+  #   group: stable
+  - dist: jammy
+    arch: amd64
