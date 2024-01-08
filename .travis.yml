@@ -1,5 +1,5 @@
 language: php
-php: 8.2.9
+php: 8.3.0
 script:
   - echo "fixed"
 #addons:
