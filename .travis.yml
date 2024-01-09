@@ -1,7 +1,9 @@
 language: php
 #php: 7.3.33
 script:
-  - whereis composer
+  - curl -fsSL -o bin/composer http://getcomposer.org/composer.phar
+  - cd bin
+  - ls -al
 #addons:
 #  postgresql: 13
 # virt: vm
@@ -59,11 +61,11 @@ jobs:
   #   arch: amd64
   #   group: dev
   - dist: focal
-    php: 7.3.33
+    #php: 7.3.33
     arch: amd64
-  - dist: focal
-    php: 8.3.0
-    arch: amd64
+  # - dist: focal
+  #   php: 8.3.0
+  #   arch: amd64
   #   group: stable
   - dist: jammy
     arch: amd64
