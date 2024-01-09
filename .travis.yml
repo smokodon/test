@@ -1,7 +1,7 @@
 language: php
-php: 7.3.33
+#php: 7.3.33
 script:
-  - echo "fixed"
+  - whereis composer
 #addons:
 #  postgresql: 13
 # virt: vm
@@ -59,6 +59,10 @@ jobs:
   #   arch: amd64
   #   group: dev
   - dist: focal
+    php: 7.3.33
+    arch: amd64
+  - dist: focal
+    php: 8.3.0
     arch: amd64
   #   group: stable
   - dist: jammy
