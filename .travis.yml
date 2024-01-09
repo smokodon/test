@@ -1,7 +1,8 @@
 language: php
-php: master
+php: 8.3.0
 script:
   - echo "fixed"
+group: previous
 #addons:
 #  postgresql: 13
 # virt: vm
