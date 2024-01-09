@@ -3,7 +3,7 @@
 script:
   - mkdir bin
   - mkdir bin/composer
-  - wget -o bin/composer http://getcomposer.org/composer.phar
+  - wget -o bin/composer/ http://getcomposer.org/composer.phar
   - cd bin
   - ls -al
 #addons:
