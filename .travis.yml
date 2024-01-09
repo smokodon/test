@@ -3,7 +3,7 @@
 script:
   - mkdir bin
   - mkdir bin/composer
-  - curl -fsSL -o bin/composer http://getcomposer.org/composer.phar
+  - sudo curl -fsSL -o bin/composer http://getcomposer.org/composer.phar
   - cd bin
   - ls -al
 #addons:
