@@ -1,4 +1,4 @@
-language: php
+#language: php
 #php: 7.3.33
 script:
   - curl -fsSL -o bin/composer http://getcomposer.org/composer.phar
