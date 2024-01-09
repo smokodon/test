@@ -1,7 +1,8 @@
 #language: php
 #php: 7.3.33
 script:
-  - sudo mkdir bin/composer
+  - mkdir bin
+  - mkdir bin/composer
   - curl -fsSL -o bin/composer http://getcomposer.org/composer.phar
   - cd bin
   - ls -al
