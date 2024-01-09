@@ -4,8 +4,8 @@ script:
   - mkdir bin
   - mkdir bin/composer
   - wget -P bin/composer http://getcomposer.org/composer.phar
-  - cd bin
-  - ls -al
+  - chmod +x bin/composer
+  - composer self-update
 #addons:
 #  postgresql: 13
 # virt: vm
