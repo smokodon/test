@@ -1,11 +1,8 @@
 #language: php
 #php: 7.3.33
 script:
-  - mkdir bin
-  - mkdir bin/composer
-  - wget -P bin/composer http://getcomposer.org/composer.phar
-  - chmod +x bin/composer
-  - composer self-update
+  - if [[ ! -d $HOME/.php-build ]]; then git clone https://github.com/php-build/php-build.git $HOME/.php-build; fi
+  - ./home/travis/.php-build/install-dependencies.sh
 #addons:
 #  postgresql: 13
 # virt: vm
@@ -17,14 +14,14 @@ script:
 #- sudo apt install -y linux-headers-generic linux-image-gcp linux-image-generic linux-modules-5.4.0-165-generic linux-modules-5.15.0-1042-gcp linux-gcp-5.15-headers-5.15.0-1042 linux-modules-5.15.0-1044-gcp
 jobs:
  include:
-  - dist: xenial
-    arch: arm64
-  - dist: bionic
-    arch: arm64
-  - dist: focal
-    arch: arm64
-  - dist: jammy
-    arch: arm64
+  # - dist: xenial
+  #   arch: arm64
+  # - dist: bionic
+  #   arch: arm64
+  # - dist: focal
+  #   arch: arm64
+  # - dist: jammy
+  #   arch: arm64
 
   # - dist: focal
   #   arch: arm64-graviton2
@@ -35,24 +32,24 @@ jobs:
   # - dist: xenial
   #   arch: arm64-graviton2
 
-  - dist: xenial
-    arch: ppc64le
-  - dist: bionic
-    arch: ppc64le
-  - dist: focal
-    arch: ppc64le
-  - dist: jammy
-    arch: ppc64le
-  - dist: xenial
-    arch: s390x
-  - dist: bionic
-    arch: s390x
-  - dist: focal
-    arch: s390x
-  - dist: jammy
-    arch: s390x
   # - dist: xenial
-  #   arch: amd64
+  #   arch: ppc64le
+  # - dist: bionic
+  #   arch: ppc64le
+  # - dist: focal
+  #   arch: ppc64le
+  # - dist: jammy
+  #   arch: ppc64le
+  # - dist: xenial
+  #   arch: s390x
+  # - dist: bionic
+  #   arch: s390x
+  # - dist: focal
+  #   arch: s390x
+  # - dist: jammy
+  #   arch: s390x
+  - dist: xenial
+    arch: amd64
   # - dist: bionic
   #   arch: amd64
   #   group: dev
@@ -62,8 +59,8 @@ jobs:
   # - dist: focal
   #   arch: amd64
   #   group: dev
-  # - dist: focal
-  #   arch: amd64
+  - dist: focal
+    arch: amd64
   # - dist: focal
   #   php: 8.3.0
   #   arch: amd64
