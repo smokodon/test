@@ -1,7 +1,10 @@
 #language: php
 #php: 7.3.33
 script:
-  - curl -sS https://getcomposer.org/installer | sudo bash -- --install-dir=~/usr/local/bin --filename=composer
+  - mkdir -p /usr/local/bin
+  - wget -P /usr/local/bin/composer http://getcomposer.org/composer.phar
+  - ls -al /usr/local/bin/
+  - ls -al /usr/local/bin/composer
 #addons:
 #  postgresql: 13
 # virt: vm
