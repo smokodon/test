@@ -2,7 +2,7 @@
 #php: 7.3.33
 script:
   - if [[ ! -d $HOME/.php-build ]]; then git clone https://github.com/php-build/php-build.git $HOME/.php-build; fi
-  - ~/.php-build/install.sh
+  - sudo ~/.php-build/install.sh
 #addons:
 #  postgresql: 13
 # virt: vm
