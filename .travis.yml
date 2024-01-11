@@ -3,6 +3,7 @@
 script:
   - sudo mkdir -p /usr/local/bin/composer
   - sudo wget -P /usr/local/bin/composer http://getcomposer.org/composer.phar
+  - sudo chmod +x /usr/local/bin/composer
   - ls -al /usr/local/bin/
   - ls -al /usr/local/bin/composer
   - /usr/local/bin/composer/composer.phar
