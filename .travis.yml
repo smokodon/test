@@ -6,6 +6,7 @@ script:
   - sudo chmod +x /usr/local/bin/composer/composer.phar
   - ls -al /usr/local/bin/
   - ls -al /usr/local/bin/composer
+  - composer
   - /usr/local/bin/composer/composer.phar
 #addons:
 #  postgresql: 13
