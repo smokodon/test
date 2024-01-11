@@ -2,7 +2,7 @@
 #php: 7.3.33
 script:
   - sudo mkdir -p /usr/local/bin/composer
-  - wget -P /usr/local/bin/composer http://getcomposer.org/composer.phar
+  - sudo wget -P /usr/local/bin/composer http://getcomposer.org/composer.phar
   - ls -al /usr/local/bin/
   - ls -al /usr/local/bin/composer
 #addons:
