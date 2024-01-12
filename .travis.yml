@@ -1,7 +1,7 @@
 #language: php
 #php: 7.3.33
 script:
-  - sudo apt-get remove php-7.0.* -y
+  - sudo apt-get remove php-7.0.33 -y
 #addons:
 #  postgresql: 13
 # virt: vm
