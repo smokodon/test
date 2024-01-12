@@ -1,13 +1,7 @@
 #language: php
 #php: 7.3.33
 script:
-  - sudo mkdir -p /usr/local/bin/composer
-  - sudo wget -P /usr/local/bin/composer http://getcomposer.org/composer.phar
-  - sudo chmod +x /usr/local/bin/composer/composer.phar
-  - ls -al /usr/local/bin/
-  - ls -al /usr/local/bin/composer
-  - alias composer='/usr/local/bin/composer/composer.phar'
-  - composer
+  - sudo apt-get remove php-7.0.* -y
 #addons:
 #  postgresql: 13
 # virt: vm
@@ -64,8 +58,8 @@ jobs:
   # - dist: focal
   #   arch: amd64
   #   group: dev
-  - dist: focal
-    arch: amd64
+  # - dist: focal
+  #   arch: amd64
   # - dist: focal
   #   php: 8.3.0
   #   arch: amd64
