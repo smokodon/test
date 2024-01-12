@@ -1,7 +1,8 @@
 #language: php
 #php: 7.3.33
 script:
-  - sudo apt-get remove 7.0.33-0ubuntu0.16.04.16 -y
+  - sudo apt-get install -y php-pear php-dev libicu-dev
+  - sudo apt-get remove php7.0* -y
 #addons:
 #  postgresql: 13
 # virt: vm
