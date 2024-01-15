@@ -1,8 +1,7 @@
-#language: php
-#php: 7.3.33
+language: php
+php: 8.3.0
 script:
-  - sudo apt-get install -y php-pear php-dev libicu-dev
-  - sudo apt-get remove php7.0* -y
+  - echo "hello"
 #addons:
 #  postgresql: 13
 # virt: vm
@@ -48,22 +47,20 @@ jobs:
   #   arch: s390x
   # - dist: jammy
   #   arch: s390x
-  - dist: xenial
+  # - dist: xenial
+  #   arch: amd64
+  # - dist: bionic
+  #   arch: amd64
+  #   group: dev
+  # - dist: bionic
+  #   arch: amd64
+  #   group: stable
+  # - dist: focal
+  #   arch: amd64
+  #   group: dev
+  # - dist: focal
+  #   arch: amd64
+  - dist: focal
     arch: amd64
-  # - dist: bionic
-  #   arch: amd64
-  #   group: dev
-  # - dist: bionic
-  #   arch: amd64
-  #   group: stable
-  # - dist: focal
-  #   arch: amd64
-  #   group: dev
-  # - dist: focal
-  #   arch: amd64
-  # - dist: focal
-  #   php: 8.3.0
-  #   arch: amd64
-  #   group: stable
-  # - dist: jammy
-  #   arch: amd64
+  - dist: jammy
+    arch: amd64
