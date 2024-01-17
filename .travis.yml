@@ -2,7 +2,7 @@
 # python:
 #   - "3.12.0"
 script:
-  - ls -l /usr/bin | grep python
+  - sudo python -m pip install virtualenv
 #addons:
 #  postgresql: 13
 # virt: vm
