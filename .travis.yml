@@ -1,5 +1,6 @@
-language: php
-php: 8.2.0
+language: python
+python:
+  - "3.12.0"
 script:
   - echo "hello"
 #addons:
