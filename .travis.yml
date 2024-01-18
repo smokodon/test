@@ -1,7 +1,8 @@
-# language: python
+language: python
 # python:
 #   - "3.12.0"
 script:
+  - ls -al /opt/pyenv/versions/3.7.17/bin/python
   - sudo python -m pip install virtualenv
 #addons:
 #  postgresql: 13
