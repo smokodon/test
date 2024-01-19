@@ -1,9 +1,11 @@
-language: python
+# language: php
 # python:
 #   - "3.12.0"
 script:
-  - ls -al /opt/pyenv/versions/3.7.17/bin/python
-  - sudo python -m pip install virtualenv
+  - git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
+  - . "$HOME/.asdf/asdf.sh"
+  - asdf plugin-add php https://github.com/asdf-community/asdf-php.git
+  - asdf install php 8.2.14
 #addons:
 #  postgresql: 13
 # virt: vm
@@ -49,11 +51,11 @@ jobs:
   #   arch: s390x
   # - dist: jammy
   #   arch: s390x
-  - dist: xenial
-    arch: amd64
-  - dist: bionic
-    arch: amd64
-  - dist: focal
-    arch: amd64
+  # - dist: xenial
+  #   arch: amd64
+  # - dist: bionic
+  #   arch: amd64
+  # - dist: focal
+  #   arch: amd64
   - dist: jammy
     arch: amd64
