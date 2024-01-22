@@ -7,6 +7,8 @@ script:
   - . "$HOME/.asdf/asdf.sh"
   - asdf plugin-add php https://github.com/asdf-community/asdf-php.git
   - asdf install php 8.2.14
+  - ls -al /home/travis/.asdf/installs/php/8.2.14
+  - ls -al /home/travis/.asdf/installs/php/8.2.14/etc
 #addons:
 #  postgresql: 13
 # virt: vm
