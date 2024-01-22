@@ -8,7 +8,9 @@ script:
   - asdf plugin-add php https://github.com/asdf-community/asdf-php.git
   - asdf install php 8.2.14
   - ls -al /home/travis/.asdf/installs/php/8.2.14
-  - ls -al /home/travis/.asdf/installs/php/8.2.14/etc
+  - ls -al /home/travis/.asdf/installs/php/8.2.14/php
+  - ls -al /home/travis/.asdf/installs/php/8.2.14/bin
+  - pear config-set auto_discover 1
 #addons:
 #  postgresql: 13
 # virt: vm
