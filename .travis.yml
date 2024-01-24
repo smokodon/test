@@ -1,20 +1,16 @@
 #language: php
 #php: 8.2.14
 script:
-  - sudo apt-get update && sudo apt-get install -y autoconf bison build-essential curl gettext git libgd-dev libcurl4-openssl-dev libedit-dev libicu-dev libjpeg-dev libmysqlclient-dev libonig-dev libpng-dev libpq-dev libreadline-dev libsqlite3-dev libssl-dev libxml2-dev libzip-dev openssl pkg-config re2c zlib1g-dev
-  - git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
-  - . "$HOME/.asdf/asdf.sh"
-  - asdf plugin-add php https://github.com/asdf-community/asdf-php.git
-  - curl -sSf --retry 5 -o archive.tar.bz2 https://storage.googleapis.com/travis-ci-language-archives/php/binaries/ubuntu/20.04/x86_64/php-8.2.14.tar.bz2 && tar xjf archive.tar.bz2 --directory /
-  - ls -al
-  - asdf install php 8.2.14
-  - asdf global php 8.2.14
-  - php -v
+  # - sudo apt-get update && sudo apt-get install -y autoconf bison build-essential curl gettext git libgd-dev libcurl4-openssl-dev libedit-dev libicu-dev libjpeg-dev libmysqlclient-dev libonig-dev libpng-dev libpq-dev libreadline-dev libsqlite3-dev libssl-dev libxml2-dev libzip-dev openssl pkg-config re2c zlib1g-dev
+  # - git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
+  # - . "$HOME/.asdf/asdf.sh"
+  # - asdf plugin-add php https://github.com/asdf-community/asdf-php.git
+  # - curl -sSf --retry 5 -o archive.tar.bz2 https://storage.googleapis.com/travis-ci-language-archives/php/binaries/ubuntu/20.04/x86_64/php-8.2.14.tar.bz2 && tar xjf archive.tar.bz2 --directory /
+  # - ls -al
   # - asdf install php 8.2.14
-  # - ls -al /home/travis/.asdf/installs/php/8.2.14
-  # - ls -al /home/travis/.asdf/installs/php/8.2.14/php
-  # - ls -al /home/travis/.asdf/installs/php/8.2.14/bin
-  # - pear config-set auto_discover 1
+  # - asdf global php 8.2.14
+  # - php -v
+  - mvn -version
 #addons:
 #  postgresql: 13
 # virt: vm
@@ -62,8 +58,8 @@ jobs:
   #   arch: s390x
   # - dist: xenial
   #   arch: amd64
-  # - dist: bionic
-  #   arch: amd64
+  - dist: bionic
+    arch: amd64
   - dist: focal
     arch: amd64
   # - dist: jammy
