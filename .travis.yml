@@ -10,7 +10,10 @@ script:
   # - asdf install php 8.2.14
   # - asdf global php 8.2.14
   # - php -v
-  - mvn -version
+  - docker -v
+  - ls -l /usr/local/bin | grep -i ^docker
+  - /usr/bin/docker --version
+  - docker buildx inspect
 #addons:
 #  postgresql: 13
 # virt: vm
