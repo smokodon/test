@@ -14,6 +14,7 @@ script:
   # - docker build
   # - /usr/bin/docker --version
   # - docker buildx inspect
+  - php -v
 #addons:
 #  postgresql: 13
 # virt: vm
