@@ -11,7 +11,7 @@ script:
   # - asdf global php 8.2.14
   # - php -v
   - docker -v
-  - ls -l /usr/local/bin | grep -i ^docker
+  - docker build
   - /usr/bin/docker --version
   - docker buildx inspect
 #addons:
