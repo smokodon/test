@@ -10,12 +10,8 @@ script:
   # - asdf install php 8.2.14
   # - asdf global php 8.2.14
   # - php -v
-  - mvn -v
-  - docker -v
-  - docker build
-  - /usr/bin/docker --version
-  - docker buildx inspect
-  - php -v
+  - curl -fsSL --retry 20 -O http://pear.php.net/go-pear.phar
+  - env TZ=UTC /home/travis/build/travis-ci/php-src-builder/bin/install-pear
 #addons:
 #  postgresql: 13
 # virt: vm
