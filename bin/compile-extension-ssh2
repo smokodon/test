@@ -1,0 +1,19 @@
+#!/bin/bash
+set -o xtrace
+set -o errexit
+source $(dirname $0)/compile-extensions-common
+
+travis_time_start
+
+sudo apt-get install libssh2-1-dev
+
+if [[ $VERSION =~ ^7\.[012] ]]; then
+	pecl_install ssh2-1.1.2 </dev/null
+elif [[ $VERSION =~ ^master$ || $VERSION =~ ^7 || $VERSION =~ ^8 ]]; then
+	echo "ssh2 is not compatible with $VERSION"
+	# it's not yet compatible with master
+else
+	pecl_install ssh2-0.13 </dev/null
+fi
+
+travis_time_finish

@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+set -o xtrace
+set -o errexit
+
+# If PHP < 7.2, exit
+if [[ ! $VERSION =~ ^master$ ]] && [[ "$(printf "7.2\n$VERSION" | sort -V | head -n1)" < "7.2" ]]; then
+	echo 'PHP < 7.2; skip libsodium steps'
+	exit 0
+fi
+
+LIBSODIUM_INSTALL_DIR=$HOME/.asdf/installs/php/$VERSION
+
+git clone -b stable https://github.com/jedisct1/libsodium.git
+
+# compile
+pushd libsodium
+./configure --prefix=$LIBSODIUM_INSTALL_DIR
+make check
+make install
+popd
+
+# add the option in custom_configure_options
+if [[ ! $VERSION =~ ^master$ ]] && [[ "$(printf "7.4\n$VERSION" | sort -V | head -n1)" < "7.4" ]]; then
+	echo "--with-sodium=$LIBSODIUM_INSTALL_DIR" >> $TRAVIS_BUILD_DIR/custom_configure_options
+else
+	echo "--with-sodium" >> $TRAVIS_BUILD_DIR/custom_configure_options
+fi
