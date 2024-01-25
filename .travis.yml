@@ -12,8 +12,10 @@ script:
   # - php -v
   - curl -fsSL --retry 20 -O http://pear.php.net/go-pear.phar
   - ls -al
-  - php -q go-pear.phar
-  - env TZ=UTC /home/travis/build/travis-ci/php-src-builder/bin/install-pear
+  - . "$HOME/.asdf/asdf.sh"
+  - ls -al
+  #- php -q go-pear.phar
+  #- env TZ=UTC /home/travis/build/travis-ci/php-src-builder/bin/install-pear
 #addons:
 #  postgresql: 13
 # virt: vm
