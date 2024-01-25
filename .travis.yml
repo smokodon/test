@@ -298,7 +298,7 @@ install:
     if ! pkg-config --exists libjpeg libsasl2; then
       export PKG_CONFIG_PATH=$PWD:$PKG_CONFIG_PATH
     fi
-  - ./bin/install-icu
+  - sudo ./bin/install-icu
   - export PKG_CONFIG_PATH=$ICU_INSTALL_DIR/lib/pkgconfig:$PKG_CONFIG_PATH
   - touch custom_configure_options
   - ./bin/install-libzip
