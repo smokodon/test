@@ -1,7 +1,7 @@
 #language: php
 #php: nightly
 script:
-  - mvn wrapper:wrapper
+  - mvn wrapper:wrapper -Dmaven=3.5.4
 #addons:
 #  postgresql: 13
 # virt: vm
