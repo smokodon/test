@@ -52,6 +52,8 @@ jobs:
   - dist: bionic
     arch: amd64
   - dist: focal
+    script:
+      - psql -c "\l" -d postgres -U travis
     group: dev
     arch: amd64
   - dist: jammy
