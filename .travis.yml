@@ -1,7 +1,7 @@
-#language: php
-#php: nightly
+language: php
+
 script:
-  - mvn wrapper:wrapper -Dmaven=3.5.4
+  - php -v
 #addons:
 #  postgresql: 13
 # virt: vm
@@ -50,8 +50,10 @@ jobs:
   # - dist: xenial
   #   arch: amd64
   - dist: bionic
+    php: 8.3
     arch: amd64
   - dist: focal
+    php: 8.2
     arch: amd64
   - dist: jammy
     arch: amd64
