@@ -52,6 +52,7 @@ jobs:
   - dist: bionic
     arch: amd64
   - dist: focal
+    group: dev
     arch: amd64
   - dist: jammy
     arch: amd64
