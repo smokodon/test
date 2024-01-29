@@ -1,7 +1,7 @@
-language: php
-
-script:
-  - php -v
+services:
+  - postgresql
+addons:
+  postgresql: "12"
 #addons:
 #  postgresql: 13
 # virt: vm
@@ -50,10 +50,8 @@ jobs:
   # - dist: xenial
   #   arch: amd64
   - dist: bionic
-    php: 8.3
     arch: amd64
   - dist: focal
-    php: 8.2
     arch: amd64
   - dist: jammy
     arch: amd64
