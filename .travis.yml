@@ -1,4 +1,6 @@
 language: php
+php: 8.2.9
+jdk: openjdk17
 script:
   - java --version
 #addons:
