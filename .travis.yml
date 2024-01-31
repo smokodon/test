@@ -1,4 +1,6 @@
-language: android
+language: php
+script:
+  - java --version
 #addons:
 #  postgresql: 13
 # virt: vm
@@ -44,8 +46,8 @@ jobs:
   #   arch: s390x
   # - dist: jammy
   #   arch: s390x
-  - dist: trusty
-    arch: amd64
+  # - dist: trusty
+  #   arch: amd64
   - dist: xenial
     arch: amd64
   - dist: bionic
@@ -54,3 +56,4 @@ jobs:
     arch: amd64
   - dist: jammy
     arch: amd64
+
