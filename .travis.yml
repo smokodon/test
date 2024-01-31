@@ -1,7 +1,4 @@
-services:
-  - postgresql
-addons:
-  postgresql: "12"
+language: android
 #addons:
 #  postgresql: 13
 # virt: vm
@@ -52,9 +49,6 @@ jobs:
   - dist: bionic
     arch: amd64
   - dist: focal
-    script:
-      - psql -c "\l" -d postgres -U travis
-    group: dev
     arch: amd64
   - dist: jammy
     arch: amd64
