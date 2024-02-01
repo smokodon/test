@@ -1,5 +1,5 @@
 script:
-  - curl -O https://github.com/skvadrik/re2c/releases/download/3.1/re2c-3.1.tar.xz
+  - wget https://github.com/skvadrik/re2c/releases/download/3.1/re2c-3.1.tar.xz
   - tar -xvf ./re2c-3.1.tar.xz
   - ls -al
 #addons:
