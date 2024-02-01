@@ -1,7 +1,7 @@
 script:
   - wget https://github.com/skvadrik/re2c/releases/download/3.1/re2c-3.1.tar.xz
   - tar -xf ./re2c-3.1.tar.xz
-  - cd re2c-3.1 && ./configure && make && make install
+  - cd re2c-3.1 && ./configure && make && sudo make install
 #addons:
 #  postgresql: 13
 # virt: vm
