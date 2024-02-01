@@ -1,7 +1,6 @@
+group: dev
 script:
-  - wget https://github.com/skvadrik/re2c/releases/download/3.1/re2c-3.1.tar.xz
-  - tar -xf ./re2c-3.1.tar.xz
-  - ./re2c-3.1/configure && make && sudo make install
+  - git lfs status
 #addons:
 #  postgresql: 13
 # virt: vm
@@ -53,8 +52,8 @@ jobs:
     arch: amd64
   - dist: bionic
     arch: amd64
-  # - dist: focal
-  #   arch: amd64
-  # - dist: jammy
-  #   arch: amd64
+  - dist: focal
+    arch: amd64
+  - dist: jammy
+    arch: amd64
 
