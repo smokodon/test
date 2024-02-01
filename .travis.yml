@@ -1,6 +1,6 @@
 script:
   - git --version
-  - git-lfs install
+  - sudo apt-install git-lfs
   - git lfs status
 #addons:
 #  postgresql: 13
