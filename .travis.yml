@@ -1,6 +1,9 @@
 group: dev
+language: python
+python:
+  - "3.12"
 script:
-  - git lfs status
+  - python -v
 #addons:
 #  postgresql: 13
 # virt: vm
