@@ -1,4 +1,4 @@
-group: dev
+group: stable
 language: python
 python:
   - 3.12
