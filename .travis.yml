@@ -5,8 +5,8 @@ addons:
     packages:
     - postgresql-12
     - postgresql-client-12
-services:
-  - postgresql
+#services:
+#  - postgresql
 script:
   - git-lfs status
   - psql --version
