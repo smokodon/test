@@ -1,7 +1,6 @@
 group: stable
-language: python
-python:
-  - 3.12
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
 services:
   - postgresql
 script:
