@@ -1,4 +1,7 @@
 group: dev
+language: python
+python:
+  - 3.12
 addons:
   - postgresql: 12
 script:
