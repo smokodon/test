@@ -2,12 +2,11 @@ group: dev
 language: python
 python:
   - 3.12
-addons:
-  - postgresql: 12
+services:
+  - postgresql
 script:
   - git-lfs status
   - psql --version
-  - sudo systemctl start postgresql
   - sudo systemctl status postgresql
 #addons:
 #  postgresql: 13
