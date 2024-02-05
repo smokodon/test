@@ -7,6 +7,8 @@ addons:
 script:
   - git-lfs status
   - psql --version
+  - status postgresql
+  - sudo service postgresql status
   - sudo systemctl status postgresql
 #addons:
 #  postgresql: 13
