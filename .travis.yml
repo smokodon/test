@@ -1,7 +1,6 @@
 group: dev
-language: python
-python:
-  - "3.13"
+addons:
+  - postgresql: 12
 script:
   - git-lfs status
 #addons:
