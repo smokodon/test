@@ -3,6 +3,7 @@ addons:
   - postgresql: 12
 script:
   - git-lfs status
+  - psql -v
 #addons:
 #  postgresql: 13
 # virt: vm
