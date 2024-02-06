@@ -59,6 +59,10 @@ jobs:
     arch: amd64
     addons:
       postgresql: "12"
+      apt:
+        packages:
+          - postgresql-12
+          - postgresql-client-12
   - dist: focal
     arch: amd64
     addons:
