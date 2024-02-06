@@ -86,5 +86,9 @@ jobs:
     group: previous
     services:      
       - postgresql
+    env:
+      global:
+        - PGPORT=5433
+        - PGUSER=travis
   # - dist: jammy
   #   arch: amd64
