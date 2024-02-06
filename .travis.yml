@@ -65,6 +65,7 @@ jobs:
           - postgresql-client-12
   - dist: focal
     arch: amd64
+    group: previous
     env:
       global:
         - PGPORT=5433
