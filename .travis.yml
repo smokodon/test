@@ -84,8 +84,8 @@ jobs:
   - dist: focal
     arch: amd64
     group: previous
-    services:      
-      - postgresql
+    addons:      
+      - postgresql: 12
     env:
       global:
         - PGPORT=5433
