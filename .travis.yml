@@ -1,11 +1,11 @@
-group: dev
+group: stable
 
 addons:
-  postgresql: "11"
+  postgresql: "13"
   apt:
     packages:
-    - postgresql-11
-    - postgresql-client-11
+    - postgresql-13
+    - postgresql-client-13
 script:
   - git-lfs status
   #- sudo apt-get install postgresql-13 postgresql-client-13
