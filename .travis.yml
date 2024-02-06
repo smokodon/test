@@ -1,7 +1,6 @@
 group: stable
-before_script:
-  - psql -c 'create database travis_ci_test;' -U postgres
 script:
+  - psql -c 'create database travis_ci_test;' -U postgres
   - sudo netstat -plunt |grep postgres
   #- sudo apt-get install postgresql-13 postgresql-client-13
   - psql --version
