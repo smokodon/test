@@ -59,7 +59,10 @@ jobs:
   #   arch: amd64
   - dist: bionic
     arch: amd64
-    group: previous
+    env:
+      global:
+        - PGPORT=5433
+        - PGUSER=travis
     addons:
       postgresql: "13"
       apt:
