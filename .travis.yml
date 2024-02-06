@@ -71,6 +71,10 @@ jobs:
           - postgresql-client-13
   - dist: focal
     arch: amd64
+    env:
+      global:
+        - PGPORT=5433
+        - PGUSER=travis
     addons:
       postgresql: "13"
       apt:
