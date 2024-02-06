@@ -5,6 +5,10 @@ addons:
     packages:
     - postgresql-13
     - postgresql-client-13
+env:
+  global:
+  - PGPORT=5433
+  - PGUSER=travis
 #services:
 #  - postgresql
 script:
