@@ -1,7 +1,11 @@
 group: stable
 
 addons:
-  postgresql: "12"
+  postgresql: "11"
+  apt:
+    packages:
+    - postgresql-11
+    - postgresql-client-11
 script:
   - git-lfs status
   #- sudo apt-get install postgresql-13 postgresql-client-13
@@ -55,8 +59,8 @@ jobs:
   #   arch: amd64
   # - dist: xenial
   #   arch: amd64
-  # - dist: bionic
-  #   arch: amd64
+  - dist: bionic
+    arch: amd64
   - dist: focal
     arch: amd64
   # - dist: jammy
