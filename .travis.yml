@@ -1,16 +1,15 @@
 group: stable
 addons:
-  postgresql: "12"
+  postgresql: "13"
   apt:
     packages:
-    - postgresql-12
-    - postgresql-client-12
+    - postgresql-13
+    - postgresql-client-13
 #services:
 #  - postgresql
 script:
   - git-lfs status
   - psql --version
-  - sudo systemctl status postgresql
 #addons:
 #  postgresql: 13
 # virt: vm
