@@ -1,8 +1,6 @@
 group: stable
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
-addons:
-  postgresql: "12"
 script:
   - sudo netstat -plunt |grep postgres
   #- sudo apt-get install postgresql-13 postgresql-client-13
@@ -60,7 +58,15 @@ jobs:
   #   arch: amd64
   - dist: focal
     arch: amd64
+    addons:
+      postgresql: "12"
+  - dist: focal
+    arch: amd64
+    addons:
+      postgresql: "13"
+      apt:
+        packages:
+          - postgresql-13
+          - postgresql-client-13
   # - dist: jammy
   #   arch: amd64
-
-
