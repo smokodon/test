@@ -84,11 +84,7 @@ jobs:
   - dist: focal
     arch: amd64
     group: previous
-    addons:
-      postgresql: "13"
-      apt:
-        packages:
-          - postgresql-13
-          - postgresql-client-13
+    services:      
+      - postgresql
   # - dist: jammy
   #   arch: amd64
