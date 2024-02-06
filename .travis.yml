@@ -1,18 +1,12 @@
 group: stable
-addons:
-  postgresql: "12"
-  apt:
-    packages:
-    - postgresql-12
-    - postgresql-client-12
-env:
-  global:
-  - PGPORT=5433
-  - PGUSER=travis
+
 #services:
 #  - postgresql
 script:
   - git-lfs status
+  - echo "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main" | sudo tee /etc/apt/sources.list.d/postgresql-pgdg.list &gt; /dev/null
+  - sudo apt-get update
+  - sudo apt-get install postgresql-13 postgresql-client-13
   - psql --version
 #addons:
 #  postgresql: 13
