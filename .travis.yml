@@ -58,37 +58,25 @@ jobs:
   #   arch: amd64
   # - dist: xenial
   #   arch: amd64
-  - dist: bionic
+  - dist: focal
+    arch: amd64
+    addons:
+      postgresql: 12
+      apt:
+        packages:
+          - postgresql-12
+          - postgresql-client-12
+    env:
+      global:
+        - PGPORT=5433
+        - PGUSER=travis
+  - dist: focal
     arch: amd64
     group: stable
     services: postgresql
-  - dist: focal
-    arch: amd64
-    env:
-      global:
-        - PGPORT=5432
-        - PGUSER=travis
-    addons:
-      postgresql: 13
-      apt:
-        packages:
-          - postgresql-13
-          - postgresql-client-13
   - dist: focal
     arch: amd64
     group: dev
-    services: postgresql-12
-    env:
-      global:
-      - PGPORT=5433
-      - PGUSER=travis
-  - dist: focal
-    arch: amd64
-    group: previous
-    services: postgresql
-  - dist: focal
-    arch: amd64
-    group: stable
     services: postgresql
   # - dist: jammy
   #   arch: amd64
