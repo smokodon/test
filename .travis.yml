@@ -1,11 +1,13 @@
 
 before_script:
-  - psql -c 'create database travis_ci_test;' -U travis
+  
 script:
   # - echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
   # - curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
   # - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 7123CB760FF18869
   # - sudo apt-get update && sudo apt-get install -y google-cloud-cli-gke-gcloud-auth-plugin google-cloud-cli google-cloud-sdk google-cloud-sdk-gke-gcloud-auth-plugin
+  - cat /etc/postgresql/12/main/postgresql.conf
+  - psql -c 'create database travis_ci_test;' -U travis  
   - psql -c "\l" -d travis
   #- sudo apt-get install postgresql-13 postgresql-client-13
   - psql --version
