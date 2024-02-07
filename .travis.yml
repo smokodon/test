@@ -86,5 +86,9 @@ jobs:
     arch: amd64
     group: previous
     services: postgresql
+  - dist: focal
+    arch: amd64
+    group: stable
+    services: postgresql
   # - dist: jammy
   #   arch: amd64
