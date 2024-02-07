@@ -9,7 +9,7 @@ script:
   - cat /etc/postgresql/12/main/postgresql.conf
   - sudo service postgresql restart
   - psql -c 'create database travis_ci_test;' -U postgres  
-  - psql -c "\l" -d travis
+  - psql -c "\l" -d postgres
   #- sudo apt-get install postgresql-13 postgresql-client-13
   - psql --version
 #addons:
