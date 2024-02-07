@@ -83,6 +83,6 @@ jobs:
   - dist: focal
     arch: amd64
     group: dev
-    services: postgresql-13
+    services: postgresql
   # - dist: jammy
   #   arch: amd64
