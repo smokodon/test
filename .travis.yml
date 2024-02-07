@@ -58,8 +58,10 @@ jobs:
   #   arch: amd64
   # - dist: xenial
   #   arch: amd64
-  # - dist: bionic
-  #   arch: amd64
+  - dist: bionic
+    arch: amd64
+    group: stable
+    services: postgresql
   - dist: focal
     arch: amd64
     env:
@@ -82,7 +84,7 @@ jobs:
       - PGUSER=travis
   - dist: focal
     arch: amd64
-    group: dev
+    group: previous
     services: postgresql
   # - dist: jammy
   #   arch: amd64
