@@ -62,6 +62,7 @@ jobs:
   #   arch: amd64
   - dist: focal
     arch: amd64
+    group: dev
     addons:
       postgresql: 12
       apt:
