@@ -1,8 +1,4 @@
-env:
-  global:
-    - PGPORT=5433
-    - PGUSER=travis
-  
+
 script:
   # - echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
   # - curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
@@ -63,28 +59,28 @@ jobs:
   #   arch: amd64
   # - dist: xenial
   #   arch: amd64
-  - dist: focal
-    arch: amd64
-    group: dev
-    addons:
-      postgresql: 12
-      apt:
-        packages:
-          - postgresql-12
-          - postgresql-client-12
-  - dist: focal
-    arch: amd64
-    group: previous
-    addons:
-      postgresql: 12
-      apt:
-        packages:
-          - postgresql-12
-          - postgresql-client-12
-  - dist: focal
-    arch: amd64
-    group: stable
-    services: postgresql
+  # - dist: focal
+  #   arch: amd64
+  #   group: dev
+  #   addons:
+  #     postgresql: 12
+  #     apt:
+  #       packages:
+  #         - postgresql-12
+  #         - postgresql-client-12
+  # - dist: focal
+  #   arch: amd64
+  #   group: previous
+  #   addons:
+  #     postgresql: 12
+  #     apt:
+  #       packages:
+  #         - postgresql-12
+  #         - postgresql-client-12
+  # - dist: focal
+  #   arch: amd64
+  #   group: stable
+  #   services: postgresql
   - dist: focal
     arch: amd64
     group: dev
