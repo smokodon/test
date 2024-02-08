@@ -72,10 +72,6 @@ jobs:
         packages:
           - postgresql-12
           - postgresql-client-12
-    env:
-      global:
-        - PGPORT=5433
-        - PGUSER=travis
   - dist: focal
     arch: amd64
     group: previous
@@ -85,10 +81,6 @@ jobs:
         packages:
           - postgresql-12
           - postgresql-client-12
-    env:
-      global:
-        - PGPORT=5433
-        - PGUSER=travis
   - dist: focal
     arch: amd64
     group: stable
