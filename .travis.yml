@@ -8,7 +8,7 @@ script:
   # - curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
   # - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 7123CB760FF18869
   # - sudo apt-get update && sudo apt-get install -y google-cloud-cli-gke-gcloud-auth-plugin google-cloud-cli google-cloud-sdk google-cloud-sdk-gke-gcloud-auth-plugin
-  - cat /etc/postgresql/12/main/postgresql.conf
+  #- cat /etc/postgresql/12/main/postgresql.conf
   #- sudo service postgresql restart
   - psql -c 'create database travis_ci_test;' -U travis  
   - psql -c "\l" -d travis
