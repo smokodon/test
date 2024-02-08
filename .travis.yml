@@ -1,6 +1,6 @@
 env:
   global:
-    - PGPORT=5433
+    - PGPORT=5432
     - PGUSER=travis
 
 script:
@@ -66,18 +66,14 @@ jobs:
   - dist: focal
     arch: amd64
     addons:
-      postgresql: 12
+      postgresql: 11
       apt:
         packages:
-          - postgresql-12
-          - postgresql-client-12
-    env:
-      global:
-        - PGPORT=5433
-        - PGUSER=travis
-  - dist: focal
-    arch: amd64
-    services: postgresql
+          - postgresql-11
+          - postgresql-client-11
+  # - dist: focal
+  #   arch: amd64
+  #   services: postgresql
   # - dist: focal
   #   arch: amd64
   #   group: dev
