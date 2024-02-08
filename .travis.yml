@@ -1,10 +1,14 @@
+env:
+  global:
+    - PGPORT=5433
+    - PGUSER=travis
 
 script:
   # - echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
   # - curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
   # - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 7123CB760FF18869
   # - sudo apt-get update && sudo apt-get install -y google-cloud-cli-gke-gcloud-auth-plugin google-cloud-cli google-cloud-sdk google-cloud-sdk-gke-gcloud-auth-plugin
-  #- cat /etc/postgresql/12/main/postgresql.conf
+  - cat /etc/postgresql/12/main/postgresql.conf
   #- sudo service postgresql restart
   - psql -c 'create database travis_ci_test;' -U travis  
   - psql -c "\l" -d travis
@@ -59,32 +63,23 @@ jobs:
   #   arch: amd64
   # - dist: xenial
   #   arch: amd64
-  # - dist: focal
-  #   arch: amd64
-  #   group: dev
-  #   addons:
-  #     postgresql: 12
-  #     apt:
-  #       packages:
-  #         - postgresql-12
-  #         - postgresql-client-12
-  # - dist: focal
-  #   arch: amd64
-  #   group: previous
-  #   addons:
-  #     postgresql: 12
-  #     apt:
-  #       packages:
-  #         - postgresql-12
-  #         - postgresql-client-12
+  - dist: focal
+    arch: amd64
+    group: dev
+    addons:
+      postgresql: 12
+      apt:
+        packages:
+          - postgresql-12
+          - postgresql-client-12
   # - dist: focal
   #   arch: amd64
   #   group: stable
   #   services: postgresql
-  - dist: focal
-    arch: amd64
-    group: dev
-    services: postgresql
+  # - dist: focal
+  #   arch: amd64
+  #   group: dev
+  #   services: postgresql
   # - dist: jammy
   #   arch: amd64
 
