@@ -1,7 +1,7 @@
-env:
-  global:
-    - PGPORT=5433
-    - PGUSER=travis
+# env:
+#   global:
+#     - PGPORT=5433
+#     - PGUSER=travis
 
 script:
   # - echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
@@ -65,17 +65,19 @@ jobs:
   #   arch: amd64
   - dist: focal
     arch: amd64
-    group: dev
     addons:
       postgresql: 12
       apt:
         packages:
           - postgresql-12
           - postgresql-client-12
-  # - dist: focal
-  #   arch: amd64
-  #   group: stable
-  #   services: postgresql
+    env:
+      global:
+        - PGPORT=5433
+        - PGUSER=travis
+  - dist: focal
+    arch: amd64
+    services: postgresql
   # - dist: focal
   #   arch: amd64
   #   group: dev
