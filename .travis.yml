@@ -66,11 +66,11 @@ jobs:
   - dist: focal
     arch: amd64
     addons:
-      postgresql: 14
+      postgresql: 11
       apt:
         packages:
-          - postgresql-14
-          - postgresql-client-14
+          - postgresql-11
+          - postgresql-client-11
   # - dist: focal
   #   arch: amd64
   #   services: postgresql
