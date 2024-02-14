@@ -6,7 +6,7 @@ script:
   # - sudo apt-get update && sudo apt-get install -y google-cloud-cli-gke-gcloud-auth-plugin google-cloud-cli google-cloud-sdk google-cloud-sdk-gke-gcloud-auth-plugin
   #- cat /etc/postgresql/12/main/postgresql.conf
   #- sudo service postgresql restart
-  - nvm list
+  - nvm ls
 #addons:
 #  postgresql: 13
 # virt: vm
