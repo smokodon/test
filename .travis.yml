@@ -1,3 +1,6 @@
+language: node_js
+node_js:
+  - 21
 script:
   # - echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
   # - curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
@@ -17,7 +20,7 @@ script:
 #- sudo apt install -y linux-headers-generic linux-image-gcp linux-image-generic linux-modules-5.4.0-165-generic linux-modules-5.15.0-1042-gcp linux-gcp-5.15-headers-5.15.0-1042 linux-modules-5.15.0-1044-gcp
 jobs:
  include:
-  - os: freebsd
+  # - os: freebsd
   # - dist: xenial
   #   arch: arm64
   # - dist: bionic
@@ -54,16 +57,13 @@ jobs:
   #   arch: s390x
   # - dist: trusty
   #   arch: amd64
-  # - dist: xenial
-  #   arch: amd64
-  # - dist: focal
-  #   arch: amd64
-  #   services: postgresql
-  # - dist: focal
-  #   arch: amd64
-  #   group: dev
-  #   services: postgresql
-  # - dist: jammy
-  #   arch: amd64
+  - dist: xenial
+    arch: amd64
+  - dist: focal
+    arch: amd64
+  - dist: focal
+    arch: amd64
+  - dist: jammy
+    arch: amd64
 
 
