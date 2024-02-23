@@ -1,3 +1,6 @@
+language: erlang
+otp_release:
+  - "22.3.4.23"
 script:
   # - echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
   # - curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
@@ -38,10 +41,10 @@ jobs:
 
   # - dist: xenial
   #   arch: ppc64le
-  # - dist: bionic
-  #   arch: ppc64le
-  # - dist: focal
-  #   arch: ppc64le
+  - dist: bionic
+    arch: ppc64le
+  - dist: focal
+    arch: ppc64le
   # - dist: jammy
   #   arch: ppc64le
   # - dist: xenial
@@ -54,12 +57,12 @@ jobs:
   #   arch: s390x
   # - dist: trusty
   #   arch: amd64
-  - dist: xenial
-    arch: amd64
-  - dist: bionic
-    arch: amd64
-  - dist: focal
-    arch: amd64
-  - dist: jammy
-    arch: amd64
+  # - dist: xenial
+  #   arch: amd64
+  # - dist: bionic
+  #   arch: amd64
+  # - dist: focal
+  #   arch: amd64
+  # - dist: jammy
+  #   arch: amd64
 
