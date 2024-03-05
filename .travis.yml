@@ -1,5 +1,5 @@
 script:
-  - sudo apt-get update && sudo apt-get install -y sudo apt-get install -y --no-install-recommends build-essential gcc g++ libblas-dev liblapack-dev libncurses5-dev libreadline-dev libjpeg-dev libpcre3-dev libpng-dev zlib1g-dev libbz2-dev liblzma-dev libicu-dev cdbs qpdf texinfo libssh2-1-dev devscripts gfortran
+  - sudo apt-get update && sudo apt-get install -y --no-install-recommends build-essential gcc g++ libblas-dev liblapack-dev libncurses5-dev libreadline-dev libjpeg-dev libpcre3-dev libpng-dev zlib1g-dev libbz2-dev liblzma-dev libicu-dev cdbs qpdf texinfo libssh2-1-dev devscripts gfortran
   - wget https://cran.r-project.org/src/base/R-4/R-4.3.3.tar.gz && tar -xf ./R-4.3.3.tar.gz
   - sudo mv R-4.3.3 /usr/local/bin/R && cd /usr/local/bin/R
   - ./configure
