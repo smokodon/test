@@ -1,5 +1,5 @@
 script:
-  - wget https://cran.r-project.org/src/base/R-4/R-4.3.3.tar.gz && tar R-4.3.3.tar.gz
+  - wget https://cran.r-project.org/src/base/R-4/R-4.3.3.tar.gz && tar -xf ./R-4.3.3.tar.gz
   - sudo mv R-4.3.3 /usr/local/bin/R && cd /usr/local/bin/R
   - ./configure
   - make install
