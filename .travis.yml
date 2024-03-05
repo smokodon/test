@@ -1,6 +1,7 @@
 script:
   - sudo apt-get update && sudo apt-get install -y --no-install-recommends libpcre2-dev build-essential gcc g++ libblas-dev liblapack-dev libncurses5-dev libreadline-dev libjpeg-dev libpcre3-dev libpng-dev zlib1g-dev libbz2-dev liblzma-dev libicu-dev cdbs qpdf texinfo libssh2-1-dev devscripts gfortran
   - wget https://cran.r-project.org/src/base/R-4/R-4.3.3.tar.gz && tar -xf ./R-4.3.3.tar.gz
+  - mkdir /usr/local/bin/lib/R
   - sudo mv R-4.3.3 /usr/local/bin/lib/R && cd /usr/local/bin/lib/R
   - ./configure
   - mkdir /usr/local/lib/R/doc && cd /usr/local/lib/R/doc && touch NEWS NEWS.pdf NEWS.rds NEWS2.rds NEWS3.rds && cd ..
