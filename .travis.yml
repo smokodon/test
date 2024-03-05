@@ -1,12 +1,8 @@
-language: r
 script:
-  # - echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-  # - curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
-  # - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 7123CB760FF18869
-  # - sudo apt-get update && sudo apt-get install -y google-cloud-cli-gke-gcloud-auth-plugin google-cloud-cli google-cloud-sdk google-cloud-sdk-gke-gcloud-auth-plugin
-  #- cat /etc/postgresql/12/main/postgresql.conf
-  #- sudo service postgresql restart
-  - nvm ls
+  - wget https://cran.r-project.org/src/base/R-4/R-4.3.3.tar.gz && tar R-4.3.3.tar.gz
+  - sudo mv R-4.3.3 /usr/local/bin/R && cd /usr/local/bin/R
+  - ./configure
+  - make install
 #addons:
 #  postgresql: 13
 # virt: vm
@@ -59,8 +55,8 @@ jobs:
   #   arch: amd64
   - dist: bionic
     arch: amd64
-  - dist: focal
-    arch: amd64
-  - dist: jammy
-    arch: amd64
+  # - dist: focal
+  #   arch: amd64
+  # - dist: jammy
+  #   arch: amd64
 
