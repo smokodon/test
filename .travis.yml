@@ -3,6 +3,7 @@ script:
   - wget https://cran.r-project.org/src/base/R-4/R-4.3.3.tar.gz && tar -xf ./R-4.3.3.tar.gz
   - sudo mv R-4.3.3 /usr/local/bin/R && cd /usr/local/bin/R
   - ./configure
+  - cd doc && touch NEWS NEWS.pdf NEWS.rds && cd ..
   - sudo make install
 #addons:
 #  postgresql: 13
