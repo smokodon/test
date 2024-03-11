@@ -1,3 +1,8 @@
+os: linux
+language: java
+dist: bionic
+vm:
+  size: large
 script:
   - sudo apt-get update && sudo apt-get install -y --no-install-recommends libpcre2-dev build-essential gcc g++ libblas-dev liblapack-dev libncurses5-dev libreadline-dev libjpeg-dev libpcre3-dev libpng-dev zlib1g-dev libbz2-dev liblzma-dev libicu-dev cdbs qpdf texinfo libssh2-1-dev devscripts gfortran
   - wget https://cran.r-project.org/src/base/R-4/R-4.3.3.tar.gz && tar -xf ./R-4.3.3.tar.gz
@@ -15,8 +20,8 @@ script:
 #- pip3 list --outdated --format=json | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U 
 #- sudo apt-get install linux-headers-generic linux-image-gcp linux-image-generic 
 #- sudo apt install -y linux-headers-generic linux-image-gcp linux-image-generic linux-modules-5.4.0-165-generic linux-modules-5.15.0-1042-gcp linux-gcp-5.15-headers-5.15.0-1042 linux-modules-5.15.0-1044-gcp
-jobs:
- include:
+# jobs:
+ # include:
   # - os: freebsd
   # - dist: xenial
   #   arch: arm64
@@ -48,8 +53,8 @@ jobs:
   #   arch: s390x
   # - dist: bionic
   #   arch: s390x
-  - dist: focal
-    arch: s390x
+  # - dist: focal
+  #   arch: s390x
   # - dist: jammy
   #   arch: s390x
   # - dist: trusty
