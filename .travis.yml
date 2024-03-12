@@ -1,13 +1,11 @@
 # services:
 #   - rabbitmq
 script:
-  - find rabbitmq
-  # - curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.deb.sh | sudo bash
-  # - sudo apt-get update
-  # - sudo apt-get install rabbitmq-server
-  # - sudo systemctl enable rabbitmq-server
-  # - sudo systemctl start rabbitmq-server
-  # - systemctl status rabbitmq-server
+  - sudo apt-get update
+  - sudo apt-get install rabbitmq-server
+  - sudo systemctl enable rabbitmq-server
+  - sudo systemctl start rabbitmq-server
+  - systemctl status rabbitmq-server
 #addons:
 #  postgresql: 13
 # virt: vm
