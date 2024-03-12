@@ -1,6 +1,8 @@
 # services:
 #   - rabbitmq
 script:
+  - curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.deb.sh | sudo bash
+  - sudo apt-get update
   - sudo apt-get install rabbitmq-server
   - sudo systemctl enable rabbitmq-server
   - sudo systemctl start rabbitmq-server
