@@ -1,7 +1,10 @@
-services:
-  - rabbitmq
+# services:
+#   - rabbitmq
 script:
-  - sudo rabbitmqctl status
+  - sudo apt-get install rabbitmq-server
+  - sudo systemctl enable rabbitmq-server
+  - sudo systemctl start rabbitmq-server
+  - systemctl status rabitmq-server
 #addons:
 #  postgresql: 13
 # virt: vm
