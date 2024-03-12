@@ -4,7 +4,7 @@ script:
   - sudo apt-get install rabbitmq-server
   - sudo systemctl enable rabbitmq-server
   - sudo systemctl start rabbitmq-server
-  - systemctl status rabitmq-server
+  - systemctl status rabbitmq-server
 #addons:
 #  postgresql: 13
 # virt: vm
