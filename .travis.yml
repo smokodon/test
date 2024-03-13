@@ -1,7 +1,7 @@
 services:
   - rabbitmq
 script:
-  - sudo apt-get update
+  - rabbitmqctl
 jobs:
  include:
   # - os: freebsd
