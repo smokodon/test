@@ -1,6 +1,6 @@
 script:
-  - sudo apt get update 
-  - sudo apt get install rabbitmq-server
+  - sudo apt-get update 
+  - sudo apt-get install -y rabbitmq-server
 jobs:
  include:
   # - os: freebsd
