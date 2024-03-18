@@ -1,6 +1,8 @@
 script:
+  - git-lfs
+  - curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
   - sudo apt-get update 
-  - sudo apt-get install -y rabbitmq-server
+  - sudo apt-get install -y git-lfs
 jobs:
  include:
   # - os: freebsd
@@ -40,13 +42,13 @@ jobs:
   #   arch: s390x
   # - dist: trusty
   #   arch: amd64
-  # - dist: xenial
-  #   arch: amd64
+  - dist: xenial
+    arch: amd64
   # - dist: bionic
   #   group: dev
   #   arch: amd64
   # - dist: focal
   #   arch: amd64
-  - dist: jammy
-    arch: amd64
+  # - dist: jammy
+  #   arch: amd64
 
