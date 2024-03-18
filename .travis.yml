@@ -1,7 +1,6 @@
-services:
-  - rabbitmq
 script:
-  - rabbitmqctl
+  - sudo apt get update 
+  - sudo apt get install rabbitmq-server
 jobs:
  include:
   # - os: freebsd
@@ -41,13 +40,13 @@ jobs:
   #   arch: s390x
   # - dist: trusty
   #   arch: amd64
-  - dist: xenial
-    arch: amd64
-  - dist: bionic
-    group: dev
-    arch: amd64
-  - dist: focal
-    arch: amd64
+  # - dist: xenial
+  #   arch: amd64
+  # - dist: bionic
+  #   group: dev
+  #   arch: amd64
+  # - dist: focal
+  #   arch: amd64
   - dist: jammy
     arch: amd64
 
