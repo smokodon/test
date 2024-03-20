@@ -1,8 +1,6 @@
-services:
-  - rabbitmq
 group: dev
 script:
-  - git-lfs
+  - curl -sLO http://ppa.launchpad.net/rmescandon/yq/ubuntu/pool/main/y/yq/yq_3.1-2_amd64.deb
 jobs:
  include:
   # - os: freebsd
