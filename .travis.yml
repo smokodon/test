@@ -1,6 +1,7 @@
 #group: dev
 script:
-  - ls -al /home/travis/virtualenv
+  - ls -al /home/travis/virtualenv/python3.10/bin
+    - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages
 jobs:
  include:
   # - os: freebsd
@@ -40,11 +41,11 @@ jobs:
   #   arch: s390x
   # - dist: trusty
   #   arch: amd64
-  - dist: xenial
-    arch: amd64
-  - dist: bionic
-    arch: amd64
-  - dist: focal
-    arch: amd64
+  # - dist: xenial
+  #   arch: amd64
+  # - dist: bionic
+  #   arch: amd64
+  # - dist: focal
+  #   arch: amd64
   - dist: jammy
     arch: amd64
