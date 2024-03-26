@@ -1,6 +1,6 @@
-group: dev
+#group: dev
 script:
-  - curl -sLO http://ppa.launchpad.net/rmescandon/yq/ubuntu/pool/main/y/yq/yq_3.1-2_amd64.deb
+  - ls -al /home/travis/virtualenv
 jobs:
  include:
   # - os: freebsd
@@ -46,5 +46,5 @@ jobs:
     arch: amd64
   - dist: focal
     arch: amd64
-  # - dist: jammy
-  #   arch: amd64
+  - dist: jammy
+    arch: amd64
