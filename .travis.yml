@@ -2,8 +2,8 @@
 script:
   - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/
   - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip
-  - update-alternatives --install /usr/bin/python python /usr/bin/python3 1
-  - update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
+  - sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
+  - sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
   - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/
   - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip
 jobs:
