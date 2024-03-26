@@ -12,6 +12,7 @@ script:
   - sudo update-alternatives --config pip3
   - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/
   - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip
+  - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip3
 jobs:
  include:
   # - os: freebsd
