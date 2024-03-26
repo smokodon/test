@@ -1,7 +1,7 @@
 #group: dev
 script:
-  - ls -al /home/travis/virtualenv/python3.10/bin
-  - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin
+  - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/
+  - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip
 jobs:
  include:
   # - os: freebsd
