@@ -1,6 +1,6 @@
 #group: dev
 script:
-  - apt-get update
+  - sudo apt-get update
   - sudo apt purge -y python3-pip  
   - sudo apt install -y python3-pip  
   #- ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/
