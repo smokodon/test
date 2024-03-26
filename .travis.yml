@@ -1,14 +1,10 @@
 #group: dev
 script:
-  - sudo apt purge -y python-pip python3-pip  
-  - sudo apt install -y python-pip python3-pip  
-  - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/
-  - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip
+  - sudo apt purge -y python3-pip  
+  - sudo apt install -y python3-pip  
+  #- ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/
+  #- ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip
   - which python
-  - sudo update-alternatives --config python3
-  - sudo update-alternatives --config python
-  - sudo update-alternatives --config pip
-  - sudo update-alternatives --config pip3
   - sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
   - sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
   - sudo update-alternatives --config pip
