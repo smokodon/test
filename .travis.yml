@@ -1,9 +1,7 @@
 #group: dev
 script:
-  - sudo apt update -y
-  - sudo apt -y install python3.10
-  # - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/
-  # - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip
+  - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/
+  - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip
   # - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip3
 jobs:
  include:
