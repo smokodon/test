@@ -1,8 +1,6 @@
 script:
-  - rvm pkg install openssl
-  - rvm install 2.7.6 --with-openssl-dir=$HOME/.rvm/usr
-  - rvm install 2.7.6
-  - rvm use 2.7.6
+  - sudo apt update 
+  - sudo apt install -y python3.12-{tk,dev,dbg,venv,gdbm,distutils}
   # - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip3
 jobs:
  include:
@@ -47,5 +45,5 @@ jobs:
   #   arch: amd64
   # - dist: focal
   #   arch: amd64
-  # - dist: jammy
-  #   arch: amd64
+  - dist: jammy
+    arch: amd64
