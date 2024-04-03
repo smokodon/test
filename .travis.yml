@@ -1,7 +1,6 @@
-language: ruby
-rvm: 2.7.6
 script:
-  - echo "test"
+  - rvm install 2.7.6
+  - rvm use 2.7.6
   # - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip3
 jobs:
  include:
