@@ -1,5 +1,5 @@
 script:
-  - sudo apt update 
+  - pyenv -v
   - git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
   - pyenv update
   #- pyenv install 3.12.2
