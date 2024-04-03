@@ -1,5 +1,6 @@
 script:
   - sudo apt update 
+  - pyenv update
   - pyenv install 3.12.4
   # - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip3
 jobs:
