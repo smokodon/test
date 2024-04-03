@@ -1,5 +1,5 @@
 language: ruby
-ruby: 2.7.6
+rvm: 2.7.6
 script:
   - echo "test"
   # - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip3
