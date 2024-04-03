@@ -1,6 +1,7 @@
-#group: dev
+language: ruby
+ruby: 2.7.6
 script:
-  - sudo apt-get -yqq --no-install-suggests --no-install-recommends install temurin-11-jdk
+  - echo "test"
   # - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip3
 jobs:
  include:
@@ -27,8 +28,8 @@ jobs:
   #   arch: ppc64le
   # - dist: focal
   #   arch: ppc64le
-  # - dist: jammy
-  #   arch: ppc64le
+  - dist: jammy
+    arch: ppc64le
   # - dist: xenial
   #   arch: s390x
   # - dist: bionic
