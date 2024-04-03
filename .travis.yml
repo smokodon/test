@@ -1,6 +1,6 @@
 script:
   - sudo apt update 
-  - sudo apt install -y python3.12-{tk,dev,dbg,venv,gdbm,distutils}
+  - sudo apt install -y python3.12
   # - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip3
 jobs:
  include:
