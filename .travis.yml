@@ -1,9 +1,13 @@
 script:
   - pyenv -v
+  - git config --global --add safe.directory /opt/pyenv
+  - cd /opt/pyenv/bin/
+  - git checkout master
   - git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
   - pyenv update
-  #- pyenv install 3.12.2
+  - pyenv -v
   - pyenv install --list
+  - pyenv install 3.12.2
   # - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip3
 jobs:
  include:
