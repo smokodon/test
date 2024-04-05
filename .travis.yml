@@ -1,4 +1,5 @@
 script:
+  - sudo apt-get install -y bzip2 libreadline6 libreadline6-dev openssl
   - /opt/pyenv/bin/pyenv -v
   - export PATH="$PATH:/opt/pyenv/bin"
   - pyenv -v
@@ -9,7 +10,7 @@ script:
   - pyenv update
   - pyenv -v
   - /opt/pyenv/bin/pyenv install --list
-  - /opt/pyenv/bin/pyenv install 3.10.2
+  - /opt/pyenv/bin/pyenv install 3.10.12
   # - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip3
 jobs:
  include:
