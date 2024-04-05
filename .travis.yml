@@ -11,7 +11,7 @@ script:
   - pyenv -v
   - /opt/pyenv/bin/pyenv install --list
   - CONFIGURE_OPTS="-with-openssl=/usr/local/ssl"
-  - /opt/pyenv/bin/pyenv install 3.10.12
+  - /opt/pyenv/bin/pyenv install 3.8.8
   # - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip3
 jobs:
  include:
