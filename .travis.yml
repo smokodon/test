@@ -1,10 +1,9 @@
 script:
-  - install_dir="/opt/pyenv"
-  - git clone -q https://github.com/pyenv/pyenv.git ${install_dir}
-  - sudo ${install_dir}/plugins/python-build/install.sh
-  - id travis && chown -R travis: ${install_dir}
-  - export PATH="$PATH:${install_dir}/bin"
-  - export PYENV_ROOT="${install_dir}"
+  - git clone -q https://github.com/pyenv/pyenv.git /opt/pyenv
+  - sudo /opt/pyenv/plugins/python-build/install.sh
+  - id travis && chown -R travis: /opt/pyenv
+  - export PATH="$PATH:/opt/pyenv/bin"
+  - export PYENV_ROOT="/opt/pyenv"
   - pyenv -v
   # - git config --global --add safe.directory /opt/pyenv
   # - cd /opt/pyenv/bin/
