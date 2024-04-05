@@ -1,4 +1,5 @@
 script:
+  - cat /opt/pyenv
   - /opt/pyenv/pyenv -v
   # - git config --global --add safe.directory /opt/pyenv
   # - cd /opt/pyenv/bin/
