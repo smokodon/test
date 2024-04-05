@@ -1,9 +1,13 @@
 script:
-  - sudo apt-get install -y libssl-dev
   - /opt/pyenv/bin/pyenv -v
   - export PATH="$PATH:/opt/pyenv/bin"
   - pyenv -v
-  - cd ~/.pyenv/plugins/python-build && git pull
+  - pyenv -v
+  - git config --global --add safe.directory /opt/pyenv
+  - cd /opt/pyenv/bin/
+  - git checkout master
+  - git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
+  - pyenv update
   - pyenv -v
   - /opt/pyenv/bin/pyenv install --list
   - CONFIGURE_OPTS="-with-openssl=/usr/local/ssl"
