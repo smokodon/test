@@ -3,36 +3,33 @@ script:
   - /opt/pyenv/bin/pyenv -v
   - export PATH="$PATH:/opt/pyenv/bin"
   - pyenv -v
-  - git config --global --add safe.directory /opt/pyenv
-  - cd /opt/pyenv/bin/
-  - git checkout master
-  - git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
-  - pyenv update
+  - cd ~/.pyenv/plugins/python-build && git pull
   - pyenv -v
   - /opt/pyenv/bin/pyenv install --list
+  - CONFIGURE_OPTS="-with-openssl=/usr/local/ssl"
   - /opt/pyenv/bin/pyenv install 3.10.12
   # - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip3
 jobs:
  include:
   # - os: freebsd
-  - dist: xenial
-    arch: arm64
-  # - dist: bionic
+  # - dist: xenial
   #   arch: arm64
-  # - dist: focal
-  #   arch: arm64
-  # - dist: jammy
-  #   arch: arm64
-  - dist: xenial
-    arch: ppc64le
-  # - dist: bionic
+  # # - dist: bionic
+  # #   arch: arm64
+  # # - dist: focal
+  # #   arch: arm64
+  # # - dist: jammy
+  # #   arch: arm64
+  # - dist: xenial
   #   arch: ppc64le
-  # - dist: focal
-  #   arch: ppc64le
-  # - dist: jammy
-  #   arch: ppc64le
-  - dist: xenial
-    arch: s390x
+  # # - dist: bionic
+  # #   arch: ppc64le
+  # # - dist: focal
+  # #   arch: ppc64le
+  # # - dist: jammy
+  # #   arch: ppc64le
+  # - dist: xenial
+  #   arch: s390x
   # - dist: bionic
   #   arch: s390x
   # - dist: focal
