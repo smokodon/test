@@ -1,19 +1,13 @@
 script:
-  - mkdir /opt/pyenv
-  - git clone -q https://github.com/pyenv/pyenv.git /opt/pyenv
-  - sudo /opt/pyenv/plugins/python-build/install.sh
-  - id travis && chown -R travis: /opt/pyenv
-  - export PATH="$PATH:/opt/pyenv/bin"
-  - export PYENV_ROOT="/opt/pyenv"
-  - pyenv -v
+  - /opt/pyenv -v
   # - git config --global --add safe.directory /opt/pyenv
   # - cd /opt/pyenv/bin/
   # - git checkout master
   # - git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
   # - pyenv update
   # - pyenv -v
-  - pyenv install --list
-  - pyenv install 3.10.14
+  - /opt/pyenv install --list
+  - /opt/pyenv install 3.10.14
   # - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip3
 jobs:
  include:
