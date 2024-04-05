@@ -1,4 +1,5 @@
 script:
+  - mkdir /opt/pyenv
   - git clone -q https://github.com/pyenv/pyenv.git /opt/pyenv
   - sudo /opt/pyenv/plugins/python-build/install.sh
   - id travis && chown -R travis: /opt/pyenv
