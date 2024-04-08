@@ -1,17 +1,18 @@
 script:
-  - /opt/pyenv/bin/pyenv -v
-  - export PATH="$PATH:/opt/pyenv/bin"
-  - pyenv -v
-  - pyenv -v
-  - git config --global --add safe.directory /opt/pyenv
-  - cd /opt/pyenv/bin/
-  - git checkout master
-  - git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
-  - pyenv update
-  - pyenv -v
-  - /opt/pyenv/bin/pyenv install --list
-  - CONFIGURE_OPTS="-with-openssl=/usr/local/ssl"
-  - /opt/pyenv/bin/pyenv install 3.8.8
+  - virtualenv --python=/opt/python/3.12.2/bin/python /home/travis/virtualenv/python3.12.2
+  # - /opt/pyenv/bin/pyenv -v
+  # - export PATH="$PATH:/opt/pyenv/bin"
+  # - pyenv -v
+  # - pyenv -v
+  # - git config --global --add safe.directory /opt/pyenv
+  # - cd /opt/pyenv/bin/
+  # - git checkout master
+  # - git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
+  # - pyenv update
+  # - pyenv -v
+  # - /opt/pyenv/bin/pyenv install --list
+  # - CONFIGURE_OPTS="-with-openssl=/usr/local/ssl"
+  # - /opt/pyenv/bin/pyenv install 3.8.8
   # - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip3
 jobs:
  include:
@@ -42,11 +43,11 @@ jobs:
   #   arch: s390x
   # - dist: trusty
   #   arch: amd64
-  - dist: xenial
-    arch: amd64
+  # - dist: xenial
+  #   arch: amd64
   # - dist: bionic
   #   arch: amd64
   # - dist: focal
   #   arch: amd64
-  # - dist: jammy
-  #   arch: amd64
+  - dist: jammy
+    arch: amd64
