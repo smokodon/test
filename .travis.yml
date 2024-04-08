@@ -1,5 +1,5 @@
 script:
-  - virtualenv --python=/opt/python/3.12.2/bin/python /home/travis/virtualenv/python3.12.2
+  - audo apt install couchdb
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
   # - pyenv -v
