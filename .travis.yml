@@ -1,5 +1,5 @@
 script:
-  - audo apt install couchdb
+  - sudo apt install couchdb
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
   # - pyenv -v
