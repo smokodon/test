@@ -1,9 +1,7 @@
 script:
-  - sudo rm /var/lib/dpkg/info/*couchdb*
-  - sudo dpkg --configure -D 777 couchdb
   - curl https://couchdb.apache.org/repo/keys.asc | gpg --dearmor | sudo tee /usr/share/keyrings/couchdb-archive-keyring.gpg >/dev/null 2>&1 source /etc/os-release
   - echo "deb [signed-by=/usr/share/keyrings/couchdb-archive-keyring.gpg] https://apache.jfrog.io/artifactory/couchdb-deb/ jammy main" | sudo tee /etc/apt/sources.list.d/couchdb.list >/dev/null
-  - sudo apt update
+  - sudo apt update && sudo apt upgrade -y
   - sudo apt install -y couchdb
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
