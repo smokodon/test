@@ -1,6 +1,10 @@
 group: dev
+language: python
+python: 3.12
+services:
+  - rabbitmq
 script:
-  - sudo rabbitmqctl status
+  - echo "test"
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
   # - pyenv -v
