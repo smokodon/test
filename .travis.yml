@@ -1,4 +1,4 @@
-# group: dev
+group: edge
 # language: python
 # python: 3.12
 # services:
