@@ -8,7 +8,7 @@ script:
   - nproc
   - docker 
   - docker run hello-world
-  - docker run -t -v /proc/cpuinfo:/proc/cpuinfo:rw -v /proc/meminfo:/proc/meminfo:rw -v /proc/stat:/proc/stat:rw
+  - docker run -t -v /proc/cpuinfo:/proc/cpuinfo:rw -v /proc/meminfo:/proc/meminfo:rw -v /proc/stat:/proc/stat:rw hello-world
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
   # - pyenv -v
