@@ -4,10 +4,8 @@
 # services:
 #   - rabbitmq
 script:
-  - unalias docker
-  - alias docker run="docker run -t -v /proc/cpuinfo:/proc/cpuinfo:rw -v /proc/meminfo:/proc/meminfo:rw -v /proc/stat:/proc/stat:rw"
-  - docker images
-  - nproc
+  - docker 
+  - docker run hello-world
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
   # - pyenv -v
