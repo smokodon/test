@@ -4,6 +4,7 @@ group: edge
 # services:
 #   - rabbitmq
 script:
+  - nproc
   - docker 
   - docker run hello-world
   # - /opt/pyenv/bin/pyenv -v
