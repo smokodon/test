@@ -1,10 +1,10 @@
-group: dev
-language: python
-python: 3.12
-services:
-  - rabbitmq
+# group: dev
+# language: python
+# python: 3.12
+# services:
+#   - rabbitmq
 script:
-  - echo "test"
+  - nproc
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
   # - pyenv -v
@@ -32,16 +32,16 @@ jobs:
   # #   arch: arm64
   # - dist: xenial
   #   arch: ppc64le
-  # # - dist: bionic
-  # #   arch: ppc64le
+  - dist: bionic
+    arch: ppc64le
   # # - dist: focal
   # #   arch: ppc64le
   # # - dist: jammy
   # #   arch: ppc64le
   # - dist: xenial
   #   arch: s390x
-  # - dist: bionic
-  #   arch: s390x
+  - dist: bionic
+    arch: s390x
   # - dist: focal
   #   arch: s390x
   # - dist: jammy
