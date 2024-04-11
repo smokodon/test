@@ -3,17 +3,7 @@
 # services:
 #   - rabbitmq
 script:
-  - sudo apt update && sudo apt install -y \
-    libfreetype6-dev \
-    libjpeg62-turbo-dev \
-    libpng-dev \
-    libxml2-dev \
-    libzip-dev \
-    libonig-dev \
-    libcurl4-openssl-dev \
-    npm \
-    nginx \
-    zip
+  - sudo apt update && sudo apt install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev libxml2-dev libzip-dev libonig-dev libcurl4-openssl-dev npm nginx zip
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
   # - pyenv -v
