@@ -3,7 +3,11 @@
 # services:
 #   - rabbitmq
 script:
-  - sudo apt update && sudo apt install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev libxml2-dev libzip-dev libonig-dev libcurl4-openssl-dev npm nginx zip
+  - git config --global --add safe.directory /opt/pyenv
+  - cd /opt/pyenv/bin/
+  - git checkout master
+  - git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
+  - $(pyenv root)/plugins/pyenv-update/pyenv update
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
   # - pyenv -v
@@ -49,9 +53,9 @@ jobs:
   #   arch: amd64
   # - dist: xenial
   #   arch: amd64
-  # - dist: bionic
-  #   arch: amd64
+  - dist: bionic
+    arch: amd64
   # - dist: focal
   #   arch: amd64
-  - dist: jammy
-    arch: amd64
+  # - dist: jammy
+  #   arch: amd64
