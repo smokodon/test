@@ -47,23 +47,26 @@ jobs:
   #   arch: s390x
   # - dist: trusty
   #   arch: amd64
-  - dist: xenial
-    arch: amd64
-  - dist: bionic
-    arch: amd64
+  # - dist: xenial
+  #   arch: amd64
+  # - dist: bionic
+  #   arch: amd64
   - dist: focal
     arch: amd64
-  - dist: jammy
-    arch: amd64
-  - dist: xenial
-    group: dev
-    arch: amd64
-  - dist: bionic
-    group: dev
-    arch: amd64
+  # - dist: jammy
+  #   arch: amd64
+  # - dist: xenial
+  #   group: dev
+  #   arch: amd64
+  # - dist: bionic
+  #   group: dev
+  #   arch: amd64
   - dist: focal
     group: dev
     arch: amd64
-  - dist: jammy
-    group: dev
+  - dist: focal
+    group: edge
     arch: amd64
+  # - dist: jammy
+  #   group: dev
+  #   arch: amd64
