@@ -3,7 +3,7 @@
 # services:
 #   - rabbitmq
 script:
-  - apt install pollinate -y
+  - sudo apt install pollinate -y
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
   # - pyenv -v
