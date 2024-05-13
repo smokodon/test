@@ -1,9 +1,9 @@
 # language: python
 # python: 3.12
-services:
-  - rabbitmq
+# services:
+#   - rabbitmq
 script:
-  - pyenv update
+  - apt install pollinate -y
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
   # - pyenv -v
