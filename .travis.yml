@@ -5,6 +5,8 @@
 script:
   - sudo apt update
   - sudo apt upgrade -y
+  - sudo rm -f /var/run/reboot-required
+  - sudo rm -f /var/run/reboot-required.pkgs
   - sudo do-release-upgrade
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
