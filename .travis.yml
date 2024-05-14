@@ -3,7 +3,7 @@
 # services:
 #   - rabbitmq
 script:
-  - sudo do-release-upgrade -y
+  - sudo do-release-upgrade
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
   # - pyenv -v
