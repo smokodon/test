@@ -54,11 +54,11 @@ jobs:
   #   arch: amd64
   # - dist: xenial
   #   arch: amd64
-  - dist: bionic
-    group: dev
-    arch: amd64
-  - dist: focal
-    arch: amd64
+  # - dist: bionic
+  #   group: dev
+  #   arch: amd64
+  # - dist: focal
+  #   arch: amd64
   # - dist: jammy
   #   arch: amd64
   # - dist: xenial
@@ -75,4 +75,10 @@ jobs:
   #   arch: amd64
   - dist: jammy
     group: dev
+    arch: amd64
+  - dist: jammy
+    group: stable
+    arch: amd64
+  - dist: jammy
+    group: edge
     arch: amd64
