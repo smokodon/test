@@ -3,12 +3,8 @@
 # services:
 #   - rabbitmq
 script:
-  - uname -r
-  - wget https://raw.githubusercontent.com/pimlie/ubuntu-mainline-kernel.sh/master/ubuntu-mainline-kernel.sh
-  - sudo install ubuntu-mainline-kernel.sh /usr/local/bin/
-  - sudo ubuntu-mainline-kernel.sh -c    
-  - yes | sudo ubuntu-mainline-kernel.sh -i
-  - uname -r
+  - sudo apt-get remove -y openssh-server openssh-client --purge && sudo apt-get autoremove && sudo apt-get autoclean && sudo apt-get update
+  - sudo apt-get install openssh-server openssh-client -y
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
   # - pyenv -v
@@ -67,18 +63,12 @@ jobs:
   # - dist: bionic
   #   group: dev
   #   arch: amd64
-  # - dist: focal
-  #   group: dev
-  #   arch: amd64
+  - dist: focal
+    group: stable
+    arch: amd64
   # - dist: focal
   #   group: edge
   #   arch: amd64
-  - dist: jammy
-    group: dev
-    arch: amd64
-  - dist: jammy
-    group: stable
-    arch: amd64
-  - dist: jammy
-    group: edge
-    arch: amd64
+  # - dist: jammy
+  #   group: dev
+  #   arch: amd64
