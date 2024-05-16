@@ -3,8 +3,7 @@
 # services:
 #   - rabbitmq
 script:
-  - sudo apt-get remove -y openssh-server openssh-client --purge && sudo apt-get autoremove && sudo apt-get autoclean && sudo apt-get update
-  - sudo apt-get install openssh-server openssh-client -y
+  - rvm 2.7.8 --fuzzy do ruby -S gem install dpl -v 1.10.16
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
   # - pyenv -v
@@ -63,12 +62,12 @@ jobs:
   # - dist: bionic
   #   group: dev
   #   arch: amd64
-  - dist: focal
-    group: stable
-    arch: amd64
+  # - dist: focal
+  #   group: stable
+  #   arch: amd64
   # - dist: focal
   #   group: edge
   #   arch: amd64
-  # - dist: jammy
-  #   group: dev
-  #   arch: amd64
+  - dist: jammy
+    group: dev
+    arch: amd64
