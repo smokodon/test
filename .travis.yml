@@ -5,6 +5,8 @@
 script:
   #- rvm use 2.7.8
   - sudo systemctl status ssh.service
+  - sudo apt remove -y openssh-server openssh-client --purge && sudo apt autoremove && sudo apt autoclean && sudo apt update
+  - sudo apt install openssh-server openssh-client -y
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
   # - pyenv -v
@@ -64,7 +66,7 @@ jobs:
   #   group: dev
   #   arch: amd64
   - dist: focal
-    group: dev
+    group: stable
     arch: amd64
   # - dist: focal
   #   group: edge
