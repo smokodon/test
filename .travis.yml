@@ -3,6 +3,7 @@
 # services:
 #   - rabbitmq
 script:
+  - rvm use 2.7.8
   - rvm 2.7.8 --fuzzy do ruby -S gem install dpl -v 1.10.16
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
