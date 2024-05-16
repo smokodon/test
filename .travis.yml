@@ -4,7 +4,7 @@
 #   - rabbitmq
 script:
   #- rvm use 2.7.8
-  - rvm 2.7.8 --with-openssl-dir=$HOME/.rvm/usr --fuzzy do ruby -S gem install dpl -v 1.10.16
+  - sudo systemctl status ssh.service
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
   # - pyenv -v
@@ -63,12 +63,12 @@ jobs:
   # - dist: bionic
   #   group: dev
   #   arch: amd64
-  # - dist: focal
-  #   group: stable
-  #   arch: amd64
+  - dist: focal
+    group: dev
+    arch: amd64
   # - dist: focal
   #   group: edge
   #   arch: amd64
-  - dist: jammy
-    group: dev
-    arch: amd64
+  # - dist: jammy
+  #   group: dev
+  #   arch: amd64
