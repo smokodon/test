@@ -66,8 +66,7 @@ jobs:
   #   group: dev
   #   arch: amd64
   - dist: focal
-    group: stable
-    arch: amd64
+    group: dev
   # - dist: focal
   #   group: edge
   #   arch: amd64
