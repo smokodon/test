@@ -4,7 +4,7 @@
 #   - rabbitmq
 script:
   #- rvm use 2.7.8
-  - cat /etc/ssh/sshd_config
+  - ssh -V
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
   # - pyenv -v
