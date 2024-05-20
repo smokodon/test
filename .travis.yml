@@ -2,20 +2,11 @@
 # python: 3.12
 # services:
 #   - rabbitmq
+services:
+  - docker
 script:
   #- rvm use 2.7.8
-  - ssh -V
-  - sudo mkdir /var/lib/sshd
-  - sudo chmod -R 700 /var/lib/sshd/
-  - sudo chown -R root:sys /var/lib/sshd/
-  - wget -c https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-9.7p1.tar.gz
-  - tar -xzf openssh-9.7p1.tar.gz
-  - cd openssh-9.7p1/
-  - sudo apt install libpam0g-dev libselinux1-dev libkrb5-dev
-  - ./configure --with-kerberos5 --with-md5-passwords --with-pam --with-selinux --with-privsep-path=/var/lib/sshd/ --sysconfdir=/etc/ssh
-  - make
-  - sudo make install
-  - ssh -V
+  - docker pull carlad/sinatra
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
   # - pyenv -v
