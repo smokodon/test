@@ -1,73 +1,91 @@
-# language: python
-# python: 3.12
+# # language: python
+# # python: 3.12
+# # services:
+# #   - rabbitmq
 # services:
-#   - rabbitmq
+#   - docker
+# script:
+#   #- rvm use 2.7.8
+#   - docker pull carlad/sinatra
+#   # - /opt/pyenv/bin/pyenv -v
+#   # - export PATH="$PATH:/opt/pyenv/bin"
+#   # - pyenv -v
+#   # - pyenv -v
+#   # - git config --global --add safe.directory /opt/pyenv
+#   # - cd /opt/pyenv/bin/
+#   # - git checkout master
+#   # - git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
+#   # - pyenv update
+#   # - pyenv -v
+#   # - /opt/pyenv/bin/pyenv install --list
+#   # - CONFIGURE_OPTS="-with-openssl=/usr/local/ssl"
+#   # - /opt/pyenv/bin/pyenv install 3.8.8
+#   # - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip3
+# jobs:
+#  include:
+#   # - os: freebsd
+#   # - dist: xenial
+#   #   arch: arm64
+#   # # - dist: bionic
+#   # #   arch: arm64
+#   # # - dist: focal
+#   # #   arch: arm64
+#   # # - dist: jammy
+#   # #   arch: arm64
+#   # - dist: xenial
+#   #   arch: ppc64le
+#   # - dist: bionic
+#   #   arch: ppc64le
+#   # - dist: focal
+#   #   arch: ppc64le
+#   # # - dist: jammy
+#   # #   arch: ppc64le
+#   # - dist: xenial
+#   #   arch: s390x
+#   # - dist: bionic
+#   #   arch: s390x
+#   # - dist: focal
+#   #   arch: s390x
+#   # - dist: jammy
+#   #   arch: s390x
+#   # - dist: trusty
+#   #   arch: amd64
+#   # - dist: xenial
+#   #   arch: amd64
+#   # - dist: bionic
+#   #   group: dev
+#   #   arch: amd64
+#   # - dist: focal
+#   #   arch: amd64
+#   # - dist: jammy
+#   #   arch: amd64
+#   - dist: xenial
+#     arch: amd64
+#   - dist: bionic
+#     arch: amd64
+#   - dist: focal
+#     group: stable
+#   # - dist: focal
+#   #   group: edge
+#   #   arch: amd64
+#   # - dist: jammy
+#   #   group: dev
+#   #   arch: amd64
+
+sudo: required
+os: linux
+rvm: 2.6.3
+
+language: ruby
+
 services:
   - docker
+
+before_install:
+- docker pull carlad/sinatra
+- docker run -d -p 127.0.0.1:80:4567 carlad/sinatra /bin/sh -c "cd /root/sinatra; bundle exec foreman start;"
+- docker ps -a
+- docker run carlad/sinatra /bin/sh -c "cd /root/sinatra; bundle exec rake test"
+
 script:
-  #- rvm use 2.7.8
-  - docker pull carlad/sinatra
-  # - /opt/pyenv/bin/pyenv -v
-  # - export PATH="$PATH:/opt/pyenv/bin"
-  # - pyenv -v
-  # - pyenv -v
-  # - git config --global --add safe.directory /opt/pyenv
-  # - cd /opt/pyenv/bin/
-  # - git checkout master
-  # - git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
-  # - pyenv update
-  # - pyenv -v
-  # - /opt/pyenv/bin/pyenv install --list
-  # - CONFIGURE_OPTS="-with-openssl=/usr/local/ssl"
-  # - /opt/pyenv/bin/pyenv install 3.8.8
-  # - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip3
-jobs:
- include:
-  # - os: freebsd
-  # - dist: xenial
-  #   arch: arm64
-  # # - dist: bionic
-  # #   arch: arm64
-  # # - dist: focal
-  # #   arch: arm64
-  # # - dist: jammy
-  # #   arch: arm64
-  # - dist: xenial
-  #   arch: ppc64le
-  # - dist: bionic
-  #   arch: ppc64le
-  # - dist: focal
-  #   arch: ppc64le
-  # # - dist: jammy
-  # #   arch: ppc64le
-  # - dist: xenial
-  #   arch: s390x
-  # - dist: bionic
-  #   arch: s390x
-  # - dist: focal
-  #   arch: s390x
-  # - dist: jammy
-  #   arch: s390x
-  # - dist: trusty
-  #   arch: amd64
-  # - dist: xenial
-  #   arch: amd64
-  # - dist: bionic
-  #   group: dev
-  #   arch: amd64
-  # - dist: focal
-  #   arch: amd64
-  # - dist: jammy
-  #   arch: amd64
-  - dist: xenial
-    arch: amd64
-  - dist: bionic
-    arch: amd64
-  - dist: focal
-    group: stable
-  # - dist: focal
-  #   group: edge
-  #   arch: amd64
-  # - dist: jammy
-  #   group: dev
-  #   arch: amd64
+- bundle exec rake test
