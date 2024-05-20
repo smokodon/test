@@ -74,7 +74,7 @@
 
 dist: focal
 os: linux
-arch: amd64
+arch: arm64-graviton2
 virt: lxd
 language: ruby
 
