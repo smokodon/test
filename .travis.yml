@@ -76,5 +76,6 @@ dist: focal
 os: linux
 arch: arm64-graviton2
 language: ruby
+virt: lxd
 
 script: true
