@@ -3,7 +3,8 @@
 # services:
 #   - rabbitmq
 script:
-  - cosign version
+  - sudo apt update
+  - sudo apt install -y libglib2.0-0 install linux-headers-generic
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
   # - pyenv -v
@@ -62,8 +63,8 @@ jobs:
     group: stable
   - dist: bionic
     group: dev
-  - dist: focal
-    group: dev
+  # - dist: focal
+  #   group: dev
   - dist: focal
     group: stable
   #   arch: amd64
