@@ -81,7 +81,7 @@ jobs:
     - os: linux
       name: PPC64
       arch: ppc64le
-      dist: bionic
+      dist: xenial
       #env: COMPILER_NAME=gcc CXX=g++ CC=gcc CFLAGS="-DRZ_ASSERT_STDOUT=1" RZ_ARM64_AS=aarch64-linux-gnu-as RZ_ARM32_AS=arm-linux-gnueabi-as RZ_X86_AS=x86_64-linux-gnu-as
       addons:
         apt:
