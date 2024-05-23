@@ -4,7 +4,7 @@
 #   - rabbitmq
 script:
   - sudo apt update
-  - sudo apt install -y libglib2.0-0 install linux-headers-generic
+  - sudo apt install -y libglib2.0-0 linux-headers-generic
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
   # - pyenv -v
