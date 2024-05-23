@@ -2,11 +2,8 @@
 # python: 3.12
 # services:
 #   - rabbitmq
-services:
-  - docker
-script:
+# script:
   #- rvm use 2.7.8
-  - docker pull carlad/sinatra
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
   # - pyenv -v
@@ -21,8 +18,8 @@ script:
   # - CONFIGURE_OPTS="-with-openssl=/usr/local/ssl"
   # - /opt/pyenv/bin/pyenv install 3.8.8
   # - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip3
-jobs:
- include:
+# jobs:
+ # include:
   # - os: freebsd
   # - dist: xenial
   #   arch: arm64
@@ -65,10 +62,30 @@ jobs:
   #   arch: amd64
   # - dist: focal
   #   group: stable
-  - dist: focal
-    group: dev
-    arch: amd64
+  # - dist: focal
+  #   group: dev
+  #   arch: amd64
   # - dist: jammy
   #   group: dev
   #   arch: amd64
 
+language: generic
+
+services:
+  - docker
+
+jobs:
+  fast_finish: true
+  include:
+    # Linux with GCC on PowerPC
+    - os: linux
+      name: PPC64
+      arch: ppc64le
+      dist: focal
+      env: COMPILER_NAME=gcc CXX=g++ CC=gcc CFLAGS="-DRZ_ASSERT_STDOUT=1" RZ_ARM64_AS=aarch64-linux-gnu-as RZ_ARM32_AS=arm-linux-gnueabi-as RZ_X86_AS=x86_64-linux-gnu-as
+      addons:
+        apt:
+          packages:
+            - binutils-aarch64-linux-gnu
+            - binutils-arm-linux-gnueabi
+            - binutils-x86-64-linux-gnu
