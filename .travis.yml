@@ -5,7 +5,7 @@
 script:
   # - sudo apt update
   # - sudo apt install -y libglib2.0-0 linux-headers-generic
-  - git lfs
+  - sleep 5000
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
   # - pyenv -v
@@ -62,12 +62,12 @@ jobs:
   #   arch: amd64
   - dist: bionic
     group: stable
-  - dist: bionic
-    group: dev
+  # - dist: bionic
+  #   group: dev
   # - dist: focal
   #   group: dev
-  - dist: focal
-    group: stable
+  # - dist: focal
+  #   group: stable
   #   arch: amd64
   # - dist: jammy
   #   group: dev
