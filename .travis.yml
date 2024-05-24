@@ -62,8 +62,8 @@ jobs:
   #   arch: amd64
   - dist: bionic
     group: stable
-  # - dist: bionic
-  #   group: dev
+  - dist: bionic
+    group: dev
   # - dist: focal
   #   group: dev
   # - dist: focal
