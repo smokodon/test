@@ -5,7 +5,7 @@
 script:
   # - sudo apt update
   # - sudo apt install -y libglib2.0-0 linux-headers-generic
-  - sleep 5000
+  - dpkg --list | grep linux-image | awk '{ print $2 }' | sort -V | sed -n '/'`uname -r`'/q;p' | xargs sudo apt-get -y purge
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
   # - pyenv -v
@@ -60,15 +60,15 @@ jobs:
   #   arch: amd64
   # - dist: xenial
   #   arch: amd64
-  - dist: bionic
-    group: stable
-  - dist: bionic
-    group: dev
-  # - dist: focal
+  # - dist: bionic
+  #   group: stable
+  # - dist: bionic
   #   group: dev
   # - dist: focal
-  #   group: stable
-  #   arch: amd64
+  #   group: dev
+  - dist: focal
+    group: stable
+    arch: amd64
   # - dist: jammy
   #   group: dev
   #   arch: amd64
