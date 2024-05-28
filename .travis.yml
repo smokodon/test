@@ -5,8 +5,7 @@
 script:
   # - sudo apt update
   # - sudo apt install -y libglib2.0-0 linux-headers-generic
-  - dpkg --list | grep linux-image | awk '{ print $2 }' | sort -V | sed -n '/'`uname -r`'/q;p' | xargs sudo apt-get -y purge
-  - sudo apt-get purge $(for tag in "linux-image" "linux-headers"; do dpkg-query -W -f'${Package}\n' "$tag-[0-9]*.[0-9]*.[0-9]*" | sort -V | awk 'index($0,c){exit} //' c=$(uname -r | cut -d- -f1,2); done)
+  - cosign version
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
   # - pyenv -v
@@ -63,13 +62,13 @@ jobs:
   #   arch: amd64
   # - dist: bionic
   #   group: stable
-  # - dist: bionic
-  #   group: dev
+  - dist: bionic
+    group: dev
   # - dist: focal
   #   group: dev
-  - dist: focal
-    group: stable
-    arch: amd64
+  # - dist: focal
+  #   group: stable
+  #   arch: amd64
   # - dist: jammy
   #   group: dev
   #   arch: amd64
