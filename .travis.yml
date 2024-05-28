@@ -5,7 +5,7 @@
 script:
   # - sudo apt update
   # - sudo apt install -y libglib2.0-0 linux-headers-generic
-  - cat /etc/apt/sources.list.d
+  - ls -al /etc/apt/sources.list.d
   - sudo apt-get update
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
