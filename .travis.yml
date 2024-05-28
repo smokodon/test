@@ -6,6 +6,7 @@ script:
   # - sudo apt update
   # - sudo apt install -y libglib2.0-0 linux-headers-generic
   - ls -al /etc/apt/sources.list.d
+  - rm -rf /etc/apt/sources.list.d/mongodb-4.4.list
   - sudo apt-get update
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
