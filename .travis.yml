@@ -73,7 +73,7 @@ jobs:
   #   group: dev
   - dist: focal
     group: stable
-    arch: amd64
+    arch: ppc64le
   # - dist: jammy
   #   group: dev
   #   arch: amd64
