@@ -5,8 +5,11 @@
 script:
   # - sudo apt update
   # - sudo apt install -y libglib2.0-0 linux-headers-generic
-  - echo 'Modifying SSH' && sudo echo 'PubkeyAcceptedKeyTypes +ssh-rsa' >> /etc/ssh/sshd_config && sudo echo 'HostKeyAlgorithms +ssh-rsa' >> /etc/ssh/sshd_config && sudo restart
+  - sudo cat /etc/ssh/sshd_config
+  - sudo echo 'PubkeyAcceptedKeyTypes +ssh-rsa' >> /etc/ssh/sshd_config
+  - sudo echo 'HostKeyAlgorithms +ssh-rsa' >> /etc/ssh/sshd_config
   - sudo systemctl restart ssh.service
+  - sudo cat /etc/ssh/sshd_config
   - pip list
   - pip install --upgrade pip pyopenssl certifi rsa pytest oauthlib testresources setuptools numpy pip-review
   - pip-review --auto
