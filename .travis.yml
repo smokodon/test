@@ -80,7 +80,7 @@
   #   arch: amd64
 
 #language: generic
-#conditions: v1
+conditions: v1
 
 services:
   - docker
