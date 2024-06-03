@@ -5,15 +5,16 @@
 script:
   # - sudo apt update
   # - sudo apt install -y libglib2.0-0 linux-headers-generic
-  - sudo cat /etc/ssh/sshd_config
-  - sudo echo 'PubkeyAcceptedKeyTypes +ssh-rsa' >> /etc/ssh/sshd_config
-  - sudo echo 'HostKeyAlgorithms +ssh-rsa' >> /etc/ssh/sshd_config
-  - sudo systemctl restart ssh.service
-  - sudo cat /etc/ssh/sshd_config
-  - pip list
-  - pip install --upgrade pip pyopenssl certifi rsa pytest oauthlib testresources setuptools numpy pip-review
-  - pip-review --auto
-  - pip list
+  - docker -v
+  - echo "Appling docker buildx fix"
+  - sudo install -m 0755 -d /etc/apt/keyrings
+  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+  - sudo chmod a+r /etc/apt/keyrings/docker.gpg
+  - echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  - sudo apt update -y
+  - sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+  - docker -v
+
   # - /opt/pyenv/bin/pyenv -v
   # - export PATH="$PATH:/opt/pyenv/bin"
   # - pyenv -v
@@ -71,9 +72,8 @@ jobs:
   #   group: dev
   # - dist: focal
   #   group: dev
-  - dist: focal
-    group: stable
-    arch: ppc64le
+  - dist: bionic
+    group: dev
   # - dist: jammy
   #   group: dev
   #   arch: amd64
