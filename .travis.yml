@@ -79,8 +79,8 @@
   #   group: dev
   #   arch: amd64
 
-language: generic
-conditions: v1
+#language: generic
+#conditions: v1
 
 services:
   - docker
