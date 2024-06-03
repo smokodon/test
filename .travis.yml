@@ -79,7 +79,7 @@
   #   group: dev
   #   arch: amd64
 
-language: generic
+#language: generic
 #conditions: v1
 
 services:
