@@ -79,27 +79,27 @@
   #   group: dev
   #   arch: amd64
 
-#language: generic
+language: generic
 #conditions: v1
 
 services:
   - docker
 
 jobs:
-  #fast_finish: true
+  fast_finish: true
   include:
     # Linux with GCC on PowerPC
     - os: linux
       name: PPC64
       arch: ppc64le
       dist: focal
-      #env: COMPILER_NAME=gcc CXX=g++ CC=gcc CFLAGS="-DRZ_ASSERT_STDOUT=1" RZ_ARM64_AS=aarch64-linux-gnu-as RZ_ARM32_AS=arm-linux-gnueabi-as RZ_X86_AS=x86_64-linux-gnu-as
-      # addons:
-      #   apt:
-      #     packages:
-      #       - binutils-aarch64-linux-gnu
-      #       - binutils-arm-linux-gnueabi
-      #       - binutils-x86-64-linux-gnu
+      env: COMPILER_NAME=gcc CXX=g++ CC=gcc CFLAGS="-DRZ_ASSERT_STDOUT=1" RZ_ARM64_AS=aarch64-linux-gnu-as RZ_ARM32_AS=arm-linux-gnueabi-as RZ_X86_AS=x86_64-linux-gnu-as
+      addons:
+        apt:
+          packages:
+            - binutils-aarch64-linux-gnu
+            - binutils-arm-linux-gnueabi
+            - binutils-x86-64-linux-gnu
 
 cache:
   - ccache
