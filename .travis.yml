@@ -5,6 +5,7 @@
 script:
   # - sudo apt update
   # - sudo apt install -y libglib2.0-0 linux-headers-generic
+  - cosign version
   - docker -v
   #- echo "Appling docker buildx fix"
   #- sudo install -m 0755 -d /etc/apt/keyrings
@@ -70,7 +71,7 @@ jobs:
   #   group: stable
   # - dist: bionic
   #   group: dev
-  - dist: focal
+  - dist: jammy
     group: dev
   # - dist: bionic
   #   group: dev
