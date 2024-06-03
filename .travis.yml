@@ -71,7 +71,7 @@ jobs:
   # - dist: bionic
   #   group: dev
   - dist: focal
-    group: stable
+    group: dev
   # - dist: bionic
   #   group: dev
   # - dist: jammy
