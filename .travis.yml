@@ -1,11 +1,13 @@
-# language: python
-# python: 3.12
+language: python
+python: 3.12
 services:
   - docker
 script:
   # - sudo apt update
   # - sudo apt install -y libglib2.0-0 linux-headers-generic
-  - docker -v
+  - docker run hello-world
+  - cosign -v
+
   # - cosign version
   # - p4 -V
   #- echo "Appling docker buildx fix"
