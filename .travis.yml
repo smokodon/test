@@ -5,7 +5,7 @@
 script:
   # - sudo apt update
   # - sudo apt install -y libglib2.0-0 linux-headers-generic
-  - pip install dbus-python
+  - cmake --version
 
   # - cosign version
   # - p4 -V
@@ -74,7 +74,7 @@ jobs:
   # - dist: bionic
   #   group: dev
   - dist: focal
-    group: stable
+    group: dev
   # - dist: bionic
   #   group: dev
   # - dist: jammy
