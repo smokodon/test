@@ -11,12 +11,14 @@ script:
   - psql --version
   - docker -v
   - mongod --version
-  #- sudo chmod +x scripts/script1.sh && scripts/script1.sh
-  - sudo apt-get install -y erlang-base \
-                        erlang-asn1 erlang-crypto erlang-eldap erlang-ftp erlang-inets \
-                        erlang-mnesia erlang-os-mon erlang-parsetools erlang-public-key \
-                        erlang-runtime-tools erlang-snmp erlang-ssl \
-                        erlang-syntax-tools erlang-tftp erlang-tools erlang-xmerl
+  - sudo apt remove -y rabbitmq-server
+  - sudo chmod +x scripts/script1.sh && scripts/script1.sh
+  # - sudo apt-get install -y erlang-base \
+  #                       erlang-asn1 erlang-crypto erlang-eldap erlang-ftp erlang-inets \
+  #                       erlang-mnesia erlang-os-mon erlang-parsetools erlang-public-key \
+  #                       erlang-runtime-tools erlang-snmp erlang-ssl \
+  #                       erlang-syntax-tools erlang-tftp erlang-tools erlang-xmerl
+
   - sudo systemctl restart rabbitmq-server
   - systemctl status rabbitmq-server.service
 
