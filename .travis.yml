@@ -12,8 +12,9 @@ script:
   - docker -v
   - mongod --version
   - sudo apt remove -y rabbitmq-server
-  - sudo apt install rabbitmq-server --fix-broken -y
-  #- sudo chmod +x scripts/script1.sh && scripts/script1.sh
+  #- sudo apt install rabbitmq-server --fix-broken -y
+  - sudo chmod +x scripts/script1.sh && scripts/script1.sh
+  - systemctl start rabbitmq-server
   # - sudo apt-get install -y erlang-base \
   #                       erlang-asn1 erlang-crypto erlang-eldap erlang-ftp erlang-inets \
   #                       erlang-mnesia erlang-os-mon erlang-parsetools erlang-public-key \
