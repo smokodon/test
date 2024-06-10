@@ -7,10 +7,11 @@ services:
 script:
   # - sudo apt update
   # - sudo apt install -y libglib2.0-0 linux-headers-generic
+  - ls -al
   - psql --version
   - docker -v
   - mongod --version
-  - sudo ./cosign
+  - sudo cosign
   - sudo systemctl start rabbitmq-server
   - systemctl status rabbitmq-server.service
 
