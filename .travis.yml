@@ -1,13 +1,11 @@
 # language: python
 # python: 3.12
-services:
-  - docker
 script:
   # - sudo apt update
   # - sudo apt install -y libglib2.0-0 linux-headers-generic
-  - docker -v
-  - cmake --version
-  - docker run hello-world
+  - sudo apt-get install python-setuptools
+
+
 
   # - cosign version
   # - p4 -V
@@ -79,6 +77,6 @@ jobs:
     group: dev
   # - dist: bionic
   #   group: dev
-  # - dist: jammy
-  #   group: dev
+  - dist: jammy
+    group: stable
   #   arch: amd64
