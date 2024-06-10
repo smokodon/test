@@ -7,7 +7,7 @@ services:
 script:
   # - sudo apt update
   # - sudo apt install -y libglib2.0-0 linux-headers-generic
-  - cat /var/log/syslog
+  - sudo cat /var/log/syslog
   #- sudo apt install rabbitmq-server --fix-broken -y
   # - sudo apt-get install -y erlang-base \
   #                      erlang-asn1 erlang-crypto erlang-eldap erlang-ftp erlang-inets \
