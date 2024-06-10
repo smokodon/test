@@ -11,7 +11,7 @@ script:
   - psql --version
   - docker -v
   - mongod --version
-  - sudo scripts/script1.sh
+  - scripts/script1.sh
   - sudo systemctl start rabbitmq-server
   - systemctl status rabbitmq-server.service
 
