@@ -1,27 +1,22 @@
 # language: python
 # python: 3.12
 services:
-  #- rabbitmq
-  - postgresql
-  - mongodb
+  - rabbitmq
+  # - postgresql
+  # - mongodb
 script:
   # - sudo apt update
   # - sudo apt install -y libglib2.0-0 linux-headers-generic
-  - ls -al
-  - psql --version
-  - docker -v
-  - mongod --version
-  - sudo apt purge -y rabbitmq-server
-  - sudo apt-get install -y build-dep systemd
+  - cat /var/log/syslog
   #- sudo apt install rabbitmq-server --fix-broken -y
   # - sudo apt-get install -y erlang-base \
   #                      erlang-asn1 erlang-crypto erlang-eldap erlang-ftp erlang-inets \
   #                      erlang-mnesia erlang-os-mon erlang-parsetools erlang-public-key \
   #                      erlang-runtime-tools erlang-snmp erlang-ssl \
   #                      erlang-syntax-tools erlang-tftp erlang-tools erlang-xmerl
-  - sudo chmod +x scripts/script1.sh && scripts/script1.sh
-  - sudo systemctl restart rabbitmq-server
-  - systemctl status rabbitmq-server.service
+  # - sudo chmod +x scripts/script1.sh && scripts/script1.sh
+  # - sudo systemctl restart rabbitmq-server
+  # - systemctl status rabbitmq-server.service
   # - systemctl status rabbitmq-server.service
   - sudo journalctl -xe
 
@@ -93,8 +88,8 @@ jobs:
   #   group: dev
   - dist: focal
     group: dev
-  # - dist: bionic
-  #   group: dev
+  - dist: bionic
+    group: dev
   # - dist: jammy
   #   group: stable
   #   arch: amd64
