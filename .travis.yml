@@ -1,7 +1,7 @@
 # language: python
 # python: 3.12
 services:
-  - rabbitmq
+  #- rabbitmq
   - postgresql
   - mongodb
 script:
@@ -12,6 +12,7 @@ script:
   - docker -v
   - mongod --version
   - sudo apt purge -y rabbitmq-server
+  - sudo apt-get install -y build-dep systemd
   #- sudo apt install rabbitmq-server --fix-broken -y
   # - sudo apt-get install -y erlang-base \
   #                      erlang-asn1 erlang-crypto erlang-eldap erlang-ftp erlang-inets \
