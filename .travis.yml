@@ -21,7 +21,7 @@ script:
 
   - sudo systemctl restart rabbitmq-server
   - systemctl status rabbitmq-server.service
-
+  - sudo journalctl -xe
 
   # - cosign version
   # - p4 -V
@@ -87,12 +87,12 @@ jobs:
   #   arch: amd64
   # - dist: bionic
   #   group: stable
-  - dist: bionic
-    group: dev
+  # - dist: bionic
+  #   group: dev
   - dist: focal
     group: dev
   # - dist: bionic
   #   group: dev
-  - dist: jammy
-    group: stable
+  # - dist: jammy
+  #   group: stable
   #   arch: amd64
