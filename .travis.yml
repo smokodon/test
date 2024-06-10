@@ -9,7 +9,8 @@ script:
   # - sudo apt install -y libglib2.0-0 linux-headers-generic
   - psql --version
   - docker -v
-  - mongod -v
+  - mongod --version
+  - rabbitmq -v
 
 
   # - cosign version
