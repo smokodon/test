@@ -9,7 +9,8 @@ script:
   - curl -1sLf 'https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-erlang/setup.deb.sh' | sudo -E bash
   - sudo apt update -y
   - sudo apt install erlang -y
-  - sudo apt-get install -y rabbitmq-server
+  - wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.13.3/rabbitmq-server_3.13.3-1_all.deb
+  - sudo dpkg -i rabbitmq-server_3.13.3-1_all.deb
   # - sudo apt update
   # - sudo apt install -y libglib2.0-0 linux-headers-generic
   #- sudo cat /var/log/syslog
