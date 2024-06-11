@@ -5,9 +5,11 @@
   # - postgresql
   # - mongodb
 script:
-  - kerl version
-  -  /usr/local/bin/kerl update releases
-  - kerl status
+  - sudo apt remove --purge rabbitmq-server
+  - curl -1sLf 'https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-erlang/setup.deb.sh' | sudo -E bash
+  - sudo apt update -y
+  - sudo apt install erlang -y
+  - sudo apt-get install -y rabbitmq-server
   # - sudo apt update
   # - sudo apt install -y libglib2.0-0 linux-headers-generic
   #- sudo cat /var/log/syslog
