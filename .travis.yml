@@ -5,7 +5,9 @@
   # - postgresql
   # - mongodb
 script:
-  - kerl upgrade
+  - kerl version
+  - kerl update
+  - kerl status
   # - sudo apt update
   # - sudo apt install -y libglib2.0-0 linux-headers-generic
   #- sudo cat /var/log/syslog
@@ -73,8 +75,8 @@ jobs:
   #   group: dev
   - dist: focal
     group: dev
-  - dist: bionic
-    group: dev
+  # - dist: bionic
+  #   group: dev
   # - dist: jammy
   #   group: stable
   #   arch: amd64
