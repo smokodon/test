@@ -5,10 +5,7 @@
   # - postgresql
   # - mongodb
 script:
-  - sudo apt purge -y rabbitmq-server
-  - sudo add-apt-repository -y ppa:rabbitmq/rabbitmq-erlang-24
-  - sudo apt update
-  - sudo apt install -y rabbitmq-server
+  - kerl upgrade
   # - sudo apt update
   # - sudo apt install -y libglib2.0-0 linux-headers-generic
   #- sudo cat /var/log/syslog
