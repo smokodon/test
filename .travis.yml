@@ -25,7 +25,7 @@ script:
   # - sudo chmod +x scripts/script1.sh && scripts/script1.sh
   # - sudo systemctl restart rabbitmq-server
   #- systemctl start rabbitmq-server.service
-  # - systemctl status rabbitmq-server.service
+  - systemctl status rabbitmq-server.service
   #- sudo journalctl -xe
 
 
