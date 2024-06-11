@@ -16,10 +16,7 @@ script:
   #- wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.12.14/rabbitmq-server_3.12.14-1_all.deb
   #- sudo dpkg -i rabbitmq-server_3.12.14-1_all.deb
   #- sudo apt install rabbitmq-server --fix-broken -y
-  - sudo apt-get -y install socat logrotate init-system-helpers adduser
-  - wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.13.3/rabbitmq-server_3.13.3-1_all.deb
-  - sudo dpkg -i rabbitmq-server_3.13.3-1_all.deb
-  - systemctl start rabbitmq-server
+  - sudo journalctl --system | grep rabbitmq
   # - sudo apt-get install -y erlang-base \
   #                      erlang-asn1 erlang-crypto erlang-eldap erlang-ftp erlang-inets \
   #                      erlang-mnesia erlang-os-mon erlang-parsetools erlang-public-key \
