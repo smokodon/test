@@ -6,7 +6,7 @@
   # - mongodb
 script:
   - kerl version
-  - kerl update
+  -  /usr/local/bin/kerl update releases
   - kerl status
   # - sudo apt update
   # - sudo apt install -y libglib2.0-0 linux-headers-generic
