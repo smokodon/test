@@ -16,42 +16,18 @@ script:
   #- wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.12.14/rabbitmq-server_3.12.14-1_all.deb
   #- sudo dpkg -i rabbitmq-server_3.12.14-1_all.deb
   #- sudo apt install rabbitmq-server --fix-broken -y
-  # - sudo apt-get install -y erlang-base \
-  #                      erlang-asn1 erlang-crypto erlang-eldap erlang-ftp erlang-inets \
-  #                      erlang-mnesia erlang-os-mon erlang-parsetools erlang-public-key \
-  #                      erlang-runtime-tools erlang-snmp erlang-ssl \
-  #                      erlang-syntax-tools erlang-tftp erlang-tools erlang-xmerl
+  - sudo apt-get install -y erlang-base \
+                       erlang-asn1 erlang-crypto erlang-eldap erlang-ftp erlang-inets \
+                       erlang-mnesia erlang-os-mon erlang-parsetools erlang-public-key \
+                       erlang-runtime-tools erlang-snmp erlang-ssl \
+                       erlang-syntax-tools erlang-tftp erlang-tools erlang-xmerl
   # - sudo chmod +x scripts/script1.sh && scripts/script1.sh
   # - sudo systemctl restart rabbitmq-server
   #- systemctl start rabbitmq-server.service
   # - systemctl status rabbitmq-server.service
   #- sudo journalctl -xe
 
-  # - cosign version
-  # - p4 -V
-  #- echo "Appling docker buildx fix"
-  #- sudo install -m 0755 -d /etc/apt/keyrings
-  #- curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-  #- sudo chmod a+r /etc/apt/keyrings/docker.gpg
-  #- echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-  # - sudo apt update -y
-  # - sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-  # - docker -v
 
-  # - /opt/pyenv/bin/pyenv -v
-  # - export PATH="$PATH:/opt/pyenv/bin"
-  # - pyenv -v
-  # - pyenv -v
-  # - git config --global --add safe.directory /opt/pyenv
-  # - cd /opt/pyenv/bin/
-  # - git checkout master
-  # - git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
-  # - pyenv update
-  # - pyenv -v
-  # - /opt/pyenv/bin/pyenv install --list
-  # - CONFIGURE_OPTS="-with-openssl=/usr/local/ssl"
-  # - /opt/pyenv/bin/pyenv install 3.8.8
-  # - ls -al /home/travis/virtualenv/python3.10_with_system_site_packages/bin/pip3
 jobs:
  include:
   # - os: freebsd
