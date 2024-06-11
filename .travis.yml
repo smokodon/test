@@ -8,7 +8,9 @@ script:
   # - sudo apt update
   # - sudo apt install -y libglib2.0-0 linux-headers-generic
   #- sudo cat /var/log/syslog
-  - systemctl --version  
+  - systemctl --version
+  - sudo apt install -y systemctl
+  - systemctl --version
   #- sudo apt install rabbitmq-server --fix-broken -y
   # - sudo apt-get install -y erlang-base \
   #                      erlang-asn1 erlang-crypto erlang-eldap erlang-ftp erlang-inets \
