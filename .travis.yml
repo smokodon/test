@@ -2,9 +2,13 @@
 # python: 3.12
 services:
   - rabbitmq
-  # - postgresql
-  # - mongodb
+  - docker
+  - mongodb
 script:
+  - docker -v
+  - mongod --version
+  - cosign --version
+  - git-lfs -v
   # - sudo apt remove --purge rabbitmq-server
   # - curl -1sLf 'https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-erlang/setup.deb.sh' | sudo -E bash
   # - sudo apt update -y
