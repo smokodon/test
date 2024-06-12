@@ -11,7 +11,6 @@ script:
   - mongod --version
   - cosign -version
   - git-lfs
-  - shfmt
   - sudo apt update
   - systemctl status rabbitmq-server.service
   - wget https://apt.llvm.org/llvm.sh
