@@ -7,8 +7,8 @@ services:
 script:
   - docker -v
   - mongod --version
-  - cosign --version
-  - git-lfs -v
+  - cosign -version
+  - git-lfs
   # - sudo apt remove --purge rabbitmq-server
   # - curl -1sLf 'https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-erlang/setup.deb.sh' | sudo -E bash
   # - sudo apt update -y
