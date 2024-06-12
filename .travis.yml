@@ -16,9 +16,10 @@ script:
   - wget https://apt.llvm.org/llvm.sh
   - chmod +x llvm.sh
   - sudo ./llvm.sh 18
-  - cmake -v
+  - cmake --version
   - composer self-update
-  - pip install --upgrade nose pytest mock setuptools wheel numpy
+  # - pip install --upgrade nose pytest mock setuptools wheel numpy
+  - whereis composer
 
 
 jobs:
@@ -62,8 +63,8 @@ jobs:
   #   group: stable
   # - dist: bionic
   #   group: dev
-  # - dist: focal
-  #   group: dev
+  - dist: focal
+    group: dev
   # - dist: focal
   #   group: stable
   # - dist: bionic
