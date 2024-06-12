@@ -6,39 +6,17 @@ services:
   - mongodb
 script:
   - docker -v
+  - docker version
   - docker buildx version
   - mongod --version
   - cosign -version
   - git-lfs
+  - shfmt
   - sudo apt update
-  # - sudo apt remove --purge rabbitmq-server
-  # - curl -1sLf 'https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-erlang/setup.deb.sh' | sudo -E bash
-  # - sudo apt update -y
-  # - sudo apt install erlang -y
-  # - wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.13.3/rabbitmq-server_3.13.3-1_all.deb
-  # - sudo dpkg -i rabbitmq-server_3.13.3-1_all.deb
-  # - sudo apt update
-  # - sudo apt install -y libglib2.0-0 linux-headers-generic
-  #- sudo cat /var/log/syslog
-  # - sudo apt-get purge rabbitmq-server
-  # - curl -1sLf 'https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-erlang/setup.deb.sh' | sudo -E bash
-  # - sudo apt update -y
-  # - sudo apt install erlang -y
-  # - sudo apt-get install -y rabbitmq-server
-  #- wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.12.14/rabbitmq-server_3.12.14-1_all.deb
-  #- sudo dpkg -i rabbitmq-server_3.12.14-1_all.deb
-  #- sudo apt install rabbitmq-server --fix-broken -y
-  # - sudo journalctl --system | grep rabbitmq
-  # - sudo apt-get install -y erlang-base \
-  #                      erlang-asn1 erlang-crypto erlang-eldap erlang-ftp erlang-inets \
-  #                      erlang-mnesia erlang-os-mon erlang-parsetools erlang-public-key \
-  #                      erlang-runtime-tools erlang-snmp erlang-ssl \
-  #                      erlang-syntax-tools erlang-tftp erlang-tools erlang-xmerl
-  # - sudo chmod +x scripts/script1.sh && scripts/script1.sh
-  # - sudo systemctl restart rabbitmq-server
-  # - sudo systemctl start rabbitmq-server.service
   - systemctl status rabbitmq-server.service
-  #- sudo journalctl -xe
+  - wget https://apt.llvm.org/llvm.sh
+  - chmod +x llvm.sh
+  - sudo ./llvm.sh 18
 
 
 jobs:
