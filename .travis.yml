@@ -18,6 +18,7 @@ script:
   - sudo ./llvm.sh 18
   - cmake -v
   - composer self-update
+  - pip install --upgrade nose pytest mock setuptools wheel numpy
 
 
 jobs:
@@ -55,16 +56,16 @@ jobs:
   #   arch: amd64
   # - dist: jammy
   #   arch: amd64
-  # - dist: xenial
-  #   arch: amd64
+  - dist: xenial
+    arch: amd64
   # - dist: bionic
   #   group: stable
-  - dist: bionic
-    group: dev
-  - dist: focal
-    group: dev
-  - dist: focal
-    group: stable
+  # - dist: bionic
+  #   group: dev
+  # - dist: focal
+  #   group: dev
+  # - dist: focal
+  #   group: stable
   # - dist: bionic
   #   group: dev
   # - dist: jammy
