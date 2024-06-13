@@ -1,7 +1,7 @@
 # language: python
 # python: 3.12
-# services:
-#   - rabbitmq
+services:
+  - rabbitmq
 #   - docker
 #   - mongodb
 script:
@@ -56,16 +56,14 @@ jobs:
   #   arch: s390x
   # - dist: trusty
   #   arch: amd64
-  # - dist: xenial
-  #   arch: amd64
+  - dist: xenial
+    group: stable
   # - dist: focal
   #   arch: amd64
   # - dist: jammy
   #   arch: amd64
   - dist: bionic
     group: stable
-  - dist: bionic
-    group: dev
   # - dist: bionic
   #   group: stable
   # - dist: bionic
@@ -74,11 +72,9 @@ jobs:
   #   group: dev
   - dist: focal
     group: stable
-  - dist: focal
-    group: dev
   # - dist: bionic
   #   group: dev
-  # - dist: jammy
-  #   group: dev
+  - dist: jammy
+    group: stable
   #   arch: amd64
 
