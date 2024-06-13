@@ -9,20 +9,20 @@ script:
   - pip install --upgrade nose pytest mock setuptools wheel numpy
   # - sudo apt install -y libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
   # - pip install pip setuptools --upgrade
-  # - docker -v
-  # - docker version
-  # - docker compose version
-  # - docker buildx version
-  # - mongod --version
-  # - cosign -version
-  # - git-lfs
-  # - sudo apt update
-  # - systemctl status rabbitmq-server.service
-  # - wget https://apt.llvm.org/llvm.sh
-  # - chmod +x llvm.sh
-  # - sudo ./llvm.sh 18
-  # - cmake --version
-  # - composer self-update
+  - docker -v
+  - docker version
+  - docker compose version
+  - docker buildx version
+  - mongod --version
+  - cosign -version
+  - git-lfs
+  - sudo apt update
+  - systemctl status rabbitmq-server.service
+  - wget https://apt.llvm.org/llvm.sh
+  - chmod +x llvm.sh
+  - sudo ./llvm.sh 18
+  - cmake --version
+  - composer self-update
   # - pip install --upgrade nose pytest mock setuptools wheel numpy
   #- whereis composer
 
@@ -74,7 +74,7 @@ jobs:
   #   group: stable
   # - dist: bionic
   #   group: dev
-  # - dist: jammy
-  #   group: stable
-  #   arch: amd64
+  - dist: jammy
+    group: dev
+    arch: amd64
 
