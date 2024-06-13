@@ -70,11 +70,11 @@ jobs:
   #   group: dev
   # - dist: focal
   #   group: dev
-  # - dist: focal
-  #   group: stable
+  - dist: focal
+    group: previous
   # - dist: bionic
   #   group: dev
-  - dist: jammy
-    group: dev
-    arch: amd64
+  # - dist: jammy
+  #   group: dev
+  #   arch: amd64
 
