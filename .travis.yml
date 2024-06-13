@@ -10,6 +10,7 @@ script:
   - pip install pip setuptools --upgrade
   - docker -v
   - docker version
+  - docker compose version
   - docker buildx version
   - mongod --version
   - cosign -version
