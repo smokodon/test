@@ -5,6 +5,7 @@ services:
   - docker
   - mongodb
 script:
+  - apt get update
   - docker -v
   - docker version
   - docker buildx version
@@ -57,8 +58,8 @@ jobs:
   #   arch: amd64
   # - dist: jammy
   #   arch: amd64
-  # - dist: xenial
-  #   arch: amd64
+  - dist: xenial
+    arch: amd64
   # - dist: bionic
   #   group: stable
   # - dist: bionic
