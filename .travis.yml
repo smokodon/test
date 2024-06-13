@@ -5,7 +5,7 @@ services:
   - docker
   - mongodb
 script:
-  - apt get update
+  - sudo apt update --fix-missing
   - docker -v
   - docker version
   - docker buildx version
