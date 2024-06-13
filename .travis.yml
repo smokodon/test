@@ -22,7 +22,7 @@ script:
   - cmake --version
   - composer self-update
   # - pip install --upgrade nose pytest mock setuptools wheel numpy
-  - whereis composer
+  #- whereis composer
 
 
 jobs:
@@ -66,12 +66,12 @@ jobs:
   #   group: stable
   # - dist: bionic
   #   group: dev
-  # - dist: focal
-  #   group: dev
+  - dist: focal
+    group: dev
   # - dist: focal
   #   group: stable
-  # - dist: bionic
-  #   group: dev
+  - dist: bionic
+    group: dev
   - dist: jammy
     group: stable
   #   arch: amd64
