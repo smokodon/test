@@ -1,27 +1,28 @@
 # language: python
 # python: 3.12
-services:
-  - rabbitmq
+# services:
+#   - rabbitmq
 #   - docker
 #   - mongodb
 script:
-  - sudo apt update --fix-missing
-  - pip install --upgrade nose pytest mock setuptools wheel numpy
-  # - sudo apt install -y libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
-  # - pip install pip setuptools --upgrade
-  - docker -v
+  - git -v
+  - git-lfs
+  - hg
+  - svn --version
+  - clang --version
+  - cmake --version
+  - gcc --version
+  - ccache -V
+  - shellcheck --version
+  - shfmt -version
   - docker version
   - docker compose version
   - docker buildx version
   - mongod --version
-  - cosign -version
-  - git-lfs
-  - sudo apt update
-  - systemctl status rabbitmq-server.service
-  - wget https://apt.llvm.org/llvm.sh
-  - chmod +x llvm.sh
-  - sudo ./llvm.sh 18
-  - cmake --version
+  - mvn -v
+  - gradle -version
+  - groovy -version
+
   - composer self-update
   # - pip install --upgrade nose pytest mock setuptools wheel numpy
   #- whereis composer
