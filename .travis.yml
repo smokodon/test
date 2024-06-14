@@ -7,7 +7,7 @@
 script:
   - git -v
   - git-lfs
-  - hg -v
+  - hg --version
   - svn --version
   - clang --version
   - cmake --version
