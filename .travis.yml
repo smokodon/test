@@ -1,4 +1,4 @@
-language: generic
+#language: generic
 # python: 3.12
 # services:
 #   - rabbitmq
