@@ -19,26 +19,9 @@ script:
   # - docker compose version
   # - docker buildx version
   # - mongod --version
-  # - mvn -v
+  - bundler -v
   # - gradle -version
   # - groovy -version
-
-  - rm -rf \
-  /etc/apparmor* \
-  /etc/profile.d/jdk.csh \
-  /etc/profile.d/jdk.sh \
-  #/etc/ssh/ssh_host_* \
-  /lib/recovery-mode \
-  /opt/chef* \
-  /tmp/* \
-  /usr/lib/jvm/.java-8-oracle-amd64.jinfo \
-  /usr/lib/jvm/default-java \
-  /usr/lib/jvm/java-8-oracle-amd64 \
-  /var/chef \
-  /var/log/installer \
-  /var/tmp/* \
-  VBoxGuestAdditions_*.iso \
-  VBoxGuestAdditions_*.iso.?
   # - pip install --upgrade nose pytest mock setuptools wheel numpy
   #- whereis composer
 
@@ -86,11 +69,11 @@ jobs:
   #   group: dev
   # - dist: focal
   #   group: dev
-  # - dist: focal
-  #   group: stable
+  - dist: focal
+    group: dev
   # - dist: bionic
   #   group: dev
   - dist: jammy
-    group: stable
+    group: dev
   #   arch: amd64
 
