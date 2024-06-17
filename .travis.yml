@@ -1,4 +1,4 @@
-# language: python
+language: generic
 # python: 3.12
 # services:
 #   - rabbitmq
@@ -76,6 +76,6 @@ jobs:
   # - dist: bionic
   #   group: dev
   - dist: jammy
-    group: stable
+    #group: stable
   #   arch: amd64
 
