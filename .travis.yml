@@ -19,6 +19,7 @@ script:
   # - docker compose version
   # - docker buildx version
   # - mongod --version
+  - gem list
   - bundler -v
   # - gradle -version
   # - groovy -version
