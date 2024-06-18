@@ -20,7 +20,7 @@ script:
   # - docker buildx version
   # - mongod --version
   - gem list
-  - bundler -v
+  - gem install --default bundler
   # - gradle -version
   # - groovy -version
   # - pip install --upgrade nose pytest mock setuptools wheel numpy
@@ -66,8 +66,8 @@ jobs:
   #   group: stable
   # - dist: bionic
   #   group: stable
-  # - dist: bionic
-  #   group: dev
+  - dist: bionic
+    group: dev
   # - dist: focal
   #   group: dev
   - dist: focal
