@@ -19,6 +19,7 @@ script:
   # - docker compose version
   # - docker buildx version
   # - mongod --version
+  - whereis rvm
   - gem list
   - gem install rubygems-update
   - update_rubygems
