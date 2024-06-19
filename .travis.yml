@@ -1,34 +1,26 @@
 #language: generic
 # python: 3.12
-# services:
-#   - rabbitmq
-#   - docker
-#   - mongodb
+services:
+  - rabbitmq
+  - docker
+  - mongodb
 script:
-  # - git -v
-  # - git-lfs
-  # - hg --version
-  # - svn --version
-  # - clang --version
-  # - cmake --version
-  # - gcc --version
-  # - ccache -V
-  # - shellcheck --version
-  # - shfmt -version
-  # - docker version
-  # - docker compose version
-  # - docker buildx version
-  # - mongod --version
-  - whereis rvm
-  - gem list
-  - gem install rubygems-update
-  - update_rubygems
-  - gem update --system
-  - gem install --default bundler
-  # - gradle -version
-  # - groovy -version
-  # - pip install --upgrade nose pytest mock setuptools wheel numpy
-  #- whereis composer
+  - git -v
+  - git-lfs
+  - hg --version
+  - svn --version
+  - clang --version
+  - cmake --version
+  - gcc --version
+  - ccache -V
+  - shellcheck --version
+  - shfmt -version
+  - docker version
+  - docker compose version
+  - docker buildx version
+  - mongod --version
+  - gradle -version
+  - groovy -version
 
 
 jobs:
@@ -70,12 +62,12 @@ jobs:
   #   group: stable
   # - dist: bionic
   #   group: stable
-  - dist: bionic
-    group: dev
+  # - dist: bionic
+  #   group: dev
   # - dist: focal
   #   group: dev
-  - dist: focal
-    group: dev
+  # - dist: focal
+  #   group: dev
   # - dist: bionic
   #   group: dev
   - dist: jammy
