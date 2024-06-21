@@ -1,26 +1,29 @@
 #language: generic
 # python: 3.12
-services:
-  - rabbitmq
-  - docker
-  - mongodb
+# services:
+#   - rabbitmq
+#   - docker
+#   - mongodb
 script:
-  - git -v
-  - git-lfs
-  - hg --version
-  - svn --version
-  - clang --version
-  - cmake --version
-  - gcc --version
-  - ccache -V
-  - shellcheck --version
-  - shfmt -version
-  - docker version
-  - docker compose version
-  - docker buildx version
-  - mongod --version
-  - gradle -version
-  - groovy -version
+  - wget http://archive.ubuntu.com/ubuntu/pool/main/libu/libu2f-host/libu2f-udev_1.1.10-3.2_all.deb && sudo apt install ./libu2f-udev_1.1.10-3.2_all.deb
+  - wget http://security.ubuntu.com/ubuntu/pool/main/n/nss/libnss3_3.101-1_amd64.deb && sudo apt install ./libnss3_3.101-1_amd64.deb
+
+  # - git -v
+  # - git-lfs
+  # - hg --version
+  # - svn --version
+  # - clang --version
+  # - cmake --version
+  # - gcc --version
+  # - ccache -V
+  # - shellcheck --version
+  # - shfmt -version
+  # - docker version
+  # - docker compose version
+  # - docker buildx version
+  # - mongod --version
+  # - gradle -version
+  # - groovy -version
 
 
 jobs:
@@ -52,8 +55,8 @@ jobs:
   #   arch: s390x
   # - dist: trusty
   #   arch: amd64
-  # - dist: xenial
-  #   group: stable
+  - dist: xenial
+    group: stable
   # - dist: focal
   #   arch: amd64
   # - dist: jammy
@@ -70,7 +73,7 @@ jobs:
   #   group: dev
   # - dist: bionic
   #   group: dev
-  - dist: jammy
-    group: dev
+  # - dist: jammy
+  #   group: dev
   #   arch: amd64
 
