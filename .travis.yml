@@ -6,7 +6,7 @@
 #   - mongodb
 script:
   # - sudo apt install -y google-chrome-stable
-  - google-chrome -v
+  - chromium -v
 
   # - git -v
   # - git-lfs
