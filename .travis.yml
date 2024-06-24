@@ -1,7 +1,8 @@
-language: python
-python: 3.12
+# language: python
+# python: 3.12
 #   - docker
 #   - mongodb
+group: edge
 script:
   - ls -ls /usr/bin/python*
   - whereis python3
@@ -27,6 +28,7 @@ script:
 jobs:
  include:
   # - os: freebsd
+
   # - dist: xenial
   #   arch: arm64
   # - dist: bionic
@@ -35,6 +37,7 @@ jobs:
   #   arch: arm64
   # - dist: jammy
   #   arch: arm64
+
   # - dist: xenial
   #   arch: ppc64le
   # - dist: bionic
@@ -43,14 +46,15 @@ jobs:
   #   arch: ppc64le
   # - dist: jammy
   #   arch: ppc64le
-  # - dist: xenial
-  #   arch: s390x
-  # - dist: bionic
-  #   arch: s390x
-  # - dist: focal
-  #   arch: s390x
-  # - dist: jammy
-  #   arch: s390x
+
+  - dist: xenial
+    arch: s390x
+  - dist: bionic
+    arch: s390x
+  - dist: focal
+    arch: s390x
+  - dist: jammy
+    arch: s390x
 
 
   # - dist: trusty
@@ -71,9 +75,9 @@ jobs:
   #   group: dev
   # - dist: focal
   #   group: dev
-  - dist: xenial
-    group: dev
-  - dist: jammy
-    group: dev
+  # - dist: xenial
+  #   group: dev
+  # - dist: jammy
+  #   group: dev
   #   arch: amd64
 
