@@ -46,14 +46,14 @@ jobs:
   # - dist: jammy
   #   arch: ppc64le
 
-  # - dist: xenial
-  #   arch: s390x
-  # - dist: bionic
-  #   arch: s390x
-  # - dist: focal
-  #   arch: s390x
-  # - dist: jammy
-  #   arch: s390x
+  - dist: xenial
+    arch: s390x
+  - dist: bionic
+    arch: s390x
+  - dist: focal
+    arch: s390x
+  - dist: jammy
+    arch: s390x
 
 
   # - dist: trusty
@@ -72,8 +72,8 @@ jobs:
   #   group: dev
   # - dist: focal
   #   group: dev
-  - dist: focal
-    group: stable
+  # - dist: focal
+  #   group: stable
   # - dist: xenial
   #   group: dev
   # - dist: jammy
