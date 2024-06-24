@@ -1,6 +1,6 @@
 #language: generic
 # python: 3.12
-group: stable
+group: edge
 services:
   - rabbitmq
 #   - docker
@@ -28,10 +28,10 @@ script:
 jobs:
  include:
   # - os: freebsd
-  - dist: xenial
-    arch: arm64
-  # - dist: bionic
+  # - dist: xenial
   #   arch: arm64
+  - dist: bionic
+    arch: arm64
   # - dist: focal
   #   arch: arm64
   # - dist: jammy
