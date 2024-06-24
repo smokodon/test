@@ -1,6 +1,6 @@
 #language: generic
 # python: 3.12
-group: edge
+group: stable
 services:
   - rabbitmq
 #   - docker
