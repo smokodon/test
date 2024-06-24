@@ -4,6 +4,7 @@
 #   - mongodb
 script:
   - ls -ls /usr/bin/python*
+  - whereis python3
   # - cosign version
   # - git -v
   # - git-lfs
