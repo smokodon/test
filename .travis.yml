@@ -6,7 +6,7 @@ services:
 #   - docker
 #   - mongodb
 script:
-  - cosign --version
+  - cosign -v
   - git -v
   - git-lfs
   - hg --version
