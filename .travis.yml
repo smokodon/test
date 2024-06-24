@@ -1,28 +1,26 @@
 #language: generic
 # python: 3.12
-group: dev
-services:
-  - rabbitmq
 #   - docker
 #   - mongodb
 script:
-  - cosign version
-  - git -v
-  - git-lfs
-  - hg --version
-  - svn --version
-  - clang --version
-  - cmake --version
-  - gcc --version
-  - ccache -V
-  - shellcheck --version
-  - shfmt -version
-  - docker version
-  - docker compose version
-  - docker buildx version
-  - mongod --version
-  - gradle -version
-  - groovy -version
+  - ls -ls /usr/bin/python*
+  # - cosign version
+  # - git -v
+  # - git-lfs
+  # - hg --version
+  # - svn --version
+  # - clang --version
+  # - cmake --version
+  # - gcc --version
+  # - ccache -V
+  # - shellcheck --version
+  # - shfmt -version
+  # - docker version
+  # - docker compose version
+  # - docker buildx version
+  # - mongod --version
+  # - gradle -version
+  # - groovy -version
 
 
 jobs:
