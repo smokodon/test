@@ -4,7 +4,7 @@
 #   - mongodb
 group: edge
 script:
-  - python -v
+  - python –version
   # - cosign version
   # - git -v
   # - git-lfs
