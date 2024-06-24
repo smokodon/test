@@ -1,5 +1,5 @@
-# language: python
-# python: 3.12
+language: python
+python: 3.12
 #   - docker
 #   - mongodb
 script:
