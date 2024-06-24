@@ -3,7 +3,7 @@
 #   - docker
 #   - mongodb
 script:
-  - echo "Welcome"
+  - pyenv install --list
   # - cosign version
   # - git -v
   # - git-lfs
@@ -45,14 +45,14 @@ jobs:
   # - dist: jammy
   #   arch: ppc64le
 
-  # - dist: xenial
-  #   arch: s390x
-  # - dist: bionic
-  #   arch: s390x
-  # - dist: focal
-  #   arch: s390x
-  # - dist: jammy
-  #   arch: s390x
+  - dist: xenial
+    arch: s390x
+  - dist: bionic
+    arch: s390x
+  - dist: focal
+    arch: s390x
+  - dist: jammy
+    arch: s390x
 
 
   # - dist: trusty
@@ -73,12 +73,12 @@ jobs:
   #   group: dev
   # - dist: focal
   #   group: stable
-  - dist: xenial
-    group: dev
-  - dist: jammy
-    group: dev
-  - dist: xenial
-    group: stable
-  - dist: jammy
-    group: stable
+  # - dist: xenial
+  #   group: dev
+  # - dist: jammy
+  #   group: dev
+  # - dist: xenial
+  #   group: stable
+  # - dist: jammy
+  #   group: stable
 
