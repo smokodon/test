@@ -5,8 +5,7 @@
 #   - docker
 #   - mongodb
 script:
-  - sudo apt purge -y google-chrome-stable
-  - wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && sudo dpkg -i ./google-chrome-stable_current_amd64.deb
+  - wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && sudo dpkg --force-depends -i ./google-chrome-stable_current_amd64.deb
 
   # - git -v
   # - git-lfs
@@ -56,7 +55,7 @@ jobs:
   # - dist: trusty
   #   arch: amd64
   - dist: xenial
-    group: stable
+    group: dev
   # - dist: focal
   #   arch: amd64
   # - dist: jammy
