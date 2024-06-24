@@ -1,6 +1,6 @@
 #language: generic
 # python: 3.12
-group: edge
+group: dev
 services:
   - rabbitmq
 #   - docker
@@ -44,10 +44,10 @@ jobs:
   #   arch: ppc64le
   # - dist: jammy
   #   arch: ppc64le
-  - dist: xenial
-    arch: s390x
-  - dist: bionic
-    arch: s390x
+  # - dist: xenial
+  #   arch: s390x
+  # - dist: bionic
+  #   arch: s390x
   # - dist: focal
   #   arch: s390x
   # - dist: jammy
@@ -72,9 +72,9 @@ jobs:
   #   group: dev
   # - dist: focal
   #   group: dev
-  # - dist: bionic
-  #   group: dev
-  # - dist: jammy
-  #   group: dev
+  - dist: xenial
+    group: dev
+  - dist: jammy
+    group: dev
   #   arch: amd64
 
