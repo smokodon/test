@@ -1,29 +1,26 @@
 #language: generic
 # python: 3.12
-# services:
-#   - rabbitmq
+services:
+  - rabbitmq
 #   - docker
 #   - mongodb
 script:
-  # - sudo apt install -y google-chrome-stable
-  - sudo apt install chromium-browser
-
-  # - git -v
-  # - git-lfs
-  # - hg --version
-  # - svn --version
-  # - clang --version
-  # - cmake --version
-  # - gcc --version
-  # - ccache -V
-  # - shellcheck --version
-  # - shfmt -version
-  # - docker version
-  # - docker compose version
-  # - docker buildx version
-  # - mongod --version
-  # - gradle -version
-  # - groovy -version
+  - git -v
+  - git-lfs
+  - hg --version
+  - svn --version
+  - clang --version
+  - cmake --version
+  - gcc --version
+  - ccache -V
+  - shellcheck --version
+  - shfmt -version
+  - docker version
+  - docker compose version
+  - docker buildx version
+  - mongod --version
+  - gradle -version
+  - groovy -version
 
 
 jobs:
@@ -73,7 +70,7 @@ jobs:
   #   group: dev
   # - dist: bionic
   #   group: dev
-  # - dist: jammy
-  #   group: dev
+  - dist: jammy
+    group: dev
   #   arch: amd64
 
