@@ -54,6 +54,8 @@ jobs:
   #   arch: amd64
   - dist: xenial
     group: dev
+  - dist: xenial
+    group: stable
   # - dist: focal
   #   arch: amd64
   # - dist: jammy
