@@ -3,6 +3,7 @@
 # services:
   # - mysql
 script:
+  - sudo apt install mysql-server -y
   - whereis mysql
   - export PATH=/usr/share/mysql:$PATH
   - sudo service mysql start
