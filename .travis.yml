@@ -3,6 +3,7 @@
 # services:
   # - mysql
 script:
+  - mysql
   - whereis mysql
   - export PATH=/usr/share/mysql:$PATH
   - mysql
