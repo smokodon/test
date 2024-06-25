@@ -3,7 +3,7 @@
 services:
   - mysql
 script:
-  - pyenv install --list
+  - whereis mysql
   # - cosign version
   # - git -v
   # - git-lfs
