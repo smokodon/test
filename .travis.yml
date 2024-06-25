@@ -3,7 +3,7 @@
 # services:
   # - mysql
 script:
-  - sudo service mysqld start
+  - sudo service mysql start
   - whereis mysql
   - export PATH=/usr/share/mysql:$PATH
   - mysql
