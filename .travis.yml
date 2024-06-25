@@ -1,5 +1,7 @@
 #   - docker
 #   - mongodb
+services:
+  - mysql
 script:
   - pyenv install --list
   # - cosign version
@@ -43,14 +45,14 @@ jobs:
   # - dist: jammy
   #   arch: ppc64le
 
-  - dist: xenial
-    arch: s390x
-  - dist: bionic
-    arch: s390x
-  - dist: focal
-    arch: s390x
-  - dist: jammy
-    arch: s390x
+  # - dist: xenial
+  #   arch: s390x
+  # - dist: bionic
+  #   arch: s390x
+  # - dist: focal
+  #   arch: s390x
+  # - dist: jammy
+  #   arch: s390x
 
 
   # - dist: trusty
@@ -73,8 +75,10 @@ jobs:
   #   group: stable
   # - dist: xenial
   #   group: dev
-  # - dist: jammy
-  #   group: dev
+  - dist: jammy
+    group: stable
+  - dist: jammy
+    group: previous
   # - dist: xenial
   #   group: stable
   # - dist: jammy
