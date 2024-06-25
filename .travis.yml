@@ -79,7 +79,7 @@ jobs:
   # - dist: xenial
   #   group: dev
   - dist: jammy
-    group: stable
+    group: dev
   - dist: jammy
     group: previous
   # - dist: xenial
