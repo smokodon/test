@@ -3,11 +3,11 @@
 # services:
   # - mysql
 script:
+  - sudo apt update && sudo apt upgrade -y
   - sudo apt install mysql-server -y
   - whereis mysql
   - export PATH=/usr/share/mysql:$PATH
   - sudo service mysql start
-  - mysql
   # - cosign version
   # - git -v
   # - git-lfs
