@@ -5,6 +5,7 @@ services:
   - rabbitmq
   - postgresql
 script:
+  - rabbitmq -v
   - cosign version
   - git -v
   - git-lfs
@@ -17,6 +18,7 @@ script:
   - shellcheck --version
   - shfmt -version
   - docker version
+  - docker run hello-world
   - docker compose version
   - docker buildx version
   - mongod --version
