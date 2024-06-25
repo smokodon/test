@@ -1,9 +1,11 @@
 #   - docker
 #   - mongodb
-services:
-  - mysql
+# services:
+  # - mysql
 script:
   - whereis mysql
+  - export PATH=/usr/share/mysql:$PATH
+  - mysql
   # - cosign version
   # - git -v
   # - git-lfs
