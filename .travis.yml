@@ -1,30 +1,27 @@
 #   - docker
 #   - mongodb
-# services:
-  # - mysql
+services:
+  - mysql
+  - rabbitmq
+  - postgresql
 script:
-  - sudo apt update && sudo apt upgrade -y
-  - sudo apt install mysql-server -y
-  - whereis mysql
-  - export PATH=/usr/share/mysql:$PATH
-  - sudo service mysql start
-  # - cosign version
-  # - git -v
-  # - git-lfs
-  # - hg --version
-  # - svn --version
-  # - clang --version
-  # - cmake --version
-  # - gcc --version
-  # - ccache -V
-  # - shellcheck --version
-  # - shfmt -version
-  # - docker version
-  # - docker compose version
-  # - docker buildx version
-  # - mongod --version
-  # - gradle -version
-  # - groovy -version
+  - cosign version
+  - git -v
+  - git-lfs
+  - hg --version
+  - svn --version
+  - clang --version
+  - cmake --version
+  - gcc --version
+  - ccache -V
+  - shellcheck --version
+  - shfmt -version
+  - docker version
+  - docker compose version
+  - docker buildx version
+  - mongod --version
+  - gradle -version
+  - groovy -version
 
 
 jobs:
