@@ -5,6 +5,7 @@ services:
   - rabbitmq
   - postgresql
 script:
+  - ls /etc/systemd/system
   - echo $PATH
   - whereis mysql
   - whereis postgresql
