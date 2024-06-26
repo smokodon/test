@@ -5,6 +5,10 @@ services:
   - rabbitmq
   - postgresql
 script:
+  - echo $PATH
+  - whereis mysql
+  - whereis postgresql
+  - whereis rabbitmq
   - sudo systemctl start mysql
   - sudo systemctl start postgresql
   - sudo systemctl start rabbitmq
