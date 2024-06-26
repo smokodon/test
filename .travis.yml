@@ -1,10 +1,12 @@
 group: stable
-# services:
-#   - mysql
-#   - rabbitmq
-#   - postgresql
+services:
+  - mysql
+  - rabbitmq
+  - postgresql
 script:
-  - echo "test"
+  - sudo systemd-analyze verify mysql.service
+  - sudo systemd-analyze verify postgresql.service
+  - sudo systemd-analyze verify rabbitmq.service
   # - ls /etc/systemd/system
   # - echo $PATH
   # - whereis mysql
@@ -38,32 +40,32 @@ jobs:
  include:
   # - os: freebsd
 
-  - dist: xenial
-    arch: arm64
-  - dist: bionic
-    arch: arm64
-  - dist: focal
-    arch: arm64
-  - dist: jammy
-    arch: arm64
+  # - dist: xenial
+  #   arch: arm64
+  # - dist: bionic
+  #   arch: arm64
+  # - dist: focal
+  #   arch: arm64
+  # - dist: jammy
+  #   arch: arm64
 
-  - dist: xenial
-    arch: ppc64le
-  - dist: bionic
-    arch: ppc64le
-  - dist: focal
-    arch: ppc64le
-  - dist: jammy
-    arch: ppc64le
+  # - dist: xenial
+  #   arch: ppc64le
+  # - dist: bionic
+  #   arch: ppc64le
+  # - dist: focal
+  #   arch: ppc64le
+  # - dist: jammy
+  #   arch: ppc64le
 
-  - dist: xenial
-    arch: s390x
-  - dist: bionic
-    arch: s390x
-  - dist: focal
-    arch: s390x
-  - dist: jammy
-    arch: s390x
+  # - dist: xenial
+  #   arch: s390x
+  # - dist: bionic
+  #   arch: s390x
+  # - dist: focal
+  #   arch: s390x
+  # - dist: jammy
+  #   arch: s390x
 
 
   # - dist: trusty
@@ -92,8 +94,8 @@ jobs:
   #   group: previous
   # - dist: xenial
   #   group: stable
-  # - dist: jammy
-  #   group: previous
-  # - dist: jammy
-  #   group: dev
+  - dist: jammy
+    group: previous
+  - dist: jammy
+    group: dev
 
