@@ -4,6 +4,7 @@ services:
   - rabbitmq
   - postgresql
 script:
+  - ls -al /etc/systemd/system
   - sudo systemd-analyze verify mysql.service
   - sudo systemd-analyze verify postgresql.service
   - sudo systemd-analyze verify rabbitmq.service
