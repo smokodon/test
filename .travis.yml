@@ -88,5 +88,7 @@ jobs:
   # - dist: xenial
   #   group: stable
   - dist: jammy
+    group: stable
+  - dist: jammy
     group: dev
 
