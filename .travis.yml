@@ -1,4 +1,3 @@
-group: stable
 services:
   - mysql
   - rabbitmq
@@ -7,7 +6,7 @@ script:
   - ls -al /etc/systemd/system
   - sudo systemd-analyze verify mysql.service
   - sudo systemd-analyze verify postgresql.service
-  - sudo systemd-analyze verify rabbitmq.service
+  - sudo systemd-analyze verify rabbitmq-server.service
   # - ls /etc/systemd/system
   # - echo $PATH
   # - whereis mysql
