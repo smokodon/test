@@ -3,10 +3,9 @@ services:
   - rabbitmq
   - postgresql
 script:
-  - ls -al /etc/systemd/system
-  - sudo systemd-analyze verify mysql.service
-  - sudo systemd-analyze verify postgresql.service
-  - sudo systemd-analyze verify rabbitmq-server.service
+  - sudo rabbitmqctl status
+  - mysqld --version
+  - postgres --version
   # - ls /etc/systemd/system
   # - echo $PATH
   # - whereis mysql
