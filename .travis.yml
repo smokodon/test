@@ -3,8 +3,9 @@ services:
   - rabbitmq
   - postgresql
 script:
+  - ps 
   - sudo systemctl status mysql.service
-  - sudo systemctl status rabbitmqctl.service
+  - sudo systemctl status rabbitmq-server.service
   - sudo systemctl status postgresql.service
   - sudo rabbitmqctl status
   - mysqld --version
