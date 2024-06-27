@@ -6,33 +6,24 @@ script:
   - sudo rabbitmqctl status
   - mysqld --version
   - postgres --version
-  # - ls /etc/systemd/system
-  # - echo $PATH
-  # - whereis mysql
-  # - whereis postgresql
-  # - whereis rabbitmq
-  # - sudo systemctl start mysql
-  # - sudo systemctl start postgresql
-  # - sudo systemctl start rabbitmq
-  # - rabbitmqctl status
-  # - cosign version
-  # - git -v
-  # - git-lfs
-  # - hg --version
-  # - svn --version
-  # - clang --version
-  # - cmake --version
-  # - gcc --version
-  # - ccache -V
-  # - shellcheck --version
-  # - shfmt -version
-  # - docker version
-  # - docker run hello-world
-  # - docker compose version
-  # - docker buildx version
-  # - mongod --version
-  # - gradle -version
-  # - groovy -version
+  - cosign version
+  - git -v
+  - git-lfs
+  - hg --version
+  - svn --version
+  - clang --version
+  - cmake --version
+  - gcc --version
+  - ccache -V
+  - shellcheck --version
+  - shfmt -version
+  - docker version
+  - docker run hello-world
+  - docker compose version
+  - docker buildx version
+  - mongod --version
+  - gradle -version
+  - groovy -version
 
 
 jobs:
