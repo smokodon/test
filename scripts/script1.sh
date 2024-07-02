@@ -16,7 +16,7 @@ ls -al $INSTALL_DIR
 ls -al $INSTALL_DIR/jdk-21.0.3+9
 ls -al $INSTALL_DIR/jdk-21.0.3+9/bin
 
-export JAVA_HOME=$INSTALL_DIR/jdk-21.0.3+9/bin
+export JAVA_HOME=$INSTALL_DIR/jdk-21.0.3+9/bin/java
 export PATH=$JAVA_HOME/bin:$PATH
 
 echo $JAVA_HOME
