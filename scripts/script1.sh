@@ -12,17 +12,17 @@ wget "$JDK_URL" -O jdk.tar.gz
 # Extract the tarball
 tar xzf jdk.tar.gz -C "$INSTALL_DIR"
 
-export JAVA_HOME=$INSTALL_DIR/jdk
-export PATH=$PATH:$JAVA_HOME/bin
+export JAVA_HOME=$(cd "${INSTALL_DIR}"; pwd)
+export PATH=$JAVA_HOME/bin:$PATH
 
 # Set JAVA_HOME
-echo "export JAVA_HOME=$INSTALL_DIR/jdk" >> ~/.bashrc
+#echo "export JAVA_HOME=$INSTALL_DIR/jdk" >> ~/.bashrc
 
 # Add JDK bin directory to PATH
-echo "export PATH=$PATH:$JAVA_HOME/bin" >> ~/.bashrc
+#echo "export PATH=$PATH:$JAVA_HOME/bin" >> ~/.bashrc
 
 # Reload the shell
-source ~/.bashrc
+#source ~/.bashrc
 
 # Verify Java version
 java -version
