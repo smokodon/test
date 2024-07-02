@@ -6,6 +6,7 @@ script:
   - mkdir temp_download && cd temp_download
   - wget https://github.com/ibmruntimes/semeru21-binaries/releases/download/jdk-21.0.3%2B9_openj9-0.44.0/ibm-semeru-open-jdk_x64_linux_21.0.3_9_openj9-0.44.0.tar.gz
   - tar xzf ibm-semeru-open-jdk_x64_linux_21.0.3_9_openj9-0.44.0.tar.gz
+  - ls -al
   - export PATH=$PWD/temp_download:$PATH
   - java -version
   # - systemctl --type=service
