@@ -18,8 +18,8 @@ ls -al $INSTALL_DIR/jdk-21.0.3+9/bin
 
 sudo update-alternatives --install /usr/bin/java java /opt/jdk-21.0.3+9/bin/java 1010
 sudo update-alternatives --install /usr/bin/javac javac /opt/jdk-21.0.3+9/bin/javac 1010
-#export JAVA_HOME=$INSTALL_DIR/jdk-21.0.3+9/bin/java
-#export PATH=$JAVA_HOME/bin:$PATH
+export JAVA_HOME=$INSTALL_DIR/jdk-21.0.3+9/bin/java
+export PATH=$JAVA_HOME/bin:$PATH
 
 echo $JAVA_HOME
 echo $PATH
