@@ -15,6 +15,8 @@ tar xzf jdk.tar.gz -C "$INSTALL_DIR"
 export JAVA_HOME=$(cd "${INSTALL_DIR}"; pwd)
 export PATH=$JAVA_HOME/bin:$PATH
 
+echo $JAVA_HOME
+echo $PATH
 # Set JAVA_HOME
 #echo "export JAVA_HOME=$INSTALL_DIR/jdk" >> ~/.bashrc
 
