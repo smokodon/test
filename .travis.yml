@@ -12,7 +12,7 @@ script:
   # - ls -al
   # - export JAVA_HOME=/temp_download/jdk-21.0.3+9:$PATH
   # - java -version
-  - ./scripts/script1.sh
+  - sudo ./scripts/script1.sh
   # - systemctl --type=service
   # - sudo systemctl status mysql.service
   # - sudo systemctl status rabbitmq-server.service
