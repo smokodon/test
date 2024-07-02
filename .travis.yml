@@ -3,14 +3,16 @@
 #   - rabbitmq
 #   - postgresql
 script:
-  - mkdir temp_download && cd temp_download
-  - wget https://github.com/ibmruntimes/semeru21-binaries/releases/download/jdk-21.0.3%2B9_openj9-0.44.0/ibm-semeru-open-jdk_x64_linux_21.0.3_9_openj9-0.44.0.tar.gz
-  - tar xzf ibm-semeru-open-jdk_x64_linux_21.0.3_9_openj9-0.44.0.tar.gz
-  - ls -al
-  - cd jdk-21.0.3+9
-  - ls -al
-  - export PATH=$PWD/temp_download/jdk-21.0.3+9:$PATH
-  - java -version
+  # - mkdir temp_download && cd temp_download
+  # - wget https://github.com/ibmruntimes/semeru21-binaries/releases/download/jdk-21.0.3%2B9_openj9-0.44.0/ibm-semeru-open-jdk_x64_linux_21.0.3_9_openj9-0.44.0.tar.gz
+  # - tar xzf ibm-semeru-open-jdk_x64_linux_21.0.3_9_openj9-0.44.0.tar.gz
+  # - ls -al
+  # - cd jdk-21.0.3+9/bin
+  # - echo $JAVA_HOME
+  # - ls -al
+  # - export JAVA_HOME=/temp_download/jdk-21.0.3+9:$PATH
+  # - java -version
+  - ./scripts/script1.sh
   # - systemctl --type=service
   # - sudo systemctl status mysql.service
   # - sudo systemctl status rabbitmq-server.service

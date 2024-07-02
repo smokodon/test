@@ -1,36 +1,25 @@
-#!/bin/sh
+#!/bin/bash
 
-sudo apt-get install curl gnupg debian-keyring debian-archive-keyring apt-transport-https -y
+# Set the URL for the JDK tar.gz archive
+JDK_URL="https://github.com/ibmruntimes/semeru21-binaries/releases/download/jdk-21.0.3%2B9_openj9-0.44.0/ibm-semeru-open-jdk_x64_linux_21.0.3_9_openj9-0.44.0.tar.gz"
 
-## Team RabbitMQ's main signing key
-sudo apt-key adv --keyserver "hkps://keys.openpgp.org" --recv-keys "0x0A9AF2115F4687BD29803A206B73A36E6026DFCA"
-## Cloudsmith: modern Erlang repository
-curl -1sLf https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-erlang/gpg.E495BB49CC4BBE5B.key | sudo apt-key add -
-## Cloudsmith: RabbitMQ repository
-curl -1sLf https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-server/gpg.9F4587F226208342.key | sudo apt-key add -
+# Define the installation directory
+INSTALL_DIR="/opt"
 
-## Add apt repositories maintained by Team RabbitMQ
-sudo tee /etc/apt/sources.list.d/rabbitmq.list <<EOF
-## Provides modern Erlang/OTP releases
-##
-deb https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-erlang/deb/ubuntu focal main
-deb-src https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-erlang/deb/ubuntu focal main
+# Download the JDK tarball
+wget "$JDK_URL" -O jdk.tar.gz
 
-## Provides RabbitMQ
-##
-deb https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-server/deb/ubuntu focal main
-deb-src https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-server/deb/ubuntu focal main
-EOF
+# Extract the tarball
+tar xzf jdk.tar.gz -C "$INSTALL_DIR"
 
-## Update package indices
-sudo apt-get update -y
+# Set JAVA_HOME
+echo "export JAVA_HOME=$INSTALL_DIR/jdk" >> ~/.bashrc
 
-## Install Erlang packages
-sudo apt-get install -y erlang-base \
-                        erlang-asn1 erlang-crypto erlang-eldap erlang-ftp erlang-inets \
-                        erlang-mnesia erlang-os-mon erlang-parsetools erlang-public-key \
-                        erlang-runtime-tools erlang-snmp erlang-ssl \
-                        erlang-syntax-tools erlang-tftp erlang-tools erlang-xmerl
+# Add JDK bin directory to PATH
+echo "export PATH=\$PATH:\$JAVA_HOME/bin" >> ~/.bashrc
 
-## Install rabbitmq-server and its dependencies
-sudo apt-get install rabbitmq-server -y --fix-missing
+# Reload the shell
+source ~/.bashrc
+
+# Verify Java version
+java -version
