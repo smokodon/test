@@ -13,6 +13,8 @@ wget -q "$JDK_URL" -O jdk.tar.gz
 tar xzf jdk.tar.gz -C "$INSTALL_DIR"
 
 ls -al $INSTALL_DIR
+ls -al $INSTALL_DIR/jdk-21.0.3+9
+ls -al $INSTALL_DIR/jdk-21.0.3+9/bin
 
 export JAVA_HOME=$INSTALL_DIR/jdk-21.0.3+9/bin
 export PATH=$JAVA_HOME/bin:$PATH
