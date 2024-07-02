@@ -1,17 +1,22 @@
-services:
-  - mysql
-  - rabbitmq
-  - postgresql
+# services:
+#   - mysql
+#   - rabbitmq
+#   - postgresql
 script:
-  - systemctl --type=service
-  - sudo systemctl status mysql.service
-  - sudo systemctl status rabbitmq-server.service
-  - sudo systemctl status postgresql.service
-  - sudo rabbitmqctl status
-  - mysqld --version
-  - postgres --version
-  - mysqld --print-defaults
-  - psql -U postgres -c 'SHOW config_file'
+  - mkdir temp_download && cd temp_download
+  - wget https://github.com/ibmruntimes/semeru21-binaries/releases/download/jdk-21.0.3%2B9_openj9-0.44.0/ibm-semeru-open-jdk_x64_linux_21.0.3_9_openj9-0.44.0.tar.gz
+  - tar xzf ibm-semeru-open-jdk_x64_linux_21.0.3_9_openj9-0.44.0.tar.gz
+  - export PATH=$PWD/temp_download:$PATH
+  - java -version
+  # - systemctl --type=service
+  # - sudo systemctl status mysql.service
+  # - sudo systemctl status rabbitmq-server.service
+  # - sudo systemctl status postgresql.service
+  # - sudo rabbitmqctl status
+  # - mysqld --version
+  # - postgres --version
+  # - mysqld --print-defaults
+  # - psql -U postgres -c 'SHOW config_file'
   # - cosign version
   # - git -v
   # - git-lfs
@@ -74,16 +79,16 @@ jobs:
   #   arch: amd64
   # - dist: bionic
   #   group: stable
-  - dist: bionic
-    group: stable
-  - dist: bionic
-    group: previous
+  # - dist: bionic
+  #   group: stable
+  # - dist: bionic
+  #   group: previous
   # - dist: focal
   #   group: stable
   - dist: focal
     group: stable
-  - dist: focal
-    group: previous
+  # - dist: focal
+  #   group: previous
   # - dist: xenial
   #   group: dev
   # - dist: jammy
@@ -92,8 +97,8 @@ jobs:
   #   group: previous
   # - dist: xenial
   #   group: stable
-  - dist: jammy
-    group: previous
-  - dist: jammy
-    group: dev
+  # - dist: jammy
+  #   group: previous
+  # - dist: jammy
+  #   group: dev
 
