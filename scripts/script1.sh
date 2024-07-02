@@ -12,6 +12,8 @@ wget "$JDK_URL" -O jdk.tar.gz
 # Extract the tarball
 tar xzf jdk.tar.gz -C "$INSTALL_DIR"
 
+ls -al $INSTALL_DIR
+
 export JAVA_HOME=$(cd "${INSTALL_DIR}"; pwd)
 export PATH=$JAVA_HOME/bin:$PATH
 
