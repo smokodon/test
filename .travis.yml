@@ -3,6 +3,7 @@
 #   - rabbitmq
 #   - postgresql
 script:
+  - ls -al /usr/lib/jvm
   - chmod +x ./scripts/script1.sh
   # - mkdir temp_download && cd temp_download
   # - wget https://github.com/ibmruntimes/semeru21-binaries/releases/download/jdk-21.0.3%2B9_openj9-0.44.0/ibm-semeru-open-jdk_x64_linux_21.0.3_9_openj9-0.44.0.tar.gz
@@ -69,8 +70,8 @@ jobs:
   #   arch: s390x
   # - dist: bionic
   #   arch: s390x
-  - dist: focal
-    arch: s390x
+  # - dist: focal
+  #   arch: s390x
   # - dist: jammy
   #   arch: s390x
 
@@ -91,8 +92,8 @@ jobs:
   #   group: previous
   # - dist: focal
   #   group: stable
-  # - dist: focal
-  #   group: stable
+  - dist: focal
+    group: stable
   # - dist: focal
   #   group: previous
   # - dist: xenial
