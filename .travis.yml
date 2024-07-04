@@ -7,16 +7,9 @@
 script:
   - ls -al /usr/lib/jvm
   - chmod +x ./scripts/script1.sh
-  # - mkdir temp_download && cd temp_download
-  # - wget https://github.com/ibmruntimes/semeru21-binaries/releases/download/jdk-21.0.3%2B9_openj9-0.44.0/ibm-semeru-open-jdk_x64_linux_21.0.3_9_openj9-0.44.0.tar.gz
-  # - tar xzf ibm-semeru-open-jdk_x64_linux_21.0.3_9_openj9-0.44.0.tar.gz
-  # - ls -al
-  # - cd jdk-21.0.3+9/bin
-  # - echo $JAVA_HOME
-  # - ls -al
-  # - export JAVA_HOME=/temp_download/jdk-21.0.3+9:$PATH
-  # - java -version
   - sudo ./scripts/script1.sh
+  - ls -al /usr/lib/jvm
+  - sudo update-alternatives --config java
   # - systemctl --type=service
   # - sudo systemctl status mysql.service
   # - sudo systemctl status rabbitmq-server.service
@@ -80,24 +73,16 @@ jobs:
 
   # - dist: trusty
   #   arch: amd64
-  # - dist: xenial
-  #   group: dev
-  # - dist: focal
-  #   arch: amd64
-  # - dist: jammy
-  #   arch: amd64
-  # - dist: bionic
-  #   group: stable
-  # - dist: bionic
-  #   group: stable
-  # - dist: bionic
-  #   group: previous
-  # - dist: focal
-  #   group: stable
-  - dist: focal
+  - dist: xenial
     group: stable
   # - dist: focal
-  #   group: previous
+  #   arch: amd64
+  - dist: jammy
+    group: stable
+  - dist: bionic
+    group: stable
+  - dist: focal
+    group: stable
   # - dist: xenial
   #   group: dev
   # - dist: jammy
