@@ -1,5 +1,5 @@
 language: java
-jdk: 17
+jdk: openjdk17
 # services:
 #   - mysql
 #   - rabbitmq
