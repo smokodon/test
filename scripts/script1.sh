@@ -25,9 +25,9 @@
   JAVA_VERSION="11"
 
   if [[ "${TRAVIS_CPU_ARCH}" == "arm64" ]]; then
-    ${TRAVIS_CPU_ARCH}="aarch64";
+    TRAVIS_CPU_ARCH="aarch64";
   elif [[ "${TRAVIS_CPU_ARCH}" == "amd64" ]]; then
-    ${TRAVIS_CPU_ARCH}="x64";
+    TRAVIS_CPU_ARCH="x64";
   fi
 
   case "${JAVA_VERSION}" in
