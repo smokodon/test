@@ -21,13 +21,13 @@
 # # Verify Java version
 # java -version
 
-local JAVA_VERSION
+#local JAVA_VERSION
   JAVA_VERSION="11"
 
   if [[ "${TRAVIS_CPU_ARCH}" == "arm64" ]]; then
-    ${TRAVIS_CPU_ARCH} == "aarch64";
+    ${TRAVIS_CPU_ARCH}="aarch64";
   elif [[ "${TRAVIS_CPU_ARCH}" == "amd64" ]]; then
-    ${TRAVIS_CPU_ARCH} == "x64";
+    ${TRAVIS_CPU_ARCH}="x64";
   fi
 
   case "${JAVA_VERSION}" in
@@ -42,6 +42,8 @@ local JAVA_VERSION
     22) JDK_URL="https://github.com/ibmruntimes/semeru22-binaries/releases/download/jdk-22.0.1%2B8_openj9-0.45.0/ibm-semeru-open-jdk_${TRAVIS_CPU_ARCH}_linux_22.0.1_8_openj9-0.45.0.tar.gz" ;;
     *) echo "JDK ${JAVA_VERSION} missing in the Semeru repository. Please choose a different version." ;;
   esac
+
+echo $JDK_URL
 
 # Define the installation directory
 INSTALL_DIR="/usr/lib/jvm"
