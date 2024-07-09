@@ -1,5 +1,5 @@
 language: java
-jdk: semeru11
+jdk: semeru16
 # services:
 #   - mysql
 #   - rabbitmq
