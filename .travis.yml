@@ -1,13 +1,13 @@
-#language: java
-#jdk: semeru16
+language: java
+jdk: semeru16
 # services:
 #   - mysql
 #   - rabbitmq
 #   - postgresql
 script:
-  #- java --version
-  #- chmod +x ./scripts/script1.sh
-  #- sudo ./scripts/script1.sh
+  - java --version
+  - chmod +x ./scripts/script1.sh
+  - sudo ./scripts/script1.sh
   # - systemctl --type=service
   # - sudo systemctl status mysql.service
   # - sudo systemctl status rabbitmq-server.service
@@ -41,32 +41,32 @@ jobs:
  include:
   # - os: freebsd
 
-  - dist: xenial
-    arch: arm64
-  - dist: bionic
-    arch: arm64
-  - dist: focal
-    arch: arm64
-  - dist: jammy
-    arch: arm64
+  # - dist: xenial
+  #   arch: arm64
+  # - dist: bionic
+  #   arch: arm64
+  # - dist: focal
+  #   arch: arm64
+  # - dist: jammy
+  #   arch: arm64
 
-  - dist: xenial
-    arch: ppc64le
-  - dist: bionic
-    arch: ppc64le
-  - dist: focal
-    arch: ppc64le
-  - dist: jammy
-    arch: ppc64le
+  # - dist: xenial
+  #   arch: ppc64le
+  # - dist: bionic
+  #   arch: ppc64le
+  # - dist: focal
+  #   arch: ppc64le
+  # - dist: jammy
+  #   arch: ppc64le
 
-  - dist: xenial
-    arch: s390x
-  - dist: bionic
-    arch: s390x
-  - dist: focal
-    arch: s390x
-  - dist: jammy
-    arch: s390x
+  # - dist: xenial
+  #   arch: s390x
+  # - dist: bionic
+  #   arch: s390x
+  # - dist: focal
+  #   arch: s390x
+  # - dist: jammy
+  #   arch: s390x
 
 
   # - dist: trusty
@@ -77,10 +77,10 @@ jobs:
   #   arch: amd64
   # - dist: jammy
   #   group: stable
-  # - dist: bionic
-  #   group: stable
-  # - dist: focal
-  #   group: stable
+  - dist: bionic
+    group: stable
+  - dist: focal
+    group: stable
   # - dist: xenial
   #   group: dev
   # - dist: jammy
