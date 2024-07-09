@@ -48,15 +48,19 @@ echo $JDK_URL
 # Define the installation directory
 INSTALL_DIR="/usr/lib/jvm"
 
+echo "Downloading JDK"
 # Download the JDK tarball
 wget -q "$JDK_URL" -O jdk.tar.gz
 
+echo "Extracting JDK"
 # Extract the tarball
 tar xzf jdk.tar.gz -C "$INSTALL_DIR"
 
+echo "Exporting JAVA envs"
 export JAVA_HOME="$INSTALL_DIR/jdk-${JAVA_VERSION}*"
 export PATH=$JAVA_HOME/bin:$PATH
 
+echo "Reloading the shell"
 # Reload the shell
 source ~/.bashrc
 
