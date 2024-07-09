@@ -67,6 +67,7 @@ else
   export JAVA_HOME="$INSTALL_DIR/jdk-${JAVA_VERSION}*"
 fi
 echo $JAVA_HOME
+cd $JAVA_HOME
 export PATH=$JAVA_HOME/bin:$PATH
 
 # Reload the shell
