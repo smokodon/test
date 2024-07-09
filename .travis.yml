@@ -1,13 +1,13 @@
 language: java
-#jdk: semeru11
+jdk: semeru11
 # services:
 #   - mysql
 #   - rabbitmq
 #   - postgresql
 script:
   - java --version
-  - chmod +x ./scripts/script1.sh
-  - sudo ./scripts/script1.sh
+  #- chmod +x ./scripts/script1.sh
+  #- sudo ./scripts/script1.sh
   # - systemctl --type=service
   # - sudo systemctl status mysql.service
   # - sudo systemctl status rabbitmq-server.service
