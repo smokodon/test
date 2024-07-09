@@ -22,7 +22,7 @@
 # java -version
 
 #local JAVA_VERSION
-  JAVA_VERSION="16"
+  JAVA_VERSION="21"
 
   if [[ "${TRAVIS_CPU_ARCH}" == "arm64" ]]; then
     TRAVIS_CPU_ARCH="aarch64";
