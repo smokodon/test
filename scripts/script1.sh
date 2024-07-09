@@ -60,7 +60,7 @@ ls -al /usr/lib/jvm
 
 echo "Exporting JAVA envs"
 if [[ "${JAVA_VERSION}" == 8 ]]; then
-  export JAVA_HOME="$INSTALL_DIR/jdk${JAVA_VERSION}*"
+  export JAVA_HOME="$INSTALL_DIR/jdk8u412-b08"
 else
   export JAVA_HOME="$INSTALL_DIR/jdk-${JAVA_VERSION}*"
 fi
