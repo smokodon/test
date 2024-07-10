@@ -8,6 +8,8 @@ script:
   - java --version
   - chmod +x ./scripts/script1.sh
   - sudo ./scripts/script1.sh
+  - ls -al /usr/lib/jvm
+  - echo $JAVA_HOME
   - sudo java --version
   - java -version
   # - systemctl --type=service

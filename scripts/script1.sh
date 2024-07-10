@@ -44,6 +44,8 @@
   esac
 
 
+echo $JDK_URL
+
 # Define the installation directory
 INSTALL_DIR="/usr/lib/jvm"
 
