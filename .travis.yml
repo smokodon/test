@@ -8,7 +8,7 @@ script:
   - java --version
   - chmod +x ./scripts/script1.sh
   - sudo ./scripts/script1.sh
-  - java --version
+  - sudo java --version
   - java -version
   # - systemctl --type=service
   # - sudo systemctl status mysql.service
