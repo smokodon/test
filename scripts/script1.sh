@@ -71,4 +71,4 @@ echo $JAVA_HOME
 #source ~/.bashrc
 
 # Verify Java version
-java -version
+java --version
