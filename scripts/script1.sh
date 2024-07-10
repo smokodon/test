@@ -54,12 +54,13 @@ wget -q "$JDK_URL" -O jdk.tar.gz
 
 mkdir $INSTALL_DIR/jdk${JAVA_VERSION} && tar -xzf jdk.tar.gz --strip-components 1 -C "$INSTALL_DIR/jdk${JAVA_VERSION}"
 
-if [[ "${JAVA_VERSION}" == 8 ]]; then
-  export JAVA_HOME="$INSTALL_DIR/jdk${JAVA_VERSION}"
-else
-  export JAVA_HOME="$INSTALL_DIR/jdk-${JAVA_VERSION}*"
-fi
+# if [[ "${JAVA_VERSION}" == 8 ]]; then
+#   export JAVA_HOME="$INSTALL_DIR/jdk${JAVA_VERSION}"
+# else
+#   export JAVA_HOME="$INSTALL_DIR/jdk-${JAVA_VERSION}*"
+# fi
 
+export JAVA_HOME="$INSTALL_DIR/jdk${JAVA_VERSION}"
 export PATH=$JAVA_HOME/bin:$PATH
 
 # Reload the shell
