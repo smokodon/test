@@ -1,5 +1,5 @@
-language: java
-jdk: semeru16
+#language: java
+#jdk: semeru16
 # services:
 #   - mysql
 #   - rabbitmq
@@ -45,8 +45,8 @@ jobs:
   #   arch: arm64
   # - dist: bionic
   #   arch: arm64
-  # - dist: focal
-  #   arch: arm64
+  - dist: focal
+    arch: arm64
   # - dist: jammy
   #   arch: arm64
 
@@ -54,8 +54,8 @@ jobs:
   #   arch: ppc64le
   # - dist: bionic
   #   arch: ppc64le
-  # - dist: focal
-  #   arch: ppc64le
+  - dist: focal
+    arch: ppc64le
   # - dist: jammy
   #   arch: ppc64le
 
@@ -63,8 +63,8 @@ jobs:
   #   arch: s390x
   # - dist: bionic
   #   arch: s390x
-  # - dist: focal
-  #   arch: s390x
+  - dist: focal
+    arch: s390x
   # - dist: jammy
   #   arch: s390x
 
@@ -77,8 +77,8 @@ jobs:
   #   arch: amd64
   # - dist: jammy
   #   group: stable
-  - dist: bionic
-    group: stable
+  # - dist: bionic
+  #   group: stable
   - dist: focal
     group: stable
   # - dist: xenial

@@ -22,7 +22,7 @@
 # java -version
 
 #local JAVA_VERSION
-  JAVA_VERSION="8"
+  JAVA_VERSION="18"
 
   if [[ "${TRAVIS_CPU_ARCH}" == "arm64" ]]; then
     TRAVIS_CPU_ARCH="aarch64";
@@ -43,34 +43,23 @@
     *) echo "JDK ${JAVA_VERSION} missing in the Semeru repository. Please choose a different version." ;;
   esac
 
-echo $JDK_URL
 
 # Define the installation directory
 INSTALL_DIR="/usr/lib/jvm"
 
-echo "Downloading JDK"
 # Download the JDK tarball
 wget -q "$JDK_URL" -O jdk.tar.gz
 
-echo "Extracting JDK"
 # Extract the tarball
-mkdir $INSTALL_DIR/jdk${JAVA_VERSION}
 
-#tar xzf jdk.tar.gz -C "$INSTALL_DIR/jdk${JAVA_VERSION}"
+mkdir $INSTALL_DIR/jdk${JAVA_VERSION} && tar -xzf jdk.tar.gz --strip-components 1 -C "$INSTALL_DIR/jdk${JAVA_VERSION}"
 
-tar -xzf jdk.tar.gz --strip-components 1 -C "$INSTALL_DIR/jdk${JAVA_VERSION}"
-
-ls -al /usr/lib/jvm/jdk${JAVA_VERSION}
-
-echo "Exporting JAVA envs"
 if [[ "${JAVA_VERSION}" == 8 ]]; then
   export JAVA_HOME="$INSTALL_DIR/jdk${JAVA_VERSION}"
 else
   export JAVA_HOME="$INSTALL_DIR/jdk-${JAVA_VERSION}*"
 fi
 
-echo $JAVA_HOME
-cd $JAVA_HOME
 export PATH=$JAVA_HOME/bin:$PATH
 
 # Reload the shell
