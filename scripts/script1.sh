@@ -54,13 +54,15 @@ wget -q "$JDK_URL" -O jdk.tar.gz
 
 echo "Extracting JDK"
 # Extract the tarball
-tar xzf jdk.tar.gz -C "$INSTALL_DIR"
+mdkir $INSTALL_DIR/jdk${JAVA_VERSION}
+
+tar xzf jdk.tar.gz -C "$INSTALL_DIR/jdk${JAVA_VERSION}"
 
 ls -al /usr/lib/jvm
 
 echo "Exporting JAVA envs"
 if [[ "${JAVA_VERSION}" == 8 ]]; then
-  export JAVA_HOME="$INSTALL_DIR/jdk${JAVA_VERSION}*"
+  export JAVA_HOME="$INSTALL_DIR/jdk${JAVA_VERSION}"
 else
   export JAVA_HOME="$INSTALL_DIR/jdk-${JAVA_VERSION}*"
 fi
@@ -70,7 +72,7 @@ cd $JAVA_HOME
 export PATH=$JAVA_HOME/bin:$PATH
 
 # Reload the shell
-sudo source ~/.bashrc
+source ~/.bashrc
 
 # Verify Java version
 java -version
