@@ -7,11 +7,11 @@
 script:
   - java --version
   - chmod +x ./scripts/script1.sh
-  - sudo ./scripts/script1.sh
+  - sudo - E./scripts/script1.sh
   - ls -al /usr/lib/jvm
   - echo $JAVA_HOME
-  - export JAVA_HOME=/usr/lib/jvm/jdk18
-  - export PATH=$JAVA_HOME/bin:$PATH
+  # - export JAVA_HOME=/usr/lib/jvm/jdk18
+  # - export PATH=$JAVA_HOME/bin:$PATH
   - java --version
   # - systemctl --type=service
   # - sudo systemctl status mysql.service
