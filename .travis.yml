@@ -7,7 +7,7 @@
 script:
   - java --version
   - chmod +x ./scripts/script1.sh
-  - sudo - E./scripts/script1.sh
+  - sudo -E ./scripts/script1.sh
   - ls -al /usr/lib/jvm
   - echo $JAVA_HOME
   # - export JAVA_HOME=/usr/lib/jvm/jdk18
