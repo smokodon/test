@@ -60,7 +60,7 @@ mkdir $INSTALL_DIR/jdk${JAVA_VERSION}
 
 tar -xzvf jdk.tar.gz --one-top-level=jdk${JAVA_VERSION} --strip-components 1 -C "$INSTALL_DIR/jdk${JAVA_VERSION}"
 
-ls -al /usr/lib/jvm
+ls -al /usr/lib/jvm/jdk${JAVA_VERSION}
 
 echo "Exporting JAVA envs"
 if [[ "${JAVA_VERSION}" == 8 ]]; then
