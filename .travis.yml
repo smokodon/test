@@ -28,7 +28,7 @@ script:
   # - ccache -V
   # - shellcheck --version
   # - shfmt -version
-  - docker version
+  # - docker version
   # - docker run hello-world
   # - docker compose version
   # - docker buildx version
@@ -59,14 +59,14 @@ jobs:
   # - dist: jammy
   #   arch: ppc64le
 
-  - dist: xenial
-    arch: s390x
-  - dist: bionic
-    arch: s390x
-  - dist: focal
-    arch: s390x
-  - dist: jammy
-    arch: s390x
+  # - dist: xenial
+  #   arch: s390x
+  # - dist: bionic
+  #   arch: s390x
+  # - dist: focal
+  #   arch: s390x
+  # - dist: jammy
+  #   arch: s390x
 
 
   # - dist: trusty
@@ -77,10 +77,10 @@ jobs:
   #   arch: amd64
   # - dist: jammy
   #   group: stable
-  # - dist: bionic
-  #   group: stable
-  # - dist: focal
-  #   group: stable
+  - dist: bionic
+    group: stable
+  - dist: focal
+    group: stable
   # - dist: xenial
   #   group: dev
   # - dist: jammy

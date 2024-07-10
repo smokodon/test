@@ -58,14 +58,13 @@ tar xzf jdk.tar.gz -C "$INSTALL_DIR"
 
 ls -al /usr/lib/jvm
 
-loc="jdk${JAVA_VERSION}*"
-
 echo "Exporting JAVA envs"
 if [[ "${JAVA_VERSION}" == 8 ]]; then
-  export JAVA_HOME="$INSTALL_DIR/$loc"
+  export JAVA_HOME="$INSTALL_DIR/jdk${JAVA_VERSION}*"
 else
   export JAVA_HOME="$INSTALL_DIR/jdk-${JAVA_VERSION}*"
 fi
+
 echo $JAVA_HOME
 cd $JAVA_HOME
 export PATH=$JAVA_HOME/bin:$PATH
