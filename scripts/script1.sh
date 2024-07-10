@@ -65,6 +65,8 @@ mkdir $INSTALL_DIR/jdk${JAVA_VERSION} && tar -xzf jdk.tar.gz --strip-components 
 export JAVA_HOME="$INSTALL_DIR/jdk${JAVA_VERSION}"
 export PATH=$JAVA_HOME/bin:$PATH
 
+echo $JAVA_HOME
+
 # Reload the shell
 source ~/.bashrc
 
