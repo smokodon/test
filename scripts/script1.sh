@@ -54,7 +54,7 @@ wget -q "$JDK_URL" -O jdk.tar.gz
 
 echo "Extracting JDK"
 # Extract the tarball
-mdkir $INSTALL_DIR/jdk${JAVA_VERSION}
+mkdir $INSTALL_DIR/jdk${JAVA_VERSION}
 
 tar xzf jdk.tar.gz -C "$INSTALL_DIR/jdk${JAVA_VERSION}"
 
