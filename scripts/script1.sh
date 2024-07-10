@@ -70,7 +70,7 @@ cd $JAVA_HOME
 export PATH=$JAVA_HOME/bin:$PATH
 
 # Reload the shell
-source ~/.bashrc
+sudo source ~/.bashrc
 
 # Verify Java version
 java -version
