@@ -68,7 +68,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 echo $JAVA_HOME
 
 # Reload the shell
-source ~/.bashrc
+#source ~/.bashrc
 
 # Verify Java version
 java -version
