@@ -50,8 +50,8 @@ jobs:
   #   arch: arm64
   # - dist: bionic
   #   arch: arm64
-  - dist: focal
-    arch: arm64
+  # - dist: focal
+  #   arch: arm64
   # - dist: jammy
   #   arch: arm64
 
@@ -59,8 +59,8 @@ jobs:
   #   arch: ppc64le
   # - dist: bionic
   #   arch: ppc64le
-  - dist: focal
-    arch: ppc64le
+  # - dist: focal
+  #   arch: ppc64le
   # - dist: jammy
   #   arch: ppc64le
 
