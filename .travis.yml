@@ -1,18 +1,18 @@
-#language: java
-#jdk: semeru16
+language: java
+jdk: semeru22
 # services:
 #   - mysql
 #   - rabbitmq
 #   - postgresql
 script:
   - java --version
-  - chmod +x ./scripts/script1.sh
-  - sudo -E ./scripts/script1.sh
-  - ls -al /usr/lib/jvm
-  - echo $JAVA_HOME
+  # - chmod +x ./scripts/script1.sh
+  # - sudo -E ./scripts/script1.sh
+  # - ls -al /usr/lib/jvm
+  # - echo $JAVA_HOME
   # - export JAVA_HOME=/usr/lib/jvm/jdk18
   # - export PATH=$JAVA_HOME/bin:$PATH
-  - java --version
+  # - java --version
   # - systemctl --type=service
   # - sudo systemctl status mysql.service
   # - sudo systemctl status rabbitmq-server.service
@@ -85,13 +85,13 @@ jobs:
   # - dist: bionic
   #   group: stable
   - dist: focal
-    group: dev
+    group: stable
   # - dist: xenial
   #   group: dev
   # - dist: jammy
   #   group: dev
-  - dist: jammy
-    group: dev
+  # - dist: jammy
+  #   group: dev
   # - dist: xenial
   #   group: stable
   # - dist: jammy
