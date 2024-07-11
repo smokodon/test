@@ -90,8 +90,8 @@ jobs:
   #   group: dev
   # - dist: jammy
   #   group: dev
-  # - dist: jammy
-  #   group: previous
+  - dist: jammy
+    group: dev
   # - dist: xenial
   #   group: stable
   # - dist: jammy
