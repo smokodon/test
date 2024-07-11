@@ -1,11 +1,12 @@
 language: java
-jdk: semeru22
+jdk: semeru18
 # services:
 #   - mysql
 #   - rabbitmq
 #   - postgresql
 script:
   - java --version
+  - java -version
   # - chmod +x ./scripts/script1.sh
   # - sudo -E ./scripts/script1.sh
   # - ls -al /usr/lib/jvm
