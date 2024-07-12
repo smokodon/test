@@ -1,5 +1,5 @@
 language: java
-jdk: jdk21
+jdk: openjdk21
 # services:
 #   - mysql
 #   - rabbitmq
