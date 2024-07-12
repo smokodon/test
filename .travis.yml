@@ -5,7 +5,7 @@ jdk: openjdk21
 #   - rabbitmq
 #   - postgresql
 script:
-  - df -h
+  - jdk_switcher use semeru8
   - java --version
   - java -version
   # - chmod +x ./scripts/script1.sh
