@@ -5,6 +5,7 @@ jdk: semeru18
 #   - rabbitmq
 #   - postgresql
 script:
+  - df -h
   - java --version
   - java -version
   # - chmod +x ./scripts/script1.sh
@@ -84,7 +85,7 @@ jobs:
   # - dist: bionic
   #   group: stable
   - dist: focal
-    group: stable
+    group: dev
   # - dist: xenial
   #   group: dev
   # - dist: jammy
