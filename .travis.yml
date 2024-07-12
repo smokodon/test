@@ -1,5 +1,5 @@
 language: java
-jdk: semeru18
+jdk: semeru22
 # services:
 #   - mysql
 #   - rabbitmq
@@ -68,10 +68,10 @@ jobs:
 
   # - dist: xenial
   #   arch: s390x
-  # - dist: bionic
-  #   arch: s390x
-  - dist: focal
+  - dist: bionic
     arch: s390x
+  # - dist: focal
+  #   arch: s390x
   # - dist: jammy
   #   arch: s390x
   # - dist: trusty
@@ -82,10 +82,10 @@ jobs:
   #   arch: amd64
   # - dist: jammy
   #   group: stable
-  # - dist: bionic
+  - dist: bionic
+    group: stable
+  # - dist: focal
   #   group: stable
-  - dist: focal
-    group: dev
   # - dist: xenial
   #   group: dev
   # - dist: jammy
