@@ -1,11 +1,11 @@
 language: java
-jdk: openjdk21
+jdk: semeru23
 # services:
 #   - mysql
 #   - rabbitmq
 #   - postgresql
 script:
-  - jdk_switcher use semeru8
+  #- jdk_switcher use semeru8
   - java --version
   - java -version
   # - chmod +x ./scripts/script1.sh
