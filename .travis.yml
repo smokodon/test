@@ -1,11 +1,12 @@
-language: java
-jdk: semeru23
+# language: java
+# jdk: semeru23
 # services:
 #   - mysql
 #   - rabbitmq
 #   - postgresql
 script:
   #- jdk_switcher use semeru8
+  - df -h
   - java --version
   - java -version
   # - chmod +x ./scripts/script1.sh
@@ -68,8 +69,8 @@ jobs:
 
   # - dist: xenial
   #   arch: s390x
-  - dist: bionic
-    arch: s390x
+  # - dist: bionic
+  #   arch: s390x
   # - dist: focal
   #   arch: s390x
   # - dist: jammy
@@ -82,16 +83,16 @@ jobs:
   #   arch: amd64
   # - dist: jammy
   #   group: stable
-  - dist: bionic
-    group: stable
-  # - dist: focal
+  # - dist: bionic
   #   group: stable
+  - dist: focal
+    group: stable
   # - dist: xenial
   #   group: dev
   # - dist: jammy
   #   group: dev
-  # - dist: jammy
-  #   group: dev
+  - dist: jammy
+    group: dev
   # - dist: xenial
   #   group: stable
   # - dist: jammy
