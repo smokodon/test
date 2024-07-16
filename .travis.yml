@@ -1,18 +1,17 @@
-# language: java
-# jdk: semeru23
+language: java
+jdk: semeru23
 # services:
 #   - mysql
 #   - rabbitmq
 #   - postgresql
 script:
   #- jdk_switcher use semeru8
-  - df -h
   - java --version
   - java -version
   # - chmod +x ./scripts/script1.sh
   # - sudo -E ./scripts/script1.sh
   # - ls -al /usr/lib/jvm
-  # - echo $JAVA_HOME
+  - echo $JAVA_HOME
   # - export JAVA_HOME=/usr/lib/jvm/jdk18
   # - export PATH=$JAVA_HOME/bin:$PATH
   # - java --version
@@ -51,8 +50,8 @@ jobs:
 
   # - dist: xenial
   #   arch: arm64
-  # - dist: bionic
-  #   arch: arm64
+  - dist: bionic
+    arch: arm64
   # - dist: focal
   #   arch: arm64
   # - dist: jammy
@@ -60,8 +59,8 @@ jobs:
 
   # - dist: xenial
   #   arch: ppc64le
-  # - dist: bionic
-  #   arch: ppc64le
+  - dist: bionic
+    arch: ppc64le
   # - dist: focal
   #   arch: ppc64le
   # - dist: jammy
@@ -69,8 +68,8 @@ jobs:
 
   # - dist: xenial
   #   arch: s390x
-  # - dist: bionic
-  #   arch: s390x
+  - dist: bionic
+    arch: s390x
   # - dist: focal
   #   arch: s390x
   # - dist: jammy
@@ -86,13 +85,13 @@ jobs:
   # - dist: bionic
   #   group: stable
   - dist: focal
-    group: dev
+    group: stable
   # - dist: xenial
   #   group: dev
   # - dist: jammy
   #   group: dev
-  - dist: jammy
-    group: dev
+  # - dist: jammy
+  #   group: stable
   # - dist: xenial
   #   group: stable
   # - dist: jammy
