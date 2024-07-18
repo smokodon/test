@@ -1,20 +1,20 @@
 # language: java
 # jdk: semeru22
-- os: osx
-  before_install:
-    - sw_vers
-    - unset -f cd
-  install:
-    - unset -f pushd
-    - unset -f popd
-  osx_image: xcode6.4
-  name: "10.10"
-  arch: x86_64
-  cache: &osx_cache
-    ccache: true
-    directories:
-      - /usr/local/Cellar/python
-      - /usr/local/opt/python
+os: osx
+before_install:
+  - sw_vers
+  - unset -f cd
+install:
+  - unset -f pushd
+  - unset -f popd
+osx_image: xcode6.4
+name: "10.10"
+arch: x86_64
+cache: &osx_cache
+  ccache: true
+  directories:
+    - /usr/local/Cellar/python
+    - /usr/local/opt/python
 # services:
 #   - mysql
 #   - rabbitmq
