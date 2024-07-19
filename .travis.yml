@@ -1,29 +1,14 @@
-# language: java
-# jdk: semeru22
-os: osx
-before_install:
-  - sw_vers
-  - unset -f cd
-install:
-  - unset -f pushd
-  - unset -f popd
-osx_image: xcode6.4
-name: "10.10"
-arch: x86_64
-cache: &osx_cache
-  ccache: true
-  directories:
-    - /usr/local/Cellar/python
-    - /usr/local/opt/python
+language: java
+jdk: semeru22
 # services:
 #   - mysql
 #   - rabbitmq
 #   - postgresql
-#script:
+script:
   #- jdk_switcher use semeru8
   # - chmod +x ./scripts/script1.sh
   # - sudo -E ./scripts/script1.sh
-  # - ls -al /usr/lib/jvm
+  - ls -al /usr/lib/jvm
   # - export JAVA_HOME=/usr/lib/jvm/jdk18
   # - export PATH=$JAVA_HOME/bin:$PATH
   # - java --version
@@ -62,8 +47,8 @@ cache: &osx_cache
 
   # - dist: xenial
   #   arch: arm64
-  # - dist: bionic
-  #   arch: arm64
+  - dist: bionic
+    arch: arm64
   # - dist: focal
   #   arch: arm64
   # - dist: jammy
@@ -71,8 +56,8 @@ cache: &osx_cache
 
   # - dist: xenial
   #   arch: ppc64le
-  # - dist: bionic
-  #   arch: ppc64le
+  - dist: bionic
+    arch: ppc64le
   # - dist: focal
   #   arch: ppc64le
   # - dist: jammy
@@ -82,8 +67,8 @@ cache: &osx_cache
   #   arch: s390x
   # - dist: bionic
   #   arch: s390x
-  # - dist: focal
-  #   arch: s390x
+  - dist: focal
+    arch: s390x
   # - dist: jammy
   #   arch: s390x
   # - dist: trusty
