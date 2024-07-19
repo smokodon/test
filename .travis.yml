@@ -41,8 +41,8 @@ script:
   # - groovy -version
 
 
-# jobs:
-#  include:
+jobs:
+ include:
   # - os: freebsd
 
   # - dist: xenial
