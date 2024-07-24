@@ -1,5 +1,5 @@
-language: java
-jdk: semeru22
+# language: java
+# jdk: semeru22
 # services:
 #   - mysql
 #   - rabbitmq
@@ -8,7 +8,8 @@ script:
   #- jdk_switcher use semeru8
   # - chmod +x ./scripts/script1.sh
   # - sudo -E ./scripts/script1.sh
-  - ls -al /usr/lib/jvm
+  - curl -fs https://raw.githubusercontent.com/travis-ci/travis-migrations/master/db/main/structure.sql
+  - ls -al
   # - export JAVA_HOME=/usr/lib/jvm/jdk18
   # - export PATH=$JAVA_HOME/bin:$PATH
   # - java --version
@@ -47,10 +48,10 @@ jobs:
 
   # - dist: xenial
   #   arch: arm64
-  - dist: bionic
-    arch: arm64
-  - dist: focal
-    arch: arm64
+  # - dist: bionic
+  #   arch: arm64
+  # - dist: focal
+  #   arch: arm64
   # - dist: jammy
   #   arch: arm64
 
@@ -81,8 +82,8 @@ jobs:
   #   group: stable
   # - dist: bionic
   #   group: stable
-  # - dist: focal
-  #   group: stable
+  - dist: focal
+    group: stable
   # - dist: xenial
   #   group: dev
   # - dist: jammy
