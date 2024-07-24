@@ -8,7 +8,7 @@ script:
   #- jdk_switcher use semeru8
   # - chmod +x ./scripts/script1.sh
   # - sudo -E ./scripts/script1.sh
-  - curl -fsN https://raw.githubusercontent.com/travis-ci/travis-migrations/master/db/main/structure.sql -o db/structure.sq
+  - curl -fs https://raw.githubusercontent.com/travis-ci/travis-migrations/master/db/main/structure.sql -o structure.sq
   - ls -al
   # - export JAVA_HOME=/usr/lib/jvm/jdk18
   # - export PATH=$JAVA_HOME/bin:$PATH
