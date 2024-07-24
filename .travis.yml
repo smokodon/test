@@ -1,9 +1,9 @@
 # language: java
 # jdk: semeru22
-# services:
+services:
 #   - mysql
 #   - rabbitmq
-#   - postgresql
+  - postgresql
 script:
   #- jdk_switcher use semeru8
   # - chmod +x ./scripts/script1.sh
