@@ -10,8 +10,7 @@ script:
   # - sudo -E ./scripts/script1.sh
   - psql -c 'CREATE DATABASE travis_test;' -U postgres
   - psql -t -c "SELECT 1 FROM pg_roles WHERE rolname='travis'" -U postgres | grep 1 || psql -c 'CREATE ROLE travis SUPERUSER LOGIN CREATEDB;' -U 
-  #- curl -fs https://raw.githubusercontent.com/travis-ci/travis-migrations/master/db/main/structure.sql -o structure.sq
-  - curl -f https://raw.githubusercontent.com/travis-ci/travis-migrations/master/db/main/structure.sql | psql -v ON_ERROR_STOP=1 travis_test
+  - curl -fs https://raw.githubusercontent.com/travis-ci/travis-migrations/master/db/main/structure.sql -o structure.sq | psql -v ON_ERROR_STOP=1 travis_test
   - ls -al
   # - export JAVA_HOME=/usr/lib/jvm/jdk18
   # - export PATH=$JAVA_HOME/bin:$PATH
