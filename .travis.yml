@@ -8,7 +8,7 @@ script:
   #- jdk_switcher use semeru8
   # - chmod +x ./scripts/script1.sh
   # - sudo -E ./scripts/script1.sh
-  - brew install rustup
+  - brew install ca-certificates rustup
   - sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
   - curl -sSL https://get.rvm.io | bash -s stable
   - rvm reload
