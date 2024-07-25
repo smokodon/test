@@ -8,6 +8,7 @@ script:
   #- jdk_switcher use semeru8
   # - chmod +x ./scripts/script1.sh
   # - sudo -E ./scripts/script1.sh
+  - brew install gcc
   - curl -sSL https://get.rvm.io | bash -s stable
   - rvm reload
   - rvm install 3.2.0 --enable-yjit --verify-downloads 1 --disable-install-doc -C --without-tcl,--without-tk,--without-gmp
