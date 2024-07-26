@@ -5,11 +5,11 @@
 #   - rabbitmq
 #   - postgresql
 script:
-  - pip install --upgrade pip pyopenssl certifi rsa pytest oauthlib testresources setuptools dbus-python numpy
   - pip uninstall importlib_metadata 
   - pip install importlib_metadata --force-reinstall
   - pip install --upgrade pip-review
   - pip-review --auto
+  - pip install --upgrade pip pyopenssl certifi rsa pytest oauthlib testresources setuptools dbus-python numpy
   #- jdk_switcher use semeru8
   # - chmod +x ./scripts/script1.sh
   # - sudo -E ./scripts/script1.sh
