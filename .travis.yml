@@ -1,10 +1,11 @@
-#language: python
-#python: 3.12
+language: python
+python: 3.12
 # services:
 #   - mysql
 #   - rabbitmq
 #   - postgresql
 script:
+  - python -v
   - curl -sSL https://get.rvm.io | bash -s stable
   - rvm reload
   - rvm install 3.2 --binary --fuzzy
@@ -90,8 +91,8 @@ jobs:
   #   arch: amd64
   # - dist: xenial
   #   group: stable
-  # - dist: focal
-  #   arch: amd64
+  - dist: focal
+    group: dev
   # - dist: jammy
   #   group: stable
   - dist: bionic
