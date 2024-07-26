@@ -1,15 +1,11 @@
-# language: java
-# jdk: semeru22
+language: python
+python: 3.12
 # services:
 #   - mysql
 #   - rabbitmq
 #   - postgresql
 script:
-  - pip uninstall importlib_metadata 
-  - pip install importlib_metadata --force-reinstall
-  - pip install --upgrade pip-review
-  - pip-review --auto
-  - pip install --upgrade pip pyopenssl certifi rsa pytest oauthlib testresources setuptools dbus-python numpy
+  - python -v
   #- jdk_switcher use semeru8
   # - chmod +x ./scripts/script1.sh
   # - sudo -E ./scripts/script1.sh
