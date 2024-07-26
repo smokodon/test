@@ -1,11 +1,11 @@
-language: python
-python: 3.12
+#language: python
+#python: 3.12
 # services:
 #   - mysql
 #   - rabbitmq
 #   - postgresql
 script:
-  - python -v
+  - rvm use 3.2 --install --binary --fuzzy
   #- jdk_switcher use semeru8
   # - chmod +x ./scripts/script1.sh
   # - sudo -E ./scripts/script1.sh
@@ -110,6 +110,6 @@ jobs:
   #   group: previous
   # - dist: jammy
   #   group: dev
-  # - os: osx
-  #   osx_image: xcode10.13
+  - os: osx
+    osx_image: xcode10.13
 
