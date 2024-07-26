@@ -9,6 +9,7 @@ script:
   # - chmod +x ./scripts/script1.sh
   # - sudo -E ./scripts/script1.sh
   # - brew install ca-certificates rustup
+  - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   - brew install openssl@3.0
   #- sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
   - curl -sSL https://get.rvm.io | bash -s stable
