@@ -7,7 +7,8 @@
 script:
   # - curl -sSL https://get.rvm.io | bash -s stable
   # - rvm reload
-  - rvm use 3.2.4 --install --binary --fuzzy
+  - rvm install 3.2.4 --binary --fuzzy
+  - rvm use 3.2.4
   #- jdk_switcher use semeru8
   # - chmod +x ./scripts/script1.sh
   # - sudo -E ./scripts/script1.sh
