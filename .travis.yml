@@ -1,14 +1,13 @@
-language: python
-python: 3.12
+# language: python
+# python: 3.12
 # services:
 #   - mysql
 #   - rabbitmq
 #   - postgresql
 script:
-  - python -v
-  - curl -sSL https://get.rvm.io | bash -s stable
-  - rvm reload
-  - rvm install 3.2 --binary --fuzzy
+  # - curl -sSL https://get.rvm.io | bash -s stable
+  # - rvm reload
+  - rvm use 3.2.4 --install --binary --fuzzy
   #- jdk_switcher use semeru8
   # - chmod +x ./scripts/script1.sh
   # - sudo -E ./scripts/script1.sh
@@ -91,14 +90,14 @@ jobs:
   #   arch: amd64
   # - dist: xenial
   #   group: stable
-  - dist: focal
-    group: dev
+  # - dist: focal
+  #   group: dev
   # - dist: jammy
   #   group: stable
-  - dist: bionic
-    group: dev
-  - dist: jammy
-    group: dev
+  # - dist: bionic
+  #   group: dev
+  # - dist: jammy
+  #   group: dev
   # - dist: xenial
   #   group: dev
   # - dist: jammy
