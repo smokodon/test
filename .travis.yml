@@ -5,6 +5,8 @@
 #   - rabbitmq
 #   - postgresql
 script:
+  - curl -sSL https://get.rvm.io | bash -s stable
+  - rvm reload
   - rvm use 3.2 --install --binary --fuzzy
   #- jdk_switcher use semeru8
   # - chmod +x ./scripts/script1.sh
@@ -15,8 +17,6 @@ script:
   #- sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
   # - curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain stable
   # - source "$HOME/.cargo/env"
-  # - curl -sSL https://get.rvm.io | bash -s stable
-  # - rvm reload
   #--with-openssl-dir=$(brew --prefix openssl@3.0)
   # - rvm install 3.2.0 --with-gcc=clang --enable-yjit --verify-downloads 1 --disable-install-doc -C --without-tcl,--without-tk,--without-gmp
   # - cat /Users/travis/.rvm/log/*_ruby-3.2.0/configure.log
