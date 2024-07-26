@@ -98,10 +98,10 @@ jobs:
   #   arch: amd64
   # - dist: jammy
   #   group: stable
-  # - dist: bionic
-  #   group: stable
-  - dist: focal
-    group: stable
+  - dist: bionic
+    group: dev
+  - dist: jammy
+    group: dev
   # - dist: xenial
   #   group: dev
   # - dist: jammy
