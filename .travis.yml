@@ -5,8 +5,8 @@
 #   - rabbitmq
 #   - postgresql
 script:
-  # - curl -sSL https://get.rvm.io | bash -s stable
-  # - rvm reload
+  - curl -sSL https://get.rvm.io | bash -s stable
+  - rvm reload
   - rvm install 3.2.4 --binary --fuzzy
   - rvm use 3.2.4
   #- jdk_switcher use semeru8
