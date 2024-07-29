@@ -1,12 +1,16 @@
 # language: python
 # python: 3.12
-services:
+#services:
 #   - mysql
-  - rabbitmq
+#  - rabbitmq
 #   - postgresql
 script:
   #- jdk_switcher use semeru8
   #- pip install importlib-metadata
+  - curl -1sLf 'https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-erlang/setup.deb.sh' | sudo -E bash
+  - sudo apt update
+  - sudo apt install -y erlang
+  - sudo systemctl start rabbitmqctl
   - sudo rabbitmqctl status
   - sudo apt update
   # - chmod +x ./scripts/script1.sh
@@ -97,8 +101,8 @@ jobs:
     group: dev
   # - dist: jammy
   #   group: stable
-  - dist: bionic
-    group: previous
+  # - dist: bionic
+  #   group: previous
   # - dist: bionic
   #   group: dev
   # - dist: jammy
