@@ -7,6 +7,8 @@
 script:
   #- jdk_switcher use semeru8
   #- pip install importlib-metadata
+  - pip uninstall importlib_metadata 
+  - pip install importlib_metadata --force-reinstall
   - curl -1sLf 'https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-erlang/setup.deb.sh' | sudo -E bash
   - sudo apt update
   - sudo apt install -y erlang
@@ -95,8 +97,8 @@ jobs:
   #   arch: amd64
   # - dist: xenial
   #   group: stable
-  # - dist: focal
-  #   group: stable
+  - dist: focal
+    group: dev
   - dist: bionic
     group: dev
   # - dist: jammy
