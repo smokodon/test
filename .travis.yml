@@ -92,7 +92,7 @@ jobs:
   #   group: stable
   # - dist: focal
   #   group: stable
-  - dist: jammy
+  - dist: bionic
     group: dev
   # - dist: jammy
   #   group: stable
