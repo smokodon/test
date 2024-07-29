@@ -5,10 +5,9 @@
 #   - rabbitmq
 #   - postgresql
 script:
-  - sudo apt update
   #- jdk_switcher use semeru8
-  # - chmod +x ./scripts/script1.sh
-  # - sudo -E ./scripts/script1.sh
+  - chmod +x ./scripts/script1.sh
+  - sudo ./scripts/script1.sh
   # - brew install ca-certificates rustup
   #- curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
   # - brew install openssl@3.0
@@ -89,16 +88,16 @@ jobs:
   #   arch: amd64
   # - dist: xenial
   #   group: stable
-  - dist: focal
-    group: stable
+  # - dist: focal
+  #   group: stable
   - dist: focal
     group: dev
   # - dist: jammy
   #   group: stable
-  - dist: bionic
-    group: stable
-  - dist: bionic
-    group: dev
+  # - dist: bionic
+  #   group: stable
+  # - dist: bionic
+  #   group: dev
   # - dist: jammy
   #   group: dev
   # - dist: xenial
