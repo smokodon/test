@@ -6,6 +6,7 @@ services:
 #   - postgresql
 script:
   #- jdk_switcher use semeru8
+  #- pip install importlib-metadata
   - sudo rabbitmqctl status
   - sudo apt update
   # - chmod +x ./scripts/script1.sh
@@ -96,8 +97,8 @@ jobs:
     group: dev
   # - dist: jammy
   #   group: stable
-  # - dist: bionic
-  #   group: stable
+  - dist: bionic
+    group: stable
   # - dist: bionic
   #   group: dev
   # - dist: jammy
