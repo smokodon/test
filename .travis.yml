@@ -11,7 +11,9 @@ script:
   - pip install importlib_metadata --force-reinstall
   - curl -1sLf 'https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-erlang/setup.deb.sh' | sudo -E bash
   - sudo apt update
-  - sudo apt install -y erlang rabbitmq-server
+  - sudo apt remove -y rabbitmq-server
+  - sudo apt install -y erlang
+  - sudo apt install -y rabbitmq-server
   - sudo systemctl unmask rabbitmq-server.service
   - sudo service rabbitmq-server start
   - sudo rabbitmq-server status
