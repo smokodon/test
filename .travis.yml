@@ -98,7 +98,7 @@ jobs:
   # - dist: jammy
   #   group: stable
   - dist: bionic
-    group: stable
+    group: previous
   # - dist: bionic
   #   group: dev
   # - dist: jammy
