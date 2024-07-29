@@ -13,6 +13,8 @@ script:
   # - sudo apt update
   - whoami
   - sudo ls -al /etc/apt/trusted.gpg.d
+  - lsattr /etc/apt/trusted.gpg.d
+  - cat /etc/mtab
   #- sudo apt remove -y rabbitmq-server
   # - sudo apt install -y erlang --fix-broken
   # - sudo apt install -y erlang-nox
