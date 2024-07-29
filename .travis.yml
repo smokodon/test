@@ -6,6 +6,7 @@ services:
 #   - postgresql
 script:
   #- jdk_switcher use semeru8
+  - sudo rabbitmqctl status
   - sudo apt update
   # - chmod +x ./scripts/script1.sh
   # - sudo ./scripts/script1.sh
