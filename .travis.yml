@@ -16,7 +16,7 @@ script:
   - sudo apt install -y rabbitmq-server
   - sudo systemctl unmask rabbitmq-server.service
   - sudo service rabbitmq-server start
-  - sudo rabbitmq-server status
+  - sudo systemctl status rabbitmq-server.service
   - sudo apt update
   # - chmod +x ./scripts/script1.sh
   # - sudo ./scripts/script1.sh
