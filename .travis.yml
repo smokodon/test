@@ -13,6 +13,7 @@ script:
   - sudo apt update
   - sudo apt remove -y rabbitmq-server
   - sudo apt install -y erlang --fix-broken
+  - sudo apt install -y erlang-nox
   - sudo apt install -y rabbitmq-server --fix-broken
   - sudo systemctl unmask rabbitmq-server.service
   - sudo service rabbitmq-server start
