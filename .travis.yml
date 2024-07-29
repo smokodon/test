@@ -5,7 +5,7 @@
 #   - rabbitmq
 #   - postgresql
 script:
-  - sudo apt get update
+  - sudo apt update
   #- jdk_switcher use semeru8
   # - chmod +x ./scripts/script1.sh
   # - sudo -E ./scripts/script1.sh
