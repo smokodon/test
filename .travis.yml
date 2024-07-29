@@ -14,7 +14,7 @@ script:
   - sudo apt install -y erlang
   - sudo systemctl unmask rabbitmq-server.service
   - sudo service rabbitmq-server start
-  - sudo rabbitmqctl status
+  - sudo rabbitmq status
   - sudo apt update
   # - chmod +x ./scripts/script1.sh
   # - sudo ./scripts/script1.sh
