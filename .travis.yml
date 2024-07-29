@@ -13,10 +13,10 @@ script:
   # - sudo apt update
   - whoami
   - sudo ls -al /etc/apt/trusted.gpg.d
-  - sudo apt remove -y rabbitmq-server
+  #- sudo apt remove -y rabbitmq-server
   # - sudo apt install -y erlang --fix-broken
   # - sudo apt install -y erlang-nox
-  - sudo apt install -y rabbitmq-server
+  #- sudo apt install -y rabbitmq-server
   - sudo systemctl unmask rabbitmq-server.service
   - sudo service rabbitmq-server start
   - sudo systemctl status rabbitmq-server.service
