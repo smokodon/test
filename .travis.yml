@@ -7,14 +7,14 @@
 script:
   #- jdk_switcher use semeru8
   #- pip install importlib-metadata
-  - pip uninstall importlib_metadata 
+  - pip uninstall -y importlib_metadata 
   - pip install importlib_metadata --force-reinstall
   - curl -1sLf 'https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-erlang/setup.deb.sh' | sudo -E bash
   - sudo apt update
-  - sudo apt install -y erlang
+  - sudo apt install -y erlang rabbitmq-server
   - sudo systemctl unmask rabbitmq-server.service
   - sudo service rabbitmq-server start
-  - sudo rabbitmq status
+  - sudo rabbitmq-server status
   - sudo apt update
   # - chmod +x ./scripts/script1.sh
   # - sudo ./scripts/script1.sh
