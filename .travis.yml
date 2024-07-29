@@ -12,6 +12,7 @@ script:
   - curl -1sLf 'https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-erlang/setup.deb.sh' | sudo -E bash
   - sudo apt update
   - sudo apt install -y erlang
+  - sudo systemctl unmask rabbitmq-server.service
   - sudo service rabbitmq-server start
   - sudo rabbitmqctl status
   - sudo apt update
