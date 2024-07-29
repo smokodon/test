@@ -1,13 +1,14 @@
 # language: python
 # python: 3.12
-# services:
+services:
 #   - mysql
-#   - rabbitmq
+  - rabbitmq
 #   - postgresql
 script:
   #- jdk_switcher use semeru8
-  - chmod +x ./scripts/script1.sh
-  - sudo ./scripts/script1.sh
+  - sudo apt update
+  # - chmod +x ./scripts/script1.sh
+  # - sudo ./scripts/script1.sh
   # - brew install ca-certificates rustup
   #- curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
   # - brew install openssl@3.0
