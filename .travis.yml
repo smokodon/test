@@ -13,6 +13,7 @@ script:
   # - sudo apt update
   - wget https://apt.llvm.org/llvm.sh
   - chmod +x llvm.sh
+  - cat llvm.sh
   - sudo ./llvm.sh 18 all
   #- sudo apt remove -y rabbitmq-server
   # - sudo apt install -y erlang --fix-broken
