@@ -11,7 +11,7 @@ script:
   # - pip install importlib_metadata --force-reinstall
   # - curl -1sLf 'https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-erlang/setup.deb.sh' | sudo -E bash
   # - sudo apt update
-  - apt update && apt install -y --no-install-recommends postgresql-client git make gcc g++ libcurl4 libpq-dev &&    rm -rf /var/lib/apt/lists/*
+  - apt update && sudo apt install -y --no-install-recommends postgresql-client git make gcc g++ libcurl4 libpq-dev &&    rm -rf /var/lib/apt/lists/*
   - whoami
   - sudo ls -al /etc/apt/trusted.gpg.d
   - lsattr /etc/apt/trusted.gpg.d
@@ -108,7 +108,7 @@ jobs:
   #   group: stable
   # - dist: focal
   #   group: dev
-  - dist: bionic
+  - dist: focal
     group: dev
   # - dist: jammy
   #   group: stable
