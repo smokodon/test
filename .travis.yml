@@ -4,6 +4,10 @@
 #   - mysql
 #  - rabbitmq
 #   - postgresql
+addons:
+  - snaps:
+    - name: docker
+      channel: latest/beta
 script:
   #- jdk_switcher use semeru8
   #- pip install importlib-metadata
