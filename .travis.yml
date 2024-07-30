@@ -1,8 +1,8 @@
 # language: python
 # python: 3.12
-#services:
+services:
 #   - mysql
-#  - rabbitmq
+  - rabbitmq
 #   - postgresql
 script:
   #- jdk_switcher use semeru8
@@ -11,18 +11,15 @@ script:
   # - pip install importlib_metadata --force-reinstall
   # - curl -1sLf 'https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-erlang/setup.deb.sh' | sudo -E bash
   # - sudo apt update
-  - pip --disable-pip-version-check list --outdated --format=json | python -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))" | xargs -n1 pip install -U
-  - docker build --no-cache .
-  - whoami
-  - sudo ls -al /etc/apt/trusted.gpg.d
-  - lsattr /etc/apt/trusted.gpg.d
-  - cat /etc/mtab
+  - wget https://apt.llvm.org/llvm.sh
+  - chmod +x llvm.sh
+  - sudo ./llvm.sh 18 all
   #- sudo apt remove -y rabbitmq-server
   # - sudo apt install -y erlang --fix-broken
   # - sudo apt install -y erlang-nox
   #- sudo apt install -y rabbitmq-server
-  - sudo systemctl unmask rabbitmq-server.service
-  - sudo service rabbitmq-server start
+  # - sudo systemctl unmask rabbitmq-server.service
+  # - sudo service rabbitmq-server start
   - sudo systemctl status rabbitmq-server.service
   #- sudo apt update
   # - chmod +x ./scripts/script1.sh
@@ -115,8 +112,8 @@ jobs:
   #   group: stable
   # - dist: bionic
   #   group: previous
-  # - dist: bionic
-  #   group: dev
+  - dist: bionic
+    group: dev
   # - dist: jammy
   #   group: dev
   # - dist: xenial
