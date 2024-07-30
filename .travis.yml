@@ -12,7 +12,10 @@ script:
   # - curl -1sLf 'https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-erlang/setup.deb.sh' | sudo -E bash
   # - sudo apt update
   - sudo apt list | grep libsystemd
+  - sudo apt purge -y libsystemd-dev
+  - sudo apt list | grep libsystemd
   - sudo apt install libsystemd-dev
+  - sudo apt list | grep libsystemd
   # - wget https://apt.llvm.org/llvm.sh
   # - chmod +x llvm.sh
   # - wget -qO- https://apt.llvm.org/llvm-snapshot.gpg.key | sudo tee /etc/apt/trusted.gpg.d/apt.llvm.org.asc
