@@ -4,15 +4,15 @@
 #   - mysql
 #  - rabbitmq
 #   - postgresql
-      addons:
-        postgresql: "11"
-        apt:
-          sources:
-            - sourceline: 'deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main'
-              key_url: 'https://www.postgresql.org/media/keys/ACCC4CF8.asc'
-          packages:
-            - postgresql-11
-            - postgresql-client-11
+addons:
+  postgresql: "11"
+  apt:
+    sources:
+      - sourceline: 'deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main'
+        key_url: 'https://www.postgresql.org/media/keys/ACCC4CF8.asc'
+    packages:
+      - postgresql-11
+      - postgresql-client-11
 script:
   #- jdk_switcher use semeru8
   #- pip install importlib-metadata
