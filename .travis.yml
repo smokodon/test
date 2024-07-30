@@ -12,7 +12,8 @@ script:
   # - curl -1sLf 'https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-erlang/setup.deb.sh' | sudo -E bash
   # - sudo apt update
   - sudo apt list | grep libsystemd
-  - sudo apt purge -y libsystemd-dev
+  #- sudo apt purge -y libsystemd-dev
+  - sudo apt install -f
   - sudo apt list | grep libsystemd
   - sudo apt install libsystemd-dev
   - sudo apt list | grep libsystemd
