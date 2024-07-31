@@ -120,8 +120,8 @@ jobs:
   #   group: previous
   # - dist: bionic
   #   group: dev
-  # - dist: jammy
-  #   group: dev
+  - dist: jammy
+    group: dev
   # - dist: xenial
   #   group: dev
   # - dist: jammy
