@@ -1,8 +1,8 @@
-# language: python
-# python: 3.12
-services:
+language: python
+python: 3.12
+# services:
 #   - mysql
-  - rabbitmq
+#  - rabbitmq
 #   - postgresql
 script:
   #- jdk_switcher use semeru8
@@ -15,7 +15,7 @@ script:
   #- sudo apt purge -y libsystemd-dev
   - sudo apt install -f
   - sudo apt list | grep libsystemd
-  - sudo apt install libsystemd-dev
+  - sudo apt install libsystemd-dev --reinstall 
   - sudo apt list | grep libsystemd
   # - wget https://apt.llvm.org/llvm.sh
   # - chmod +x llvm.sh
