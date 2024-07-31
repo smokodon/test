@@ -11,10 +11,7 @@ script:
   # - pip install importlib_metadata --force-reinstall
   # - curl -1sLf 'https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-erlang/setup.deb.sh' | sudo -E bash
   # - sudo apt update
-  - wget https://apt.llvm.org/llvm.sh
-  - chmod +x llvm.sh
    #wget -qO- https://apt.llvm.org/llvm-snapshot.gpg.key | sudo tee /etc/apt/trusted.gpg.d/apt.llvm.org.asc
-  - sudo ./llvm.sh 18
   - clang -v
   # - wget https://apt.llvm.org/llvm.sh
   # - chmod +x llvm.sh
@@ -118,8 +115,8 @@ jobs:
   #   group: stable
   # - dist: bionic
   #   group: previous
-  # - dist: bionic
-  #   group: dev
+  - dist: bionic
+    group: dev
   - dist: jammy
     group: dev
   # - dist: xenial
