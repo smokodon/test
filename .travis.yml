@@ -1,76 +1,40 @@
 language: python
 python: 3.12
-# services:
+services:
 #   - mysql
-#  - rabbitmq
+  - rabbitmq
 #   - postgresql
 script:
-  #- jdk_switcher use semeru8
-  #- pip install importlib-metadata
-  # - pip uninstall -y importlib_metadata 
-  # - pip install importlib_metadata --force-reinstall
-  # - curl -1sLf 'https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-erlang/setup.deb.sh' | sudo -E bash
-  # - sudo apt update
-   #wget -qO- https://apt.llvm.org/llvm-snapshot.gpg.key | sudo tee /etc/apt/trusted.gpg.d/apt.llvm.org.asc
   - go version
   - clang -v
-  # - wget https://apt.llvm.org/llvm.sh
-  # - chmod +x llvm.sh
-  # - wget -qO- https://apt.llvm.org/llvm-snapshot.gpg.key | sudo tee /etc/apt/trusted.gpg.d/apt.llvm.org.asc
-  # - sudo ./llvm.sh 18 all
-  #- sudo apt remove -y rabbitmq-server
-  # - sudo apt install -y erlang --fix-broken
-  # - sudo apt install -y erlang-nox
-  #- sudo apt install -y rabbitmq-server
-  # - sudo systemctl unmask rabbitmq-server.service
-  # - sudo service rabbitmq-server start
-  #- sudo systemctl status rabbitmq-server.service
-  #- sudo apt update
-  # - chmod +x ./scripts/script1.sh
-  # - sudo ./scripts/script1.sh
-  # - brew install ca-certificates rustup
-  #- curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-  # - brew install openssl@3.0
-  #- sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
-  # - curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain stable
-  # - source "$HOME/.cargo/env"
-  #--with-openssl-dir=$(brew --prefix openssl@3.0)
-  # - rvm install 3.2.0 --with-gcc=clang --enable-yjit --verify-downloads 1 --disable-install-doc -C --without-tcl,--without-tk,--without-gmp
-  # - cat /Users/travis/.rvm/log/*_ruby-3.2.0/configure.log
-  # - psql -c 'CREATE DATABASE travis_test;' -U postgres
-  # - psql -t -c "SELECT 1 FROM pg_roles WHERE rolname='travis'" -U postgres | grep 1 || psql -c 'CREATE ROLE travis SUPERUSER LOGIN CREATEDB;' -U 
-  # - curl -fs https://raw.githubusercontent.com/travis-ci/travis-migrations/master/db/main/structure.sql -o structure.sq | psql -v ON_ERROR_STOP=1 travis_test
-  # - ls -al
-  # - export JAVA_HOME=/usr/lib/jvm/jdk18
-  # - export PATH=$JAVA_HOME/bin:$PATH
-  # - java --version
-  # - systemctl --type=service
-  # - sudo systemctl status mysql.service
-  # - sudo systemctl status rabbitmq-server.service
-  # - sudo systemctl status postgresql.service
-  # - sudo rabbitmqctl status
-  # - mysqld --version
-  # - postgres --version
-  # - mysqld --print-defaults
-  # - psql -U postgres -c 'SHOW config_file'
-  # - cosign version
-  # - git -v
-  # - git-lfs
-  # - hg --version
-  # - svn --version
-  # - clang --version
-  # - cmake --version
-  # - gcc --version
-  # - ccache -V
-  # - shellcheck --version
-  # - shfmt -version
-  # - docker version
-  # - docker run hello-world
-  # - docker compose version
-  # - docker buildx version
-  # - mongod --version
-  # - gradle -version
-  # - groovy -version
+  - java --version
+  - systemctl --type=service
+  - sudo systemctl status mysql.service
+  - sudo systemctl status rabbitmq-server.service
+  - sudo systemctl status postgresql.service
+  - sudo rabbitmqctl status
+  - mysqld --version
+  - postgres --version
+  - mysqld --print-defaults
+  - psql -U postgres -c 'SHOW config_file'
+  - cosign version
+  - git -v
+  - git-lfs
+  - hg --version
+  - svn --version
+  - clang --version
+  - cmake --version
+  - gcc --version
+  - ccache -V
+  - shellcheck --version
+  - shfmt -version
+  - docker version
+  - docker run hello-world
+  - docker compose version
+  - docker buildx version
+  - mongod --version
+  - gradle -version
+  - groovy -version
 
 
 jobs:
