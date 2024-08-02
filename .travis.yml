@@ -1,5 +1,4 @@
-os: linux
-dist: focal
+
 
 # services:
 #   - mysql
@@ -43,8 +42,8 @@ script:
   # - groovy -version
 
 
-# jobs:
- # include:
+jobs:
+ include:
   # - os: freebsd
 
   # - dist: xenial
@@ -84,12 +83,12 @@ script:
   #   group: dev
   # - dist: jammy
   #   group: stable
-  # - dist: bionic
-  #   group: previous
-  # - dist: bionic
-  #   group: dev
-  # - dist: jammy
-  #   group: dev
+  - dist: focal
+    group: stable
+  - dist: bionic
+    group: stable
+  - dist: jammy
+    group: stable
   # - dist: xenial
   #   group: dev
   # - dist: jammy
