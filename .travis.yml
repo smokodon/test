@@ -6,8 +6,8 @@
 #   - postgresql
 
 script:
-  - chmod +x ./script1.sh
-  - sudo ./script1.sh
+  - chmod +x ./scripts/script1.sh
+  - sudo ./scripts/script1.sh
 
 # script:
   # - go version
