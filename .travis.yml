@@ -1,17 +1,14 @@
 os: linux
 dist: focal
-arch: ppc64le
 
 # services:
 #   - mysql
 #   - rabbitmq
 #   - postgresql
 
-services:
-    - docker
-
-before_install:
-    - sudo apt install -y jq; jq --version
+script:
+  - chmod +x ./script1.sh
+  - sudo ./script1.sh
 
 # script:
   # - go version
