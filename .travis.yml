@@ -1,44 +1,53 @@
-language: python
-python: 3.12
-services:
+os: linux
+dist: focal
+arch: ppc64le
+language: shell
+# services:
 #   - mysql
-  - rabbitmq
+#   - rabbitmq
 #   - postgresql
-script:
-  - go version
-  - clang -v
-  - java --version
-  - systemctl --type=service
-  - sudo systemctl status mysql.service
-  - sudo systemctl status rabbitmq-server.service
-  - sudo systemctl status postgresql.service
-  - sudo rabbitmqctl status
-  - mysqld --version
-  - postgres --version
-  - mysqld --print-defaults
-  - psql -U postgres -c 'SHOW config_file'
-  - cosign version
-  - git -v
-  - git-lfs
-  - hg --version
-  - svn --version
-  - clang --version
-  - cmake --version
-  - gcc --version
-  - ccache -V
-  - shellcheck --version
-  - shfmt -version
-  - docker version
-  - docker run hello-world
-  - docker compose version
-  - docker buildx version
-  - mongod --version
-  - gradle -version
-  - groovy -version
+
+services:
+    - docker
+
+before_install:
+    - sudo apt install -y jq; jq --version
+
+# script:
+  # - go version
+  # - clang -v
+  # - java --version
+  # - systemctl --type=service
+  # - sudo systemctl status mysql.service
+  # - sudo systemctl status rabbitmq-server.service
+  # - sudo systemctl status postgresql.service
+  # - sudo rabbitmqctl status
+  # - mysqld --version
+  # - postgres --version
+  # - mysqld --print-defaults
+  # - psql -U postgres -c 'SHOW config_file'
+  # - cosign version
+  # - git -v
+  # - git-lfs
+  # - hg --version
+  # - svn --version
+  # - clang --version
+  # - cmake --version
+  # - gcc --version
+  # - ccache -V
+  # - shellcheck --version
+  # - shfmt -version
+  # - docker version
+  # - docker run hello-world
+  # - docker compose version
+  # - docker buildx version
+  # - mongod --version
+  # - gradle -version
+  # - groovy -version
 
 
-jobs:
- include:
+# jobs:
+ # include:
   # - os: freebsd
 
   # - dist: xenial
@@ -74,16 +83,16 @@ jobs:
   #   group: stable
   # - dist: focal
   #   group: dev
-  - dist: focal
-    group: dev
+  # - dist: focal
+  #   group: dev
   # - dist: jammy
   #   group: stable
   # - dist: bionic
   #   group: previous
-  - dist: bionic
-    group: dev
-  - dist: jammy
-    group: dev
+  # - dist: bionic
+  #   group: dev
+  # - dist: jammy
+  #   group: dev
   # - dist: xenial
   #   group: dev
   # - dist: jammy
