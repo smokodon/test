@@ -66,8 +66,8 @@ jobs:
 
   # - dist: xenial
   #   arch: s390x
-  # - dist: bionic
-  #   arch: s390x
+  - dist: bionic
+    arch: s390x
   # - dist: focal
   #   arch: s390x
   # - dist: jammy
@@ -83,12 +83,12 @@ jobs:
   #   group: dev
   # - dist: jammy
   #   group: stable
-  - dist: focal
-    group: stable
-  - dist: bionic
-    group: stable
-  - dist: jammy
-    group: stable
+  # - dist: focal
+  #   group: stable
+  # - dist: bionic
+  #   group: stable
+  # - dist: jammy
+  #   group: stable
   # - dist: xenial
   #   group: dev
   # - dist: jammy
