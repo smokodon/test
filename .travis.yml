@@ -6,8 +6,8 @@
 #   - postgresql
 
 script:
-  - chmod +x ./scripts/script1.sh
-  - sudo ./scripts/script1.sh
+  - sleep 5000
+
 
 # script:
   # - go version
@@ -48,8 +48,8 @@ jobs:
 
   # - dist: xenial
   #   arch: arm64
-  - dist: bionic
-    arch: arm64
+  # - dist: bionic
+  #   arch: arm64
   # - dist: focal
   #   arch: arm64
   # - dist: jammy
@@ -57,8 +57,8 @@ jobs:
 
   # - dist: xenial
   #   arch: ppc64le
-  - dist: bionic
-    arch: ppc64le
+  # - dist: bionic
+  #   arch: ppc64le
   # - dist: focal
   #   arch: ppc64le
   # - dist: jammy
@@ -66,8 +66,8 @@ jobs:
 
   # - dist: xenial
   #   arch: s390x
-  - dist: bionic
-    arch: s390x
+  # - dist: bionic
+  #   arch: s390x
   # - dist: focal
   #   arch: s390x
   # - dist: jammy
@@ -93,8 +93,8 @@ jobs:
   #   group: dev
   # - dist: jammy
   #   group: dev
-  # - dist: jammy
-  #   group: stable
+  - dist: jammy
+    group: stable
   # - dist: xenial
   #   group: stable
   # - dist: jammy
