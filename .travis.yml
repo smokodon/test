@@ -6,7 +6,7 @@
 #   - postgresql
 
 script:
-  - ls -l /etc/sources.list.d
+  - cat /etc/apt/sources.list
   - curl -is http://ppa.launchpad.net/couchdb/stable/ubuntu/dists/trusty/main/binary-amd64/Packages?source=travis-ci/travis-build
 
 
