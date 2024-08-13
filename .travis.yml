@@ -8,13 +8,13 @@
 
 script:
   - cat /etc/apt/sources.list
-  - curl -is http://ppa.launchpad.net/couchdb/stable/ubuntu/dists/trusty/main/binary-amd64/Packages?source=travis-ci/travis-build
+  #- curl -is http://ppa.launchpad.net/couchdb/stable/ubuntu/dists/trusty/main/binary-amd64
 
 
 
-# script:
+script:
   # - go version
-  # - clang -v
+  - clang -v
   # - java --version
   # - systemctl --type=service
   # - sudo systemctl status mysql.service
@@ -53,8 +53,8 @@ jobs:
   #   arch: arm64
   # - dist: bionic
   #   arch: arm64
-  # - dist: focal
-  #   arch: arm64
+  - dist: focal
+    arch: arm64
   # - dist: jammy
   #   arch: arm64
 
@@ -62,8 +62,8 @@ jobs:
   #   arch: ppc64le
   # - dist: bionic
   #   arch: ppc64le
-  # - dist: focal
-  #   arch: ppc64le
+  - dist: focal
+    arch: ppc64le
   # - dist: jammy
   #   arch: ppc64le
 
@@ -71,8 +71,8 @@ jobs:
   #   arch: s390x
   # - dist: bionic
   #   arch: s390x
-  # - dist: focal
-  #   arch: s390x
+  - dist: focal
+    arch: s390x
   # - dist: jammy
   #   arch: s390x
 
