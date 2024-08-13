@@ -1,5 +1,5 @@
-language: java
-jdk: semeru11
+# language: java
+# jdk: semeru11
 
 # services:
 #   - mysql
@@ -96,7 +96,7 @@ jobs:
   #   group: dev
   # - dist: jammy
   #   group: dev
-  - dist: jammy
+  - dist: focal
     group: stable
   # - dist: xenial
   #   group: stable
