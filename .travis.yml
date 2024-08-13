@@ -1,4 +1,5 @@
-
+language: java
+jdk: semeru11
 
 # services:
 #   - mysql
