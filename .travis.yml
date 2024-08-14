@@ -7,14 +7,8 @@
 #   - postgresql
 
 script:
-  - cat /etc/apt/sources.list
-  #- curl -is http://ppa.launchpad.net/couchdb/stable/ubuntu/dists/trusty/main/binary-amd64
-
-
-
-script:
   # - go version
-  - clang -v
+  - uname -a
   # - java --version
   # - systemctl --type=service
   # - sudo systemctl status mysql.service
@@ -60,12 +54,12 @@ jobs:
 
   - dist: xenial
     arch: ppc64le
-  # - dist: bionic
-  #   arch: ppc64le
+  - dist: bionic
+    arch: ppc64le
   - dist: focal
     arch: ppc64le
-  # - dist: jammy
-  #   arch: ppc64le
+  - dist: jammy
+    arch: ppc64le
 
   # - dist: xenial
   #   arch: s390x
