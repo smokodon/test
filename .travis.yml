@@ -9,6 +9,7 @@
 script:
   # - go version
   - uname -a
+  - sleep 5000
   # - java --version
   # - systemctl --type=service
   # - sudo systemctl status mysql.service
@@ -49,17 +50,17 @@ jobs:
   #   arch: arm64
   # - dist: focal
   #   arch: arm64
-  # - dist: jammy
-  #   arch: arm64
+  - dist: jammy
+    arch: arm64
 
   - dist: xenial
     arch: ppc64le
-  - dist: bionic
-    arch: ppc64le
-  - dist: focal
-    arch: ppc64le
-  - dist: jammy
-    arch: ppc64le
+  # - dist: bionic
+  #   arch: ppc64le
+  # - dist: focal
+  #   arch: ppc64le
+  # - dist: jammy
+  #   arch: ppc64le
 
   # - dist: xenial
   #   arch: s390x
