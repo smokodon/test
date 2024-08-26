@@ -1,104 +1,111 @@
-# language: java
-# jdk: semeru11
+dist: focal
+os: linux
+arch: amd64
+virt: lxd
+language: ruby
 
-# services:
-#   - mysql
-#   - rabbitmq
-#   - postgresql
+script: true
+# # language: java
+# # jdk: semeru11
 
-script:
-  # - go version
-  - uname -a
-  - sleep 5000
-  # - java --version
-  # - systemctl --type=service
-  # - sudo systemctl status mysql.service
-  # - sudo systemctl status rabbitmq-server.service
-  # - sudo systemctl status postgresql.service
-  # - sudo rabbitmqctl status
-  # - mysqld --version
-  # - postgres --version
-  # - mysqld --print-defaults
-  # - psql -U postgres -c 'SHOW config_file'
-  # - cosign version
-  # - git -v
-  # - git-lfs
-  # - hg --version
-  # - svn --version
-  # - clang --version
-  # - cmake --version
-  # - gcc --version
-  # - ccache -V
-  # - shellcheck --version
-  # - shfmt -version
-  # - docker version
-  # - docker run hello-world
-  # - docker compose version
-  # - docker buildx version
-  # - mongod --version
-  # - gradle -version
-  # - groovy -version
+# # services:
+# #   - mysql
+# #   - rabbitmq
+# #   - postgresql
+
+# script:
+#   # - go version
+#   - uname -a
+#   - sleep 5000
+#   # - java --version
+#   # - systemctl --type=service
+#   # - sudo systemctl status mysql.service
+#   # - sudo systemctl status rabbitmq-server.service
+#   # - sudo systemctl status postgresql.service
+#   # - sudo rabbitmqctl status
+#   # - mysqld --version
+#   # - postgres --version
+#   # - mysqld --print-defaults
+#   # - psql -U postgres -c 'SHOW config_file'
+#   # - cosign version
+#   # - git -v
+#   # - git-lfs
+#   # - hg --version
+#   # - svn --version
+#   # - clang --version
+#   # - cmake --version
+#   # - gcc --version
+#   # - ccache -V
+#   # - shellcheck --version
+#   # - shfmt -version
+#   # - docker version
+#   # - docker run hello-world
+#   # - docker compose version
+#   # - docker buildx version
+#   # - mongod --version
+#   # - gradle -version
+#   # - groovy -version
 
 
-jobs:
- include:
-  # - os: freebsd
+# jobs:
+#  include:
+#   # - os: freebsd
 
-  # - dist: xenial
-  #   arch: arm64
-  # - dist: bionic
-  #   arch: arm64
-  # - dist: focal
-  #   arch: arm64
-  - dist: jammy
-    arch: arm64
+#   # - dist: xenial
+#   #   arch: arm64
+#   # - dist: bionic
+#   #   arch: arm64
+#   # - dist: focal
+#   #   arch: arm64
+#   - dist: jammy
+#     arch: arm64
 
-  # - dist: xenial
-  #   arch: ppc64le
-  - dist: bionic
-    arch: ppc64le
-    group: edge
-  # - dist: focal
-  #   arch: ppc64le
-  # - dist: jammy
-  #   arch: ppc64le
+#   # - dist: xenial
+#   #   arch: ppc64le
+#   - dist: bionic
+#     arch: ppc64le
+#     group: edge
+#   # - dist: focal
+#   #   arch: ppc64le
+#   # - dist: jammy
+#   #   arch: ppc64le
 
-  # - dist: xenial
-  #   arch: s390x
-  # - dist: bionic
-  #   arch: s390x
-  - dist: focal
-    arch: s390x
-  # - dist: jammy
-  #   arch: s390x
+#   # - dist: xenial
+#   #   arch: s390x
+#   # - dist: bionic
+#   #   arch: s390x
+#   - dist: focal
+#     arch: s390x
+#   # - dist: jammy
+#   #   arch: s390x
 
-  # - dist: trusty
-  #   arch: amd64
-  # - dist: xenial
-  #   group: stable
-  # - dist: focal
-  #   group: dev
-  # - dist: focal
-  #   group: dev
-  # - dist: jammy
-  #   group: stable
-  # - dist: focal
-  #   group: stable
-  # - dist: bionic
-  #   group: stable
-  # - dist: jammy
-  #   group: stable
-  # - dist: xenial
-  #   group: dev
-  # - dist: jammy
-  #   group: dev
-  - dist: focal
-    group: stable
-  # - dist: xenial
-  #   group: stable
-  # - dist: jammy
-  #   group: previous
-  # - dist: jammy
-  #   group: dev
-  # - os: osx
-  #   osx_image: xcode10.13
+#   # - dist: trusty
+#   #   arch: amd64
+#   # - dist: xenial
+#   #   group: stable
+#   # - dist: focal
+#   #   group: dev
+#   # - dist: focal
+#   #   group: dev
+#   # - dist: jammy
+#   #   group: stable
+#   # - dist: focal
+#   #   group: stable
+#   # - dist: bionic
+#   #   group: stable
+#   # - dist: jammy
+#   #   group: stable
+#   # - dist: xenial
+#   #   group: dev
+#   # - dist: jammy
+#   #   group: dev
+#   - dist: focal
+#     group: stable
+#   # - dist: xenial
+#   #   group: stable
+#   # - dist: jammy
+#   #   group: previous
+#   # - dist: jammy
+#   #   group: dev
+#   # - os: osx
+#   #   osx_image: xcode10.13
