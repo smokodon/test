@@ -8,9 +8,7 @@ language: ruby
 ruby: 3.0.7
 
 before_install:
-  - gem install bundler
-  - gem install –build-native
-  - sudo apt install clang gcc-11 -y
+  - gem install -compiler clang bundler
 script:
   # - go version
   - uname -a
