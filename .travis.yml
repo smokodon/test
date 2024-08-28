@@ -9,7 +9,7 @@ ruby: 3.0.7
 
 before_install:
   - gem install bundler
-  - sudo apt purge -y gcc-*
+  - sudo apt uninstall -y gcc-*
   - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
   - sudo apt update
   - sudo apt install clang gcc-11 -y
