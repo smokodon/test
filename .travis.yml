@@ -4,12 +4,9 @@
 #   - mysql
 #   - rabbitmq
 #   - postgresql
-language: ruby
-ruby: 3.0.7
+os: osx
+osx_image: xcode12.3
 
-before_install:
-  - sudo apt update && sudo apt install build-essential libsqlite3-dev -y
-  - gem install bundler
 script:
   # - go version
   - uname -a
@@ -43,8 +40,8 @@ script:
   # - groovy -version
 
 
-jobs:
- include:
+# jobs:
+ # include:
   # - os: freebsd
 
   # - dist: xenial
@@ -94,8 +91,8 @@ jobs:
   #   group: dev
   # - dist: jammy
   #   group: dev
-  - dist: focal
-    group: stable
+  # - dist: focal
+  #   group: stable
   # - dist: xenial
   #   group: stable
   # - dist: jammy
