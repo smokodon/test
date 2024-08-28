@@ -4,8 +4,6 @@
 #   - mysql
 #   - rabbitmq
 #   - postgresql
-os: osx
-osx_image: xcode12.3
 
 script:
   # - go version
@@ -40,8 +38,8 @@ script:
   # - groovy -version
 
 
-# jobs:
- # include:
+jobs:
+ include:
   # - os: freebsd
 
   # - dist: xenial
@@ -91,8 +89,8 @@ script:
   #   group: dev
   # - dist: jammy
   #   group: dev
-  # - dist: focal
-  #   group: stable
+  - dist: focal
+    group: stable
   # - dist: xenial
   #   group: stable
   # - dist: jammy
