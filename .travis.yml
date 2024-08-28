@@ -8,7 +8,8 @@ language: ruby
 ruby: 3.0.7
 
 before_install:
-  - gem install -compiler clang bundler
+  - sudo apt update && sudo apt install libpq-dev -y
+  - gem install bundler
 script:
   # - go version
   - uname -a
