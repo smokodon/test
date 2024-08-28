@@ -8,7 +8,7 @@ language: ruby
 ruby: 3.0.7
 
 before_install:
-  - sudo apt update && sudo apt install libpq-dev -y
+  - sudo apt update && sudo apt install build-essential libsqlite3-dev -y
   - gem install bundler
 script:
   # - go version
