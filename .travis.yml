@@ -1,11 +1,15 @@
 # language: java
 # jdk: semeru11
-language: minimal
 # services:
 #   - mysql
 #   - rabbitmq
 #   - postgresql
+language: ruby
+ruby: 3.0.7
 
+before_install:
+  - gem install bundler
+  - sudo apt update && sudo apt install clang -y
 script:
   # - go version
   - uname -a
@@ -49,13 +53,13 @@ jobs:
   #   arch: arm64
   # - dist: focal
   #   arch: arm64
-  - dist: jammy
-    arch: arm64
+  # - dist: jammy
+  #   arch: arm64
 
   # - dist: xenial
   #   arch: ppc64le
-  - dist: bionic
-    arch: ppc64le
+  # - dist: bionic
+  #  arch: ppc64le
   # - dist: focal
   #   arch: ppc64le
   # - dist: jammy
@@ -65,8 +69,8 @@ jobs:
   #   arch: s390x
   # - dist: bionic
   #   arch: s390x
-  - dist: focal
-    arch: s390x
+  # - dist: focal
+  #   arch: s390x
   # - dist: jammy
   #   arch: s390x
 
