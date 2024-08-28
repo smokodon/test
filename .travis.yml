@@ -9,7 +9,7 @@ ruby: 3.0.7
 
 before_install:
   - gem install bundler
-  - sudo apt update && sudo apt install clang -y
+  - sudo apt update && sudo apt install ruby-dev -y
 script:
   # - go version
   - uname -a
