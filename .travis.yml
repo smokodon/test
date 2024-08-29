@@ -59,6 +59,7 @@ jobs:
   #   arch: ppc64le
   - dist: jammy
     arch: ppc64le
+    group: edge
     language: minimal
 
   # - dist: xenial
