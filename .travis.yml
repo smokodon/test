@@ -8,7 +8,7 @@
 script:
   # - go version
   - uname -a
-  - ps -e
+  - systemctl
   # - java --version
   # - systemctl --type=service
   # - sudo systemctl status mysql.service
