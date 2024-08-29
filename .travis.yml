@@ -55,8 +55,8 @@ jobs:
   #   arch: ppc64le
   # - dist: bionic
   #  arch: ppc64le
-  # - dist: focal
-  #   arch: ppc64le
+  - dist: focal
+    arch: ppc64le
   # - dist: jammy
   #   arch: ppc64le
 
@@ -89,8 +89,8 @@ jobs:
   #   group: dev
   # - dist: jammy
   #   group: dev
-  - dist: focal
-    group: stable
+  # - dist: focal
+  #   group: stable
   # - dist: xenial
   #   group: stable
   # - dist: jammy
