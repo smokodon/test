@@ -9,6 +9,9 @@ script:
   # - go version
   - uname -a
   - systemctl
+  - sudo add-apt-repository ppa:cloud-init-dev/daily
+  - sudo apt update && sudo apt upgrade -y
+  - systemctl
   # - java --version
   # - systemctl --type=service
   # - sudo systemctl status mysql.service
