@@ -31,6 +31,7 @@ script:
   # - gem update --default
   # - gem update
   # - sudo gem update
+  - gem list json
   - systemctl status systemd-resolved
   - ls -l /etc/systemd/system/systemd-resolved.service
   - sudo systemctl unmask systemd-resolved
