@@ -138,6 +138,8 @@ jobs:
   #   group: dev
   # - dist: jammy
   #   group: dev
+  - dist: bionic
+    group: dev
   - dist: focal
     group: dev
   # - dist: xenial
