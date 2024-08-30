@@ -27,6 +27,8 @@ language: ruby
 script:
   # - gem update
   #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
+  - gem update
+  - sudo gem update
   - echo "debugging"
   - sudo dmesg -T | grep -i -e warning -e error -e fatal -e exception
   - systemctl --failed
