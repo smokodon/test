@@ -32,6 +32,10 @@ script:
   # - gem update
   # - sudo gem update
   - systemctl status systemd-resolved
+  - ls -l /etc/systemd/system/systemd-resolved.service
+  - sudo systemctl unmask systemd-resolved
+  - sudo systemctl start systemd-resolved
+  - sudo systemctl enable systemd-resolved
   - sudo DI_LOG=stderr /usr/lib/cloud-init/ds-identify --force
   - sudo cloud-init clean --logs
   - sudo cloud-init init --local
