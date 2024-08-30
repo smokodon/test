@@ -1,6 +1,6 @@
 # dist: focal
 # group: dev
-language: ruby
+#language: ruby
 # script:
 # - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
 # before_deploy:
@@ -27,10 +27,10 @@ language: ruby
 script:
   # - gem update
   #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
-  - gem list
-  - gem update --default
-  - gem update
-  - sudo gem update
+  # - gem list
+  # - gem update --default
+  # - gem update
+  # - sudo gem update
   - echo "debugging"
   - sudo dmesg -T | grep -i -e warning -e error -e fatal -e exception
   - systemctl --failed
@@ -131,7 +131,9 @@ jobs:
   # - dist: xenial
   #   group: stable
   - dist: jammy
-    group: stable
+    language: minimal
+    group: edge
+    arch: ppc64le
   # - dist: jammy
   #   group: stable
   # - os: osx
