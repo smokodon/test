@@ -31,6 +31,7 @@ script:
   # - gem update --default
   # - gem update
   # - sudo gem update
+  - systemctl status systemd-resolved
   - sudo DI_LOG=stderr /usr/lib/cloud-init/ds-identify --force
   - sudo cloud-init clean --logs
   - sudo cloud-init init --local
