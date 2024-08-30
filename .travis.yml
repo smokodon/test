@@ -28,7 +28,7 @@ script:
   # - gem update
   #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
   - echo "debugging"
-  - dmesg -T | grep -i -e warning -e error -e fatal -e exception
+  - sudo dmesg -T | grep -i -e warning -e error -e fatal -e exception
   - systemctl --failed
   - systemctl status cloud-init-local.service cloud-init-network.service\
     cloud-config.service cloud-final.service
