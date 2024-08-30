@@ -31,6 +31,8 @@ script:
   # - gem update --default
   # - gem update
   # - sudo gem update
+  - ls -al
+  - cat Gemfile.lock
   - bundle update
   - systemctl status systemd-resolved
   - ls -l /etc/systemd/system/systemd-resolved.service
