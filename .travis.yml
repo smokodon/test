@@ -31,7 +31,10 @@ script:
   # - gem update --default
   # - gem update
   # - sudo gem update
+  - sudo DI_LOG=stderr /usr/lib/cloud-init/ds-identify --force
+  - sudo cloud-init clean --logs
   - sudo cloud-init init --local
+  - sudo cloud-init init
   - echo "debugging"
   - sudo dmesg -T | grep -i -e warning -e error -e fatal -e exception
   - systemctl --failed
