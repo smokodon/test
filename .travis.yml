@@ -1,6 +1,6 @@
 # dist: focal
 # group: dev
-#language: ruby
+language: ruby
 # script:
 # - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
 # before_deploy:
@@ -32,7 +32,7 @@ script:
   # - gem update
   # - sudo gem update
   - ls -al
-  - cat Gemfile.lock
+  - cat Gemfile.lock && cat Gemfile
   - bundle update
   - systemctl status systemd-resolved
   - ls -l /etc/systemd/system/systemd-resolved.service
