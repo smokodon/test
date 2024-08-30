@@ -30,8 +30,7 @@ script:
   - echo "debugging"
   - sudo dmesg -T | grep -i -e warning -e error -e fatal -e exception
   - systemctl --failed
-  - systemctl status cloud-init-local.service cloud-init-network.service\
-    cloud-config.service cloud-final.service
+  - systemctl status cloud-init-local.service cloud-init-network.service cloud-config.service cloud-final.service
   - systemctl list-jobs --after
 
   # - sudo apt-get install openvswitch-switch-dpdk
