@@ -31,6 +31,7 @@ script:
   # - gem update --default
   # - gem update
   # - sudo gem update
+  - sudo cloud-init init --local
   - echo "debugging"
   - sudo dmesg -T | grep -i -e warning -e error -e fatal -e exception
   - systemctl --failed
