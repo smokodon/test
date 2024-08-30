@@ -1,21 +1,22 @@
-dist: focal
-group: dev
-language: ruby
-script:
-- ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
-before_deploy:
-  # check uri gem version
-  - gem list uri
-  # update uri gem
-  #- gem update uri
-deploy:
-  provider: pages:git
-  token: "$GITHUB_TOKEN"
-  dpl_version: 2.0.5.beta.1
-  edge: true
-  on:
-    branch:
-    - master
+# dist: focal
+# group: dev
+# language: ruby
+# script:
+# - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
+# before_deploy:
+#   # check uri gem version
+#   - gem list uri
+#   # update uri gem
+#   #- gem update uri
+# deploy:
+#   provider: pages:git
+#   token: "$GITHUB_TOKEN"
+#   dpl_version: 2.0.5.beta.1
+#   edge: true
+#   on:
+#     branch:
+#     - master
+
 # language: java
 # jdk: semeru11
 # services:
@@ -23,10 +24,10 @@ deploy:
 #   - rabbitmq
 #   - postgresql
 
-# script:
-  # - go version
-  # - uname -a
-  # - systemctl
+script:
+  - gem install rubygems-update
+  - update_rubygems
+  - gem update --system
   #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
   # - sudo apt-get install openvswitch-switch-dpdk
   # - sudo netplan apply
@@ -64,8 +65,8 @@ deploy:
   # - groovy -version
 
 
-# jobs:
- # include:
+jobs:
+  include:
   # - os: freebsd
 
   # - dist: xenial
@@ -117,8 +118,8 @@ deploy:
   #   group: dev
   # - dist: jammy
   #   group: dev
-  # - dist: focal
-  #   group: stable
+  - dist: focal
+    group: stable
   # - dist: xenial
   #   group: stable
   # - dist: jammy
