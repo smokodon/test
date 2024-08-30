@@ -125,7 +125,7 @@ jobs:
   # - dist: jammy
   #   group: dev
   - dist: focal
-    group: stable
+    group: dev
   # - dist: xenial
   #   group: stable
   - dist: jammy
