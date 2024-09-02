@@ -27,6 +27,7 @@ language: ruby
 script:
   # - gem update
   #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
+  - sudo apt install rubygems
   - sudo systemctl
   # - gem update --default
   # - gem update
