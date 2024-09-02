@@ -27,12 +27,12 @@ language: ruby
 script:
   # - gem update
   #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
-  - gem list
+  - sudo systemctl
   # - gem update --default
   # - gem update
   # - sudo gem update
-  - sudo gem update --default
-  - gem list
+  # - sudo gem update --default
+  # - gem list
 
   # - systemctl status systemd-resolved
   # - ls -l /etc/systemd/system/systemd-resolved.service
@@ -144,10 +144,10 @@ jobs:
     group: dev
   # - dist: xenial
   #   group: stable
-  # - dist: jammy
-  #   language: minimal
-  #   group: edge
-  #   arch: ppc64le
+  - dist: jammy
+    language: minimal
+    group: edge
+    arch: ppc64le
   # - dist: jammy
   #   group: stable
   # - os: osx
