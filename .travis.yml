@@ -28,6 +28,7 @@ script:
   # - gem update
   #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
   - gem list
+  - sudo apt install ruby-dev -y
   # - gem update --default
   # - gem update
   # - sudo gem update
