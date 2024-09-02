@@ -27,27 +27,27 @@ language: ruby
 script:
   # - gem update
   #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
-  # - gem list
+  - gem list
   # - gem update --default
   # - gem update
   # - sudo gem update
-  - ls -al
-  - cat Gemfile.lock && gem list
-  - bundle update
-  - systemctl status systemd-resolved
-  - ls -l /etc/systemd/system/systemd-resolved.service
-  - sudo systemctl unmask systemd-resolved
-  - sudo systemctl start systemd-resolved
-  - sudo systemctl enable systemd-resolved
-  - sudo DI_LOG=stderr /usr/lib/cloud-init/ds-identify --force
-  - sudo cloud-init clean --logs
-  - sudo cloud-init init --local
-  - sudo cloud-init init
-  - echo "debugging"
-  - sudo dmesg -T | grep -i -e warning -e error -e fatal -e exception
-  - systemctl --failed
-  - sudo systemctl status -l cloud-init-local.service cloud-init-network.service cloud-config.service cloud-final.service
-  - sudo systemctl list-jobs --after
+  - sudo gem update
+  - gem list
+
+  # - systemctl status systemd-resolved
+  # - ls -l /etc/systemd/system/systemd-resolved.service
+  # - sudo systemctl unmask systemd-resolved
+  # - sudo systemctl start systemd-resolved
+  # - sudo systemctl enable systemd-resolved
+  # - sudo DI_LOG=stderr /usr/lib/cloud-init/ds-identify --force
+  # - sudo cloud-init clean --logs
+  # - sudo cloud-init init --local
+  # - sudo cloud-init init
+  # - echo "debugging"
+  # - sudo dmesg -T | grep -i -e warning -e error -e fatal -e exception
+  # - systemctl --failed
+  # - sudo systemctl status -l cloud-init-local.service cloud-init-network.service cloud-config.service cloud-final.service
+  # - sudo systemctl list-jobs --after
 
   # - sudo apt-get install openvswitch-switch-dpdk
   # - sudo netplan apply
@@ -102,8 +102,8 @@ jobs:
   #   arch: ppc64le
   # - dist: bionic
   #  arch: ppc64le
-  - dist: focal
-    arch: ppc64le
+  # - dist: focal
+  #   arch: ppc64le
   # - dist: jammy
   #   arch: ppc64le
   #   group: edge
@@ -138,16 +138,16 @@ jobs:
   #   group: dev
   # - dist: jammy
   #   group: dev
-  - dist: bionic
-    group: dev
+  # - dist: bionic
+  #   group: dev
   - dist: focal
     group: dev
   # - dist: xenial
   #   group: stable
-  - dist: jammy
-    language: minimal
-    group: edge
-    arch: ppc64le
+  # - dist: jammy
+  #   language: minimal
+  #   group: edge
+  #   arch: ppc64le
   # - dist: jammy
   #   group: stable
   # - os: osx
