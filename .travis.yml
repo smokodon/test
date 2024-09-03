@@ -27,8 +27,7 @@ language: ruby
 script:
   # - gem update
   #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
-  - sudo apt install rubygems
-  - sudo systemctl
+  - gem list
   # - gem update --default
   # - gem update
   # - sudo gem update
@@ -139,13 +138,13 @@ jobs:
   #   group: dev
   # - dist: jammy
   #   group: dev
-  - dist: bionic
-    group: dev
+  # - dist: bionic
+  #   group: dev
   - dist: focal
     group: dev
   # - dist: xenial
   #   group: stable
-  - dist: jammy
+  - dist: focal
     language: minimal
     group: edge
     arch: ppc64le
