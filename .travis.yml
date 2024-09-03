@@ -8,14 +8,14 @@ language: ruby
 #   - gem list uri
 #   # update uri gem
 #   #- gem update uri
-# deploy:
-#   provider: pages:git
-#   token: "$GITHUB_TOKEN"
-#   dpl_version: 2.0.5.beta.1
-#   edge: true
-#   on:
-#     branch:
-#     - master
+deploy:
+  provider: pages:git
+  token: "$GITHUB_TOKEN"
+  dpl_version: 2.0.5.beta.1
+  edge: true
+  on:
+    branch:
+    - master
 
 # language: java
 # jdk: semeru11
