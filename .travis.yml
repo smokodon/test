@@ -27,6 +27,7 @@ language: ruby
 script:
   # - gem update
   #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
+  - gem which logger
   - rvm use 3.3.5 --fuzzy do ruby -S gem install dpl -v 2.0.5.beta.1
   #- gem list
   # - gem update --default
