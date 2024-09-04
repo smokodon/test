@@ -1,6 +1,6 @@
 # dist: focal
 # group: dev
-language: ruby
+#language: ruby
 # script:
 # - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
 # before_deploy:
@@ -28,6 +28,7 @@ script:
   # - gem update
   #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
   - gem which logger
+  - ls -al /home/travis/.rvm/rubies/ruby-3.3.5/lib/ruby
   - rvm use 3.3.5 --fuzzy do ruby -S gem install dpl -v 2.0.5.beta.1
   #- gem list
   # - gem update --default
@@ -143,13 +144,14 @@ jobs:
   # - dist: bionic
   #   group: dev
   - dist: focal
-    group: dev
+    arch: ppc64le
+    group: stable
   # - dist: xenial
   #   group: stable
-  - dist: focal
-    language: minimal
-    group: edge
-    arch: ppc64le
+  # - dist: focal
+  #   language: minimal
+  #   group: edge
+  #   arch: ppc64le
   # - dist: jammy
   #   group: stable
   # - os: osx
