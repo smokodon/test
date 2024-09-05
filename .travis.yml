@@ -1,9 +1,3 @@
-os: linux
-arch: s390x
-dist: bionic
-script:
-  - uname -a
-
 # dist: focal
 # group: dev
 #language: ruby
@@ -30,7 +24,8 @@ script:
 #   - rabbitmq
 #   - postgresql
 
-# script:
+script:
+  - uname -a
   # - gem update
   #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
   # - gem list
@@ -93,8 +88,8 @@ script:
   # - groovy -version
 
 
-# jobs:
-  # include:
+jobs:
+  include:
   # - os: freebsd
 
   # - dist: xenial
@@ -110,8 +105,8 @@ script:
   #   arch: ppc64le
   # - dist: bionic
   #  arch: ppc64le
-  # - dist: focal
-  #   arch: ppc64le
+  - dist: focal
+    arch: ppc64le
   # - dist: jammy
   #   arch: ppc64le
   #   group: edge
@@ -121,8 +116,8 @@ script:
   #   arch: s390x
   # - dist: bionic
   #   arch: s390x
-  # - dist: focal
-  #   arch: s390x
+  - dist: focal
+    arch: s390x
   # - dist: jammy
   #   arch: s390x
 
@@ -130,30 +125,13 @@ script:
   #   arch: amd64
   # - dist: xenial
   #   group: stable
-  # - dist: focal
-  #   group: dev
-  # - dist: focal
-  #   group: dev
+  - dist: focal
+    group: stable
   # - dist: jammy
   #   group: stable
-  # - dist: focal
-  #   group: stable
-  # - dist: bionic
-  #   group: stable
-  # - dist: jammy
-  #   group: stable
-  # - dist: xenial
-  #   group: dev
-  # - dist: jammy
-  #   group: dev
-  # - dist: bionic
-  #   group: dev
-  # - dist: focal
-  #   arch: ppc64le
-  # - dist: bionic
-  #   arch: ppc64le
-  # - dist: xenial
-  #   group: stable
+
+
+  
   # - dist: jammy
   #   language: minimal
   #   group: edge
