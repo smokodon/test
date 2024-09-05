@@ -28,6 +28,7 @@ script:
   - systemd-analyze blame
   - systemd-analyze critical-chain
   - sudo journalctl -b 0
+  - sleep 5000
   # - gem update
   #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
   # - gem list
@@ -109,10 +110,10 @@ jobs:
   #  arch: ppc64le
   - dist: focal
     arch: ppc64le
-  # - dist: jammy
-  #   arch: ppc64le
-  #   group: edge
-  #   language: minimal
+  - dist: jammy
+    arch: ppc64le
+    group: edge
+    language: minimal
 
   # - dist: xenial
   #   arch: s390x
