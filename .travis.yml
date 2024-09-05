@@ -1,9 +1,8 @@
 os: linux
 arch: s390x
 dist: focal
-language: shell
 script:
-  - echo "test"
+  - uname -a
 
 # dist: focal
 # group: dev
