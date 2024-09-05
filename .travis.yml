@@ -139,5 +139,5 @@ jobs:
   #   arch: ppc64le
   # - dist: jammy
   #   group: stable
-  # - os: osx
-  #   osx_image: xcode10.13
+  - os: osx
+    osx_image: xcode10.13
