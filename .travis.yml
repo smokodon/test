@@ -1,6 +1,7 @@
 os: linux
 arch: s390x
 dist: focal
+language: shell
 script:
   - echo "test"
 
