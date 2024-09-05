@@ -37,7 +37,7 @@ script:
   # - sudo gem update --default
   # - gem list
 
-  # - systemctl status systemd-resolved
+  - systemctl status systemd-resolved
   # - ls -l /etc/systemd/system/systemd-resolved.service
   # - sudo systemctl unmask systemd-resolved
   # - sudo systemctl start systemd-resolved
@@ -48,8 +48,8 @@ script:
   # - sudo cloud-init init
   # - echo "debugging"
   # - sudo dmesg -T | grep -i -e warning -e error -e fatal -e exception
-  # - systemctl --failed
-  # - sudo systemctl status -l cloud-init-local.service cloud-init-network.service cloud-config.service cloud-final.service
+  - systemctl --failed
+  - sudo systemctl status -l cloud-init-local.service cloud-init-network.service cloud-config.service cloud-final.service
   # - sudo systemctl list-jobs --after
 
   # - sudo apt-get install openvswitch-switch-dpdk
@@ -108,17 +108,17 @@ jobs:
   - dist: focal
     arch: ppc64le
     language: minimal
-  # - dist: jammy
-  #   arch: ppc64le
-  #   group: edge
-  #   language: minimal
+  - dist: jammy
+    arch: ppc64le
+    group: edge
+    language: minimal
 
   # - dist: xenial
   #   arch: s390x
   # - dist: bionic
   #   arch: s390x
-  - dist: focal
-    arch: s390x
+  # - dist: focal
+  #   arch: s390x
   # - dist: jammy
   #   arch: s390x
 
@@ -126,8 +126,8 @@ jobs:
   #   arch: amd64
   # - dist: xenial
   #   group: stable
-  - dist: focal
-    group: stable
+  # - dist: focal
+  #   group: stable
   # - dist: jammy
   #   group: stable
 
@@ -139,5 +139,5 @@ jobs:
   #   arch: ppc64le
   # - dist: jammy
   #   group: stable
-  - os: osx
-    osx_image: xcode10.13
+  # - os: osx
+  #   osx_image: xcode10.13
