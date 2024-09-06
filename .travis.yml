@@ -17,7 +17,7 @@
 #     branch:
 #     - master
 language: go
-
+go: 1.23
 
 
 script:
