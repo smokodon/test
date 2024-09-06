@@ -121,7 +121,7 @@ jobs:
   #   arch: amd64
   # - dist: xenial
   #   group: stable
-  - dist: focal
+  - dist: bionic
     group: dev
   # - dist: jammy
   #   group: stable
