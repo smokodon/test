@@ -17,8 +17,9 @@
 #     branch:
 #     - master
 language: go
+group: previous
 go: 
-  - "1.16"
+  - "1.23"
 
 
 script:
