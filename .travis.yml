@@ -17,7 +17,6 @@
 #     branch:
 #     - master
 language: go
-group: previous
 go: 
   - "1.23"
 
@@ -123,7 +122,7 @@ jobs:
   # - dist: xenial
   #   group: stable
   - dist: focal
-    group: stable
+    group: previous
   # - dist: jammy
   #   group: stable
 
