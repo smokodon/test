@@ -16,19 +16,16 @@
 #   on:
 #     branch:
 #     - master
+language: go
 
-# language: java
-# jdk: semeru11
-# services:
-#   - mysql
-#   - rabbitmq
-#   - postgresql
+
 
 script:
+  - go -v
   - systemd-analyze blame
   - systemd-analyze critical-chain
   - sudo journalctl -b 0
-  - sleep 5000
+  #- sleep 5000
   # - gem update
   #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
   # - gem list
@@ -40,11 +37,6 @@ script:
   # - sudo gem update --default
   # - gem list
 
-  # - systemctl status systemd-resolved
-  # - ls -l /etc/systemd/system/systemd-resolved.service
-  # - sudo systemctl unmask systemd-resolved
-  # - sudo systemctl start systemd-resolved
-  # - sudo systemctl enable systemd-resolved
   # - sudo DI_LOG=stderr /usr/lib/cloud-init/ds-identify --force
   # - sudo cloud-init clean --logs
   # - sudo cloud-init init --local
@@ -52,17 +44,16 @@ script:
   # - echo "debugging"
   # - sudo dmesg -T | grep -i -e warning -e error -e fatal -e exception
   # - systemctl --failed
-  - sudo systemctl status -l cloud-config.service cloud-final.service cloud-init-local.service cloud-init.service
+  #- sudo systemctl status -l cloud-config.service cloud-final.service cloud-init-local.service cloud-init.service
   # - sudo systemctl list-jobs --after
 
-  # - sudo apt-get install openvswitch-switch-dpdk
-  # - sudo netplan apply
-  # - sudo systemctl restart cloud-init.service 
-  #- sudo apt update && sudo apt upgrade -y
-  # - systemctl
-  # - sudo journalctl -xeu cloud-init.service
+# language: java
+# jdk: semeru11
+# services:
+#   - mysql
+#   - rabbitmq
+#   - postgresql
   # - java --version
-  # - systemctl --type=service
   # - sudo systemctl status mysql.service
   # - sudo systemctl status rabbitmq-server.service
   # - sudo systemctl status postgresql.service
@@ -108,12 +99,13 @@ jobs:
   #   arch: ppc64le
   # - dist: bionic
   #  arch: ppc64le
-  - dist: focal
-    arch: ppc64le
-  - dist: jammy
-    arch: ppc64le
-    group: edge
-    language: minimal
+
+  # - dist: focal
+  #   arch: ppc64le
+  # - dist: jammy
+  #   arch: ppc64le
+  #   group: edge
+  #   language: minimal
 
   # - dist: xenial
   #   arch: s390x
@@ -128,8 +120,8 @@ jobs:
   #   arch: amd64
   # - dist: xenial
   #   group: stable
-  # - dist: focal
-  #   group: stable
+  - dist: focal
+    group: stable
   # - dist: jammy
   #   group: stable
 
