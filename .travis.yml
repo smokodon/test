@@ -22,7 +22,8 @@ go:
 
 
 script:
-  - go -v
+  - sudo apt-get -y install pollinate
+  - systemctl --failed
   - systemd-analyze blame
   - systemd-analyze critical-chain
   - sudo journalctl -b 0
@@ -121,7 +122,7 @@ jobs:
   #   arch: amd64
   # - dist: xenial
   #   group: stable
-  - dist: bionic
+  - dist: focal
     group: dev
   # - dist: jammy
   #   group: stable
