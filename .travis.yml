@@ -83,10 +83,10 @@ jobs:
 
   - dist: focal
     arch: ppc64le
-    group: dev
+    group: stable
   - dist: bionic
     arch: ppc64le
-    group: dev
+    group: stable
   - dist: focal
     arch: s390x
     group: dev
