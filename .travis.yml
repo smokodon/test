@@ -83,10 +83,8 @@ jobs:
 
   - dist: focal
     arch: ppc64le
-    language: minimal
     group: dev
   - dist: bionic
-    language: minimal
     arch: ppc64le
     group: dev
   # - dist: focal
