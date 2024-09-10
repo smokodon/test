@@ -103,7 +103,6 @@ jobs:
     arch: ppc64le
     group: edge
     language: minimal
-
   # - dist: xenial
   #   arch: s390x
   # - dist: bionic
