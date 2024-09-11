@@ -6,6 +6,8 @@
 
 script:
   # - sudo apt-get -y install pollinate
+  - rvm requirements
+  - sudo apt install libgmp3-dev
   - systemctl --failed
   # - systemd-analyze blame
   # - systemd-analyze critical-chain
@@ -99,10 +101,12 @@ jobs:
   # - dist: bionic
   #   arch: s390x
   #   group: dev
-  - dist: jammy
-    arch: ppc64le
-    group: edge
-    language: minimal
+
+  # - dist: jammy
+  #   arch: ppc64le
+  #   group: edge
+  #   language: minimal
+
   # - dist: xenial
   #   arch: s390x
   # - dist: bionic
@@ -124,8 +128,8 @@ jobs:
   #   group: dev
   # - dist: bionic
   #   group: stable
-  # - dist: focal
-  #   group: stable
+  - dist: focal
+    group: stable
   # - dist: jammy
   #   group: stable
 
