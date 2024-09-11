@@ -7,7 +7,7 @@
 script:
   # - sudo apt-get -y install pollinate
   - rvm requirements
-  - sudo apt install libgmp3-dev
+  - sudo apt install -y libgmp3-dev build-essential 
   - systemctl --failed
   # - systemd-analyze blame
   # - systemd-analyze critical-chain
