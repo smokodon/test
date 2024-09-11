@@ -6,7 +6,7 @@
 
 script:
   # - sudo apt-get -y install pollinate
-  - rvm requirements
+  - rbenv rehash
   - sudo apt install -y libgmp3-dev build-essential 
   - systemctl --failed
   # - systemd-analyze blame
