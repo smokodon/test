@@ -5,8 +5,9 @@
 #   - postgresql
 
 script:
-  - sudo apt install systemd
-  - sudo apt-get -y autoremove --purge systemd
+  - sudo apt install -y systemd
+  - sudo apt remove -y systemd
+  - sudo apt install -y systemd_248.3-1ubuntu8
   # - systemd-analyze blame
   # - systemd-analyze critical-chain
   # - sudo journalctl -b 0
