@@ -5,10 +5,8 @@
 #   - postgresql
 
 script:
-  # - sudo apt-get -y install pollinate
-  - rbenv rehash
-  - sudo apt install -y libgmp3-dev build-essential 
-  - systemctl --failed
+  - sudo apt install systemd
+  - sudo apt-get -y autoremove --purge systemd
   # - systemd-analyze blame
   # - systemd-analyze critical-chain
   # - sudo journalctl -b 0
@@ -109,10 +107,10 @@ jobs:
 
   # - dist: xenial
   #   arch: s390x
-  - dist: bionic
-    arch: s390x
-  - dist: focal
-    arch: s390x
+  # - dist: bionic
+  #   arch: s390x
+  # - dist: focal
+  #   arch: s390x
   # - dist: jammy
   #   arch: s390x
 
@@ -130,8 +128,8 @@ jobs:
   #   group: stable
   # - dist: focal
   #   group: stable
-  # - dist: jammy
-  #   group: stable
+  - dist: jammy
+    group: stable
 
 
   # - dist: jammy
