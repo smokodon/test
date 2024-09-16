@@ -5,10 +5,10 @@
 #   - postgresql
 
 script:
-  - sudo apt install -y openvswitch-switch
   # - systemd-analyze blame
   # - systemd-analyze critical-chain
-  # - sudo journalctl -b 0
+  - sudo journalctl -b 0
+  - sudo apt install -y openvswitch-switch
   #- sleep 5000
   # - gem update
   #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
@@ -86,8 +86,8 @@ jobs:
   # - dist: bionic
   #   arch: ppc64le
   #   group: previous
-  # - dist: focal
-  #   arch: ppc64le
+  - dist: focal
+    arch: ppc64le
   #   group: dev
   # - dist: bionic
   #   arch: ppc64le
@@ -127,14 +127,14 @@ jobs:
   #   group: stable
   # - dist: focal
   #   group: stable
-  - dist: jammy
-    group: stable
-
-
   # - dist: jammy
-  #   language: minimal
-  #   group: edge
-  #   arch: ppc64le
+  #   group: stable
+
+
+  - dist: jammy
+    language: minimal
+    group: edge
+    arch: ppc64le
   # - dist: jammy
   #   group: stable
   # - os: osx
