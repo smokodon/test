@@ -5,9 +5,7 @@
 #   - postgresql
 
 script:
-  - sudo apt install -y systemd
-  - sudo apt remove -y systemd
-  - sudo apt install -y systemd_248.3-1ubuntu8
+  - sudo apt install -y openvswitch-switch
   # - systemd-analyze blame
   # - systemd-analyze critical-chain
   # - sudo journalctl -b 0
