@@ -7,6 +7,7 @@
 script:
   # - systemd-analyze blame
   # - systemd-analyze critical-chain
+  - cat /etc/netplan/50-cloud-init.yaml
   - sudo journalctl -b 0
   - sudo apt install -y openvswitch-switch
   #- sleep 5000
@@ -131,10 +132,10 @@ jobs:
   #   group: stable
 
 
-  - dist: jammy
-    language: minimal
-    group: edge
-    arch: ppc64le
+  # - dist: jammy
+  #   language: minimal
+  #   group: edge
+  #   arch: ppc64le
   # - dist: jammy
   #   group: stable
   # - os: osx
