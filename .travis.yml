@@ -128,8 +128,8 @@ jobs:
   #   group: dev
   # - dist: bionic
   #   group: stable
-  - dist: focal
-    group: stable
+  # - dist: focal
+  #   group: stable
   # - dist: jammy
   #   group: stable
 
@@ -140,5 +140,9 @@ jobs:
   #   arch: ppc64le
   # - dist: jammy
   #   group: stable
-  # - os: osx
-  #   osx_image: xcode10.13
+  - os: osx
+    osx_image: xcode9.4
+  - os: osx
+    osx_image: xcode14.2
+
+
