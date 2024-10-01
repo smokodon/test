@@ -1,17 +1,14 @@
 
+language: go
+go:
+  - "1.23.0"
 # services:
 #   - mysql
 #   - rabbitmq
 #   - postgresql
 
 script:
-  # - systemd-analyze blame
-  # - systemd-analyze critical-chain
-  - snap list
-  #- cat /etc/netplan/50-cloud-init.yaml
-  #- sudo journalctl -b 0
-  - systemctl --version
-  - ip a
+  - go -v
   #- sleep 5000
   # - gem update
   #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
@@ -126,12 +123,12 @@ jobs:
   #   group: dev
   # - dist: jammy
   #   group: dev
-  # - dist: bionic
-  #   group: stable
-  # - dist: focal
-  #   group: stable
-  # - dist: jammy
-  #   group: stable
+  - dist: bionic
+    group: stable
+  - dist: focal
+    group: stable
+  - dist: jammy
+    group: stable
 
 
   # - dist: jammy
@@ -140,9 +137,3 @@ jobs:
   #   arch: ppc64le
   # - dist: jammy
   #   group: stable
-  - os: osx
-    osx_image: xcode9.4
-  - os: osx
-    osx_image: xcode14.2
-
-
