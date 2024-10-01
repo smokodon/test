@@ -1,7 +1,7 @@
 
 language: go
 go:
-  - "1.23.0"
+  - "1.18.0"
 # services:
 #   - mysql
 #   - rabbitmq
