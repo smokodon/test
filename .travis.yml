@@ -7,7 +7,8 @@ go:
 #   - rabbitmq
 #   - postgresql
 before_install:
-- go mod init
+- go clean -cache
+- go clean -modcache
 
 script:
   - go -v
