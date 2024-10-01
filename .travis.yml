@@ -7,7 +7,7 @@ go:
 #   - rabbitmq
 #   - postgresql
 before_install:
-- go env -w GO111MODULE=off
+- go mod init
 
 script:
   - go -v
