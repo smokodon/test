@@ -6,7 +6,7 @@ go:
 #   - mysql
 #   - rabbitmq
 #   - postgresql
-before_script:
+before_install:
 - go env -w GO111MODULE=off
 
 script:
