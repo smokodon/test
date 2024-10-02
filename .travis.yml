@@ -133,7 +133,7 @@ jobs:
   - dist: focal
     group: stable
   - dist: focal
-    group: minimal
+    group: edge
   # - dist: jammy
   #   group: stable
 
