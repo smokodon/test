@@ -13,6 +13,9 @@
 
 script:
   - go install golang.org/dl/go1.16.7@latest
+  - go1.16.7 download
+  - go version
+
   #- sleep 5000
   # - gem update
   #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
