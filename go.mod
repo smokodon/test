@@ -1,4 +1,4 @@
-module /usr/local/cmake-3.26.3
+module /home/travis/gopath/bin
 
 go 1.19
 
