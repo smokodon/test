@@ -1,3 +1,5 @@
+module /usr/local/cmake-3.26.3
+
 go 1.19
 
 require (
