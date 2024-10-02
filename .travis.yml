@@ -132,6 +132,8 @@ jobs:
     group: stable
   - dist: focal
     group: stable
+  - dist: focal
+    group: previous
   - dist: jammy
     group: stable
 
