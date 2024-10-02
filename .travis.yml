@@ -128,14 +128,14 @@ jobs:
   #   group: dev
   # - dist: jammy
   #   group: dev
-  - dist: bionic
-    group: stable
+  # - dist: bionic
+  #   group: stable
   - dist: focal
     group: stable
   - dist: focal
-    group: previous
-  - dist: jammy
-    group: stable
+    group: minimal
+  # - dist: jammy
+  #   group: stable
 
 
 
