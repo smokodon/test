@@ -1,4 +1,4 @@
-module example.com/myproject
+module github.com/smokodon/test
 
 go 1.19
 
