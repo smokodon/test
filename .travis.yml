@@ -1,7 +1,7 @@
 
-language: go
-go:
- - "1.18.0"
+# language: go
+# go:
+#  - "1.18.0"
 
 # services:
 #   - mysql
@@ -12,11 +12,11 @@ go:
 # - go clean -modcache
 
 script:
-  - go install golang.org/dl/go1.16.7@latest
+  - go install golang.org/dl/go1.18.0@latest
   - ls -al
-  - go1.16.7 download
+  - go1.18.0 download
   - ls -al
-  - go1.16.7
+  - go1.18.0
   - go version
 
   #- sleep 5000
