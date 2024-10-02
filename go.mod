@@ -1,5 +1,3 @@
-module github.com/smokodon/test
-
 go 1.19
 
 require (
