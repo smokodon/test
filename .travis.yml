@@ -13,7 +13,10 @@
 
 script:
   - go install golang.org/dl/go1.16.7@latest
+  - ls -al
   - go1.16.7 download
+  - ls -al
+  - go1.16.7
   - go version
 
   #- sleep 5000
