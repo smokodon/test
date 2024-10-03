@@ -12,7 +12,7 @@
 # - go clean -modcache
 
 script:
-  - go help install
+  - go install help
 
   #- sleep 5000
   # - gem update
