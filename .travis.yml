@@ -12,14 +12,7 @@
 # - go clean -modcache
 
 script:
-  - go version
-  - go install golang.org/dl/go1.18@latest
-  - go1.18 download
-  - export GOROOT=$(go1.18 env GOROOT)
-  - export PATH=$GOROOT/bin:$PATH
-  - source ~/.bashrc
-  - go version
-  - go env
+  - go help install
 
   #- sleep 5000
   # - gem update
@@ -139,8 +132,6 @@ jobs:
   #   group: stable
   - dist: focal
     group: stable
-  - dist: focal
-    group: edge
   # - dist: jammy
   #   group: stable
 
