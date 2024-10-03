@@ -1,7 +1,7 @@
 
-language: go
-go:
- - "1.19"
+# language: go
+# go:
+#  - "1.19"
 
 # services:
 #   - mysql
@@ -12,6 +12,12 @@ go:
 # - go clean -modcache
 
 script:
+  - go version
+  - go install golang.org/dl/go1.18@latest
+  - go1.18 download
+  - export GOROOT=$(go1.18 env GOROOT)
+  - export PATH=$GOROOT/bin:$PATH
+  - source ~/.bashrc
   - go version
 
   #- sleep 5000
