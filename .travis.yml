@@ -1,7 +1,7 @@
 
-# language: go
-# go:
-#  - "1.19"
+language: go
+go:
+ - "1.23"
 
 # services:
 #   - mysql
@@ -12,7 +12,7 @@
 # - go clean -modcache
 
 script:
-  - go install help
+  - go version
 
   #- sleep 5000
   # - gem update
