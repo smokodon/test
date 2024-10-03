@@ -19,6 +19,7 @@ script:
   - export PATH=$GOROOT/bin:$PATH
   - source ~/.bashrc
   - go version
+  - go env
 
   #- sleep 5000
   # - gem update
