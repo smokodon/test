@@ -91,8 +91,8 @@ jobs:
   # - dist: bionic
   #   arch: ppc64le
   #   group: previous
-  - dist: focal
-    arch: ppc64le
+  # - dist: focal
+  #   arch: ppc64le
   #   group: dev
   # - dist: bionic
   #   arch: ppc64le
@@ -113,15 +113,15 @@ jobs:
   #   arch: s390x
   # - dist: bionic
   #   arch: s390x
-  - dist: focal
-    arch: s390x
+  # - dist: focal
+  #   arch: s390x
   # - dist: jammy
   #   arch: s390x
 
   # - dist: trusty
   #   arch: amd64
-  # - dist: xenial
-  #   group: stable
+  - dist: xenial
+    group: stable
   # - dist: bionic
   #   group: dev
   # - dist: focal
