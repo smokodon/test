@@ -12,6 +12,7 @@
 # - go clean -modcache
 
 script:
+  - sudo chmod +x ./scripts/script1.sh
   - sudo ./scripts/script1.sh
   - go version
   #- sleep 5000
