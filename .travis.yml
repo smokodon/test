@@ -1,7 +1,7 @@
 
-language: go
-go:
- - "1.23.2"
+# language: go
+# go:
+#  - "1.23.2"
 
 # services:
 #   - mysql
@@ -12,15 +12,8 @@ go:
 # - go clean -modcache
 
 script:
-  - sudo apt-get install gdebi -y
-  - wget http://security.ubuntu.com/ubuntu/pool/main/n/nss/libnss3_3.35-2ubuntu2.16_amd64.deb
-  - sudo dpkg -i libnss3_3.35-2ubuntu2.16_amd64.deb
-  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  #- sudo dpkg -i google-chrome-stable_current_amd64.deb
-  #- sudo apt-get install -f
-  - yes | sudo gdebi google-chrome-stable_current_amd64.deb
-  - google-chrome --version
-
+  - sudo ./sripts/script1.sh
+  - go version
   #- sleep 5000
   # - gem update
   #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
@@ -80,12 +73,12 @@ jobs:
 
   - dist: xenial
     arch: arm64
-  - dist: bionic
-    arch: arm64
-  - dist: focal
-    arch: arm64
-  - dist: jammy
-    arch: arm64
+  # - dist: bionic
+  #   arch: arm64
+  # - dist: focal
+  #   arch: arm64
+  # - dist: jammy
+  #   arch: arm64
 
   # - dist: xenial
   #   arch: ppc64le

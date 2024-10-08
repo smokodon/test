@@ -1,25 +1,10 @@
 #!/bin/bash
 
-  local wait_retries="${1}"
-  local count=0
-  shift
-  local urls=("${@}")
+  arch=$(uname -m)
+  wget https://go.dev/dl/go1.21.1.linux-$arch.tar.gz
+  sudo tar -C /usr/local -xzf go1.21.1.linux-$arch.tar.gz
+  echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.profile
+  export PATH=\$PATH:/usr/local/go/bin
+  sudo chown -R travis: /tmp/__common-lib.sh
 
-  while [[ "${count}" -lt "${wait_retries}" ]]; do
-    local confirmed=0
-    for url in "${urls[@]}"; do
-      if travis_download "${url}" /dev/null; then
-        confirmed=$((confirmed + 1))
-      fi
-    done
-
-    if [[ "${#urls[@]}" -eq "${confirmed}" ]]; then
-      return
-    fi
-
-    count=$((count + 1))
-    sleep 1
-  done
-
-  echo -e "${ANSI_RED}Timeout waiting for network availability.${ANSI_RESET}"
 
