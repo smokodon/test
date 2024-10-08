@@ -1,7 +1,7 @@
 
-language: go
-go:
- - "1.23.2"
+# language: go
+# go:
+#  - "1.23.2"
 
 # services:
 #   - mysql
@@ -12,7 +12,9 @@ go:
 # - go clean -modcache
 
 script:
-  - go version
+  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.de
+  - sudo dpkg -i google-chrome-stable_current_amd64.deb
+  - sudo apt-get install -f
 
   #- sleep 5000
   # - gem update
