@@ -1,7 +1,7 @@
 
-# language: go
-# go:
-#  - "1.23.2"
+language: go
+go:
+ - "1.23.2"
 
 # services:
 #   - mysql
@@ -12,7 +12,7 @@
 # - go clean -modcache
 
 script:
-  - sudo ./sripts/script1.sh
+  # - sudo ./sripts/script1.sh
   - go version
   #- sleep 5000
   # - gem update
@@ -71,8 +71,8 @@ jobs:
   include:
   # - os: freebsd
 
-  - dist: xenial
-    arch: arm64
+  # - dist: xenial
+  #   arch: arm64
   # - dist: bionic
   #   arch: arm64
   # - dist: focal
@@ -120,8 +120,8 @@ jobs:
 
   # - dist: trusty
   #   arch: amd64
-  # - dist: xenial
-  #   group: stable
+  - dist: xenial
+    group: dev
   # - dist: bionic
   #   group: dev
   # - dist: focal
