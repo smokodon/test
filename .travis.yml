@@ -12,12 +12,13 @@
 # - go clean -modcache
 
 script:
-  #- sudo apt-get install gdebi -y
+  - sudo apt-get install gdebi -y
   - wget http://security.ubuntu.com/ubuntu/pool/main/n/nss/libnss3_3.35-2ubuntu2.16_amd64.deb
   - sudo dpkg -i libnss3_3.35-2ubuntu2.16_amd64.deb
   - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  - sudo dpkg -i google-chrome-stable_current_amd64.deb
-  - sudo apt-get install -f
+  #- sudo dpkg -i google-chrome-stable_current_amd64.deb
+  #- sudo apt-get install -f
+  - sudo gdebi -y google-chrome-stable_current_amd64.deb
   - google-chrome --version
 
   #- sleep 5000
