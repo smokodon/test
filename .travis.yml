@@ -13,8 +13,11 @@ install: skip
 # - go clean -modcache
 
 script:
-  - sudo chmod +x ./scripts/script1.sh
-  - sudo ./scripts/script1.sh
+  - arch=$(uname -m)
+  - wget https://go.dev/dl/go1.21.1.linux-$arch.tar.gz
+  - sudo tar -C /usr/local -xzf go1.21.1.linux-$arch.tar.gz
+  - echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.profile
+  - export PATH=\$PATH:/usr/local/go/bin
   # - go version
   #- sleep 5000
   # - gem update
