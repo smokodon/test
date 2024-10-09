@@ -13,9 +13,8 @@ install: skip
 # - go clean -modcache
 
 script:
-  - arch=$(uname -m)
-  - curl -sL https://go.dev/dl/go1.21.1.linux-$arch.tar.gz
-  - sudo tar -C /usr/local -xzf go1.21.1.linux-$arch.tar.gz
+  - wget https://go.dev/dl/go1.21.1.linux-arm64.tar.gz
+  - sudo tar -C /usr/local -xzf go1.21.1.linux-arm64.tar.gz
   - echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.profile
   - export PATH=\$PATH:/usr/local/go/bin
   # - go version
