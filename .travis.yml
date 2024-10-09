@@ -1,9 +1,9 @@
 
-# language: go
-# go:
-#  - "1.19.3"
+language: go
+go:
+ - "1.19.3"
 install: skip
-
+group: edge
 # services:
 #   - mysql
 #   - rabbitmq
@@ -13,11 +13,6 @@ install: skip
 # - go clean -modcache
 
 script:
-  - wget https://go.dev/dl/go1.21.1.linux-arm64.tar.gz
-  - sudo tar -C /usr/local -xzf go1.21.1.linux-arm64.tar.gz
-  - echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.profile
-  - export PATH=\$PATH:/usr/local/go/bin
-  # - go version
   #- sleep 5000
   # - gem update
   #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
@@ -76,10 +71,10 @@ jobs:
   include:
   # - os: freebsd
 
-  # - dist: xenial
-  #   arch: arm64
-  # - dist: bionic
-  #   arch: arm64
+  - dist: xenial
+    arch: arm64
+  - dist: bionic
+    arch: arm64
   - dist: focal
     arch: arm64
   # - dist: jammy
