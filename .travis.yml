@@ -1,7 +1,7 @@
 
-language: go
-go:
- - "1.19.3"
+# language: go
+# go:
+#  - "1.19.3"
 install: skip
 
 # services:
@@ -13,8 +13,8 @@ install: skip
 # - go clean -modcache
 
 script:
-  # - sudo chmod +x ./scripts/script1.sh
-  # - sudo ./scripts/script1.sh
+  - sudo chmod +x ./scripts/script1.sh
+  - sudo ./scripts/script1.sh
   # - go version
   #- sleep 5000
   # - gem update
@@ -78,8 +78,8 @@ jobs:
   #   arch: arm64
   # - dist: bionic
   #   arch: arm64
-  # - dist: focal
-  #   arch: arm64
+  - dist: focal
+    arch: arm64
   # - dist: jammy
   #   arch: arm64
 
@@ -123,10 +123,10 @@ jobs:
 
   # - dist: trusty
   #   arch: amd64
-  - dist: xenial
-    group: dev
-  - dist: xenial
-    group: stable
+  # - dist: xenial
+  #   group: dev
+  # - dist: xenial
+  #   group: stable
   # - dist: bionic
   #   group: dev
   # - dist: focal
