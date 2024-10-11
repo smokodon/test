@@ -38,6 +38,8 @@ script:
 
 # language: java
 # jdk: semeru11
+  - sudo apt install golang-go -y
+  - go version
   - cat /home/travis/.bashrc
   - cat /home/travis/.bash_profile
   - cat ~/.profile
