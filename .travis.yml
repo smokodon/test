@@ -1,9 +1,10 @@
 
-language: go
-go:
- - "1.19.3"
+# language: go
+# go:
+#  - "1.19.3"
+
 install: skip
-group: edge
+#group: edge
 # services:
 #   - mysql
 #   - rabbitmq
@@ -37,6 +38,11 @@ script:
 
 # language: java
 # jdk: semeru11
+  - go version
+  - wget https://go.dev/dl/go1.21.1.linux-arm64.tar.gz
+  - sudo tar -C /usr/local -xzf go1.21.1.linux-arm64.tar.gz
+  - echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.bashrc
+  - source ~/.bashrc
   - go version
   # - java --version
   # - sudo systemctl status mysql.service
