@@ -38,6 +38,7 @@ script:
 
 # language: java
 # jdk: semeru11
+  - cat /home/travis/.bashrc
   - cat /home/travis/.bash_profile
   - cat ~/.profile
   - cat /home/travis/.bash_profile
