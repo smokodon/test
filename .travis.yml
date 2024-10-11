@@ -41,6 +41,7 @@ script:
   - go version
   - wget https://go.dev/dl/go1.21.1.linux-arm64.tar.gz
   - sudo tar -C /usr/local -xzf go1.21.1.linux-arm64.tar.gz
+  - ls -al /usr/local
   - echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.profile
   - source ~/.profile
   - go version
