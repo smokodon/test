@@ -1,10 +1,10 @@
 
-# language: go
-# go:
-#  - "1.19.3"
+language: go
+go:
+ - "1.19.3"
 
 install: skip
-group: edge
+group: stable
 # services:
 #   - mysql
 #   - rabbitmq
@@ -38,17 +38,6 @@ script:
 
 # language: java
 # jdk: semeru11
-  - sudo snap install go --classic
-  - go version
-  - cat /home/travis/.bashrc
-  - cat /home/travis/.bash_profile
-  - cat ~/.profile
-  - cat /home/travis/.bash_profile
-  - wget https://go.dev/dl/go1.21.1.linux-arm64.tar.gz
-  - sudo tar -C /usr/local -xzf go1.21.1.linux-arm64.tar.gz
-  - ls -al /usr/local
-  - echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.profile
-  - source ~/.profile
   - go version
   # - java --version
   # - sudo systemctl status mysql.service
@@ -83,52 +72,33 @@ jobs:
   include:
   # - os: freebsd
 
-  - dist: xenial
-    arch: arm64
+  # - dist: xenial
+  #   arch: arm64
   - dist: bionic
     arch: arm64
   - dist: focal
     arch: arm64
-  # - dist: jammy
-  #   arch: arm64
+  - dist: jammy
+    arch: arm64
 
   # - dist: xenial
   #   arch: ppc64le
-  # - dist: bionic
-  #  arch: ppc64le
+  - dist: bionic
+    arch: ppc64le
+  - dist: focal
+    arch: ppc64le
+  - dist: jammy
+    arch: ppc64le
 
-  # - dist: focal
-  #   arch: ppc64le
-  #   group: previous
-  # - dist: bionic
-  #   arch: ppc64le
-  #   group: previous
-  # - dist: focal
-  #   arch: ppc64le
-  #   group: dev
-  # - dist: bionic
-  #   arch: ppc64le
-  #   language: minimal
-  # - dist: focal
-  #   arch: s390x
-  #   group: dev
-  # - dist: bionic
-  #   arch: s390x
-  #   group: dev
-
-  # - dist: jammy
-  #   arch: ppc64le
-  #   group: edge
-  #   language: minimal
 
   # - dist: xenial
   #   arch: s390x
-  # - dist: bionic
-  #   arch: s390x
-  # - dist: focal
-  #   arch: s390x
-  # - dist: jammy
-  #   arch: s390x
+  - dist: bionic
+    arch: s390x
+  - dist: focal
+    arch: s390x
+  - dist: jammy
+    arch: s390x
 
   # - dist: trusty
   #   arch: amd64
