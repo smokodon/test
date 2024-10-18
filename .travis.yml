@@ -37,7 +37,8 @@ script:
   # - sudo systemctl list-jobs --after
 
 # language: java
-# jdk: semeru11
+# jdk: semeru11 
+  - echo $PATH
   - sudo snap install go --channel=1.22/stable --classic
   - go version
   # - java --version
