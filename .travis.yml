@@ -36,6 +36,8 @@ script:
 # language: java
 # jdk: semeru11
   - gcc --version
+  - rvm reset
+  - rvm cleanup all
   - rvm autolibs homebrew
   - rvm use --install 2.7.5
   - echo $PATH
@@ -104,7 +106,7 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  - dist: focal
+  # - dist: focal
   # - dist: jammy
 
   - os: osx
