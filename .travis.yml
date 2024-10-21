@@ -36,6 +36,7 @@ script:
 # language: java
 # jdk: semeru11
   - gcc --version
+  - rvm autolibs homebrew
   - rvm use --install 2.7.5
   - echo $PATH
   - go version
