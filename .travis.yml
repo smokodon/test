@@ -35,6 +35,7 @@ script:
 
 # language: java
 # jdk: semeru11
+  - gcc --version
   - rvm use 3.2.5 --install --binary --fuzzy
   - echo $PATH
   - go version
