@@ -1,10 +1,7 @@
 
-language: go
-go:
- - "1.19.3"
 
-install: skip
-group: dev
+#install: skip
+#group: dev
 # services:
 #   - mysql
 #   - rabbitmq
@@ -37,7 +34,8 @@ script:
   # - sudo systemctl list-jobs --after
 
 # language: java
-# jdk: semeru11 
+# jdk: semeru11
+  - rvm use 3.2 --install --binary --fuzzy
   - echo $PATH
   - go version
   # - java --version
@@ -106,3 +104,6 @@ jobs:
   # - dist: bionic
   - dist: focal
   # - dist: jammy
+
+  - os: osx
+  
