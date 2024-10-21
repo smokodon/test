@@ -35,7 +35,7 @@ script:
 
 # language: java
 # jdk: semeru11
-  - rvm use 3.2 --install --binary --fuzzy
+  - rvm use 3.2.5 --install --binary --fuzzy
   - echo $PATH
   - go version
   # - java --version
@@ -106,4 +106,3 @@ jobs:
   # - dist: jammy
 
   - os: osx
-  
