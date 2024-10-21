@@ -36,6 +36,8 @@ script:
 # language: java
 # jdk: semeru11
   - gcc --version
+  - rvm remove 1.8.7
+  - rvm reload
   - rvm reset
   - rvm cleanup all
   - rvm autolibs homebrew
