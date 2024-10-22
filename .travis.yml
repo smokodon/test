@@ -126,3 +126,5 @@ jobs:
   # - dist: jammy
 
   - os: osx
+  - os: osx
+    osx_image: xcode14.2
