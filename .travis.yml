@@ -38,6 +38,7 @@ script:
   - export VERSION=3.2.5
   - export ALIAS=3.2
   - unset JRUBY_OPTS
+  - brew install gcc
   - chmod +x ./scripts/script1.sh
   - ./scripts/script1.sh
   # - gcc --version
