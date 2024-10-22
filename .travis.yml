@@ -45,6 +45,8 @@ script:
   - rvm use --install 2.7.5
   - echo $PATH
   - go version
+  - rvm install ruby-3.2.5 --enable-yjit --verify-downloads 1 --disable-install-doc -C --without-tcl,--without-tk,--without-gmp
+  - rvm prepare ruby-3.2.5
   # - java --version
   # - sudo systemctl status mysql.service
   # - sudo systemctl status rabbitmq-server.service
