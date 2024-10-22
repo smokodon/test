@@ -35,22 +35,27 @@ script:
 
 # language: java
 # jdk: semeru11
+
   - unset JRUBY_OPTS
-  - gcc --version
-  - rvm remove 1.8.7
-  - rvm reload
-  - rvm reset
-  - rvm cleanup all
-  - rvm autolibs homebrew
-  - rvm use --install 2.7.5
-  - echo $PATH
-  - go version
-  - rvm get stable
-  - curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain stable
-  - source "$HOME/.cargo/env"
-  - rvm install ruby-3.2.5 --enable-yjit --verify-downloads 1 --disable-install-doc -C --without-tcl,--without-tk,--without-gmp
-  - cat /Users/travis/.rvm/log/*_ruby-3.2.5/configure.log
-  - rvm prepare ruby-3.2.5
+  - chmod +x ./scripts/script1.sh
+  - ./scripts/script1.sh
+  # - gcc --version
+  # - rvm remove 1.8.7
+  # - rvm reload
+  # - rvm reset
+  # - rvm cleanup all
+  # - rvm autolibs homebrew
+  # - rvm use --install 2.7.5
+  # - echo $PATH
+  # - go version
+  # - rvm get stable
+  # - curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain stable
+  # - source "$HOME/.cargo/env"
+  # - rvm install ruby-3.2.5 --enable-yjit --verify-downloads 1 --disable-install-doc -C --without-tcl,--without-tk,--without-gmp
+  # - cat /Users/travis/.rvm/log/*_ruby-3.2.5/configure.log
+  # - rvm prepare ruby-3.2.5
+
+
   # - java --version
   # - sudo systemctl status mysql.service
   # - sudo systemctl status rabbitmq-server.service
