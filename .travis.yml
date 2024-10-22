@@ -46,6 +46,8 @@ script:
   - echo $PATH
   - go version
   - rvm get stable
+  - curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain stable
+  - source "$HOME/.cargo/env"
   - rvm install ruby-3.2.5 --enable-yjit --verify-downloads 1 --disable-install-doc -C --without-tcl,--without-tk,--without-gmp
   - cat /Users/travis/.rvm/log/*_ruby-3.2.5/configure.log
   - rvm prepare ruby-3.2.5
