@@ -35,7 +35,8 @@ script:
 
 # language: java
 # jdk: semeru11
-
+  - export VERSION=3.2.5
+  - export ALIAS=3.2
   - unset JRUBY_OPTS
   - chmod +x ./scripts/script1.sh
   - ./scripts/script1.sh
