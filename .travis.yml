@@ -47,6 +47,7 @@ script:
   - go version
   - rvm get stable
   - rvm install ruby-3.2.5 --enable-yjit --verify-downloads 1 --disable-install-doc -C --without-tcl,--without-tk,--without-gmp
+  - cat /Users/travis/.rvm/log/*_ruby-3.2.5/configure.log
   - rvm prepare ruby-3.2.5
   # - java --version
   # - sudo systemctl status mysql.service
