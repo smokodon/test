@@ -39,8 +39,7 @@ script:
   # - Install | sudo xcode-select --install
   # - curl --insecure -O https://libssh2.org/download/libssh2-1.11.1.tar.gz
   # - brew install libssh2
-  - pip install awscli
-  - aws --version
+  - rvm use 3.2 --install --binary --fuzzy
   # - export VERSION=3.2.5
   # - export ALIAS=3.2
   # - unset JRUBY_OPTS
@@ -133,5 +132,4 @@ jobs:
 
   - os: osx
   - os: osx
-    osx_image: xcode12.4
-
+    osx_image: xcode11.4.1
