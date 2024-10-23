@@ -127,7 +127,7 @@ jobs:
   # - dist: focal
   # - dist: jammy
 
-  #- os: osx
+  - os: osx
   - os: osx
     osx_image: xcode12.4
 
