@@ -35,7 +35,8 @@ script:
 
 # language: java
 # jdk: semeru11
-  - brew reinstall libssh2
+  - curl --insecure -O https://libssh2.org/download/libssh2-1.11.1.tar.gz
+  - brew install libssh2
   - brew install awscli
   # - export VERSION=3.2.5
   # - export ALIAS=3.2
