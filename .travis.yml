@@ -35,10 +35,8 @@ script:
 
 # language: java
 # jdk: semeru11
-  # - sudo rm -rf /Library/Developer/CommandLineTools
-  # - xcode-select --install
-  - brew update
-  - brew upgrade
+  - sudo rm -rf /Library/Developer/CommandLineTools
+  - xcode-select --install
   - curl --insecure -O https://libssh2.org/download/libssh2-1.11.1.tar.gz
   - brew install libssh2
   - brew install awscli
