@@ -35,11 +35,11 @@ script:
 
 # language: java
 # jdk: semeru11
-  - sudo rm -rf /Library/Developer/CommandLineTools
-  - Install | sudo xcode-select --install
-  - curl --insecure -O https://libssh2.org/download/libssh2-1.11.1.tar.gz
-  - brew install libssh2
-  - brew install awscli
+  # - sudo rm -rf /Library/Developer/CommandLineTools
+  # - Install | sudo xcode-select --install
+  # - curl --insecure -O https://libssh2.org/download/libssh2-1.11.1.tar.gz
+  # - brew install libssh2
+  - pip install awscli
   # - export VERSION=3.2.5
   # - export ALIAS=3.2
   # - unset JRUBY_OPTS
