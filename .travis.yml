@@ -1,5 +1,6 @@
-language: c
-
+language: ruby
+rvm:
+  - "3.2"
 #install: skip
 #group: dev
 # services:
@@ -40,7 +41,7 @@ script:
   # - curl --insecure -O https://libssh2.org/download/libssh2-1.11.1.tar.gz
   # - brew install libssh2
   - rvm requirements
-  - rvm use 3.2 --install --binary --fuzzy
+  #- rvm use 3.2 --install --binary --fuzzy
   # - export VERSION=3.2.5
   # - export ALIAS=3.2
   # - unset JRUBY_OPTS
