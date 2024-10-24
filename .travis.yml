@@ -43,12 +43,13 @@ script:
   - rvm get stable
   - rvm reload
   - HOMEBREW_NO_AUTO_UPDATE=1 brew install openssl libyaml readline
-  - export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl) --with-readline-dir=$(brew --prefix readline)"
+  #- export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl) --with-readline-dir=$(brew --prefix readline)"
   # - rvm -v  
   # - rvm requirements
   # - rvm pkg install libyaml openssl
   # - rvm reinstall all --force
-  - rvm use 3.2 --install --binary --fuzzy --with-openssl-dir=$HOME/.rvm/usr
+  - rvm install 3.2.5
+  #- rvm use 3.2 --install --binary --fuzzy --with-openssl-dir=$HOME/.rvm/usr
   # - export VERSION=3.2.5
   # - export ALIAS=3.2
   # - unset JRUBY_OPTS
