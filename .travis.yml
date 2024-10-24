@@ -48,6 +48,7 @@ script:
   # - rvm requirements
   # - rvm pkg install libyaml
   # - rvm reinstall all --force
+  - rvm ruby-3.2.5 do rvm gemset create
   - rvm use 3.2 --install --binary --fuzzy
   # - export VERSION=3.2.5
   # - export ALIAS=3.2
