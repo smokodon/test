@@ -40,13 +40,13 @@ script:
   # - Install | sudo xcode-select --install
   # - curl --insecure -O https://libssh2.org/download/libssh2-1.11.1.tar.gz
   # - brew install libssh2
-  # - HOMEBREW_NO_AUTO_UPDATE=1 brew install libyaml openssl readline
-  # - export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl)"
-  # - rvm -v
   - rvm get stable
   - rvm reload
+  - HOMEBREW_NO_AUTO_UPDATE=1 brew install openssl libyaml readline
+  - export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl) --with-readline-dir=$(brew --prefix readline)"
+  # - rvm -v  
   # - rvm requirements
-  - rvm pkg install libyaml openssl
+  # - rvm pkg install libyaml openssl
   # - rvm reinstall all --force
   - rvm use 3.2 --install --binary --fuzzy --with-openssl-dir=$HOME/.rvm/usr
   # - export VERSION=3.2.5
