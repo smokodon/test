@@ -46,10 +46,9 @@ script:
   - rvm get stable
   - rvm reload
   # - rvm requirements
-  # - rvm pkg install libyaml
+  - rvm pkg install libyaml openssl
   # - rvm reinstall all --force
-  - rvm install ruby-3.2
-  - rvm use 3.2 --binary --fuzzy
+  - rvm use 3.2 --install --binary --fuzzy --with-openssl-dir=$HOME/.rvm/usr
   # - export VERSION=3.2.5
   # - export ALIAS=3.2
   # - unset JRUBY_OPTS
