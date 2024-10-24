@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - "3.2"
+  - 3.2.5
 #install: skip
 #group: dev
 # services:
