@@ -43,6 +43,7 @@ script:
   - rvm -v
   - rvm get stable
   - rvm reload
+  - rvm gemset list
   - rvm use 3.2 --install --binary --fuzzy
   # - export VERSION=3.2.5
   # - export ALIAS=3.2
