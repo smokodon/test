@@ -1,6 +1,6 @@
-#language: ruby
-#rvm:
-#  - 3.2.5
+language: ruby
+rvm:
+ - 3.0
 #install: skip
 #group: dev
 # services:
@@ -40,8 +40,7 @@ script:
   # - Install | sudo xcode-select --install
   # - curl --insecure -O https://libssh2.org/download/libssh2-1.11.1.tar.gz
   # - brew install libssh2
-  - rvm get stable
-  - rvm reload
+
   #- rvm list known
   #- HOMEBREW_NO_AUTO_UPDATE=1 brew reinstall openssl libyaml readline
   #- export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl) --with-readline-dir=$(brew --prefix readline)"
@@ -50,8 +49,14 @@ script:
   # - rvm pkg install libyaml openssl
   # - rvm reinstall all --force
   #- rvm user gemsets
-  - rvm install 3.2.5 --verify-downloads 1 --disable-install-doc -C --without-tcl,--without-tk,--without-gmp
-  - rvm use 3.2.5 --default
+
+
+  # - rvm get stable
+  # - rvm reload
+  # - rvm install 3.2.5 --verify-downloads 1 --disable-install-doc -C --without-tcl,--without-tk,--without-gmp
+  # - rvm use 3.2.5 --default
+
+
   #- rvm use 3.2 --install --binary --fuzzy --with-openssl-dir=$HOME/.rvm/usr
   # - export VERSION=3.2.5
   # - export ALIAS=3.2
