@@ -46,7 +46,7 @@ script:
   - rvm get stable
   - rvm reload
   - rvm requirements
-  - rvm use 3.2 --install --binary --fuzzy
+  - rvm use 3.2 --install
   # - export VERSION=3.2.5
   # - export ALIAS=3.2
   # - unset JRUBY_OPTS
