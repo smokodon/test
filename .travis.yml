@@ -39,8 +39,7 @@ script:
   # - Install | sudo xcode-select --install
   # - curl --insecure -O https://libssh2.org/download/libssh2-1.11.1.tar.gz
   # - brew install libssh2
-  - rvm notes
-  - rvm requirments
+  - rvm requirements
   - rvm use 3.2 --install --binary --fuzzy
   # - export VERSION=3.2.5
   # - export ALIAS=3.2
