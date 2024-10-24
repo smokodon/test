@@ -40,7 +40,7 @@ script:
   # - Install | sudo xcode-select --install
   # - curl --insecure -O https://libssh2.org/download/libssh2-1.11.1.tar.gz
   # - brew install libssh2
-  - HOMEBREW_NO_AUTO_UPDATE=1 brew install libyaml
+  - HOMEBREW_NO_AUTO_UPDATE=1 brew install libyaml openssl
   - rvm -v
   - rvm get stable
   - rvm reload
