@@ -40,12 +40,13 @@ script:
   # - Install | sudo xcode-select --install
   # - curl --insecure -O https://libssh2.org/download/libssh2-1.11.1.tar.gz
   # - brew install libssh2
-  - HOMEBREW_NO_AUTO_UPDATE=1 brew install libyaml openssl readline
+  # - HOMEBREW_NO_AUTO_UPDATE=1 brew install libyaml openssl readline
   - export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl)"
   - rvm -v
   - rvm get stable
   - rvm reload
   - rvm requirements
+  - rvm pkg install libyaml
   - rvm use 3.2 --install --binary --fuzzy
   # - export VERSION=3.2.5
   # - export ALIAS=3.2
@@ -137,6 +138,5 @@ jobs:
   # - dist: focal
   # - dist: jammy
 
-  - os: osx
   - os: osx
     osx_image: xcode11.4.1
