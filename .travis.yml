@@ -1,6 +1,6 @@
-# language: ruby
+language: ruby
 # rvm:
- # - 3.2.4
+#  - 3.2.4
 #install: skip
 #group: dev
 # services:
@@ -10,10 +10,12 @@
 # before_install:
 # - go clean -cache
 # - go clean -modcache
+before_install:
+ - echo "hello I am before"
 
 script:
   #- sleep 5000
-  # - gem update
+  - gem update
   #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
   # - gem list
   # - sudo cat /etc/cloud/cloud.cfg
@@ -51,10 +53,10 @@ script:
   #- rvm user gemsets
 
 
-  - rvm get stable
-  - rvm reload
+  # - rvm get stable
+  # - rvm reload
   # - rvm install 3.2.4 --verify-downloads 1 --disable-install-doc -C --without-tcl,--without-tk,--without-gmp
-  - rvm use 3.2.4 --install --binary --fuzzy
+  # - rvm use 3.2.5 --default
 
 
   #- rvm use 3.2 --install --binary --fuzzy --with-openssl-dir=$HOME/.rvm/usr
@@ -154,4 +156,3 @@ jobs:
     osx_image: xcode12.3
   - os: osx
     osx_image: xcode12.4
-
