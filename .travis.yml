@@ -1,6 +1,6 @@
 language: ruby
 rvm:
- - 3.0
+ - 3.2.4
 #install: skip
 #group: dev
 # services:
@@ -149,7 +149,7 @@ jobs:
   # - dist: jammy
 
   - os: osx
-    osx_image: xcode11.4.1
+    osx_image: xcode11.3
   - os: osx
     osx_image: xcode12.3
   - os: osx
