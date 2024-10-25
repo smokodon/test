@@ -1,6 +1,6 @@
-language: ruby
-rvm:
- - 3.2.4
+# language: ruby
+# rvm:
+ # - 3.2.4
 #install: skip
 #group: dev
 # services:
@@ -51,10 +51,10 @@ script:
   #- rvm user gemsets
 
 
-  # - rvm get stable
-  # - rvm reload
-  # - rvm install 3.2.5 --verify-downloads 1 --disable-install-doc -C --without-tcl,--without-tk,--without-gmp
-  # - rvm use 3.2.5 --default
+  - rvm get stable
+  - rvm reload
+  # - rvm install 3.2.4 --verify-downloads 1 --disable-install-doc -C --without-tcl,--without-tk,--without-gmp
+  - rvm use 3.2.4 --install --binary --fuzzy
 
 
   #- rvm use 3.2 --install --binary --fuzzy --with-openssl-dir=$HOME/.rvm/usr
