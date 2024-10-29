@@ -12,7 +12,7 @@
 # - go clean -modcache
 
 script:
-  - sudo apt-get install -y libgirepository1.0-dev libdbus-1-dev libsystemd-dev libcurl4-openssl-dev
+  - sudo apt-get install -y libgirepository1.0-dev libdbus-1-dev libsystemd-dev libcurl4-openssl-dev python3-testresources
   - /usr/bin/python3 -m pip install --upgrade pip setuptools wheel breezy pycurl
   #- sleep 5000
 
