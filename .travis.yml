@@ -1,21 +1,19 @@
-language: ruby
+
 # rvm:
 #  - 3.2.4
 #install: skip
 #group: dev
-# services:
-#   - mysql
-#   - rabbitmq
-#   - postgresql
+services:
+  # - mysql
+  # - rabbitmq
+  - postgresql
 # before_install:
 # - go clean -cache
 # - go clean -modcache
-before_install:
- - echo "hello I am before"
 
 script:
   #- sleep 5000
-  - gem update
+  - psql -U travis -ltA
   #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
   # - gem list
   # - sudo cat /etc/cloud/cloud.cfg
@@ -146,13 +144,13 @@ jobs:
 
   # - dist: trusty
   # - dist: xenial
-  # - dist: bionic
-  # - dist: focal
-  # - dist: jammy
+  - dist: bionic
+  - dist: focal
+  - dist: jammy
 
-  - os: osx
-    osx_image: xcode11.3
-  - os: osx
-    osx_image: xcode12.3
-  - os: osx
-    osx_image: xcode12.4
+  # - os: osx
+  #   osx_image: xcode11.3
+  # - os: osx
+  #   osx_image: xcode12.3
+  # - os: osx
+  #   osx_image: xcode12.4
