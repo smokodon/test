@@ -13,9 +13,10 @@
 
 script:
   - sudo apt-get install -y libgirepository1.0-dev libdbus-1-dev libsystemd-dev libcurl4-openssl-dev python3-testresources
-  - /usr/bin/python3 -m pip install --upgrade pip breezy setuptools wheel pycurl --no-binary :all:
+  #- /usr/bin/python3 -m pip install --upgrade pip breezy setuptools wheel pycurl --no-binary :all:
   #- sleep 5000
 
+  - pip3 install pip-review
   - pip-review --auto
 
   #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
