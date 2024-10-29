@@ -3,10 +3,10 @@
 #  - 3.2.4
 #install: skip
 #group: dev
-services:
+# services:
   # - mysql
   # - rabbitmq
-  - postgresql
+  # - postgresql
 # before_install:
 # - go clean -cache
 # - go clean -modcache
