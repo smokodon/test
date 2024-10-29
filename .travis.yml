@@ -13,8 +13,8 @@
 
 script:
   - sudo apt-get install -y libgirepository1.0-dev libdbus-1-dev libsystemd-dev libcurl4-openssl-dev python3-testresources
-  - /usr/bin/python3 -m pip install --upgrade pip wheel
-  - /usr/bin/python3 -m pip install --upgrade setuptools breezy pycurl
+  - /usr/bin/python3 -m pip install --upgrade pip breezy
+  - /usr/bin/python3 -m pip install --upgrade setuptools wheel pycurl
   #- sleep 5000
 
   - pip-review --auto
