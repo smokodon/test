@@ -12,10 +12,11 @@
 # - go clean -modcache
 
 script:
+  - /usr/bin/python3 -m pip install --upgrade pip setuptools wheel
   #- sleep 5000
   - sudo apt-get install -y libgirepository1.0-dev libdbus-1-dev libsystemd-dev
   - pip-review --auto
-  - /usr/bin/python3 -m pip install --upgrade pip
+
   #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
   # - gem list
   # - sudo cat /etc/cloud/cloud.cfg
