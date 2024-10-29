@@ -13,7 +13,7 @@
 
 script:
   #- sleep 5000
-  - psql -U travis -ltA
+  - pip-review --auto
   #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
   # - gem list
   # - sudo cat /etc/cloud/cloud.cfg
