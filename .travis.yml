@@ -1,4 +1,5 @@
 
+language: shell
 # rvm:
 #  - 3.2.4
 #install: skip
