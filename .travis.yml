@@ -153,7 +153,8 @@ jobs:
   # - dist: focal
   - dist: jammy
     group: dev
-
+  - dist: jammy
+    group: stable
   # - os: osx
   #   osx_image: xcode11.3
   # - os: osx
