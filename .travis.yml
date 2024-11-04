@@ -1,5 +1,36 @@
 
+os: linux
+dist: xenial
 language: shell
+
+install: skip
+script: sleep 10
+
+jobs:
+  include:
+    - dist: bionic
+      arch: arm64
+    - dist: focal
+      arch: arm64
+    - dist: jammy
+      arch: arm64
+    - dist: bionic
+      arch: arm64-graviton2
+      group: edge
+    - dist: focal
+      arch: arm64-graviton2
+      group: edge
+    - dist: jammy
+      arch: arm64-graviton2
+      group: edge
+deploy:
+  # dpl_version: 1.10.16
+  provider: script
+  on:
+    all_branches: true
+  script: echo "Hello"
+
+# language: shell
 # rvm:
 #  - 3.2.4
 #install: skip
@@ -12,17 +43,17 @@ language: shell
 # - go clean -cache
 # - go clean -modcache
 
-script:
-  - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-  - export PATH="$HOME/.cargo/bin:$PATH"
-  - source ~/.bashrc
-  - rustc --version
-  - sudo apt-get install -y libgirepository1.0-dev libdbus-1-dev libsystemd-dev libcurl4-openssl-dev python3-testresources
+# script:
+  # - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+  # - export PATH="$HOME/.cargo/bin:$PATH"
+  # - source ~/.bashrc
+  # - rustc --version
+  # - sudo apt-get install -y libgirepository1.0-dev libdbus-1-dev libsystemd-dev libcurl4-openssl-dev python3-testresources
   #- /usr/bin/python3 -m pip install --upgrade pip breezy setuptools wheel pycurl --no-binary :all:
   #- sleep 5000
-  - pip3 install --upgrade pip
-  - pip3 install pip-review
-  - pip-review --auto
+  # - pip3 install --upgrade pip
+  # - pip3 install pip-review
+  # - pip-review --auto
 
   #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
   # - gem list
@@ -120,8 +151,8 @@ script:
   # - groovy -version
 
 
-jobs:
-  include:
+# jobs:
+  # include:
   # - os: freebsd
 
   # - dist: xenial
@@ -139,8 +170,8 @@ jobs:
   #   arch: ppc64le
   # - dist: focal
   #   arch: ppc64le
-  - dist: jammy
-    arch: ppc64le
+  # - dist: jammy
+  #   arch: ppc64le
 
 
   # - dist: xenial
@@ -149,14 +180,14 @@ jobs:
   #   arch: s390x
   # - dist: focal
   #   arch: s390x
-  - dist: jammy
-    arch: s390x
+  # - dist: jammy
+  #   arch: s390x
 
-  - dist: trusty
-  - dist: xenial
-  - dist: bionic
-  - dist: focal
-  - dist: jammy
+  # - dist: trusty
+  # - dist: xenial
+  # - dist: bionic
+  # - dist: focal
+  # - dist: jammy
 
   # - os: osx
   #   osx_image: xcode11.3
