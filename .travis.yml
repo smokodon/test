@@ -1,49 +1,13 @@
 
-os: linux
-dist: xenial
-language: shell
-
-install: skip
-script: sleep 10
-
-jobs:
-  include:
-    - dist: bionic
-      arch: arm64
-    - dist: focal
-      arch: arm64
-    - dist: jammy
-      arch: arm64
-    - dist: bionic
-      arch: arm64-graviton2
-      group: edge
-    - dist: focal
-      arch: arm64-graviton2
-      group: edge
-    - dist: jammy
-      arch: arm64-graviton2
-      group: edge
-deploy:
-  # dpl_version: 1.10.16
-  provider: script
-  on:
-    all_branches: true
-  script: echo "Hello"
-
 # language: shell
 # rvm:
 #  - 3.2.4
-#install: skip
-#group: dev
-# services:
-  # - mysql
-  # - rabbitmq
-  # - postgresql
-# before_install:
-# - go clean -cache
-# - go clean -modcache
+services:
+  - mysql
+  - rabbitmq
+  - postgresql
 
-# script:
+script:
   # - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
   # - export PATH="$HOME/.cargo/bin:$PATH"
   # - source ~/.bashrc
@@ -122,37 +86,37 @@ deploy:
   # - rvm prepare ruby-3.2.5
 
 
-  # - java --version
-  # - sudo systemctl status mysql.service
-  # - sudo systemctl status rabbitmq-server.service
-  # - sudo systemctl status postgresql.service
-  # - sudo rabbitmqctl status
-  # - mysqld --version
-  # - postgres --version
-  # - mysqld --print-defaults
-  # - psql -U postgres -c 'SHOW config_file'
-  # - cosign version
-  # - git -v
-  # - git-lfs
-  # - hg --version
-  # - svn --version
-  # - clang --version
-  # - cmake --version
-  # - gcc --version
-  # - ccache -V
-  # - shellcheck --version
-  # - shfmt -version
-  # - docker version
-  # - docker run hello-world
-  # - docker compose version
-  # - docker buildx version
-  # - mongod --version
-  # - gradle -version
-  # - groovy -version
+  - java --version
+  - sudo systemctl status mysql.service
+  - sudo systemctl status rabbitmq-server.service
+  - sudo systemctl status postgresql.service
+  - sudo rabbitmqctl status
+  - mysqld --version
+  - postgres --version
+  - mysqld --print-defaults
+  - psql -U postgres -c 'SHOW config_file'
+  - cosign version
+  - git -v
+  - git-lfs
+  - hg --version
+  - svn --version
+  - clang --version
+  - cmake --version
+  - gcc --version
+  - ccache -V
+  - shellcheck --version
+  - shfmt -version
+  - docker version
+  - docker run hello-world
+  - docker compose version
+  - docker buildx version
+  - mongod --version
+  - gradle -version
+  - groovy -version
 
 
-# jobs:
-  # include:
+jobs:
+  include:
   # - os: freebsd
 
   # - dist: xenial
@@ -187,7 +151,8 @@ deploy:
   # - dist: xenial
   # - dist: bionic
   # - dist: focal
-  # - dist: jammy
+  - dist: jammy
+    group: dev
 
   # - os: osx
   #   osx_image: xcode11.3
