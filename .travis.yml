@@ -151,10 +151,7 @@ jobs:
   # - dist: xenial
   # - dist: bionic
   # - dist: focal
-  - dist: jammy
-    group: dev
-  - dist: jammy
-    group: stable
+  - dist: focal
   # - os: osx
   #   osx_image: xcode11.3
   # - os: osx
