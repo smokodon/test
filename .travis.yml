@@ -1,36 +1,4 @@
 
-os: linux
-dist: xenial
-language: shell
-
-install: skip
-script: sleep 10
-
-jobs:
-  include:
-    - dist: bionic
-      arch: arm64
-    - dist: focal
-      arch: arm64
-    - dist: jammy
-      arch: arm64
-    - dist: bionic
-      arch: arm64-graviton2
-      virt: lxd
-      group: edge
-    - dist: focal
-      arch: arm64-graviton2
-      virt: lxd
-      group: edge
-    - dist: jammy
-      arch: arm64-graviton2
-      group: edge
-deploy:
-  # dpl_version: 1.10.16
-  provider: script
-  on:
-    all_branches: true
-  script: echo "Hello"
 # language: shell
 # rvm:
 #  - 3.2.4
@@ -40,8 +8,8 @@ deploy:
 #   - postgresql
 #   - docker
 
-# script:
-  # - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+script:
+  - sudo apt update && sudo apt install redis -y
   # - export PATH="$HOME/.cargo/bin:$PATH"
   # - source ~/.bashrc
   # - rustc --version
@@ -148,8 +116,8 @@ deploy:
   # - groovy -version
 
 
-# jobs:
-  # include:
+jobs:
+  include:
   # - os: freebsd
 
   # - dist: xenial
@@ -184,7 +152,7 @@ deploy:
   # - dist: xenial
   # - dist: bionic
   # - dist: focal
-  # - dist: focal
+  - dist: jammy
   # - os: osx
   #   osx_image: xcode11.3
   # - os: osx
