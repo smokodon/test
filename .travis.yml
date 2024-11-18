@@ -9,7 +9,9 @@
 #   - docker
 
 script:
-  - sudo apt update && sudo apt install redis -y
+  - redis-server --version
+  - sudo apt update && sudo apt install redis redis-server -y
+  - redis-server --version
   # - export PATH="$HOME/.cargo/bin:$PATH"
   # - source ~/.bashrc
   # - rustc --version
@@ -151,7 +153,7 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  # - dist: focal
+  - dist: focal
   - dist: jammy
   # - os: osx
   #   osx_image: xcode11.3
