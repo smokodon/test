@@ -15,7 +15,8 @@ script:
   # - echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
   # - sudo apt-get update
   # - sudo apt-get install redis
-  - redis-server --version
+  - apt update
+  - sudo apt upgrade -y
   # - sudo apt update && sudo apt install redis redis-server -y
   # - redis-server --version
   # - export PATH="$HOME/.cargo/bin:$PATH"
@@ -161,7 +162,7 @@ jobs:
   # - dist: bionic
   # - dist: focal
   - dist: jammy
-    group: dev
+    group: stable
   # - os: osx
   #   osx_image: xcode11.3
   # - os: osx
