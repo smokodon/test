@@ -1,6 +1,6 @@
 
 language: php
-php: 8.1
+php: 8.1.30
 # rvm:
 #  - 3.2.4
 # services:
