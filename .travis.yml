@@ -160,7 +160,7 @@ jobs:
   # - dist: xenial
   # - dist: bionic
   - dist: focal
-    go: 1.23.2
+    go: 1.22
   - dist: focal
     go: 1.23.x
   - dist: focal
