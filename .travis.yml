@@ -1,6 +1,6 @@
 
-#language: go
-#go: 1.23.3
+language: go
+go: 1.23.2
 # rvm:
 #  - 3.2.4
 # services:
