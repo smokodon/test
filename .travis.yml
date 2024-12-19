@@ -165,8 +165,9 @@ jobs:
   - dist: bionic
     group: stable
     arch: s390x
-  # - dist: focal
-  #   arch: s390x
+  - dist: focal
+    arch: s390x
+    group: edge
   # - dist: jammy
   #   arch: s390x
 
