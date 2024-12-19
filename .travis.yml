@@ -138,8 +138,11 @@ jobs:
   # - dist: jammy
   #   arch: arm64
 
-  # - dist: xenial
-  #   arch: ppc64le
+  - dist: xenial
+    arch: ppc64le
+  - dist: xenial
+    arch: ppc64le
+    group: edge
   - dist: bionic
     group: edge
     arch: ppc64le
@@ -151,7 +154,11 @@ jobs:
   # - dist: jammy
   #   arch: ppc64le
 
-
+  - dist: xenial
+    arch: s390x
+  - dist: xenial
+    arch: s390x
+    group: edge
   - dist: bionic
     group: edge
     arch: s390x
