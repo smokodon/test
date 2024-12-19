@@ -138,32 +138,24 @@ jobs:
   # - dist: jammy
   #   arch: arm64
 
-  - dist: xenial
-    arch: ppc64le
-  - dist: xenial
-    arch: ppc64le
-    group: edge
-  - dist: bionic
-    group: edge
-    arch: ppc64le
-  - dist: bionic
-    group: stable
-    arch: ppc64le
-  # - dist: focal
+  # - dist: xenial
   #   arch: ppc64le
+  - dist: bionic
+    group: edge
+    arch: ppc64le
+  - dist: focal
+    arch: ppc64le
+    group: edge
   # - dist: jammy
   #   arch: ppc64le
 
-  - dist: xenial
-    arch: s390x
-  - dist: xenial
-    arch: s390x
-    group: edge
+  # - dist: xenial
+  #   arch: s390x
+  # - dist: xenial
+  #   arch: s390x
+  #   group: edge
   - dist: bionic
     group: edge
-    arch: s390x
-  - dist: bionic
-    group: stable
     arch: s390x
   - dist: focal
     arch: s390x
@@ -174,7 +166,7 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  - dist: focal
+  # - dist: focal
   # - os: osx
   #   osx_image: xcode11.3
   # - os: osx
