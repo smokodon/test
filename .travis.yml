@@ -140,19 +140,19 @@ jobs:
 
   # - dist: xenial
   #   arch: ppc64le
-  - dist: bionic
-    group: stable
-    arch: ppc64le
-  - dist: focal
-    arch: ppc64le
-    group: stable
+  # - dist: bionic
+  #   group: stable
+  #   arch: ppc64le
+  # - dist: focal
+  #   arch: ppc64le
+  #   group: stable
 
-  - dist: bionic
-    group: edge
-    arch: ppc64le
-  - dist: focal
-    arch: ppc64le
-    group: edge
+  # - dist: bionic
+  #   group: edge
+  #   arch: ppc64le
+  # - dist: focal
+  #   arch: ppc64le
+  #   group: edge
   # - dist: jammy
   #   arch: ppc64le
 
@@ -161,19 +161,20 @@ jobs:
   # - dist: xenial
   #   arch: s390x
   #   group: edge
-  - dist: bionic
-    group: stable
-    arch: s390x
-  - dist: focal
-    arch: s390x
-    group: stable
+  # - dist: bionic
+  #   group: stable
+  #   arch: s390x
+  # - dist: focal
+  #   arch: s390x
+  #   group: stable
 
-  - dist: bionic
-    group: edge
-    arch: s390x
-  - dist: focal
-    arch: s390x
-    group: edge
+  # - dist: bionic
+  #   group: edge
+  #   arch: s390x
+  # - dist: focal
+  #   arch: s390x
+  #   group: edge
+
   # - dist: jammy
   #   arch: s390x
 
