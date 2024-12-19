@@ -150,9 +150,9 @@ jobs:
   # - dist: bionic
   #   group: edge
   #   arch: ppc64le
-  # - dist: focal
-  #   arch: ppc64le
-  #   group: edge
+  - dist: focal
+    arch: ppc64le
+    group: edge
   # - dist: jammy
   #   arch: ppc64le
 
@@ -171,9 +171,9 @@ jobs:
   # - dist: bionic
   #   group: edge
   #   arch: s390x
-  # - dist: focal
-  #   arch: s390x
-  #   group: edge
+  - dist: focal
+    arch: s390x
+    group: edge
 
   # - dist: jammy
   #   arch: s390x
