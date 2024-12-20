@@ -16,7 +16,8 @@ script:
   # - echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
   # - sudo apt-get update
   # - sudo apt-get install redis
-  - dpkg --get-selections
+  - dpkg-query -W -f='${binary:Package} ${Version}\n' > installed_packages_with_versions.txt
+  - cat installed_packages_with_versions.txt
   # - sudo apt update && sudo apt install redis redis-server -y
   # - redis-server --version
   # - export PATH="$HOME/.cargo/bin:$PATH"
