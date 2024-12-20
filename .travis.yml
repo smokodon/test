@@ -1,6 +1,6 @@
 
-language: go
-go: 1.23.2
+#language: go
+#go: 1.23.2
 # rvm:
 #  - 3.2.4
 # services:
@@ -16,7 +16,7 @@ script:
   # - echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
   # - sudo apt-get update
   # - sudo apt-get install redis
-  - go version
+  - dpkg --get-selections
   # - sudo apt update && sudo apt install redis redis-server -y
   # - redis-server --version
   # - export PATH="$HOME/.cargo/bin:$PATH"
@@ -101,28 +101,28 @@ script:
   # - sudo systemctl status rabbitmq-server.service
   # - sudo systemctl status postgresql.service
   # - sudo rabbitmqctl status
-  - mysqld --version
-  - postgres --version
-  - mysqld --print-defaults
-  - psql -U postgres -c 'SHOW config_file'
-  - cosign version
-  - git -v
-  - git-lfs
-  - hg --version
-  - svn --version
-  - clang --version
-  - cmake --version
-  - gcc --version
-  - ccache -V
-  - shellcheck --version
-  - shfmt -version
-  - docker version
-  - docker run hello-world
-  - docker compose version
-  - docker buildx version
-  - mongod --version
-  - gradle -version
-  - groovy -version
+  # - mysqld --version
+  # - postgres --version
+  # - mysqld --print-defaults
+  # - psql -U postgres -c 'SHOW config_file'
+  # - cosign version
+  # - git -v
+  # - git-lfs
+  # - hg --version
+  # - svn --version
+  # - clang --version
+  # - cmake --version
+  # - gcc --version
+  # - ccache -V
+  # - shellcheck --version
+  # - shfmt -version
+  # - docker version
+  # - docker run hello-world
+  # - docker compose version
+  # - docker buildx version
+  # - mongod --version
+  # - gradle -version
+  # - groovy -version
 
 
 jobs:
@@ -150,9 +150,14 @@ jobs:
   # - dist: bionic
   #   group: edge
   #   arch: ppc64le
-  - dist: focal
-    arch: ppc64le
-    group: edge
+
+  # - dist: focal
+  #   arch: ppc64le
+  #   group: edge
+  # - dist: focal
+  #   arch: ppc64le
+  #   group: stable
+
   # - dist: jammy
   #   arch: ppc64le
 
@@ -171,9 +176,13 @@ jobs:
   # - dist: bionic
   #   group: edge
   #   arch: s390x
-  - dist: focal
-    arch: s390x
-    group: edge
+
+  # - dist: focal
+  #   arch: s390x
+  #   group: edge
+  # - dist: focal
+  #   arch: s390x
+  #   group: stable
 
   # - dist: jammy
   #   arch: s390x
