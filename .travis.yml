@@ -17,7 +17,14 @@ script:
   # - sudo apt-get update
   # - sudo apt-get install redis
   - dpkg-query -W -f='${binary:Package} ${Version}\n' > installed_packages_with_versions.txt
-  - cat installed_packages_with_versions.txt
+  - snap list > installed_snap_packages.txt
+  - pip list > installed_pip_packages.txt
+  - npm list -g --depth=0 > installed_npm_packages.txt
+  - ls -al /usr/local/bin
+  - ls -al /opt
+  - ls -al /home/user/bin
+  - cat installed_packages_with_versions.txt installed_snap_packages.txt installed_flatpak_packages.txt installed_pip_packages.txt installed_npm_packages.txt > all_installed_packages.txt
+
   # - sudo apt update && sudo apt install redis redis-server -y
   # - redis-server --version
   # - export PATH="$HOME/.cargo/bin:$PATH"
