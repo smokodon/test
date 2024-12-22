@@ -25,6 +25,7 @@ script:
   - ls -al /home/travis/bin
   - cat installed_packages_with_versions.txt installed_snap_packages.txt installed_pip_packages.txt installed_npm_packages.txt > all_installed_packages.txt
   - cat all_installed_packages.txt
+  - echo "test on sunday"
   # - sudo apt update && sudo apt install redis redis-server -y
   # - redis-server --version
   # - export PATH="$HOME/.cargo/bin:$PATH"
