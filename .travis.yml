@@ -1,6 +1,6 @@
 
-#language: go
-#go: 1.23.2
+language: go
+go: master
 # rvm:
 #  - 3.2.4
 # services:
@@ -10,22 +10,18 @@
 #   - docker
 
 script:
-  # - sudo apt-get install lsb-release curl gpg
-  # - curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
-  # - sudo chmod 644 /usr/share/keyrings/redis-archive-keyring.gpg
-  # - echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
-  # - sudo apt-get update
-  # - sudo apt-get install redis
-  - dpkg-query -W -f='${binary:Package} ${Version}\n' > installed_packages_with_versions.txt
-  - snap list > installed_snap_packages.txt
-  - pip list > installed_pip_packages.txt
-  - npm list -g --depth=0 > installed_npm_packages.txt
-  - ls -al /usr/local/bin
-  - ls -al /opt
-  - ls -al /home/travis/bin
-  - cat installed_packages_with_versions.txt installed_snap_packages.txt installed_pip_packages.txt installed_npm_packages.txt > all_installed_packages.txt
-  - cat all_installed_packages.txt
-  - echo "test on sunday"
+  - go version
+
+  # - dpkg-query -W -f='${binary:Package} ${Version}\n' > installed_packages_with_versions.txt
+  # - snap list > installed_snap_packages.txt
+  # - pip list > installed_pip_packages.txt
+  # - npm list -g --depth=0 > installed_npm_packages.txt
+  # - ls -al /usr/local/bin
+  # - ls -al /opt
+  # - ls -al /home/travis/bin
+  # - cat installed_packages_with_versions.txt installed_snap_packages.txt installed_pip_packages.txt installed_npm_packages.txt > all_installed_packages.txt
+  # - cat all_installed_packages.txt
+
   # - sudo apt update && sudo apt install redis redis-server -y
   # - redis-server --version
   # - export PATH="$HOME/.cargo/bin:$PATH"
@@ -200,8 +196,6 @@ jobs:
   # - dist: xenial
   # - dist: bionic
   - dist: focal
-  - dist: focal
-    group: edge
   # - os: osx
   #   osx_image: xcode11.3
   # - os: osx
