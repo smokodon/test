@@ -1,6 +1,6 @@
 
 language: go
-go: master
+go: 1.23.x
 # rvm:
 #  - 3.2.4
 # services:
