@@ -20,7 +20,7 @@ script:
   - cd build
   - ../configure --prefix=/usr/local/glibc-2.40
   - make -j4 > /dev/null 2>&1
-  - sudo make install
+  - sudo make install > /dev/null 2>&1
   - export LD_LIBRARY_PATH=/usr/local/glibc-2.40/lib:$LD_LIBRARY_PATH
   - ldd --version
 
