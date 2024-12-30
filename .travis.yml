@@ -10,6 +10,8 @@
 #   - docker
 
 script:
+  - nvm install 18.20.2
+  - nvm use 18.20.2
   - node --version
   - ldd --version
   - mkdir ~/glibc_update
