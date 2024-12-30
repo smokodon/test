@@ -14,7 +14,7 @@ script:
   - mkdir ~/glibc_update
   - cd ~/glibc_update
   - wget http://ftp.gnu.org/gnu/libc/glibc-2.40.tar.gz
-  - tar -xvfq glibc-2.40.tar.gz
+  - tar -xvf glibc-2.40.tar.gz > /dev/null 2>&1
   - cd glibc-2.40
   - mkdir build
   - cd build
