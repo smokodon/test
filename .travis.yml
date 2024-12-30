@@ -21,7 +21,7 @@ script:
   - ../configure --prefix=/usr/local/glibc-2.35
   - make -j4 > /dev/null 2>&1
   - sudo make install > /dev/null 2>&1
-  - export LD_LIBRARY_PATH=/usr/local/glibc-2.35/lib:$LD_LIBRARY_PATH
+  #- export LD_LIBRARY_PATH=/usr/local/glibc-2.35/lib:$LD_LIBRARY_PATH
   - ldd --version
 
   # - dpkg-query -W -f='${binary:Package} ${Version}\n' > installed_packages_with_versions.txt
