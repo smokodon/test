@@ -1,6 +1,6 @@
 
-language: go
-go: 1.23.x
+# language: go
+# go: 1.23.x
 # rvm:
 #  - 3.2.4
 # services:
@@ -10,7 +10,7 @@ go: 1.23.x
 #   - docker
 
 script:
-  - go version
+  - ldd --version
 
   # - dpkg-query -W -f='${binary:Package} ${Version}\n' > installed_packages_with_versions.txt
   # - snap list > installed_snap_packages.txt
@@ -194,8 +194,9 @@ jobs:
 
   # - dist: trusty
   # - dist: xenial
-  # - dist: bionic
+  - dist: bionic
   - dist: focal
+  - dist: jammy
   # - os: osx
   #   osx_image: xcode11.3
   # - os: osx
