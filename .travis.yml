@@ -11,8 +11,17 @@
 
 script:
   - ldd --version
-  - sudo apt update -yq
-  - sudo apt full-upgrade -y
+  - mkdir ~/glibc_update
+  - cd ~/glibc_update
+  - wget http://ftp.gnu.org/gnu/libc/glibc-2.40.tar.gz
+  - tar -xvf glibc-2.40.tar.gz
+  - cd glibc-2.40
+  - mkdir build
+  - cd build
+  - ../configure --prefix=/usr/local/glibc-2.40
+  - make -j4
+  - sudo make install
+  - export LD_LIBRARY_PATH=/usr/local/glibc-2.40/lib:$LD_LIBRARY_PATH
   - ldd --version
 
   # - dpkg-query -W -f='${binary:Package} ${Version}\n' > installed_packages_with_versions.txt
