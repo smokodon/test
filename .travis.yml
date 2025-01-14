@@ -1,6 +1,6 @@
 
 language: python
-python: 3.9
+python: 3.9.21
 # rvm:
 #  - 3.2.4
 # services:
