@@ -10,21 +10,9 @@
 #   - docker
 
 script:
-  - ldd --version
-  - mkdir ~/glibc_update
-  - cd ~/glibc_update
-  - wget http://ftp.gnu.org/gnu/libc/glibc-2.35.tar.gz
-  - tar -xvf glibc-2.35.tar.gz > /dev/null 2>&1
-  - cd glibc-2.35
-  - mkdir build
-  - cd build
-  - ../configure --prefix=/usr/local/glibc-2.35
-  - make -j4 > /dev/null 2>&1
-  - sudo make install > /dev/null 2>&1
-  #- export LD_LIBRARY_PATH=/usr/local/glibc-2.35/lib:$LD_LIBRARY_PATH
-  - nvm install 18.20.2
-  - nvm use 18.20.2
-  - node --version
+  - git config --global user.name "test"
+  - git config --global user.email "test@example.com"
+  - git clone https://github.com/travis-ci/travis-web.git
 
   # - dpkg-query -W -f='${binary:Package} ${Version}\n' > installed_packages_with_versions.txt
   # - snap list > installed_snap_packages.txt
@@ -162,8 +150,8 @@ jobs:
   # - dist: bionic
   #   group: stable
   #   arch: ppc64le
-  # - dist: focal
-  #   arch: ppc64le
+  - dist: focal
+    arch: ppc64le
   #   group: stable
 
   # - dist: bionic
@@ -208,7 +196,7 @@ jobs:
 
   # - dist: trusty
   # - dist: xenial
-  - dist: bionic
+  # - dist: bionic
   # - dist: jammy
   # - os: osx
   #   osx_image: xcode11.3
