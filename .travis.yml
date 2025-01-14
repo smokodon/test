@@ -12,7 +12,8 @@
 script:
   - git config --global user.name "test"
   - git config --global user.email "test@example.com"
-  - git clone https://github.com/travis-ci/travis-web.git
+  - git clone --filter=blob:none --quiet https://github.com/travis-ci/travis-web.git
+  - ls -al
 
   # - dpkg-query -W -f='${binary:Package} ${Version}\n' > installed_packages_with_versions.txt
   # - snap list > installed_snap_packages.txt
