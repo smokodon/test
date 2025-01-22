@@ -6,94 +6,12 @@ language: shell
 
 jobs:
   include:
-    - language: bash
-      name: freebsd
-      os: freebsd
-      group: dev
-      install:
-        - pushd /opt/pyenv/
-        - sudo git config --global --add safe.directory /opt/pyenv
-        - sudo git checkout master
-        - sudo git pull
-        - popd
-        - python --version
-        - sudo python -m pip install virtualenv==20.0.2
-    - dist: jammy
-      env:
-        - RELEASE=jammy
-      name: jammy
-    - dist: focal
-      env:
-        - RELEASE=focal
-      name: focal   
-    - dist: bionic
-      env:
-        - RELEASE=bionic
-      name: bionic
-    - dist: xenial
-      env:
-        - RELEASE=xenial
-      name: xenial
-    - arch: ppc64le
-      dist: jammy
-      env:
-        - RELEASE=jammy
-      name: jammy-ppc64le
     - arch: ppc64le
       dist: focal
       env:
         - RELEASE=focal
       name: focal-ppc64le
-    - arch: ppc64le
-      dist: bionic
-      env:
-        - RELEASE=bionic
-      name: bionic-ppc64le
-    - arch: ppc64le
-      dist: xenial
-      env:
-        - RELEASE=xenial
-      name: xenial-ppc64le
-    - arch: s390x
-      dist: jammy
-      env:
-        - RELEASE=jammy
-      name: jammy-s390x
-    - arch: s390x
-      dist: focal
-      env:
-        - RELEASE=focal
-      name: focal-s390x
-    - arch: s390x
-      dist: bionic
-      env:
-        - RELEASE=bionic
-      name: bionic-s390x
-    - arch: s390x
-      dist: xenial
-      env:
-        - RELEASE=xenial
-      name: xenial-s390x
-    - arch: arm64
-      dist: jammy
-      env:
-        - RELEASE=jammy
-      name: jammy-arm64
-    - arch: arm64
-      dist: focal
-      env:
-        - RELEASE=focal
-      name: focal-arm64
-    - arch: arm64
-      dist: bionic
-      env:
-        - RELEASE=bionic
-      name: bionic-arm64
-    - arch: arm64
-      dist: xenial
-      env:
-        - RELEASE=xenial
-      name: xenial-arm64
+      
 
 allow_failures:
   - name: freebsd
