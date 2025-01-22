@@ -13,13 +13,10 @@ jobs:
       name: focal-ppc64le
       
 
-allow_failures:
-  - name: freebsd
-
 env:
   global:
-    - VERSION=3.13-dev
-  # - ALIAS=nightly
+    - VERSION=3.12.8
+    - ALIAS=3.12
 
 install:
   # - git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
