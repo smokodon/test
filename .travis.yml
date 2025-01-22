@@ -24,6 +24,8 @@ env:
 install:
   # - git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
   # - pyenv update
+  - sudo chmod +x ./bin/compile
+  - sudo chmod +x ./bin/archive
   - pushd /opt/pyenv/
   - sudo git config --global --add safe.directory /opt/pyenv
   - sudo git checkout master
