@@ -1,99 +1,211 @@
-language: shell
 
-# stages:
-#   - build
-# stage: build
+language: python
+python: 3.12
+# rvm:
+#  - 3.2.4
+# services:
+#   - mysql
+#   - rabbitmq
+#   - postgresql
+#   - docker
+
+script:
+  - python
+  - git config --global user.name "test"
+  - git config --global user.email "test@example.com"
+  - git clone --filter=blob:none --quiet https://github.com/travis-ci/travis-web.git
+  - ls -al
+
+  # - dpkg-query -W -f='${binary:Package} ${Version}\n' > installed_packages_with_versions.txt
+  # - snap list > installed_snap_packages.txt
+  # - pip list > installed_pip_packages.txt
+  # - npm list -g --depth=0 > installed_npm_packages.txt
+  # - ls -al /usr/local/bin
+  # - ls -al /opt
+  # - ls -al /home/travis/bin
+  # - cat installed_packages_with_versions.txt installed_snap_packages.txt installed_pip_packages.txt installed_npm_packages.txt > all_installed_packages.txt
+  # - cat all_installed_packages.txt
+
+  # - sudo apt update && sudo apt install redis redis-server -y
+  # - redis-server --version
+  # - export PATH="$HOME/.cargo/bin:$PATH"
+  # - source ~/.bashrc
+  # - rustc --version
+  # - sudo apt-get install -y libgirepository1.0-dev libdbus-1-dev libsystemd-dev libcurl4-openssl-dev python3-testresources
+  #- /usr/bin/python3 -m pip install --upgrade pip breezy setuptools wheel pycurl --no-binary :all:
+  #- sleep 5000
+  # - pip3 install --upgrade pip
+  # - pip3 install pip-review
+  # - pip-review --auto
+
+  #- sudo add-apt-repository -y ppa:cloud-init-dev/daily
+  # - gem list
+  # - sudo cat /etc/cloud/cloud.cfg
+  #- gem list
+  # - gem update --default
+  # - gem update
+  # - sudo gem update
+  # - sudo gem update --default
+  # - gem list
+
+  # - sudo DI_LOG=stderr /usr/lib/cloud-init/ds-identify --force
+  # - sudo cloud-init clean --logs
+  # - sudo cloud-init init --local
+  # - sudo cloud-init init
+  # - echo "debugging"
+  # - sudo dmesg -T | grep -i -e warning -e error -e fatal -e exception
+  # - systemctl --failed
+  #- sudo systemctl status -l cloud-config.service cloud-final.service cloud-init-local.service cloud-init.service
+  # - sudo systemctl list-jobs --after
+
+# language: java
+# jdk: semeru11
+  # - sudo rm -rf /Library/Developer/CommandLineTools
+  # - Install | sudo xcode-select --install
+  # - curl --insecure -O https://libssh2.org/download/libssh2-1.11.1.tar.gz
+  # - brew install libssh2
+
+  #- rvm list known
+  #- HOMEBREW_NO_AUTO_UPDATE=1 brew reinstall openssl libyaml readline
+  #- export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl) --with-readline-dir=$(brew --prefix readline)"
+  # - rvm -v  
+  # - rvm requirements
+  # - rvm pkg install libyaml openssl
+  # - rvm reinstall all --force
+  #- rvm user gemsets
+
+
+  # - rvm get stable
+  # - rvm reload
+  # - rvm install 3.2.4 --verify-downloads 1 --disable-install-doc -C --without-tcl,--without-tk,--without-gmp
+  # - rvm use 3.2.5 --default
+
+
+  #- rvm use 3.2 --install --binary --fuzzy --with-openssl-dir=$HOME/.rvm/usr
+  # - export VERSION=3.2.5
+  # - export ALIAS=3.2
+  # - unset JRUBY_OPTS
+  #- brew install gcc
+  # - chmod +x ./scripts/script1.sh
+  # - ./scripts/script1.sh
+  # - gcc --version
+  # - rvm remove 1.8.7
+  # - rvm reload
+  # - rvm reset
+  # - rvm cleanup all
+  # - rvm autolibs homebrew
+  # - rvm use --install 2.7.5
+  # - echo $PATH
+  # - go version
+  # - rvm get stable
+  # - curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain stable
+  # - source "$HOME/.cargo/env"
+  # - rvm install ruby-3.2.5 --enable-yjit --verify-downloads 1 --disable-install-doc -C --without-tcl,--without-tk,--without-gmp
+  # - cat /Users/travis/.rvm/log/*_ruby-3.2.5/configure.log
+  # - rvm prepare ruby-3.2.5
+
+
+  # - java --version
+  # - sudo systemctl status mysql.service
+  # - sudo systemctl status rabbitmq-server.service
+  # - sudo systemctl status postgresql.service
+  # - sudo rabbitmqctl status
+  # - mysqld --version
+  # - postgres --version
+  # - mysqld --print-defaults
+  # - psql -U postgres -c 'SHOW config_file'
+  # - cosign version
+  # - git -v
+  # - git-lfs
+  # - hg --version
+  # - svn --version
+  # - clang --version
+  # - cmake --version
+  # - gcc --version
+  # - ccache -V
+  # - shellcheck --version
+  # - shfmt -version
+  # - docker version
+  # - docker run hello-world
+  # - docker compose version
+  # - docker buildx version
+  # - mongod --version
+  # - gradle -version
+  # - groovy -version
+
 
 jobs:
   include:
-    - arch: ppc64le
-      dist: focal
-      env:
-        - RELEASE=focal
-      name: focal-ppc64le
-      
+  # - os: freebsd
 
-env:
-  global:
-    - VERSION=3.12.8
-    - ALIAS=3.12
+  # - dist: xenial
+  #   arch: arm64
+  # - dist: bionic
+  #   arch: arm64
+  # - dist: focal
+  #   arch: arm64
+  # - dist: jammy
+  #   arch: arm64
 
-install:
-  # - git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
-  # - pyenv update
-  - sudo chmod +x ./bin/compile
-  - sudo chmod +x ./bin/archive
-  - pushd /opt/pyenv/
-  - sudo git config --global --add safe.directory /opt/pyenv
-  - sudo git checkout master
-  - sudo git pull
-  - popd
-  - alias python=python3
-  - python -m pip install virtualenv
-  - sudo pip install --upgrade pip
-  - sudo pip install setuptools
-  #- if [[ $(lsb_release -cs) == "jammy" &&  $(uname -m) == "ppc64le" ]]; then alias python=python3; fi
-  # As of this writing:
-  # * Py2 is EOL
-  #   * however, pip (https://pip.pypa.io/en/latest/develss/#python-2-support) intends to keep supporting it as long as practical
-  #   * Virtualenv also supports old versions (e.g. 3.4) far longer than PSF does
-  # * all images have `virtualenv` on PATH but vary in whether it's per-user or global and which Python installation it belongs to
-  #   * some of these preinstalled `virtualenv`s don't support 3.9+
-  # * selected amd64 images have 3.7.* preinstalled with pip; multiarch have pyenv not on PATH, with no alt versions
-  # * xenial's provided Py3, 3.5, is in security fixes mode, due for EOL in 06.2020
-  #
-  # So it seems to be safe to use `virtualenv` with system's Py2 if we update it, for the foreseeable future.
-  # FIXME: use an officially supported alt Python version for `virtualenv` instead once one is available in all images.
-  - |
-    # `cat` avoids "broken pipe"; `freeze` instead of `list` avoids a warning about future output format change
-    if (python -m pip freeze --user | cat | grep -qP '^virtualenv=='); then
-      python -m pip install --upgrade --user virtualenv
-    elif (python -m pip freeze | cat | grep -qP '^virtualenv=='); then
-      sudo python -m pip install --upgrade virtualenv
-    else
-      sudo python -m pip install virtualenv
-    fi
+  # - dist: xenial
+  #   arch: ppc64le
+  # - dist: bionic
+  #   group: stable
+  #   arch: ppc64le
+  - dist: focal
+    arch: ppc64le
+  #   group: stable
 
-before_script:
-  - "export INSTALL_DEST=${INSTALL_DEST:-/opt/python}"
-  - 'export LSB_RELEASE=${LSB_RELEASE:-$(lsb_release -rs || if [[ $(uname -a) == *"FreeBSD"* ]]; then echo $(uname -r | rev | cut -c9- | rev); else false; fi || echo ${$(sw_vers -productVersion)%*.*})}'
-  - 'export OS_NAME=${OS_NAME:-$((lsb_release -is || if [[ $(uname -a) == *"FreeBSD"* ]]; then echo $(uname | cut -c1-); else false; fi || echo "osx") | tr "A-Z" "a-z")}'
-  - "export ARCH=${ARCH:-$(uname -m)}"
-  # pipenv is supported for python 2.7 and 3.4 and higher.
-  - "export PACKAGES=${PACKAGES:-pip nose pytest mock wheel pipenv dataclasses}"
-  - export PYTHON_CONFIGURE_OPTS="--with-wide-unicode --enable-shared --enable-ipv6 --enable-loadable-sqlite-extensions --with-computed-gotos $CONFIGURE_OPTS"
-  - sudo chown -R $USER $HOME/.cache
-  - |
-    if [[ $VERSION = pypy*-dev ]]; then
-      if ! [[ -f ~/virtualenv/pypy/bin/activate ]]; then
-        curl -O https://s3.amazonaws.com/travis-python-archives/binaries/ubuntu/$(lsb_release -rs)/x86_64/pypy2.7-5.9.0.tar.bz2
-        sudo tar xf pypy*.tar.bz2 -C /
-      fi
-      source ~/virtualenv/pypy/bin/activate
-      python --version
-    fi
+  # - dist: bionic
+  #   group: edge
+  #   arch: ppc64le
 
-script: 
-  - sudo apt-get update && sudo apt-get install build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev -y
-  - ./bin/compile
+  # - dist: focal
+  #   arch: ppc64le
+  #   group: edge
+  # - dist: focal
+  #   arch: ppc64le
+  #   group: stable
 
-after_success: ./bin/archive
+  # - dist: jammy
+  #   arch: ppc64le
 
-after_failure: cat /tmp/python-build.*.log
+  # - dist: xenial
+  #   arch: s390x
+  # - dist: xenial
+  #   arch: s390x
+  #   group: edge
+  # - dist: bionic
+  #   group: stable
+  #   arch: s390x
+  # - dist: focal
+  #   arch: s390x
+  #   group: stable
 
-addons:
-  apt:
-    packages:
-      - openssl
-      - libssl-dev
-      - mercurial
-      - python3-pip
-  artifacts:
-    paths:
-      - $LSB_RELEASE/
-    target_paths:
-      - /binaries/$OS_NAME/$LSB_RELEASE/$ARCH
-    branch:
-      - default
-    cache_control: public
+  # - dist: bionic
+  #   group: edge
+  #   arch: s390x
+
+  # - dist: focal
+  #   arch: s390x
+  #   group: edge
+  # - dist: focal
+  #   arch: s390x
+  #   group: stable
+
+  # - dist: jammy
+  #   arch: s390x
+
+  # - dist: trusty
+  # - dist: xenial
+  # - dist: bionic
+  # - dist: focal
+  # - dist: jammy
+  # - os: osx
+  #   osx_image: xcode11.3
+  # - os: osx
+  #   osx_image: xcode12.3
+  # - os: osx
+  #   osx_image: xcode12.4
+
 
