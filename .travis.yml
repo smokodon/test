@@ -78,7 +78,11 @@ script:
   # - export ALIAS=3.2
   # - unset JRUBY_OPTS
   #- brew install gcc
-  - ls -a ~ | grep .bashrc
+  - pwd
+  - ls -al
+  - cd
+  - pwd
+  - ls -al
   # - chmod +x ./scripts/script1.sh
   # - sudo ./scripts/script1.sh
   # - gcc --version
