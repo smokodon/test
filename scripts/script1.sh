@@ -2,8 +2,6 @@
 
 set -o errexit
 
-main() {
-
   local version="1.10.14"
 
   echo "Download and extract Ant"
@@ -14,9 +12,6 @@ main() {
   ANT_HOME="/usr/local/ant"
   PATH="$PATH:/usr/local/ant/bin"
   export ANT_HOME
-  sudo export PATH >> /etc/profile
+  export PATH >> /etc/profile
   cat /etc/profile
 
-}
-
-main "$@"
