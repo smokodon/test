@@ -14,7 +14,7 @@ main() {
   ANT_HOME="/usr/local/ant"
   PATH="$PATH:/usr/local/ant/bin"
   export ANT_HOME
-  export PATH >> /etc/profile
+  sudo export PATH >> /etc/profile
   cat /etc/profile
 
 }
