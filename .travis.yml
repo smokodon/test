@@ -1,6 +1,4 @@
 
-language: python
-python: 3.12
 # rvm:
 #  - 3.2.4
 # services:
@@ -10,12 +8,6 @@ python: 3.12
 #   - docker
 
 script:
-  - python
-  - git config --global user.name "test"
-  - git config --global user.email "test@example.com"
-  - git clone --filter=blob:none --quiet https://github.com/travis-ci/travis-web.git
-  - ls -al
-
   # - dpkg-query -W -f='${binary:Package} ${Version}\n' > installed_packages_with_versions.txt
   # - snap list > installed_snap_packages.txt
   # - pip list > installed_pip_packages.txt
@@ -86,8 +78,8 @@ script:
   # - export ALIAS=3.2
   # - unset JRUBY_OPTS
   #- brew install gcc
-  # - chmod +x ./scripts/script1.sh
-  # - ./scripts/script1.sh
+  - chmod +x ./scripts/script1.sh
+  - ./scripts/script1.sh
   # - gcc --version
   # - rvm remove 1.8.7
   # - rvm reload
@@ -152,8 +144,8 @@ jobs:
   # - dist: bionic
   #   group: stable
   #   arch: ppc64le
-  - dist: focal
-    arch: ppc64le
+  # - dist: focal
+  #   arch: ppc64le
   #   group: stable
 
   # - dist: bionic
@@ -199,7 +191,7 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  # - dist: focal
+  - dist: focal
   # - dist: jammy
   # - os: osx
   #   osx_image: xcode11.3
