@@ -5,9 +5,9 @@
   tar xzf apache-ant-$version-bin.tar.gz
   sudo mv apache-ant-$version/ /usr/local/ant
   echo "Add Ant variables to a profile"
-  ANT_HOME="/usr/local/ant"
+  ANT_HOME=/usr/local/ant
   PATH="$PATH:/usr/local/ant/bin"
   export ANT_HOME
-  export PATH >> /etc/profile
+  echo 'export PATH="$PATH:/usr/local/ant/bin"' >> /etc/profile
   cat /etc/profile
 
