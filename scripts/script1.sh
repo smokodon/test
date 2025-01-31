@@ -8,6 +8,6 @@
   ANT_HOME=/usr/local/ant
   PATH="$PATH:/usr/local/ant/bin"
   export ANT_HOME
-  echo 'export PATH="$PATH:/usr/local/ant/bin"' >> /etc/profile
+  export PATH="$PATH:/usr/local/ant/bin" >> /etc/profile
   cat /etc/profile
 
