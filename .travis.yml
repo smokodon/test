@@ -1,6 +1,4 @@
 
-language: python
-python: 3.11
 # rvm:
 #  - 3.2.4
 # services:
@@ -164,7 +162,16 @@ jobs:
 
   - dist: jammy
     arch: ppc64le
-
+    language: python
+    python: 3.11
+  - dist: jammy
+    arch: ppc64le
+    language: python
+    python: 3.9
+  - dist: jammy
+    arch: ppc64le
+    language: python
+    python: 3.12
   # - dist: xenial
   #   arch: s390x
   # - dist: xenial
