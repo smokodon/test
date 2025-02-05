@@ -1,4 +1,6 @@
 
+language: python
+python: 3.11
 # rvm:
 #  - 3.2.4
 # services:
@@ -78,11 +80,7 @@ script:
   # - export ALIAS=3.2
   # - unset JRUBY_OPTS
   #- brew install gcc
-  - pwd
-  - ls -al
-  - cd
-  - pwd
-  - ls -al
+  - python --version
   # - chmod +x ./scripts/script1.sh
   # - sudo ./scripts/script1.sh
   # - gcc --version
@@ -164,8 +162,8 @@ jobs:
   #   arch: ppc64le
   #   group: stable
 
-  # - dist: jammy
-  #   arch: ppc64le
+  - dist: jammy
+    arch: ppc64le
 
   # - dist: xenial
   #   arch: s390x
@@ -196,7 +194,7 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  - dist: focal
+  #- dist: focal
   # - dist: jammy
   # - os: osx
   #   osx_image: xcode11.3
@@ -204,5 +202,3 @@ jobs:
   #   osx_image: xcode12.3
   # - os: osx
   #   osx_image: xcode12.4
-
-
