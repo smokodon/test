@@ -78,7 +78,7 @@ script:
   # - export ALIAS=3.2
   # - unset JRUBY_OPTS
   #- brew install gcc
-  - python --version
+  - sudo apt-get -y install build-essential libncurses-dev git ruby3.2 libruby3.2 ruby3.2-dev rsync
   # - chmod +x ./scripts/script1.sh
   # - sudo ./scripts/script1.sh
   # - gcc --version
@@ -160,18 +160,8 @@ jobs:
   #   arch: ppc64le
   #   group: stable
 
-  - dist: jammy
-    arch: ppc64le
-    language: python
-    python: 3.11
-  - dist: jammy
-    arch: ppc64le
-    language: python
-    python: 3.9
-  - dist: jammy
-    arch: ppc64le
-    language: python
-    python: 3.12
+  # - dist: jammy
+  #   arch: ppc64le
   # - dist: xenial
   #   arch: s390x
   # - dist: xenial
@@ -200,7 +190,7 @@ jobs:
 
   # - dist: trusty
   # - dist: xenial
-  # - dist: bionic
+  - dist: bionic
   #- dist: focal
   # - dist: jammy
   # - os: osx
