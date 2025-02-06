@@ -79,7 +79,7 @@ script:
   # - unset JRUBY_OPTS
   #- brew install gcc
   - sudo apt update -y
-  - sudo apt-get -y install build-essential libncurses-dev git ruby2.6 libruby2.6 ruby2.6-dev rsync
+  - sudo apt-get -y install build-essential libncurses-dev git ruby ruby-dev rsync
   - sudo gem install bundler -v 2.3.27 --no-document
   # - chmod +x ./scripts/script1.sh
   # - sudo ./scripts/script1.sh
