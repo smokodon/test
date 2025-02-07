@@ -79,8 +79,7 @@ script:
   # - unset JRUBY_OPTS
   #- brew install gcc
   - sudo apt update -y
-  - sudo apt-get -y install build-essential libncurses-dev git ruby ruby-dev rsync
-  - sudo gem install bundler -v 2.3.27 --no-document
+  - sudo apt-get -y install python3-virtualenv
   # - chmod +x ./scripts/script1.sh
   # - sudo ./scripts/script1.sh
   # - gcc --version
@@ -192,9 +191,9 @@ jobs:
 
   # - dist: trusty
   # - dist: xenial
-  - dist: bionic
+  # - dist: bionic
   #- dist: focal
-  # - dist: jammy
+  - dist: jammy
   # - os: osx
   #   osx_image: xcode11.3
   # - os: osx
