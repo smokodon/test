@@ -79,7 +79,7 @@ script:
   # - unset JRUBY_OPTS
   #- brew install gcc
   - sudo apt update -y
-  - sudo apt-get update && sudo apt-get install -y ragel re2c readline-common resolvconf rsync rsyslog run-one screen sed sensible-utils
+  - sudo apt install -y python3-mercurial
   # - chmod +x ./scripts/script1.sh
   # - sudo ./scripts/script1.sh
   # - gcc --version
