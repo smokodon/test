@@ -78,8 +78,7 @@ script:
   # - export ALIAS=3.2
   # - unset JRUBY_OPTS
   #- brew install gcc
-  - sudo apt update -y
-  - sudo apt install -y python3-mercurial
+  - pyenv update
   # - chmod +x ./scripts/script1.sh
   # - sudo ./scripts/script1.sh
   # - gcc --version
