@@ -190,8 +190,8 @@ jobs:
 
   # - dist: trusty
   # - dist: xenial
-  # - dist: bionic
-  #- dist: focal
+  - dist: bionic
+  - dist: focal
   - dist: jammy
   # - os: osx
   #   osx_image: xcode11.3
