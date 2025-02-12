@@ -1,11 +1,11 @@
 
 # rvm:
 #  - 3.2.4
-# services:
-#   - mysql
-#   - rabbitmq
-#   - postgresql
-#   - docker
+services:
+  - mysql
+  - rabbitmq
+  - postgresql
+  - docker
 
 script:
   # - dpkg-query -W -f='${binary:Package} ${Version}\n' > installed_packages_with_versions.txt
