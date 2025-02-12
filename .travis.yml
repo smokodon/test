@@ -78,7 +78,7 @@ script:
   # - export ALIAS=3.2
   # - unset JRUBY_OPTS
   #- brew install gcc
-  - pyenv update
+  # - echo "welcome"
   # - chmod +x ./scripts/script1.sh
   # - sudo ./scripts/script1.sh
   # - gcc --version
@@ -98,33 +98,33 @@ script:
   # - rvm prepare ruby-3.2.5
 
 
-  # - java --version
-  # - sudo systemctl status mysql.service
-  # - sudo systemctl status rabbitmq-server.service
-  # - sudo systemctl status postgresql.service
-  # - sudo rabbitmqctl status
-  # - mysqld --version
-  # - postgres --version
-  # - mysqld --print-defaults
-  # - psql -U postgres -c 'SHOW config_file'
-  # - cosign version
-  # - git -v
-  # - git-lfs
-  # - hg --version
-  # - svn --version
-  # - clang --version
-  # - cmake --version
-  # - gcc --version
-  # - ccache -V
-  # - shellcheck --version
-  # - shfmt -version
-  # - docker version
-  # - docker run hello-world
-  # - docker compose version
-  # - docker buildx version
-  # - mongod --version
-  # - gradle -version
-  # - groovy -version
+  - java --version
+  - sudo systemctl status mysql.service
+  - sudo systemctl status rabbitmq-server.service
+  - sudo systemctl status postgresql.service
+  - sudo rabbitmqctl status
+  - mysqld --version
+  - postgres --version
+  - mysqld --print-defaults
+  - psql -U postgres -c 'SHOW config_file'
+  - cosign version
+  - git -v
+  - git-lfs
+  - hg --version
+  - svn --version
+  - clang --version
+  - cmake --version
+  - gcc --version
+  - ccache -V
+  - shellcheck --version
+  - shfmt -version
+  - docker version
+  - docker run hello-world
+  - docker compose version
+  - docker buildx version
+  - mongod --version
+  - gradle -version
+  - groovy -version
 
 
 jobs:
@@ -190,9 +190,10 @@ jobs:
 
   # - dist: trusty
   # - dist: xenial
-  - dist: bionic
-  - dist: focal
+  # - dist: bionic
+  # - dist: focal
   - dist: jammy
+  - dist: noble
   # - os: osx
   #   osx_image: xcode11.3
   # - os: osx
