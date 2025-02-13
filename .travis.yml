@@ -1,14 +1,14 @@
 
 # rvm:
 #  - 3.2.4
-services:
+# services:
 #   - mysql
 #   - rabbitmq
-  - postgresql
+#   - postgresql
 #   - docker
 
 script:
-  - postgres -V
+  - sudo apt autoremove
   - psql --version
   - sudo apt install -y postgresql postgresql-contrib
   - postgres -V
