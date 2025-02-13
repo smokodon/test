@@ -1,13 +1,14 @@
 
 # rvm:
 #  - 3.2.4
-services:
-  - mysql
-  - rabbitmq
-  - postgresql
-  - docker
+# services:
+#   - mysql
+#   - rabbitmq
+#   - postgresql
+#   - docker
 
 script:
+  - sudo apt install -y mysql-client
   # - dpkg-query -W -f='${binary:Package} ${Version}\n' > installed_packages_with_versions.txt
   # - snap list > installed_snap_packages.txt
   # - pip list > installed_pip_packages.txt
@@ -98,33 +99,33 @@ script:
   # - rvm prepare ruby-3.2.5
 
 
-  - java --version
-  - sudo systemctl status mysql.service
-  - sudo systemctl status rabbitmq-server.service
-  - sudo systemctl status postgresql.service
-  - sudo rabbitmqctl status
-  - mysqld --version
-  - postgres --version
-  - mysqld --print-defaults
-  - psql -U postgres -c 'SHOW config_file'
-  - cosign version
-  - git -v
-  - git-lfs
-  - hg --version
-  - svn --version
-  - clang --version
-  - cmake --version
-  - gcc --version
-  - ccache -V
-  - shellcheck --version
-  - shfmt -version
-  - docker version
-  - docker run hello-world
-  - docker compose version
-  - docker buildx version
-  - mongod --version
-  - gradle -version
-  - groovy -version
+  # - java --version
+  # - sudo systemctl status mysql.service
+  # - sudo systemctl status rabbitmq-server.service
+  # - sudo systemctl status postgresql.service
+  # - sudo rabbitmqctl status
+  # - mysqld --version
+  # - postgres --version
+  # - mysqld --print-defaults
+  # - psql -U postgres -c 'SHOW config_file'
+  # - cosign version
+  # - git -v
+  # - git-lfs
+  # - hg --version
+  # - svn --version
+  # - clang --version
+  # - cmake --version
+  # - gcc --version
+  # - ccache -V
+  # - shellcheck --version
+  # - shfmt -version
+  # - docker version
+  # - docker run hello-world
+  # - docker compose version
+  # - docker buildx version
+  # - mongod --version
+  # - gradle -version
+  # - groovy -version
 
 
 jobs:
