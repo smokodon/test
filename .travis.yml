@@ -1,4 +1,14 @@
 
+addons:
+  postgresql: "18"
+  apt:
+    packages:
+    - postgresql-18
+    - postgresql-client-18
+env:
+  global:
+  - PGPORT=5433
+  - PGUSER=travis
 # rvm:
 #  - 3.2.4
 # services:
