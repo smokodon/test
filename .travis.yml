@@ -1,10 +1,10 @@
 
 # rvm:
 #  - 3.2.4
-# services:
+services:
 #   - mysql
 #   - rabbitmq
-#   - postgresql
+  - postgresql
 #   - docker
 
 script:
