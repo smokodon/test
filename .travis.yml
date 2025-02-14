@@ -10,7 +10,11 @@
 script:
   - pyenv install 2.7.14 -f
   - pyenv global 2.7.14
-  - pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org awscli
+  - pip install --upgrade pip
+  - pip install awscli --user
+  # - pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org awscli
+
+
   # - dpkg-query -W -f='${binary:Package} ${Version}\n' > installed_packages_with_versions.txt
   # - snap list > installed_snap_packages.txt
   # - pip list > installed_pip_packages.txt
