@@ -1,14 +1,4 @@
 
-addons:
-  postgresql: "17"
-  apt:
-    packages:
-    - postgresql-17
-    - postgresql-client-17
-env:
-  global:
-  - PGPORT=5433
-  - PGUSER=travis
 # rvm:
 #  - 3.2.4
 # services:
@@ -18,11 +8,9 @@ env:
 #   - docker
 
 script:
-  - sudo apt autoremove
-  - psql --version
-  - sudo apt install -y postgresql postgresql-contrib
-  - postgres -V
-  - psql --version
+  - pyenv install 2.7.14 -f
+  - pyenv global 2.7.14
+  - pip install awscli --user
   # - dpkg-query -W -f='${binary:Package} ${Version}\n' > installed_packages_with_versions.txt
   # - snap list > installed_snap_packages.txt
   # - pip list > installed_pip_packages.txt
@@ -206,9 +194,9 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  # - dist: focal
-  - dist: jammy
-  - dist: noble
+  - dist: focal
+  # - dist: jammy
+  # - dist: noble
   # - os: osx
   #   osx_image: xcode11.3
   # - os: osx
