@@ -8,10 +8,8 @@
 #   - docker
 
 script:
-  - pyenv install 2.7.14 -f
-  - pyenv global 2.7.14
-  - pip install --upgrade pip
-  - pip install awscli --user
+  - apt get update -yq
+  - apt get install -y couchdb
   # - pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org awscli
 
 
@@ -199,8 +197,8 @@ jobs:
   # - dist: xenial
   # - dist: bionic
   - dist: focal
-  # - dist: jammy
-  # - dist: noble
+  - dist: jammy
+  - dist: noble
   # - os: osx
   #   osx_image: xcode11.3
   # - os: osx
