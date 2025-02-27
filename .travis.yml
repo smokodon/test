@@ -8,8 +8,8 @@
 #   - docker
 
 script:
-  - apt get update -yq
-  - apt get install -y couchdb
+  - apt update -yq
+  - apt install -y couchdb
   # - pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org awscli
 
 
