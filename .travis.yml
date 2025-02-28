@@ -197,7 +197,8 @@ jobs:
   # - dist: xenial
   # - dist: bionic
   # - dist: focal
-  - dist: jammy
+  - os: windows
+  # - dist: jammy
   - dist: noble
   # - os: osx
   #   osx_image: xcode11.3
