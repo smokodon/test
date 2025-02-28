@@ -9,7 +9,7 @@
 
 script:
   - sudo apt update -y
-  - sudo apt install libncurses5-dev -y --no-install-recommends
+  - sudo apt install libncurses5-dev -y --no-install-recommends --no-install-suggests
   # - pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org awscli
 
 
