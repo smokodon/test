@@ -8,7 +8,7 @@
 #   - docker
 
 script:
-  - apt install python-* -y --no-install-recommends
+  - sudo apt install python-* -y --no-install-recommends
   - sudo apt update -y
   - sudo cat /etc/apt/sources.list
   # - pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org awscli
