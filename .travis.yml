@@ -8,9 +8,8 @@
 #   - docker
 
 script:
-  - sudo apt install python python3 -y --no-install-recommends
   - sudo apt update -y
-  - sudo cat /etc/apt/sources.list
+  - sudo apt install sqlite -y --no-install-recommends
   # - pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org awscli
 
 
@@ -198,8 +197,8 @@ jobs:
   # - dist: xenial
   # - dist: bionic
   # - dist: focal
-  - os: windows
-  # - dist: jammy
+  # - os: windows
+  - dist: jammy
   - dist: noble
   # - os: osx
   #   osx_image: xcode11.3
