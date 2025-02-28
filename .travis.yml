@@ -8,8 +8,8 @@
 #   - docker
 
 script:
-  - sudo apt update -yq
-  - sudo apt install -y couchdb
+  - sudo apt update -y
+  - sudo cat /etc/apt/sources.list
   # - pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org awscli
 
 
@@ -196,7 +196,7 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  - dist: focal
+  # - dist: focal
   - dist: jammy
   - dist: noble
   # - os: osx
@@ -205,3 +205,6 @@ jobs:
   #   osx_image: xcode12.3
   # - os: osx
   #   osx_image: xcode12.4
+
+
+gsutil -m cp -r "gs://travis-ci-language-archives/php/binaries/ubuntu/22.04/aarch64" "gs://travis-ci-language-archives/php/binaries/ubuntu/22.04/ppc64le" "gs://travis-ci-language-archives/php/binaries/ubuntu/22.04/s390x" .
