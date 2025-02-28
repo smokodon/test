@@ -205,6 +205,3 @@ jobs:
   #   osx_image: xcode12.3
   # - os: osx
   #   osx_image: xcode12.4
-
-
-gsutil -m cp -r "gs://travis-ci-language-archives/php/binaries/ubuntu/22.04/aarch64" "gs://travis-ci-language-archives/php/binaries/ubuntu/22.04/ppc64le" "gs://travis-ci-language-archives/php/binaries/ubuntu/22.04/s390x" .
