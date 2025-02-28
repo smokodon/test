@@ -9,7 +9,7 @@
 
 script:
   - sudo apt update -y
-  - sudo apt install sqlite -y --no-install-recommends
+  - sudo apt install libcups2 libfontconfig1 libxrender1 libxext6 libx11-6 libnss3 libgcc1 util-linux zlib1g libstdc++6 libpcsclite1 libfreetype6 libjpeg8 liblcms2-2 libxtst6 wget -y --no-install-recommends
   # - pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org awscli
 
 
