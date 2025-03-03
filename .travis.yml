@@ -8,6 +8,7 @@
 #   - docker
 
 script:
+  - rvm autolibs enable
   - rvm install 3.4.2
   - rvm use 3.4.2
   - ruby -v
