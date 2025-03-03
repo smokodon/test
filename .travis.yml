@@ -8,9 +8,9 @@
 #   - docker
 
 script:
-  - rvm autolibs enable
-  - rvm install 3.4.2
-  - rvm use 3.4.2
+  # - rvm autolibs enable
+  - rvm install 3.4.1
+  - rvm use 3.4.1
   - ruby -v
   # - wget https://packages.debian.org/bookworm/amd64/libncurses5/download
   # - sudo apt update -y
