@@ -8,8 +8,13 @@
 #   - docker
 
 script:
-  - sudo apt update -y
-  - sudo apt install libncurses5-dev -y --no-install-recommends --no-install-suggests
+  - \curl -sSL https://get.rvm.io | bash
+  - source /etc/profile
+  - source ~/.rvm/scripts/rvm
+  # - wget https://packages.debian.org/bookworm/amd64/libncurses5/download
+  # - sudo apt update -y
+  # - sudo apt install libncurses5-dev -y --no-install-recommends --no-install-suggests
+
   # - pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org awscli
 
 
