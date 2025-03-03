@@ -35,7 +35,7 @@ script:
   - mongod --version
   - gradle -version
   - groovy -version
-
+  - sudo snap install go --classic
 
 jobs:
   include:
