@@ -8,9 +8,9 @@
 #   - docker
 
 script:
-  - \curl -sSL https://get.rvm.io | bash
-  - source /etc/profile
-  - source ~/.rvm/scripts/rvm
+  - rvm install 3.4.2
+  - rvm use 3.4.2
+  - ruby -v
   # - wget https://packages.debian.org/bookworm/amd64/libncurses5/download
   # - sudo apt update -y
   # - sudo apt install libncurses5-dev -y --no-install-recommends --no-install-suggests
