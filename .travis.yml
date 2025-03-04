@@ -8,9 +8,10 @@
 #   - docker
 
 script:
-  - sudo wget https://github.com/docker/compose/releases/download/v2.33.1/docker-compose-linux-ppc64le -P /usr/local/bin/docker-compose
-  - sudo chmod +x /usr/local/bin/docker-compose/docker-compose-linux-ppc64le 
-  - ./docker-compose-linux-ppc64le --version
+  - sudo apt update
+  - sudo apt install pipx
+  - sudo pipx ensurepath --global
+  - sudo pipx install docker-compose
   #- sudo chmod +x /usr/local/bin/docker-compose
 
   # - java --version
@@ -57,11 +58,11 @@ jobs:
 
   # - dist: xenial
   #   arch: ppc64le
-  - dist: bionic
-    group: stable
-    arch: ppc64le
-  - dist: focal
-    arch: ppc64le
+  # - dist: bionic
+  #   group: stable
+  #   arch: ppc64le
+  # - dist: focal
+  #   arch: ppc64le
 
   # - dist: bionic
   #   group: edge
