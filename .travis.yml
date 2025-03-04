@@ -13,7 +13,7 @@ script:
   - sudo pipx ensurepath
   - sudo apt install -y python3-pip
   - pip3 install pyyaml wheel setuptools cython
-  - pip3 install docker-compose
+  - pip3 install --no-deps docker-compose==1.29.0
   # - sudo pipx install docker-compose
   #- sudo chmod +x /usr/local/bin/docker-compose
 
