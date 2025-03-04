@@ -11,7 +11,8 @@ script:
   - sudo apt update
   - sudo apt install pipx
   - sudo pipx ensurepath
-  - sudo pipx install pyyaml cryptography setuptools docker-compose
+  - sudo apt install -y python3-pyyaml
+  - sudo pipx install docker-compose
   #- sudo chmod +x /usr/local/bin/docker-compose
 
   # - java --version
