@@ -10,7 +10,8 @@
 script:
   - sudo wget https://github.com/docker/compose/releases/download/v2.33.1/docker-compose-linux-ppc64le
   - ls -al
-  - sudo ./docker-compose-linux-ppc64le --version
+  - chmod +x ./docker-compose-linux-ppc64le 
+  - ./docker-compose-linux-ppc64le --version
   #- sudo chmod +x /usr/local/bin/docker-compose
 
   # - java --version
