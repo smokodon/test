@@ -8,11 +8,9 @@
 #   - docker
 
 script:
-  - sudo mkdir /usr/local/bin/docker-compose
-  - sudo curl -L "https://github.com/docker/compose/releases/download/v2.33.1/docker-compose-linux-ppc64le" -o /usr/local/bin/docker-compose
+  - wget https://github.com/docker/compose/releases/download/v2.33.1/docker-compose-linux-ppc64le -o /usr/local/bin/docker-compose
   - ls /usr/local/bin/docker-compose
-  - sudo chmod +x /usr/local/bin/docker-compose
-  - /usr/local/bin/docker-compose --version
+  #- sudo chmod +x /usr/local/bin/docker-compose
 
   # - java --version
   # - sudo systemctl status mysql.service
