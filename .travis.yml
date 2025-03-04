@@ -13,7 +13,8 @@ script:
   - sudo pipx ensurepath
   - sudo apt install -y python3-pip
   - pip3 install pyyaml
-  - sudo pipx install docker-compose
+  - pip3 install docker-compose
+  # - sudo pipx install docker-compose
   #- sudo chmod +x /usr/local/bin/docker-compose
 
   # - java --version
