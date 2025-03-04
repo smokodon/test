@@ -10,7 +10,7 @@
 script:
   - sudo apt update
   - sudo apt install pipx
-  - sudo pipx ensurepath --global
+  - sudo pipx ensurepath
   - sudo pipx install docker-compose
   #- sudo chmod +x /usr/local/bin/docker-compose
 
