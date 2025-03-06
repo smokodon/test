@@ -53,6 +53,7 @@ jobs:
   - dist: jammy
     arch: arm64
   - dist: noble
+    group: edge
     arch: arm64
 # ---------------------------------------------------------------------------
   # - dist: xenial
@@ -76,6 +77,7 @@ jobs:
   - dist: jammy
     arch: s390x
   - dist: noble
+    group: edge
     arch: s390x
 # ---------------------------------------------------------------------------
   # - dist: trusty
