@@ -8,42 +8,36 @@
 #   - docker
 
 script:
-  - sudo apt update
-  - sudo apt install pipx
-  - sudo pipx ensurepath
-  - sudo apt install -y python3-pip
-  - pip3 install pyyaml wheel setuptools cython
-  - pip3 install --no-deps docker-compose==1.29.0
   # - sudo pipx install docker-compose
   #- sudo chmod +x /usr/local/bin/docker-compose
 
-  # - java --version
-  # - sudo systemctl status mysql.service
-  # - sudo systemctl status rabbitmq-server.service
-  # - sudo systemctl status postgresql.service
-  # - sudo rabbitmqctl status
-  # - mysqld --version
-  # - postgres --version
-  # - mysqld --print-defaults
-  # - psql -U postgres -c 'SHOW config_file'
-  # - cosign version
-  # - git -v
-  # - git-lfs
-  # - hg --version
-  # - svn --version
-  # - clang --version
-  # - cmake --version
-  # - gcc --version
-  # - ccache -V
-  # - shellcheck --version
-  # - shfmt -version
-  # - docker version
-  # - docker run hello-world
-  # - docker compose version
-  # - docker buildx version
-  # - mongod --version
-  # - gradle -version
-  # - groovy -version
+  - java --version
+  - sudo systemctl status mysql.service
+  - sudo systemctl status rabbitmq-server.service
+  - sudo systemctl status postgresql.service
+  - sudo rabbitmqctl status
+  - mysqld --version
+  - postgres --version
+  - mysqld --print-defaults
+  - psql -U postgres -c 'SHOW config_file'
+  - cosign version
+  - git -v
+  - git-lfs
+  - hg --version
+  - svn --version
+  - clang --version
+  - cmake --version
+  - gcc --version
+  - ccache -V
+  - shellcheck --version
+  - shfmt -version
+  - docker version
+  - docker run hello-world
+  - docker compose version
+  - docker buildx version
+  - mongod --version
+  - gradle -version
+  - groovy -version
 
 
 jobs:
@@ -56,9 +50,11 @@ jobs:
   #   arch: arm64
   # - dist: focal
   #   arch: arm64
-  # - dist: jammy
-  #   arch: arm64
-
+  - dist: jammy
+    arch: arm64
+  - dist: noble
+    arch: arm64
+# ---------------------------------------------------------------------------
   # - dist: xenial
   #   arch: ppc64le
   # - dist: bionic
@@ -66,46 +62,22 @@ jobs:
   #   arch: ppc64le
   # - dist: focal
   #   arch: ppc64le
-
-  # - dist: bionic
-  #   group: edge
-  #   arch: ppc64le
-
-  # - dist: focal
-  #   arch: ppc64le
-  #   group: edge
-  # - dist: focal
-  #   arch: ppc64le
-  #   group: stable
-
   # - dist: jammy
   #   arch: ppc64le
+# ---------------------------------------------------------------------------
   # - dist: xenial
   #   arch: s390x
-  # - dist: xenial
-  #   arch: s390x
-  #   group: edge
   # - dist: bionic
   #   group: stable
   #   arch: s390x
   # - dist: focal
   #   arch: s390x
   #   group: stable
-
-  # - dist: bionic
-  #   group: edge
-  #   arch: s390x
-
-  # - dist: focal
-  #   arch: s390x
-  #   group: edge
-  # - dist: focal
-  #   arch: s390x
-  #   group: stable
-
-  # - dist: jammy
-  #   arch: s390x
-
+  - dist: jammy
+    arch: s390x
+  - dist: noble
+    arch: s390x
+# ---------------------------------------------------------------------------
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
