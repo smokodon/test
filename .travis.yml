@@ -38,6 +38,7 @@ script:
   - mongod --version
   - gradle -version
   - groovy -version
+  - ant -version
 
 
 jobs:
@@ -50,10 +51,10 @@ jobs:
   #   arch: arm64
   # - dist: focal
   #   arch: arm64
-  - dist: jammy
-    arch: arm64
-  - dist: noble
-    arch: arm64
+  # - dist: jammy
+  #   arch: arm64
+  # - dist: noble
+  #   arch: arm64
 # ---------------------------------------------------------------------------
   # - dist: xenial
   #   arch: ppc64le
@@ -62,10 +63,10 @@ jobs:
   #   arch: ppc64le
   # - dist: focal
   #   arch: ppc64le
-  - dist: jammy
-    arch: ppc64le
-  - dist: noble
-    arch: ppc64le
+  # - dist: jammy
+  #   arch: ppc64le
+  # - dist: noble
+  #   arch: ppc64le
 # ---------------------------------------------------------------------------
   # - dist: xenial
   #   arch: s390x
@@ -75,10 +76,10 @@ jobs:
   # - dist: focal
   #   arch: s390x
   #   group: stable
-  - dist: jammy
-    arch: s390x
-  - dist: noble
-    arch: s390x
+  # - dist: jammy
+  #   arch: s390x
+  # - dist: noble
+  #   arch: s390x
 # ---------------------------------------------------------------------------
   # - dist: trusty
   # - dist: xenial
@@ -93,6 +94,3 @@ jobs:
   #   osx_image: xcode12.3
   # - os: osx
   #   osx_image: xcode12.4
-
-
-
