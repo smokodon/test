@@ -83,7 +83,8 @@ jobs:
 # ---------------------------------------------------------------------------
   # - dist: trusty
   # - dist: xenial
-  # - dist: bionic
+  - dist: bionic
+    group: dev
   # - dist: focal
   # - os: windows
   - dist: jammy
