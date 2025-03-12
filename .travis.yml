@@ -27,6 +27,7 @@ script:
   # - sudo apt update -yq
   # - sudo apt install -y postgresql-12 postgresql-client-12 postgresql-server-dev-12 postgresql-12-postgis-3 postgresql-12-postgis-3-scripts
   - psql --version
+  - sudo systemctl status postgresql@12-main.service
   # - java --version
   # - sudo systemctl status mysql.service
   # - sudo systemctl status rabbitmq-server.service
