@@ -36,6 +36,7 @@ script:
   # - postgres --version
   # - mysqld --print-defaults
   - psql -U postgres -c 'SHOW config_file'
+  - sudo journalctl -xe
   # - cosign version
   # - git -v
   # - git-lfs
