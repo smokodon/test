@@ -15,6 +15,7 @@ services:
 
 
 script:
+  - sudo add-apt-repository universe
   - sudo apt update -y && sudo apt install -y libldap-2.5-0
 
   - java --version
