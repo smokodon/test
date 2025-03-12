@@ -3,11 +3,11 @@
 #  - 3.2.4
 # language: php
 # php: 8.3.6
-services:
-  - mysql
-  - rabbitmq
-  - postgresql
-  - docker
+# services:
+#   - mysql
+#   - rabbitmq
+#   - postgresql
+#   - docker
 
 
   # - sudo pipx install docker-compose
@@ -15,40 +15,42 @@ services:
 
 
 script:
-  - sudo add-apt-repository -y ppa:ondrej/php
-  - sudo apt update -y && sudo apt install -y libldap-2.5-0
+  # - sudo add-apt-repository -y ppa:ondrej/php
+  # - sudo apt update -y && sudo apt install -y libldap-2.5-0
+  - phpenv versions
 
-  - java --version
-  - sudo systemctl status mysql.service
-  - sudo systemctl status rabbitmq-server.service
-  - sudo systemctl status postgresql.service
-  - sudo rabbitmqctl status
-  - mysqld --version
-  - postgres --version
-  - mysqld --print-defaults
-  - psql -U postgres -c 'SHOW config_file'
-  - cosign version
-  - git -v
-  - git-lfs
-  - hg --version
-  - svn --version
-  - clang --version
-  - cmake --version
-  - gcc --version
-  - ccache -V
-  - shellcheck --version
-  - shfmt -version
-  - docker version
-  - docker run hello-world
-  - docker compose version
-  - docker buildx version
-  - mongod --version
-  - gradle -version
-  - groovy -version
-  - ant -version
-  - perl -v
-  - php -v
-  - redis-server --version
+
+  # - java --version
+  # - sudo systemctl status mysql.service
+  # - sudo systemctl status rabbitmq-server.service
+  # - sudo systemctl status postgresql.service
+  # - sudo rabbitmqctl status
+  # - mysqld --version
+  # - postgres --version
+  # - mysqld --print-defaults
+  # - psql -U postgres -c 'SHOW config_file'
+  # - cosign version
+  # - git -v
+  # - git-lfs
+  # - hg --version
+  # - svn --version
+  # - clang --version
+  # - cmake --version
+  # - gcc --version
+  # - ccache -V
+  # - shellcheck --version
+  # - shfmt -version
+  # - docker version
+  # - docker run hello-world
+  # - docker compose version
+  # - docker buildx version
+  # - mongod --version
+  # - gradle -version
+  # - groovy -version
+  # - ant -version
+  # - perl -v
+  # - php -v
+  # - redis-server --version
 
 
 
@@ -102,7 +104,7 @@ jobs:
   # - dist: focal
   #   group: previous
   # - os: windows
-  # - dist: jammy
+  - dist: jammy
   #   group: edge
   - dist: noble
   # - os: osx
