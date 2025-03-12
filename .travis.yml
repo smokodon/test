@@ -12,11 +12,11 @@
   #- sudo chmod +x /usr/local/bin/docker-compose
 
 addons:
-  postgresql: '17'
+  postgresql: '12'
   apt:
     packages:
-    - postgresql-17
-    - postgresql-client-17
+    - postgresql-12
+    - postgresql-client-12
 env:
   global:
   - PGPORT=5433
@@ -119,7 +119,7 @@ jobs:
   #   group: dev
   # - dist: focal
   #   group: dev
-  # - dist: focal
+  - dist: focal
   # - dist: focal
   #   group: previous
   # - os: windows
