@@ -116,7 +116,7 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   - dist: bionic
-  #   group: dev
+    group: previous
   # - dist: focal
   #   group: dev
   - dist: focal
