@@ -124,6 +124,7 @@ jobs:
   #   group: previous
   # - os: windows
   - dist: jammy
+    group: edge
   - dist: noble
   # - os: osx
   #   osx_image: xcode11.3
