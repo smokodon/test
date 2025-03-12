@@ -14,11 +14,11 @@ services:
 services:
 - postgresql
 addons:
-  postgresql: '17'
+  postgresql: '10'
   apt:
     packages:
-    - postgresql-17
-    - postgresql-client-17
+    - postgresql-10
+    - postgresql-client-10
 
 script:
   # - sudo apt update -yq
