@@ -35,7 +35,7 @@ script:
   # - mysqld --version
   # - postgres --version
   # - mysqld --print-defaults
-  # - psql -U postgres -c 'SHOW config_file'
+  - psql -U postgres -c 'SHOW config_file'
   # - cosign version
   # - git -v
   # - git-lfs
