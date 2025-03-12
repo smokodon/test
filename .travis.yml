@@ -11,67 +11,37 @@
   # - sudo pipx install docker-compose
   #- sudo chmod +x /usr/local/bin/docker-compose
 
-addons:
-  postgresql: '12'
-  apt:
-    packages:
-    - postgresql-12
-    - postgresql-client-12
-env:
-  global:
-  - PGPORT=5433
-  - PGUSER=travis
 
 script:
-  - sudo ls /etc/postgresql/
-  # - sudo apt update -yq
-  # - sudo apt install -y postgresql-12 postgresql-client-12
-  - sudo pg_ctlcluster 12 main start
-  - psql --version
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  # - java --version
-  # - sudo systemctl status mysql.service
-  # - sudo systemctl status rabbitmq-server.service
-  # - sudo systemctl status postgresql.service
-  # - sudo rabbitmqctl status
-  # - mysqld --version
-  # - postgres --version
-  # - mysqld --print-defaults
+  - java --version
+  - sudo systemctl status mysql.service
+  - sudo systemctl status rabbitmq-server.service
+  - sudo systemctl status postgresql.service
+  - sudo rabbitmqctl status
+  - mysqld --version
+  - postgres --version
+  - mysqld --print-defaults
   - psql -U postgres -c 'SHOW config_file'
-  # - cosign version
-  # - git -v
-  # - git-lfs
-  # - hg --version
-  # - svn --version
-  # - clang --version
-  # - cmake --version
-  # - gcc --version
-  # - ccache -V
-  # - shellcheck --version
-  # - shfmt -version
-  # - docker version
-  # - docker run hello-world
-  # - docker compose version
-  # - docker buildx version
-  # - mongod --version
-  # - gradle -version
-  # - groovy -version
-  # - ant -version
+  - cosign version
+  - git -v
+  - git-lfs
+  - hg --version
+  - svn --version
+  - clang --version
+  - cmake --version
+  - gcc --version
+  - ccache -V
+  - shellcheck --version
+  - shfmt -version
+  - docker version
+  - docker run hello-world
+  - docker compose version
+  - docker buildx version
+  - mongod --version
+  - gradle -version
+  - groovy -version
+  - ant -version
 
 
 jobs:
@@ -116,16 +86,16 @@ jobs:
 # ---------------------------------------------------------------------------
   # - dist: trusty
   # - dist: xenial
-  - dist: bionic
-    group: previous
+  # - dist: bionic
+  #   group: previous
   # - dist: focal
   #   group: dev
-  - dist: focal
-  - dist: focal
-    group: previous
+  # - dist: focal
+  # - dist: focal
+  #   group: previous
   # - os: windows
-  - dist: jammy
-    group: edge
+  # - dist: jammy
+  #   group: edge
   - dist: noble
   # - os: osx
   #   osx_image: xcode11.3
