@@ -115,7 +115,7 @@ jobs:
 # ---------------------------------------------------------------------------
   # - dist: trusty
   # - dist: xenial
-  # - dist: bionic
+  - dist: bionic
   #   group: dev
   # - dist: focal
   #   group: dev
@@ -123,7 +123,7 @@ jobs:
   # - dist: focal
   #   group: previous
   # - os: windows
-  # - dist: jammy
+  - dist: jammy
   - dist: noble
   # - os: osx
   #   osx_image: xcode11.3
