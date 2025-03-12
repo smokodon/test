@@ -23,6 +23,7 @@
 #   - PGUSER=travis
 
 script:
+  - sudo ls /etc/postgresql/
   - sudo apt update -yq
   - sudo apt install -y postgresql-12 postgresql-client-12
   - sudo pg_ctlcluster 12 main start
