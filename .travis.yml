@@ -24,7 +24,7 @@ addons:
     - postgresql-12-postgis-3-scripts
 
 script:
-  - psql -v
+  - psql --v
   # - java --version
   # - sudo systemctl status mysql.service
   # - sudo systemctl status rabbitmq-server.service
