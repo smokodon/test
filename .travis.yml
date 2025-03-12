@@ -1,10 +1,10 @@
 
 # rvm:
 #  - 3.2.4
-# services:
+services:
 #   - mysql
 #   - rabbitmq
-#   - postgresql
+  - postgresql
 #   - docker
 
 
@@ -24,10 +24,26 @@
     #- postgresql-12-postgis-3-scripts
 
 script:
-  - sudo apt update -yq
-  - sudo apt install -y postgresql-12 postgresql-client-12 postgresql-server-dev-12 postgresql-12-postgis-3 postgresql-12-postgis-3-scripts
-  - sudo systemctl start postgresql@12-main
+  # - sudo apt update -yq
+  # - sudo apt install -y postgresql-12 postgresql-client-12 postgresql-server-dev-12 postgresql-12-postgis-3 postgresql-12-postgis-3-scripts
+  # - sudo systemctl start postgresql@12-main
   - psql --version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   # - java --version
   # - sudo systemctl status mysql.service
   # - sudo systemctl status rabbitmq-server.service
@@ -36,7 +52,7 @@ script:
   # - mysqld --version
   # - postgres --version
   # - mysqld --print-defaults
-  # - psql -U postgres -c 'SHOW config_file'
+  - psql -U postgres -c 'SHOW config_file'
   # - cosign version
   # - git -v
   # - git-lfs
@@ -102,14 +118,14 @@ jobs:
   # - dist: xenial
   # - dist: bionic
   #   group: dev
-  - dist: focal
-    group: dev
-  - dist: focal
-  - dist: focal
-    group: previous
+  # - dist: focal
+  #   group: dev
+  # - dist: focal
+  # - dist: focal
+  #   group: previous
   # - os: windows
   # - dist: jammy
-  # - dist: noble
+  - dist: noble
   # - os: osx
   #   osx_image: xcode11.3
   # - os: osx
