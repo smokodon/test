@@ -1,24 +1,26 @@
 
 # rvm:
 #  - 3.2.4
-services:
+# services:
 #   - mysql
 #   - rabbitmq
-  - postgresql
+#   - postgresql
 #   - docker
 
 
   # - sudo pipx install docker-compose
   #- sudo chmod +x /usr/local/bin/docker-compose
 
-services:
-- postgresql
 addons:
-  postgresql: '10'
+  postgresql: '17'
   apt:
     packages:
-    - postgresql-10
-    - postgresql-client-10
+    - postgresql-17
+    - postgresql-client-17
+env:
+  global:
+  - PGPORT=5433
+  - PGUSER=travis
 
 script:
   # - sudo apt update -yq
