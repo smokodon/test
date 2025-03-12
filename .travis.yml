@@ -1,11 +1,11 @@
 
 # rvm:
 #  - 3.2.4
-# services:
-#   - mysql
-#   - rabbitmq
-#   - postgresql
-#   - docker
+services:
+  - mysql
+  - rabbitmq
+  - postgresql
+  - docker
 
 
   # - sudo pipx install docker-compose
