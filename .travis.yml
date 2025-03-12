@@ -42,6 +42,10 @@ script:
   - gradle -version
   - groovy -version
   - ant -version
+  - perl -v
+  - php -v
+  - redis-server --version
+
 
 
 jobs:
