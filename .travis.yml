@@ -21,7 +21,7 @@ script:
   - curl -O http://debian.mirror.ac.za/debian/pool/main/o/openldap/libldap-dev_2.5.13+dfsg-5_amd64.deb
   - sudo dpkg -i libldap-dev_2.5.13+dfsg-5_amd64.deb
   - git clone https://github.com/php-build/php-build.git $HOME/.phpenv/plugins/php-build
-  - phpenv install 8.4.0
+  - phpenv install 8.3.9
   - php -v
   - type -a php
   # - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
