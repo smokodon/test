@@ -17,15 +17,13 @@
 script:
   # - sudo add-apt-repository -y ppa:ondrej/php
   # - sudo apt update -y && sudo apt install -y libldap-2.5-0
-  #- sudo apt update
-  - curl -O http://debian.mirror.ac.za/debian/pool/main/o/openldap/libldap-dev_2.5.13+dfsg-5_amd64.deb
-  - sudo dpkg -i libldap-dev_2.5.13+dfsg-5_amd64.deb
+  - sudo apt update && sudo apt install libxml2-dev -y
   - sudo apt remove -y libicu-*
   - curl -O https://launchpad.net/ubuntu/+archive/primary/+files/libicu70_70.1-2ubuntu1_amd64.deb
   #- curl -O https://launchpad.net/ubuntu/+source/icu/70.1-2/+build/23145450/+files/libicu70_70.1-2_amd64.deb
   - sudo dpkg -i libicu70_70.1-2ubuntu1_amd64.deb
   - git clone https://github.com/php-build/php-build.git $HOME/.phpenv/plugins/php-build
-  - sudo apt install libzip-dev -y
+  #- sudo apt install libzip-dev -y
   - phpenv install 8.3.9
   #- sudo apt install php8.3 -y
   - php -v
