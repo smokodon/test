@@ -23,8 +23,9 @@ script:
   - curl -O https://launchpad.net/ubuntu/+source/icu/70.1-2/+build/23145450/+files/libicu70_70.1-2_amd64.deb
   - sudo dpkg -i libicu70_70.1-2_amd64.deb
   - git clone https://github.com/php-build/php-build.git $HOME/.phpenv/plugins/php-build
+  - sudo apt install libzip-dev -y
   - phpenv install 8.3.9
-  - sudo apt install php-8.3 -y
+  - sudo apt install php8.3 -y
   - php -v
   - type -a php
   # - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
