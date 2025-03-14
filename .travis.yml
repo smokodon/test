@@ -21,12 +21,7 @@ script:
   - curl -O http://debian.mirror.ac.za/debian/pool/main/o/openldap/libldap-dev_2.5.13+dfsg-5_amd64.deb
   - dpkg -i libldap-dev_2.5.13+dfsg-5_amd64.deb
   - git clone https://github.com/php-build/php-build.git $HOME/.phpenv/plugins/php-build
-  - wget https://github.com/kkos/oniguruma/releases/download/v6.9.0/onig-6.9.0.tar.gz
-  - tar -xzvf onig-6.9.0.tar.gz
-  - cd onig-6.9.0
-  - ./configure
-  - make
-  - phpenv install 8.3.5
+  - phpenv install 8.4.0
   - php -v
   - type -a php
   # - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
