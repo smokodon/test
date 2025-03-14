@@ -1,8 +1,8 @@
 
 # rvm:
 #  - 3.2.4
-# language: php
-# php: 8.2
+language: php
+php: 8.3
 # services:
 #   - mysql
 #   - rabbitmq
@@ -45,8 +45,8 @@ script:
   # - source ~/.bashrc
   # - git clone https://github.com/php-build/php-build.git ~/.phpenv/plugins/php-build
 
-  - sudo apt update
-  - sudo apt install -y build-essential libxml2-dev libssl-dev libcurl4-openssl-dev libjpeg-dev libpng-dev libfreetype6-dev libonig-dev libzip-dev libpq-dev  libbz2-dev libreadline-dev libxslt1-dev pkg-config
+  # - sudo apt update
+  # - sudo apt install -y build-essential libxml2-dev libssl-dev libcurl4-openssl-dev libjpeg-dev libpng-dev libfreetype6-dev libonig-dev libzip-dev libpq-dev  libbz2-dev libreadline-dev libxslt1-dev pkg-config
   
   # - phpenv install 8.3.9
   # - phpenv global 8.3.9
