@@ -19,7 +19,7 @@ script:
   # - sudo apt update -y && sudo apt install -y libldap-2.5-0
   - sudo apt update
   - curl -O http://debian.mirror.ac.za/debian/pool/main/o/openldap/libldap-dev_2.5.13+dfsg-5_amd64.deb
-  - dpkg -i libldap-dev_2.5.13+dfsg-5_amd64.deb
+  - sudo dpkg -i libldap-dev_2.5.13+dfsg-5_amd64.deb
   - git clone https://github.com/php-build/php-build.git $HOME/.phpenv/plugins/php-build
   - phpenv install 8.4.0
   - php -v
