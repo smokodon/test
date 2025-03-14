@@ -32,19 +32,24 @@ script:
   # - cd php-build
   # - sudo ./install.sh
   # - php-build 8.3.6 /usr/local/php-8.3.0
-  - sudo rm -rf /home/travis/.phpenv
-  - sudo apt update -yqq
-  - sudo apt install php -y
+
+  # - sudo rm -rf /home/travis/.phpenv
+  # - sudo apt update -yqq
+  # - sudo apt install php -y
+  # - php -v
+  # - type -a php
+
+  - git clone https://github.com/phpenv/phpenv.git ~/.phpenv
+  - echo 'export PATH="$HOME/.phpenv/bin:$PATH"' >> ~/.bashrc
+  - echo 'eval "$(phpenv init -)"' >> ~/.bashrc
+  - source ~/.bashrc
+  - git clone https://github.com/php-build/php-build.git ~/.phpenv/plugins/php-build
+  - sudo apt update
+  - sudo apt install -y build-essential libxml2-dev libssl-dev libcurl4-openssl-dev libjpeg-dev libpng-dev libfreetype6-dev libonig-dev libzip-dev libbz2-dev libreadline-dev libxslt1-dev pkg-config
+  - phpenv install 8.3.9
+  - phpenv global 8.3.9
   - php -v
-  - type -a php
-  # - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-  # - php composer-setup.php
-  # - php -r "unlink('composer-setup.php');"
-  # - curl -O http://debian.mirror.ac.za/debian/pool/main/o/openldap/libldap-2.5-0_2.5.13+dfsg-5_amd64.deb
-  # - sudo dpkg -i libldap-2.5-0_2.5.13+dfsg-5_amd64.deb
-  # - sudo rm -f ./libldap-2.5-0_2.5.13+dfsg-5_amd64.deb
-  # - curl -O https://launchpad.net/ubuntu/+source/icu/70.1-2/+build/23145450/+files/libicu70_70.1-2_amd64.deb
-  # - curl -O https://launchpad.net/ubuntu/+source/icu/70.1-2/+build/23145450/+files/libicu70_70.1-2_amd64.deb
+
 
   # - sudo dpkg -i libicu70_70.1-2_amd64.deb
   # - sudo rm -f ./libicu70_70.1-2_amd64.deb
