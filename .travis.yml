@@ -20,6 +20,7 @@ script:
   - sudo apt update
   - git clone https://github.com/php-build/php-build.git $HOME/.phpenv/plugins/php-build
   - wget https://github.com/kkos/oniguruma/releases/download/v6.9.0/onig-6.9.0.tar.gz
+  - tar -xzvf onig-6.9.0.tar.gz
   - cd onig-6.9.0
   - ./configure
   - make
