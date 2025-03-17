@@ -104,7 +104,7 @@ jobs:
   # - dist: jammy
   #   arch: arm64
   - dist: noble
-  #   arch: arm64
+    arch: arm64
 # ---------------------------------------------------------------------------
   # - dist: xenial
   #   arch: ppc64le
@@ -116,7 +116,7 @@ jobs:
   # - dist: jammy
   #   arch: ppc64le
   - dist: noble
-  #   arch: ppc64le
+    arch: ppc64le
 # ---------------------------------------------------------------------------
   # - dist: xenial
   #   arch: s390x
@@ -129,7 +129,7 @@ jobs:
   # - dist: jammy
   #   arch: s390x
   - dist: noble
-  #   arch: s390x
+    arch: s390x
 # ---------------------------------------------------------------------------
   # - dist: trusty
   # - dist: xenial
