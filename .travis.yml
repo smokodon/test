@@ -1,8 +1,8 @@
 
 # rvm:
 #  - 3.2.4
-language: php
-php: 8.3
+# language: php
+# php: 8.3
 # services:
 #   - mysql
 #   - rabbitmq
@@ -50,7 +50,7 @@ script:
   
   # - phpenv install 8.3.9
   # - phpenv global 8.3.9
-  - php -v
+  - echo "witam"
 
 
   # - sudo dpkg -i libicu70_70.1-2_amd64.deb
@@ -103,7 +103,7 @@ jobs:
   #   arch: arm64
   # - dist: jammy
   #   arch: arm64
-  # - dist: noble
+  - dist: noble
   #   arch: arm64
 # ---------------------------------------------------------------------------
   # - dist: xenial
@@ -115,7 +115,7 @@ jobs:
   #   arch: ppc64le
   # - dist: jammy
   #   arch: ppc64le
-  # - dist: noble
+  - dist: noble
   #   arch: ppc64le
 # ---------------------------------------------------------------------------
   # - dist: xenial
@@ -128,7 +128,7 @@ jobs:
   #   group: stable
   # - dist: jammy
   #   arch: s390x
-  # - dist: noble
+  - dist: noble
   #   arch: s390x
 # ---------------------------------------------------------------------------
   # - dist: trusty
@@ -141,7 +141,7 @@ jobs:
   # - dist: focal
   #   group: previous
   # - os: windows
-  - dist: jammy
+  # - dist: jammy
   #   group: edge
   - dist: noble
   # - os: osx
