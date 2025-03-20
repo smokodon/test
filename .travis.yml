@@ -15,18 +15,8 @@
 
 
 script:
-  # - sudo add-apt-repository -y ppa:ondrej/php
-  # - sudo apt update -y && sudo apt install -y libldap-2.5-0
-  #- sudo apt update && sudo apt install libxml2-dev -y
-  # - sudo apt remove -y libicu-*
-  # - curl -O https://launchpad.net/ubuntu/+archive/primary/+files/libicu70_70.1-2ubuntu1_amd64.deb
-  #- curl -O https://launchpad.net/ubuntu/+source/icu/70.1-2/+build/23145450/+files/libicu70_70.1-2_amd64.deb
-  # - sudo dpkg -i libicu70_70.1-2ubuntu1_amd64.deb
-  # - git clone https://github.com/php-build/php-build.git $HOME/.phpenv/plugins/php-build
-  # - pkg-config --modversion libxml-2.0
-  #- sudo apt install libzip-dev -y
-  # - phpenv install 8.3.9
-  #- sudo apt install php8.3 -y
+  - rvm get head
+  - rvm use 3.2.2 --install --binary --fuzzy
 
   # - git clone https://github.com/php-build/php-build.git
   # - cd php-build
@@ -103,8 +93,8 @@ jobs:
   #   arch: arm64
   # - dist: jammy
   #   arch: arm64
-  - dist: noble
-    arch: arm64
+  # - dist: noble
+  #   arch: arm64
 # ---------------------------------------------------------------------------
   # - dist: xenial
   #   arch: ppc64le
@@ -115,8 +105,8 @@ jobs:
   #   arch: ppc64le
   # - dist: jammy
   #   arch: ppc64le
-  - dist: noble
-    arch: ppc64le
+  # - dist: noble
+  #   arch: ppc64le
 # ---------------------------------------------------------------------------
   # - dist: xenial
   #   arch: s390x
@@ -128,25 +118,21 @@ jobs:
   #   group: stable
   # - dist: jammy
   #   arch: s390x
-  - dist: noble
-    arch: s390x
+  # - dist: noble
+  #   arch: s390x
 # ---------------------------------------------------------------------------
   # - dist: trusty
-  # - dist: xenial
-  # - dist: bionic
-  #   group: previous
-  # - dist: focal
-  #   group: dev
-  # - dist: focal
-  # - dist: focal
-  #   group: previous
-  # - os: windows
-  # - dist: jammy
-  #   group: edge
+  - dist: xenial
+  - dist: bionic
+  - dist: focal
+  - dist: jammy
   - dist: noble
+# --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
   # - os: osx
   #   osx_image: xcode12.3
   # - os: osx
   #   osx_image: xcode12.4
+# --------------------------------------------------------------------------- 
+  # - os: windows
