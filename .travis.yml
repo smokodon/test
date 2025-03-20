@@ -15,7 +15,7 @@
 
 
 script:
-  - rvm get head
+  # - rvm get head
   - rvm use 3.2.2 --install --binary --fuzzy
 
   # - git clone https://github.com/php-build/php-build.git
