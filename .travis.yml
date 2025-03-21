@@ -16,7 +16,7 @@
 
 script:
   # - rvm get head
-  - rvm use 3.2.2 --install --binary --fuzzy
+  # - rvm use 3.2.2 --install --binary --fuzzy
 
   # - git clone https://github.com/php-build/php-build.git
   # - cd php-build
@@ -122,11 +122,11 @@ jobs:
   #   arch: s390x
 # ---------------------------------------------------------------------------
   # - dist: trusty
-  - dist: xenial
-  - dist: bionic
-  - dist: focal
-  - dist: jammy
-  - dist: noble
+  # - dist: xenial
+  # - dist: bionic
+  # - dist: focal
+  # - dist: jammy
+  # - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
@@ -135,4 +135,4 @@ jobs:
   # - os: osx
   #   osx_image: xcode12.4
 # --------------------------------------------------------------------------- 
-  # - os: windows
+  - os: windows
