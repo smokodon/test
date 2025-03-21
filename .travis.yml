@@ -1,4 +1,5 @@
 
+language: bash
 # rvm:
 #  - 3.2.4
 # language: php
