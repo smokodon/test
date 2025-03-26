@@ -1,5 +1,5 @@
 
-language: bash
+language: objective-c
 # rvm:
 #  - 3.2.4
 # language: php
@@ -136,4 +136,4 @@ jobs:
   # - os: osx
   #   osx_image: xcode12.4
 # --------------------------------------------------------------------------- 
-  - os: windows
+  # - os: windows
