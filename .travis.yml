@@ -1,5 +1,8 @@
+language: go
 
-language: objective-c
+go:
+  - "1.20" # or any Go version you prefer
+
 # rvm:
 #  - 3.2.4
 # language: php
@@ -16,6 +19,7 @@ language: objective-c
 
 
 script:
+  - go version
   # - rvm get head
   # - rvm use 3.2.2 --install --binary --fuzzy
 
@@ -136,4 +140,4 @@ jobs:
   # - os: osx
   #   osx_image: xcode12.4
 # --------------------------------------------------------------------------- 
-  # - os: windows
+  - os: windows
