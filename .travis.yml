@@ -1,6 +1,6 @@
 
 language: python
-python: 3.12
+#python: 3.12
 # rvm:
 #  - 3.2.4
 # language: php
@@ -17,7 +17,8 @@ python: 3.12
 
 
 script:
-  - python -v
+  - python --version
+  - python3 --version
   # - rvm get head
   # - rvm use 3.2.2 --install --binary --fuzzy
 
