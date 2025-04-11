@@ -1,13 +1,19 @@
 #!/usr/bin/env bash
+set -o errexit
 
-  echo "Download and extract Ant"
-  wget -q "https://downloads.apache.org/ant/binaries/apache-ant-1.10.14-bin.tar.gz"
-  tar xzf apache-ant-1.10.14-bin.tar.gz
-  sudo mv apache-ant-1.10.14/ /usr/local/ant
-  echo "Add Ant variables to a profile"
-  ANT_HOME=/usr/local/ant
-  PATH="$PATH:/usr/local/ant/bin"
-  export ANT_HOME
-  export PATH="$PATH:/usr/local/ant/bin" >> /etc/profile
-  cat /etc/profile
+main() {
+  local tmp
+  tmp="$(mktemp -d)"
 
+  local sudo=''
+  if [[ "${TRAVIS}" ]]; then
+    sudo='sudo'
+  fi
+
+  curl -sSL 'https://github.com/keithf4/pg_partman/archive/v4.7.3.tar.gz' \
+    | tar -xzf - -C "${tmp}"
+
+  "${sudo}" make install -C "${tmp}/pg_partman-4.7.3"
+}
+
+main "$@"

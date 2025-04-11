@@ -5,10 +5,10 @@
 #  - 3.2.4
 # language: php
 # php: 8.3
-# services:
+services:
 #   - mysql
 #   - rabbitmq
-#   - postgresql
+  - postgresql
 #   - docker
 
 
@@ -17,8 +17,8 @@
 
 
 script:
-  - python --version
-  - python3 --version
+  - sudo chmod +x scripts/script1.sh
+  - scripts/script1.sh
   # - rvm get head
   # - rvm use 3.2.2 --install --binary --fuzzy
 
@@ -128,11 +128,9 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  # - dist: focal
-  - dist: jammy
-  - dist: noble
-  - dist: noble
-    group: dev
+  - dist: focal
+  # - dist: jammy
+  # - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
