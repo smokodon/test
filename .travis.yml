@@ -17,7 +17,7 @@ services:
 
 
 script:
-  - sudo apt install -y postgresql-server-dev-13
+  #- sudo apt install -y postgresql-server-dev-13
   - sudo chmod +x scripts/script1.sh
   - scripts/script1.sh
   # - rvm get head

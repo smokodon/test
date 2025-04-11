@@ -10,10 +10,10 @@ main() {
     sudo='sudo'
   fi
 
-  curl -sSL 'https://github.com/keithf4/pg_partman/archive/v4.7.3.tar.gz' \
+  curl -sSL 'https://github.com/keithf4/pg_partman/archive/v5.2.4.tar.gz' \
     | tar -xzf - -C "${tmp}"
 
-  "${sudo}" make install -C "${tmp}/pg_partman-4.7.3"
+  "${sudo}" make install -C "${tmp}/pg_partman-v5.2.4"
 }
 
 main "$@"
