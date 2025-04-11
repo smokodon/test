@@ -18,6 +18,7 @@ services:
 
 script:
   #- sudo apt install -y postgresql-server-dev-13
+  - sudo apt install -y postgresql-server-*
   - wget 'https://github.com/pgpartman/pg_partman/archive/refs/tags/v4.7.4.tar.gz'
   - tar -xzf ./v4.7.4.tar.gz
   - ls -al
