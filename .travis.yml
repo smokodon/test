@@ -18,10 +18,10 @@ services:
 
 script:
   #- sudo apt install -y postgresql-server-dev-13
-  - wget 'https://github.com/pgpartman/pg_partman/archive/refs/tags/v4.8.0.tar.gz'
-  - tar -xzf ./v4.8.0.tar.gz
+  - wget 'https://github.com/pgpartman/pg_partman/archive/refs/tags/v5.0.0.tar.gz'
+  - tar -xzf ./v5.0.0.tar.gz
   - ls -al
-  - sudo make install -C ./pg_partman-4.8.0
+  - sudo make install -C ./pg_partman-5.0.0
   # - sudo chmod +x scripts/script1.sh
   # - scripts/script1.sh
 
