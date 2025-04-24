@@ -21,6 +21,7 @@ script:
   #- sudo apt install -y postgresql-server-dev-13
   # - echo $JAVA_HOME
   # - java -XshowSettings:properties -version 2>&1 | grep 'java.home'
+  - sudo apt update -y && sudo apt upgrade -y
   - apt list --installed
   # - sudo chmod +x scripts/script1.sh
   # - scripts/script1.sh
