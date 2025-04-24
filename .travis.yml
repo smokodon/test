@@ -1,14 +1,15 @@
 
-# language: python
+language: java
+jdk: 17
 # python: 3.12
 # rvm:
 #  - 3.2.4
 # language: php
 # php: 8.3
-services:
+# services:
 #   - mysql
 #   - rabbitmq
-  - postgresql
+#   - postgresql
 #   - docker
 
 
@@ -19,11 +20,6 @@ services:
 script:
   #- sudo apt install -y postgresql-server-dev-13
   - sudo apt update
-  - sudo apt install -y postgresql-server-dev-13
-  - wget 'https://github.com/pgpartman/pg_partman/archive/refs/tags/v4.7.4.tar.gz'
-  - tar -xzf ./v4.7.4.tar.gz
-  - ls -al
-  - sudo make install -C ./pg_partman-4.7.4
   # - sudo chmod +x scripts/script1.sh
   # - scripts/script1.sh
 
@@ -135,10 +131,10 @@ jobs:
 # ---------------------------------------------------------------------------
   # - dist: trusty
   # - dist: xenial
-  # - dist: bionic
+  - dist: bionic
   - dist: focal
-  # - dist: jammy
-  # - dist: noble
+  - dist: jammy
+  - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
