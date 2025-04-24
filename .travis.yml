@@ -1,6 +1,6 @@
 
-language: java
-jdk: openjdk21
+# language: java
+# jdk: openjdk21
 # python: 3.12
 # rvm:
 #  - 3.2.4
@@ -19,8 +19,9 @@ jdk: openjdk21
 
 script:
   #- sudo apt install -y postgresql-server-dev-13
-  - echo $JAVA_HOME
-  - java -XshowSettings:properties -version 2>&1 | grep 'java.home'
+  # - echo $JAVA_HOME
+  # - java -XshowSettings:properties -version 2>&1 | grep 'java.home'
+  - apt list --installed
   # - sudo chmod +x scripts/script1.sh
   # - scripts/script1.sh
 
@@ -49,7 +50,6 @@ script:
   
   # - phpenv install 8.3.9
   # - phpenv global 8.3.9
-  - echo "witam"
 
 
   # - sudo dpkg -i libicu70_70.1-2_amd64.deb
