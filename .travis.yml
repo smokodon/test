@@ -1,5 +1,5 @@
 
-# language: java
+language: ruby
 # jdk: openjdk21
 # python: 3.12
 # rvm:
