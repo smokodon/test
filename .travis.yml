@@ -19,7 +19,8 @@ jdk: openjdk17
 
 script:
   #- sudo apt install -y postgresql-server-dev-13
-  - sudo apt update
+  - echo $JAVA_HOME
+  - java -XshowSettings:properties -version 2>&1 | grep 'java.home'
   # - sudo chmod +x scripts/script1.sh
   # - scripts/script1.sh
 
