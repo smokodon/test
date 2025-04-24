@@ -1,328 +1,95 @@
-#   kibana.yml: |
-#     server.name: kibana
-#     server.host: "0"
-#     elasticsearch.hosts: [ "https://elasticsearch-master:9200" ]
-#     monitoring.ui.container.elasticsearch.enabled: true
-#     elasticsearch.ssl.certificateAuthorities: [ "/usr/share/kibana/config/certs/ca.crt" ]
-#     elasticsearch.ssl.verificationMode: full
-#     xpack.encryptedSavedObjects.encryptionKey: "jhzgiFy4HwavMnyJjxPWozxYMjyNoJvEwtJKaEi9whywohtHTArTsjYgEqwVvrzF"
-#     server.publicBaseUrl: "https://kibana-staging.travis-ci.com"
-
-
-
-
-# status = error
-
-# appender.console.type = Console
-# appender.console.name = console
-# appender.console.layout.type = PatternLayout
-# appender.console.layout.pattern = [%d{ISO8601}][%-5p][%-25c{1.}] [%node_name]%marker %m%consoleException%n
-
-# ######## Server JSON ############################
-# appender.rolling.type = RollingFile
-# appender.rolling.name = rolling
-# appender.rolling.fileName = ${sys:es.logs.base_path}${sys:file.separator}${sys:es.logs.cluster_name}_server.json
-# appender.rolling.layout.type = ECSJsonLayout
-# appender.rolling.layout.dataset = elasticsearch.server
-
-# appender.rolling.filePattern = ${sys:es.logs.base_path}${sys:file.separator}${sys:es.logs.cluster_name}-%d{yyyy-MM-dd}-%i.json.gz
-# appender.rolling.policies.type = Policies
-# appender.rolling.policies.time.type = TimeBasedTriggeringPolicy
-# appender.rolling.policies.time.interval = 1
-# appender.rolling.policies.time.modulate = true
-# appender.rolling.policies.size.type = SizeBasedTriggeringPolicy
-# appender.rolling.policies.size.size = 128MB
-# appender.rolling.strategy.type = DefaultRolloverStrategy
-# appender.rolling.strategy.fileIndex = nomax
-# appender.rolling.strategy.action.type = Delete
-# appender.rolling.strategy.action.basepath = ${sys:es.logs.base_path}
-# appender.rolling.strategy.action.condition.type = IfFileName
-# appender.rolling.strategy.action.condition.glob = ${sys:es.logs.cluster_name}-*
-# appender.rolling.strategy.action.condition.nested_condition.type = IfAccumulatedFileSize
-# appender.rolling.strategy.action.condition.nested_condition.exceeds = 2GB
-# ################################################
-# ######## Server -  old style pattern ###########
-# appender.rolling_old.type = RollingFile
-# appender.rolling_old.name = rolling_old
-# appender.rolling_old.fileName = ${sys:es.logs.base_path}${sys:file.separator}${sys:es.logs.cluster_name}.log
-# appender.rolling_old.layout.type = PatternLayout
-# appender.rolling_old.layout.pattern = [%d{ISO8601}][%-5p][%-25c{1.}] [%node_name]%marker %m%n
-
-# appender.rolling_old.filePattern = ${sys:es.logs.base_path}${sys:file.separator}${sys:es.logs.cluster_name}-%d{yyyy-MM-dd}-%i.log.gz
-# appender.rolling_old.policies.type = Policies
-# appender.rolling_old.policies.time.type = TimeBasedTriggeringPolicy
-# appender.rolling_old.policies.time.interval = 1
-# appender.rolling_old.policies.time.modulate = true
-# appender.rolling_old.policies.size.type = SizeBasedTriggeringPolicy
-# appender.rolling_old.policies.size.size = 128MB
-# appender.rolling_old.strategy.type = DefaultRolloverStrategy
-# appender.rolling_old.strategy.fileIndex = nomax
-# appender.rolling_old.strategy.action.type = Delete
-# appender.rolling_old.strategy.action.basepath = ${sys:es.logs.base_path}
-# appender.rolling_old.strategy.action.condition.type = IfFileName
-# appender.rolling_old.strategy.action.condition.glob = ${sys:es.logs.cluster_name}-*
-# appender.rolling_old.strategy.action.condition.nested_condition.type = IfAccumulatedFileSize
-# appender.rolling_old.strategy.action.condition.nested_condition.exceeds = 2GB
-# ################################################
-
-# rootLogger.level = info
-# rootLogger.appenderRef.console.ref = console
-# rootLogger.appenderRef.rolling.ref = rolling
-# rootLogger.appenderRef.rolling_old.ref = rolling_old
-
-# ######## Deprecation JSON #######################
-# appender.deprecation_rolling.type = RollingFile
-# appender.deprecation_rolling.name = deprecation_rolling
-# appender.deprecation_rolling.fileName = ${sys:es.logs.base_path}${sys:file.separator}${sys:es.logs.cluster_name}_deprecation.json
-# appender.deprecation_rolling.layout.type = ECSJsonLayout
-# # Intentionally follows a different pattern to above
-# appender.deprecation_rolling.layout.dataset = deprecation.elasticsearch
-# appender.deprecation_rolling.filter.rate_limit.type = RateLimitingFilter
-
-# appender.deprecation_rolling.filePattern = ${sys:es.logs.base_path}${sys:file.separator}${sys:es.logs.cluster_name}_deprecation-%i.json.gz
-# appender.deprecation_rolling.policies.type = Policies
-# appender.deprecation_rolling.policies.size.type = SizeBasedTriggeringPolicy
-# appender.deprecation_rolling.policies.size.size = 1GB
-# appender.deprecation_rolling.strategy.type = DefaultRolloverStrategy
-# appender.deprecation_rolling.strategy.max = 4
-
-# appender.header_warning.type = HeaderWarningAppender
-# appender.header_warning.name = header_warning
-# #################################################
-
-# logger.deprecation.name = org.elasticsearch.deprecation
-# logger.deprecation.level = WARN
-# logger.deprecation.appenderRef.deprecation_rolling.ref = deprecation_rolling
-# logger.deprecation.appenderRef.header_warning.ref = header_warning
-# logger.deprecation.additivity = false
-
-# ######## Search slowlog JSON ####################
-# appender.index_search_slowlog_rolling.type = RollingFile
-# appender.index_search_slowlog_rolling.name = index_search_slowlog_rolling
-# appender.index_search_slowlog_rolling.fileName = ${sys:es.logs.base_path}${sys:file.separator}${sys:es.logs
-#   .cluster_name}_index_search_slowlog.json
-# appender.index_search_slowlog_rolling.layout.type = ECSJsonLayout
-# appender.index_search_slowlog_rolling.layout.dataset = elasticsearch.index_search_slowlog
-
-# appender.index_search_slowlog_rolling.filePattern = ${sys:es.logs.base_path}${sys:file.separator}${sys:es.logs
-#   .cluster_name}_index_search_slowlog-%i.json.gz
-# appender.index_search_slowlog_rolling.policies.type = Policies
-# appender.index_search_slowlog_rolling.policies.size.type = SizeBasedTriggeringPolicy
-# appender.index_search_slowlog_rolling.policies.size.size = 1GB
-# appender.index_search_slowlog_rolling.strategy.type = DefaultRolloverStrategy
-# appender.index_search_slowlog_rolling.strategy.max = 4
-# #################################################
-
-# #################################################
-# logger.index_search_slowlog_rolling.name = index.search.slowlog
-# logger.index_search_slowlog_rolling.level = trace
-# logger.index_search_slowlog_rolling.appenderRef.index_search_slowlog_rolling.ref = index_search_slowlog_rolling
-# logger.index_search_slowlog_rolling.additivity = false
-
-# ######## Indexing slowlog JSON ##################
-# appender.index_indexing_slowlog_rolling.type = RollingFile
-# appender.index_indexing_slowlog_rolling.name = index_indexing_slowlog_rolling
-# appender.index_indexing_slowlog_rolling.fileName = ${sys:es.logs.base_path}${sys:file.separator}${sys:es.logs.cluster_name}
-#   _index_indexing_slowlog.json
-# appender.index_indexing_slowlog_rolling.layout.type = ECSJsonLayout
-# appender.index_indexing_slowlog_rolling.layout.dataset = elasticsearch.index_indexing_slowlog
-
-
-# appender.index_indexing_slowlog_rolling.filePattern = ${sys:es.logs.base_path}${sys:file.separator}${sys:es.logs.cluster_name}
-#   _index_indexing_slowlog-%i.json.gz
-# appender.index_indexing_slowlog_rolling.policies.type = Policies
-# appender.index_indexing_slowlog_rolling.policies.size.type = SizeBasedTriggeringPolicy
-# appender.index_indexing_slowlog_rolling.policies.size.size = 1GB
-# appender.index_indexing_slowlog_rolling.strategy.type = DefaultRolloverStrategy
-# appender.index_indexing_slowlog_rolling.strategy.max = 4
-# #################################################
-
-
-# logger.index_indexing_slowlog.name = index.indexing.slowlog.index
-# logger.index_indexing_slowlog.level = trace
-# logger.index_indexing_slowlog.appenderRef.index_indexing_slowlog_rolling.ref = index_indexing_slowlog_rolling
-# logger.index_indexing_slowlog.additivity = false
-
-
-# logger.com_amazonaws.name = com.amazonaws
-# logger.com_amazonaws.level = warn
-
-# logger.com_amazonaws_jmx_SdkMBeanRegistrySupport.name = com.amazonaws.jmx.SdkMBeanRegistrySupport
-# logger.com_amazonaws_jmx_SdkMBeanRegistrySupport.level = error
-
-# logger.com_amazonaws_metrics_AwsSdkMetrics.name = com.amazonaws.metrics.AwsSdkMetrics
-# logger.com_amazonaws_metrics_AwsSdkMetrics.level = error
-
-# logger.com_amazonaws_auth_profile_internal_BasicProfileConfigFileLoader.name = com.amazonaws.auth.profile.internal.BasicProfileConfigFileLoader
-# logger.com_amazonaws_auth_profile_internal_BasicProfileConfigFileLoader.level = error
-
-# logger.com_amazonaws_services_s3_internal_UseArnRegionResolver.name = com.amazonaws.services.s3.internal.UseArnRegionResolver
-# logger.com_amazonaws_services_s3_internal_UseArnRegionResolver.level = error
-
-
-# appender.audit_rolling.type = RollingFile
-# appender.audit_rolling.name = audit_rolling
-# appender.audit_rolling.fileName = ${sys:es.logs.base_path}${sys:file.separator}${sys:es.logs.cluster_name}_audit.json
-# appender.audit_rolling.layout.type = PatternLayout
-# appender.audit_rolling.layout.pattern = {
-#                 "type":"audit", 
-#                 "timestamp":"%d{yyyy-MM-dd'T'HH:mm:ss,SSSZ}"
-#                 %varsNotEmpty{, "cluster.name":"%enc{%map{cluster.name}}{JSON}"}
-#                 %varsNotEmpty{, "cluster.uuid":"%enc{%map{cluster.uuid}}{JSON}"}
-#                 %varsNotEmpty{, "node.name":"%enc{%map{node.name}}{JSON}"}
-#                 %varsNotEmpty{, "node.id":"%enc{%map{node.id}}{JSON}"}
-#                 %varsNotEmpty{, "host.name":"%enc{%map{host.name}}{JSON}"}
-#                 %varsNotEmpty{, "host.ip":"%enc{%map{host.ip}}{JSON}"}
-#                 %varsNotEmpty{, "event.type":"%enc{%map{event.type}}{JSON}"}
-#                 %varsNotEmpty{, "event.action":"%enc{%map{event.action}}{JSON}"}
-#                 %varsNotEmpty{, "authentication.type":"%enc{%map{authentication.type}}{JSON}"}
-#                 %varsNotEmpty{, "user.name":"%enc{%map{user.name}}{JSON}"}
-#                 %varsNotEmpty{, "user.run_by.name":"%enc{%map{user.run_by.name}}{JSON}"}
-#                 %varsNotEmpty{, "user.run_as.name":"%enc{%map{user.run_as.name}}{JSON}"}
-#                 %varsNotEmpty{, "user.realm":"%enc{%map{user.realm}}{JSON}"}
-#                 %varsNotEmpty{, "user.realm_domain":"%enc{%map{user.realm_domain}}{JSON}"}
-#                 %varsNotEmpty{, "user.run_by.realm":"%enc{%map{user.run_by.realm}}{JSON}"}
-#                 %varsNotEmpty{, "user.run_by.realm_domain":"%enc{%map{user.run_by.realm_domain}}{JSON}"}
-#                 %varsNotEmpty{, "user.run_as.realm":"%enc{%map{user.run_as.realm}}{JSON}"}
-#                 %varsNotEmpty{, "user.run_as.realm_domain":"%enc{%map{user.run_as.realm_domain}}{JSON}"}
-#                 %varsNotEmpty{, "user.roles":%map{user.roles}}
-#                 %varsNotEmpty{, "apikey.id":"%enc{%map{apikey.id}}{JSON}"}
-#                 %varsNotEmpty{, "apikey.name":"%enc{%map{apikey.name}}{JSON}"}
-#                 %varsNotEmpty{, "authentication.token.name":"%enc{%map{authentication.token.name}}{JSON}"}
-#                 %varsNotEmpty{, "authentication.token.type":"%enc{%map{authentication.token.type}}{JSON}"}
-#                 %varsNotEmpty{, "origin.type":"%enc{%map{origin.type}}{JSON}"}
-#                 %varsNotEmpty{, "origin.address":"%enc{%map{origin.address}}{JSON}"}
-#                 %varsNotEmpty{, "realm":"%enc{%map{realm}}{JSON}"}
-#                 %varsNotEmpty{, "realm_domain":"%enc{%map{realm_domain}}{JSON}"}
-#                 %varsNotEmpty{, "url.path":"%enc{%map{url.path}}{JSON}"}
-#                 %varsNotEmpty{, "url.query":"%enc{%map{url.query}}{JSON}"}
-#                 %varsNotEmpty{, "request.method":"%enc{%map{request.method}}{JSON}"}
-#                 %varsNotEmpty{, "request.body":"%enc{%map{request.body}}{JSON}"}
-#                 %varsNotEmpty{, "request.id":"%enc{%map{request.id}}{JSON}"}
-#                 %varsNotEmpty{, "action":"%enc{%map{action}}{JSON}"}
-#                 %varsNotEmpty{, "request.name":"%enc{%map{request.name}}{JSON}"}
-#                 %varsNotEmpty{, "indices":%map{indices}}
-#                 %varsNotEmpty{, "opaque_id":"%enc{%map{opaque_id}}{JSON}"}
-#                 %varsNotEmpty{, "trace.id":"%enc{%map{trace.id}}{JSON}"}
-#                 %varsNotEmpty{, "x_forwarded_for":"%enc{%map{x_forwarded_for}}{JSON}"}
-#                 %varsNotEmpty{, "transport.profile":"%enc{%map{transport.profile}}{JSON}"}
-#                 %varsNotEmpty{, "rule":"%enc{%map{rule}}{JSON}"}
-#                 %varsNotEmpty{, "put":%map{put}}
-#                 %varsNotEmpty{, "delete":%map{delete}}
-#                 %varsNotEmpty{, "change":%map{change}}
-#                 %varsNotEmpty{, "create":%map{create}}
-#                 %varsNotEmpty{, "invalidate":%map{invalidate}}
-#                 }%n
-# # "node.name" node name from the `elasticsearch.yml` settings
-# # "node.id" node id which should not change between cluster restarts
-# # "host.name" unresolved hostname of the local node
-# # "host.ip" the local bound ip (i.e. the ip listening for connections)
-# # "origin.type" a received REST request is translated into one or more transport requests. This indicates which processing layer generated the event "rest" or "transport" (internal)
-# # "event.action" the name of the audited event, eg. "authentication_failed", "access_granted", "run_as_granted", etc.
-# # "authentication.type" one of "realm", "api_key", "token", "anonymous" or "internal"
-# # "user.name" the subject name as authenticated by a realm
-# # "user.run_by.name" the original authenticated subject name that is impersonating another one.
-# # "user.run_as.name" if this "event.action" is of a run_as type, this is the subject name to be impersonated as.
-# # "user.realm" the name of the realm that authenticated "user.name"
-# # "user.realm_domain" if "user.realm" is under a domain, this is the name of the domain
-# # "user.run_by.realm" the realm name of the impersonating subject ("user.run_by.name")
-# # "user.run_by.realm_domain" if "user.run_by.realm" is under a domain, this is the name of the domain
-# # "user.run_as.realm" if this "event.action" is of a run_as type, this is the realm name the impersonated user is looked up from
-# # "user.run_as.realm_domain" if "user.run_as.realm" is under a domain, this is the name of the domain
-# # "user.roles" the roles array of the user; these are the roles that are granting privileges
-# # "apikey.id" this field is present if and only if the "authentication.type" is "api_key"
-# # "apikey.name" this field is present if and only if the "authentication.type" is "api_key"
-# # "authentication.token.name" this field is present if and only if the authenticating credential is a service account token
-# # "authentication.token.type" this field is present if and only if the authenticating credential is a service account token
-# # "event.type" informs about what internal system generated the event; possible values are "rest", "transport", "ip_filter" and "security_config_change"
-# # "origin.address" the remote address and port of the first network hop, i.e. a REST proxy or another cluster node
-# # "realm" name of a realm that has generated an "authentication_failed" or an "authentication_successful"; the subject is not yet authenticated
-# # "realm_domain" if "realm" is under a domain, this is the name of the domain
-# # "url.path" the URI component between the port and the query string; it is percent (URL) encoded
-# # "url.query" the URI component after the path and before the fragment; it is percent (URL) encoded
-# # "request.method" the method of the HTTP request, i.e. one of GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
-# # "request.body" the content of the request body entity, JSON escaped
-# # "request.id" a synthetic identifier for the incoming request, this is unique per incoming request, and consistent across all audit events generated by that request
-# # "action" an action is the most granular operation that is authorized and this identifies it in a namespaced way (internal)
-# # "request.name" if the event is in connection to a transport message this is the name of the request class, similar to how rest requests are identified by the url path (internal)
-# # "indices" the array of indices that the "action" is acting upon
-# # "opaque_id" opaque value conveyed by the "X-Opaque-Id" request header
-# # "trace_id" an identifier conveyed by the part of "traceparent" request header
-# # "x_forwarded_for" the addresses from the "X-Forwarded-For" request header, as a verbatim string value (not an array)
-# # "transport.profile" name of the transport profile in case this is a "connection_granted" or "connection_denied" event
-# # "rule" name of the applied rule if the "origin.type" is "ip_filter"
-# # the "put", "delete", "change", "create", "invalidate" fields are only present
-# # when the "event.type" is "security_config_change" and contain the security config change (as an object) taking effect
-
-# appender.audit_rolling.filePattern = ${sys:es.logs.base_path}${sys:file.separator}${sys:es.logs.cluster_name}_audit-%d{yyyy-MM-dd}-%i.json.gz
-# appender.audit_rolling.policies.type = Policies
-# appender.audit_rolling.policies.time.type = TimeBasedTriggeringPolicy
-# appender.audit_rolling.policies.time.interval = 1
-# appender.audit_rolling.policies.time.modulate = true
-# appender.audit_rolling.policies.size.type = SizeBasedTriggeringPolicy
-# appender.audit_rolling.policies.size.size = 1GB
-# appender.audit_rolling.strategy.type = DefaultRolloverStrategy
-# appender.audit_rolling.strategy.fileIndex = nomax
-
-# logger.xpack_security_audit_logfile.name = org.elasticsearch.xpack.security.audit.logfile.LoggingAuditTrail
-# logger.xpack_security_audit_logfile.level = info
-# logger.xpack_security_audit_logfile.appenderRef.audit_rolling.ref = audit_rolling
-# logger.xpack_security_audit_logfile.additivity = false
-
-# logger.xmlsig.name = org.apache.xml.security.signature.XMLSignature
-# logger.xmlsig.level = error
-# logger.samlxml_decrypt.name = org.opensaml.xmlsec.encryption.support.Decrypter
-# logger.samlxml_decrypt.level = fatal
-# logger.saml2_decrypt.name = org.opensaml.saml.saml2.encryption.Decrypter
-# logger.saml2_decrypt.level = fatal
-
-
-# kubectl delete serviceaccount/elastic-operator secret/elastic-webhook-server-cert clusterrole.rbac.authorization.k8s.io/elastic-operator clusterrole.rbac.authorization.k8s.io/elastic-operator-view clusterrole.rbac.authorization.k8s.io/elastic-operator-edit clusterrolebinding.rbac.authorization.k8s.io/elastic-operator service/elastic-webhook-server configmap/elastic-operator  statefulset.apps/elastic-operator validatingwebhookconfiguration.admissionregistration.k8s.io/elastic-webhook.k8s.elastic.co
-
-# cat <<EOF | kubectl apply -f -
-# apiVersion: elasticsearch.k8s.elastic.co/v1
-# kind: Elasticsearch
-# metadata:
-#   name: elasticsearch
-# spec:
-#   version: 8.16.1
-#   nodeSets:
-#   - name: elastic-nodes
-#     count: 3
-#     config:
-#       node.store.allow_mmap: false
-# EOF
-
-
-# apiVersion: networking.k8s.io/v1
-# kind: Ingress
-# metadata:
-#   name: kibana
-#   namespace: elastic-system
-# spec:
-#   ingressClassName: nginx
-#   rules:
-#     - host: kibana-staging.travis-ci.com
-#       http:
-#         paths:
-#           - pathType: Prefix
-#             backend:
-#               service:
-#                 name: kibana
-#                 port:
-#                   number: 80
-#             path: /
-#   tls:
-#     - hosts:
-#       - kibana-staging.travis-ci.com
-#       secretName: travis-ci-com-tls-30-10-2025
-
-
-# curl -X POST "localhost:9200/_security/user/kibana" -H 'Content-Type: application/json' -d'
-# {
-#   "password" : "Start01!",
-#   "roles" : [ "admin" ],
-#   "full_name" : "kibana",
-#   "email" : ""
-# }
-# ' -u elastic:FyiQoYcuIqaWQaB7
+elasticsearch@elasticsearch-es-elasticsearch-0:~$ printenv
+SHELL=/bin/bash
+REDIS_LB_PORT=tcp://10.115.9.178:6379
+KUBERNETES_SERVICE_PORT_HTTPS=443
+ELASTICSEARCH_ES_INTERNAL_HTTP_PORT_9200_TCP_ADDR=10.115.10.52
+NGINX_KIBANA_CONTROLLER_ADMISSION_PORT_443_TCP_ADDR=10.115.7.157
+REDIS_ILB_PORT_6379_TCP_ADDR=10.115.1.205
+PROBE_PASSWORD_PATH=/mnt/elastic-internal/pod-mounted-users/elastic-internal-probe
+KUBERNETES_SERVICE_PORT=443
+REDIS_MASTER_SERVICE_HOST=10.115.13.208
+REDIS_LB_PORT_6379_TCP_ADDR=10.115.9.178
+ELASTICSEARCH_ES_HTTP_PORT=tcp://10.115.5.59:9200
+HOSTNAME=elasticsearch-es-elasticsearch-0
+NGINX_KIBANA_CONTROLLER_ADMISSION_SERVICE_PORT_HTTPS_WEBHOOK=443
+ELASTIC_CONTAINER=true
+NSS_SDB_USE_CACHE=no
+NGINX_KIBANA_CONTROLLER_PORT_443_TCP_ADDR=10.115.6.28
+REDIS_ILB_PORT_6379_TCP_PORT=6379
+POD_NAME=elasticsearch-es-elasticsearch-0
+REDIS_MASTER_PORT_6379_TCP_PROTO=tcp
+KIBANA_KB_HTTP_SERVICE_PORT=5601
+ELASTICSEARCH_ES_HTTP_PORT_9200_TCP=tcp://10.115.5.59:9200
+ELASTICSEARCH_ES_HTTP_SERVICE_PORT=9200
+KIBANA_KB_HTTP_PORT=tcp://10.115.8.161:5601
+NGINX_KIBANA_CONTROLLER_SERVICE_PORT_HTTPS=443
+PWD=/usr/share/elasticsearch
+NAMESPACE=default
+ELASTICSEARCH_ES_INTERNAL_HTTP_PORT_9200_TCP_PROTO=tcp
+NGINX_KIBANA_CONTROLLER_SERVICE_HOST=10.115.6.28
+NGINX_KIBANA_CONTROLLER_PORT_443_TCP_PROTO=tcp
+REDIS_ILB_PORT=tcp://10.115.1.205:6379
+HOME=/usr/share/elasticsearch
+KUBERNETES_PORT_443_TCP=tcp://10.115.0.1:443
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+KIBANA_KB_HTTP_PORT_5601_TCP_PORT=5601
+READINESS_PROBE_PROTOCOL=https
+NGINX_KIBANA_CONTROLLER_ADMISSION_SERVICE_PORT=443
+NGINX_KIBANA_CONTROLLER_PORT_443_TCP_PORT=443
+NGINX_KIBANA_CONTROLLER_ADMISSION_PORT_443_TCP_PORT=443
+ELASTICSEARCH_ES_HTTP_PORT_9200_TCP_PROTO=tcp
+NGINX_KIBANA_CONTROLLER_PORT_443_TCP=tcp://10.115.6.28:443
+REDIS_MASTER_PORT_6379_TCP_PORT=6379
+ELASTICSEARCH_ES_HTTP_PORT_9200_TCP_ADDR=10.115.5.59
+HEADLESS_SERVICE_NAME=elasticsearch-es-elasticsearch
+NGINX_KIBANA_CONTROLLER_PORT_80_TCP_PROTO=tcp
+REDIS_MASTER_SERVICE_PORT=6379
+KIBANA_KB_HTTP_PORT_5601_TCP=tcp://10.115.8.161:5601
+TERM=xterm
+NODE_NAME=gke-elk-elk1-825bd345-yyzd
+REDIS_MASTER_PORT=tcp://10.115.13.208:6379
+REDIS_MASTER_SERVICE_PORT_REDIS=6379
+NGINX_KIBANA_CONTROLLER_ADMISSION_PORT_443_TCP_PROTO=tcp
+REDIS_MASTER_PORT_6379_TCP=tcp://10.115.13.208:6379
+NGINX_KIBANA_CONTROLLER_PORT_80_TCP_ADDR=10.115.6.28
+ELASTICSEARCH_ES_INTERNAL_HTTP_SERVICE_HOST=10.115.10.52
+REDIS_ILB_PORT_6379_TCP=tcp://10.115.1.205:6379
+REDIS_LB_SERVICE_PORT=6379
+NGINX_KIBANA_CONTROLLER_ADMISSION_PORT=tcp://10.115.7.157:443
+REDIS_LB_PORT_6379_TCP_PROTO=tcp
+REDIS_ILB_PORT_6379_TCP_PROTO=tcp
+NGINX_KIBANA_CONTROLLER_ADMISSION_SERVICE_HOST=10.115.7.157
+SHLVL=1
+ELASTICSEARCH_ES_HTTP_SERVICE_HOST=10.115.5.59
+KUBERNETES_PORT_443_TCP_PROTO=tcp
+NGINX_KIBANA_CONTROLLER_PORT=tcp://10.115.6.28:80
+ELASTICSEARCH_ES_HTTP_PORT_9200_TCP_PORT=9200
+REDIS_ILB_SERVICE_PORT=6379
+REDIS_MASTER_PORT_6379_TCP_ADDR=10.115.13.208
+KUBERNETES_PORT_443_TCP_ADDR=10.115.0.1
+POD_IP=10.48.2.13
+REDIS_LB_PORT_6379_TCP_PORT=6379
+REDIS_ILB_SERVICE_HOST=10.115.1.205
+NGINX_KIBANA_CONTROLLER_PORT_80_TCP=tcp://10.115.6.28:80
+NGINX_KIBANA_CONTROLLER_ADMISSION_PORT_443_TCP=tcp://10.115.7.157:443
+KIBANA_KB_HTTP_PORT_5601_TCP_ADDR=10.115.8.161
+KIBANA_KB_HTTP_SERVICE_PORT_HTTP=5601
+KIBANA_KB_HTTP_PORT_5601_TCP_PROTO=tcp
+KUBERNETES_SERVICE_HOST=10.115.0.1
+KUBERNETES_PORT=tcp://10.115.0.1:443
+NGINX_KIBANA_CONTROLLER_PORT_80_TCP_PORT=80
+KUBERNETES_PORT_443_TCP_PORT=443
+NGINX_KIBANA_CONTROLLER_SERVICE_PORT_HTTP=80
+PROBE_USERNAME=elastic-internal-probe
+PATH=/usr/share/elasticsearch/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ELASTICSEARCH_ES_INTERNAL_HTTP_SERVICE_PORT_HTTPS=9200
+ELASTICSEARCH_ES_INTERNAL_HTTP_PORT=tcp://10.115.10.52:9200
+REDIS_LB_SERVICE_HOST=10.115.9.178
+ELASTICSEARCH_ES_HTTP_SERVICE_PORT_HTTPS=9200
+KIBANA_KB_HTTP_SERVICE_HOST=10.115.8.161
+ELASTICSEARCH_ES_INTERNAL_HTTP_PORT_9200_TCP=tcp://10.115.10.52:9200
+ELASTICSEARCH_ES_INTERNAL_HTTP_SERVICE_PORT=9200
+REDIS_LB_PORT_6379_TCP=tcp://10.115.9.178:6379
+ELASTICSEARCH_ES_INTERNAL_HTTP_PORT_9200_TCP_PORT=9200
+NGINX_KIBANA_CONTROLLER_SERVICE_PORT=80
+_=/usr/bin/printenv

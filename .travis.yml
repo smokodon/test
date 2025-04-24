@@ -1,6 +1,6 @@
 
 language: java
-jdk: 17
+jdk: openjdk17
 # python: 3.12
 # rvm:
 #  - 3.2.4
