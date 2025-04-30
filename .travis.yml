@@ -1,16 +1,16 @@
 
-language: ruby
 # jdk: openjdk21
 # python: 3.12
 # rvm:
 #  - 3.2.4
 # language: php
 # php: 8.3
-# services:
-#   - mysql
-#   - rabbitmq
-#   - postgresql
-#   - docker
+
+services:
+  - mysql
+  - rabbitmq
+  - postgresql
+  - docker
 
 
   # - sudo pipx install docker-compose
@@ -18,76 +18,42 @@ language: ruby
 
 
 script:
-  #- sudo apt install -y postgresql-server-dev-13
-  # - echo $JAVA_HOME
-  # - java -XshowSettings:properties -version 2>&1 | grep 'java.home'
-  - sudo apt update -y && sudo apt upgrade -y
-  - apt list --installed
-  # - sudo chmod +x scripts/script1.sh
-  # - scripts/script1.sh
-
-  # - rvm get head
-  # - rvm use 3.2.2 --install --binary --fuzzy
-
-  # - git clone https://github.com/php-build/php-build.git
-  # - cd php-build
-  # - sudo ./install.sh
-  # - php-build 8.3.6 /usr/local/php-8.3.0
-
-  # - sudo rm -rf /home/travis/.phpenv
-  # - sudo apt update -yqq
-  # - sudo apt install php -y
-  # - php -v
-  # - type -a php
-
-  # - git clone https://github.com/phpenv/phpenv.git ~/.phpenv
-  # - echo 'export PATH="$HOME/.phpenv/bin:$PATH"' >> ~/.bashrc
-  # - echo 'eval "$(phpenv init -)"' >> ~/.bashrc
-  # - source ~/.bashrc
-  # - git clone https://github.com/php-build/php-build.git ~/.phpenv/plugins/php-build
-
-  # - sudo apt update
-  # - sudo apt install -y build-essential libxml2-dev libssl-dev libcurl4-openssl-dev libjpeg-dev libpng-dev libfreetype6-dev libonig-dev libzip-dev libpq-dev  libbz2-dev libreadline-dev libxslt1-dev pkg-config
-  
-  # - phpenv install 8.3.9
-  # - phpenv global 8.3.9
-
-
-  # - sudo dpkg -i libicu70_70.1-2_amd64.deb
-  # - sudo rm -f ./libicu70_70.1-2_amd64.deb
-
-
-  # - java --version
-  # - sudo systemctl status mysql.service
-  # - sudo systemctl status rabbitmq-server.service
-  # - sudo systemctl status postgresql.service
-  # - sudo rabbitmqctl status
-  # - mysqld --version
-  # - postgres --version
-  # - mysqld --print-defaults
-  # - psql -U postgres -c 'SHOW config_file'
-  # - cosign version
-  # - git -v
-  # - git-lfs
-  # - hg --version
-  # - svn --version
-  # - clang --version
-  # - cmake --version
-  # - gcc --version
-  # - ccache -V
-  # - shellcheck --version
-  # - shfmt -version
-  # - docker version
-  # - docker run hello-world
-  # - docker compose version
-  # - docker buildx version
-  # - mongod --version
-  # - gradle -version
-  # - groovy -version
-  # - ant -version
-  # - perl -v
-  # - php -v
-  # - redis-server --version
+  - java --version
+  - sudo systemctl status mysql.service
+  - sudo systemctl status rabbitmq-server.service
+  - sudo systemctl status postgresql.service
+  - sudo rabbitmqctl status
+  - mysqld --version
+  - postgres --version
+  - mysqld --print-defaults
+  - psql -U postgres -c 'SHOW config_file'
+  - cosign version
+  - git -v
+  - git-lfs
+  - hg --version
+  - svn --version
+  - clang --version
+  - cmake --version
+  - gcc --version
+  - ccache -V
+  - shellcheck --version
+  - shfmt -version
+  - docker version
+  - docker run hello-world
+  - docker compose version
+  - docker buildx version
+  - mongod --version
+  - gradle -version
+  - groovy -version
+  - ant -version
+  - perl -v
+  - php -v
+  - redis-server --version
+  - sudo mysqladmin ping
+  - sudo -u postgres psql -c 'SELECT 1'
+  - redis-cli ping
+  - sudo rabbitmqctl status
+  - docker run --rm hello-world
 
 
 
@@ -133,8 +99,8 @@ jobs:
 # ---------------------------------------------------------------------------
   # - dist: trusty
   # - dist: xenial
-  # - dist: bionic
-  # - dist: focal
+  - dist: bionic
+  - dist: focal
   - dist: jammy
   - dist: noble
 # --------------------------------------------------------------------------- 
