@@ -1,6 +1,6 @@
 
 # jdk: openjdk21
-group: dev
+# group: dev
 # python: 3.12
 # rvm:
 #  - 3.2.4
