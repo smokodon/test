@@ -1,5 +1,5 @@
 
-group: dev
+group: stable
 # jdk: openjdk21
 # group: stable
 # python: 3.12
