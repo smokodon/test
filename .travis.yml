@@ -1,6 +1,6 @@
 
 # jdk: openjdk21
-# group: dev
+group: dev
 # python: 3.12
 # rvm:
 #  - 3.2.4
@@ -19,44 +19,42 @@ services:
 
 
 script:
-- ldd $(which java)
-
-  # - java --version
-  # - sudo systemctl status mysql.service
-  # - sudo systemctl status rabbitmq-server.service
-  # - sudo systemctl status postgresql.service
-  # - sudo rabbitmqctl status
-  # - mysqld --version
-  # - postgres --version
-  # - mysqld --print-defaults
-  # - psql -U postgres -c 'SHOW config_file'
-  # - cosign version
-  # - git -v
-  # - git-lfs
-  # - hg --version
-  # - svn --version
-  # - clang --version
-  # - cmake --version
-  # - gcc --version
-  # - ccache -V
-  # - shellcheck --version
-  # - shfmt -version
-  # - docker version
-  # - docker run hello-world
-  # - docker compose version
-  # - docker buildx version
-  # - mongod --version
-  # - gradle -version
-  # - groovy -version
-  # - ant -version
-  # - perl -v
-  # - php -v
-  # - redis-server --version
-  # - sudo mysqladmin ping
-  # - sudo -u postgres psql -c 'SELECT 1'
-  # - redis-cli ping
-  # - sudo rabbitmqctl status
-  # - docker run --rm hello-world
+  - java --version
+  - sudo systemctl status mysql.service
+  - sudo systemctl status rabbitmq-server.service
+  - sudo systemctl status postgresql.service
+  - sudo rabbitmqctl status
+  - mysqld --version
+  - postgres --version
+  - mysqld --print-defaults
+  - psql -U postgres -c 'SHOW config_file'
+  - cosign version
+  - git -v
+  - git-lfs
+  - hg --version
+  - svn --version
+  - clang --version
+  - cmake --version
+  - gcc --version
+  - ccache -V
+  - shellcheck --version
+  - shfmt -version
+  - docker version
+  - docker run hello-world
+  - docker compose version
+  - docker buildx version
+  - mongod --version
+  - gradle -version
+  - groovy -version
+  - ant -version
+  - perl -v
+  - php -v
+  - redis-server --version
+  - sudo mysqladmin ping
+  - sudo -u postgres psql -c 'SELECT 1'
+  - redis-cli ping
+  - sudo rabbitmqctl status
+  - docker run --rm hello-world
 
 
 
@@ -102,7 +100,7 @@ jobs:
 # ---------------------------------------------------------------------------
   # - dist: trusty
   # - dist: xenial
-  # - dist: bionic
+  - dist: bionic
   - dist: focal
   - dist: jammy
   - dist: noble
