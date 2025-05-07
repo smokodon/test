@@ -7,14 +7,6 @@ group: dev
 #  - 3.2.4
 # language: php
 # php: 8.3
-services:
-  - elasticserach
-before_install:
-  - sudo systemctl restart elasticsearch
-  - sleep 30
-  - until curl --silent -XGET --fail http://localhost:9200/_cluster/health?pretty; do printf '...\n'; sleep 2; done
-install: skip
-script: true
 
 # services:
 #   - mysql
@@ -27,7 +19,7 @@ script: true
   #- sudo chmod +x /usr/local/bin/docker-compose
 
 
-# script:
+script:
 #   - java --version
 #   - sudo systemctl status mysql.service
 #   - sudo systemctl status rabbitmq-server.service
@@ -38,6 +30,7 @@ script: true
 #   - mysqld --print-defaults
 #   - psql -U postgres -c 'SHOW config_file'
 #   - cosign version
+  - rekor-cli version
 #   - git -v
 #   - git-lfs
 #   - hg --version
