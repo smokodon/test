@@ -1,60 +1,60 @@
 
 # jdk: openjdk21
-group: stable
+# group: stable
 # python: 3.12
 # rvm:
 #  - 3.2.4
 # language: php
 # php: 8.3
 
-services:
-  - mysql
-  - rabbitmq
-  - postgresql
-  - docker
+# services:
+#   - mysql
+#   - rabbitmq
+#   - postgresql
+#   - docker
 
 
   # - sudo pipx install docker-compose
   #- sudo chmod +x /usr/local/bin/docker-compose
 
 
-script:
-  - java --version
-  - sudo systemctl status mysql.service
-  - sudo systemctl status rabbitmq-server.service
-  - sudo systemctl status postgresql.service
-  - sudo rabbitmqctl status
-  - mysqld --version
-  - postgres --version
-  - mysqld --print-defaults
-  - psql -U postgres -c 'SHOW config_file'
-  - cosign version
-  - git -v
-  - git-lfs
-  - hg --version
-  - svn --version
-  - clang --version
-  - cmake --version
-  - gcc --version
-  - ccache -V
-  - shellcheck --version
-  - shfmt -version
-  - docker version
-  - docker run hello-world
-  - docker compose version
-  - docker buildx version
-  - mongod --version
-  - gradle -version
-  - groovy -version
-  - ant -version
-  - perl -v
-  - php -v
-  - redis-server --version
-  - sudo mysqladmin ping
-  - sudo -u postgres psql -c 'SELECT 1'
-  - redis-cli ping
-  - sudo rabbitmqctl status
-  - docker run --rm hello-world
+# script:
+#   - java --version
+#   - sudo systemctl status mysql.service
+#   - sudo systemctl status rabbitmq-server.service
+#   - sudo systemctl status postgresql.service
+#   - sudo rabbitmqctl status
+#   - mysqld --version
+#   - postgres --version
+#   - mysqld --print-defaults
+#   - psql -U postgres -c 'SHOW config_file'
+#   - cosign version
+#   - git -v
+#   - git-lfs
+#   - hg --version
+#   - svn --version
+#   - clang --version
+#   - cmake --version
+#   - gcc --version
+#   - ccache -V
+#   - shellcheck --version
+#   - shfmt -version
+#   - docker version
+#   - docker run hello-world
+#   - docker compose version
+#   - docker buildx version
+#   - mongod --version
+#   - gradle -version
+#   - groovy -version
+#   - ant -version
+#   - perl -v
+#   - php -v
+#   - redis-server --version
+#   - sudo mysqladmin ping
+#   - sudo -u postgres psql -c 'SELECT 1'
+#   - redis-cli ping
+#   - sudo rabbitmqctl status
+#   - docker run --rm hello-world
 
 
 
@@ -101,117 +101,226 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   - dist: bionic
+    script: echo "This is job number 1"
   - dist: focal
+    script: echo "This is job number 2"
   - dist: jammy
+    script: echo "This is job number 3"
   - dist: noble
+    script: echo "This is job number 4"
   - dist: bionic
+    script: echo "This is job number 5"
   - dist: focal
+    script: echo "This is job number 6"
   - dist: jammy
+    script: echo "This is job number 7"
   - dist: noble
+    script: echo "This is job number 8"
   - dist: bionic
+    script: echo "This is job number 9"
   - dist: focal
+    script: echo "This is job number 10"
   - dist: jammy
+    script: echo "This is job number 11"
   - dist: noble
+    script: echo "This is job number 12"
   - dist: bionic
+    script: echo "This is job number 13"
   - dist: focal
+    script: echo "This is job number 14"
   - dist: jammy
+    script: echo "This is job number 15"
   - dist: noble
+    script: echo "This is job number 16"
   - dist: bionic
+    script: echo "This is job number 17"
   - dist: focal
+    script: echo "This is job number 18"
   - dist: jammy
+    script: echo "This is job number 19"
   - dist: noble
+    script: echo "This is job number 20"
   - dist: bionic
+    script: echo "This is job number 21"
   - dist: focal
+    script: echo "This is job number 22"
   - dist: jammy
+    script: echo "This is job number 23"
   - dist: noble
+    script: echo "This is job number 24"
   - dist: bionic
+    script: echo "This is job number 25"
   - dist: focal
+    script: echo "This is job number 26"
   - dist: jammy
+    script: echo "This is job number 27"
   - dist: noble
+    script: echo "This is job number 28"
   - dist: bionic
+    script: echo "This is job number 29"
   - dist: focal
+    script: echo "This is job number 30"
   - dist: jammy
+    script: echo "This is job number 31"
   - dist: noble
+    script: echo "This is job number 32"
   - dist: bionic
+    script: echo "This is job number 33"
   - dist: focal
+    script: echo "This is job number 34"
   - dist: jammy
+    script: echo "This is job number 35"
   - dist: noble
+    script: echo "This is job number 36"
   - dist: bionic
+    script: echo "This is job number 37"
   - dist: focal
+    script: echo "This is job number 38"
   - dist: jammy
+    script: echo "This is job number 39"
   - dist: noble
+    script: echo "This is job number 40"
   - dist: bionic
+    script: echo "This is job number 41"
   - dist: focal
+    script: echo "This is job number 42"
   - dist: jammy
+    script: echo "This is job number 43"
   - dist: noble
+    script: echo "This is job number 44"
   - dist: bionic
+    script: echo "This is job number 45"
   - dist: focal
+    script: echo "This is job number 46"
   - dist: jammy
+    script: echo "This is job number 47"
   - dist: noble
+    script: echo "This is job number 48"
   - dist: bionic
+    script: echo "This is job number 49"
   - dist: focal
+    script: echo "This is job number 50"
   - dist: jammy
+    script: echo "This is job number 51"
   - dist: noble
+    script: echo "This is job number 52"
   - dist: bionic
+    script: echo "This is job number 53"
   - dist: focal
+    script: echo "This is job number 54"
   - dist: jammy
+    script: echo "This is job number 55"
   - dist: noble
+    script: echo "This is job number 56"
   - dist: bionic
+    script: echo "This is job number 57"
   - dist: focal
+    script: echo "This is job number 58"
   - dist: jammy
+    script: echo "This is job number 59"
   - dist: noble
+    script: echo "This is job number 60"
   - dist: bionic
+    script: echo "This is job number 61"
   - dist: focal
+    script: echo "This is job number 62"
   - dist: jammy
+    script: echo "This is job number 63"
   - dist: noble
+    script: echo "This is job number 64"
   - dist: bionic
+    script: echo "This is job number 65"
   - dist: focal
+    script: echo "This is job number 66"
   - dist: jammy
+    script: echo "This is job number 67"
   - dist: noble
+    script: echo "This is job number 68"
   - dist: bionic
+    script: echo "This is job number 69"
   - dist: focal
+    script: echo "This is job number 70"
   - dist: jammy
+    script: echo "This is job number 71"
   - dist: noble
+    script: echo "This is job number 72"
   - dist: bionic
+    script: echo "This is job number 73"
   - dist: focal
+    script: echo "This is job number 74"
   - dist: jammy
+    script: echo "This is job number 75"
   - dist: noble
+    script: echo "This is job number 76"
   - dist: bionic
+    script: echo "This is job number 77"
   - dist: focal
+    script: echo "This is job number 78"
   - dist: jammy
+    script: echo "This is job number 79"
   - dist: noble
+    script: echo "This is job number 80"
   - dist: bionic
+    script: echo "This is job number 81"
   - dist: focal
+    script: echo "This is job number 82"
   - dist: jammy
+    script: echo "This is job number 83"
   - dist: noble
+    script: echo "This is job number 84"
   - dist: bionic
+    script: echo "This is job number 85"
   - dist: focal
+    script: echo "This is job number 86"
   - dist: jammy
+    script: echo "This is job number 87"
   - dist: noble
+    script: echo "This is job number 88"
   - dist: bionic
+    script: echo "This is job number 89"
   - dist: focal
+    script: echo "This is job number 90"
   - dist: jammy
+    script: echo "This is job number 91"
   - dist: noble
+    script: echo "This is job number 92"
   - dist: bionic
+    script: echo "This is job number 93"
   - dist: focal
+    script: echo "This is job number 94"
   - dist: jammy
+    script: echo "This is job number 95"
   - dist: noble
+    script: echo "This is job number 96"
   - dist: bionic
+    script: echo "This is job number 97"
   - dist: focal
+    script: echo "This is job number 98"
   - dist: jammy
+    script: echo "This is job number 99"
   - dist: noble
+    script: echo "This is job number 100"
   - dist: bionic
+    script: echo "This is job number 101"
   - dist: focal
+    script: echo "This is job number 102"
   - dist: jammy
+    script: echo "This is job number 103"
   - dist: noble
+    script: echo "This is job number 104"
   - dist: bionic
+    script: echo "This is job number 105"
   - dist: focal
+    script: echo "This is job number 106"
   - dist: jammy
+    script: echo "This is job number 107"
   - dist: noble
+    script: echo "This is job number 108"
   - dist: bionic
+    script: echo "This is job number 109"
   - dist: focal
-  - dist: jammy
-  - dist: noble
+    script: echo "This is job number 110"
+
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
