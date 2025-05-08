@@ -5,8 +5,8 @@ group: stable
 # python: 3.12
 # rvm:
 #  - 3.2.4
-# language: php
-# php: 8.3
+language: php
+
 
 # services:
 #   - mysql
@@ -20,6 +20,17 @@ group: stable
 
 
 script:
+  - php -v
+
+
+
+
+
+
+
+
+
+
 #   - java --version
 #   - sudo systemctl status mysql.service
 #   - sudo systemctl status rabbitmq-server.service
@@ -30,7 +41,7 @@ script:
 #   - mysqld --print-defaults
 #   - psql -U postgres -c 'SHOW config_file'
 #   - cosign version
-  - rekor-cli version
+#   - rekor-cli version
 #   - git -v
 #   - git-lfs
 #   - hg --version
@@ -102,11 +113,19 @@ jobs:
 # ---------------------------------------------------------------------------
   # - dist: trusty
   # - dist: xenial
-  - dist: bionic
-  - dist: focal
-  - dist: jammy
-  - dist: noble
+  # - dist: bionic
+  # - dist: focal
+  # - dist: jammy
+  # - dist: noble
 
+  - dist: noble
+    php: 8.3
+  - dist: noble
+    php: 8.2
+  - dist: noble
+    php: 8.1
+  - dist: noble
+    php: 8.4   
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
