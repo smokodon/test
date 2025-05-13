@@ -14,9 +14,10 @@
 #   - docker
 
 
-  # - sudo pipx install docker-compose
-  #- sudo chmod +x /usr/local/bin/docker-compose
-
+language: android
+os:
+- linux
+dist: focal
 
 script:
   - php -v
@@ -61,8 +62,8 @@ script:
 
 
 
-jobs:
-  include:
+# jobs:
+  # include:
   # - os: freebsd
 
   # - dist: xenial
@@ -73,8 +74,8 @@ jobs:
   #   arch: arm64
   # - dist: jammy
   #   arch: arm64
-  - dist: noble
-    arch: arm64
+  # - dist: noble
+  #   arch: arm64
 # ---------------------------------------------------------------------------
   # - dist: xenial
   #   arch: ppc64le
@@ -85,8 +86,8 @@ jobs:
   #   arch: ppc64le
   # - dist: jammy
   #   arch: ppc64le
-  - dist: noble
-    arch: ppc64le
+  # - dist: noble
+  #   arch: ppc64le
 # ---------------------------------------------------------------------------
   # - dist: xenial
   #   arch: s390x
@@ -98,8 +99,8 @@ jobs:
   #   group: stable
   # - dist: jammy
   #   arch: s390x
-  - dist: noble
-    arch: s390x
+  # - dist: noble
+  #   arch: s390x
 # ---------------------------------------------------------------------------
   # - dist: trusty
   # - dist: xenial
