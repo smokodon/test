@@ -73,8 +73,8 @@ jobs:
   #   arch: arm64
   # - dist: jammy
   #   arch: arm64
-  # - dist: noble
-  #   arch: arm64
+  - dist: noble
+    arch: arm64
 # ---------------------------------------------------------------------------
   # - dist: xenial
   #   arch: ppc64le
@@ -85,8 +85,8 @@ jobs:
   #   arch: ppc64le
   # - dist: jammy
   #   arch: ppc64le
-  # - dist: noble
-  #   arch: ppc64le
+  - dist: noble
+    arch: ppc64le
 # ---------------------------------------------------------------------------
   # - dist: xenial
   #   arch: s390x
@@ -98,15 +98,15 @@ jobs:
   #   group: stable
   # - dist: jammy
   #   arch: s390x
-  # - dist: noble
-  #   arch: s390x
+  - dist: noble
+    arch: s390x
 # ---------------------------------------------------------------------------
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
   # - dist: focal
-  - dist: jammy
-  - dist: noble
+  # - dist: jammy
+  # - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
