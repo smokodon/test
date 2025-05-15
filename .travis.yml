@@ -14,13 +14,9 @@
 #   - docker
 
 
-language: android
-os:
-- linux
-dist: focal
-
 script:
-  - php -v
+  - sudo apt update -yq
+  - sudo apt install zlib1g-dev -y
 
 #   - java --version
 #   - sudo systemctl status mysql.service
@@ -106,8 +102,8 @@ script:
   # - dist: xenial
   # - dist: bionic
   # - dist: focal
-  # - dist: jammy
-  # - dist: noble
+  - dist: jammy
+  - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
