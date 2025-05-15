@@ -58,8 +58,8 @@ script:
 
 
 
-# jobs:
-  # include:
+jobs:
+  include:
   # - os: freebsd
 
   # - dist: xenial
