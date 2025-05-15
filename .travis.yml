@@ -4,8 +4,8 @@
 # python: 3.12
 # rvm:
 #  - 3.2.4
-# language: php
-
+language: php
+php: 8.4
 
 # services:
 #   - mysql
@@ -15,8 +15,7 @@
 
 
 script:
-  - sudo apt update -yq
-  - sudo apt install zlib1g-dev -y
+  - php -v
 
 #   - java --version
 #   - sudo systemctl status mysql.service
