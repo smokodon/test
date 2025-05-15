@@ -15,7 +15,7 @@ php: 8.4
 
 
 script:
-  - php -v
+  - php -m | grep zlib
 
 #   - java --version
 #   - sudo systemctl status mysql.service
