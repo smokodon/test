@@ -14,8 +14,8 @@
 #   - docker
 
 script:
-  - sudo find /etc -type f -newermt today -ls
-  - ls -al
+  - ls -alt /etc
+  # - ls -al
 
 #   - java --version
 #   - sudo systemctl status mysql.service
