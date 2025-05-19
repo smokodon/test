@@ -15,7 +15,7 @@
 
 script:
   - ls -al
-  - ls -al .ssh
+  - ls -al ./ssh
   - ls -al /etc
   - ls -al /etc/ssh
 
