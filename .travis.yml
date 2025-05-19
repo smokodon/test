@@ -13,8 +13,19 @@
 #   - postgresql
 #   - docker
 
+os: linux
+dist: focal
+
+vm:
+  create:
+    name: kw-custom
+
 script:
-  - ls -al /etc
+  - echo "test..."
+
+
+# script:
+  # - ls -al /etc
   # - ls -al
 
 #   - java --version
@@ -57,8 +68,8 @@ script:
 
 
 
-jobs:
-  include:
+# jobs:
+  # include:
   # - os: freebsd
 
   # - dist: xenial
@@ -102,7 +113,7 @@ jobs:
   # - dist: bionic
   # - dist: focal
   # - dist: jammy
-  - dist: noble
+  # - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
