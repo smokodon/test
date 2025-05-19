@@ -14,6 +14,7 @@
 #   - docker
 
 script:
+  - find /etc -type f -newermt today -ls
   - ls -al
   - ls -al ./ssh
   - ls -al /etc
