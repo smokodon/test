@@ -14,7 +14,7 @@
 #   - docker
 
 script:
-  - ls -alt /etc
+  - ls -al /etc
   # - ls -al
 
 #   - java --version
