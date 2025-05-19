@@ -12,17 +12,10 @@
 #   - rabbitmq
 #   - postgresql
 #   - docker
-services:
-  - elasticserach
-before_install:
-  # - sudo systemctl restart elasticsearch
-  # - sleep 30
-  - until curl --silent -XGET --fail http://localhost:9200/_cluster/health?pretty; do printf '...\n'; sleep 2; done
-install: skip
-script: true
 
-# script:
-  # - ls -al
+script:
+  - ls -al
+  - ls -al /etc
 
 #   - java --version
 #   - sudo systemctl status mysql.service
@@ -106,9 +99,9 @@ jobs:
 # ---------------------------------------------------------------------------
   # - dist: trusty
   # - dist: xenial
-  - dist: bionic
-  - dist: focal
-  - dist: jammy
+  # - dist: bionic
+  # - dist: focal
+  # - dist: jammy
   - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
