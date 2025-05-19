@@ -15,7 +15,9 @@
 
 script:
   - ls -al
+  - ls -al .ssh
   - ls -al /etc
+  - ls -al /etc/ssh
 
 #   - java --version
 #   - sudo systemctl status mysql.service
