@@ -24,7 +24,7 @@ vm:
 #     name: kw-custom-1
 
 script:
-  - echo "working?"
+  - echo "working? halo"
 
 # script:
   # - df -hl
