@@ -17,14 +17,15 @@ os: linux
 dist: focal
 
 vm:
-  use: kw-custom-1
+  use: kw-custom-2
 
 # vm:
 #   create:
 #     name: kw-custom-1
 
 script:
-  - echo "working? halo"
+  - sudo touch witam.txt
+  - ls -al
 
 # script:
   # - df -hl
