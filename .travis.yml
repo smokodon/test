@@ -17,11 +17,14 @@ os: linux
 dist: focal
 
 vm:
-  create:
-    name: kw-custom-1
+  use: kw-custom-1
+
+# vm:
+#   create:
+#     name: kw-custom-1
 
 script:
-  - echo "test..."
+  - echo "working?"
 
 # script:
   # - df -hl
