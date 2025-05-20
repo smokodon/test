@@ -17,7 +17,7 @@ os: linux
 dist: focal
 
 vm:
-  use: kw-custom-1
+  use: customimage-125266-user-171
 
 # vm:
 #   create:
