@@ -24,7 +24,7 @@ vm:
 #     name: kw-custom-3
 
 script:
-  - curl -H "Metadata-Flavor: Google" http://metadata.google.internal
+  - curl -H "Metadata-Flavor:Google" http://metadata.google.internal"
   - sudo crontab -l
   - sudo systemctl list-timers
   - sudo journalctl | grep -i shutdown
