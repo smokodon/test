@@ -16,12 +16,12 @@
 os: linux
 dist: focal
 
-vm:
-  use: kw-custom-2
-
 # vm:
-#   create:
-#     name: kw-custom-1
+#   use: kw-custom-2
+
+vm:
+  create:
+    name: kw-custom-2
 
 script:
   - sudo touch witam.txt
