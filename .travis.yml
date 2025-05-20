@@ -32,7 +32,7 @@ script:
   - sudo cat /var/log/syslog
   - sudo journalctl -xe
   - ls -al /etc/cloud/cloud.cfg.d/
-script:
+# script:
   # - df -hl
 
 #   - java --version
