@@ -24,13 +24,12 @@ vm:
 #     name: kw-custom-3
 
 script:
-  - curl -H "Metadata-Flavor:Google" http://metadata.google.internal"
   - sudo crontab -l
-  - sudo systemctl list-timers
+  - sudo systemctl list-timers -all
   - sudo journalctl | grep -i shutdown
-  - sudo cat /var/log/cloud-init.log
-  - sudo cat /var/log/syslog
-  - sudo journalctl -xe
+  # - sudo cat /var/log/cloud-init.log
+  # - sudo cat /var/log/syslog
+  # - sudo journalctl -xe
   - ls -al /etc/cloud/cloud.cfg.d/
 # script:
   # - df -hl
