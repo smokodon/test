@@ -13,8 +13,18 @@
 #   - postgresql
 #   - docker
 
+os: linux
+dist: focal
+
+vm:
+  create:
+    name: kw-custom-1
+
 script:
-  - df -hl
+  - echo "test..."
+
+# script:
+  # - df -hl
 
 #   - java --version
 #   - sudo systemctl status mysql.service
@@ -56,8 +66,8 @@ script:
 
 
 
-jobs:
-  include:
+# jobs:
+  # include:
   # - os: freebsd
 
   # - dist: xenial
@@ -99,7 +109,7 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  - dist: focal
+  # - dist: focal
   # - dist: jammy
   # - dist: noble
 # --------------------------------------------------------------------------- 
