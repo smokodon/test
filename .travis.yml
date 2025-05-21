@@ -16,14 +16,16 @@
 os: linux
 dist: focal
 
-vm:
-  use: kw-custom-4
+# vm:
+  # use: kw-custom-4
 
 # vm:
 #   create:
 #     name: kw-custom-4
 
 script:
+  - sudo systemctl stop google-osconfig-agent
+  - sudo systemctl disable google-osconfig-agent
   - echo "help me"
 # - sudo rm -rf /var/log/cloud-init*
 # - sudo rm -rf /var/lib/cloud/*
