@@ -19,15 +19,15 @@ dist: focal
 # vm:
   # use: kw-custom-5-disabled-agent
 
-# vm:
-#   create:
-#     name: kw-custom-5-disabled-agent
+vm:
+  create:
+    name: kw-custom-5-uninstalled-agent
 
 script:
   #- sudo systemctl stop google-osconfig-agent
   #- sudo systemctl disable google-osconfig-agent
   - sudo apt remove google-osconfig-agent -y
-  - echo "help me"
+  # - echo "help me"
 
 # - sudo rm -rf /var/log/cloud-init*
 # - sudo rm -rf /var/lib/cloud/*
