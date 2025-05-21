@@ -19,9 +19,9 @@ dist: focal
 # vm:
   # use: kw-custom-3
 
-# vm:
-#   create:
-#     name: kw-custom-3
+vm:
+  create:
+    name: kw-custom-4
 
 script:
 - sudo rm -rf /var/log/cloud-init*
