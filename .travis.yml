@@ -21,7 +21,7 @@ dist: focal
 
 vm:
   create:
-    name: kw-custom-5-no-agent
+    name: kw-custom-5-disabled-agent
 
 script:
   - sudo systemctl stop google-osconfig-agent
