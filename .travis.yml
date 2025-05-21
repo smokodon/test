@@ -16,21 +16,26 @@
 os: linux
 dist: focal
 
-vm:
-  use: kw-custom-3
+# vm:
+  # use: kw-custom-3
 
 # vm:
 #   create:
 #     name: kw-custom-3
 
 script:
-  - sudo crontab -l
-  - sudo systemctl list-timers -all
-  - sudo journalctl | grep -i shutdown
-  # - sudo cat /var/log/cloud-init.log
-  # - sudo cat /var/log/syslog
-  # - sudo journalctl -xe
-  - ls -al /etc/cloud/cloud.cfg.d/
+- sudo rm -rf /var/log/cloud-init*
+- sudo rm -rf /var/lib/cloud/*
+- sudo rm -rf /etc/ssh/ssh_host_*
+- sudo journalctl --rotate
+- sudo journalctl --vacuum-time=1s
+- sudo rm -rf /var/log/*.log
+- sudo rm -rf /var/lib/google*
+- sudo rm -f /run/secrets/kubernetes.io/serviceaccount/token
+- sudo rm -rf /var/run/secrets/*
+- sudo truncate -s 0 /etc/machine-id
+- sudo rm -f /etc/machine-id
+- sudo systemd-machine-id-setup
 # script:
   # - df -hl
 
