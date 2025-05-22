@@ -21,7 +21,7 @@ dist: focal
 
 vm:
   create:
-    name: kw-custom-6
+    name: kw-custom-6-final
 
 script:
   #- sudo systemctl stop google-osconfig-agent
