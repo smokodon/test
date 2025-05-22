@@ -16,17 +16,17 @@
 os: linux
 dist: focal
 
-vm:
-  use: kw-custom-5-uninstalled-agent
-
 # vm:
-#   create:
-#     name: kw-custom-5-uninstalled-agent
+#   use: kw-custom-5-uninstalled-agent
+
+vm:
+  create:
+    name: kw-custom-6
 
 script:
   #- sudo systemctl stop google-osconfig-agent
   #- sudo systemctl disable google-osconfig-agent
-  - sudo apt remove google-osconfig-agent -y
+  - echo "pls work"
   # - echo "help me"
 
 # - sudo rm -rf /var/log/cloud-init*
