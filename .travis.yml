@@ -16,12 +16,12 @@
 os: linux
 dist: focal
 
-# vm:
-#   use: kw-custom-5-uninstalled-agent
-
 vm:
-  create:
-    name: kw-custom-6-final-v2
+  use: kw-custom-6-final-v2
+
+# vm:
+#   create:
+#     name: kw-custom-6-final-v2
 
 script:
   #- sudo systemctl stop google-osconfig-agent
