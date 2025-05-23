@@ -16,8 +16,8 @@
 os: linux
 dist: focal
 
-vm:
-  use: kw-custom-6-final-v2
+# vm:
+#   use: kw-custom-6-final-v2
 
 # vm:
 #   create:
@@ -84,8 +84,8 @@ script:
 
 
 
-# jobs:
-  # include:
+jobs:
+  include:
   # - os: freebsd
 
   # - dist: xenial
@@ -127,9 +127,9 @@ script:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  # - dist: focal
-  # - dist: jammy
-  # - dist: noble
+  - dist: focal
+  - dist: jammy
+  - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
@@ -139,5 +139,4 @@ script:
   #   osx_image: xcode12.4
 # --------------------------------------------------------------------------- 
   # - os: windows
-
 
