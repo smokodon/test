@@ -18,27 +18,18 @@
 # vm:
 #   create:
 #     name: kw-custom-6-final-v2
+jobs:
+  include:
+  - stage: stage1
+    php: '7.1'
+  - stage: stage2
+    php: '8.4'
+  - stage: stage3
+    php: '8.2'
+
 
 script:
-  #- sudo systemctl stop google-osconfig-agent
-  #- sudo systemctl disable google-osconfig-agent
   - echo "pls work"
-  # - echo "help me"
-
-# - sudo rm -rf /var/log/cloud-init*
-# - sudo rm -rf /var/lib/cloud/*
-# - sudo rm -rf /etc/ssh/ssh_host_*
-# - sudo journalctl --rotate
-# - sudo journalctl --vacuum-time=1s
-# - sudo rm -rf /var/log/*.log
-# - sudo rm -rf /var/lib/google*
-# - sudo rm -f /run/secrets/kubernetes.io/serviceaccount/token
-# - sudo rm -rf /var/run/secrets/*
-# - sudo truncate -s 0 /etc/machine-id
-# - sudo rm -f /etc/machine-id
-# - sudo systemd-machine-id-setup
-# script:
-  # - df -hl
 
 #   - java --version
 #   - sudo systemctl status mysql.service
@@ -86,40 +77,40 @@ jobs:
 
   # - dist: xenial
   #   arch: arm64
-  - dist: bionic
-    arch: arm64
-  - dist: focal
-    arch: arm64
-  - dist: jammy
-    arch: arm64
-  - dist: noble
-    arch: arm64
+  # - dist: bionic
+  #   arch: arm64
+  # - dist: focal
+  #   arch: arm64
+  # - dist: jammy
+  #   arch: arm64
+  # - dist: noble
+  #   arch: arm64
 # ---------------------------------------------------------------------------
   # - dist: xenial
   #   arch: ppc64le
-  - dist: bionic
-    arch: ppc64le
-  - dist: focal
-    arch: ppc64le
-  - dist: jammy
-    arch: ppc64le
-  - dist: noble
-    arch: ppc64le
+  # - dist: bionic
+  #   arch: ppc64le
+  # - dist: focal
+  #   arch: ppc64le
+  # - dist: jammy
+  #   arch: ppc64le
+  # - dist: noble
+  #   arch: ppc64le
 # ---------------------------------------------------------------------------
   # - dist: xenial
   #   arch: s390x
-  - dist: bionic
-    arch: s390x
-  - dist: focal
-    arch: s390x
-  - dist: jammy
-    arch: s390x
-  - dist: noble
-    arch: s390x
+  # - dist: bionic
+  #   arch: s390x
+  # - dist: focal
+  #   arch: s390x
+  # - dist: jammy
+  #   arch: s390x
+  # - dist: noble
+  #   arch: s390x
 # ---------------------------------------------------------------------------
   # - dist: trusty
   # - dist: xenial
-  - dist: bionic
+  # - dist: bionic
   - dist: focal
   - dist: jammy
   - dist: noble
@@ -132,6 +123,8 @@ jobs:
   #   osx_image: xcode12.4
 # --------------------------------------------------------------------------- 
   # - os: windows
+
+
 
 
 
