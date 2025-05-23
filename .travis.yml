@@ -13,9 +13,6 @@
 #   - postgresql
 #   - docker
 
-os: linux
-dist: focal
-
 # vm:
 #   use: kw-custom-6-final-v2
 
@@ -126,7 +123,7 @@ jobs:
 # ---------------------------------------------------------------------------
   # - dist: trusty
   # - dist: xenial
-  # - dist: bionic
+  - dist: bionic
   - dist: focal
   - dist: jammy
   - dist: noble
