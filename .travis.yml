@@ -18,21 +18,22 @@
 # vm:
 #   create:
 #     name: kw-custom-6-final-v2
-dist: focal
+# dist: focal
 
-jobs:
-  include:
-  - stage: stage1
-    php: '7.1'
-  - stage: stage2
-    php: '8.4'
-  - stage: stage3
-    php: '8.2'
+# jobs:
+#   include:
+#   - stage: stage1
+#     php: '7.1'
+#   - stage: stage2
+#     php: '8.4'
+#   - stage: stage3
+#     php: '8.2'
 
 
 
 script:
-  - echo "pls work"
+  - echo "hello"
+  - ruby -v
 
 #   - java --version
 #   - sudo systemctl status mysql.service
@@ -74,8 +75,8 @@ script:
 
 
 
-# jobs:
-  # include:
+jobs:
+  include:
   # - os: freebsd
 
   # - dist: xenial
@@ -125,7 +126,7 @@ script:
   # - os: osx
   #   osx_image: xcode12.4
 # --------------------------------------------------------------------------- 
-  # - os: windows
+  - os: windows
 
 
 
