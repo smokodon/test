@@ -1,4 +1,5 @@
 
+language: bash
 # jdk: openjd
 # python: 3.12
 # rvm:
