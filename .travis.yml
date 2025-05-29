@@ -37,7 +37,7 @@ script:
   - choco upgrade chocolatey -y
   - choco uninstall ruby -y
   - choco install ruby --version=3.4.4.2 -y
-  - & "$env:ChocolateyInstall\helpers\refreshenv.ps1"
+  - powershell -Command "& $env:ChocolateyInstall\tools\refreshenv.cmd"
   - ruby -v
   - ruby -S gem install dpl
 
