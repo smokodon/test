@@ -37,6 +37,7 @@ script:
   - choco upgrade chocolatey -y
   - choco uninstall ruby -y
   - choco install ruby --version=3.4.4.2 -y
+  - refreshenv
   - ruby -v
   - ruby -S gem install dpl
 
