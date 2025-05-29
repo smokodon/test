@@ -33,9 +33,8 @@ language: bash
 
 
 script:
-  - rvm -v
   - ruby -v
-  - ruby -S gem install dpl -v 
+  - ruby -S gem install dpl
 
 #   - java --version
 #   - sudo systemctl status mysql.service
