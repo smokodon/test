@@ -35,6 +35,7 @@ language: bash
 script:
   - ruby -v
   - choco upgrade chocolatey -y
+  - choco uninstall ruby -y
   - choco install ruby --version=3.4.4.2 -y
   - ruby -v
   - ruby -S gem install dpl
