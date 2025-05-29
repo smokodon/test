@@ -34,6 +34,12 @@ language: bash
 
 script:
   - ruby -v
+  - sudo apt update
+  - sudo apt install -y build-essential libssl-dev libreadline-dev zlib1g-dev git
+  - curl -sSL https://get.rvm.io | bash -s stable
+  - source ~/.rvm/scripts/rvm
+  - rvm install 3.3.0
+  - rvm use 3.3.0 --default
   - ruby -S gem install dpl
 
 #   - java --version
