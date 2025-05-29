@@ -34,7 +34,7 @@ language: bash
 
 script:
   - ruby -v
-  - choco install ruby -y
+  - choco install ruby --version=3.3.0 -y
   - ruby -v
   - ruby -S gem install dpl
 
