@@ -1,5 +1,5 @@
 
-language: bash
+# language: bash
 # jdk: openjd
 # python: 3.12
 # rvm:
@@ -33,13 +33,7 @@ language: bash
 
 
 script:
-  - ruby -v
-  - choco upgrade chocolatey -y
-  - choco uninstall ruby -y
-  - choco install ruby --version=3.4.4.2 -y
-  - source ~/.bashrc
-  - ruby -v
-  - ruby -S gem install dpl
+  - sudo apt update -y
 
 #   - java --version
 #   - sudo systemctl status mysql.service
@@ -121,9 +115,9 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  # - dist: focal
-  # - dist: jammy
-  # - dist: noble
+  - dist: focal
+  - dist: jammy
+  - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
@@ -132,7 +126,7 @@ jobs:
   # - os: osx
   #   osx_image: xcode12.4
 # --------------------------------------------------------------------------- 
-  - os: windows
+  # - os: windows
 
 
 
