@@ -1,11 +1,10 @@
 
-# language: bash
 # jdk: openjd
 # python: 3.12
 # rvm:
 #  - 3.2.4
-# language: php
-# php: 8.4
+language: php
+php: 8.4
 
 # services:
 #   - mysql
@@ -33,9 +32,8 @@
 
 
 script:
-  - wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
-  - echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
-  - sudo apt update -y
+  - php -i | grep -i zlib
+  - php -m | grep zlib
 
 #   - java --version
 #   - sudo systemctl status mysql.service
@@ -117,7 +115,7 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  - dist: focal
+  # - dist: focal
   - dist: jammy
   - dist: noble
 # --------------------------------------------------------------------------- 
