@@ -30,6 +30,7 @@
 
 
 script:
+  - sudo rm /etc/apt/sources.list.d/rabbitmq.list
   - sudo apt update
 
 #   - java --version
