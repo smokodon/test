@@ -3,8 +3,6 @@
 # python: 3.12
 # rvm:
 #  - 3.2.4
-language: php
-php: 8.4
 
 # services:
 #   - mysql
@@ -32,8 +30,7 @@ php: 8.4
 
 
 script:
-  - php -i | grep -i zlib
-  - php -m | grep zlib
+  - df -h
 
 #   - java --version
 #   - sudo systemctl status mysql.service
@@ -114,8 +111,8 @@ jobs:
 # ---------------------------------------------------------------------------
   # - dist: trusty
   # - dist: xenial
-  # - dist: bionic
-  # - dist: focal
+  - dist: bionic
+  - dist: focal
   - dist: jammy
   - dist: noble
 # --------------------------------------------------------------------------- 
