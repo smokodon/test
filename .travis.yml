@@ -30,7 +30,7 @@
 
 
 script:
-  - df -h
+  - sudo apt update
 
 #   - java --version
 #   - sudo systemctl status mysql.service
