@@ -92,8 +92,8 @@ jobs:
   #   arch: ppc64le
   # - dist: bionic
   #   arch: ppc64le
-  # - dist: focal
-  #   arch: ppc64le
+  - dist: focal
+    arch: ppc64le
   - dist: jammy
     arch: ppc64le
   # - dist: noble
@@ -113,7 +113,7 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  # - dist: focal
+  - dist: focal
   - dist: jammy
   - dist: noble
 # --------------------------------------------------------------------------- 
