@@ -1,8 +1,8 @@
 
 # jdk: openjd
-language: python
-python:
-  - "pypy3"
+# language: python
+# python:
+#   - "pypy3"
 # python: 3.10
 # rvm:
 #  - 3.2.4
@@ -33,6 +33,7 @@ python:
 
 
 script:
+  - docker system df
   - python --version
 
 #   - java --version
