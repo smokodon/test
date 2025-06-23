@@ -30,8 +30,7 @@
 
 
 script:
-  - sudo rm /etc/apt/sources.list.d/rabbitmq.list
-  - sudo apt update
+  - python --version
 
 #   - java --version
 #   - sudo systemctl status mysql.service
@@ -94,8 +93,8 @@ jobs:
   #   arch: ppc64le
   # - dist: focal
   #   arch: ppc64le
-  # - dist: jammy
-  #   arch: ppc64le
+  - dist: jammy
+    arch: ppc64le
   # - dist: noble
   #   arch: ppc64le
 # ---------------------------------------------------------------------------
@@ -112,8 +111,8 @@ jobs:
 # ---------------------------------------------------------------------------
   # - dist: trusty
   # - dist: xenial
-  - dist: bionic
-  - dist: focal
+  # - dist: bionic
+  # - dist: focal
   - dist: jammy
   - dist: noble
 # --------------------------------------------------------------------------- 
