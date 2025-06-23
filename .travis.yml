@@ -1,5 +1,6 @@
 
 # jdk: openjd
+language: python
 # python: 3.12
 # rvm:
 #  - 3.2.4
