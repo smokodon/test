@@ -2,7 +2,7 @@
 # jdk: openjd
 language: python
 python:
-  - nightly
+  - pypy
 # python: 3.10
 # rvm:
 #  - 3.2.4
@@ -33,7 +33,6 @@ python:
 
 
 script:
-  - docker system df
   - python --version
 
 #   - java --version
