@@ -1,8 +1,15 @@
 
 # jdk: openjd
+# language: python
+# python:
+#   - pypy
+
 language: python
+sudo: false
 python:
-  - pypy
+- 2.7
+- 3.4
+script: py.test -v
 # python: 3.10
 # rvm:
 #  - 3.2.4
@@ -32,8 +39,8 @@ python:
 
 
 
-script:
-  - python --version
+# script:
+  # - python --version
 
 #   - java --version
 #   - sudo systemctl status mysql.service
@@ -75,8 +82,8 @@ script:
 
 
 
-jobs:
-  include:
+# jobs:
+  # include:
   # - os: freebsd
 
   # - dist: xenial
@@ -114,10 +121,10 @@ jobs:
 # ---------------------------------------------------------------------------
   # - dist: trusty
   # - dist: xenial
-  - dist: bionic
-  - dist: focal
-  - dist: jammy
-  - dist: noble
+  # - dist: bionic
+  # - dist: focal
+  # - dist: jammy
+  # - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
