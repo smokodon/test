@@ -76,8 +76,8 @@ script:
 
 
 
-jobs:
-  include:
+# jobs:
+  # include:
   # - os: freebsd
 
   # - dist: xenial
@@ -115,10 +115,10 @@ jobs:
 # ---------------------------------------------------------------------------
   # - dist: trusty
   # - dist: xenial
-  - dist: bionic
-  - dist: focal
-  - dist: jammy
-  - dist: noble
+  # - dist: bionic
+  # - dist: focal
+  # - dist: jammy
+  # - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
