@@ -1,6 +1,6 @@
 
 # jdk: openjd
-# language: python
+language: python
 # python:
 #   - pypy
 
