@@ -1,12 +1,16 @@
 
 # jdk: openjd
-language: python
 # python:
 #   - pypy
 
 # python: 3.10
 # rvm:
 #  - 3.2.4
+
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
 
 # services:
 #   - mysql
@@ -114,9 +118,9 @@ script:
   #   arch: s390x
 # ---------------------------------------------------------------------------
   # - dist: trusty
-  # - dist: xenial
-  # - dist: bionic
-  # - dist: focal
+  - dist: xenial
+  - dist: bionic
+  - dist: focal
   # - dist: jammy
   # - dist: noble
 # --------------------------------------------------------------------------- 
