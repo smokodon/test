@@ -34,7 +34,7 @@
 
 script:
   - g++ --version
-  - sudo add-apt-repository ppa:ubuntu-toolchain-r/test || yes
+  - yes '' | sudo add-apt-repository ppa:ubuntu-toolchain-r/test
   - sudo apt update
   - sudo apt install -y g++-4.8 gcc-4.8
 #   - java --version
