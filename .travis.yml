@@ -7,11 +7,6 @@
 # rvm:
 #  - 3.2.4
 
-addons:
-  apt:
-    sources:
-    - ubuntu-toolchain-r-test
-
 # services:
 #   - mysql
 #   - rabbitmq
@@ -38,8 +33,10 @@ addons:
 
 
 script:
-  - python --version
-
+  - g++ --version
+  - sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+  - sudo apt update
+  - sudo apt install -y g++-4.8 gcc-4.8
 #   - java --version
 #   - sudo systemctl status mysql.service
 #   - sudo systemctl status rabbitmq-server.service
