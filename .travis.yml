@@ -7,6 +7,13 @@
 # rvm:
 #  - 3.2.4
 
+addons:
+  postgresql: "13"
+  apt:
+    packages:
+    - postgresql-13
+    - postgresql-client-13
+
 # services:
 #   - mysql
 #   - rabbitmq
@@ -33,10 +40,7 @@
 
 
 script:
-  - g++ --version
-  - yes '' | sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-  - sudo apt update
-  - sudo apt install -y g++-4.8 gcc-4.8
+  - bundle exec rake db:create
 #   - java --version
 #   - sudo systemctl status mysql.service
 #   - sudo systemctl status rabbitmq-server.service
@@ -115,8 +119,8 @@ jobs:
   #   arch: s390x
 # ---------------------------------------------------------------------------
   # - dist: trusty
-  - dist: xenial
-  - dist: bionic
+  # - dist: xenial
+  # - dist: bionic
   - dist: focal
   # - dist: jammy
   # - dist: noble
