@@ -9,6 +9,10 @@
 
 services:
   - mysql
+
+addons:
+  mariadb: '10.0'
+
 #   - rabbitmq
 #   - postgresql
 #   - docker
