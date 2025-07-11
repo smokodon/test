@@ -31,7 +31,7 @@
 #     php: '8.2'
 
 addons:
-  mariadb: '10.3.39'
+  mariadb: '10.9.8'
 
 script:
   - mariadb --version
