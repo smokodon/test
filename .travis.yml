@@ -30,7 +30,8 @@
 #   - stage: stage3
 #     php: '8.2'
 
-
+addons:
+  mariadb: '10.3.39'
 
 script:
   - mariadb --version
