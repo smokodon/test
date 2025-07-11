@@ -7,15 +7,8 @@
 # rvm:
 #  - 3.2.4
 
-addons:
-  postgresql: "13"
-  apt:
-    packages:
-    - postgresql-13
-    - postgresql-client-13
-
-# services:
-#   - mysql
+services:
+  - mysql
 #   - rabbitmq
 #   - postgresql
 #   - docker
@@ -40,7 +33,7 @@ addons:
 
 
 script:
-  - bundle exec rake db:create
+  - mysql -V
 #   - java --version
 #   - sudo systemctl status mysql.service
 #   - sudo systemctl status rabbitmq-server.service
