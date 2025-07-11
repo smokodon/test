@@ -7,12 +7,8 @@
 # rvm:
 #  - 3.2.4
 
-services:
-  - mysql
-
-addons:
-  mariadb: '10.0'
-
+# services:
+#   - mysql
 #   - rabbitmq
 #   - postgresql
 #   - docker
@@ -37,7 +33,7 @@ addons:
 
 
 script:
-  - mysql -V
+  - mariadb --version
 #   - java --version
 #   - sudo systemctl status mysql.service
 #   - sudo systemctl status rabbitmq-server.service
