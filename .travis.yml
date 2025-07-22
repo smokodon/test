@@ -30,11 +30,9 @@
 #   - stage: stage3
 #     php: '8.2'
 
-addons:
-  mariadb: '10.5'
 
 script:
-  - mariadb --version
+  - gem install vault
 #   - java --version
 #   - sudo systemctl status mysql.service
 #   - sudo systemctl status rabbitmq-server.service
@@ -113,11 +111,11 @@ jobs:
   #   arch: s390x
 # ---------------------------------------------------------------------------
   # - dist: trusty
-  - dist: xenial
-  - dist: bionic
+  # - dist: xenial
+  # - dist: bionic
   - dist: focal
-  - dist: jammy
-  - dist: noble
+  # - dist: jammy
+  # - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
