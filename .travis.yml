@@ -32,7 +32,10 @@
 
 
 script:
-  - gem install vault
+- sudo apt update
+- sudo apt-get -y install apt-transport-https ca-certificates gnupg curl sudo google-cloud-cli vault
+- vault login "${VAULT_TOKEN}"
+- vault kv get -field=secret "gcp/gcp-k8s-sa-${PROJECT}" > client-secret.json;
 #   - java --version
 #   - sudo systemctl status mysql.service
 #   - sudo systemctl status rabbitmq-server.service
@@ -81,8 +84,8 @@ jobs:
   #   arch: arm64
   # - dist: bionic
   #   arch: arm64
-  - dist: focal
-    arch: arm64
+  # - dist: focal
+  #   arch: arm64
   # - dist: jammy
   #   arch: arm64
   # - dist: noble
@@ -92,8 +95,8 @@ jobs:
   #   arch: ppc64le
   # - dist: bionic
   #   arch: ppc64le
-  - dist: focal
-    arch: ppc64le
+  # - dist: focal
+  #   arch: ppc64le
   # - dist: jammy
   #   arch: ppc64le
   # - dist: noble
@@ -103,8 +106,8 @@ jobs:
   #   arch: s390x
   # - dist: bionic
   #   arch: s390x
-  - dist: focal
-    arch: s390x
+  # - dist: focal
+  #   arch: s390x
   # - dist: jammy
   #   arch: s390x
   # - dist: noble
@@ -113,7 +116,7 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  # - dist: focal
+  - dist: focal
   # - dist: jammy
   # - dist: noble
 # --------------------------------------------------------------------------- 
