@@ -40,7 +40,7 @@ script:
 - sudo apt update
 - sudo apt-get -y install apt-transport-https ca-certificates gnupg curl sudo google-cloud-cli vault
 - vault login "${VAULT_TOKEN}"
-- vault kv get -field=secret "gcp/gcp-k8s-sa-${PROJECT}" > client-secret.json;
+- vault kv get -field=secret "gcp/gcp-k8s-sa-staging" > client-secret.json;
 #   - java --version
 #   - sudo systemctl status mysql.service
 #   - sudo systemctl status rabbitmq-server.service
