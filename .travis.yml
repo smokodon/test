@@ -32,6 +32,8 @@
 
 
 script:
+- wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+- echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee 
 - sudo apt update
 - sudo apt-get -y install apt-transport-https ca-certificates gnupg curl sudo google-cloud-cli vault
 - vault login "${VAULT_TOKEN}"
