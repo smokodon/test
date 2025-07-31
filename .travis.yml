@@ -6,12 +6,33 @@
 # python: 3.10
 # rvm:
 #  - 3.2.4
-
+language: ruby
+rvm: 3.2.2
+dist: noble
 # services:
-#   - mysql
-#   - rabbitmq
-#   - postgresql
+  # - mysql
+  # - rabbitmq
+  # - postgresql
 #   - docker
+  # - redis
+
+jobs:
+  include:
+  - stage: "Testing time"
+    services:
+    - redis
+    - rabbitmq
+    - postgresql
+    before_install:
+    # - sudo apt update -q && sudo apt install -yq postgresql-server-dev-13
+    # - script/install-sqitch
+    # - script/install-partman
+    - eval "$(perl -I ~/perl5/lib/perl5/ '-Mlocal::lib')"
+    - bundle config set --local path 'vendor/bundle'
+    - gem install bundler
+    before_script:
+    - sudo systemctl start redis-server
+    # - bundle exec rake setup
 
 # vm:
 #   use: kw-custom-6-final-v2
@@ -32,7 +53,7 @@
 
 
 script:
-- echo "test"
+- sudo apt update -q && sudo apt install -yq postgresql-server-dev-13
 #   - java --version
 #   - sudo systemctl status mysql.service
 #   - sudo systemctl status rabbitmq-server.service
@@ -73,8 +94,8 @@ script:
 
 
 
-jobs:
-  include:
+# jobs:
+  # include:
   # - os: freebsd
 
   # - dist: xenial
@@ -114,7 +135,7 @@ jobs:
   # - dist: xenial
   # - dist: bionic
   # - dist: focal
-  - dist: jammy
+  # - dist: jammy
   # - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
