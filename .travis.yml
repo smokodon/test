@@ -7,8 +7,8 @@
 # rvm:
 #  - 3.2.4
 language: ruby
-rvm: 3.2.2
-dist: focal
+rvm: 3.4.4
+dist: noble
 # services:
   # - mysql
   # - rabbitmq
@@ -16,22 +16,6 @@ dist: focal
 #   - docker
   # - redis
 
-jobs:
-  include:
-  - stage: "Testing time"
-    services:
-    - redis
-    - rabbitmq
-    - postgresql
-    before_install:
-    - sudo apt update -q && sudo apt install -yq postgresql-server-dev-13
-    # - script/install-sqitch
-    # - script/install-partman
-    - eval "$(perl -I ~/perl5/lib/perl5/ '-Mlocal::lib')"
-    - bundle config set --local path 'vendor/bundle'
-    - gem install bundler
-    before_script:
-    - sudo systemctl start redis-server
     # - bundle exec rake setup
 
 # vm:
@@ -53,7 +37,8 @@ jobs:
 
 
 script:
-- echo "hello"
+- sudo apt-get update
+- sudo apt-get install libpq-dev -y
 #   - java --version
 #   - sudo systemctl status mysql.service
 #   - sudo systemctl status rabbitmq-server.service
