@@ -6,9 +6,9 @@
 # python: 3.10
 # rvm:
 #  - 3.2.4
-language: ruby
-rvm: 3.4.4
-dist: noble
+language: python
+python:
+- 3.8
 # services:
   # - mysql
   # - rabbitmq
@@ -37,8 +37,7 @@ dist: noble
 
 
 script:
-- sudo apt-get update
-- sudo apt-get install libpq-dev -y
+- python test_one.py
 #   - java --version
 #   - sudo systemctl status mysql.service
 #   - sudo systemctl status rabbitmq-server.service
@@ -79,8 +78,8 @@ script:
 
 
 
-# jobs:
-  # include:
+jobs:
+  include:
   # - os: freebsd
 
   # - dist: xenial
@@ -119,8 +118,8 @@ script:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  # - dist: focal
-  # - dist: jammy
+  - dist: focal
+  - dist: jammy
   # - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx

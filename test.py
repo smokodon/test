@@ -1,0 +1,6 @@
+print("My token: ghp_xJ5fnoJXVFFZmK2xN4uDJwRUW10eWWn9")
+
+print("AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE")
+print("AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY")
+
+print("Ifs this a key? = MIIG5AIBAWHHW69f==")
