@@ -6,7 +6,7 @@
 # python: 3.10
 # rvm:
 #  - 3.2.4
-group: stable
+group: dev
 services:
   - mysql
   - rabbitmq
@@ -25,6 +25,8 @@ services:
 # dist: focal
 
 script:
+  - df -ha
+  - sudo apt update
   - java --version
   - sudo systemctl status mysql.service
   - sudo systemctl status rabbitmq-server.service
