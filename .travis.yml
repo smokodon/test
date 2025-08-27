@@ -27,7 +27,7 @@ group: edge
 
 script:
   # - df -ha
-  - sudo apt update
+  - sudo apt updated
   # - java --version
   # - sudo systemctl status mysql.service
   # - sudo systemctl status rabbitmq-server.service
@@ -76,41 +76,41 @@ jobs:
   #   arch: arm64
   # - dist: bionic
   #   arch: arm64
-  - dist: focal
-    arch: arm64
-  - dist: jammy
-    arch: arm64
-  - dist: noble
-    arch: arm64
+  # - dist: focal
+  #   arch: arm64
+  # - dist: jammy
+  #   arch: arm64
+  # - dist: noble
+  #   arch: arm64
 # ---------------------------------------------------------------------------
   # - dist: xenial
   #   arch: ppc64le
   # - dist: bionic
   #   arch: ppc64le
-  - dist: focal
-    arch: ppc64le
-  - dist: jammy
-    arch: ppc64le
-  - dist: noble
-    arch: ppc64le
+  # - dist: focal
+  #   arch: ppc64le
+  # - dist: jammy
+  #   arch: ppc64le
+  # - dist: noble
+  #   arch: ppc64le
 # ---------------------------------------------------------------------------
   # - dist: xenial
   #   arch: s390x
   # - dist: bionic
   #   arch: s390x
-  - dist: focal
-    arch: s390x
-  - dist: jammy
-    arch: s390x
-  - dist: noble
-    arch: s390x
+  # - dist: focal
+  #   arch: s390x
+  # - dist: jammy
+  #   arch: s390x
+  # - dist: noble
+  #   arch: s390x
 # ---------------------------------------------------------------------------
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  # - dist: focal
-  # - dist: jammy
-  # - dist: noble
+  - dist: focal
+  - dist: jammy
+  - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
