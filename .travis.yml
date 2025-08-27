@@ -24,7 +24,7 @@
 #   create:
 #     name: kw-custom-6-final-v2
 # dist: focal
-
+language: bash
 script:
   # - df -ha
   - sudo apt updated
