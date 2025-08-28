@@ -28,6 +28,7 @@ group: edge
 script:
   # - df -ha
   - ls -al /home/travis/.kiex/scripts
+  - sudo /home/travis/.kiex/scripts/kiex
   # - kiex
   # - elixir
   # - java --version
