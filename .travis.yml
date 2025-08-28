@@ -24,10 +24,10 @@
 #   create:
 #     name: kw-custom-6-final-v2
 # dist: focal
-language: bash
 script:
   # - df -ha
-  - apt updated
+  - kiex
+  - elixir
   # - java --version
   # - sudo systemctl status mysql.service
   # - sudo systemctl status rabbitmq-server.service
@@ -108,9 +108,9 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  # - dist: focal
-  # - dist: jammy
-  # - dist: noble
+  - dist: focal
+  - dist: jammy
+  - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
@@ -119,5 +119,5 @@ jobs:
   # - os: osx
   #   osx_image: xcode12.4
 # --------------------------------------------------------------------------- 
-  - os: windows
+  # - os: windows
 
