@@ -24,7 +24,7 @@
 #   create:
 #     name: kw-custom-6-final-v2
 # dist: focal
-group: dev
+group: edge
 script:
   # - df -ha
   - kiex
