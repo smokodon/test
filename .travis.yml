@@ -27,6 +27,7 @@
 group: edge
 script:
   # - df -ha
+  - ls -al /home/travis/.kiex
   - kiex
   - elixir
   # - java --version
@@ -110,8 +111,8 @@ jobs:
   # - dist: xenial
   # - dist: bionic
   - dist: focal
-  - dist: jammy
-  - dist: noble
+  # - dist: jammy
+  # - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
