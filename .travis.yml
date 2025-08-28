@@ -28,8 +28,9 @@ group: edge
 script:
   # - df -ha
   - ls -al /home/travis/.kiex
-  - kiex
-  - elixir
+  - ./home.kiex/bin/kiex
+  # - kiex
+  # - elixir
   # - java --version
   # - sudo systemctl status mysql.service
   # - sudo systemctl status rabbitmq-server.service
