@@ -33,6 +33,7 @@ script:
  - echo $PATH | tr ':' '\n' | grep kiex
  - ls -al /etc/profile.d/
  - ls -al ~/.bash_profile.d
+ - cat /etc/profile.d/Z90-travis-packer-templates.sh
   # - kiex
   # - elixir
   # - java --version
