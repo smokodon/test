@@ -31,6 +31,8 @@ script:
  - ls ~/.kiex/elixirs/
  - which elixir
  - echo $PATH | tr ':' '\n' | grep kiex
+ - ls -al /etc/profile.d/
+ - cat ~/.bash_profile.d
   # - kiex
   # - elixir
   # - java --version
