@@ -26,7 +26,7 @@
 # dist: focal
 script:
   # - df -ha
- - apt update
+ - sudo apt update
   # - kiex
   # - elixir
   # - java --version
