@@ -26,7 +26,7 @@
 # dist: focal
 script:
   # - df -ha
- - sudo apt update -o Debug::Acquire::http=true
+ - cat /etc/apt/sources.list
   # - kiex
   # - elixir
   # - java --version
