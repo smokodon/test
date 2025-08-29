@@ -114,6 +114,7 @@ jobs:
   # - dist: xenial
   # - dist: bionic
   - dist: focal
+    group: previous
   - dist: focal
   - group: edge
   # - dist: jammy
