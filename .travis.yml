@@ -32,7 +32,7 @@ script:
  - which elixir
  - echo $PATH | tr ':' '\n' | grep kiex
  - ls -al /etc/profile.d/
- - cat ~/.bash_profile.d
+ - ls -al ~/.bash_profile.d
   # - kiex
   # - elixir
   # - java --version
