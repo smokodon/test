@@ -1,15 +1,26 @@
-# Use the official Windows Server Core image
-FROM mcr.microsoft.com/windows/servercore:ltsc2022
-SHELL ["powershell", "-Command"]
-# Install Visual Studio Build Tools
-RUN Invoke-WebRequest -Uri https://aka.ms/vs/17/release/vs_buildtools.exe -OutFile vs_buildtools.exe ; \
-    Start-Process -Wait -FilePath vs_buildtools.exe -ArgumentList '--quiet', '--wait', '--norestart', '--nocache', '--installPath', 'C:\\BuildTools', '--add', 'Microsoft.VisualStudio.Workload.VCTools' ; \
-    Remove-Item -Force vs_buildtools.exe
+FROM postgres:12
 
-# Install WSL
-RUN Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-2004 -OutFile Ubuntu.appx ; \
-    Add-AppxPackage .\Ubuntu.appx ; \
-    wsl --set-default-version 2
+LABEL maintainer Travis CI GmbH <support+travis-billing-migrations-docker-images@travis-ci.com>
 
-# Set the entrypoint to WSL
-ENTRYPOINT ["wsl.exe", "-d", "Ubuntu-20.04", "--", "bash", "-c", "echo Hello from WSL"]
+RUN mkdir /travis-billing-migrations
+WORKDIR /travis-billing-migrations
+
+# ruby deps
+RUN apt-get update
+RUN apt-get install -y wget build-essential bison zlib1g-dev libyaml-dev libssl-dev libgdbm-dev libreadline-dev libncurses5-dev libffi-dev openssl curl
+
+# ruby-install
+RUN wget -O ruby-install-0.6.1.tar.gz https://github.com/postmodern/ruby-install/archive/v0.6.1.tar.gz
+RUN tar -xzvf ruby-install-0.6.1.tar.gz
+RUN cd ruby-install-0.6.1/ && make install
+RUN rm -r ruby-install-0.6.1/
+
+# ruby
+COPY . .
+RUN ruby-install --system --no-install-deps ruby `cat .ruby-version`
+RUN which ruby
+
+# gem setup
+RUN apt-get install -y libpq-dev && rm -rf /var/lib/apt/lists/*
+RUN gem install bundler -v 1.17.3
+RUN bundle install

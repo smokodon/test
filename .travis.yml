@@ -24,11 +24,9 @@
 #   create:
 #     name: kw-custom-6-final-v2
 # dist: focal
-group: edge
 script:
   # - df -ha
-  - ls -al /home/travis/.kiex/scripts
-  - sudo /home/travis/.kiex/scripts/kiex
+ - apt update
   # - kiex
   # - elixir
   # - java --version
@@ -79,12 +77,22 @@ jobs:
   #   arch: arm64
   # - dist: bionic
   #   arch: arm64
-  # - dist: focal
-  #   arch: arm64
-  # - dist: jammy
-  #   arch: arm64
-  # - dist: noble
-  #   arch: arm64
+  - dist: focal
+    arch: arm64
+  - dist: jammy
+    arch: arm64
+  - dist: noble
+    arch: arm64
+
+  - dist: focal
+    group: edge
+    arch: arm64
+  - dist: jammy
+    group: edge
+    arch: arm64
+  - dist: noble
+    group: edge
+    arch: arm64
 # ---------------------------------------------------------------------------
   # - dist: xenial
   #   arch: ppc64le
@@ -111,7 +119,7 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  - dist: focal
+  # - dist: focal
   # - dist: jammy
   # - dist: noble
 # --------------------------------------------------------------------------- 
