@@ -31,9 +31,9 @@ script:
  - ls ~/.kiex/elixirs/
  - which elixir
  - echo $PATH | tr ':' '\n' | grep kiex
- - ls -al /etc/profile.d/
- - ls -al ~/.bash_profile.d
- - cat /etc/profile.d/Z90-travis-packer-templates.sh
+ - cat ~/.bash_profile.d/kiex.bash
+ - cat ~/.kiex/elixir.env
+ - echo $PATH | grep kiex
   # - kiex
   # - elixir
   # - java --version
