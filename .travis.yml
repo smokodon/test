@@ -26,8 +26,9 @@
 # dist: focal
 script:
   # - df -ha
- - cat /etc/apt/sources.list.d/
- - sudo apt-get update --allow-releaseinfo-change
+ - cat /etc/apt/sources.list
+ - ls -la /etc/apt/sources.list.d/
+ - sudo apt-get update -o Debug::Acquire::http=true
   # - kiex
   # - elixir
   # - java --version
