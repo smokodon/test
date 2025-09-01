@@ -26,7 +26,7 @@
 # dist: focal
 script:
   # - df -ha
- - ping -t google.com
+ - ping www.google.com
  - sudo apt-get update -y
   # - kiex
   # - elixir
