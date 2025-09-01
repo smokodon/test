@@ -81,9 +81,9 @@ jobs:
   # - dist: bionic
   #   arch: arm64
   - dist: focal
-    group: edge
     arch: arm64
   - dist: focal
+    group: edge
     arch: arm64
 # ---------------------------------------------------------------------------
   # - dist: xenial
@@ -94,25 +94,22 @@ jobs:
   #   arch: ppc64le
   # - dist: jammy
   #   arch: ppc64le
-  - dist: noble
-    group: edge
-    arch: ppc64le
-  - dist: noble
-    arch: ppc64le
+  # - dist: noble
+  #   arch: ppc64le
 # ---------------------------------------------------------------------------
   # - dist: xenial
   #   arch: s390x
   # - dist: bionic
   #   arch: s390x
-  # - dist: focal
-  #   arch: s390x
-  # - dist: jammy
-  #   arch: s390x
-  - dist: noble
+  - dist: focal
+    arch: s390x
+  - dist: focal
     group: edge
     arch: s390x
-  - dist: noble
-    arch: s390x
+  # - dist: jammy
+  #   arch: s390x
+  # - dist: noble
+  #   arch: s390x
 # ---------------------------------------------------------------------------
   # - dist: trusty
   # - dist: xenial
