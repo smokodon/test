@@ -28,8 +28,9 @@ script:
   # - df -ha
  - cat /etc/apt/sources.list
  - ls -la /etc/apt/sources.list.d/
- - sudo apt-get update -o Debug::Acquire::http=true
-  # - kiex
+#- sudo apt-get update -o Debug::Acquire::http=true
+ - sudo apt-get update
+ - kiex
   # - elixir
   # - java --version
   # - sudo systemctl status mysql.service
@@ -94,8 +95,9 @@ jobs:
   #   arch: ppc64le
   # - dist: jammy
   #   arch: ppc64le
-  # - dist: noble
-  #   arch: ppc64le
+  - dist: noble
+    group: edge
+    arch: ppc64le
 # ---------------------------------------------------------------------------
   # - dist: xenial
   #   arch: s390x
@@ -105,8 +107,9 @@ jobs:
   #   arch: s390x
   # - dist: jammy
   #   arch: s390x
-  # - dist: noble
-  #   arch: s390x
+  - dist: noble
+    group: edge
+    arch: s390x
 # ---------------------------------------------------------------------------
   # - dist: trusty
   # - dist: xenial
