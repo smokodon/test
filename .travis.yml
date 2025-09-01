@@ -26,14 +26,8 @@
 # dist: focal
 script:
   # - df -ha
- - which kiex
- - ls -la ~/.kiex/scripts/
- - ls ~/.kiex/elixirs/
- - which elixir
- - echo $PATH | tr ':' '\n' | grep kiex
- - cat ~/.bash_profile.d/kiex.bash
- - cat ~/.kiex/elixir.env
- - echo $PATH | grep kiex
+ - cat /etc/cloud/cloud.cfg
+ - sudo apt update -y
   # - kiex
   # - elixir
   # - java --version
@@ -84,12 +78,12 @@ jobs:
   #   arch: arm64
   # - dist: bionic
   #   arch: arm64
-  # - dist: focal
-  #   arch: arm64
+  - dist: focal
+    arch: arm64
 
-  # - dist: focal
-  #   group: edge
-  #   arch: arm64
+  - dist: focal
+    group: edge
+    arch: arm64
 # ---------------------------------------------------------------------------
   # - dist: xenial
   #   arch: ppc64le
@@ -116,10 +110,10 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  - dist: focal
-    group: previous
-  - dist: focal
-    group: edge
+  # - dist: focal
+  #   group: previous
+  # - dist: focal
+  #   group: edge
   # - dist: jammy
   # - dist: noble
 # --------------------------------------------------------------------------- 
