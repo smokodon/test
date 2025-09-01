@@ -26,8 +26,8 @@
 # dist: focal
 script:
   # - df -ha
- - ping www.google.com
- - sudo apt-get update -y
+ - cat /etc/apt/sources.list.d/
+ - sudo apt-get update --allow-releaseinfo-change
   # - kiex
   # - elixir
   # - java --version
