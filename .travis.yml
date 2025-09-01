@@ -29,8 +29,8 @@ script:
  - cat /etc/apt/sources.list
  - ls -la /etc/apt/sources.list.d/
 #- sudo apt-get update -o Debug::Acquire::http=true
- - sudo apt-get update
- - kiex
+ - sudo apt update
+ # - kiex
   # - elixir
   # - java --version
   # - sudo systemctl status mysql.service
