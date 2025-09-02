@@ -28,6 +28,7 @@ script:
   # - df -ha
  - cat /etc/apt/sources.list
  - ls -la /etc/apt/sources.list.d/
+ - sudo rm -rf /var/lib/apt/lists/*
  - sudo apt-get update -o Debug::Acquire::http=true
  #- sudo apt update
  # - kiex
@@ -101,11 +102,11 @@ jobs:
   #   arch: s390x
   # - dist: bionic
   #   arch: s390x
-  - dist: focal
-    arch: s390x
-  - dist: focal
-    group: edge
-    arch: s390x
+  # - dist: focal
+  #   arch: s390x
+  # - dist: focal
+  #   group: edge
+  #   arch: s390x
   # - dist: jammy
   #   arch: s390x
   # - dist: noble
