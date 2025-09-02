@@ -83,7 +83,7 @@ jobs:
   - dist: focal
     arch: arm64
   - dist: focal
-    group: dev
+    group: edge
     arch: arm64
 # ---------------------------------------------------------------------------
   # - dist: xenial
@@ -104,7 +104,7 @@ jobs:
   - dist: focal
     arch: s390x
   - dist: focal
-    group: dev
+    group: edge
     arch: s390x
   # - dist: jammy
   #   arch: s390x
