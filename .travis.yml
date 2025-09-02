@@ -28,7 +28,7 @@ script:
   # - df -ha
  - cat /etc/apt/sources.list
  - ls -la /etc/apt/sources.list.d/
- - sudo rm -rf /var/lib/apt/lists/*
+ - sudo rm /etc/apt/sources.list.d/pgdg.list /etc/apt/sources.list.d/pgdg.list.save
  - sudo apt-get update -o Debug::Acquire::http=true
  #- sudo apt update
  # - kiex
