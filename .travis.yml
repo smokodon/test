@@ -25,10 +25,9 @@
 #     name: kw-custom-6-final-v2
 # dist: focal
 script:
-  # - df -ha
- - curl -s http://apt-archive.postgresql.org/pub/repos/apt/dists/focal-pgdg/Release | grep Architectures
-
- - sudo apt-get update -o Debug::Acquire::http=true
+ - df -ha
+ - sudo apt-get update -o Debug::pkgAcquire::Worker=1 -o Debug::pkgProblemResolver=1 -o Debug::Acquire::Retries=1
+ # - sudo apt-get update -o Debug::Acquire::http=true
  #- sudo apt update
  # - kiex
   # - elixir
