@@ -26,9 +26,8 @@
 # dist: focal
 script:
   # - df -ha
- - cat /etc/apt/sources.list
- - ls -la /etc/apt/sources.list.d/
- - cat /etc/apt/sources.list.d/pgdg.list
+ - curl -s http://apt-archive.postgresql.org/pub/repos/apt/dists/focal-pgdg/Release | grep Architectures
+
  - sudo apt-get update -o Debug::Acquire::http=true
  #- sudo apt update
  # - kiex
