@@ -25,8 +25,7 @@
 #     name: kw-custom-6-final-v2
 # dist: focal
 script:
- - df -ha
- - sudo apt-get update -o Debug::pkgAcquire::Worker=1 -o Debug::pkgProblemResolver=1 -o Debug::Acquire::Retries=1
+ - cat /etc/resolv.conf
  # - sudo apt-get update -o Debug::Acquire::http=true
  #- sudo apt update
  # - kiex
