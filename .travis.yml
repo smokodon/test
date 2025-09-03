@@ -25,10 +25,8 @@
 #     name: kw-custom-6-final-v2
 # dist: focal
 script:
- - sudo apt update
- - sudo rm -f /etc/apt/sources.list.d/mongodb-org-4.4.list
- - sudo rm -f /etc/apt/sources.list.d/mongodb-org-4.4.list.save
- - sudo apt update
+ - cat /etc/apt/sources.list.d/mongodb-org-4.4.list
+ - cat /etc/apt/sources.list.d/mongodb-org-4.4.list.save
  - bash --login -c 'echo $PATH'
  - cat ~/.bash_profile
  - printenv
