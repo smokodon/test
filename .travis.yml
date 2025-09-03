@@ -27,7 +27,7 @@
 script:
  - sudo rm -f /etc/apt/sources.list.d/mongodb-org-4.4.list
  - sudo rm -f /etc/apt/sources.list.d/mongodb-org-4.4.list.save
- - apt-get update
+ - apt update
  - bash --login -c 'echo $PATH'
  - cat ~/.bash_profile
  - printenv
