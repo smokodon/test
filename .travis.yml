@@ -25,7 +25,8 @@
 #     name: kw-custom-6-final-v2
 # dist: focal
 script:
- - sleep 5000
+ - printenv
+ - echo $PATH
  # - sudo apt-get update -o Debug::Acquire::http=true
  #- sudo apt update
  # - kiex
@@ -78,11 +79,11 @@ jobs:
   #   arch: arm64
   # - dist: bionic
   #   arch: arm64
-  - dist: focal
-    arch: arm64
-  - dist: focal
-    group: edge
-    arch: arm64
+  # - dist: focal
+  #   arch: arm64
+  # - dist: focal
+  #   group: edge
+  #   arch: arm64
 # ---------------------------------------------------------------------------
   # - dist: xenial
   #   arch: ppc64le
@@ -112,10 +113,12 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  # - dist: focal
-  #   group: previous
-  # - dist: focal
-  #   group: edge
+  - dist: focal
+    group: previous
+  - dist: focal
+    group: stable
+  - dist: focal
+    group: edge
   # - dist: jammy
   # - dist: noble
 # --------------------------------------------------------------------------- 
