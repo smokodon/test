@@ -25,6 +25,7 @@
 #     name: kw-custom-6-final-v2
 # dist: focal
 script:
+ - bash --login -c 'echo $PATH'
  - cat ~/.bash_profile
  - printenv
  - echo $PATH
