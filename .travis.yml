@@ -25,6 +25,9 @@
 #     name: kw-custom-6-final-v2
 # dist: focal
 script:
+ - sudo rm -f /etc/apt/sources.list.d/mongodb-org-4.4.list
+ - sudo rm -f /etc/apt/sources.list.d/mongodb-org-4.4.list.save
+ - apt-get update
  - bash --login -c 'echo $PATH'
  - cat ~/.bash_profile
  - printenv
@@ -81,11 +84,11 @@ jobs:
   #   arch: arm64
   # - dist: bionic
   #   arch: arm64
-  # - dist: focal
-  #   arch: arm64
-  # - dist: focal
-  #   group: edge
-  #   arch: arm64
+  - dist: focal
+    arch: arm64
+  - dist: focal
+    group: edge
+    arch: arm64
 # ---------------------------------------------------------------------------
   # - dist: xenial
   #   arch: ppc64le
@@ -115,12 +118,12 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  - dist: focal
-    group: previous
-  - dist: focal
-    group: stable
-  - dist: focal
-    group: edge
+  # - dist: focal
+  #   group: previous
+  # - dist: focal
+  #   group: stable
+  # - dist: focal
+  #   group: edge
   # - dist: jammy
   # - dist: noble
 # --------------------------------------------------------------------------- 
