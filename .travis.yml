@@ -25,6 +25,7 @@
 #     name: kw-custom-6-final-v2
 # dist: focal
 script:
+ - sleep 5000
  - cat /etc/apt/sources.list.d/mongodb-org-4.4.list
  - cat /etc/apt/sources.list.d/mongodb-org-4.4.list.save
 #  - bash --login -c 'echo $PATH'
@@ -84,8 +85,8 @@ jobs:
   #   arch: arm64
   # - dist: bionic
   #   arch: arm64
-  - dist: focal
-    arch: arm64
+  # - dist: focal
+  #   arch: arm64
   - dist: focal
     group: edge
     arch: arm64
@@ -105,8 +106,8 @@ jobs:
   #   arch: s390x
   # - dist: bionic
   #   arch: s390x
-  - dist: focal
-    arch: s390x
+  # - dist: focal
+  #   arch: s390x
   # - dist: focal
   #   group: edge
   #   arch: s390x
