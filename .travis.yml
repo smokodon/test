@@ -89,6 +89,12 @@ jobs:
   - dist: focal
     group: edge
     arch: arm64
+  - dist: jammy
+    group: edge
+    arch: arm64
+  - dist: noble
+    group: edge
+    arch: arm64
 # ---------------------------------------------------------------------------
   # - dist: xenial
   #   arch: ppc64le
