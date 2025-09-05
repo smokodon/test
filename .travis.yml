@@ -26,6 +26,8 @@ script:
   # - sudo rabbitmqctl status
   # - mysqld --version
   # - mysqld --print-defaults
+  - \curl -sSL https://raw.githubusercontent.com/taylor/kiex/master/install | bash -s
+  - kiex
   - postgres --version
   - sudo systemctl status postgresql
   - psql -U postgres -c 'SHOW config_file'
