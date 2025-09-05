@@ -59,9 +59,11 @@ script:
   # - redis-cli ping
   # - sudo rabbitmqctl status
   # - docker run --rm hello-world
-  - curl -sSL https://raw.githubusercontent.com/taylor/kiex/master/install | bash -s
-  - cat /home/travis/.bash_profile.d/kiex.bash
-  - ls -al /home/travis/.bash_profile.d/
+  - export KIEX_HOME="$HOME/.kiex"
+  - test -s "$KIEX_HOME/scripts/kiex" && source "$KIEX_HOME/scripts/kiex"
+  #- curl -sSL https://raw.githubusercontent.com/taylor/kiex/master/install | bash -s
+  #- cat /home/travis/.bash_profile.d/kiex.bash
+  #- ls -al /home/travis/.bash_profile.d/
   - kiex
 
 
