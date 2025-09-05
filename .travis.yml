@@ -6,7 +6,7 @@
 # python: 3.10
 # rvm:
 #  - 3.2.4
-group: edge
+group: stable
 
 services:
   # - mysql
