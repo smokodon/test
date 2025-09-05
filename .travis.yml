@@ -111,7 +111,7 @@ jobs:
   # - dist: focal
   #   group: stable
   - dist: focal
-    group: dev
+    group: edge
   # - dist: jammy
   # - dist: noble
 # --------------------------------------------------------------------------- 
