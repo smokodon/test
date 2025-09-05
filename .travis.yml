@@ -72,8 +72,8 @@ jobs:
   #   arch: arm64
   - dist: focal
     arch: arm64
-  # - dist: jammy
-  #   arch: arm64
+  - dist: jammy
+    arch: arm64
   # - dist: noble
   #   arch: arm64
 # ---------------------------------------------------------------------------
