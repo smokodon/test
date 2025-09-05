@@ -6,7 +6,7 @@
 # python: 3.10
 # rvm:
 #  - 3.2.4
-group: stable
+group: edge
 
 services:
   # - mysql
@@ -27,9 +27,11 @@ script:
   # - mysqld --version
   # - mysqld --print-defaults
   - postgres --version
-  - sudo systemctl status postgresql.service
+  - sudo systemctl status postgresql
   - psql -U postgres -c 'SHOW config_file'
   - sudo -u postgres psql -c 'SELECT 1'
+  - pg_lsclusters
+  - ls -al /etc/init.d/
   # - cosign version
   # - rekor-cli version
   # - git -v
