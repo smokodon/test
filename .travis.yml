@@ -6,66 +6,59 @@
 # python: 3.10
 # rvm:
 #  - 3.2.4
-# group: edge
+group: dev
 
-# services:
-  # - mysql
-  # - rabbitmq
-  # - postgresql
-  # - docker
-  # - redis
-  # - mongodb
+services:
+  - mysql
+  - rabbitmq
+  - postgresql
+  - docker
+  - redis
+  - mongodb
 
 script:
-  # - sudo apt update
-  # - kiex
-  # - elixir
-  # - java --version
-  # - sudo systemctl status mysql.service
-  # - sudo systemctl status rabbitmq-server.service
-  # - sudo rabbitmqctl status
-  # - mysqld --version
-  # - mysqld --print-defaults
-  # - postgres --version
-  # - sudo systemctl status postgresql
-  # - psql -U postgres -c 'SHOW config_file'
-  # - sudo -u postgres psql -c 'SELECT 1'
-  # - pg_lsclusters
-  # - ls -al /etc/init.d/
-  # - cosign version
-  # - rekor-cli version
-  # - git -v
-  # - git-lfs
-  # - hg --version
-  # - svn --version
-  # - clang --version
-  # - cmake --version
-  # - gcc --version
-  # - ccache -V
-  # - shellcheck --version
-  # - shfmt -version
-  # - docker version
-  # - docker run hello-world
-  # - docker compose version
-  # - docker buildx version
-  # - mongod --version
-  # - gradle -version
-  # - groovy -version
-  # - ant -version
-  # - perl -v
-  # - php -v
-  # - redis-server --version
-  # - sudo mysqladmin ping
-  # - redis-cli ping
-  # - sudo rabbitmqctl status
-  # - docker run --rm hello-world
-  #- export KIEX_HOME="$HOME/.kiex"
-  # - test -s "$KIEX_HOME/scripts/kiex" && source "$KIEX_HOME/scripts/kiex"
-  #- curl -sSL https://raw.githubusercontent.com/taylor/kiex/master/install | bash -s
-  #- cat /home/travis/.bash_profile.d/kiex.bash
-  #- ls -al /home/travis/.bash_profile.d/
+  - sudo apt update
   - kiex
-  - elixir --version
+  - elixir
+  - java --version
+  - sudo systemctl status mysql.service
+  - sudo systemctl status rabbitmq-server.service
+  - sudo rabbitmqctl status
+  - mysqld --version
+  - mysqld --print-defaults
+  - postgres --version
+  - sudo systemctl status postgresql
+  - psql -U postgres -c 'SHOW config_file'
+  - sudo -u postgres psql -c 'SELECT 1'
+  - pg_lsclusters
+  - ls -al /etc/init.d/
+  - cosign version
+  - rekor-cli version
+  - git -v
+  - git-lfs
+  - hg --version
+  - svn --version
+  - clang --version
+  - cmake --version
+  - gcc --version
+  - ccache -V
+  - shellcheck --version
+  - shfmt -version
+  - docker version
+  - docker run hello-world
+  - docker compose version
+  - docker buildx version
+  - mongod --version
+  - gradle -version
+  - groovy -version
+  - ant -version
+  - perl -v
+  - php -v
+  - redis-server --version
+  - sudo mysqladmin ping
+  - redis-cli ping
+  - sudo rabbitmqctl status
+  - docker run --rm hello-world
 
 
 jobs:
@@ -110,14 +103,9 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  # - dist: focal
-  #   group: previous
-  # - dist: focal
-  #   group: stable
   - dist: focal
-    group: dev
-  # - dist: jammy
-  # - dist: noble
+  - dist: jammy
+  - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
