@@ -22,8 +22,27 @@
 #   - redis
 #   - mongodb
 
+language: shell
+arch: ppc64le
+os: linux
+dist: focal
+
+install:
+  - wget -q https://github.com/aquasecurity/trivy/releases/download/v0.66.0/trivy_0.66.0_Linux-PPC64LE.tar.gz
+  - tar -xzf trivy_0.66.0_Linux-PPC64LE.tar.gz
+  - chmod +x trivy
+  - sudo mv trivy /usr/bin
+  - sleep 10
 script:
-  - sudo apt update
+  - trivy --version
+  - git clone https://github.com/apache/camel-quarkus.git camel
+  - sleep 10
+  - free -hm
+  - echo "Executing trivy scanner"
+  - sudo trivy -q fs --timeout 30m -f json camel > trivy_source_vulnerabilities_results.json
+
+# script:
+  # - sudo apt update
   # - kiex
   # - elixir
   # - java --version
@@ -67,8 +86,8 @@ script:
   # - docker run --rm hello-world
 
 
-jobs:
-  include:
+# jobs:
+  # include:
   # - os: freebsd
 
   # - dist: xenial
@@ -86,12 +105,12 @@ jobs:
   #   arch: ppc64le
   # - dist: bionic
   #   arch: ppc64le
-  - dist: focal
-    arch: ppc64le
-  - dist: jammy
-    arch: ppc64le
-  - dist: noble
-    arch: ppc64le
+  # - dist: focal
+  #   arch: ppc64le
+  # - dist: jammy
+  #   arch: ppc64le
+  # - dist: noble
+  #   arch: ppc64le
 # ---------------------------------------------------------------------------
   # - dist: xenial
   #   arch: s390x
