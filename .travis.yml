@@ -24,7 +24,7 @@
 
 script:
  - curl -sSL https://omnitruck.chef.io/install.sh | sudo bash -s -- -P chef-workstation -v 25.5.1084
- - chef gem install serverspec -v 2.41.3
+ - chef exec gem install serverspec --no-document
 
 
   # - echo "TESTING THE IMAGE"
