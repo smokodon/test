@@ -9,10 +9,10 @@
 
 # group: stable
 
-language: python
-python:
-- 3.8
-script: python test.py
+# language: python
+# python:
+# - 3.8
+# script: python test.py
 
 # services:
 #   - mysql
@@ -22,7 +22,11 @@ script: python test.py
 #   - redis
 #   - mongodb
 
-# script:
+script:
+ - curl -sSL https://omnitruck.chef.io/install.sh | sudo bash -s -- -P chef-workstation -v 25.9.1093
+
+
+  # - echo "TESTING THE IMAGE"
   # - sudo apt update
   # - kiex
   # - elixir
@@ -110,8 +114,8 @@ jobs:
   # - dist: xenial
   # - dist: bionic
   - dist: focal
-  - dist: jammy
-  - dist: noble
+  # - dist: jammy
+  # - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
