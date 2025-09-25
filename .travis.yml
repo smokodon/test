@@ -23,7 +23,7 @@
 #   - mongodb
 
 script:
- - curl -sSL https://omnitruck.chef.io/install.sh | sudo bash -s -- -P chef-workstation -v 25.9.1093
+ - curl -sSL https://omnitruck.chef.io/install.sh | sudo bash -s -- -P chef-workstation -v 25.5.1084
 
 
   # - echo "TESTING THE IMAGE"
