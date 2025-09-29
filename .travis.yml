@@ -25,8 +25,8 @@ services:
 script:
   - echo "TESTING THE IMAGE"
   - sudo apt update
-  - kiex
-  - elixir
+  - kiex list
+  - elixir -v
   - java --version
   - sudo systemctl status mysql.service
   - sudo systemctl status rabbitmq-server.service
@@ -34,7 +34,6 @@ script:
   - mysqld --version
   - mysqld --print-defaults
   - postgres --version
-  - sudo systemctl status postgresql
   - psql -U postgres -c 'SHOW config_file'
   - sudo -u postgres psql -c 'SELECT 1'
   - pg_lsclusters
