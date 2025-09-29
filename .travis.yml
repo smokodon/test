@@ -40,6 +40,7 @@ script:
   - ls -al /etc/init.d/
   - cosign version
   - rekor-cli version
+  - go version
   - git -v
   - git-lfs
   - hg --version
