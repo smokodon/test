@@ -54,7 +54,7 @@ script:
   - docker run hello-world
   - docker compose version
   - docker buildx version
-  - sudo apt install -y podman
+  - sudo apt-get -y install podman
   - podman version
   - mongod --version
   - gradle -version
