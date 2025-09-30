@@ -22,12 +22,7 @@ script: python test.py
 #   - redis
 #   - mongodb
 
-script:
-
-
-
-
-
+# script:
 
 
 
