@@ -17,7 +17,7 @@
 #   - docker
 #   - redis
 #   - mongodb
-
+arch: ppc64le
 script:
  - echo "hello"
 
