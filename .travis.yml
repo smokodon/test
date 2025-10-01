@@ -9,10 +9,6 @@
 
 # group: stable
 
-language: python
-python:
-- 3.8
-script: python test.py
 
 # services:
 #   - mysql
@@ -22,11 +18,8 @@ script: python test.py
 #   - redis
 #   - mongodb
 
-# script:
-
-
-
-
+script:
+ - echo "hello"
 
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
@@ -73,8 +66,8 @@ script: python test.py
   # - docker run --rm hello-world
 
 
-jobs:
-  include:
+# jobs:
+  # include:
   # - os: freebsd
 
   # - dist: xenial
@@ -115,9 +108,9 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  - dist: focal
-  - dist: jammy
-  - dist: noble
+  # - dist: focal
+  # - dist: jammy
+  # - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
