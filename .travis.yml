@@ -9,8 +9,15 @@
 
 # group: stable
 
-language: dart
-dist: xenial
+os: linux
+dist: trusty
+mono: none
+sudo: required
+group: stable
+dotnet: 2.0.0
+script: echo "Travis CI"
+language: csharp
+services: docker
 
 # services:
 #   - mysql
@@ -20,8 +27,8 @@ dist: xenial
 #   - redis
 #   - mongodb
 
-script:
-  - uname -a
+# script:
+  # - uname -a
 
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
@@ -68,8 +75,8 @@ script:
   # - docker run --rm hello-world
 
 
-jobs:
-  include:
+# jobs:
+  # include:
 #   - os: freebsd
 
 #   - dist: xenial
