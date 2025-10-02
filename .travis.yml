@@ -9,6 +9,8 @@
 
 # group: stable
 
+language: dart
+dist: xenial
 
 # services:
 #   - mysql
@@ -19,7 +21,7 @@
 #   - mongodb
 
 script:
-  - . /etc/os-release; echo ${VERSION/*, /}
+  - uname -a
 
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
@@ -105,12 +107,12 @@ jobs:
 #   - dist: noble
 #     arch: s390x
 # ---------------------------------------------------------------------------
-  - dist: trusty
-  - dist: xenial
-  - dist: bionic
-  - dist: focal
-  - dist: jammy
-  - dist: noble
+  # - dist: trusty
+  # - dist: xenial
+  # - dist: bionic
+  # - dist: focal
+  # - dist: jammy
+  # - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
