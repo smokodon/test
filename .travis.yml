@@ -10,7 +10,7 @@
 # group: stable
 
 os: linux
-dist: trusty
+dist: xenial
 mono: none
 sudo: required
 group: stable
