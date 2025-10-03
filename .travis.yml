@@ -6,36 +6,6 @@
 # python: 3.10
 # rvm:
 #  - 3.2.4
-language: csharp
-os:
-- windows
-version: "~> 1.0"
-services:
-- docker
-mono:
-- none
-install:
-- choco install dotnetcore-sdk
-- choco install dotnet-6.0-sdk
-before_script:
-- dotnet nuget add source "https://api.nuget.org/v3/index.json" --name "nuget.org"
-  || true
-- dotnet tool install -g AWS.CodeArtifact.NuGet.CredentialProvider
-- export PATH=$USERPROFILE/.dotnet/tools:$PATH
-- dotnet codeartifact-creds install
-- dotnet nuget add source --name nuget-store https://leaf-558258168256.d.codeartifact.us-west-2.amazonaws.com/nuget/nuget-store/v3/index.json
-- dotnet clean
-- dotnet restore
-script:
-- dotnet build
-- if [[ -n "${TRAVIS_TAG}" ]]; then ./publish.bat $TRAVIS_TAG; fi
-after_success:
-- "./.travis/buddy_works.bat"
-before_install:
-- choco install awscli
-cache:
-  directories:
-  - "$HOME/AppData/Local/Temp/chocolatey"
 # group: stable
 
 # services:
@@ -45,9 +15,9 @@ cache:
 #   - docker
 #   - redis
 #   - mongodb
-
-# script:
-  # - uname -a
+language: minimal
+script:
+  - uname -a
 
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
@@ -136,9 +106,9 @@ cache:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  # - dist: focal
-  # - dist: jammy
-  # - dist: noble
+  - dist: focal
+  - dist: jammy
+  - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
