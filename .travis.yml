@@ -6,18 +6,8 @@
 # python: 3.10
 # rvm:
 #  - 3.2.4
-
+language: scala
 # group: stable
-
-os: linux
-dist: xenial
-mono: none
-sudo: required
-group: stable
-dotnet: 2.0.0
-script: echo "Travis CI"
-language: csharp
-services: docker
 
 # services:
 #   - mysql
@@ -27,8 +17,8 @@ services: docker
 #   - redis
 #   - mongodb
 
-# script:
-  # - uname -a
+script:
+  - uname -a
 
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
@@ -75,8 +65,8 @@ services: docker
   # - docker run --rm hello-world
 
 
-# jobs:
-  # include:
+jobs:
+  include:
 #   - os: freebsd
 
 #   - dist: xenial
@@ -117,9 +107,9 @@ services: docker
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  # - dist: focal
-  # - dist: jammy
-  # - dist: noble
+  - dist: focal
+  - dist: jammy
+  - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
