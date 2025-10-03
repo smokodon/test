@@ -6,7 +6,8 @@
 # python: 3.10
 # rvm:
 #  - 3.2.4
-language: scala
+language: bash
+os: windows
 # group: stable
 
 # services:
@@ -65,8 +66,8 @@ script:
   # - docker run --rm hello-world
 
 
-jobs:
-  include:
+# jobs:
+  # include:
 #   - os: freebsd
 
 #   - dist: xenial
@@ -107,9 +108,9 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  - dist: focal
-  - dist: jammy
-  - dist: noble
+  # - dist: focal
+  # - dist: jammy
+  # - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
