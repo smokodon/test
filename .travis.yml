@@ -6,8 +6,15 @@
 # python: 3.10
 # rvm:
 #  - 3.2.4
-language: bash
+language: csharp
 os: windows
+before_install:
+- choco install awscli
+install:
+- choco install dotnetcore-sdk
+- choco install dotnet-6.0-sdk
+services:
+- docker
 # group: stable
 
 # services:
