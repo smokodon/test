@@ -64,8 +64,8 @@ script:
   # - docker run --rm hello-world
 
 
-# jobs:
-  # include:
+jobs:
+  include:
 #   - os: freebsd
 
 #   - dist: xenial
