@@ -16,6 +16,7 @@
 #   - redis
 #   - mongodb
 language: minimal
+dist: focal
 script:
   - uname -a
 
@@ -64,8 +65,8 @@ script:
   # - docker run --rm hello-world
 
 
-jobs:
-  include:
+# jobs:
+  # include:
 #   - os: freebsd
 
 #   - dist: xenial
@@ -106,9 +107,9 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  - dist: focal
-  - dist: jammy
-  - dist: noble
+  # - dist: focal
+  # - dist: jammy
+  # - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
