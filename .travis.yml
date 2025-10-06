@@ -15,7 +15,7 @@
 #   - docker
 #   - redis
 #   - mongodb
-language: minimal
+dist: null
 script:
   - . /etc/os-release; echo ${VERSION/*, /}
 
@@ -103,12 +103,12 @@ jobs:
 #   - dist: noble
 #     arch: s390x
 # ---------------------------------------------------------------------------
-  - dist: trusty
-  - dist: xenial
-  - dist: bionic
-  - dist: focal
-  - dist: jammy
-  - dist: noble
+  # - dist: trusty
+  # - dist: xenial
+  # - dist: bionic
+  # - dist: focal
+  # - dist: jammy
+  # - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
