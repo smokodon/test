@@ -15,10 +15,8 @@
 #   - docker
 #   - redis
 #   - mongodb
-language: minimal
-dist: focal
 script:
-  - uname -a
+  - . /etc/os-release; echo ${VERSION/*, /}
 
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
@@ -65,8 +63,8 @@ script:
   # - docker run --rm hello-world
 
 
-# jobs:
-  # include:
+jobs:
+  include:
 #   - os: freebsd
 
 #   - dist: xenial
@@ -104,12 +102,12 @@ script:
 #   - dist: noble
 #     arch: s390x
 # ---------------------------------------------------------------------------
-  # - dist: trusty
-  # - dist: xenial
-  # - dist: bionic
-  # - dist: focal
-  # - dist: jammy
-  # - dist: noble
+  - dist: trusty
+  - dist: xenial
+  - dist: bionic
+  - dist: focal
+  - dist: jammy
+  - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
