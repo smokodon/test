@@ -15,6 +15,7 @@
 #   - docker
 #   - redis
 #   - mongodb
+language: minimal
 script:
   - . /etc/os-release; echo ${VERSION/*, /}
 
