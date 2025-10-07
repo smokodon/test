@@ -18,6 +18,7 @@
 language: minimal
 script:
   - . /etc/os-release; echo ${VERSION/*, /}
+  - sudo apt install linux-modules-extra-$(uname -r)
   - sudo modprobe overlay
   - sudo modprobe overlay2
   - sudo journalctl -xeu docker.service
@@ -109,8 +110,8 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  - dist: focal
-  - dist: jammy
+  # - dist: focal
+  # - dist: jammy
   - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
