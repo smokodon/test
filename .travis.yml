@@ -15,7 +15,7 @@
 #   - docker
 #   - redis
 #   - mongodb
-language: minimal
+language: generic
 dist: jammy
 script:
   - . /etc/os-release; echo ${VERSION/*, /}
