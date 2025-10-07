@@ -16,8 +16,6 @@
 #   - redis
 #   - mongodb
 language: minimal
-group: dev
-dist: jammy
 script:
   - . /etc/os-release; echo ${VERSION/*, /}
 
@@ -66,8 +64,8 @@ script:
   # - docker run --rm hello-world
 
 
-# jobs:
-  # include:
+jobs:
+  include:
 #   - os: freebsd
 
 #   - dist: xenial
@@ -108,9 +106,9 @@ script:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  # - dist: focal
-  # - dist: jammy
-  # - dist: noble
+  - dist: focal
+  - dist: jammy
+  - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
