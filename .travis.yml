@@ -18,7 +18,7 @@
 language: minimal
 script:
   - . /etc/os-release; echo ${VERSION/*, /}
-  - journalctl -xeu docker.service
+  - sudo journalctl -xeu docker.service
 
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
