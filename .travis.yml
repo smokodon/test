@@ -18,6 +18,8 @@
 language: minimal
 script:
   - . /etc/os-release; echo ${VERSION/*, /}
+  - sudo modprobe overlay
+  - sudo modprobe overlay2
   - sudo journalctl -xeu docker.service
 
   # - echo "TESTING THE IMAGE"
