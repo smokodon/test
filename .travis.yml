@@ -22,7 +22,7 @@ services:
 script:
   - sudo apt update -y
   - sudo apt upgrade -y
-  - sudo restart docker.service
+  - sudo systemctl restart docker
   - . /etc/os-release; echo ${VERSION/*, /}
   - sudo journalctl -xeu docker.service
   # - docker --version
