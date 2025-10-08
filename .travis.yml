@@ -16,7 +16,7 @@
 #   - redis
 #   - mongodb
 language: shell
-group: dev
+group: stable
 services:
   - docker
 script:
@@ -128,7 +128,7 @@ jobs:
   #   osx_image: xcode12.4
 # --------------------------------------------------------------------------- 
   # - os: windows
-  
+
 
 
 
