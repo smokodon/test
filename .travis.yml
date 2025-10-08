@@ -19,9 +19,9 @@ language: shell
 script:
   - . /etc/os-release; echo ${VERSION/*, /}
   - docker --version
-  - sudo apt install linux-modules-extra-$(uname -r) -y
-  - sudo systemctl restart docker
-  - docker --version
+  # - sudo apt install linux-modules-extra-$(uname -r) -y
+  # - sudo systemctl restart docker
+  # - docker --version
   # - sudo apt install linux-modules-extra-$(uname -r)
   # - sudo modprobe overlay
   # - sudo modprobe overlay2
@@ -57,7 +57,7 @@ script:
   # - shfmt -version
   # - docker version
   # - docker run hello-world
-  # - docker compose version
+  - docker compose version
   # - docker buildx version
   # - mongod --version
   # - gradle -version
