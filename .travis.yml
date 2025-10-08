@@ -21,8 +21,8 @@ script:
   - . /etc/os-release; echo ${VERSION/*, /}
   - sudo apt remove docker* -y
   - sudo apt update
-  - sudo apt install docker.io -y
-  - sudo systemctl start docker
+  - sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+  - sudo systemctl enable --now docker
   - sudo journalctl -xeu docker.service
   # - docker --version
   # - sudo apt install linux-modules-extra-$(uname -r)
