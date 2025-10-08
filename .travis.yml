@@ -19,8 +19,14 @@ language: shell
 group: dev
 script:
   - . /etc/os-release; echo ${VERSION/*, /}
-  - docker --version
+  - uname -r
+  - lsmod | grep overlay
+  - sudo modprobe overlay
+  - sudo modprobe overlay2
   - sudo apt install linux-modules-extra-$(uname -r) -y
+  - lsmod | grep overlay
+  - sudo modprobe overlay
+  - sudo modprobe overlay2
   - sudo systemctl restart docker
   - sudo journalctl -xeu docker.service
   # - docker --version
@@ -59,7 +65,7 @@ script:
   # - shfmt -version
   # - docker version
   # - docker run hello-world
-  - docker compose version
+  # - docker compose version
   # - docker buildx version
   # - mongod --version
   # - gradle -version
