@@ -16,6 +16,7 @@
 #   - redis
 #   - mongodb
 language: shell
+group: dev
 script:
   - . /etc/os-release; echo ${VERSION/*, /}
   - docker --version
