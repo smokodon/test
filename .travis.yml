@@ -19,8 +19,9 @@ language: shell
 script:
   - . /etc/os-release; echo ${VERSION/*, /}
   - docker --version
-  # - sudo apt install linux-modules-extra-$(uname -r) -y
-  # - sudo systemctl restart docker
+  - sudo apt install linux-modules-extra-$(uname -r) -y
+  - sudo systemctl restart docker
+  - sudo journalctl -xeu docker.service
   # - docker --version
   # - sudo apt install linux-modules-extra-$(uname -r)
   # - sudo modprobe overlay
@@ -114,8 +115,8 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  - dist: focal
-  - dist: jammy
+  # - dist: focal
+  # - dist: jammy
   - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
