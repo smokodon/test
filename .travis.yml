@@ -16,7 +16,7 @@
 #   - redis
 #   - mongodb
 language: shell
-group: dev
+group: stable
 script:
   - . /etc/os-release; echo ${VERSION/*, /}
   - sudo apt remove docker* -y
