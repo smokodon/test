@@ -20,8 +20,9 @@ group: stable
 services:
   - docker
 script:
-  - cat /etc/docker/daemon.json
-  - docker info
+  - sudo apt update -y
+  - sudo apt upgrade -y
+  - sudo restart docker.service
   - . /etc/os-release; echo ${VERSION/*, /}
   - sudo journalctl -xeu docker.service
   # - docker --version
