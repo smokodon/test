@@ -19,15 +19,10 @@ language: shell
 group: dev
 script:
   - . /etc/os-release; echo ${VERSION/*, /}
-  - uname -r
-  - lsmod | grep overlay
-  - sudo modprobe overlay
-  - sudo modprobe overlay2
-  - sudo apt install linux-modules-extra-$(uname -r) -y
-  - lsmod | grep overlay
-  - sudo modprobe overlay
-  - sudo modprobe overlay2
-  - sudo systemctl restart docker
+  - sudo apt remove docker* -y
+  - sudo apt update
+  - sudo apt install docker -y
+  - sudo systemctl start docker
   - sudo journalctl -xeu docker.service
   # - docker --version
   # - sudo apt install linux-modules-extra-$(uname -r)
