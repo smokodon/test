@@ -16,7 +16,7 @@
 #   - redis
 #   - mongodb
 language: shell
-group: stable
+group: dev
 script:
   - sudo apt update -y
   - sudo apt install ca-certificates curl gnupg lsb-release -y
@@ -123,7 +123,7 @@ jobs:
   # - dist: xenial
   # - dist: bionic
   # - dist: focal
-  - dist: jammy
+  # - dist: jammy
   - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
