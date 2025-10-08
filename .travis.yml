@@ -15,7 +15,7 @@
 #   - docker
 #   - redis
 #   - mongodb
-# language: minimal
+language: shell
 script:
   - . /etc/os-release; echo ${VERSION/*, /}
   # - sudo apt install linux-modules-extra-$(uname -r)
