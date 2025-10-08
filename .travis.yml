@@ -17,9 +17,12 @@
 #   - mongodb
 language: shell
 group: dev
+services:
+  - docker
 script:
   - docker --version
-  - sudo docker run hello-world
+  - sudo systemctl status docker.service
+  - sudo journalctl -xeu docker.service
   # - docker --version
   # - sudo apt install linux-modules-extra-$(uname -r)
   # - sudo modprobe overlay
