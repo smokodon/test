@@ -117,7 +117,7 @@ jobs:
   # - dist: xenial
   # - dist: bionic
   # - dist: focal
-  # - dist: jammy
+  - dist: jammy
   - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
