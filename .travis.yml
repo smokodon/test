@@ -20,6 +20,7 @@ group: stable
 services:
   - docker
 script:
+  - docker info
   - . /etc/os-release; echo ${VERSION/*, /}
   - sudo journalctl -xeu docker.service
   # - docker --version
