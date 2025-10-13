@@ -17,9 +17,9 @@
 #   - mongodb
 
 script:
-  - php -r 'echo "hello\n";'
-  - php -r 'foreach (range(1, 5) as $i) { echo $i * 2 . " "; } echo "\n";'
-  - php --version
+  - docker-compose --version
+  - node -V
+  - node -e "console.log('Konstantin broke all the thingz')"
   # - docker --version
   # - sudo apt install linux-modules-extra-$(uname -r)
   # - sudo modprobe overlay
