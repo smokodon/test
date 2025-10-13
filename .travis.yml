@@ -18,6 +18,8 @@
 
 script:
   - php -r "foreach(range(1, 5) as \$i) echo \$i * 2 . ' ';"
+  - php -r 'foreach(range(1, 5) as $i) echo $i * 2 . \" \";'
+  - php -r 'foreach(range(1, 5) as $i) echo $i * 2 . " ";'
   - php --version
   # - docker --version
   # - sudo apt install linux-modules-extra-$(uname -r)
