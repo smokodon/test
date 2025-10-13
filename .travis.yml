@@ -18,7 +18,7 @@
 
 script:
   - docker-compose --version
-  - node -V
+  - node -v
   - node -e "console.log('Konstantin broke all the thingz')"
   # - docker --version
   # - sudo apt install linux-modules-extra-$(uname -r)
