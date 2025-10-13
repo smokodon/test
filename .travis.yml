@@ -17,8 +17,8 @@
 #   - mongodb
 
 script:
+  - php -r 'echo "hello\n";'
   - php -r "foreach(range(1, 5) as \$i) echo \$i * 2 . ' ';"
-  - php -r 'foreach(range(1, 5) as $i) echo $i * 2 . \" \";'
   - php -r 'foreach(range(1, 5) as $i) echo $i * 2 . " ";'
   - php --version
   # - docker --version
