@@ -15,12 +15,9 @@
 #   - docker
 #   - redis
 #   - mongodb
-services:
-  - docker
+
 script:
-  - docker --version
-  - sudo systemctl status docker.service
-  - sudo journalctl -xeu docker.service
+  - php -r 'foreach(range(1, 5) as $i) echo $i * 2 . " ";'
   # - docker --version
   # - sudo apt install linux-modules-extra-$(uname -r)
   # - sudo modprobe overlay
@@ -57,8 +54,8 @@ script:
   # - shfmt -version
   # - docker version
   # - docker run hello-world
-  - docker compose version
-  - docker buildx version
+  # - docker compose version
+  # - docker buildx version
   # - mongod --version
   # - gradle -version
   # - groovy -version
