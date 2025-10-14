@@ -18,6 +18,9 @@
 
 script:
   - rvm list
+  - rvm version
+  - perlbrew list
+  - perlbrew --version
   # - docker --version
   # - sudo apt install linux-modules-extra-$(uname -r)
   # - sudo modprobe overlay
