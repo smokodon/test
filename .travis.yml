@@ -17,9 +17,7 @@
 #   - mongodb
 
 script:
-  - docker-compose --version
-  - node -v
-  - node -e "console.log('Konstantin broke all the thingz')"
+  - java Hello
   # - docker --version
   # - sudo apt install linux-modules-extra-$(uname -r)
   # - sudo modprobe overlay
