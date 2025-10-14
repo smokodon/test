@@ -20,6 +20,7 @@ script:
   - rvm list
   - rvm version
   - rvm default do echo whatever
+  - echo "/home/travis/perl5/perlbrew/bin/perlbrew  - App::perlbrew/0.95" | grep -P '(?:/[\w/]+)?perlbrew\s*-+\s*App::perlbrew/\d+\.\d+'
   - perlbrew list
   - perlbrew --version
   # - docker --version
