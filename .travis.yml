@@ -19,6 +19,7 @@
 script:
   - rvm list
   - rvm version
+  - rvm default do echo whatever
   - perlbrew list
   - perlbrew --version
   # - docker --version
