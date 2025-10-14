@@ -17,8 +17,7 @@
 #   - mongodb
 
 script:
-  - javac Hello.java
-  - java Hello.java
+  - rvm list
   # - docker --version
   # - sudo apt install linux-modules-extra-$(uname -r)
   # - sudo modprobe overlay
