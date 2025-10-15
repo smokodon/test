@@ -21,6 +21,8 @@ script:
   - node -v
   - node -e "console.log('Konstantin broke all the thingz')"
 
+  - rvm version
+
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
   # - kiex list
