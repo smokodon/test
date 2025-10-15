@@ -17,6 +17,7 @@
 #   - mongodb
 
 script:
+  - python3 -m pip install pytest nose wheel
   - true ; nosetests --version
   - true ; py.test --version
   - true ; wheel version
