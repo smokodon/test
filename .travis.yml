@@ -18,9 +18,7 @@
 
 script:
   # - python3 -m pip install pytest nose wheel
-  - true ; python3 -m nose --version
-  - true ; python3 -m  pytest --version
-  - true ; python3 -m wheel version
+  - gem --version
   # - docker --version
   # - sudo apt install linux-modules-extra-$(uname -r)
   # - sudo modprobe overlay
