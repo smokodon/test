@@ -15,7 +15,7 @@
 #   - mongodb
 
 script:
-  - java
+  - java --validate-modules
   - clang -v
 
   - node -v
