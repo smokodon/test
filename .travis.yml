@@ -1,5 +1,3 @@
-
-# jdk: openjd
 # python:
 #   - pypy
 
@@ -17,13 +15,11 @@
 #   - mongodb
 
 script:
-  # - python3 -m pip install pytest nose wheel
-  - gem --version
-  # - docker --version
-  # - sudo apt install linux-modules-extra-$(uname -r)
-  # - sudo modprobe overlay
-  # - sudo modprobe overlay2
-  # - sudo journalctl -xeu docker.service
+  - clang -help
+  - clang -v
+
+  - node -v
+  - node -e "console.log('Konstantin broke all the thingz')"
 
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
