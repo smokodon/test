@@ -17,12 +17,9 @@
 #   - mongodb
 
 script:
-  - rvm list
-  - rvm version
-  - rvm default do echo whatever
-  - echo "/home/travis/perl5/perlbrew/bin/perlbrew  - App::perlbrew/0.95" | grep -P '(?:/[\w/]+)?perlbrew\s*-+\s*App::perlbrew/\d+\.\d+'
-  - perlbrew list
-  - perlbrew --version
+  - true ; nosetests --version
+  - true ; py.test --version
+  - true ; wheel version
   # - docker --version
   # - sudo apt install linux-modules-extra-$(uname -r)
   # - sudo modprobe overlay
