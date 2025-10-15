@@ -15,7 +15,7 @@
 #   - mongodb
 
 script:
-  - ls -al
+  - cat image-metadata-travis-ci-ubuntu-2004-1757085196-39f625cb-dirty/node-attributes.yml
   - clang -v
 
   - node -v
