@@ -16,7 +16,7 @@
 
 script:
   - mongod --version
-  - mongod --eval "var myCursor = db.testData.find( { x: 6 }); myCursor.forEach(printjson);"
+  - mongod --eval "var myCursor = db.testData.find({x:6}); myCursor.forEach(printjson);"
 
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
