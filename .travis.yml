@@ -17,7 +17,7 @@
 script:
   - mongosh --version
   - mongod --version
-  - sudo service mongod restart
+  - sudo service mongod start
   - mongosh --eval "var myCursor = db.testData.find({x:6}); myCursor.forEach(printjson);"
 
   # - echo "TESTING THE IMAGE"
