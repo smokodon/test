@@ -15,13 +15,8 @@
 #   - mongodb
 
 script:
-  - java --validate-modules
-  - clang -v
-
-  - node -v
-  - node -e "console.log('Konstantin broke all the thingz')"
-
-  - rvm version
+  - mongo --version
+  - mongo --eval "var myCursor = db.testData.find( { x: 6 }); myCursor.forEach(printjson);"
 
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
