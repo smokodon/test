@@ -6,13 +6,13 @@
 #  - 3.2.4
 # group: stable
 
-# services:
+services:
 #   - mysql
 #   - rabbitmq
 #   - postgresql
 #   - docker
 #   - redis
-#   - mongodb
+  - mongodb
 
 script:
   - mongosh --version
