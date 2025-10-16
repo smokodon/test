@@ -15,11 +15,10 @@
 #   - mongodb
 
 script:
-  - mongosh --version
-  - mongod --version
-  - sudo systemctl start mongod && sudo service mongod start
-  - mongosh --eval "var myCursor = db.testData.find({x:6}); myCursor.forEach(printjson);"
-
+  - php-fpm --version
+  - php -m --version
+  - php -r 'foreach (range(1, 5) as $i) { echo $i * 2 . " "; } echo
+  - php --version
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
   # - kiex list
