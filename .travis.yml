@@ -6,17 +6,18 @@
 #  - 3.2.4
 # group: stable
 
-services:
+# services:
 #   - mysql
 #   - rabbitmq
 #   - postgresql
 #   - docker
 #   - redis
-  - mongodb
+#   - mongodb
 
 script:
   - mongosh --version
   - mongod --version
+  - sudo service mongod restart
   - mongosh --eval "var myCursor = db.testData.find({x:6}); myCursor.forEach(printjson);"
 
   # - echo "TESTING THE IMAGE"
