@@ -15,7 +15,7 @@
 #   - mongodb
 
 script:
-  - php -r 'foreach (range(1, 5) as $i) { echo $i * 2 . " "; } echo "\n";'
+  - echo $PATH
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
   # - kiex list
