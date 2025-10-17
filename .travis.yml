@@ -15,9 +15,8 @@
 #   - mongodb
 
 script:
-  - which clang
-  - ls -l /usr/local/clang-18.1.8/bin/clang
-  - clang -v
+  - sudo clang -v
+  - sudo rsync --version
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
   # - kiex list
