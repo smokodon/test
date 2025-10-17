@@ -16,6 +16,7 @@
 
 script:
   - sudo clang -v
+  - sudo -E clang -v
   - sudo rsync --version
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
