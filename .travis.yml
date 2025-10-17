@@ -15,9 +15,12 @@
 #   - mongodb
 
 script:
-  - sudo clang -v
+  - clang -v
   - sudo -E clang -v
+  - rsync --version
   - sudo rsync --version
+  - which clang
+  - which rsync
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
   # - kiex list
