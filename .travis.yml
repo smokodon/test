@@ -14,7 +14,7 @@
 #   - redis
 #   - mongodb
 language: java
-jdk: openjdk21
+jdk: semeru21
 
 script:
   - clang -v
