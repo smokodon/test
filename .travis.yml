@@ -13,16 +13,11 @@
 #   - docker
 #   - redis
 #   - mongodb
-language: java
-jdk: semeru21
 
 script:
-  - clang -v
-  - sudo -E clang -v
-  - rsync --version
-  - sudo rsync --version
-  - which clang
-  - which rsync
+  - echo $PATH
+  - sudo -E echo $PATH
+  - sudo echo $PATH
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
   # - kiex list
