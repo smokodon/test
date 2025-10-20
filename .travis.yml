@@ -13,6 +13,7 @@
 #   - docker
 #   - redis
 #   - mongodb
+language: clojure
 
 script:
   - clang -v
@@ -107,7 +108,7 @@ jobs:
 # ---------------------------------------------------------------------------
   # - dist: trusty
   # - dist: xenial
-  # - dist: bionic
+  - dist: bionic
   - dist: focal
   - dist: jammy
   - dist: noble
