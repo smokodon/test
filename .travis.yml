@@ -15,10 +15,9 @@
 #   - mongodb
 
 script:
-  - echo $PATH
-  - sudo -E echo $PATH
-  - sudo echo $PATH
-  - sudo grep secure_path /etc/sudoers
+  - which php
+  - sudo env PATH=$PATH which php
+
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
   # - kiex list
