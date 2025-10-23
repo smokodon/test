@@ -15,7 +15,9 @@
 #   - mongodb
 
 script:
-  - php -r "echo 1" 
+  - sudo apt-get remove libpq-dev
+  - sudo apt-get update
+  - sudo apt-get install libpq-dev=17.6-1.pgdg24.04+1
 
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
@@ -104,8 +106,8 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  - dist: focal
-  - dist: jammy
+  # - dist: focal
+  # - dist: jammy
   - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
