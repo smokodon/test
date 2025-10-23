@@ -15,8 +15,10 @@
 #   - mongodb
 
 script:
+  - sudo apt-get remove libpq5 libpq-dev -y
+  - sudo rm -f /etc/apt/sources.list.d/pgdg.list
   - sudo apt-get update
-  - sudo apt-get install -y postgresql-server-dev-17
+  - sudo apt-get install -y libpq-dev
 
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
