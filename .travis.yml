@@ -15,7 +15,8 @@ group: dev
 #   - mongodb
 
 script:
-  - ldd $(which php) | grep pq
+  - sudo apt update
+  - sudo apt install -y golang
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
   # - kiex list
@@ -104,8 +105,8 @@ jobs:
   # - dist: xenial
   # - dist: bionic
   # - dist: focal
-  - dist: jammy
-  # - dist: noble
+  # - dist: jammy
+  - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
