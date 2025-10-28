@@ -17,6 +17,7 @@ group: dev
 script:
   - sudo apt update
   - sudo apt install -y golang
+  - go version
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
   # - kiex list
