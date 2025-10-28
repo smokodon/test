@@ -15,8 +15,7 @@ group: dev
 #   - mongodb
 
 script:
-  - sudo apparmor_parser -r /etc/apparmor.d/*snap-confine*
-  - sudo apparmor_parser -r /var/lib/snapd/apparmor/profiles/snap-confine*
+  - service snapd.apparmor start 
   - go version
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
