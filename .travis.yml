@@ -15,7 +15,7 @@ group: dev
 #   - mongodb
 
 script:
-  - service snapd.apparmor start 
+  - sudo service snapd.apparmor start 
   - go version
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
