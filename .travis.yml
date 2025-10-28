@@ -15,7 +15,9 @@ group: dev
 #   - mongodb
 
 script:
-  - /snap/go/current/bin/go version
+  - sudo apparmor_parser -r /etc/apparmor.d/*snap-confine*
+  - sudo apparmor_parser -r /var/lib/snapd/apparmor/profiles/snap-confine*
+  - go version
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
   # - kiex list
