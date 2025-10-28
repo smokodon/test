@@ -15,8 +15,7 @@ group: dev
 #   - mongodb
 
 script:
-  - sudo snap install go --channel=1.25/stable --classic
-  - go version
+  - /snap/go/current/bin/go version
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
   # - kiex list
@@ -104,8 +103,8 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  - dist: focal
-  - dist: jammy
+  # - dist: focal
+  # - dist: jammy
   - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
