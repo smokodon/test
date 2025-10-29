@@ -4,7 +4,6 @@
 # python: 3.10
 # rvm:
 #  - 3.2.4
-group: dev
 
 # services:
 #   - mysql
@@ -107,6 +106,9 @@ jobs:
   # - dist: focal
   # - dist: jammy
   - dist: noble
+    group: stable
+  - dist: noble
+    group: dev
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
