@@ -15,7 +15,7 @@
 
 script:
   - sudo rm -f /var/run/docker.sock
-  - sudo service docker restart
+  - sudo service docker start
   - docker run --rm hello-world
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
