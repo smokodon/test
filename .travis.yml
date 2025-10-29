@@ -18,6 +18,7 @@ script:
   - sudo apt-get install -y docker-ce=5:28.4.0-1~ubuntu.24.04~noble docker-ce-cli=5:28.4.0-1~ubuntu.24.04~noble
   - sudo systemctl restart docker
   - docker info
+  - sudo journalctl -xeu docker.service
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
   # - kiex list
