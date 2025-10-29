@@ -14,7 +14,9 @@
 #   - mongodb
 
 script:
-  - cat /etc/docker/daemon.json
+  - sudo apt-get remove -y docker-ce docker-ce-cli
+  - sudo apt-get install -y docker-ce=5:28.4.0-1~ubuntu.24.04~noble docker-ce-cli=5:28.4.0-1~ubuntu.24.04~noble
+  - sudo systemctl restart docker
   - docker info
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
@@ -105,8 +107,8 @@ jobs:
   # - dist: bionic
   # - dist: focal
   # - dist: jammy
-  - dist: noble
-    group: stable
+  # - dist: noble
+  #   group: stable
   - dist: noble
     group: dev
 # --------------------------------------------------------------------------- 
