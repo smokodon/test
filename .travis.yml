@@ -14,9 +14,7 @@
 #   - mongodb
 
 script:
-  - sudo iptables --version
-  - sudo iptables -L -t nat
-  - sudo update-alternatives --display iptables
+  - sudo update-alternatives --set iptables /usr/sbin/iptables-legacy
   - sudo systemctl restart docker
   - docker info
   - sudo journalctl -xeu docker.service
