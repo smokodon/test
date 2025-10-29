@@ -14,10 +14,7 @@
 #   - mongodb
 
 script:
-  - sudo apt update && sudo apt upgrade -y
-  - sudo systemctl restart docker
-  - docker info
-  - sudo journalctl -xeu docker.service
+  - docker run --rm hello-world
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
   # - kiex list
