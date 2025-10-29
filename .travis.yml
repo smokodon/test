@@ -15,8 +15,7 @@ group: dev
 #   - mongodb
 
 script:
-  - sudo service snapd.apparmor start 
-  - go version
+  - sudo journalctl -xeu docker.service
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
   # - kiex list
