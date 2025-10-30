@@ -15,7 +15,6 @@ services:
 
 script:
   - curl -sSL https://raw.githubusercontent.com/docker/docker/master/contrib/check-config.sh | sh
-  - tail -n 30 /tmp/dockerd.log
 
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
@@ -107,8 +106,8 @@ jobs:
   # - dist: bionic
   # - dist: focal
   # - dist: jammy
-  # - dist: noble
-  #   group: stable
+  - dist: noble
+    group: stable
   - dist: noble
     group: dev
 # --------------------------------------------------------------------------- 
