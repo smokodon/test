@@ -15,12 +15,7 @@ services:
 
 script:
   # - curl -sSL https://raw.githubusercontent.com/docker/docker/master/contrib/check-config.sh | sh
-  - sudo apt install --reinstall -o Dpkg::Options::="--force-confask,confnew,confmiss" snapd
-  - go version
-  - sudo modprobe overlay2
-  - sudo apt update
-  - sudo apt full-upgrade -y
-  - lsmod | grep overlay2
+  - sudo find /lib/modules/$(uname -r)/ -type f -name 'overlay.ko*'
 
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
