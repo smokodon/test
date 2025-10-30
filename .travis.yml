@@ -14,11 +14,9 @@ services:
 #   - mongodb
 
 script:
-  - sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
-  - sudo systemctl restart docker
-  - sudo service docker restart
-  - sudo journalctl -xeu docker.service
-  - docker run --rm hello-world
+  - curl -sSL https://raw.githubusercontent.com/docker/docker/master/contrib/check-config.sh | sh
+  - docker version
+
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
   # - kiex list
