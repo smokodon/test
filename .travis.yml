@@ -15,6 +15,9 @@ services:
 
 script:
   # - curl -sSL https://raw.githubusercontent.com/docker/docker/master/contrib/check-config.sh | sh
+  - sudo modprobe overlay
+  - sudo apt update
+  - sudo apt full-upgrade -y
   - lsmod | grep overlay
 
   # - echo "TESTING THE IMAGE"
