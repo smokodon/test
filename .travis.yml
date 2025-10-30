@@ -14,7 +14,8 @@ services:
 #   - mongodb
 
 script:
-  - curl -sSL https://raw.githubusercontent.com/docker/docker/master/contrib/check-config.sh | sh
+  # - curl -sSL https://raw.githubusercontent.com/docker/docker/master/contrib/check-config.sh | sh
+  - lsmod | grep overlay
 
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
