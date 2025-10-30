@@ -16,6 +16,7 @@ services:
 script:
   - sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
   - sudo systemctl restart docker
+  - sudo service docker restart
   - docker run --rm hello-world
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
