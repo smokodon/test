@@ -15,10 +15,10 @@ services:
 
 script:
   # - curl -sSL https://raw.githubusercontent.com/docker/docker/master/contrib/check-config.sh | sh
-  - sudo modprobe overlay
+  - sudo modprobe overlay2
   - sudo apt update
   - sudo apt full-upgrade -y
-  - lsmod | grep overlay
+  - lsmod | grep overlay2
 
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
