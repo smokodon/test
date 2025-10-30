@@ -15,7 +15,7 @@ services:
 
 script:
   - curl -sSL https://raw.githubusercontent.com/docker/docker/master/contrib/check-config.sh | sh
-  - docker version
+  - tail -n 30 /tmp/dockerd.log
 
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
@@ -49,6 +49,7 @@ script:
   # - docker run hello-world
   # - docker compose version
   # - docker buildx version
+  # - curl -sSL https://raw.githubusercontent.com/docker/docker/master/contrib/check-config.sh | sh
   # - mongod --version
   # - gradle -version
   # - groovy -version
