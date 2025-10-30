@@ -5,18 +5,16 @@
 # rvm:
 #  - 3.2.4
 
-# services:
+services:
 #   - mysql
 #   - rabbitmq
 #   - postgresql
-#   - docker
+  - docker
 #   - redis
 #   - mongodb
 
 script:
-  - sudo rm -f /var/run/docker.sock
-  - sudo service docker start
-  - docker run --rm hello-world
+  - lsmod | grep overlay
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
   # - kiex list
