@@ -15,6 +15,9 @@ services:
 
 script:
   - lsmod | grep overlay
+  - sudo modprobe overlay
+  - lsmod | grep overlay
+  - sudo service docker restart
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
   # - kiex list
