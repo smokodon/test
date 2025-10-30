@@ -14,9 +14,9 @@ services:
 #   - mongodb
 
 script:
-  # - curl -sSL https://raw.githubusercontent.com/docker/docker/master/contrib/check-config.sh | sh
-  - sudo find /lib/modules/$(uname -r)/ -type f -name 'overlay.ko*'
-  - sudo modprobe overlay
+  - sudo systemctl enable --now snapd.apparmor.service
+  - sudo systemctl restart snapd
+  - go version
 
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
