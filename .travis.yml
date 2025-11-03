@@ -4,7 +4,7 @@
 # python: 3.7.13
 # rvm:
 #  - 3.2.4
-group: stable
+group: previous
 
 services:
   - mysql
