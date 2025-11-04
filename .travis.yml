@@ -4,7 +4,8 @@
 # python: 3.7.13
 # rvm:
 #  - 3.2.4
-group: previous
+group: stable
+language: shell
 
 services:
   - mysql
@@ -15,8 +16,6 @@ services:
   - mongodb
 
 script:
-  - 
-
   - echo "TESTING THE IMAGE"
   - sudo apt update
   - kiex list
