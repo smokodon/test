@@ -106,6 +106,21 @@ jobs:
   - dist: focal
   - dist: jammy
   - dist: noble
+  - dist: focal
+  - dist: jammy
+  - dist: noble
+  - dist: focal
+  - dist: jammy
+  - dist: noble
+  - dist: focal
+  - dist: jammy
+  - dist: noble
+  - dist: focal
+  - dist: jammy
+  - dist: noble
+  - dist: focal
+  - dist: jammy
+  - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
