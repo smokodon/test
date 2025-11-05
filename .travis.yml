@@ -14,7 +14,7 @@
 #   - mongodb
 #   - memcached
 services:
-  - memcached
+  - cassandra
 
 script:
   - echo "test"
