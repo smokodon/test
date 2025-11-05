@@ -14,7 +14,7 @@
 #   - mongodb
 #   - memcached
 services:
-  - riak
+  - memcached
 
 script:
   - echo "test"
