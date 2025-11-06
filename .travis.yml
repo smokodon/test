@@ -17,7 +17,7 @@ services:
   - postgresql
 
 script:
-  - postgresql-13-postgis-3
+  - sudo apt update && sudo apt install postgresql-13-postgis-3 -y
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
   # - kiex list
