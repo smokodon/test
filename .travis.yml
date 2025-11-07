@@ -15,9 +15,12 @@
 #   - memcached
 services:
   - postgresql
-
+addons:
+  apt:
+    packages:
+    - postgresql-postgis
 script:
-  - sudo apt update && sudo apt install postgresql-13-postgis-3 -y
+  - echo "hello"
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
   # - kiex list
