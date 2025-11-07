@@ -13,12 +13,11 @@
 #   - redis
 #   - mongodb
 #   - memcached
-services:
-  - mariadb
 addons:
-  mariadb: '10.0'
+  mariadb: '10.3'
 script:
   - echo "hello"
+  - mariadb --version
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
   # - kiex list
