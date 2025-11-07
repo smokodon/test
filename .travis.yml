@@ -19,6 +19,8 @@ addons:
   apt:
     packages:
     - postgresql-postgis
+before_script:
+  - psql -U postgres -c "create extension postgis"
 script:
   - echo "hello"
   # - echo "TESTING THE IMAGE"
