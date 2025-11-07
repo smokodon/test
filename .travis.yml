@@ -13,8 +13,8 @@
 #   - redis
 #   - mongodb
 #   - memcached
-addons:
-  mariadb: '10.3'
+services:
+  - couchdb
 script:
   - echo "hello"
   - mariadb --version
