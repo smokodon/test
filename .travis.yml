@@ -14,12 +14,9 @@
 #   - mongodb
 #   - memcached
 services:
-  - couchdb
-before_script:
-  - curl -X PUT localhost:5984/myapp_test
+  - memcached
 script:
-  - sudo apt update
-  - sudo apt install -y couchdb
+  - memcached -h
 
 
 
