@@ -14,9 +14,9 @@
 #   - mongodb
 #   - memcached
 services:
-  - memcached
+  - cassandra
 script:
-  - memcached -h
+  - cassandra -n
 
 
 
@@ -59,6 +59,7 @@ script:
   # - groovy -version
   # - ant -version
   # - perl -v
+  # - memcached -h
   # - php -v
   # - redis-server --version
   # - redis-cli ping
