@@ -14,11 +14,9 @@
 #   - mongodb
 #   - memcached
 services:
-  - cassandra
+  - neo4j
 script:
-  - sudo apt-get update && sudo apt-get install cassandra -y
-  - cassandra -v
-  - nodetool status
+  - neo4j --version
 
 
 
