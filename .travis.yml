@@ -17,7 +17,7 @@
 services:
   - elasticsearch
 script:
-  - elasticsearch --version
+  - sudo elasticsearch --version
 
 
 
