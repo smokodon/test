@@ -13,10 +13,11 @@
 #   - redis
 #   - mongodb
 #   - memcached
+#   - elasticsearch
 services:
-  - neo4j
+  - elasticsearch
 script:
-  - neo4j --version
+  - elasticsearch --version
 
 
 
