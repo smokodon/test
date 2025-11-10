@@ -17,6 +17,9 @@ services:
   - couchdb
 script:
   - couchdb -V
+  - sudo apt update
+  - sudo apt install -y couchdb
+  - couchdb -V
 
 
 
