@@ -14,8 +14,8 @@
 #   - mongodb
 #   - memcached
 #   - elasticsearch
-services:
-  - elasticsearch
+addons:
+  rethinkdb: '2.3.4'
 script:
   - sudo elasticsearch --version
 
