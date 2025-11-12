@@ -15,17 +15,13 @@
 #   - memcached
 #   - elasticsearch
 
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-      - llvm-toolchain-focal-18
-    packages:
-      - clang-18
-env:
-  - MATRIX_EVAL="CC=clang-18 && CXX=clang++-18"
+before_script:
+  - curl http://repo.varnish-cache.org/debian/GPG-key.txt | sudo apt-key add -
+  - echo "deb http://repo.varnish-cache.org/ubuntu/ focal varnish-3.0" | sudo tee -a /etc/apt/sources.list
+  - sudo apt-get -qq update
+  - sudo apt-get -y install varnish
 script:
-- echo "welcome" 
+  - echo "welcome" 
 
 
 
