@@ -15,7 +15,7 @@
 #   - memcached
 #   - elasticsearch
 addons:
-  rethinkdb: '2.3.4'
+  rethinkdb: '2.4'
 script:
   - sudo elasticsearch --version
 
