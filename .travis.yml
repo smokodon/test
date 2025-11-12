@@ -14,14 +14,18 @@
 #   - mongodb
 #   - memcached
 #   - elasticsearch
-before_install:
-  - sudo systemctl stop docker.service && sudo systemctl stop docker.socket
-  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-  - yes | sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-  - sudo apt-get update
-  - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+      - llvm-toolchain-focal-18.1
+    packages:
+      - clang-18.1
+env:
+  - MATRIX_EVAL="CC=clang-18.1 && CXX=clang++-18.1"
 script:
-  - docker version
+- echo "welcome" 
 
 
 
