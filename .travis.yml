@@ -19,11 +19,11 @@ addons:
   apt:
     sources:
       - ubuntu-toolchain-r-test
-      - llvm-toolchain-focal-18.1
+      - llvm-toolchain-focal-18
     packages:
-      - clang-18.1
+      - clang-18
 env:
-  - MATRIX_EVAL="CC=clang-18.1 && CXX=clang++-18.1"
+  - MATRIX_EVAL="CC=clang-18 && CXX=clang++-18"
 script:
 - echo "welcome" 
 
