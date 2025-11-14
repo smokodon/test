@@ -68,8 +68,8 @@ script:
 
 
 
-# jobs:
-  # include:
+jobs:
+  include:
 #   - os: freebsd
 
 #   - dist: xenial
@@ -108,7 +108,7 @@ script:
 #     arch: s390x
 # ---------------------------------------------------------------------------
   # - dist: trusty
-  # - dist: xenial
+  - dist: xenial
   # - dist: bionic
   # - dist: focal
   # - dist: jammy
