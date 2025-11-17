@@ -1,6 +1,7 @@
 # python:
 #   - pypy
-# language: python
+language: java
+jdk: openjdk21
 # python: 3.7.13
 # rvm:
 #  - 3.2.4
@@ -18,9 +19,6 @@
 
 script:
   - echo "welcome" 
-
-
-
 
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
@@ -108,11 +106,11 @@ jobs:
 #     arch: s390x
 # ---------------------------------------------------------------------------
   # - dist: trusty
-  - dist: xenial
+  # - dist: xenial
   # - dist: bionic
-  # - dist: focal
-  # - dist: jammy
-  # - dist: noble
+  - dist: focal
+  - dist: jammy
+  - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
