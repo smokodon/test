@@ -16,13 +16,14 @@
 #   - memcached
 #   - elasticsearch
 
-dist: bionic
-language: java
-jdk: openjdk21
+dist: noble
+services:
+  - docker
 script:
-  - java -version
-  - javac -version
-  - echo $JAVA_HOME
+  - docker version
+  - docker run hello-world
+  - docker compose version
+  - docker buildx version
 
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
