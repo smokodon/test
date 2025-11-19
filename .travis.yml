@@ -16,8 +16,9 @@
 #   - memcached
 #   - elasticsearch
 
-dist: trusty
-language: pylint
+dist: bionic
+language: java
+jdk: openjdk21
 script:
   - java -version
   - javac -version
