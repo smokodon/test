@@ -16,19 +16,8 @@
 #   - memcached
 #   - elasticsearch
 
-language: ruby
-os:
-- linux
-sudo: false
 dist: trusty
-env:
-- PYLINT: '"latest"'
-addons:
-  apt:
-    packages:
-    - aspell
-    - aspell-en
-    - shellcheck
+language: pylint
 script:
   - java -version
   - javac -version
