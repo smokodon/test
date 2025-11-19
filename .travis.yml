@@ -16,15 +16,11 @@
 #   - memcached
 #   - elasticsearch
 
-dist: noble
-services:
-  - docker
+dist: focal
+rvm:
+  - 3.3.6
 script:
-  - docker version
-  - docker run hello-world
-  - docker compose version
-  - docker buildx version
-
+  - ruby --version
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
   # - kiex list
