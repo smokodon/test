@@ -16,7 +16,19 @@
 #   - memcached
 #   - elasticsearch
 
-
+language: ruby
+os:
+- linux
+sudo: false
+dist: trusty
+env:
+- PYLINT: '"latest"'
+addons:
+  apt:
+    packages:
+    - aspell
+    - aspell-en
+    - shellcheck
 script:
   - java -version
   - javac -version
@@ -68,8 +80,8 @@ script:
 
 
 
-jobs:
-  include:
+# jobs:
+  # include:
 #   - os: freebsd
 
 #   - dist: xenial
@@ -107,7 +119,7 @@ jobs:
 #   - dist: noble
 #     arch: s390x
 # ---------------------------------------------------------------------------
-  - dist: trusty
+  # - dist: trusty
   # - dist: xenial
   # - dist: bionic
   # - dist: focal
