@@ -107,12 +107,12 @@ jobs:
 #   - dist: noble
 #     arch: s390x
 # ---------------------------------------------------------------------------
-  # - dist: trusty
+  - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  - dist: focal
-  - dist: jammy
-  - dist: noble
+  # - dist: focal
+  # - dist: jammy
+  # - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
