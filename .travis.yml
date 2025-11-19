@@ -17,7 +17,7 @@
 #   - elasticsearch
 
 rvm:
-  - 3.3.6
+  - 3.3.9
 script:
   - ruby --version
   # - echo "TESTING THE IMAGE"
