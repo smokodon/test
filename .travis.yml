@@ -16,7 +16,6 @@
 #   - memcached
 #   - elasticsearch
 
-dist: focal
 rvm:
   - 3.3.6
 script:
@@ -67,8 +66,8 @@ script:
 
 
 
-# jobs:
-  # include:
+jobs:
+  include:
 #   - os: freebsd
 
 #   - dist: xenial
@@ -109,9 +108,9 @@ script:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  # - dist: focal
-  # - dist: jammy
-  # - dist: noble
+  - dist: focal
+  - dist: jammy
+  - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
