@@ -16,7 +16,7 @@
 #   - memcached
 #   - elasticsearch
 
-dist: focal
+dist: trusty
 language: pylint
 script:
   - java -version
