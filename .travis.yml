@@ -16,10 +16,22 @@
 #   - memcached
 #   - elasticsearch
 
-rvm:
-  - 3.3.9
-script:
-  - ruby --version
+language: java
+dist: focal
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+script: java -version
+jobs:
+  include:
+    - jdk: semeru17
+    - jdk: semeru21
+    - jdk: semeru24
+
+# rvm:
+  # - 3.3.9
+# script:
+  # - ruby --version
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
   # - kiex list
@@ -66,8 +78,8 @@ script:
 
 
 
-jobs:
-  include:
+# jobs:
+  # include:
 #   - os: freebsd
 
 #   - dist: xenial
@@ -108,9 +120,9 @@ jobs:
   # - dist: trusty
   # - dist: xenial
   # - dist: bionic
-  - dist: focal
-  - dist: jammy
-  - dist: noble
+  # - dist: focal
+  # - dist: jammy
+  # - dist: noble
 # --------------------------------------------------------------------------- 
   # - os: osx
   #   osx_image: xcode11.3
@@ -120,3 +132,4 @@ jobs:
   #   osx_image: xcode12.4
 # --------------------------------------------------------------------------- 
   # - os: windows
+
