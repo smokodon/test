@@ -16,22 +16,10 @@
 #   - memcached
 #   - elasticsearch
 
-language: java
-dist: focal
-cache:
-  directories:
-    - $HOME/.gradle/caches/
-script: java -version
-jobs:
-  include:
-    - jdk: semeru17
-    - jdk: semeru21
-    - jdk: semeru24
-
 # rvm:
   # - 3.3.9
-# script:
-  # - ruby --version
+script:
+  - ruby --version
   # - echo "TESTING THE IMAGE"
   # - sudo apt update
   # - kiex list
@@ -78,20 +66,20 @@ jobs:
 
 
 
-# jobs:
-  # include:
+jobs:
+  include:
 #   - os: freebsd
 
 #   - dist: xenial
 #     arch: arm64
 #   - dist: bionic
 #     arch: arm64
-#   - dist: focal
-#     arch: arm64
-#   - dist: jammy
-#     arch: arm64
-#   - dist: noble
-#     arch: arm64
+  - dist: focal
+    arch: arm64
+  - dist: jammy
+    arch: arm64
+  - dist: noble
+    arch: arm64
 # # ---------------------------------------------------------------------------
 #   - dist: xenial
 #     arch: ppc64le
